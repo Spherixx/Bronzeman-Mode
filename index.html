@@ -1,0 +1,158 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bronzeman Point Challenges</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-noise"></div>
+
+  <main class="app-shell">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">OSRS | WILDERNESS ONLY TRACKER</p>
+        <h1>Bronzeman<br /><span>Point Challenges</span></h1>
+        <p class="hero-copy">
+          Unlock power through Wilderness tasks, PvP milestones, and kill-funded consumable supplies.
+        </p>
+      </div>
+
+      <section class="point-panel" aria-label="Bronzeman Point totals">
+        <div class="point-stat primary">
+          <span class="point-icon">BP</span>
+          <div>
+            <span class="stat-label">AVAILABLE</span>
+            <strong id="availablePoints">0</strong>
+          </div>
+        </div>
+        <div class="point-stat">
+          <span class="point-icon kp">KP</span>
+          <div>
+            <span class="stat-label">SHOP POINTS</span>
+            <strong id="killPoints">0</strong>
+          </div>
+        </div>
+        <div class="point-breakdown">
+          <span><b id="earnedPoints">0</b> BP earned</span>
+          <span><b id="spentPoints">0</b> BP spent</span>
+          <span><b id="shopSpent">0</b> KP spent</span>
+        </div>
+      </section>
+    </header>
+
+    <section class="rule-strip">
+      <div class="rule-bullet"></div>
+      <p><strong>Rules:</strong> Challenges award <strong>1 BP</strong> for talents. Player kills award <strong>1 KP</strong> for consumables. PvM challenges unlock at 25, 50, and 100 PKs.</p>
+      <button id="resetButton" class="reset-button" type="button">Reset progress</button>
+    </section>
+
+    <nav class="tabs" aria-label="Progress sections">
+      <button class="tab-button active" type="button" data-tab="tasks" aria-selected="true">Tasks</button>
+      <button class="tab-button" type="button" data-tab="talents" aria-selected="false">Talents</button>
+      <button class="tab-button" type="button" data-tab="shop" aria-selected="false">Consumable Shop</button>
+    </nav>
+
+    <section class="tab-panel active" id="tasksPanel">
+      <section class="section-heading">
+        <div>
+          <p class="eyebrow">STEP 01</p>
+          <h2>Complete Challenges</h2>
+        </div>
+        <div class="progress-summary">
+          <span id="challengeProgress">0 / 32 complete</span>
+          <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
+        </div>
+      </section>
+
+      <section class="kill-counter" aria-label="Player kill counter">
+        <div>
+          <p class="eyebrow">PLAYER KILLS</p>
+          <h3>Gate PvM progress and fund the shop</h3>
+        </div>
+        <div class="kill-controls">
+          <button id="removeKillButton" type="button" aria-label="Remove one player kill">-</button>
+          <input id="playerKills" type="number" min="0" step="1" value="0" />
+          <button id="addKillButton" type="button" aria-label="Add one player kill">+</button>
+        </div>
+      </section>
+
+      <section class="challenge-area">
+        <article class="challenge-card pvm-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">PVM</p>
+              <h3>Wilderness PvM</h3>
+            </div>
+            <span class="challenge-count" id="pvmCount">0 / 17</span>
+          </div>
+          <div class="challenge-list staged" id="pvmList"></div>
+        </article>
+
+        <article class="challenge-card pvp-card">
+          <div class="card-header">
+            <div>
+              <p class="eyebrow">PVP</p>
+              <h3>Player Killing</h3>
+            </div>
+            <span class="challenge-count" id="pvpCount">0 / 15</span>
+          </div>
+          <div class="challenge-list" id="pvpList"></div>
+        </article>
+      </section>
+    </section>
+
+    <section class="tab-panel" id="talentsPanel">
+      <section class="section-heading unlock-heading">
+        <div>
+          <p class="eyebrow">STEP 02</p>
+          <h2>Spend Your Points</h2>
+        </div>
+        <p class="tree-help">Fire Cape and MA2 Cape are separate unlocks. Buy nodes from left to right.</p>
+      </section>
+
+      <section class="tree-wrap" aria-label="Bronzeman Point unlock tree">
+        <div class="tree-legend">
+          <span><i class="legend-dot available"></i>Available</span>
+          <span><i class="legend-dot locked"></i>Locked</span>
+          <span><i class="legend-dot purchased"></i>Purchased</span>
+        </div>
+
+        <div class="talent-tree" id="talentTree"></div>
+      </section>
+    </section>
+
+    <section class="tab-panel" id="shopPanel">
+      <section class="section-heading unlock-heading">
+        <div>
+          <p class="eyebrow">STEP 03</p>
+          <h2>Consumable Shop</h2>
+        </div>
+        <p class="tree-help">Every player kill gives 1 KP. Spend KP on supplies for the next trip.</p>
+      </section>
+
+      <section class="shop-grid" id="shopList" aria-label="Consumable shop"></section>
+    </section>
+
+    <footer>
+      <p>Progress is saved locally in this browser.</p>
+      <p>Costs, prerequisites, and shop prices can be adjusted in <code>app.js</code>.</p>
+    </footer>
+  </main>
+
+  <template id="challengeTemplate">
+    <label class="challenge-item">
+      <input type="checkbox" />
+      <span class="checkmark" aria-hidden="true">OK</span>
+      <span class="challenge-text"></span>
+      <span class="point-reward">+1 BP</span>
+    </label>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
