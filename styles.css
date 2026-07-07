@@ -920,3 +920,350 @@ code {
     width: max-content;
   }
 }
+
+/* Stream cleanup */
+body {
+  background:
+    radial-gradient(circle at 12% 0%, rgba(209, 141, 75, 0.08), transparent 24rem),
+    radial-gradient(circle at 92% 10%, rgba(150, 168, 255, 0.06), transparent 24rem),
+    var(--bg);
+}
+
+.app-shell {
+  width: min(1280px, calc(100% - 28px));
+  padding: 30px 0 24px;
+}
+
+.stream-hero {
+  align-items: center;
+  padding-bottom: 18px;
+}
+
+.stream-hero .eyebrow {
+  margin-bottom: 6px;
+  font-size: 0.78rem;
+}
+
+.stream-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 5.8rem);
+  line-height: 0.9;
+}
+
+.hero-copy,
+.rule-strip,
+.tree-help,
+.shop-copy p,
+.node-meta {
+  display: none;
+}
+
+.point-panel {
+  width: min(430px, 100%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 14px;
+  border-color: rgba(240, 177, 108, 0.28);
+}
+
+.point-stat,
+.point-stat.primary {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  min-height: 82px;
+  padding: 12px;
+  background: rgba(7, 9, 11, 0.28);
+  border: 1px solid var(--line-soft);
+}
+
+.point-stat.primary {
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.point-icon {
+  width: 44px;
+  height: 44px;
+}
+
+#availablePoints,
+#killPoints {
+  font-size: 2.5rem;
+}
+
+.point-breakdown {
+  grid-column: 1 / -1;
+  justify-content: space-between;
+  padding: 0 4px;
+  font-size: 0.68rem;
+}
+
+.tabs {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 0 22px;
+  padding: 10px;
+  background: rgba(8, 9, 11, 0.92);
+  border: 1px solid rgba(240, 177, 108, 0.22);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(10px);
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 66px;
+  padding: 0 18px;
+  color: #cdd4da;
+  background: linear-gradient(145deg, #171c22, #101318);
+  border: 1px solid #303943;
+  font: 1rem "Unbounded", sans-serif;
+  letter-spacing: 0;
+}
+
+.tab-button span {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  color: #101010;
+  background: var(--muted);
+  border-radius: 50%;
+  font: 0.68rem "DM Mono", monospace;
+}
+
+.tab-button:hover,
+.tab-button.active {
+  color: var(--text);
+  background: linear-gradient(145deg, rgba(209, 141, 75, 0.28), #181c21);
+  border-color: var(--bronze-bright);
+}
+
+.tab-button.active {
+  box-shadow: inset 0 0 0 1px rgba(240, 177, 108, 0.18), 0 0 24px rgba(209, 141, 75, 0.14);
+}
+
+.tab-button.active span {
+  background: var(--bronze-bright);
+}
+
+.compact-heading {
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.compact-heading h2 {
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.progress-summary {
+  min-width: 220px;
+  font-size: 0.95rem;
+}
+
+.progress-track {
+  height: 9px;
+}
+
+.kill-counter {
+  min-height: 78px;
+  margin-bottom: 14px;
+  padding: 14px 16px;
+  background: linear-gradient(145deg, rgba(18, 22, 28, 0.98), rgba(9, 11, 14, 0.98));
+}
+
+.kill-counter .eyebrow {
+  margin-bottom: 4px;
+  color: var(--kp);
+}
+
+.kill-counter h3 {
+  font-size: 1.2rem;
+}
+
+.kill-controls {
+  grid-template-columns: 46px 130px 46px;
+}
+
+.kill-controls button,
+.kill-controls input {
+  height: 46px;
+  font-size: 1.12rem;
+}
+
+.kill-controls input {
+  color: var(--kp);
+  font-family: "Unbounded", sans-serif;
+  font-size: 1.35rem;
+}
+
+.challenge-area {
+  gap: 14px;
+}
+
+.card-header {
+  padding: 16px 18px 14px;
+}
+
+.card-header h3 {
+  font-size: 1.12rem;
+}
+
+.challenge-count {
+  padding: 8px 10px;
+  font-size: 0.76rem;
+}
+
+.stage-header {
+  padding: 10px 14px;
+}
+
+.stage-header span,
+.stage-header em {
+  font-size: 0.7rem;
+}
+
+.stage-header strong {
+  font-size: 0.9rem;
+}
+
+.challenge-item {
+  min-height: 46px;
+  padding: 10px 14px;
+}
+
+.challenge-text {
+  font-size: 0.92rem;
+  line-height: 1.25;
+}
+
+.point-reward {
+  font-size: 0.68rem;
+}
+
+.tree-wrap {
+  padding: 16px;
+}
+
+.tree-legend {
+  justify-content: flex-start;
+  padding-bottom: 12px;
+}
+
+.talent-tree {
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  min-width: 980px;
+}
+
+.tier {
+  min-height: 315px;
+}
+
+.talent-node {
+  min-height: 76px;
+  grid-template-columns: 46px 1fr auto;
+}
+
+.node-art {
+  width: 46px;
+  height: 46px;
+}
+
+.node-art img,
+.shop-art img {
+  max-width: 36px;
+  max-height: 36px;
+}
+
+.node-name {
+  font-size: 0.78rem;
+}
+
+.shop-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.shop-item {
+  grid-template-columns: 1fr;
+  align-content: start;
+  min-height: 176px;
+  gap: 10px;
+  padding: 14px;
+}
+
+.shop-art {
+  min-height: 70px;
+}
+
+.shop-copy h3 {
+  min-height: 38px;
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.25;
+}
+
+.shop-copy span {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.72rem;
+}
+
+.shop-item button {
+  width: 100%;
+  height: 40px;
+  font-size: 0.78rem;
+}
+
+.stream-footer {
+  align-items: center;
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line-soft);
+}
+
+.stream-footer .reset-button {
+  margin-left: 0;
+}
+
+@media (max-width: 900px) {
+  .tabs {
+    grid-template-columns: 1fr;
+    position: static;
+  }
+
+  .tab-button {
+    min-height: 54px;
+  }
+
+  .point-panel,
+  .shop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .point-breakdown {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 520px) {
+  .stream-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+  }
+
+  .shop-item {
+    grid-template-columns: 1fr;
+  }
+
+  .shop-item button {
+    grid-column: auto;
+  }
+}

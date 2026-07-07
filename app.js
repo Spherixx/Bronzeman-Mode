@@ -255,7 +255,7 @@ function renderPvmChallenges() {
       <div class="stage-header">
         <div>
           <span>${group.stage} game</span>
-          <strong>${group.killRequirement} PK unlock</strong>
+          <strong>${group.killRequirement} PK</strong>
         </div>
         <em>${completed} / ${group.items.length}</em>
       </div>
@@ -307,7 +307,6 @@ function renderTalentTree() {
         <span class="node-art"><img src="${unlock.image}" alt="" loading="lazy" /></span>
         <span>
           <span class="node-name">${unlock.name}</span>
-          <span class="node-meta">${lockReason(unlock)}</span>
         </span>
         <span class="node-cost">${purchased ? "OK" : `${unlock.cost} BP`}</span>
       `;
@@ -339,8 +338,7 @@ function renderShop() {
       <div class="shop-art">${images}</div>
       <div class="shop-copy">
         <h3>${item.name}</h3>
-        <p>${item.details}</p>
-        <span>Owned: ${owned}</span>
+        <span>x${owned}</span>
       </div>
       <button type="button" ${canAfford ? "" : "disabled"}>${item.cost} KP</button>
     `;
@@ -394,7 +392,7 @@ function renderStats() {
   document.getElementById("killPoints").textContent = availableKillPoints();
   document.getElementById("playerKills").value = state.playerKills;
   document.getElementById("shopSpent").textContent = totalShopSpent();
-  document.getElementById("challengeProgress").textContent = `${complete} / ${total} complete`;
+  document.getElementById("challengeProgress").textContent = `${complete} / ${total}`;
   document.getElementById("pvmCount").textContent = `${pvmCompleted} / ${pvmChallenges.length}`;
   document.getElementById("pvpCount").textContent = `${pvpCompleted} / ${pvpChallenges.length}`;
   document.getElementById("progressBar").style.width = `${percent}%`;
@@ -452,4 +450,6 @@ document.getElementById("resetButton").addEventListener("click", () => {
 
 showTab("tasks");
 render();
+
+
 
