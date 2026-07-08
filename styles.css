@@ -1518,7 +1518,7 @@ body {
 /* Branding, rules, and shop stack counts */
 .brand-banner {
   display: block;
-  width: min(580px, 55vw);
+  width: min(560px, 45vw);
   max-height: 170px;
   object-fit: contain;
   object-position: left center;
@@ -1778,4 +1778,194 @@ body {
   .point-breakdown {
     grid-template-columns: 1fr;
   }
+}
+
+/* Shop categories, unlocked items, and cleaner task checks */
+.brand-banner {
+  width: min(720px, 50vw);
+  max-height: 220px;
+}
+
+.tabs {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.checkmark {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  color: transparent;
+  border-radius: 4px;
+}
+
+.checkmark::after {
+  position: absolute;
+  top: 2px;
+  left: 7px;
+  width: 6px;
+  height: 12px;
+  content: "";
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  opacity: 0;
+  transform: rotate(42deg);
+}
+
+.challenge-item input:checked + .checkmark {
+  color: #12170f;
+}
+
+.challenge-item input:checked + .checkmark::after {
+  opacity: 1;
+}
+
+.shop-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.shop-category {
+  display: grid;
+  gap: 10px;
+}
+
+.shop-category-title,
+.unlocked-group-title {
+  color: var(--bronze-bright);
+  font-size: 0.9rem;
+}
+
+.shop-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.purchase-count {
+  display: inline-block;
+  margin-top: 6px;
+  color: var(--kp);
+  font: 0.68rem "DM Mono", monospace;
+}
+
+.unlocked-wrap {
+  display: grid;
+  gap: 18px;
+}
+
+.unlocked-group {
+  display: grid;
+  gap: 10px;
+}
+
+.unlocked-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.unlocked-item {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  min-height: 82px;
+  padding: 12px;
+  background: linear-gradient(145deg, rgba(26, 31, 37, 0.98), rgba(18, 22, 27, 0.98));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.unlocked-art {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  width: 58px;
+  height: 58px;
+  background: rgba(0, 0, 0, 0.24);
+  border: 1px solid var(--line-soft);
+}
+
+.unlocked-art img {
+  max-width: 34px;
+  max-height: 34px;
+  image-rendering: pixelated;
+}
+
+.unlocked-art img:nth-child(n + 2) {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.unlocked-copy h3 {
+  margin: 0 0 5px;
+  font-size: 0.76rem;
+  line-height: 1.25;
+}
+
+.unlocked-copy span,
+.empty-unlocks {
+  margin: 0;
+  color: var(--muted);
+  font: 0.66rem "DM Mono", monospace;
+}
+
+.empty-unlocks {
+  grid-column: 1 / -1;
+  padding: 16px;
+  background: rgba(8, 9, 11, 0.4);
+  border: 1px solid var(--line-soft);
+}
+
+@media (max-width: 1100px) {
+  .brand-banner {
+    width: min(100%, 500px);
+    max-height: 170px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tabs,
+  .shop-category-grid,
+  .unlocked-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Checkable Unlocks cards */
+.unlocked-item {
+  position: relative;
+}
+
+.unlocked-item.checkable {
+  cursor: pointer;
+  padding-right: 42px;
+  transition: 150ms ease;
+}
+
+.unlocked-item.checkable:hover {
+  border-color: rgba(240, 177, 108, 0.58);
+}
+
+.unlocked-item.checkable input {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--good);
+  cursor: pointer;
+}
+
+.unlocked-item.checkable:has(input:checked) {
+  border-color: rgba(143, 209, 116, 0.78);
+  background: linear-gradient(145deg, rgba(35, 56, 34, 0.98), rgba(18, 28, 22, 0.98));
+}
+
+.unlocked-item.checkable:has(input:checked) .unlocked-copy span {
+  color: var(--good);
 }

@@ -54,17 +54,23 @@ const itemImages = {
   chainmace: wikiImage("Ursine chainmace.png"),
   toxicStaff: wikiImage("Toxic staff of the dead.png"),
   zamorakGodsword: wikiImage("Zamorak godsword.png"),
-  liquidAdrenaline: wikiImage("Liquid adrenaline.png"),
+  surgePotion: wikiImage("Surge potion(4).png"),
   lootKey: wikiImage("Loot key.png"),
   talentToken: wikiImage("Warrior guild token.png"),
   astral: wikiImage("Astral rune.png"),
+  air: wikiImage("Air rune.png"),
+  water: wikiImage("Water rune.png"),
   earth: wikiImage("Earth rune.png"),
+  fire: wikiImage("Fire rune.png"),
+  mind: wikiImage("Mind rune.png"),
+  body: wikiImage("Body rune.png"),
+  soul: wikiImage("Soul rune.png"),
+  nature: wikiImage("Nature rune.png"),
   burningAmulet: wikiImage("Burning amulet(5).png"),
   ancientIceSack: wikiImage("Blighted ancient ice sack.png"),
   vengeanceSack: wikiImage("Blighted vengeance sack.png"),
   blood: wikiImage("Blood rune.png"),
   death: wikiImage("Death rune.png"),
-  water: wikiImage("Water rune.png"),
   law: wikiImage("Law rune.png"),
   chaos: wikiImage("Chaos rune.png"),
   coins: wikiImage("Coins 10000.png"),
@@ -77,6 +83,8 @@ const itemImages = {
   shark: wikiImage("Shark.png"),
   angler: wikiImage("Anglerfish.png"),
   karambwan: wikiImage("Cooked karambwan.png"),
+  halibut: wikiImage("Halibut.png"),
+  marlin: wikiImage("Marlin.png"),
   pineapplePizza: wikiImage("Pineapple pizza.png"),
   blightedManta: wikiImage("Blighted manta ray.png"),
   blightedRestore: wikiImage("Blighted super restore(4).png"),
@@ -84,7 +92,29 @@ const itemImages = {
   blightedTeleport: wikiImage("Blighted teleport spell sack.png"),
   seedPod: wikiImage("Royal seed pod.png"),
   revenantEther: wikiImage("Revenant ether.png"),
-  bracelet: wikiImage("Bracelet of ethereum.png")
+bracelet: wikiImage("Bracelet of ethereum.png"),
+  blackDhideBody: wikiImage("Black d'hide body.png"),
+  blackDhideChaps: wikiImage("Black d'hide chaps.png"),
+  xericianHat: wikiImage("Xerician hat.png"),
+  xericianTop: wikiImage("Xerician top.png"),
+  xericianRobe: wikiImage("Xerician robe.png"),
+  helmNeitiznot: wikiImage("Helm of neitiznot.png"),
+  berserkerHelm: wikiImage("Berserker helm.png"),
+  archerHelm: wikiImage("Archer helm.png"),
+  farseerHelm: wikiImage("Farseer helm.png"),
+  climbingBoots: wikiImage("Climbing boots.png"),
+  amuletGlory: wikiImage("Amulet of glory(4).png"),
+  runeGloves: wikiImage("Rune gloves.png"),
+  barrowsGloves: wikiImage("Barrows gloves.png"),
+  saradominCape: wikiImage("Saradomin cape.png"),
+  guthixCape: wikiImage("Guthix cape.png"),
+  zamorakCape: wikiImage("Zamorak cape.png"),
+  saradominStaff: wikiImage("Saradomin staff.png"),
+  guthixStaff: wikiImage("Guthix staff.png"),
+  zamorakStaff: wikiImage("Zamorak staff.png"),
+  mysticRobeTopLight: wikiImage("Mystic robe top (light).png"),
+  mysticRobeTop: wikiImage("Mystic robe top.png"),
+  mysticRobeBottom: wikiImage("Mystic robe bottom.png")
 };
 
 const challenges = {
@@ -174,6 +204,8 @@ const challenges = {
 
 const unlocks = [
   { id: "seed-pod", name: "Seed Pod", cost: 1, tier: 1, requires: [], images: [itemImages.seedPod] },
+  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, requires: [], images: [itemImages.saradominCape, itemImages.guthixCape, itemImages.zamorakCape] },
+  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, requires: [], images: [itemImages.saradominStaff, itemImages.guthixStaff, itemImages.zamorakStaff] },
   { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, requires: [], images: [itemImages.rcb] },
   { id: "dds", name: "DDS", cost: 1, tier: 1, requires: [], images: [itemImages.dds] },
   { id: "arkan-blade", name: "Arkan Blade", cost: 1, tier: 1, requires: [], images: [itemImages.arkanBlade] },
@@ -183,10 +215,11 @@ const unlocks = [
   { id: "defenders", name: "Defenders", cost: 2, tier: 2, requires: [], images: [itemImages.defenders] },
   { id: "msb", name: "MSB(i)", cost: 2, tier: 2, requires: [], images: [itemImages.msb] },
   { id: "trouver", name: "Trouver Parchment", cost: 2, tier: 2, requires: [], images: [itemImages.trouver] },
+  { id: "rune-gloves", name: "Rune Gloves", cost: 2, tier: 2, requires: [], images: [itemImages.runeGloves] },
 
   { id: "firecape", name: "Fire Cape", cost: 3, tier: 3, requires: [], images: [itemImages.fireCape] },
   { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, requires: [], images: [itemImages.ma2Cape] },
-  { id: "surge-potions", name: "Surge Potions", cost: 3, tier: 3, requires: [], images: [itemImages.liquidAdrenaline] },
+  { id: "surge-potions", name: "Surge Potions", cost: 3, tier: 3, requires: [], images: [itemImages.surgePotion] },
   { id: "dragon-knives", name: "Dragon Knives", cost: 3, tier: 3, requires: [], images: [itemImages.dragonKnife] },
   { id: "ancient-mace", name: "Ancient Mace", cost: 3, tier: 3, requires: [], images: [itemImages.ancientMace] },
 
@@ -195,6 +228,7 @@ const unlocks = [
   { id: "dark-bow", name: "Dark Bow + Seeker", cost: 4, tier: 4, requires: [], images: [itemImages.darkBow, itemImages.seekerArrow] },
   { id: "dragon-thrownaxe", name: "Dragon Thrownaxe", cost: 4, tier: 4, requires: [], images: [itemImages.dragonThrownaxe] },
   { id: "toxic-staff", name: "Toxic Staff", cost: 4, tier: 4, requires: [], images: [itemImages.toxicStaff] },
+  { id: "barrows-gloves", name: "Barrows Gloves", cost: 4, tier: 4, requires: [], images: [itemImages.barrowsGloves] },
 
   { id: "ornate-maul", name: "Ornate Maul", cost: 5, tier: 5, requires: [], images: [itemImages.ornateMaul] },
   { id: "colossal-barrelchest", name: "Colossal / Anchor", cost: 5, tier: 5, requires: [], images: [itemImages.colossal, itemImages.barrelchest] },
@@ -205,42 +239,129 @@ const unlocks = [
   { id: "voidwaker", name: "Voidwaker", cost: 6, tier: 5, requires: [], images: [itemImages.voidwaker] }
 ];
 
+const shopCategories = ["Runes / Ammo", "Food", "Potions", "Other"];
+
 const shopItems = [
-  { id: "barrages", name: "Barrages", cost: 1, items: [{ image: itemImages.ancientIceSack, amount: "100" }, { image: itemImages.blood }, { image: itemImages.death }, { image: itemImages.water }] },
-  { id: "tb-runes", name: "TB runes", cost: 1, items: [{ image: itemImages.blightedTeleport, amount: "100" }, { image: itemImages.law }, { image: itemImages.chaos }, { image: itemImages.death }] },
-  { id: "veng-runes", name: "Veng runes", cost: 1, items: [{ image: itemImages.vengeanceSack, amount: "100" }, { image: itemImages.astral }, { image: itemImages.death }, { image: itemImages.earth }] },
-  { id: "amethyst-arrows", name: "Amethyst arrows", cost: 1, items: [{ image: itemImages.amethystArrow, amount: "250" }] },
-  { id: "dragon-bolts", name: "Dragonstone bolts", cost: 1, items: [{ image: itemImages.dragonBolt, amount: "100" }] },
-  { id: "dragon-knives", name: "Dragon knives", cost: 1, items: [{ image: itemImages.dragonKnife, amount: "50" }] },
-  { id: "dragon-thrownaxes", name: "Dragon thrownaxes", cost: 1, items: [{ image: itemImages.dragonThrownaxe, amount: "50" }] },
-  { id: "surge-potions", name: "Surge pots", cost: 2, items: [{ image: itemImages.liquidAdrenaline, amount: "5" }] },
-  { id: "stamina-pots", name: "Stam pots", cost: 2, items: [{ image: itemImages.stamina, amount: "5" }] },
-  { id: "combo-food", name: "Combo food", cost: 2, items: [{ image: itemImages.karambwan, amount: "50" }, { image: itemImages.angler, amount: "50" }] },
-  { id: "standard-food", name: "Standard food", cost: 1, items: [{ image: itemImages.blightedManta, amount: "100" }, { image: itemImages.angler, amount: "100" }, { image: itemImages.shark, amount: "100" }] },
-  { id: "brews", name: "Brews", cost: 1, items: [{ image: itemImages.brew, amount: "20" }] },
-  { id: "restores", name: "Restores", cost: 1, items: [{ image: itemImages.restore, amount: "10" }] },
-  { id: "range-pots", name: "Range pots", cost: 1, items: [{ image: itemImages.ranging, amount: "5" }] },
-  { id: "super-combats", name: "Super combats", cost: 1, items: [{ image: itemImages.superCombat, amount: "5" }] },
-  { id: "antivenom", name: "Antivenom", cost: 1, items: [{ image: itemImages.antivenom }] },
-  { id: "rev-kit", name: "Rev kit", cost: 2, items: [{ image: itemImages.bracelet }, { image: itemImages.revenantEther, amount: "100" }, { image: itemImages.burningAmulet }] }
+  { id: "barrages", category: "Runes / Ammo", name: "Barrage sacks", cost: 1, items: [{ image: itemImages.ancientIceSack, amount: "100" }] },
+  { id: "tb-sacks", category: "Runes / Ammo", name: "TB sacks", cost: 1, items: [{ image: itemImages.blightedTeleport, amount: "10" }] },
+  { id: "veng-sacks", category: "Runes / Ammo", name: "Veng sacks", cost: 1, items: [{ image: itemImages.vengeanceSack, amount: "25" }] },
+  { id: "amethyst-arrows", category: "Runes / Ammo", name: "Amethyst arrows", cost: 1, items: [{ image: itemImages.amethystArrow, amount: "250" }] },
+  { id: "dragon-bolts", category: "Runes / Ammo", name: "Dragonstone bolts", cost: 1, items: [{ image: itemImages.dragonBolt, amount: "100" }] },
+  { id: "dragon-knives", category: "Runes / Ammo", name: "Dragon knives", cost: 1, items: [{ image: itemImages.dragonKnife, amount: "50" }] },
+  { id: "dragon-thrownaxes", category: "Runes / Ammo", name: "Dragon thrownaxes", cost: 1, items: [{ image: itemImages.dragonThrownaxe, amount: "50" }] },
+  { id: "combo-food", category: "Food", name: "Halibut", cost: 2, items: [{ image: itemImages.halibut, amount: "50" }] },
+  { id: "standard-food", category: "Food", name: "Anglers / marlin", cost: 1, items: [{ image: itemImages.angler, amount: "100" }, { image: itemImages.marlin, amount: "100" }] },
+  { id: "surge-potions", category: "Potions", name: "Surge pots", cost: 2, items: [{ image: itemImages.surgePotion, amount: "5" }] },
+  { id: "stamina-pots", category: "Potions", name: "Stam pots", cost: 2, items: [{ image: itemImages.stamina, amount: "5" }] },
+  { id: "brews", category: "Potions", name: "Brews", cost: 1, items: [{ image: itemImages.brew, amount: "20" }] },
+  { id: "restores", category: "Potions", name: "Restores", cost: 1, items: [{ image: itemImages.restore, amount: "10" }] },
+  { id: "range-pots", category: "Potions", name: "Range pots", cost: 1, items: [{ image: itemImages.ranging, amount: "5" }] },
+  { id: "super-combats", category: "Potions", name: "Super combats", cost: 1, items: [{ image: itemImages.superCombat, amount: "5" }] },
+  { id: "antivenom", category: "Potions", name: "Antivenom", cost: 1, items: [{ image: itemImages.antivenom, amount: "2" }] },
+  { id: "rev-kit", category: "Other", name: "Rev kit", cost: 2, items: [{ image: itemImages.bracelet }, { image: itemImages.revenantEther, amount: "100" }, { image: itemImages.burningAmulet }] }
+];
+const shopIdAliases = {
+  "tb-runes": "tb-sacks",
+  "veng-runes": "veng-sacks"
+};
+const basicUnlockGroups = [
+  {
+    category: "Elemental Runes",
+    source: "Loot unlock",
+    items: [
+      { id: "rune-air", name: "Air Rune", images: [itemImages.air] },
+      { id: "rune-water", name: "Water Rune", images: [itemImages.water] },
+      { id: "rune-earth", name: "Earth Rune", images: [itemImages.earth] },
+      { id: "rune-fire", name: "Fire Rune", images: [itemImages.fire] }
+    ]
+  },
+  {
+    category: "Basic Runes",
+    source: "Loot unlock",
+    items: [
+      { id: "rune-body", name: "Body Rune", images: [itemImages.body] },
+      { id: "rune-mind", name: "Mind Rune", images: [itemImages.mind] },
+      { id: "rune-chaos", name: "Chaos Rune", images: [itemImages.chaos] },
+      { id: "rune-death", name: "Death Rune", images: [itemImages.death] }
+    ]
+  },
+  {
+    category: "High Runes",
+    source: "Loot unlock",
+    items: [
+      { id: "rune-blood", name: "Blood Rune", images: [itemImages.blood] },
+      { id: "rune-soul", name: "Soul Rune", images: [itemImages.soul] },
+      { id: "rune-nature", name: "Nature Rune", images: [itemImages.nature] },
+      { id: "rune-law", name: "Law Rune", images: [itemImages.law] }
+    ]
+  },
+  {
+    category: "Food",
+    source: "Always available",
+    items: [
+      { id: "basic-sharks", name: "Sharks", images: [itemImages.shark] },
+      { id: "basic-karambwan", name: "Karambwan", images: [itemImages.karambwan] }
+    ]
+  },
+  {
+    category: "Weapons",
+    source: "PK loot",
+    items: [
+      { id: "basic-msb", name: "Magic Shortbow", images: [itemImages.msb] },
+      { id: "basic-rcb", name: "Rune Crossbow", images: [itemImages.rcb] },
+      { id: "basic-dds", name: "DDS", images: [itemImages.dds] },
+      { id: "basic-gmaul", name: "Granite Maul", images: [itemImages.gmaul] }
+    ]
+  },
+  {
+    category: "Range Gear",
+    source: "PK loot",
+    items: [
+      { id: "basic-black-dhide", name: "Black d'hide", images: [itemImages.blackDhideBody] },
+      { id: "basic-glory", name: "Amulet of Glory", images: [itemImages.amuletGlory] },
+      { id: "basic-climbing-boots", name: "Climbing Boots", images: [itemImages.climbingBoots] }
+    ]
+  },
+  {
+    category: "Mage Gear",
+    source: "PK loot",
+    items: [
+      { id: "basic-xerician", name: "Xerician Set", images: [itemImages.xericianTop] },
+      { id: "basic-mystic", name: "Mystic Set", images: [itemImages.mysticRobeTopLight] }
+    ]
+  },
+  {
+    category: "Melee Gear",
+    source: "PK loot",
+    items: [
+      { id: "basic-fremmy-helms", name: "Fremmy Helms", images: [itemImages.berserkerHelm] },
+      { id: "basic-neitz", name: "Neitiznot Helm", images: [itemImages.helmNeitiznot] }
+    ]
+  }
 ];
 const state = loadState();
 let currentUser = null;
 let saveTimer = null;
 let isApplyingRemoteState = false;
 
+function flattenBasicUnlocks() {
+  return basicUnlockGroups.flatMap((group) => group.items);
+}
+
 function defaultState() {
-  return { completed: [], purchased: [], shopPurchases: {}, playerKills: 0 };
+  return { completed: [], purchased: [], shopPurchases: {}, basicUnlocks: [], playerKills: 0 };
 }
 
 function sanitizeState(rawState) {
   const validUnlocks = new Set(unlocks.map((unlock) => unlock.id));
+  const validBasicUnlocks = new Set(flattenBasicUnlocks().map((item) => item.id));
   const validShopItems = new Set(shopItems.map((item) => item.id));
   const shopPurchases = {};
 
   Object.entries(rawState?.shopPurchases ?? {}).forEach(([id, count]) => {
-    if (validShopItems.has(id) && Number.isFinite(count)) {
-      shopPurchases[id] = Math.max(0, Math.floor(count));
+    const nextId = shopIdAliases[id] ?? id;
+    if (validShopItems.has(nextId) && Number.isFinite(count)) {
+      shopPurchases[nextId] = Math.max(shopPurchases[nextId] ?? 0, Math.floor(count));
     }
   });
 
@@ -250,6 +371,9 @@ function sanitizeState(rawState) {
       ? [...new Set(rawState.purchased)].filter((id) => validUnlocks.has(id))
       : [],
     shopPurchases,
+    basicUnlocks: Array.isArray(rawState?.basicUnlocks)
+      ? [...new Set(rawState.basicUnlocks)].filter((id) => validBasicUnlocks.has(id))
+      : [],
     playerKills: Number.isFinite(rawState?.playerKills) ? Math.max(0, Math.floor(rawState.playerKills)) : 0
   };
 }
@@ -267,6 +391,7 @@ function mergeStates(localState, remoteState) {
     completed: [...local.completed, ...remote.completed],
     purchased: [...local.purchased, ...remote.purchased],
     shopPurchases,
+    basicUnlocks: [...local.basicUnlocks, ...remote.basicUnlocks],
     playerKills: Math.max(local.playerKills, remote.playerKills)
   });
 }
@@ -648,36 +773,122 @@ function renderShopStack(entry) {
   `;
 }
 
+function renderItemImages(images) {
+  return images.filter(Boolean)
+    .map((src) => `<img src="${src}" alt="" loading="lazy" />`)
+    .join("");
+}
+
+function renderShopCard(item) {
+  const owned = state.shopPurchases[item.id] ?? 0;
+  const canAfford = availableKillPoints() >= item.cost;
+  const card = document.createElement("article");
+  card.className = `shop-item ${canAfford ? "available" : "locked"}`;
+  card.title = owned ? `Purchased ${owned}` : "";
+
+  const entries = item.items ?? (item.images ?? []).map((image) => ({ image }));
+  const images = entries.map(renderShopStack).join("");
+
+  card.innerHTML = `
+    <div class="shop-art">${images}</div>
+    <div class="shop-copy">
+      <h3>${item.name}</h3>
+      <span class="purchase-count">Bought ${owned}</span>
+    </div>
+    <button type="button" ${canAfford ? "" : "disabled"}>${killCostLabel(item.cost)}</button>
+  `;
+
+  card.querySelector("button").addEventListener("click", () => {
+    if (availableKillPoints() < item.cost) return;
+    state.shopPurchases[item.id] = owned + 1;
+    saveState();
+    render();
+  });
+
+  return card;
+}
+
 function renderShop() {
   const shop = document.getElementById("shopList");
   shop.innerHTML = "";
 
-  shopItems.forEach((item) => {
-    const owned = state.shopPurchases[item.id] ?? 0;
-    const canAfford = availableKillPoints() >= item.cost;
-    const card = document.createElement("article");
-    card.className = `shop-item ${canAfford ? "available" : "locked"}`;
-    card.title = owned ? `Purchased ${owned}` : "";
+  shopCategories.forEach((category) => {
+    const categoryItems = shopItems.filter((item) => item.category === category);
+    if (!categoryItems.length) return;
 
-    const entries = item.items ?? (item.images ?? []).map((image) => ({ image }));
-    const images = entries.map(renderShopStack).join("");
+    const section = document.createElement("section");
+    section.className = "shop-category";
+    section.innerHTML = `<h3 class="shop-category-title">${category}</h3><div class="shop-category-grid"></div>`;
 
-    card.innerHTML = `
-      <div class="shop-art">${images}</div>
-      <div class="shop-copy">
-        <h3>${item.name}</h3>
-      </div>
-      <button type="button" ${canAfford ? "" : "disabled"}>${killCostLabel(item.cost)}</button>
-    `;
+    const grid = section.querySelector(".shop-category-grid");
+    categoryItems.forEach((item) => grid.appendChild(renderShopCard(item)));
+    shop.appendChild(section);
+  });
+}
 
-    card.querySelector("button").addEventListener("click", () => {
-      if (availableKillPoints() < item.cost) return;
-      state.shopPurchases[item.id] = owned + 1;
+function setBasicUnlockChecked(id, checked) {
+  if (checked) {
+    if (!state.basicUnlocks.includes(id)) state.basicUnlocks.push(id);
+  } else {
+    state.basicUnlocks = state.basicUnlocks.filter((item) => item !== id);
+  }
+}
+
+function renderUnlockCard(item, source, checkable = false) {
+  const label = document.createElement(checkable ? "label" : "article");
+  label.className = `unlocked-item ${checkable ? "checkable" : "auto"}`;
+  const images = renderItemImages(item.images ?? [item.image]);
+  const checked = checkable && state.basicUnlocks.includes(item.id);
+
+  label.innerHTML = `
+    ${checkable ? `<input type="checkbox" ${checked ? "checked" : ""} aria-label="Unlock ${item.name}" />` : ""}
+    <div class="unlocked-art">${images}</div>
+    <div class="unlocked-copy">
+      <h3>${item.name}</h3>
+      <span>${source}</span>
+    </div>
+  `;
+
+  if (checkable) {
+    label.querySelector("input").addEventListener("change", (event) => {
+      setBasicUnlockChecked(item.id, event.target.checked);
       saveState();
       render();
     });
+  }
 
-    shop.appendChild(card);
+  return label;
+}
+
+function renderUnlocks() {
+  const target = document.getElementById("unlocksList");
+  if (!target) return;
+
+  target.innerHTML = "";
+
+  const groups = [
+    ...basicUnlockGroups,
+    {
+      category: "Talent Unlocks",
+      source: "Talent",
+      items: unlocks.filter((unlock) => state.purchased.includes(unlock.id)),
+      automatic: true
+    }
+  ];
+
+  groups.forEach((group) => {
+    const section = document.createElement("section");
+    section.className = "unlocked-group";
+    section.innerHTML = `<h3 class="unlocked-group-title">${group.category}</h3><div class="unlocked-grid"></div>`;
+
+    const grid = section.querySelector(".unlocked-grid");
+    if (group.items.length) {
+      group.items.forEach((item) => grid.appendChild(renderUnlockCard(item, group.source, !group.automatic)));
+    } else {
+      grid.innerHTML = `<p class="empty-unlocks">Bought talents will appear here.</p>`;
+    }
+
+    target.appendChild(section);
   });
 }
 function buyUnlock(id) {
@@ -734,6 +945,7 @@ function render() {
   renderPvpChallenges();
   renderTalentTree();
   renderShop();
+  renderUnlocks();
 }
 
 document.querySelectorAll(".tab-button").forEach((button) => {
