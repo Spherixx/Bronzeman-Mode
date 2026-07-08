@@ -1518,7 +1518,7 @@ body {
 /* Branding, rules, and shop stack counts */
 .brand-banner {
   display: block;
-  width: min(560px, 45vw);
+  width: min(580px, 55vw);
   max-height: 170px;
   object-fit: contain;
   object-position: left center;
