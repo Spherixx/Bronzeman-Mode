@@ -1427,3 +1427,90 @@ body {
     min-width: 0;
   }
 }
+
+/* Firebase account UI */
+.header-side {
+  display: grid;
+  gap: 10px;
+  justify-items: end;
+}
+
+.auth-panel {
+  display: flex;
+  justify-content: flex-end;
+  width: min(430px, 100%);
+}
+
+.login-button,
+.logout-button {
+  min-height: 36px;
+  padding: 0 13px;
+  color: var(--text);
+  background: linear-gradient(145deg, #171c22, #101318);
+  border: 1px solid #303943;
+  cursor: pointer;
+  font: 0.7rem "DM Mono", monospace;
+  transition: 150ms ease;
+}
+
+.login-button:hover,
+.logout-button:hover {
+  border-color: var(--bronze-bright);
+  color: var(--bronze-bright);
+}
+
+.login-button:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.user-panel {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 9px;
+  max-width: 430px;
+  min-height: 42px;
+  padding: 5px 5px 5px 8px;
+  background: rgba(8, 9, 11, 0.72);
+  border: 1px solid var(--line);
+}
+
+.user-panel[hidden],
+.login-button[hidden] {
+  display: none;
+}
+
+.user-panel img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #11151a;
+}
+
+.user-panel span {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--text);
+  font-size: 0.82rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.logout-button {
+  min-height: 30px;
+  padding: 0 9px;
+  color: var(--muted);
+  font-size: 0.62rem;
+}
+
+@media (max-width: 900px) {
+  .header-side {
+    justify-items: stretch;
+    width: min(100%, 430px);
+  }
+
+  .auth-panel {
+    justify-content: flex-start;
+  }
+}

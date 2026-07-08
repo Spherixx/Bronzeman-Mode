@@ -1,4 +1,22 @@
-﻿const STORAGE_KEY = "bronzeman-point-challenges-v2";
+﻿import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
+import { doc, getDoc, getFirestore, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCCJJcebfEGU-30NVNRQdPRWQK-VxmOO-E",
+  authDomain: "bronzeman-mode-92e21.firebaseapp.com",
+  projectId: "bronzeman-mode-92e21",
+  storageBucket: "bronzeman-mode-92e21.firebasestorage.app",
+  messagingSenderId: "648123215246",
+  appId: "1:648123215246:web:82190b7dd128fe8c4b88df"
+};
+
+const firebaseApp = initializeApp(firebaseConfig);
+const auth = getAuth(firebaseApp);
+const db = getFirestore(firebaseApp);
+const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: "select_account" });
+const STORAGE_KEY = "bronzeman-point-challenges-v2";
 
 function wikiImage(fileName) {
   return `https://oldschool.runescape.wiki/w/Special:FilePath/${encodeURIComponent(fileName)}`;
@@ -148,7 +166,8 @@ const challenges = {
   ]
 };
 
-const unlocks = [  { id: "seed-pod", name: "Seed Pod", cost: 1, tier: 1, requires: [], images: [itemImages.seedPod] },
+const unlocks = [
+  { id: "seed-pod", name: "Seed Pod", cost: 1, tier: 1, requires: [], images: [itemImages.seedPod] },
   { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, requires: [], images: [itemImages.rcb] },
   { id: "dds", name: "DDS", cost: 1, tier: 1, requires: [], images: [itemImages.dds] },
   { id: "arkan-blade", name: "Arkan Blade", cost: 1, tier: 1, requires: [], images: [itemImages.arkanBlade] },
@@ -202,31 +221,190 @@ const shopItems = [
 ];
 
 const state = loadState();
+let currentUser = null;
+let saveTimer = null;
+let isApplyingRemoteState = false;
 
 function defaultState() {
   return { completed: [], purchased: [], shopPurchases: {}, playerKills: 0 };
 }
 
-function loadState() {
-  const fallback = defaultState();
+function sanitizeState(rawState) {
+  const validUnlocks = new Set(unlocks.map((unlock) => unlock.id));
+  const validShopItems = new Set(shopItems.map((item) => item.id));
+  const shopPurchases = {};
 
+  Object.entries(rawState?.shopPurchases ?? {}).forEach(([id, count]) => {
+    if (validShopItems.has(id) && Number.isFinite(count)) {
+      shopPurchases[id] = Math.max(0, Math.floor(count));
+    }
+  });
+
+  return {
+    completed: Array.isArray(rawState?.completed) ? [...new Set(rawState.completed)] : [],
+    purchased: Array.isArray(rawState?.purchased)
+      ? [...new Set(rawState.purchased)].filter((id) => validUnlocks.has(id))
+      : [],
+    shopPurchases,
+    playerKills: Number.isFinite(rawState?.playerKills) ? Math.max(0, Math.floor(rawState.playerKills)) : 0
+  };
+}
+
+function mergeStates(localState, remoteState) {
+  const local = sanitizeState(localState);
+  const remote = sanitizeState(remoteState);
+  const shopPurchases = { ...local.shopPurchases };
+
+  Object.entries(remote.shopPurchases).forEach(([id, count]) => {
+    shopPurchases[id] = Math.max(shopPurchases[id] ?? 0, count);
+  });
+
+  return sanitizeState({
+    completed: [...local.completed, ...remote.completed],
+    purchased: [...local.purchased, ...remote.purchased],
+    shopPurchases,
+    playerKills: Math.max(local.playerKills, remote.playerKills)
+  });
+}
+
+function loadState() {
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY));
-    return {
-      completed: Array.isArray(saved?.completed) ? saved.completed : [],
-      purchased: Array.isArray(saved?.purchased) ? saved.purchased : [],
-      shopPurchases: saved?.shopPurchases && typeof saved.shopPurchases === "object" ? saved.shopPurchases : {},
-      playerKills: Number.isFinite(saved?.playerKills) ? Math.max(0, Math.floor(saved.playerKills)) : 0
-    };
+    return sanitizeState(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   } catch {
-    return fallback;
+    return defaultState();
   }
 }
 
-function saveState() {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+function serializeState() {
+  return sanitizeState(state);
 }
 
+function writeLocalState() {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(serializeState()));
+}
+
+function saveState() {
+  writeLocalState();
+  queueCloudSave();
+}
+
+function trackerDoc(uid) {
+  return doc(db, "users", uid, "trackers", "default");
+}
+
+function queueCloudSave() {
+  if (!currentUser || isApplyingRemoteState) return;
+
+  setSaveStatus("Saving to cloud...");
+  window.clearTimeout(saveTimer);
+  saveTimer = window.setTimeout(() => {
+    saveCloudState();
+  }, 650);
+}
+
+async function saveCloudState() {
+  if (!currentUser) return;
+
+  try {
+    await setDoc(trackerDoc(currentUser.uid), {
+      ...serializeState(),
+      displayName: currentUser.displayName ?? "",
+      photoURL: currentUser.photoURL ?? "",
+      updatedAt: serverTimestamp()
+    }, { merge: true });
+    setSaveStatus("Saved to cloud");
+  } catch (error) {
+    console.error("Cloud save failed", error);
+    setSaveStatus("Saved locally");
+  }
+}
+
+
+function setSaveStatus(message) {
+  const status = document.getElementById("saveStatus");
+  if (status) status.textContent = message;
+}
+
+function renderAuthUser(user) {
+  const loginButton = document.getElementById("loginButton");
+  const userPanel = document.getElementById("userPanel");
+  const userPhoto = document.getElementById("userPhoto");
+  const userName = document.getElementById("userName");
+
+  if (!loginButton || !userPanel || !userPhoto || !userName) return;
+
+  loginButton.hidden = Boolean(user);
+  userPanel.hidden = !user;
+
+  if (!user) {
+    userPhoto.removeAttribute("src");
+    userName.textContent = "";
+    return;
+  }
+
+  userPhoto.src = user.photoURL ?? "";
+  userName.textContent = user.displayName ?? user.email ?? "Signed in";
+}
+
+async function loadCloudState(user) {
+  setSaveStatus("Loading cloud save...");
+
+  try {
+    const snapshot = await getDoc(trackerDoc(user.uid));
+    const nextState = snapshot.exists() ? mergeStates(state, snapshot.data()) : serializeState();
+
+    isApplyingRemoteState = true;
+    Object.assign(state, nextState);
+    writeLocalState();
+    render();
+    isApplyingRemoteState = false;
+
+    await saveCloudState();
+  } catch (error) {
+    console.error("Cloud load failed", error);
+    isApplyingRemoteState = false;
+    setSaveStatus("Saved locally");
+  }
+}
+
+function initFirebaseAuth() {
+  const loginButton = document.getElementById("loginButton");
+  const logoutButton = document.getElementById("logoutButton");
+
+  loginButton?.addEventListener("click", async () => {
+    loginButton.disabled = true;
+    setSaveStatus("Opening Google login...");
+
+    try {
+      await signInWithPopup(auth, googleProvider);
+    } catch (error) {
+      console.error("Google login failed", error);
+      setSaveStatus("Saved locally");
+    } finally {
+      loginButton.disabled = false;
+    }
+  });
+
+  logoutButton?.addEventListener("click", async () => {
+    try {
+      await signOut(auth);
+    } catch (error) {
+      console.error("Sign out failed", error);
+    }
+  });
+
+  onAuthStateChanged(auth, async (user) => {
+    currentUser = user;
+    renderAuthUser(user);
+
+    if (!user) {
+      setSaveStatus("Saved locally");
+      return;
+    }
+
+    await loadCloudState(user);
+  });
+}
 function challengeId(type, stageOrIndex, index) {
   return index === undefined ? `${type}-${stageOrIndex}` : `${type}-${stageOrIndex}-${index}`;
 }
@@ -541,6 +719,9 @@ document.getElementById("resetButton").addEventListener("click", () => {
 
 showTab("tasks");
 render();
+initFirebaseAuth();
+
+
 
 
 

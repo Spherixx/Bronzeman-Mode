@@ -18,7 +18,17 @@
         <h1>Bronzeman</h1>
       </div>
 
-      <section class="point-panel" aria-label="Point totals">
+      <div class="header-side">
+        <section class="auth-panel" aria-label="Account">
+          <button id="loginButton" class="login-button" type="button">Log in</button>
+          <div id="userPanel" class="user-panel" hidden>
+            <img id="userPhoto" alt="" />
+            <span id="userName"></span>
+            <button id="logoutButton" class="logout-button" type="button">Sign out</button>
+          </div>
+        </section>
+
+        <section class="point-panel" aria-label="Point totals">
         <div class="point-stat primary">
           <span class="point-icon"><img src="https://oldschool.runescape.wiki/w/Special:FilePath/Coins%2010000.png" alt="" /></span>
           <div>
@@ -39,6 +49,7 @@
           <span><b id="shopSpent">0</b> kill spent</span>
         </div>
       </section>
+      </div>
     </header>
 
     <nav class="tabs" aria-label="Progress sections">
@@ -108,7 +119,7 @@
     </section>
 
     <footer class="stream-footer">
-      <p>Saved locally</p>
+      <p id="saveStatus">Saved locally</p>
       <button id="resetButton" class="reset-button" type="button">Reset</button>
     </footer>
   </main>
@@ -122,7 +133,9 @@
     </label>
   </template>
 
-  <script src="app.js"></script>
+  <script type="module" src="app.js"></script>
 </body>
 </html>
+
+
 
