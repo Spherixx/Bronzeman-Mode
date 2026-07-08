@@ -4,6 +4,10 @@ function wikiImage(fileName) {
   return `https://oldschool.runescape.wiki/w/Special:FilePath/${encodeURIComponent(fileName)}`;
 }
 
+function task(title, points = 1) {
+  return { title, points };
+}
+
 const itemImages = {
   void: wikiImage("Void knight top.png"),
   torso: wikiImage("Fighter torso.png"),
@@ -15,10 +19,12 @@ const itemImages = {
   barrelchest: wikiImage("Barrelchest anchor.png"),
   gmaul: wikiImage("Granite maul.png"),
   ornateMaul: wikiImage("Ornate maul handle.png"),
+  arkanBlade: wikiImage("Arkan blade.png"),
   dds: wikiImage("Dragon dagger(p++).png"),
   msb: wikiImage("Magic shortbow (i).png"),
   rcb: wikiImage("Rune crossbow.png"),
   darkBow: wikiImage("Dark bow.png"),
+  seekerArrow: wikiImage("Seeker arrow.png"),
   ancientMace: wikiImage("Ancient mace.png"),
   dragonThrownaxe: wikiImage("Dragon thrownaxe.png"),
   dragonKnife: wikiImage("Dragon knife(p++).png"),
@@ -30,6 +36,8 @@ const itemImages = {
   chainmace: wikiImage("Ursine chainmace.png"),
   toxicStaff: wikiImage("Toxic staff of the dead.png"),
   zamorakGodsword: wikiImage("Zamorak godsword.png"),
+  liquidAdrenaline: wikiImage("Liquid adrenaline.png"),
+  lootKey: wikiImage("Loot key.png"),
   blood: wikiImage("Blood rune.png"),
   death: wikiImage("Death rune.png"),
   water: wikiImage("Water rune.png"),
@@ -51,7 +59,6 @@ const itemImages = {
   blightedEntangle: wikiImage("Blighted entangle sack.png"),
   blightedTeleport: wikiImage("Blighted teleport spell sack.png"),
   seedPod: wikiImage("Royal seed pod.png"),
-  lootingBag: wikiImage("Looting bag.png"),
   revenantEther: wikiImage("Revenant ether.png"),
   bracelet: wikiImage("Bracelet of ethereum.png")
 };
@@ -62,114 +69,115 @@ const challenges = {
       stage: "Early",
       killRequirement: 25,
       items: [
-        "Get a looting bag from Wilderness monsters",
-        "Get a dragon longsword from Zombie Pirates",
-        "Get a rune crossbow from Crazy Archaeologist",
-        "Get a god cape from Mage Arena",
-        "Thieve from Rogue's Castle chest",
-        "Complete 100 Wilderness laps in one trip",
-        "Complete 25 Wilderness Slayer tasks",
-        "Get 25 KC at Chaos Fanatic",
-        "Get 25 KC at Scorpia",
-        "100 KC each baby Wilderness boss"
+        task("Get a looting bag from Wilderness monsters"),
+        task("Get a dragon longsword from Zombie Pirates"),
+        task("Get a rune crossbow from Crazy Archaeologist"),
+        task("Get a god cape from Mage Arena"),
+        task("Thieve from Rogue's Castle chest"),
+        task("Complete 100 Wilderness laps in one trip", 2),
+        task("Complete 25 Wilderness Slayer tasks", 2),
+        task("Get 25 KC at Chaos Fanatic"),
+        task("Get 25 KC at Scorpia"),
+        task("100 KC each baby Wilderness boss", 2)
       ]
     },
     {
       stage: "Mid",
       killRequirement: 50,
       items: [
-        "Get Fire Cape with challenge gear",
-        "Get Mage Arena 2 cape with challenge gear",
-        "Complete Wilderness Hard Diaries",
-        "Complete a Wilderness shield",
-        "Get a dragon pickaxe drop",
-        "PvM a Wilderness weapon",
-        "Get 100 KC Chaos Elemental",
-        "Complete 50 duo Wilderness Slayer tasks",
-        "Get a revenant unique drop",
-        "Get a ring of wealth scroll from Wilderness content"
+        task("Get Fire Cape with challenge gear", 2),
+        task("Get Mage Arena 2 cape with challenge gear", 2),
+        task("Complete Wilderness Hard Diaries", 2),
+        task("Complete a Wilderness shield", 2),
+        task("Get a dragon pickaxe drop", 2),
+        task("PvM a Wilderness weapon", 2),
+        task("Get 100 KC Chaos Elemental", 2),
+        task("Complete 50 duo Wilderness Slayer tasks", 2),
+        task("Get a revenant unique drop", 2),
+        task("Get a ring of wealth scroll from Wilderness content")
       ]
     },
     {
       stage: "Late",
       killRequirement: 100,
       items: [
-        "Complete a Voidwaker",
-        "Greenlog a Wilderness boss",
-        "Get a Wilderness pet",
-        "Complete Wilderness Elite Diaries",
-        "100 KC each Wilderness boss",
-        "PK a craw's bow, viggora's chainmace, or accursed sceptre",
-        "Build a full revenant ether stack",
-        "Get a full Dagon'hai set from Larran's keys",
-        "Complete 250 Wilderness Slayer tasks",
-        "Win a boss room tank test while skulled"
+        task("Complete a Voidwaker", 3),
+        task("Greenlog a Wilderness boss", 3),
+        task("Get a Wilderness pet", 3),
+        task("Complete Wilderness Elite Diaries", 3),
+        task("100 KC each Wilderness boss", 3),
+        task("PK a craw's bow, viggora's chainmace, or accursed sceptre", 2),
+        task("Build a full revenant ether stack", 2),
+        task("Get a full Dagon'hai set from Larran's keys", 3),
+        task("Complete 250 Wilderness Slayer tasks", 3),
+        task("Win a boss room tank test while skulled", 2)
       ]
     }
   ],
   pvp: [
-    "Get your first smite",
-    "Smite a 5m+ +1",
-    "Smite a 25m+ +1",
-    "Get a single key over 10m",
-    "Get a single key over 20m",
-    "Win an outnumbered fight",
-    "Collect 5 keys in one inventory",
-    "PK a Wilderness weapon",
-    "Loot 50 keys total",
-    "Loot 100 keys total",
-    "Skulltrick someone",
-    "Successfully rush someone",
-    "Find and farm a bot farm",
-    "Anti-PK a 5m+ kill",
-    "Anti-PK a 10m+ kill",
-    "Get a KO with Barrelchest anchor",
-    "Get a KO with ancient mace smite tech",
-    "Get a dark bow spec kill",
-    "Get a dragon thrownaxe stack kill",
-    "Get a poison dragon dagger kill",
-    "Kill someone using amethyst arrows",
-    "Win a fight with a budget xerician set",
-    "Get a kill after landing teleblock",
-    "Get a kill while risking under 500k",
-    "Get a kill while risking over 10m",
-    "Escape a multi team with a key",
-    "Anti-rush a rusher",
-    "Kill a player at Chaos Altar",
-    "Kill a player in Revenant Caves",
-    "Win a no-overhead honor fight"
+    task("Get your first smite"),
+    task("Smite a 5m+ +1", 2),
+    task("Smite a 25m+ +1", 3),
+    task("Get a single key over 10m", 2),
+    task("Get a single key over 20m", 3),
+    task("Win an outnumbered fight", 2),
+    task("Collect 5 keys in one inventory", 2),
+    task("PK a Wilderness weapon", 2),
+    task("Loot 50 keys total", 2),
+    task("Loot 100 keys total", 3),
+    task("Skulltrick someone", 2),
+    task("Successfully rush someone"),
+    task("Find and farm a bot farm"),
+    task("Anti-PK a 5m+ kill", 2),
+    task("Anti-PK a 10m+ kill", 3),
+    task("Get a KO with Barrelchest anchor", 2),
+    task("Get a KO with ancient mace smite tech", 2),
+    task("Get a dark bow spec kill"),
+    task("Get a dragon thrownaxe stack kill", 2),
+    task("Get a poison dragon dagger kill"),
+    task("Kill someone using amethyst arrows"),
+    task("Win a fight with a budget xerician set"),
+    task("Get a kill after landing teleblock"),
+    task("Get a kill while risking under 500k"),
+    task("Get a kill while risking over 10m", 3),
+    task("Escape a multi team with a key", 2),
+    task("Anti-rush a rusher", 2),
+    task("Kill a player at Chaos Altar"),
+    task("Kill a player in Revenant Caves"),
+    task("Win a no-overhead honor fight", 2)
   ]
 };
 
-const unlocks = [
-  { id: "void", name: "Void", cost: 1, tier: 1, requires: [], image: itemImages.void },
-  { id: "torso", name: "Fighter Torso", cost: 1, tier: 1, requires: [], image: itemImages.torso },
-  { id: "defenders", name: "Defenders", cost: 1, tier: 1, requires: [], image: itemImages.defenders },
-  { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, requires: [], image: itemImages.rcb },
-  { id: "dds", name: "DDS", cost: 1, tier: 1, requires: [], image: itemImages.dds },
+const unlocks = [  { id: "seed-pod", name: "Seed Pod", cost: 1, tier: 1, requires: [], images: [itemImages.seedPod] },
+  { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, requires: [], images: [itemImages.rcb] },
+  { id: "dds", name: "DDS", cost: 1, tier: 1, requires: [], images: [itemImages.dds] },
+  { id: "arkan-blade", name: "Arkan Blade", cost: 1, tier: 1, requires: [], images: [itemImages.arkanBlade] },
 
-  { id: "firecape", name: "Fire Cape", cost: 2, tier: 2, requires: ["void"], image: itemImages.fireCape },
-  { id: "ma2-cape", name: "MA2 Cape", cost: 2, tier: 2, requires: ["void"], image: itemImages.ma2Cape },
-  { id: "msb", name: "MSB(i)", cost: 2, tier: 2, requires: ["rcb"], image: itemImages.msb },
-  { id: "amethyst", name: "Amethyst Ammo", cost: 2, tier: 2, requires: ["rcb"], image: itemImages.amethystArrow },
-  { id: "trouver", name: "Trouver Parchment", cost: 2, tier: 2, requires: ["defenders"], image: itemImages.trouver },
+  { id: "void", name: "Void", cost: 2, tier: 2, requires: [], images: [itemImages.void] },
+  { id: "torso", name: "Fighter Torso", cost: 2, tier: 2, requires: [], images: [itemImages.torso] },
+  { id: "defenders", name: "Defenders", cost: 2, tier: 2, requires: [], images: [itemImages.defenders] },
+  { id: "msb", name: "MSB(i)", cost: 2, tier: 2, requires: [], images: [itemImages.msb] },
+  { id: "trouver", name: "Trouver Parchment", cost: 2, tier: 2, requires: [], images: [itemImages.trouver] },
 
-  { id: "gmaul", name: "Granite Maul", cost: 3, tier: 3, requires: ["dds", "torso"], image: itemImages.gmaul },
-  { id: "anchor", name: "Barrelchest Anchor", cost: 3, tier: 3, requires: ["torso"], image: itemImages.barrelchest },
-  { id: "dark-bow", name: "Dark Bow", cost: 3, tier: 3, requires: ["msb", "amethyst"], image: itemImages.darkBow },
-  { id: "ancient-mace", name: "Ancient Mace", cost: 3, tier: 3, requires: ["defenders"], image: itemImages.ancientMace },
-  { id: "dragon-thrownaxe", name: "Dragon Thrownaxe", cost: 3, tier: 3, requires: ["msb"], image: itemImages.dragonThrownaxe },
+  { id: "firecape", name: "Fire Cape", cost: 3, tier: 3, requires: [], images: [itemImages.fireCape] },
+  { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, requires: [], images: [itemImages.ma2Cape] },
+  { id: "surge-potions", name: "Surge Potions", cost: 3, tier: 3, requires: [], images: [itemImages.liquidAdrenaline] },
+  { id: "dragon-knives", name: "Dragon Knives", cost: 3, tier: 3, requires: [], images: [itemImages.dragonKnife] },
+  { id: "ancient-mace", name: "Ancient Mace", cost: 3, tier: 3, requires: [], images: [itemImages.ancientMace] },
 
-  { id: "ornate-maul", name: "Ornate Maul", cost: 4, tier: 4, requires: ["gmaul", "trouver"], image: itemImages.ornateMaul },
-  { id: "colossal-barrelchest", name: "Colossal / Anchor", cost: 4, tier: 4, requires: ["firecape", "anchor"], image: itemImages.colossal },
-  { id: "toxic-staff", name: "Toxic Staff", cost: 4, tier: 4, requires: ["ma2-cape"], image: itemImages.toxicStaff },
-  { id: "zgs", name: "ZGS Freeze", cost: 4, tier: 4, requires: ["firecape"], image: itemImages.zamorakGodsword },
-  { id: "dragon-knives", name: "Dragon Knives", cost: 4, tier: 4, requires: ["dragon-thrownaxe"], image: itemImages.dragonKnife },
+  { id: "gmaul", name: "Granite Maul", cost: 4, tier: 4, requires: [], images: [itemImages.gmaul] },
+  { id: "anchor", name: "Barrelchest Anchor", cost: 4, tier: 4, requires: [], images: [itemImages.barrelchest] },
+  { id: "dark-bow", name: "Dark Bow + Seeker", cost: 4, tier: 4, requires: [], images: [itemImages.darkBow, itemImages.seekerArrow] },
+  { id: "dragon-thrownaxe", name: "Dragon Thrownaxe", cost: 4, tier: 4, requires: [], images: [itemImages.dragonThrownaxe] },
+  { id: "toxic-staff", name: "Toxic Staff", cost: 4, tier: 4, requires: [], images: [itemImages.toxicStaff] },
 
-  { id: "accursed", name: "Accursed Sceptre", cost: 5, tier: 5, requires: ["ma2-cape", "toxic-staff"], image: itemImages.accursed },
-  { id: "webweaver", name: "Webweaver Bow", cost: 5, tier: 5, requires: ["dark-bow", "amethyst"], image: itemImages.webweaver },
-  { id: "chainmace", name: "Ursine Chainmace", cost: 5, tier: 5, requires: ["ornate-maul", "anchor"], image: itemImages.chainmace },
-  { id: "voidwaker", name: "Voidwaker", cost: 6, tier: 5, requires: ["accursed", "webweaver", "chainmace"], image: itemImages.voidwaker }
+  { id: "ornate-maul", name: "Ornate Maul", cost: 5, tier: 5, requires: [], images: [itemImages.ornateMaul] },
+  { id: "colossal-barrelchest", name: "Colossal / Anchor", cost: 5, tier: 5, requires: [], images: [itemImages.colossal, itemImages.barrelchest] },
+  { id: "zgs", name: "ZGS Freeze", cost: 5, tier: 5, requires: [], images: [itemImages.zamorakGodsword] },
+  { id: "accursed", name: "Accursed Sceptre", cost: 5, tier: 5, requires: [], images: [itemImages.accursed] },
+  { id: "webweaver", name: "Webweaver Bow", cost: 5, tier: 5, requires: [], images: [itemImages.webweaver] },
+  { id: "chainmace", name: "Ursine Chainmace", cost: 5, tier: 5, requires: [], images: [itemImages.chainmace] },
+  { id: "voidwaker", name: "Voidwaker", cost: 6, tier: 5, requires: [], images: [itemImages.voidwaker] }
 ];
 
 const shopItems = [
@@ -177,8 +185,9 @@ const shopItems = [
   { id: "tb-runes", name: "TB runes", cost: 5, images: [itemImages.law, itemImages.chaos] },
   { id: "amethyst-arrows", name: "Amethyst arrows", cost: 5, images: [itemImages.amethystArrow] },
   { id: "dragon-bolts", name: "Dragon bolts", cost: 6, images: [itemImages.dragonBolt] },
-  { id: "dragon-thrownaxes", name: "Dragon thrownaxes", cost: 7, images: [itemImages.dragonThrownaxe] },
   { id: "dragon-knives", name: "Dragon knives", cost: 7, images: [itemImages.dragonKnife] },
+  { id: "dragon-thrownaxes", name: "Dragon thrownaxes", cost: 7, images: [itemImages.dragonThrownaxe] },
+  { id: "surge-potions", name: "Surge potions", cost: 8, images: [itemImages.liquidAdrenaline] },
   { id: "stamina-pots", name: "Stamina pots", cost: 5, images: [itemImages.stamina] },
   { id: "combo-food", name: "Combo food", cost: 5, images: [itemImages.shark, itemImages.angler, itemImages.karambwan] },
   { id: "pizza-stack", name: "Pizza stack", cost: 4, images: [itemImages.pineapplePizza, itemImages.karambwan] },
@@ -189,7 +198,6 @@ const shopItems = [
   { id: "blighted-kit", name: "Blighted kit", cost: 6, images: [itemImages.blightedManta, itemImages.blightedRestore] },
   { id: "snare-sacks", name: "Sacks", cost: 4, images: [itemImages.blightedEntangle, itemImages.blightedTeleport] },
   { id: "ether-bracelet", name: "Rev cave kit", cost: 8, images: [itemImages.bracelet, itemImages.revenantEther] },
-  { id: "escape-kit", name: "Escape kit", cost: 6, images: [itemImages.seedPod, itemImages.stamina] },
   { id: "death-coffer", name: "Death coffer", cost: 10, images: [itemImages.coins] }
 ];
 
@@ -223,11 +231,20 @@ function challengeId(type, stageOrIndex, index) {
   return index === undefined ? `${type}-${stageOrIndex}` : `${type}-${stageOrIndex}-${index}`;
 }
 
+function challengeTitle(challenge) {
+  return typeof challenge === "string" ? challenge : challenge.title;
+}
+
+function challengePoints(challenge) {
+  return typeof challenge === "string" ? 1 : challenge.points ?? 1;
+}
+
 function flattenPvmChallenges() {
   return challenges.pvm.flatMap((group, groupIndex) =>
-    group.items.map((title, index) => ({
+    group.items.map((challenge, index) => ({
       id: challengeId("pvm", groupIndex, index),
-      title,
+      title: challengeTitle(challenge),
+      points: challengePoints(challenge),
       stage: group.stage,
       killRequirement: group.killRequirement
     }))
@@ -235,11 +252,21 @@ function flattenPvmChallenges() {
 }
 
 function flattenPvpChallenges() {
-  return challenges.pvp.map((title, index) => ({ id: challengeId("pvp", index), title }));
+  return challenges.pvp.map((challenge, index) => ({
+    id: challengeId("pvp", index),
+    title: challengeTitle(challenge),
+    points: challengePoints(challenge)
+  }));
 }
 
 function totalCompleted() {
   return state.completed.length;
+}
+
+function earnedUnlockPoints() {
+  return [...flattenPvmChallenges(), ...flattenPvpChallenges()].reduce((sum, challenge) => {
+    return sum + (state.completed.includes(challenge.id) ? challenge.points : 0);
+  }, 0);
 }
 
 function totalSpent() {
@@ -250,7 +277,7 @@ function totalSpent() {
 }
 
 function availablePoints() {
-  return totalCompleted() - totalSpent();
+  return earnedUnlockPoints() - totalSpent();
 }
 
 function totalShopSpent() {
@@ -262,20 +289,12 @@ function availableKillPoints() {
 }
 
 function canBuy(unlock) {
-  const prerequisitesMet = unlock.requires.every((id) => state.purchased.includes(id));
-  return !state.purchased.includes(unlock.id) && prerequisitesMet && availablePoints() >= unlock.cost;
+  return !state.purchased.includes(unlock.id) && availablePoints() >= unlock.cost;
 }
 
 function lockReason(unlock) {
   if (state.purchased.includes(unlock.id)) return "Purchased - click to refund";
-
-  const missing = unlock.requires
-    .filter((id) => !state.purchased.includes(id))
-    .map((id) => unlocks.find((item) => item.id === id)?.name)
-    .filter(Boolean);
-
-  if (missing.length) return `Requires: ${missing.join(", ")}`;
-  if (availablePoints() < unlock.cost) return `Need ${unlock.cost - availablePoints()} more BP`;
+  if (availablePoints() < unlock.cost) return `Need ${unlock.cost - availablePoints()} more unlock points`;
   return "Available to buy";
 }
 
@@ -301,7 +320,7 @@ function renderChallengeItem(challenge, target, locked = false) {
   challengeText.textContent = challenge.title;
   label.htmlFor = challenge.id;
   label.classList.toggle("locked", locked);
-  pointReward.textContent = locked ? "Locked" : "+1 BP";
+  pointReward.textContent = locked ? "Locked" : `+${challenge.points} Unlock`;
   label.title = locked ? "Locked" : "";
 
   input.addEventListener("change", () => {
@@ -336,8 +355,14 @@ function renderPvmChallenges() {
     const list = document.createElement("div");
     list.className = "stage-list";
 
-    group.items.forEach((title, index) => {
-      renderChallengeItem({ id: challengeId("pvm", groupIndex, index), title, stage: group.stage, killRequirement: group.killRequirement }, list, !unlocked);
+    group.items.forEach((challenge, index) => {
+      renderChallengeItem({
+        id: challengeId("pvm", groupIndex, index),
+        title: challengeTitle(challenge),
+        points: challengePoints(challenge),
+        stage: group.stage,
+        killRequirement: group.killRequirement
+      }, list, !unlocked);
     });
 
     stage.appendChild(list);
@@ -369,6 +394,9 @@ function renderTalentTree() {
       const purchased = state.purchased.includes(unlock.id);
       const available = canBuy(unlock);
       const button = document.createElement("button");
+      const images = (unlock.images ?? [unlock.image]).filter(Boolean)
+        .map((src) => `<img src="${src}" alt="" loading="lazy" />`)
+        .join("");
 
       button.type = "button";
       button.className = `talent-node ${purchased ? "purchased" : available ? "available" : "locked"}`;
@@ -376,11 +404,11 @@ function renderTalentTree() {
       button.title = lockReason(unlock);
       button.setAttribute("aria-label", `${unlock.name}. ${lockReason(unlock)}.`);
       button.innerHTML = `
-        <span class="node-art"><img src="${unlock.image}" alt="" loading="lazy" /></span>
+        <span class="node-art">${images}</span>
         <span>
           <span class="node-name">${unlock.name}</span>
         </span>
-        <span class="node-cost">${purchased ? "OK" : `${unlock.cost} BP`}</span>
+        <span class="node-cost">${purchased ? "OK" : `${unlock.cost} Unlock`}</span>
       `;
 
       button.addEventListener("click", () => {
@@ -412,7 +440,7 @@ function renderShop() {
         <h3>${item.name}</h3>
         <span>x${owned}</span>
       </div>
-      <button type="button" ${canAfford ? "" : "disabled"}>${item.cost} KP</button>
+      <button type="button" ${canAfford ? "" : "disabled"}>${item.cost} Kill</button>
     `;
 
     card.querySelector("button").addEventListener("click", () => {
@@ -435,15 +463,6 @@ function buyUnlock(id) {
 }
 
 function refundUnlock(id) {
-  const dependentPurchases = unlocks
-    .filter((unlock) => unlock.requires.includes(id) && state.purchased.includes(unlock.id))
-    .map((unlock) => unlock.name);
-
-  if (dependentPurchases.length) {
-    window.alert(`Refund ${dependentPurchases.join(" and ")} first.`);
-    return;
-  }
-
   state.purchased = state.purchased.filter((item) => item !== id);
   saveState();
   render();
@@ -459,7 +478,7 @@ function renderStats() {
   const percent = total ? (complete / total) * 100 : 0;
 
   document.getElementById("availablePoints").textContent = availablePoints();
-  document.getElementById("earnedPoints").textContent = complete;
+  document.getElementById("earnedPoints").textContent = earnedUnlockPoints();
   document.getElementById("spentPoints").textContent = totalSpent();
   document.getElementById("killPoints").textContent = availableKillPoints();
   document.getElementById("playerKills").value = state.playerKills;
@@ -522,3 +541,7 @@ document.getElementById("resetButton").addEventListener("click", () => {
 
 showTab("tasks");
 render();
+
+
+
+
