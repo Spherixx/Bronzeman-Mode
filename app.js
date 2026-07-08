@@ -1,4 +1,4 @@
-﻿import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-app.js";
 import { getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithPopup, signOut } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-auth.js";
 import { doc, getDoc, getFirestore, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/12.15.0/firebase-firestore.js";
 
@@ -56,6 +56,12 @@ const itemImages = {
   zamorakGodsword: wikiImage("Zamorak godsword.png"),
   liquidAdrenaline: wikiImage("Liquid adrenaline.png"),
   lootKey: wikiImage("Loot key.png"),
+  talentToken: wikiImage("Warrior guild token.png"),
+  astral: wikiImage("Astral rune.png"),
+  earth: wikiImage("Earth rune.png"),
+  burningAmulet: wikiImage("Burning amulet(5).png"),
+  ancientIceSack: wikiImage("Blighted ancient ice sack.png"),
+  vengeanceSack: wikiImage("Blighted vengeance sack.png"),
   blood: wikiImage("Blood rune.png"),
   death: wikiImage("Death rune.png"),
   water: wikiImage("Water rune.png"),
@@ -200,26 +206,24 @@ const unlocks = [
 ];
 
 const shopItems = [
-  { id: "barrage-runes", name: "Barrage runes", cost: 8, images: [itemImages.blood, itemImages.death, itemImages.water] },
-  { id: "tb-runes", name: "TB runes", cost: 5, images: [itemImages.law, itemImages.chaos] },
-  { id: "amethyst-arrows", name: "Amethyst arrows", cost: 5, images: [itemImages.amethystArrow] },
-  { id: "dragon-bolts", name: "Dragon bolts", cost: 6, images: [itemImages.dragonBolt] },
-  { id: "dragon-knives", name: "Dragon knives", cost: 7, images: [itemImages.dragonKnife] },
-  { id: "dragon-thrownaxes", name: "Dragon thrownaxes", cost: 7, images: [itemImages.dragonThrownaxe] },
-  { id: "surge-potions", name: "Surge potions", cost: 8, images: [itemImages.liquidAdrenaline] },
-  { id: "stamina-pots", name: "Stamina pots", cost: 5, images: [itemImages.stamina] },
-  { id: "combo-food", name: "Combo food", cost: 5, images: [itemImages.shark, itemImages.angler, itemImages.karambwan] },
-  { id: "pizza-stack", name: "Pizza stack", cost: 4, images: [itemImages.pineapplePizza, itemImages.karambwan] },
-  { id: "brew-restore", name: "Brew restore", cost: 7, images: [itemImages.brew, itemImages.restore] },
-  { id: "range-pot", name: "Range pots", cost: 4, images: [itemImages.ranging] },
-  { id: "melee-pot", name: "Melee pots", cost: 4, images: [itemImages.superCombat] },
-  { id: "venom-kit", name: "Venom kit", cost: 5, images: [itemImages.antivenom, itemImages.dds] },
-  { id: "blighted-kit", name: "Blighted kit", cost: 6, images: [itemImages.blightedManta, itemImages.blightedRestore] },
-  { id: "snare-sacks", name: "Sacks", cost: 4, images: [itemImages.blightedEntangle, itemImages.blightedTeleport] },
-  { id: "ether-bracelet", name: "Rev cave kit", cost: 8, images: [itemImages.bracelet, itemImages.revenantEther] },
-  { id: "death-coffer", name: "Death coffer", cost: 10, images: [itemImages.coins] }
+  { id: "barrages", name: "Barrages", cost: 1, items: [{ image: itemImages.ancientIceSack, amount: "100" }, { image: itemImages.blood }, { image: itemImages.death }, { image: itemImages.water }] },
+  { id: "tb-runes", name: "TB runes", cost: 1, items: [{ image: itemImages.blightedTeleport, amount: "100" }, { image: itemImages.law }, { image: itemImages.chaos }, { image: itemImages.death }] },
+  { id: "veng-runes", name: "Veng runes", cost: 1, items: [{ image: itemImages.vengeanceSack, amount: "100" }, { image: itemImages.astral }, { image: itemImages.death }, { image: itemImages.earth }] },
+  { id: "amethyst-arrows", name: "Amethyst arrows", cost: 1, items: [{ image: itemImages.amethystArrow, amount: "250" }] },
+  { id: "dragon-bolts", name: "Dragonstone bolts", cost: 1, items: [{ image: itemImages.dragonBolt, amount: "100" }] },
+  { id: "dragon-knives", name: "Dragon knives", cost: 1, items: [{ image: itemImages.dragonKnife, amount: "50" }] },
+  { id: "dragon-thrownaxes", name: "Dragon thrownaxes", cost: 1, items: [{ image: itemImages.dragonThrownaxe, amount: "50" }] },
+  { id: "surge-potions", name: "Surge pots", cost: 2, items: [{ image: itemImages.liquidAdrenaline, amount: "5" }] },
+  { id: "stamina-pots", name: "Stam pots", cost: 2, items: [{ image: itemImages.stamina, amount: "5" }] },
+  { id: "combo-food", name: "Combo food", cost: 2, items: [{ image: itemImages.karambwan, amount: "50" }, { image: itemImages.angler, amount: "50" }] },
+  { id: "standard-food", name: "Standard food", cost: 1, items: [{ image: itemImages.blightedManta, amount: "100" }, { image: itemImages.angler, amount: "100" }, { image: itemImages.shark, amount: "100" }] },
+  { id: "brews", name: "Brews", cost: 1, items: [{ image: itemImages.brew, amount: "20" }] },
+  { id: "restores", name: "Restores", cost: 1, items: [{ image: itemImages.restore, amount: "10" }] },
+  { id: "range-pots", name: "Range pots", cost: 1, items: [{ image: itemImages.ranging, amount: "5" }] },
+  { id: "super-combats", name: "Super combats", cost: 1, items: [{ image: itemImages.superCombat, amount: "5" }] },
+  { id: "antivenom", name: "Antivenom", cost: 1, items: [{ image: itemImages.antivenom }] },
+  { id: "rev-kit", name: "Rev kit", cost: 2, items: [{ image: itemImages.bracelet }, { image: itemImages.revenantEther, amount: "100" }, { image: itemImages.burningAmulet }] }
 ];
-
 const state = loadState();
 let currentUser = null;
 let saveTimer = null;
@@ -327,6 +331,7 @@ function setSaveStatus(message) {
 
 function renderAuthUser(user) {
   const loginButton = document.getElementById("loginButton");
+  const logoutButton = document.getElementById("logoutButton");
   const userPanel = document.getElementById("userPanel");
   const userPhoto = document.getElementById("userPhoto");
   const userName = document.getElementById("userName");
@@ -335,6 +340,7 @@ function renderAuthUser(user) {
 
   loginButton.hidden = Boolean(user);
   userPanel.hidden = !user;
+  if (logoutButton) logoutButton.hidden = !user;
 
   if (!user) {
     userPhoto.removeAttribute("src");
@@ -344,6 +350,16 @@ function renderAuthUser(user) {
 
   userPhoto.src = user.photoURL ?? "";
   userName.textContent = user.displayName ?? user.email ?? "Signed in";
+}
+
+function setSettingsOpen(open) {
+  const settingsButton = document.getElementById("settingsButton");
+  const settingsMenu = document.getElementById("settingsMenu");
+
+  if (!settingsButton || !settingsMenu) return;
+
+  settingsMenu.hidden = !open;
+  settingsButton.setAttribute("aria-expanded", String(open));
 }
 
 async function loadCloudState(user) {
@@ -370,6 +386,22 @@ async function loadCloudState(user) {
 function initFirebaseAuth() {
   const loginButton = document.getElementById("loginButton");
   const logoutButton = document.getElementById("logoutButton");
+  const settingsButton = document.getElementById("settingsButton");
+  const settingsMenu = document.getElementById("settingsMenu");
+
+  settingsButton?.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setSettingsOpen(settingsMenu?.hidden ?? true);
+  });
+
+  settingsMenu?.addEventListener("click", (event) => {
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", () => setSettingsOpen(false));
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setSettingsOpen(false);
+  });
 
   loginButton?.addEventListener("click", async () => {
     loginButton.disabled = true;
@@ -386,6 +418,8 @@ function initFirebaseAuth() {
   });
 
   logoutButton?.addEventListener("click", async () => {
+    setSettingsOpen(false);
+
     try {
       await signOut(auth);
     } catch (error) {
@@ -472,7 +506,7 @@ function canBuy(unlock) {
 
 function lockReason(unlock) {
   if (state.purchased.includes(unlock.id)) return "Purchased - click to refund";
-  if (availablePoints() < unlock.cost) return `Need ${unlock.cost - availablePoints()} more unlock points`;
+  if (availablePoints() < unlock.cost) return `Need ${unlock.cost - availablePoints()} more talent points`;
   return "Available to buy";
 }
 
@@ -498,7 +532,7 @@ function renderChallengeItem(challenge, target, locked = false) {
   challengeText.textContent = challenge.title;
   label.htmlFor = challenge.id;
   label.classList.toggle("locked", locked);
-  pointReward.textContent = locked ? "Locked" : `+${challenge.points} Unlock`;
+  pointReward.textContent = locked ? "Locked" : `+${challenge.points} Talent`;
   label.title = locked ? "Locked" : "";
 
   input.addEventListener("change", () => {
@@ -586,7 +620,7 @@ function renderTalentTree() {
         <span>
           <span class="node-name">${unlock.name}</span>
         </span>
-        <span class="node-cost">${purchased ? "OK" : `${unlock.cost} Unlock`}</span>
+        <span class="node-cost">${purchased ? "OK" : `${unlock.cost} Talent`}</span>
       `;
 
       button.addEventListener("click", () => {
@@ -601,6 +635,19 @@ function renderTalentTree() {
   }
 }
 
+function killCostLabel(cost) {
+  return `${cost} ${cost === 1 ? "Kill" : "Kills"}`;
+}
+
+function renderShopStack(entry) {
+  return `
+    <span class="shop-stack">
+      <img src="${entry.image}" alt="" loading="lazy" />
+      ${entry.amount ? `<span class="stack-amount">${entry.amount}</span>` : ""}
+    </span>
+  `;
+}
+
 function renderShop() {
   const shop = document.getElementById("shopList");
   shop.innerHTML = "";
@@ -610,15 +657,17 @@ function renderShop() {
     const canAfford = availableKillPoints() >= item.cost;
     const card = document.createElement("article");
     card.className = `shop-item ${canAfford ? "available" : "locked"}`;
-    const images = item.images.map((src) => `<img src="${src}" alt="" loading="lazy" />`).join("");
+    card.title = owned ? `Purchased ${owned}` : "";
+
+    const entries = item.items ?? (item.images ?? []).map((image) => ({ image }));
+    const images = entries.map(renderShopStack).join("");
 
     card.innerHTML = `
       <div class="shop-art">${images}</div>
       <div class="shop-copy">
         <h3>${item.name}</h3>
-        <span>x${owned}</span>
       </div>
-      <button type="button" ${canAfford ? "" : "disabled"}>${item.cost} Kill</button>
+      <button type="button" ${canAfford ? "" : "disabled"}>${killCostLabel(item.cost)}</button>
     `;
 
     card.querySelector("button").addEventListener("click", () => {
@@ -631,7 +680,6 @@ function renderShop() {
     shop.appendChild(card);
   });
 }
-
 function buyUnlock(id) {
   const unlock = unlocks.find((item) => item.id === id);
   if (!unlock || !canBuy(unlock)) return;
@@ -659,6 +707,7 @@ function renderStats() {
   document.getElementById("earnedPoints").textContent = earnedUnlockPoints();
   document.getElementById("spentPoints").textContent = totalSpent();
   document.getElementById("killPoints").textContent = availableKillPoints();
+  document.getElementById("killsEarned").textContent = state.playerKills;
   document.getElementById("playerKills").value = state.playerKills;
   document.getElementById("shopSpent").textContent = totalShopSpent();
   document.getElementById("challengeProgress").textContent = `${complete} / ${total}`;
@@ -710,6 +759,7 @@ document.getElementById("removeKillButton").addEventListener("click", () => {
 });
 
 document.getElementById("resetButton").addEventListener("click", () => {
+  setSettingsOpen(false);
   const shouldReset = window.confirm("Reset all completed challenges, unlocks, kills, and shop purchases?");
   if (!shouldReset) return;
   Object.assign(state, defaultState());
@@ -720,6 +770,8 @@ document.getElementById("resetButton").addEventListener("click", () => {
 showTab("tasks");
 render();
 initFirebaseAuth();
+
+
 
 
 

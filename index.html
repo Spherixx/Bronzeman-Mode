@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.ico" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -15,38 +16,49 @@
   <main class="app-shell">
     <header class="hero stream-hero">
       <div>
-        <h1>Bronzeman</h1>
+        <img class="brand-banner" src="BronzemanHoly.png" alt="Bronzeman" />
       </div>
 
       <div class="header-side">
         <section class="auth-panel" aria-label="Account">
-          <button id="loginButton" class="login-button" type="button">Log in</button>
-          <div id="userPanel" class="user-panel" hidden>
-            <img id="userPhoto" alt="" />
-            <span id="userName"></span>
-            <button id="logoutButton" class="logout-button" type="button">Sign out</button>
+          <div class="account-main">
+            <button id="loginButton" class="login-button" type="button">Log in</button>
+            <div id="userPanel" class="user-panel" hidden>
+              <img id="userPhoto" alt="" />
+              <span id="userName"></span>
+            </div>
+            <span id="saveStatus" class="save-status">Saved locally</span>
+          </div>
+          <div class="settings-wrap">
+            <button id="settingsButton" class="settings-button" type="button" aria-haspopup="menu" aria-expanded="false">Settings</button>
+            <div id="settingsMenu" class="settings-menu" role="menu" hidden>
+              <button id="resetButton" class="settings-item danger" type="button" role="menuitem">Reset progress</button>
+              <div class="settings-divider"></div>
+              <button id="logoutButton" class="settings-item" type="button" role="menuitem">Sign out</button>
+            </div>
           </div>
         </section>
 
         <section class="point-panel" aria-label="Point totals">
         <div class="point-stat primary">
-          <span class="point-icon"><img src="https://oldschool.runescape.wiki/w/Special:FilePath/Coins%2010000.png" alt="" /></span>
+          <span class="point-icon"><img src="https://oldschool.runescape.wiki/w/Special:FilePath/Warrior%20guild%20token.png" alt="" /></span>
           <div>
-            <span class="stat-label">UNLOCK POINTS</span>
+            <span class="stat-label">TALENT POINTS</span>
             <strong id="availablePoints">0</strong>
           </div>
         </div>
         <div class="point-stat">
           <span class="point-icon kp"><img src="https://oldschool.runescape.wiki/w/Special:FilePath/Loot%20key.png" alt="" /></span>
           <div>
-            <span class="stat-label">KILL POINTS</span>
+            <span class="stat-label">AVAILABLE KILLS</span>
             <strong id="killPoints">0</strong>
           </div>
         </div>
         <div class="point-breakdown" aria-label="Point breakdown">
-          <span><b id="earnedPoints">0</b> unlock earned</span>
-          <span><b id="spentPoints">0</b> unlock spent</span>
-          <span><b id="shopSpent">0</b> kill spent</span>
+          <span><b id="earnedPoints">0</b> talent points earned</span>
+          <span><b id="spentPoints">0</b> talent points spent</span>
+          <span><b id="killsEarned">0</b> kills earned</span>
+          <span><b id="shopSpent">0</b> kills spent</span>
         </div>
       </section>
       </div>
@@ -56,6 +68,7 @@
       <button class="tab-button active" type="button" data-tab="tasks" aria-selected="true">Tasks</button>
       <button class="tab-button" type="button" data-tab="talents" aria-selected="false">Talents</button>
       <button class="tab-button" type="button" data-tab="shop" aria-selected="false">Shop</button>
+      <button class="tab-button" type="button" data-tab="rules" aria-selected="false">Rules</button>
     </nav>
 
     <section class="tab-panel active" id="tasksPanel">
@@ -118,10 +131,47 @@
       <section class="shop-grid" id="shopList" aria-label="Consumable shop"></section>
     </section>
 
-    <footer class="stream-footer">
-      <p id="saveStatus">Saved locally</p>
-      <button id="resetButton" class="reset-button" type="button">Reset</button>
-    </footer>
+
+    <section class="tab-panel" id="rulesPanel">
+      <section class="section-heading compact-heading">
+        <h2>Rules</h2>
+      </section>
+
+      <section class="rules-wrap" aria-label="Bronzeman mode rules and information">
+        <article class="rules-intro">
+          <h3>Bronzeman Mode</h3>
+          <p>Start from scratch on a main account, live in the Wilderness, and unlock power through kills, drops, and completed milestones.</p>
+        </article>
+
+        <div class="rules-grid">
+          <article class="rule-card">
+            <h3>Wilderness Locked</h3>
+            <p>Progress comes from Wilderness content, Wilderness PvM, and player kills.</p>
+          </article>
+          <article class="rule-card">
+            <h3>PK Loot Unlocks</h3>
+            <p>Anything you kill a player for can be used immediately.</p>
+          </article>
+          <article class="rule-card">
+            <h3>Tasks Buy Talents</h3>
+            <p>Completed tasks award talent points for account power.</p>
+          </article>
+          <article class="rule-card">
+            <h3>Kills Buy Supplies</h3>
+            <p>Each player kill awards kill points for the consumable shop.</p>
+          </article>
+          <article class="rule-card">
+            <h3>Shop Is Consumables</h3>
+            <p>Runes, ammo, food, potions, and rev cave supplies are bought with kill points.</p>
+          </article>
+          <article class="rule-card">
+            <h3>Honor The Spirit</h3>
+            <p>Off-meta, risky, and funny PK setups are encouraged.</p>
+          </article>
+        </div>
+      </section>
+    </section>
+
   </main>
 
   <template id="challengeTemplate">
@@ -129,13 +179,16 @@
       <input type="checkbox" />
       <span class="checkmark" aria-hidden="true">OK</span>
       <span class="challenge-text"></span>
-      <span class="point-reward">+1 UP</span>
+      <span class="point-reward">+1 TP</span>
     </label>
   </template>
 
   <script type="module" src="app.js"></script>
 </body>
 </html>
+
+
+
 
 
 

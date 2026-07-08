@@ -1514,3 +1514,268 @@ body {
     justify-content: flex-start;
   }
 }
+
+/* Branding, rules, and shop stack counts */
+.brand-banner {
+  display: block;
+  width: min(560px, 45vw);
+  max-height: 170px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.tabs {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.rules-wrap {
+  display: grid;
+  gap: 16px;
+}
+
+.rules-intro,
+.rule-card {
+  background: linear-gradient(145deg, rgba(26, 31, 37, 0.98), rgba(18, 22, 27, 0.98));
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.rules-intro {
+  padding: 22px;
+  border-top: 3px solid var(--bronze-bright);
+}
+
+.rules-intro h3,
+.rule-card h3 {
+  margin: 0 0 8px;
+  font-size: 1rem;
+}
+
+.rules-intro p,
+.rule-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.rule-card {
+  min-height: 124px;
+  padding: 17px;
+}
+
+.shop-art {
+  gap: 8px;
+}
+
+.shop-stack {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+}
+
+.shop-stack img {
+  max-width: 36px;
+  max-height: 36px;
+  image-rendering: pixelated;
+}
+
+.stack-amount {
+  position: absolute;
+  right: -2px;
+  bottom: -3px;
+  color: #ffff00;
+  font: 0.62rem "DM Mono", monospace;
+  font-weight: 500;
+  line-height: 1;
+  text-shadow: 1px 1px 0 #000, -1px 1px 0 #000, 1px -1px 0 #000, -1px -1px 0 #000;
+  pointer-events: none;
+}
+
+.shop-copy h3 {
+  min-height: auto;
+}
+
+@media (max-width: 900px) {
+  .brand-banner {
+    width: min(100%, 430px);
+    max-height: 130px;
+  }
+
+  .tabs {
+    grid-template-columns: 1fr;
+  }
+
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Integrated account, save, and points header */
+.header-side {
+  width: min(500px, 100%);
+  justify-items: stretch;
+}
+
+.auth-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: stretch;
+  gap: 8px;
+  width: 100%;
+}
+
+.account-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 5px;
+  background: rgba(8, 9, 11, 0.72);
+  border: 1px solid var(--line);
+}
+
+.login-button {
+  width: 100%;
+  min-height: 32px;
+}
+
+.user-panel {
+  width: 100%;
+  max-width: none;
+  min-height: 32px;
+  grid-template-columns: 32px minmax(0, 1fr);
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+.save-status {
+  min-width: 104px;
+  color: var(--muted);
+  font: 0.62rem "DM Mono", monospace;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.settings-wrap {
+  position: relative;
+}
+
+.settings-button {
+  min-height: 42px;
+  padding: 0 13px;
+  color: var(--text);
+  background: linear-gradient(145deg, #171c22, #101318);
+  border: 1px solid #303943;
+  cursor: pointer;
+  font: 0.68rem "DM Mono", monospace;
+  transition: 150ms ease;
+}
+
+.settings-button:hover,
+.settings-button[aria-expanded="true"] {
+  color: var(--bronze-bright);
+  border-color: var(--bronze-bright);
+}
+
+.settings-menu {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 7px);
+  right: 0;
+  display: grid;
+  width: 190px;
+  padding: 6px;
+  background: rgba(11, 13, 16, 0.98);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.settings-menu[hidden],
+.settings-item[hidden] {
+  display: none;
+}
+
+.settings-item {
+  min-height: 36px;
+  padding: 0 10px;
+  color: var(--muted);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  font: 0.68rem "DM Mono", monospace;
+  text-align: left;
+}
+
+.settings-item:hover {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.settings-item.danger:hover {
+  color: var(--danger);
+}
+
+.settings-divider {
+  height: 1px;
+  margin: 6px 0;
+  background: var(--line-soft);
+}
+
+.header-side .point-panel {
+  width: 100%;
+}
+
+.point-breakdown {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px 12px;
+  justify-content: stretch;
+}
+
+.point-breakdown span {
+  min-width: 0;
+}
+
+@media (max-width: 900px) {
+  .header-side {
+    width: min(100%, 500px);
+  }
+}
+
+@media (max-width: 520px) {
+  .auth-panel,
+  .account-main {
+    grid-template-columns: 1fr;
+  }
+
+  .save-status {
+    min-width: 0;
+    text-align: left;
+  }
+
+  .settings-button {
+    width: 100%;
+  }
+
+  .settings-menu {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+
+  .point-breakdown {
+    grid-template-columns: 1fr;
+  }
+}
