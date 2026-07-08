@@ -15,7 +15,6 @@
   <main class="app-shell">
     <header class="hero stream-hero">
       <div>
-        <p class="eyebrow">OSRS WILDERNESS</p>
         <h1>Bronzeman</h1>
       </div>
 
@@ -43,34 +42,22 @@
     </header>
 
     <nav class="tabs" aria-label="Progress sections">
-      <button class="tab-button active" type="button" data-tab="tasks" aria-selected="true">
-        <span>01</span>
-        Tasks
-      </button>
-      <button class="tab-button" type="button" data-tab="talents" aria-selected="false">
-        <span>02</span>
-        Talents
-      </button>
-      <button class="tab-button" type="button" data-tab="shop" aria-selected="false">
-        <span>03</span>
-        Shop
-      </button>
+      <button class="tab-button active" type="button" data-tab="tasks" aria-selected="true">Tasks</button>
+      <button class="tab-button" type="button" data-tab="talents" aria-selected="false">Talents</button>
+      <button class="tab-button" type="button" data-tab="shop" aria-selected="false">Shop</button>
     </nav>
 
     <section class="tab-panel active" id="tasksPanel">
       <section class="section-heading compact-heading">
         <h2>Tasks</h2>
         <div class="progress-summary">
-          <span id="challengeProgress">0 / 32</span>
+          <span id="challengeProgress">0 / 60</span>
           <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
         </div>
       </section>
 
       <section class="kill-counter" aria-label="Player kill counter">
-        <div>
-          <p class="eyebrow">PKS</p>
-          <h3>Player Kills</h3>
-        </div>
+        <h3>Player Kills</h3>
         <div class="kill-controls">
           <button id="removeKillButton" type="button" aria-label="Remove one player kill">-</button>
           <input id="playerKills" type="number" min="0" step="1" value="0" aria-label="Player kills" />
@@ -81,22 +68,16 @@
       <section class="challenge-area">
         <article class="challenge-card pvm-card">
           <div class="card-header">
-            <div>
-              <p class="eyebrow">PVM</p>
-              <h3>Wilderness</h3>
-            </div>
-            <span class="challenge-count" id="pvmCount">0 / 17</span>
+            <h3>PVM</h3>
+            <span class="challenge-count" id="pvmCount">0 / 30</span>
           </div>
           <div class="challenge-list staged" id="pvmList"></div>
         </article>
 
         <article class="challenge-card pvp-card">
           <div class="card-header">
-            <div>
-              <p class="eyebrow">PVP</p>
-              <h3>Player Kills</h3>
-            </div>
-            <span class="challenge-count" id="pvpCount">0 / 15</span>
+            <h3>PVP</h3>
+            <span class="challenge-count" id="pvpCount">0 / 30</span>
           </div>
           <div class="challenge-list" id="pvpList"></div>
         </article>

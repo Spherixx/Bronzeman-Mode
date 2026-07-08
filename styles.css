@@ -1267,3 +1267,32 @@ body {
     grid-column: auto;
   }
 }
+
+/* Expanded PvP progression */
+.talent-tree {
+  grid-template-columns: repeat(5, minmax(220px, 1fr));
+  min-width: 1180px;
+}
+
+.tier {
+  min-height: 430px;
+}
+
+.card-header > h3 {
+  color: var(--text);
+  font-size: 1.25rem;
+}
+
+.tab-button {
+  gap: 0;
+}
+
+.kill-counter > h3 {
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .talent-tree {
+    min-width: 1120px;
+  }
+}
