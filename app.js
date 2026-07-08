@@ -92,7 +92,7 @@ const itemImages = {
   blightedTeleport: wikiImage("Blighted teleport spell sack.png"),
   seedPod: wikiImage("Royal seed pod.png"),
   revenantEther: wikiImage("Revenant ether.png"),
-bracelet: wikiImage("Bracelet of ethereum.png"),
+  bracelet: wikiImage("Bracelet of ethereum.png"),
   blackDhideBody: wikiImage("Black d'hide body.png"),
   blackDhideChaps: wikiImage("Black d'hide chaps.png"),
   xericianHat: wikiImage("Xerician hat.png"),
@@ -663,7 +663,10 @@ function renderChallengeItem(challenge, target, locked = false) {
   input.addEventListener("change", () => {
     setChallengeCompleted(challenge.id, input.checked);
     saveState();
-    render();
+    renderStats();
+    renderPvmChallenges();
+    renderPvpChallenges();
+    updateTalentTreeState();
   });
 
   target.appendChild(content);
@@ -736,6 +739,7 @@ function renderTalentTree() {
         .join("");
 
       button.type = "button";
+      button.dataset.unlockId = unlock.id;
       button.className = `talent-node ${purchased ? "purchased" : available ? "available" : "locked"}`;
       button.disabled = !purchased && !available;
       button.title = lockReason(unlock);
@@ -749,8 +753,9 @@ function renderTalentTree() {
       `;
 
       button.addEventListener("click", () => {
-        if (purchased) refundUnlock(unlock.id);
-        else if (available) buyUnlock(unlock.id);
+        const isPurchased = state.purchased.includes(unlock.id);
+        if (isPurchased) refundUnlock(unlock.id);
+        else if (canBuy(unlock)) buyUnlock(unlock.id);
       });
 
       tier.appendChild(button);
@@ -758,6 +763,26 @@ function renderTalentTree() {
 
     tree.appendChild(tier);
   }
+}
+
+function updateTalentTreeState() {
+  unlocks.forEach((unlock) => {
+    const button = document.querySelector(`[data-unlock-id="${unlock.id}"]`);
+    if (!button) return;
+
+    const purchased = state.purchased.includes(unlock.id);
+    const available = canBuy(unlock);
+    const reason = lockReason(unlock);
+    const cost = button.querySelector(".node-cost");
+
+    button.classList.toggle("purchased", purchased);
+    button.classList.toggle("available", !purchased && available);
+    button.classList.toggle("locked", !purchased && !available);
+    button.disabled = !purchased && !available;
+    button.title = reason;
+    button.setAttribute("aria-label", `${unlock.name}. ${reason}.`);
+    if (cost) cost.textContent = purchased ? "OK" : `${unlock.cost} Talent`;
+  });
 }
 
 function killCostLabel(cost) {
@@ -783,6 +808,7 @@ function renderShopCard(item) {
   const owned = state.shopPurchases[item.id] ?? 0;
   const canAfford = availableKillPoints() >= item.cost;
   const card = document.createElement("article");
+  card.dataset.shopId = item.id;
   card.className = `shop-item ${canAfford ? "available" : "locked"}`;
   card.title = owned ? `Purchased ${owned}` : "";
 
@@ -800,12 +826,32 @@ function renderShopCard(item) {
 
   card.querySelector("button").addEventListener("click", () => {
     if (availableKillPoints() < item.cost) return;
-    state.shopPurchases[item.id] = owned + 1;
+    const currentOwned = state.shopPurchases[item.id] ?? 0;
+    state.shopPurchases[item.id] = currentOwned + 1;
     saveState();
-    render();
+    renderStats();
+    updateShopState();
   });
 
   return card;
+}
+
+function updateShopState() {
+  shopItems.forEach((item) => {
+    const card = document.querySelector(`[data-shop-id="${item.id}"]`);
+    if (!card) return;
+
+    const owned = state.shopPurchases[item.id] ?? 0;
+    const canAfford = availableKillPoints() >= item.cost;
+    const count = card.querySelector(".purchase-count");
+    const button = card.querySelector("button");
+
+    card.classList.toggle("available", canAfford);
+    card.classList.toggle("locked", !canAfford);
+    card.title = owned ? `Purchased ${owned}` : "";
+    if (count) count.textContent = `Bought ${owned}`;
+    if (button) button.disabled = !canAfford;
+  });
 }
 
 function renderShop() {
@@ -853,7 +899,6 @@ function renderUnlockCard(item, source, checkable = false) {
     label.querySelector("input").addEventListener("change", (event) => {
       setBasicUnlockChecked(item.id, event.target.checked);
       saveState();
-      render();
     });
   }
 
@@ -896,13 +941,17 @@ function buyUnlock(id) {
   if (!unlock || !canBuy(unlock)) return;
   state.purchased.push(id);
   saveState();
-  render();
+  renderStats();
+  updateTalentTreeState();
+  renderUnlocks();
 }
 
 function refundUnlock(id) {
   state.purchased = state.purchased.filter((item) => item !== id);
   saveState();
-  render();
+  renderStats();
+  updateTalentTreeState();
+  renderUnlocks();
 }
 
 function renderStats() {
@@ -955,19 +1004,25 @@ document.querySelectorAll(".tab-button").forEach((button) => {
 document.getElementById("playerKills").addEventListener("input", (event) => {
   state.playerKills = Math.max(0, Math.floor(Number(event.target.value) || 0));
   saveState();
-  render();
+  renderStats();
+  renderPvmChallenges();
+  updateShopState();
 });
 
 document.getElementById("addKillButton").addEventListener("click", () => {
   state.playerKills += 1;
   saveState();
-  render();
+  renderStats();
+  renderPvmChallenges();
+  updateShopState();
 });
 
 document.getElementById("removeKillButton").addEventListener("click", () => {
   state.playerKills = Math.max(0, state.playerKills - 1);
   saveState();
-  render();
+  renderStats();
+  renderPvmChallenges();
+  updateShopState();
 });
 
 document.getElementById("resetButton").addEventListener("click", () => {
