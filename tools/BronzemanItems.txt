@@ -40,7 +40,7 @@ Mind rune
 Body rune
 Soul rune
 Nature rune
-Burning amulet(5)
+Burning amulet
 Blighted ancient ice sack
 Blighted vengeance sack
 Blood rune
@@ -91,3 +91,32 @@ Zamorak staff
 Mystic robe top (light)
 Mystic robe top
 Mystic robe bottom
+Burning claws
+Crimson kisten
+Dragon warhammer
+Sunlight hunter's crossbow
+Dragon crossbow
+Tome of fire
+Tome of water
+Antler guard
+Berserker ring
+Archers ring
+Warrior ring
+Seers ring
+Toktz-xil-ek
+Toktz-xil-ak
+Tzhaar-ket-em
+Tzhaar-ket-om
+Toktz-xil-ul
+Toktz-mej-tal
+Obsidian helmet
+Obsidian platebody
+Obsidian platelegs
+Toktz-ket-xil
+Obsidian cape
+Holy book
+Unholy book
+Book of balance
+Book of war
+Book of law
+Book of darkness
