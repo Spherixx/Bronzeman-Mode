@@ -1,0 +1,93 @@
+Void knight top
+Fighter torso
+Dragon defender
+Fire cape
+Imbued saradomin cape
+Trouver parchment
+Colossal blade
+Barrelchest anchor
+Granite maul
+Ornate maul handle
+Arkan blade
+Dragon scimitar
+Dragon spear
+Dragon dagger(p++)
+Magic shortbow (i)
+Rune crossbow
+Sunlight hunter's crossbow
+Dark bow
+Seeker arrow
+Ancient mace
+Dragon thrownaxe
+Dragon knife(p++)
+Amethyst arrow
+Dragonstone dragon bolts (e)
+Voidwaker
+Accursed sceptre
+Webweaver bow
+Ursine chainmace
+Toxic staff of the dead
+Zamorak godsword
+Surge potion(4)
+Loot key
+Warrior guild token
+Astral rune
+Air rune
+Water rune
+Earth rune
+Fire rune
+Mind rune
+Body rune
+Soul rune
+Nature rune
+Burning amulet(5)
+Blighted ancient ice sack
+Blighted vengeance sack
+Blood rune
+Death rune
+Law rune
+Chaos rune
+Stamina potion(4)
+Extended stamina potion(4)
+Prayer potion(4)
+Saradomin brew(4)
+Super restore(4)
+Ranging potion(4)
+Super combat potion(4)
+Anti-venom+(4)
+Shark
+Anglerfish
+Cooked karambwan
+Halibut
+Marlin
+Pineapple pizza
+Manta ray
+Blighted manta ray
+Blighted super restore(4)
+Blighted entangle sack
+Blighted teleport spell sack
+Royal seed pod
+Revenant ether
+Bracelet of ethereum
+Black d'hide body
+Black d'hide chaps
+Xerician hat
+Xerician top
+Xerician robe
+Helm of neitiznot
+Berserker helm
+Archer helm
+Farseer helm
+Climbing boots
+Amulet of glory(4)
+Rune gloves
+Barrows gloves
+Saradomin cape
+Guthix cape
+Zamorak cape
+Saradomin staff
+Guthix staff
+Zamorak staff
+Mystic robe top (light)
+Mystic robe top
+Mystic robe bottom

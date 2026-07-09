@@ -1,0 +1,556 @@
+{
+  "items": [
+    {
+      "name": "Trouver parchment",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Trouver_parchment",
+      "itemId": 24187,
+      "imageName": "Trouver parchment.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Trouver%20parchment.png",
+      "localImagePath": "images/items/Trouver parchment.png"
+    },
+    {
+      "name": "Granite maul",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_maul",
+      "itemId": 4153,
+      "imageName": "Granite maul.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Granite%20maul.png",
+      "localImagePath": "images/items/Granite maul.png"
+    },
+    {
+      "name": "Ornate maul handle",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ornate_maul_handle",
+      "itemId": 24229,
+      "imageName": "Ornate maul handle.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Ornate%20maul%20handle.png",
+      "localImagePath": "images/items/Ornate maul handle.png"
+    },
+    {
+      "name": "Dragon scimitar",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_scimitar",
+      "itemId": 4587,
+      "imageName": "Dragon scimitar.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20scimitar.png",
+      "localImagePath": "images/items/Dragon scimitar.png"
+    },
+    {
+      "name": "Dragon spear",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_spear",
+      "itemId": 1249,
+      "imageName": "Dragon spear.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20spear.png",
+      "localImagePath": "images/items/Dragon spear.png"
+    },
+    {
+      "name": "Dragon dagger(p++)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_dagger%28p%2B%2B%29",
+      "itemId": 5698,
+      "imageName": "Dragon dagger(p++).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20dagger%28p%2B%2B%29.png",
+      "localImagePath": "images/items/Dragon dagger(p++).png"
+    },
+    {
+      "name": "Rune crossbow",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Rune_crossbow",
+      "itemId": 9185,
+      "imageName": "Rune crossbow.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Rune%20crossbow.png",
+      "localImagePath": "images/items/Rune crossbow.png"
+    },
+    {
+      "name": "Dark bow",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dark_bow",
+      "itemId": 11235,
+      "imageName": "Dark bow.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Dark%20bow.png",
+      "localImagePath": "images/items/Dark bow.png"
+    },
+    {
+      "name": "Ancient mace",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_mace",
+      "itemId": 11061,
+      "imageName": "Ancient mace.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Ancient%20mace.png",
+      "localImagePath": "images/items/Ancient mace.png"
+    },
+    {
+      "name": "Dragon thrownaxe",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_thrownaxe",
+      "itemId": 20849,
+      "imageName": "Dragon thrownaxe.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20thrownaxe.png",
+      "localImagePath": "images/items/Dragon thrownaxe.png"
+    },
+    {
+      "name": "Dragon knife(p++)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_knife%28p%2B%2B%29",
+      "itemId": 22810,
+      "imageName": "Dragon knife(p++).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20knife%28p%2B%2B%29.png",
+      "localImagePath": "images/items/Dragon knife(p++).png"
+    },
+    {
+      "name": "Amethyst arrow",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Amethyst_arrow",
+      "itemId": 21326,
+      "imageName": "Amethyst arrow 5.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Amethyst%20arrow%205.png",
+      "localImagePath": "images/items/Amethyst arrow 5.png"
+    },
+    {
+      "name": "Dragonstone dragon bolts (e)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragonstone_dragon_bolts_%28e%29",
+      "itemId": 21948,
+      "imageName": "Dragonstone dragon bolts (e) 5.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Dragonstone%20dragon%20bolts%20%28e%29%205.png",
+      "localImagePath": "images/items/Dragonstone dragon bolts (e) 5.png"
+    },
+    {
+      "name": "Voidwaker",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Voidwaker",
+      "itemId": 27690,
+      "imageName": "Voidwaker.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Voidwaker.png",
+      "localImagePath": "images/items/Voidwaker.png"
+    },
+    {
+      "name": "Zamorak godsword",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_godsword",
+      "itemId": 11808,
+      "imageName": "Zamorak godsword.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Zamorak%20godsword.png",
+      "localImagePath": "images/items/Zamorak godsword.png"
+    },
+    {
+      "name": "Astral rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Astral_rune",
+      "itemId": 9075,
+      "imageName": "Astral rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Astral%20rune.png",
+      "localImagePath": "images/items/Astral rune.png"
+    },
+    {
+      "name": "Air rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Air_rune",
+      "itemId": 556,
+      "imageName": "Air rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Air%20rune.png",
+      "localImagePath": "images/items/Air rune.png"
+    },
+    {
+      "name": "Water rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Water_rune",
+      "itemId": 555,
+      "imageName": "Water rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Water%20rune.png",
+      "localImagePath": "images/items/Water rune.png"
+    },
+    {
+      "name": "Earth rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Earth_rune",
+      "itemId": 557,
+      "imageName": "Earth rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Earth%20rune.png",
+      "localImagePath": "images/items/Earth rune.png"
+    },
+    {
+      "name": "Fire rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Fire_rune",
+      "itemId": 554,
+      "imageName": "Fire rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Fire%20rune.png",
+      "localImagePath": "images/items/Fire rune.png"
+    },
+    {
+      "name": "Mind rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Mind_rune",
+      "itemId": 558,
+      "imageName": "Mind rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Mind%20rune.png",
+      "localImagePath": "images/items/Mind rune.png"
+    },
+    {
+      "name": "Body rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Body_rune",
+      "itemId": 559,
+      "imageName": "Body rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Body%20rune.png",
+      "localImagePath": "images/items/Body rune.png"
+    },
+    {
+      "name": "Soul rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Soul_rune",
+      "itemId": 566,
+      "imageName": "Soul rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Soul%20rune.png",
+      "localImagePath": "images/items/Soul rune.png"
+    },
+    {
+      "name": "Nature rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Nature_rune",
+      "itemId": 561,
+      "imageName": "Nature rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Nature%20rune.png",
+      "localImagePath": "images/items/Nature rune.png"
+    },
+    {
+      "name": "Burning amulet(5)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Burning_amulet%285%29",
+      "itemId": 21166,
+      "imageName": "Burning amulet.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Burning%20amulet.png",
+      "localImagePath": "images/items/Burning amulet.png"
+    },
+    {
+      "name": "Blighted ancient ice sack",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_ancient_ice_sack",
+      "itemId": 24607,
+      "imageName": "Blighted ancient ice sack.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Blighted%20ancient%20ice%20sack.png",
+      "localImagePath": "images/items/Blighted ancient ice sack.png"
+    },
+    {
+      "name": "Blighted vengeance sack",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_vengeance_sack",
+      "itemId": 24621,
+      "imageName": "Blighted vengeance sack.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Blighted%20vengeance%20sack.png",
+      "localImagePath": "images/items/Blighted vengeance sack.png"
+    },
+    {
+      "name": "Blood rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blood_rune",
+      "itemId": 565,
+      "imageName": "Blood rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Blood%20rune.png",
+      "localImagePath": "images/items/Blood rune.png"
+    },
+    {
+      "name": "Death rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Death_rune",
+      "itemId": 560,
+      "imageName": "Death rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Death%20rune.png",
+      "localImagePath": "images/items/Death rune.png"
+    },
+    {
+      "name": "Law rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Law_rune",
+      "itemId": 563,
+      "imageName": "Law rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Law%20rune.png",
+      "localImagePath": "images/items/Law rune.png"
+    },
+    {
+      "name": "Chaos rune",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Chaos_rune",
+      "itemId": 562,
+      "imageName": "Chaos rune.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Chaos%20rune.png",
+      "localImagePath": "images/items/Chaos rune.png"
+    },
+    {
+      "name": "Stamina potion(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Stamina_potion%284%29",
+      "itemId": 12625,
+      "imageName": "Stamina potion(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Stamina%20potion%284%29.png",
+      "localImagePath": "images/items/Stamina potion(4).png"
+    },
+    {
+      "name": "Extended stamina potion(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Extended_stamina_potion%284%29",
+      "itemId": 31638,
+      "imageName": "Extended stamina potion(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Extended%20stamina%20potion%284%29.png",
+      "localImagePath": "images/items/Extended stamina potion(4).png"
+    },
+    {
+      "name": "Prayer potion(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Prayer_potion%284%29",
+      "itemId": 2434,
+      "imageName": "Prayer potion(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Prayer%20potion%284%29.png",
+      "localImagePath": "images/items/Prayer potion(4).png"
+    },
+    {
+      "name": "Saradomin brew(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_brew%284%29",
+      "itemId": 6685,
+      "imageName": "Saradomin brew(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Saradomin%20brew%284%29.png",
+      "localImagePath": "images/items/Saradomin brew(4).png"
+    },
+    {
+      "name": "Super restore(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Super_restore%284%29",
+      "itemId": 3024,
+      "imageName": "Super restore(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Super%20restore%284%29.png",
+      "localImagePath": "images/items/Super restore(4).png"
+    },
+    {
+      "name": "Ranging potion(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ranging_potion%284%29",
+      "itemId": 2444,
+      "imageName": "Ranging potion(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Ranging%20potion%284%29.png",
+      "localImagePath": "images/items/Ranging potion(4).png"
+    },
+    {
+      "name": "Super combat potion(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Super_combat_potion%284%29",
+      "itemId": 12695,
+      "imageName": "Super combat potion(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Super%20combat%20potion%284%29.png",
+      "localImagePath": "images/items/Super combat potion(4).png"
+    },
+    {
+      "name": "Anti-venom+(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Anti-venom%2B%284%29",
+      "itemId": 12913,
+      "imageName": "Anti-venom+(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Anti-venom%2B%284%29.png",
+      "localImagePath": "images/items/Anti-venom+(4).png"
+    },
+    {
+      "name": "Shark",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Shark",
+      "itemId": 385,
+      "imageName": "Shark.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Shark.png",
+      "localImagePath": "images/items/Shark.png"
+    },
+    {
+      "name": "Anglerfish",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Anglerfish",
+      "itemId": 13441,
+      "imageName": "Anglerfish.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Anglerfish.png",
+      "localImagePath": "images/items/Anglerfish.png"
+    },
+    {
+      "name": "Cooked karambwan",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Cooked_karambwan",
+      "itemId": 3144,
+      "imageName": "Cooked karambwan.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Cooked%20karambwan.png",
+      "localImagePath": "images/items/Cooked karambwan.png"
+    },
+    {
+      "name": "Halibut",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Halibut",
+      "itemId": 32336,
+      "imageName": "Halibut.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Halibut.png",
+      "localImagePath": "images/items/Halibut.png"
+    },
+    {
+      "name": "Marlin",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Marlin",
+      "itemId": 32352,
+      "imageName": "Marlin.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Marlin.png",
+      "localImagePath": "images/items/Marlin.png"
+    },
+    {
+      "name": "Pineapple pizza",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Pineapple_pizza",
+      "itemId": 2301,
+      "imageName": "Pineapple pizza.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Pineapple%20pizza.png",
+      "localImagePath": "images/items/Pineapple pizza.png"
+    },
+    {
+      "name": "Manta ray",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Manta_ray",
+      "itemId": 391,
+      "imageName": "Manta ray.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Manta%20ray.png",
+      "localImagePath": "images/items/Manta ray.png"
+    },
+    {
+      "name": "Blighted manta ray",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_manta_ray",
+      "itemId": 24589,
+      "imageName": "Blighted manta ray.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Blighted%20manta%20ray.png",
+      "localImagePath": "images/items/Blighted manta ray.png"
+    },
+    {
+      "name": "Blighted super restore(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_super_restore%284%29",
+      "itemId": 24598,
+      "imageName": "Blighted super restore(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Blighted%20super%20restore%284%29.png",
+      "localImagePath": "images/items/Blighted super restore(4).png"
+    },
+    {
+      "name": "Blighted entangle sack",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_entangle_sack",
+      "itemId": 24613,
+      "imageName": "Blighted entangle sack.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Blighted%20entangle%20sack.png",
+      "localImagePath": "images/items/Blighted entangle sack.png"
+    },
+    {
+      "name": "Blighted teleport spell sack",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_teleport_spell_sack",
+      "itemId": 24615,
+      "imageName": "Blighted teleport spell sack.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Blighted%20teleport%20spell%20sack.png",
+      "localImagePath": "images/items/Blighted teleport spell sack.png"
+    },
+    {
+      "name": "Revenant ether",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Revenant_ether",
+      "itemId": 21820,
+      "imageName": "Revenant ether 5.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Revenant%20ether%205.png",
+      "localImagePath": "images/items/Revenant ether 5.png"
+    },
+    {
+      "name": "Black d'hide body",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Black_d%27hide_body",
+      "itemId": 2503,
+      "imageName": "Black d'hide body.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Black%20d%27hide%20body.png",
+      "localImagePath": "images/items/Black d'hide body.png"
+    },
+    {
+      "name": "Black d'hide chaps",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Black_d%27hide_chaps",
+      "itemId": 2497,
+      "imageName": "Black d'hide chaps.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Black%20d%27hide%20chaps.png",
+      "localImagePath": "images/items/Black d'hide chaps.png"
+    },
+    {
+      "name": "Xerician hat",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Xerician_hat",
+      "itemId": 13385,
+      "imageName": "Xerician hat.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Xerician%20hat.png",
+      "localImagePath": "images/items/Xerician hat.png"
+    },
+    {
+      "name": "Xerician top",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Xerician_top",
+      "itemId": 13387,
+      "imageName": "Xerician top.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Xerician%20top.png",
+      "localImagePath": "images/items/Xerician top.png"
+    },
+    {
+      "name": "Xerician robe",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Xerician_robe",
+      "itemId": 13389,
+      "imageName": "Xerician robe.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Xerician%20robe.png",
+      "localImagePath": "images/items/Xerician robe.png"
+    },
+    {
+      "name": "Helm of neitiznot",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Helm_of_neitiznot",
+      "itemId": 10828,
+      "imageName": "Helm of neitiznot.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Helm%20of%20neitiznot.png",
+      "localImagePath": "images/items/Helm of neitiznot.png"
+    },
+    {
+      "name": "Berserker helm",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_helm",
+      "itemId": 3751,
+      "imageName": "Berserker helm.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Berserker%20helm.png",
+      "localImagePath": "images/items/Berserker helm.png"
+    },
+    {
+      "name": "Archer helm",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Archer_helm",
+      "itemId": 3749,
+      "imageName": "Archer helm.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Archer%20helm.png",
+      "localImagePath": "images/items/Archer helm.png"
+    },
+    {
+      "name": "Farseer helm",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Farseer_helm",
+      "itemId": 3755,
+      "imageName": "Farseer helm.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Farseer%20helm.png",
+      "localImagePath": "images/items/Farseer helm.png"
+    },
+    {
+      "name": "Climbing boots",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Climbing_boots",
+      "itemId": 3105,
+      "imageName": "Climbing boots.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Climbing%20boots.png",
+      "localImagePath": "images/items/Climbing boots.png"
+    },
+    {
+      "name": "Amulet of glory(4)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_glory%284%29",
+      "itemId": 1712,
+      "imageName": "Amulet of glory(4).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Amulet%20of%20glory%284%29.png",
+      "localImagePath": "images/items/Amulet of glory(4).png"
+    },
+    {
+      "name": "Mystic robe top (light)",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_top_%28light%29",
+      "itemId": 4111,
+      "imageName": "Mystic robe top (light).png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20robe%20top%20%28light%29.png",
+      "localImagePath": "images/items/Mystic robe top (light).png"
+    },
+    {
+      "name": "Mystic robe top",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_top",
+      "itemId": 4091,
+      "imageName": "Mystic robe top.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20robe%20top.png",
+      "localImagePath": "images/items/Mystic robe top.png"
+    },
+    {
+      "name": "Mystic robe bottom",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_bottom",
+      "itemId": 4093,
+      "imageName": "Mystic robe bottom.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20robe%20bottom.png",
+      "localImagePath": "images/items/Mystic robe bottom.png"
+    }
+  ],
+  "otherImages": [
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:Redirect/file/Coins_10000.png",
+      "imageName": "Coins_10000.png",
+      "localImagePath": "images/Coins_10000.png"
+    },
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:Redirect/file/Blood_money_10000.png",
+      "imageName": "Blood_money_10000.png",
+      "localImagePath": "images/Blood_money_10000.png"
+    },
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:Redirect/file/Standard_spellbook.png",
+      "imageName": "Standard_spellbook.png",
+      "localImagePath": "images/Standard_spellbook.png"
+    },
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:Redirect/file/Arceuus_spellbook.png",
+      "imageName": "Arceuus_spellbook.png",
+      "localImagePath": "images/Arceuus_spellbook.png"
+    },
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:Redirect/file/Ancient_spellbook.png",
+      "imageName": "Ancient_spellbook.png",
+      "localImagePath": "images/Ancient_spellbook.png"
+    },
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:Redirect/file/Lunar_spellbook.png",
+      "imageName": "Lunar_spellbook.png",
+      "localImagePath": "images/Lunar_spellbook.png"
+    }
+  ]
+}
