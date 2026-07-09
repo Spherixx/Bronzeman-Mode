@@ -73,7 +73,7 @@ const itemImages = {
   obsidianMace: itemImage("Tzhaar-ket-em.png"),
   obsidianThrowingRings: itemImage("Toktz-xil-ul.png"),
   obsidianStaff: itemImage("Toktz-mej-tal.png"),
-  berserkerNecklace: itemImage("Berserker necklace.png"),
+  berserkerNecklace:
   tomeWater: itemImage("Tome of water.png"),
   tomeFire: itemImage("Tome of fire.png"),
   antlerGuard: itemImage("Antler guard.png"),
@@ -86,6 +86,7 @@ const itemImages = {
   bookDarkness: itemImage("Book of darkness.png"),
   bookLaw: itemImage("Book of law.png"),
   bookWar: itemImage("Book of war.png"),
+  unholyBook: itemImage("Unholy book.png"),
   darkBow: itemImage("Dark bow.png"),
   seekerArrow: itemImage("Seeker arrow.png"),
   ancientMace: itemImage("Ancient mace.png"),
@@ -99,9 +100,9 @@ const itemImages = {
   chainmace: itemImage("Ursine chainmace.png"),
   toxicStaff: itemImage("Toxic staff of the dead.png"),
   zamorakGodsword: itemImage("Zamorak godsword.png"),
-  surgePotion: itemImage("Surge potion(4).png"),
-  lootKey: imageAsset("Loot key.png"),
-  talentToken: imageAsset("Warrior guild token.png"),
+  surgePotion:
+  lootKey: itemImage("Loot key.png"),
+  talentToken: imageAsset("Blood_money_10000.png"),
   astral: itemImage("Astral rune.png"),
   air: itemImage("Air rune.png"),
   water: itemImage("Water rune.png"),
@@ -118,7 +119,7 @@ const itemImages = {
   death: itemImage("Death rune.png"),
   law: itemImage("Law rune.png"),
   chaos: itemImage("Chaos rune.png"),
-  coins: imageAsset("Coins 10000.png"),
+  coins: imageAsset("Coins_10000.png"),
   stamina: itemImage("Stamina potion(4).png"),
   extendedStamina: itemImage("Extended stamina potion(4).png"),
   prayer: itemImage("Prayer potion(4).png"),
@@ -259,11 +260,11 @@ const challenges = {
 
 
 const unlocks = [
-  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.saradominCape, itemImages.guthixCape, itemImages.zamorakCape] },
-  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.saradominStaff, itemImages.guthixStaff, itemImages.zamorakStaff] },
+  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.zamorakCape] },
+  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.zamorakStaff] },
   { id: "glory", name: "Amulet of Glory", cost: 1, tier: 1, collectionCategory: "Range Gear", requires: [], images: [itemImages.amuletGlory] },
   { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, collectionCategory: "Range Weapons", requires: [], images: [itemImages.rcb] },
-  { id: "sunlight-hunters-crossbow", name: "Sunlight Hunter's Crossbow", cost: 1, tier: 1, collectionCategory: "Range Weapons", requires: [], images: [itemImages.sunlightHuntersCrossbow] },
+  { id: "sunlight-hunters-crossbow", name: "Sunlight Hunter's Crossbow", cost: 2, tier: 2, collectionCategory: "Range Weapons", requires: [], images: [itemImages.sunlightHuntersCrossbow] },
   { id: "tome-water", name: "Tome of Water", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.tomeWater] },
   { id: "dds", name: "DDS", cost: 1, tier: 1, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dds] },
   { id: "rune-gloves", name: "Rune Gloves", cost: 1, tier: 1, collectionCategory: "Melee Gear", requires: [], images: [itemImages.runeGloves] },
@@ -277,18 +278,18 @@ const unlocks = [
   { id: "ancient-magicks", name: "Ancient Magicks", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.ancientMagicks], tags: ["spellbook"] },
   { id: "lunar-spellbook", name: "Lunar Spellbook", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.lunarSpellbook], tags: ["spellbook"] },
   { id: "arceuus-spellbook", name: "Arceuus Spellbook", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.arceuusSpellbook], tags: ["spellbook"] },
-  { id: "arkan-blade", name: "Arkan Blade", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.arkanBlade] },
+  { id: "arkan-blade", name: "Arkan Blade", cost: 3, tier: 3, collectionCategory: "Melee Gear", requires: [], images: [itemImages.arkanBlade] },
   { id: "crimson-kisten", name: "Crimson Kisten", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.crimsonKisten] },
-  { id: "dragon-warhammer", name: "Dragon Warhammer", cost: 2, tier: 2, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonWarhammer] },
+  { id: "dragon-warhammer", name: "Dragon Warhammer", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonWarhammer] },
   { id: "dragon-crossbow", name: "Dragon Crossbow", cost: 2, tier: 2, collectionCategory: "Range Weapons", requires: [], images: [itemImages.dragonCrossbow] },
-  { id: "obsidian-berserker", name: "Obsidian Weaponry + Berserker Neck", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.obsidianMaul, itemImages.obsidianSword, itemImages.obsidianMace, itemImages.obsidianThrowingRings, itemImages.obsidianStaff, itemImages.berserkerNecklace] },
+  { id: "obsidian-berserker", name: "Obsidian Weaponry + Berserker Neck", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.obsidianMaul, itemImages.berserkerNecklace] },
   { id: "antler-guard", name: "Antler Guard", cost: 2, tier: 2, collectionCategory: "Range Gear", requires: [], images: [itemImages.antlerGuard] },
-  { id: "dagannoth-rings", name: "Dagannoth Rings", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.archersRing, itemImages.berserkerRing, itemImages.seersRing, itemImages.warriorRing] },
+  { id: "dagannoth-rings", name: "Dagannoth Rings", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.berserkerRing] },
 
   { id: "seed-pod", name: "Seed Pod", cost: 3, tier: 3, collectionCategory: "Teleports", requires: [], images: [itemImages.seedPod] },
   { id: "firecape", name: "Fire Cape", cost: 3, tier: 3, collectionCategory: "Melee Gear", requires: [], images: [itemImages.fireCape] },
   { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, collectionCategory: "Mage Gear", requires: [], images: [itemImages.ma2Cape] },
-  { id: "surge-potions", name: "Surge Potions", cost: 3, tier: 3, collectionCategory: "Potions", requires: [], images: [itemImages.surgePotion] },
+  { id: "surge-potions", name: "Surge Potions", cost: 4, tier: 4, collectionCategory: "Potions", requires: [], images: [itemImages.surgePotion] },
   { id: "dragon-spear", name: "Dragon Spear", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonSpear] },
   { id: "dragon-knives", name: "Dragon Knives", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonKnife] },
   { id: "ancient-mace", name: "Ancient Mace", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.ancientMace] },
@@ -338,7 +339,16 @@ const shopItems = [
   { id: "super-combats", category: "Potions", name: "Super combats", cost: 1, items: [{ image: itemImages.superCombat, amount: "5" }] },
   { id: "antivenom", category: "Potions", name: "Antivenom", cost: 1, items: [{ image: itemImages.antivenom, amount: "2" }] },
   { id: "trouver", category: "Other", name: "Trouver Parchment", cost: 2, items: [{ image: itemImages.trouver }] },
-  { id: "god-books", category: "Other", name: "God books", cost: 1, items: [{ image: itemImages.holyBook }, { image: itemImages.bookBalance }, { image: itemImages.bookDarkness }, { image: itemImages.bookLaw }, { image: itemImages.bookWar }] },
+  { id: "god-books", category: "Other", name: "God books", cost: 1, collection: true, items: [{ image: itemImages.unholyBook }] },
+  { id: "god-cape-reclaim", category: "Other", name: "God cape reclaim", cost: 1, items: [{ image: itemImages.zamorakCape }] },
+  { id: "god-staff-reclaim", category: "Other", name: "God staff reclaim", cost: 1, items: [{ image: itemImages.zamorakStaff }] },
+  { id: "rune-gloves-reclaim", category: "Other", name: "Rune gloves reclaim", cost: 1, items: [{ image: itemImages.runeGloves }] },
+  { id: "barrows-gloves-reclaim", category: "Other", name: "Barrows gloves reclaim", cost: 1, items: [{ image: itemImages.barrowsGloves }] },
+  { id: "dragon-defender-reclaim", category: "Other", name: "Dragon defender reclaim", cost: 1, items: [{ image: itemImages.defenders }] },
+  { id: "fighter-torso-reclaim", category: "Other", name: "Fighter torso reclaim", cost: 1, items: [{ image: itemImages.torso }] },
+  { id: "void-reclaim", category: "Other", name: "Void reclaim", cost: 1, items: [{ image: itemImages.void }] },
+  { id: "fire-cape-reclaim", category: "Other", name: "Fire cape reclaim", cost: 1, items: [{ image: itemImages.fireCape }] },
+  { id: "ma2-cape-reclaim", category: "Other", name: "MA2 cape reclaim", cost: 1, items: [{ image: itemImages.ma2Cape }] },
   { id: "rev-kit", category: "Other", name: "Rev kit", cost: 2, items: [{ image: itemImages.bracelet }, { image: itemImages.revenantEther, amount: "100" }, { image: itemImages.burningAmulet }] }
 ];
 const shopIdAliases = {
@@ -966,9 +976,7 @@ function renderTalentTree() {
       const purchased = state.purchased.includes(unlock.id);
       const available = canBuy(unlock);
       const button = document.createElement("button");
-      const images = (unlock.images ?? [unlock.image]).filter(Boolean)
-        .map((src) => `<img src="${src}" alt="" loading="lazy" />`)
-        .join("");
+      const images = renderItemImages(unlock.images ?? [unlock.image]);
 
       button.type = "button";
       button.dataset.unlockId = unlock.id;
@@ -1023,10 +1031,8 @@ function killCostLabel(cost) {
 
 const missingImageAssets = new Set([
   itemImage("Antler guard.png"),
-  itemImage("Berserker necklace.png"),
   itemImage("Seeker arrow.png"),
   itemImage("Sunlight hunter's crossbow.png"),
-  itemImage("Surge potion(4).png")
 ]);
 
 function renderShopStack(entry) {
@@ -1176,6 +1182,38 @@ function inferCollectionCategory(name, fallback = "Loot") {
   return fallback;
 }
 
+const hiddenManualCollectionNames = new Set([
+  "Saradomin cape",
+  "Guthix cape",
+  "Zamorak cape",
+  "Saradomin staff",
+  "Guthix staff",
+  "Zamorak staff",
+  "Holy book",
+  "Unholy book",
+  "Book of balance",
+  "Book of darkness",
+  "Book of law",
+  "Book of war",
+  "Archers ring",
+  "Berserker ring",
+  "Seers ring",
+  "Warrior ring",
+  "Tzhaar-ket-om",
+  "Toktz-xil-ek",
+  "Tzhaar-ket-em",
+  "Toktz-xil-ul",
+  "Toktz-mej-tal",
+  "Berserker necklace",
+  "Void knight top",
+  "Fighter torso",
+  "Dragon defender",
+  "Fire cape",
+  "Imbued saradomin cape",
+  "Rune gloves",
+  "Barrows gloves"
+].map(normalizeCollectionText));
+
 function buildManualCollectionItem(item) {
   const category = inferCollectionCategory(item.name);
   const tags = uniqueTags([...inferItemTags(item.name, category), "loot"]);
@@ -1198,7 +1236,7 @@ async function loadItemSearchIndex() {
     const response = await fetch("tools/BronzemanItems.json");
     if (!response.ok) throw new Error(`Item index returned ${response.status}`);
     const items = await response.json();
-    itemSearchIndex = Array.isArray(items) ? items.map(buildManualCollectionItem) : [];
+    itemSearchIndex = Array.isArray(items) ? items.filter((item) => !hiddenManualCollectionNames.has(normalizeCollectionText(item.name))).map(buildManualCollectionItem) : [];
   } catch (error) {
     console.warn("Could not load BronzemanItems.json", error);
     itemSearchIndex = [];
@@ -1242,7 +1280,7 @@ function talentCollectionItems() {
 }
 
 function shopCollectionItems() {
-  return shopItems.map((item) => {
+  return shopItems.filter((item) => item.collection).map((item) => {
     const entries = item.items ?? (item.images ?? []).map((image) => ({ image }));
     return {
       id: `shop-${item.id}`,
