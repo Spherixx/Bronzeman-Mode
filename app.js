@@ -498,8 +498,8 @@ function saveState() {
   queueCloudSave();
 }
 
-function trackerDoc(uid) {
-  return doc(db, "users", uid, "trackers", "default");
+function trackerDoc() {
+  return doc(db, "trackers", "bronzeman-default");
 }
 
 function queueCloudSave() {
@@ -516,7 +516,7 @@ async function saveCloudState() {
   if (!currentUser) return;
 
   try {
-    await setDoc(trackerDoc(currentUser.uid), {
+    await setDoc(trackerDoc(), {
       ...serializeState(),
       displayName: currentUser.displayName ?? "",
       photoURL: currentUser.photoURL ?? "",
@@ -572,7 +572,7 @@ async function loadCloudState(user) {
   setSaveStatus("Loading cloud save...");
 
   try {
-    const snapshot = await getDoc(trackerDoc(user.uid));
+    const snapshot = await getDoc(trackerDoc());
     const nextState = snapshot.exists() ? mergeStates(state, snapshot.data()) : serializeState();
 
     isApplyingRemoteState = true;
