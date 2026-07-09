@@ -58,7 +58,7 @@
           <span><b id="earnedPoints">0</b> talent points earned</span>
           <span><b id="spentPoints">0</b> talent points spent</span>
           <span><b id="killsEarned">0</b> kills earned</span>
-          <span><b id="shopSpent">0</b> kills spent</span>
+          <span><b id="shopSpent">0</b> pk spent</span>
         </div>
       </section>
       </div>
@@ -68,7 +68,7 @@
       <button class="tab-button" type="button" data-tab="rules" aria-selected="false">Rules</button>
       <button class="tab-button active" type="button" data-tab="tasks" aria-selected="true">Tasks</button>
       <button class="tab-button" type="button" data-tab="talents" aria-selected="false">Talents</button>
-      <button class="tab-button" type="button" data-tab="unlocks" aria-selected="false">Unlocks</button>
+      <button class="tab-button" type="button" data-tab="unlocks" aria-selected="false">Collection</button>
       <button class="tab-button" type="button" data-tab="shop" aria-selected="false">Shop</button>
     </nav>
 
@@ -76,7 +76,7 @@
       <section class="section-heading compact-heading">
         <h2>Tasks</h2>
         <div class="progress-summary">
-          <span id="challengeProgress">0 / 60</span>
+          <span id="challengeProgress">0 / 56</span>
           <div class="progress-track" aria-hidden="true"><span id="progressBar"></span></div>
         </div>
       </section>
@@ -94,7 +94,7 @@
         <article class="challenge-card pvm-card">
           <div class="card-header">
             <h3>PVM</h3>
-            <span class="challenge-count" id="pvmCount">0 / 30</span>
+            <span class="challenge-count" id="pvmCount">0 / 26</span>
           </div>
           <div class="challenge-list staged" id="pvmList"></div>
         </article>
@@ -105,6 +105,14 @@
             <span class="challenge-count" id="pvpCount">0 / 30</span>
           </div>
           <div class="challenge-list" id="pvpList"></div>
+        </article>
+
+        <article class="challenge-card repeatable-card">
+          <div class="card-header">
+            <h3>Repeatables</h3>
+            <span class="challenge-count" id="repeatableCount">0 bought</span>
+          </div>
+          <div class="challenge-list" id="repeatableList"></div>
         </article>
       </section>
     </section>
@@ -126,10 +134,10 @@
 
     <section class="tab-panel" id="unlocksPanel">
       <section class="section-heading compact-heading">
-        <h2>Unlocks</h2>
+        <h2>Collection</h2>
       </section>
 
-      <section class="unlocked-wrap" id="unlocksList" aria-label="Unlocks"></section>
+      <section class="unlocked-wrap" id="unlocksList" aria-label="Collection"></section>
     </section>
 
     <section class="tab-panel" id="shopPanel">
@@ -137,7 +145,7 @@
         <h2>Shop</h2>
       </section>
 
-      <section class="shop-grid" id="shopList" aria-label="Consumable shop"></section>
+      <section class="shop-grid" id="shopList" aria-label="GE purchase shop"></section>
     </section>
 
     <section class="tab-panel" id="rulesPanel">
@@ -158,7 +166,7 @@
           </article>
           <article class="rule-card">
             <h3>PK Loot Unlocks</h3>
-            <p>Anything you kill a player for is unlocked.</p>
+            <p>PK loot unlocks regular collection items, but anything that exists as a talent still requires buying that talent before use.</p>
           </article>
           <article class="rule-card">
             <h3>Tasks Buy Talents</h3>
@@ -166,11 +174,11 @@
           </article>
           <article class="rule-card">
             <h3>Kills Buy Supplies</h3>
-            <p>Each player kill awards kill points for the consumable shop.</p>
+            <p>Each player kill awards PK points that can be spent on GE shop purchases and repeatable KC grinds.</p>
           </article>
           <article class="rule-card">
-            <h3>Shop Supplies Must Be Bought</h3>
-            <p>Even if a shop item can be obtained from players, that shop amount has to be purchased before use.</p>
+            <h3>GE Purchases Use Shop</h3>
+            <p>The shop is for items bought from the Grand Exchange instead of earned through Wilderness content.</p>
           </article>
           <article class="rule-card">
             <h3>Honor The Spirit</h3>

@@ -375,6 +375,10 @@ h1 span {
   border-top: 3px solid var(--pvp);
 }
 
+.repeatable-card {
+  border-top: 3px solid var(--kp);
+}
+
 .card-header {
   display: flex;
   align-items: center;
@@ -474,6 +478,39 @@ h1 span {
 .challenge-item.locked {
   cursor: not-allowed;
   opacity: 0.52;
+}
+
+.repeatable-item {
+  cursor: default;
+}
+
+.repeatable-item .repeatable-mark {
+  color: var(--kp);
+  border-color: rgba(245, 181, 96, 0.5);
+  font-size: 0.48rem;
+}
+
+.repeatable-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.repeatable-actions button {
+  min-width: 54px;
+  padding: 6px 8px;
+  color: #15120d;
+  background: var(--kp);
+  border: 0;
+  border-radius: 3px;
+  font: 0.62rem "DM Mono", monospace;
+  cursor: pointer;
+}
+
+.repeatable-actions button:disabled {
+  color: var(--faint);
+  background: #20262c;
+  cursor: not-allowed;
 }
 
 .challenge-item input {

@@ -26,6 +26,10 @@ function task(title, points = 1) {
   return { title, points };
 }
 
+function repeatableTask(title, cost) {
+  return { title, cost, repeatable: true };
+}
+
 const itemImages = {
   void: wikiImage("Void knight top.png"),
   torso: wikiImage("Fighter torso.png"),
@@ -38,9 +42,14 @@ const itemImages = {
   gmaul: wikiImage("Granite maul.png"),
   ornateMaul: wikiImage("Ornate maul handle.png"),
   arkanBlade: wikiImage("Arkan blade.png"),
+  ancientMagicks: wikiImage("Ancient Magicks icon.png"),
+  lunarSpellbook: wikiImage("Lunar spellbook icon.png"),
+  dragonScimitar: wikiImage("Dragon scimitar.png"),
+  dragonSpear: wikiImage("Dragon spear.png"),
   dds: wikiImage("Dragon dagger(p++).png"),
   msb: wikiImage("Magic shortbow (i).png"),
   rcb: wikiImage("Rune crossbow.png"),
+  sunlightHuntersCrossbow: wikiImage("Sunlight hunter's crossbow.png"),
   darkBow: wikiImage("Dark bow.png"),
   seekerArrow: wikiImage("Seeker arrow.png"),
   ancientMace: wikiImage("Ancient mace.png"),
@@ -75,6 +84,8 @@ const itemImages = {
   chaos: wikiImage("Chaos rune.png"),
   coins: wikiImage("Coins 10000.png"),
   stamina: wikiImage("Stamina potion(4).png"),
+  extendedStamina: wikiImage("Extended stamina potion(4).png"),
+  prayer: wikiImage("Prayer potion(4).png"),
   brew: wikiImage("Saradomin brew(4).png"),
   restore: wikiImage("Super restore(4).png"),
   ranging: wikiImage("Ranging potion(4).png"),
@@ -86,6 +97,7 @@ const itemImages = {
   halibut: wikiImage("Halibut.png"),
   marlin: wikiImage("Marlin.png"),
   pineapplePizza: wikiImage("Pineapple pizza.png"),
+  manta: wikiImage("Manta ray.png"),
   blightedManta: wikiImage("Blighted manta ray.png"),
   blightedRestore: wikiImage("Blighted super restore(4).png"),
   blightedEntangle: wikiImage("Blighted entangle sack.png"),
@@ -130,9 +142,9 @@ const challenges = {
         task("Thieve from Rogue's Castle chest"),
         task("Complete 100 Wilderness laps in one trip", 2),
         task("Complete 25 Wilderness Slayer tasks", 2),
-        task("Get 25 KC at Chaos Fanatic"),
-        task("Get 25 KC at Scorpia"),
-        task("100 KC each baby Wilderness boss", 2)
+        repeatableTask("Get 25 KC at Chaos Fanatic", 5),
+        repeatableTask("Get 25 KC at Scorpia", 5),
+        repeatableTask("100 KC each baby Wilderness boss", 10)
       ]
     },
     {
@@ -144,8 +156,9 @@ const challenges = {
         task("Complete Wilderness Hard Diaries", 2),
         task("Complete a Wilderness shield", 2),
         task("Get a dragon pickaxe drop", 2),
+        task("Get a Wilderness ring", 2),
         task("PvM a Wilderness weapon", 2),
-        task("Get 100 KC Chaos Elemental", 2),
+        repeatableTask("Get 100 KC Chaos Elemental", 10),
         task("Complete 50 duo Wilderness Slayer tasks", 2),
         task("Get a revenant unique drop", 2),
         task("Get a ring of wealth scroll from Wilderness content")
@@ -159,7 +172,7 @@ const challenges = {
         task("Greenlog a Wilderness boss", 3),
         task("Get a Wilderness pet", 3),
         task("Complete Wilderness Elite Diaries", 3),
-        task("100 KC each Wilderness boss", 3),
+        repeatableTask("100 KC each Wilderness boss", 10),
         task("PK a craw's bow, viggora's chainmace, or accursed sceptre", 2),
         task("Build a full revenant ether stack", 2),
         task("Get a full Dagon'hai set from Larran's keys", 3),
@@ -202,48 +215,60 @@ const challenges = {
   ]
 };
 
+
+
 const unlocks = [
-  { id: "seed-pod", name: "Seed Pod", cost: 1, tier: 1, requires: [], images: [itemImages.seedPod] },
-  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, requires: [], images: [itemImages.saradominCape, itemImages.guthixCape, itemImages.zamorakCape] },
-  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, requires: [], images: [itemImages.saradominStaff, itemImages.guthixStaff, itemImages.zamorakStaff] },
-  { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, requires: [], images: [itemImages.rcb] },
-  { id: "dds", name: "DDS", cost: 1, tier: 1, requires: [], images: [itemImages.dds] },
-  { id: "arkan-blade", name: "Arkan Blade", cost: 1, tier: 1, requires: [], images: [itemImages.arkanBlade] },
+  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.saradominCape, itemImages.guthixCape, itemImages.zamorakCape] },
+  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.saradominStaff, itemImages.guthixStaff, itemImages.zamorakStaff] },
+  { id: "glory", name: "Amulet of Glory", cost: 1, tier: 1, collectionCategory: "Range Gear", requires: [], images: [itemImages.amuletGlory] },
+  { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, collectionCategory: "Weapons", requires: [], images: [itemImages.rcb] },
+  { id: "dds", name: "DDS", cost: 1, tier: 1, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dds] },
+  { id: "rune-gloves", name: "Rune Gloves", cost: 1, tier: 1, collectionCategory: "Melee Gear", requires: [], images: [itemImages.runeGloves] },
+  { id: "extended-stamina-potions", name: "Extended Stam Pots", cost: 1, tier: 1, collectionCategory: "Potions", requires: [], images: [itemImages.extendedStamina] },
 
-  { id: "void", name: "Void", cost: 2, tier: 2, requires: [], images: [itemImages.void] },
-  { id: "torso", name: "Fighter Torso", cost: 2, tier: 2, requires: [], images: [itemImages.torso] },
-  { id: "defenders", name: "Defenders", cost: 2, tier: 2, requires: [], images: [itemImages.defenders] },
-  { id: "msb", name: "MSB(i)", cost: 2, tier: 2, requires: [], images: [itemImages.msb] },
-  { id: "trouver", name: "Trouver Parchment", cost: 2, tier: 2, requires: [], images: [itemImages.trouver] },
-  { id: "rune-gloves", name: "Rune Gloves", cost: 2, tier: 2, requires: [], images: [itemImages.runeGloves] },
+  { id: "void", name: "Void", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.void] },
+  { id: "torso", name: "Fighter Torso", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.torso] },
+  { id: "defenders", name: "Defenders", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.defenders] },
+  { id: "msb", name: "MSB(i)", cost: 2, tier: 2, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.msb] },
+  { id: "ancient-magicks", name: "Ancient Magicks", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.ancientMagicks] },
+  { id: "lunar-spellbook", name: "Lunar Spellbook", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.lunarSpellbook] },
+  { id: "arkan-blade", name: "Arkan Blade", cost: 2, tier: 2, collectionCategory: "Weapons", requires: [], images: [itemImages.arkanBlade] },
 
-  { id: "firecape", name: "Fire Cape", cost: 3, tier: 3, requires: [], images: [itemImages.fireCape] },
-  { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, requires: [], images: [itemImages.ma2Cape] },
-  { id: "surge-potions", name: "Surge Potions", cost: 3, tier: 3, requires: [], images: [itemImages.surgePotion] },
-  { id: "dragon-knives", name: "Dragon Knives", cost: 3, tier: 3, requires: [], images: [itemImages.dragonKnife] },
-  { id: "ancient-mace", name: "Ancient Mace", cost: 3, tier: 3, requires: [], images: [itemImages.ancientMace] },
+  { id: "seed-pod", name: "Seed Pod", cost: 3, tier: 3, collectionCategory: "Teleports", requires: [], images: [itemImages.seedPod] },
+  { id: "firecape", name: "Fire Cape", cost: 3, tier: 3, collectionCategory: "Melee Gear", requires: [], images: [itemImages.fireCape] },
+  { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, collectionCategory: "Mage Gear", requires: [], images: [itemImages.ma2Cape] },
+  { id: "surge-potions", name: "Surge Potions", cost: 3, tier: 3, collectionCategory: "Potions", requires: [], images: [itemImages.surgePotion] },
+  { id: "dragon-spear", name: "Dragon Spear", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonSpear] },
+  { id: "sunlight-hunters-crossbow", name: "Sunlight Hunter's Crossbow", cost: 3, tier: 3, collectionCategory: "Weapons", requires: [], images: [itemImages.sunlightHuntersCrossbow] },
+  { id: "dragon-knives", name: "Dragon Knives", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonKnife] },
+  { id: "ancient-mace", name: "Ancient Mace", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.ancientMace] },
 
-  { id: "gmaul", name: "Granite Maul", cost: 4, tier: 4, requires: [], images: [itemImages.gmaul] },
-  { id: "anchor", name: "Barrelchest Anchor", cost: 4, tier: 4, requires: [], images: [itemImages.barrelchest] },
-  { id: "dark-bow", name: "Dark Bow + Seeker", cost: 4, tier: 4, requires: [], images: [itemImages.darkBow, itemImages.seekerArrow] },
-  { id: "dragon-thrownaxe", name: "Dragon Thrownaxe", cost: 4, tier: 4, requires: [], images: [itemImages.dragonThrownaxe] },
-  { id: "toxic-staff", name: "Toxic Staff", cost: 4, tier: 4, requires: [], images: [itemImages.toxicStaff] },
-  { id: "barrows-gloves", name: "Barrows Gloves", cost: 4, tier: 4, requires: [], images: [itemImages.barrowsGloves] },
+  { id: "gmaul", name: "Granite Maul + Ornate Handle", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.gmaul, itemImages.ornateMaul] },
+  { id: "anchor", name: "Barrelchest Anchor", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.barrelchest] },
+  { id: "dark-bow", name: "Dark Bow + Seeker", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.darkBow, itemImages.seekerArrow] },
+  { id: "dragon-thrownaxe", name: "Dragon Thrownaxe", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonThrownaxe] },
+  { id: "toxic-staff", name: "Toxic Staff", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.toxicStaff] },
+  { id: "barrows-gloves", name: "Barrows Gloves", cost: 4, tier: 4, collectionCategory: "Melee Gear", requires: [], images: [itemImages.barrowsGloves] },
 
-  { id: "ornate-maul", name: "Ornate Maul", cost: 5, tier: 5, requires: [], images: [itemImages.ornateMaul] },
-  { id: "colossal-barrelchest", name: "Colossal / Anchor", cost: 5, tier: 5, requires: [], images: [itemImages.colossal, itemImages.barrelchest] },
-  { id: "zgs", name: "ZGS Freeze", cost: 5, tier: 5, requires: [], images: [itemImages.zamorakGodsword] },
-  { id: "accursed", name: "Accursed Sceptre", cost: 5, tier: 5, requires: [], images: [itemImages.accursed] },
-  { id: "webweaver", name: "Webweaver Bow", cost: 5, tier: 5, requires: [], images: [itemImages.webweaver] },
-  { id: "chainmace", name: "Ursine Chainmace", cost: 5, tier: 5, requires: [], images: [itemImages.chainmace] },
-  { id: "voidwaker", name: "Voidwaker", cost: 6, tier: 5, requires: [], images: [itemImages.voidwaker] }
+  { id: "colossal-barrelchest", name: "Colossal / Anchor", cost: 5, tier: 5, collectionCategory: "Weapons", requires: [], images: [itemImages.colossal, itemImages.barrelchest] },
+  { id: "zgs", name: "ZGS Freeze", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.zamorakGodsword] },
+  { id: "accursed", name: "Accursed Sceptre", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.accursed] },
+  { id: "webweaver", name: "Webweaver Bow", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.webweaver] },
+  { id: "chainmace", name: "Ursine Chainmace", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.chainmace] },
+  { id: "voidwaker", name: "Voidwaker", cost: 6, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.voidwaker] }
 ];
+
+
+
+const unlockIdAliases = {
+  "ornate-maul": "gmaul"
+};
 
 const shopCategories = ["Runes / Ammo", "Food", "Potions", "Other"];
 
 const shopItems = [
   { id: "barrages", category: "Runes / Ammo", name: "Barrage sacks", cost: 1, items: [{ image: itemImages.ancientIceSack, amount: "100" }] },
-  { id: "tb-sacks", category: "Runes / Ammo", name: "TB sacks", cost: 1, items: [{ image: itemImages.blightedTeleport, amount: "10" }] },
+  { id: "tb-sacks", category: "Runes / Ammo", name: "TB + entangle sacks", cost: 1, items: [{ image: itemImages.blightedTeleport, amount: "10" }, { image: itemImages.blightedEntangle, amount: "10" }] },
   { id: "veng-sacks", category: "Runes / Ammo", name: "Veng sacks", cost: 1, items: [{ image: itemImages.vengeanceSack, amount: "25" }] },
   { id: "amethyst-arrows", category: "Runes / Ammo", name: "Amethyst arrows", cost: 1, items: [{ image: itemImages.amethystArrow, amount: "250" }] },
   { id: "dragon-bolts", category: "Runes / Ammo", name: "Dragonstone bolts", cost: 1, items: [{ image: itemImages.dragonBolt, amount: "100" }] },
@@ -252,12 +277,12 @@ const shopItems = [
   { id: "combo-food", category: "Food", name: "Halibut", cost: 2, items: [{ image: itemImages.halibut, amount: "50" }] },
   { id: "standard-food", category: "Food", name: "Anglers / marlin", cost: 1, items: [{ image: itemImages.angler, amount: "100" }, { image: itemImages.marlin, amount: "100" }] },
   { id: "surge-potions", category: "Potions", name: "Surge pots", cost: 2, items: [{ image: itemImages.surgePotion, amount: "5" }] },
-  { id: "stamina-pots", category: "Potions", name: "Stam pots", cost: 2, items: [{ image: itemImages.stamina, amount: "5" }] },
   { id: "brews", category: "Potions", name: "Brews", cost: 1, items: [{ image: itemImages.brew, amount: "20" }] },
   { id: "restores", category: "Potions", name: "Restores", cost: 1, items: [{ image: itemImages.restore, amount: "10" }] },
   { id: "range-pots", category: "Potions", name: "Range pots", cost: 1, items: [{ image: itemImages.ranging, amount: "5" }] },
   { id: "super-combats", category: "Potions", name: "Super combats", cost: 1, items: [{ image: itemImages.superCombat, amount: "5" }] },
   { id: "antivenom", category: "Potions", name: "Antivenom", cost: 1, items: [{ image: itemImages.antivenom, amount: "2" }] },
+  { id: "trouver", category: "Other", name: "Trouver Parchment", cost: 2, items: [{ image: itemImages.trouver }] },
   { id: "rev-kit", category: "Other", name: "Rev kit", cost: 2, items: [{ image: itemImages.bracelet }, { image: itemImages.revenantEther, amount: "100" }, { image: itemImages.burningAmulet }] }
 ];
 const shopIdAliases = {
@@ -266,33 +291,22 @@ const shopIdAliases = {
 };
 const basicUnlockGroups = [
   {
-    category: "Elemental Runes",
+    category: "Runes",
     source: "Loot unlock",
     items: [
       { id: "rune-air", name: "Air Rune", images: [itemImages.air] },
       { id: "rune-water", name: "Water Rune", images: [itemImages.water] },
       { id: "rune-earth", name: "Earth Rune", images: [itemImages.earth] },
-      { id: "rune-fire", name: "Fire Rune", images: [itemImages.fire] }
-    ]
-  },
-  {
-    category: "Basic Runes",
-    source: "Loot unlock",
-    items: [
+      { id: "rune-fire", name: "Fire Rune", images: [itemImages.fire] },
       { id: "rune-body", name: "Body Rune", images: [itemImages.body] },
       { id: "rune-mind", name: "Mind Rune", images: [itemImages.mind] },
       { id: "rune-chaos", name: "Chaos Rune", images: [itemImages.chaos] },
-      { id: "rune-death", name: "Death Rune", images: [itemImages.death] }
-    ]
-  },
-  {
-    category: "High Runes",
-    source: "Loot unlock",
-    items: [
+      { id: "rune-death", name: "Death Rune", images: [itemImages.death] },
       { id: "rune-blood", name: "Blood Rune", images: [itemImages.blood] },
       { id: "rune-soul", name: "Soul Rune", images: [itemImages.soul] },
       { id: "rune-nature", name: "Nature Rune", images: [itemImages.nature] },
-      { id: "rune-law", name: "Law Rune", images: [itemImages.law] }
+      { id: "rune-law", name: "Law Rune", images: [itemImages.law] },
+      { id: "rune-astral", name: "Astral Rune", images: [itemImages.astral] }
     ]
   },
   {
@@ -300,15 +314,33 @@ const basicUnlockGroups = [
     source: "Always available",
     items: [
       { id: "basic-sharks", name: "Sharks", images: [itemImages.shark] },
-      { id: "basic-karambwan", name: "Karambwan", images: [itemImages.karambwan] }
+      { id: "basic-karambwan", name: "Karambwan", images: [itemImages.karambwan] },
+      { id: "basic-anglerfish", name: "Anglerfish", images: [itemImages.angler] },
+      { id: "basic-manta-ray", name: "Manta Ray", images: [itemImages.manta] }
+    ]
+  },
+  {
+    category: "Potions",
+    source: "Loot unlock",
+    items: [
+      { id: "basic-prayer-potion", name: "Prayer Potion", images: [itemImages.prayer] },
+      { id: "basic-stamina-potion", name: "Stamina Potion", images: [itemImages.stamina] },
+      { id: "basic-blighted-restore", name: "Blighted Restore", images: [itemImages.blightedRestore] }
     ]
   },
   {
     category: "Weapons",
     source: "PK loot",
     items: [
+      { id: "basic-rcb", name: "Rune Crossbow", images: [itemImages.rcb] }
+    ]
+  },
+  {
+    category: "Spec Weapons",
+    source: "PK loot",
+    items: [
       { id: "basic-msb", name: "Magic Shortbow", images: [itemImages.msb] },
-      { id: "basic-rcb", name: "Rune Crossbow", images: [itemImages.rcb] },
+      { id: "basic-dragon-scimitar", name: "Dragon Scimitar", images: [itemImages.dragonScimitar] },
       { id: "basic-dds", name: "DDS", images: [itemImages.dds] },
       { id: "basic-gmaul", name: "Granite Maul", images: [itemImages.gmaul] }
     ]
@@ -339,6 +371,7 @@ const basicUnlockGroups = [
     ]
   }
 ];
+
 const state = loadState();
 let currentUser = null;
 let saveTimer = null;
@@ -348,15 +381,27 @@ function flattenBasicUnlocks() {
   return basicUnlockGroups.flatMap((group) => group.items);
 }
 
+function mergeCountMaps(first, second) {
+  const merged = { ...first };
+  Object.entries(second).forEach(([id, count]) => {
+    merged[id] = Math.max(merged[id] ?? 0, count);
+  });
+  return merged;
+}
+
 function defaultState() {
-  return { completed: [], purchased: [], shopPurchases: {}, basicUnlocks: [], playerKills: 0 };
+  return { completed: [], purchased: [], shopPurchases: {}, repeatablePurchases: {}, basicUnlocks: [], playerKills: 0 };
 }
 
 function sanitizeState(rawState) {
   const validUnlocks = new Set(unlocks.map((unlock) => unlock.id));
   const validBasicUnlocks = new Set(flattenBasicUnlocks().map((item) => item.id));
   const validShopItems = new Set(shopItems.map((item) => item.id));
+  const validChallenges = new Set([...flattenPvmChallenges(), ...flattenPvpChallenges()].map((challenge) => challenge.id));
+  const repeatables = flattenRepeatables();
+  const validRepeatables = new Set(repeatables.map((repeatable) => repeatable.id));
   const shopPurchases = {};
+  const repeatablePurchases = {};
 
   Object.entries(rawState?.shopPurchases ?? {}).forEach(([id, count]) => {
     const nextId = shopIdAliases[id] ?? id;
@@ -365,15 +410,42 @@ function sanitizeState(rawState) {
     }
   });
 
+  if (Array.isArray(rawState?.purchased) && rawState.purchased.includes("trouver")) {
+    shopPurchases.trouver = Math.max(shopPurchases.trouver ?? 0, 1);
+  }
+
+  Object.entries(rawState?.repeatablePurchases ?? {}).forEach(([id, count]) => {
+    if (validRepeatables.has(id) && Number.isFinite(count)) {
+      repeatablePurchases[id] = Math.max(repeatablePurchases[id] ?? 0, Math.floor(count));
+    }
+  });
+
+  if (Array.isArray(rawState?.completed)) {
+    repeatables.forEach((repeatable) => {
+      if (rawState.completed.includes(repeatable.legacyId)) {
+        repeatablePurchases[repeatable.id] = Math.max(repeatablePurchases[repeatable.id] ?? 0, 1);
+      }
+    });
+  }
+
+  const basicUnlocks = Array.isArray(rawState?.basicUnlocks)
+    ? [...new Set(rawState.basicUnlocks)].filter((id) => validBasicUnlocks.has(id))
+    : [];
+
+  if ((rawState?.shopPurchases?.["stamina-pots"] ?? 0) > 0 && !basicUnlocks.includes("basic-stamina-potion")) {
+    basicUnlocks.push("basic-stamina-potion");
+  }
+
   return {
-    completed: Array.isArray(rawState?.completed) ? [...new Set(rawState.completed)] : [],
+    completed: Array.isArray(rawState?.completed)
+      ? [...new Set(rawState.completed)].filter((id) => validChallenges.has(id))
+      : [],
     purchased: Array.isArray(rawState?.purchased)
-      ? [...new Set(rawState.purchased)].filter((id) => validUnlocks.has(id))
+      ? [...new Set(rawState.purchased.map((id) => unlockIdAliases[id] ?? id))].filter((id) => validUnlocks.has(id))
       : [],
     shopPurchases,
-    basicUnlocks: Array.isArray(rawState?.basicUnlocks)
-      ? [...new Set(rawState.basicUnlocks)].filter((id) => validBasicUnlocks.has(id))
-      : [],
+    repeatablePurchases,
+    basicUnlocks,
     playerKills: Number.isFinite(rawState?.playerKills) ? Math.max(0, Math.floor(rawState.playerKills)) : 0
   };
 }
@@ -391,6 +463,7 @@ function mergeStates(localState, remoteState) {
     completed: [...local.completed, ...remote.completed],
     purchased: [...local.purchased, ...remote.purchased],
     shopPurchases,
+    repeatablePurchases: mergeCountMaps(local.repeatablePurchases, remote.repeatablePurchases),
     basicUnlocks: [...local.basicUnlocks, ...remote.basicUnlocks],
     playerKills: Math.max(local.playerKills, remote.playerKills)
   });
@@ -578,15 +651,29 @@ function challengePoints(challenge) {
 
 function flattenPvmChallenges() {
   return challenges.pvm.flatMap((group, groupIndex) =>
-    group.items.map((challenge, index) => ({
+    group.items.flatMap((challenge, index) => challenge.repeatable ? [] : [{
       id: challengeId("pvm", groupIndex, index),
       title: challengeTitle(challenge),
       points: challengePoints(challenge),
       stage: group.stage,
       killRequirement: group.killRequirement
-    }))
+    }])
   );
 }
+
+function flattenRepeatables() {
+  return challenges.pvm.flatMap((group, groupIndex) =>
+    group.items.flatMap((challenge, index) => challenge.repeatable ? [{
+      id: challengeId("repeatable", groupIndex, index),
+      legacyId: challengeId("pvm", groupIndex, index),
+      title: challengeTitle(challenge),
+      cost: challenge.cost ?? 5,
+      stage: group.stage
+    }] : [])
+  );
+}
+
+
 
 function flattenPvpChallenges() {
   return challenges.pvp.map((challenge, index) => ({
@@ -597,7 +684,8 @@ function flattenPvpChallenges() {
 }
 
 function totalCompleted() {
-  return state.completed.length;
+  const validCompleted = new Set([...flattenPvmChallenges(), ...flattenPvpChallenges()].map((challenge) => challenge.id));
+  return state.completed.filter((id) => validCompleted.has(id)).length;
 }
 
 function earnedUnlockPoints() {
@@ -605,6 +693,8 @@ function earnedUnlockPoints() {
     return sum + (state.completed.includes(challenge.id) ? challenge.points : 0);
   }, 0);
 }
+
+
 
 function totalSpent() {
   return state.purchased.reduce((sum, id) => {
@@ -621,9 +711,15 @@ function totalShopSpent() {
   return shopItems.reduce((sum, item) => sum + ((state.shopPurchases[item.id] ?? 0) * item.cost), 0);
 }
 
-function availableKillPoints() {
-  return Math.max(0, state.playerKills - totalShopSpent());
+function totalRepeatableSpent() {
+  return flattenRepeatables().reduce((sum, item) => sum + ((state.repeatablePurchases[item.id] ?? 0) * item.cost), 0);
 }
+
+function availableKillPoints() {
+  return Math.max(0, state.playerKills - totalShopSpent() - totalRepeatableSpent());
+}
+
+
 
 function canBuy(unlock) {
   return !state.purchased.includes(unlock.id) && availablePoints() >= unlock.cost;
@@ -678,24 +774,27 @@ function renderPvmChallenges() {
 
   challenges.pvm.forEach((group, groupIndex) => {
     const unlocked = state.playerKills >= group.killRequirement;
+    const visibleItems = group.items
+      .map((challenge, index) => ({ challenge, index }))
+      .filter(({ challenge }) => !challenge.repeatable);
     const stage = document.createElement("section");
     stage.className = `challenge-stage ${unlocked ? "unlocked" : "locked"}`;
 
-    const completed = group.items.filter((_, index) => state.completed.includes(challengeId("pvm", groupIndex, index))).length;
+    const completed = visibleItems.filter(({ index }) => state.completed.includes(challengeId("pvm", groupIndex, index))).length;
     stage.innerHTML = `
       <div class="stage-header">
         <div>
           <span>${group.stage}</span>
           <strong>${group.killRequirement} PK</strong>
         </div>
-        <em>${completed} / ${group.items.length}</em>
+        <em>${completed} / ${visibleItems.length}</em>
       </div>
     `;
 
     const list = document.createElement("div");
     list.className = "stage-list";
 
-    group.items.forEach((challenge, index) => {
+    visibleItems.forEach(({ challenge, index }) => {
       renderChallengeItem({
         id: challengeId("pvm", groupIndex, index),
         title: challengeTitle(challenge),
@@ -710,11 +809,65 @@ function renderPvmChallenges() {
   });
 }
 
+
+
 function renderPvpChallenges() {
   const target = document.getElementById("pvpList");
   target.innerHTML = "";
   flattenPvpChallenges().forEach((challenge) => renderChallengeItem(challenge, target));
 }
+
+function renderRepeatables() {
+  const target = document.getElementById("repeatableList");
+  if (!target) return;
+
+  target.innerHTML = "";
+  flattenRepeatables().forEach((repeatable) => {
+    const owned = state.repeatablePurchases[repeatable.id] ?? 0;
+    const canAfford = availableKillPoints() >= repeatable.cost;
+    const item = document.createElement("div");
+    item.className = `challenge-item repeatable-item ${canAfford ? "available" : "locked"}`;
+    item.dataset.repeatableId = repeatable.id;
+    item.innerHTML = `
+      <span class="checkmark repeatable-mark" aria-hidden="true">PK</span>
+      <span class="challenge-text">${repeatable.title}</span>
+      <span class="repeatable-actions">
+        <span class="point-reward">Bought ${owned}</span>
+        <button type="button" ${canAfford ? "" : "disabled"}>${killCostLabel(repeatable.cost)}</button>
+      </span>
+    `;
+
+    item.querySelector("button").addEventListener("click", () => {
+      if (availableKillPoints() < repeatable.cost) return;
+      state.repeatablePurchases[repeatable.id] = (state.repeatablePurchases[repeatable.id] ?? 0) + 1;
+      saveState();
+      renderStats();
+      updateShopState();
+      updateRepeatableState();
+    });
+
+    target.appendChild(item);
+  });
+}
+
+function updateRepeatableState() {
+  flattenRepeatables().forEach((repeatable) => {
+    const item = document.querySelector(`[data-repeatable-id="${repeatable.id}"]`);
+    if (!item) return;
+
+    const owned = state.repeatablePurchases[repeatable.id] ?? 0;
+    const canAfford = availableKillPoints() >= repeatable.cost;
+    const count = item.querySelector(".point-reward");
+    const button = item.querySelector("button");
+
+    item.classList.toggle("available", canAfford);
+    item.classList.toggle("locked", !canAfford);
+    if (count) count.textContent = `Bought ${owned}`;
+    if (button) button.disabled = !canAfford;
+  });
+}
+
+
 
 function renderTalentTree() {
   const tree = document.getElementById("talentTree");
@@ -786,7 +939,7 @@ function updateTalentTreeState() {
 }
 
 function killCostLabel(cost) {
-  return `${cost} ${cost === 1 ? "Kill" : "Kills"}`;
+  return `${cost} PK`;
 }
 
 function renderShopStack(entry) {
@@ -831,6 +984,7 @@ function renderShopCard(item) {
     saveState();
     renderStats();
     updateShopState();
+    updateRepeatableState();
   });
 
   return card;
@@ -905,37 +1059,43 @@ function renderUnlockCard(item, source, checkable = false) {
   return label;
 }
 
+function collectionGroups() {
+  const groupMap = new Map();
+
+  basicUnlockGroups.forEach((group) => {
+    groupMap.set(group.category, {
+      category: group.category,
+      items: group.items.map((item) => ({ ...item, source: group.source, automatic: false }))
+    });
+  });
+
+  unlocks.filter((unlock) => state.purchased.includes(unlock.id)).forEach((unlock) => {
+    const category = unlock.collectionCategory ?? "Weapons";
+    if (!groupMap.has(category)) groupMap.set(category, { category, items: [] });
+    groupMap.get(category).items.push({ ...unlock, source: "Talent", automatic: true });
+  });
+
+  return [...groupMap.values()].filter((group) => group.items.length);
+}
+
 function renderUnlocks() {
   const target = document.getElementById("unlocksList");
   if (!target) return;
 
   target.innerHTML = "";
 
-  const groups = [
-    ...basicUnlockGroups,
-    {
-      category: "Talent Unlocks",
-      source: "Talent",
-      items: unlocks.filter((unlock) => state.purchased.includes(unlock.id)),
-      automatic: true
-    }
-  ];
-
-  groups.forEach((group) => {
+  collectionGroups().forEach((group) => {
     const section = document.createElement("section");
     section.className = "unlocked-group";
     section.innerHTML = `<h3 class="unlocked-group-title">${group.category}</h3><div class="unlocked-grid"></div>`;
 
     const grid = section.querySelector(".unlocked-grid");
-    if (group.items.length) {
-      group.items.forEach((item) => grid.appendChild(renderUnlockCard(item, group.source, !group.automatic)));
-    } else {
-      grid.innerHTML = `<p class="empty-unlocks">Bought talents will appear here.</p>`;
-    }
+    group.items.forEach((item) => grid.appendChild(renderUnlockCard(item, item.source, !item.automatic)));
 
     target.appendChild(section);
   });
 }
+
 function buyUnlock(id) {
   const unlock = unlocks.find((item) => item.id === id);
   if (!unlock || !canBuy(unlock)) return;
@@ -957,8 +1117,10 @@ function refundUnlock(id) {
 function renderStats() {
   const pvmChallenges = flattenPvmChallenges();
   const pvpChallenges = flattenPvpChallenges();
+  const repeatables = flattenRepeatables();
   const pvmCompleted = pvmChallenges.filter((challenge) => state.completed.includes(challenge.id)).length;
   const pvpCompleted = pvpChallenges.filter((challenge) => state.completed.includes(challenge.id)).length;
+  const repeatablePurchased = repeatables.reduce((sum, repeatable) => sum + (state.repeatablePurchases[repeatable.id] ?? 0), 0);
   const complete = totalCompleted();
   const total = pvmChallenges.length + pvpChallenges.length;
   const percent = total ? (complete / total) * 100 : 0;
@@ -969,8 +1131,9 @@ function renderStats() {
   document.getElementById("killPoints").textContent = availableKillPoints();
   document.getElementById("killsEarned").textContent = state.playerKills;
   document.getElementById("playerKills").value = state.playerKills;
-  document.getElementById("shopSpent").textContent = totalShopSpent();
+  document.getElementById("shopSpent").textContent = totalShopSpent() + totalRepeatableSpent();
   document.getElementById("challengeProgress").textContent = `${complete} / ${total}`;
+  document.getElementById("repeatableCount").textContent = `${repeatablePurchased} bought`;
   document.getElementById("pvmCount").textContent = `${pvmCompleted} / ${pvmChallenges.length}`;
   document.getElementById("pvpCount").textContent = `${pvpCompleted} / ${pvpChallenges.length}`;
   document.getElementById("progressBar").style.width = `${percent}%`;
@@ -992,6 +1155,7 @@ function render() {
   renderStats();
   renderPvmChallenges();
   renderPvpChallenges();
+  renderRepeatables();
   renderTalentTree();
   renderShop();
   renderUnlocks();
@@ -1007,6 +1171,7 @@ document.getElementById("playerKills").addEventListener("input", (event) => {
   renderStats();
   renderPvmChallenges();
   updateShopState();
+  updateRepeatableState();
 });
 
 document.getElementById("addKillButton").addEventListener("click", () => {
@@ -1015,6 +1180,7 @@ document.getElementById("addKillButton").addEventListener("click", () => {
   renderStats();
   renderPvmChallenges();
   updateShopState();
+  updateRepeatableState();
 });
 
 document.getElementById("removeKillButton").addEventListener("click", () => {
@@ -1023,11 +1189,12 @@ document.getElementById("removeKillButton").addEventListener("click", () => {
   renderStats();
   renderPvmChallenges();
   updateShopState();
+  updateRepeatableState();
 });
 
 document.getElementById("resetButton").addEventListener("click", () => {
   setSettingsOpen(false);
-  const shouldReset = window.confirm("Reset all completed challenges, unlocks, kills, and shop purchases?");
+  const shouldReset = window.confirm("Reset completed challenges, talents, collection checks, PK points, repeatables, and shop purchases?");
   if (!shouldReset) return;
   Object.assign(state, defaultState());
   saveState();
