@@ -1,4 +1,4 @@
-﻿@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Unbounded:wght@500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Unbounded:wght@500;600;700&display=swap");
 
 :root {
   --bg: #0d0f12;
@@ -2005,4 +2005,194 @@ body {
 
 .unlocked-item.checkable:has(input:checked) .unlocked-copy span {
   color: var(--good);
+}
+
+/* Searchable collection controls */
+.collection-control-strip {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto minmax(150px, auto);
+  gap: 10px;
+  align-items: end;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: rgba(8, 9, 11, 0.58);
+  border: 1px solid var(--line);
+}
+
+.collection-search,
+.collection-sort {
+  display: grid;
+  gap: 5px;
+  min-width: 0;
+}
+
+.collection-search span,
+.collection-sort span {
+  color: var(--muted);
+  font: 0.62rem "DM Mono", monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.collection-search input,
+.collection-sort select {
+  width: 100%;
+  min-height: 38px;
+  color: var(--text);
+  background: #101318;
+  border: 1px solid #303943;
+  padding: 0 10px;
+}
+
+.manual-unlock-button,
+.collection-filters button {
+  min-height: 38px;
+  color: var(--muted);
+  background: linear-gradient(145deg, #171c22, #101318);
+  border: 1px solid #303943;
+  cursor: pointer;
+  font: 0.66rem "DM Mono", monospace;
+  transition: 150ms ease;
+}
+
+.manual-unlock-button {
+  padding: 0 14px;
+  color: var(--bronze-bright);
+}
+
+.collection-filters {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.collection-filters button {
+  padding: 0 10px;
+}
+
+.manual-unlock-button:hover,
+.collection-filters button:hover,
+.collection-filters button.active {
+  color: var(--text);
+  border-color: var(--bronze-bright);
+}
+
+.collection-filters button.active {
+  color: #17120d;
+  background: var(--bronze-bright);
+}
+
+.unlocked-wrap {
+  gap: 14px;
+}
+
+.unlocked-group {
+  gap: 8px;
+}
+
+.unlocked-group-title {
+  font-size: 0.78rem;
+}
+
+.unlocked-grid {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 7px;
+}
+
+.unlocked-item {
+  min-height: 54px;
+  grid-template-columns: 34px minmax(0, 1fr);
+  gap: 8px;
+  padding: 7px 8px;
+  background: rgba(18, 22, 27, 0.82);
+  border: 1px solid var(--line-soft);
+  box-shadow: none;
+}
+
+.unlocked-art {
+  width: 34px;
+  height: 34px;
+  background: transparent;
+  border: 0;
+}
+
+.unlocked-art img {
+  max-width: 31px;
+  max-height: 31px;
+}
+
+.unlocked-art img:nth-child(n + 2) {
+  max-width: 21px;
+  max-height: 21px;
+}
+
+.unlocked-copy h3 {
+  margin: 0 0 3px;
+  font-size: 0.64rem;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.unlocked-copy span,
+.empty-unlocks {
+  font-size: 0.56rem;
+  line-height: 1.15;
+}
+
+.unlocked-item.checkable {
+  padding-right: 8px;
+}
+
+.unlocked-item.checkable input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.unlocked-item.is-unlocked {
+  border-color: rgba(143, 209, 116, 0.58);
+  background: rgba(22, 34, 25, 0.82);
+}
+
+.unlocked-item.is-locked {
+  opacity: 0.62;
+}
+
+.unlocked-item.source-always {
+  border-color: rgba(150, 168, 255, 0.44);
+}
+
+.unlocked-item.source-talent.is-unlocked {
+  border-color: rgba(240, 177, 108, 0.62);
+}
+
+.unlocked-item.checkable:hover {
+  border-color: rgba(240, 177, 108, 0.58);
+}
+
+.unlocked-item.checkable:has(input:checked) {
+  border-color: rgba(143, 209, 116, 0.72);
+  background: rgba(22, 34, 25, 0.88);
+}
+
+.unlocked-item.checkable:has(input:checked) .unlocked-copy span,
+.unlocked-item.is-unlocked .unlocked-copy span {
+  color: var(--good);
+}
+
+@media (max-width: 900px) {
+  .collection-control-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .manual-unlock-button {
+    width: 100%;
+  }
+
+  .unlocked-grid {
+    grid-template-columns: repeat(auto-fill, minmax(142px, 1fr));
+  }
 }

@@ -8,6 +8,7 @@ Colossal blade
 Barrelchest anchor
 Granite maul
 Ornate maul handle
+Granite maul (ornate handle)
 Arkan blade
 Dragon scimitar
 Dragon spear

@@ -41,14 +41,14 @@
 
         <section class="point-panel" aria-label="Point totals">
         <div class="point-stat primary">
-          <span class="point-icon"><img src="images/Warrior%20guild%20token.png" alt="" /></span>
+          <span class="point-icon"><img src="images/items/Warrior%20guild%20token.png" alt="" /></span>
           <div>
             <span class="stat-label">TALENT POINTS</span>
             <strong id="availablePoints">0</strong>
           </div>
         </div>
         <div class="point-stat">
-          <span class="point-icon kp"><img src="images/Loot%20key.png" alt="" /></span>
+          <span class="point-icon kp"><img src="images/Blood_money_10000.png" alt="" /></span>
           <div>
             <span class="stat-label">AVAILABLE KILLS</span>
             <strong id="killPoints">0</strong>
@@ -135,6 +135,24 @@
     <section class="tab-panel" id="unlocksPanel">
       <section class="section-heading compact-heading">
         <h2>Collection</h2>
+      </section>
+
+      <section class="collection-control-strip" aria-label="Collection controls">
+        <label class="collection-search">
+          <span>Search</span>
+          <input id="collectionSearch" type="search" list="collectionSearchResults" autocomplete="off" placeholder="Search items" />
+          <datalist id="collectionSearchResults"></datalist>
+        </label>
+        <button id="manualUnlockButton" class="manual-unlock-button" type="button">Unlock</button>
+        <label class="collection-sort">
+          <span>Sort</span>
+          <select id="collectionSort">
+            <option value="name">Name</option>
+            <option value="source">Source</option>
+            <option value="status">Status</option>
+          </select>
+        </label>
+        <div class="collection-filters" id="collectionFilters" role="group" aria-label="Collection filter"></div>
       </section>
 
       <section class="unlocked-wrap" id="unlocksList" aria-label="Collection"></section>

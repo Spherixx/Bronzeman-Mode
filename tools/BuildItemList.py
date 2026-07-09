@@ -243,17 +243,19 @@ def build_indexes(osrs_items: list[dict]):
     return exact_index, loose_index, words_index, all_names
 
 
-def single_match(matches: list[dict] | None) -> dict | None:
+def first_match(matches: list[dict] | None) -> dict | None:
     """
-    Only accepts a match if the key resolves to exactly one item.
+    Returns the first item for a matching key.
+
+    Some OSRS dumps contain several records with the same display name.
+    The indexes preserve the order items were read from OSRSItems.json, so
+    this defaults to the first matching item/id instead of treating duplicate
+    exact names as missing/ambiguous.
     """
     if not matches:
         return None
 
-    if len(matches) == 1:
-        return matches[0]
-
-    return None
+    return matches[0]
 
 
 def score_match(a: str, b: str) -> float:
@@ -310,15 +312,15 @@ def find_item(
     loose_key = normalize_loose(wanted_name)
     words_key = normalize_words(wanted_name)
 
-    matched = single_match(exact_index.get(exact_key))
+    matched = first_match(exact_index.get(exact_key))
     if matched:
         return matched, "exact"
 
-    matched = single_match(loose_index.get(loose_key))
+    matched = first_match(loose_index.get(loose_key))
     if matched:
         return matched, "loose"
 
-    matched = single_match(words_index.get(words_key))
+    matched = first_match(words_index.get(words_key))
     if matched:
         return matched, "words"
 
