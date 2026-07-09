@@ -664,5 +664,17 @@
     "wikiLink": "https://oldschool.runescape.wiki/w/Book_of_darkness",
     "itemId": 12612,
     "imageName": "Book of darkness.png"
+  },
+  {
+    "name": "Crimson kisten",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Crimson_kisten",
+    "itemId": 999999,
+    "imageName": "Crimson kisten.png"
+  },
+  {
+    "name": "Arkan blade",
+    "wikiLink": "https://oldschool.runescape.wiki/w/Arkan_blade",
+    "itemId": 999999,
+    "imageName": "Arkan blade.png"
   }
 ]

@@ -887,6 +887,22 @@
       "imageName": "Book of darkness.png",
       "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Book%20of%20darkness.png",
       "localImagePath": "images/items/Book of darkness.png"
+    },
+    {
+      "name": "Crimson kisten",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Crimson_kisten",
+      "itemId": 999999,
+      "imageName": "Crimson kisten.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Crimson%20kisten.png",
+      "localImagePath": "images/items/Crimson kisten.png"
+    },
+    {
+      "name": "Arkan blade",
+      "wikiLink": "https://oldschool.runescape.wiki/w/Arkan_blade",
+      "itemId": 999999,
+      "imageName": "Arkan blade.png",
+      "imageUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Arkan%20blade.png",
+      "localImagePath": "images/items/Arkan blade.png"
     }
   ],
   "otherImages": [
@@ -919,6 +935,16 @@
       "sourceUrl": "https://oldschool.runescape.wiki/w/Special:Redirect/file/Lunar_spellbook.png",
       "imageName": "Lunar_spellbook.png",
       "localImagePath": "images/Lunar_spellbook.png"
+    },
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Crimson_kisten.png",
+      "imageName": "Crimson_kisten.png",
+      "localImagePath": "images/Crimson_kisten.png"
+    },
+    {
+      "sourceUrl": "https://oldschool.runescape.wiki/w/Special:FilePath/Arkan_blade.png",
+      "imageName": "Arkan_blade.png",
+      "localImagePath": "images/Arkan_blade.png"
     }
   ]
 }
