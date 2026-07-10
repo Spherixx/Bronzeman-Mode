@@ -127,6 +127,7 @@ def new_item(
         "itemId": item_id,
         "tags": [],
         "tier": None,
+        "cost": None,
         "alwaysAvailable": False,
         "unlocked": False,
         "wikiLink": wiki_link(name),
@@ -746,6 +747,54 @@ def add_or_update(
     )
 
 
+def tier_to_cost(tier):
+    """
+    Convert numeric tier strings to integer costs.
+
+    Non-numeric tier values are preserved, although normal item tiers
+    are expected to be integers, numeric strings, or null.
+    """
+    if tier is None:
+        return None
+
+    if isinstance(tier, bool):
+        return int(tier)
+
+    if isinstance(tier, int):
+        return tier
+
+    if isinstance(tier, float) and tier.is_integer():
+        return int(tier)
+
+    if isinstance(tier, str):
+        value = tier.strip()
+
+        if value.lstrip("-").isdigit():
+            return int(value)
+
+    return tier
+
+
+def update_item_costs(data: dict) -> None:
+    """
+    Ensure every item has a cost field.
+
+    Talent-tagged items use their tier as the cost.
+    Every other item receives a null cost.
+    """
+    for item in data["items"]:
+        if not isinstance(item, dict):
+            continue
+
+        tags = item.get("tags") or []
+
+        item["cost"] = (
+            tier_to_cost(item.get("tier"))
+            if "talent" in tags
+            else None
+        )
+
+
 def sort_items(data: dict) -> None:
     """
     Sort numeric item IDs in ascending order.
@@ -988,6 +1037,7 @@ def run(
             stats=stats,
         )
 
+    update_item_costs(data)
     sort_items(data)
 
     write_json(

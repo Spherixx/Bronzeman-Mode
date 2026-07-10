@@ -12,7 +12,8 @@
             "imageUsed": "Standard spellbook",
             "tier": "0",
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": 0
         },
         {
             "name": "Arceuus spellbook",
@@ -25,7 +26,8 @@
             "imageUsed": "Arceuus spellbook",
             "tier": "0",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 0
         },
         {
             "name": "Ancient spellbook",
@@ -38,7 +40,8 @@
             "imageUsed": "Ancient spellbook",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Lunar spellbook",
@@ -51,7 +54,8 @@
             "imageUsed": "Lunar spellbook",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Chivalry",
@@ -64,7 +68,8 @@
             "imageUsed": "Chivalry",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Piety",
@@ -77,7 +82,8 @@
             "imageUsed": "Piety",
             "tier": "4",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 4
         },
         {
             "name": "Rigour",
@@ -90,7 +96,8 @@
             "imageUsed": "Rigour",
             "tier": "5",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 5
         },
         {
             "name": "Augury",
@@ -103,7 +110,8 @@
             "imageUsed": "Augury",
             "tier": "4",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 4
         },
         {
             "name": "Deadeye",
@@ -116,7 +124,8 @@
             "imageUsed": "Deadeye",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Mystic Vigour",
@@ -129,7 +138,8 @@
             "imageUsed": "Mystic Vigour",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Steel Skin",
@@ -141,7 +151,8 @@
             "imageUsed": "Steel Skin",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         },
         {
             "name": "Incredible Reflexes",
@@ -153,7 +164,8 @@
             "imageUsed": "Incredible Reflexes",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         },
         {
             "name": "Ultimate Strength",
@@ -165,7 +177,8 @@
             "imageUsed": "Ultimate Strength",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         },
         {
             "name": "Eagle Eye",
@@ -177,7 +190,8 @@
             "imageUsed": "Eagle Eye",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         },
         {
             "name": "Mystic Might",
@@ -189,7 +203,8 @@
             "imageUsed": "Mystic Might",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         },
         {
             "name": "Protect from Magic",
@@ -201,7 +216,8 @@
             "imageUsed": "Protect from Magic",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         },
         {
             "name": "Protect from Missiles",
@@ -213,7 +229,8 @@
             "imageUsed": "Protect from Missiles",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         },
         {
             "name": "Protect from Melee",
@@ -225,7 +242,8 @@
             "imageUsed": "Protect from Melee",
             "tier": null,
             "alwaysAvailable": true,
-            "unlocked": true
+            "unlocked": true,
+            "cost": null
         }
     ]
 }

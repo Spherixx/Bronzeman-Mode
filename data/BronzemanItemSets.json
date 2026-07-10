@@ -21,7 +21,8 @@
             "imageUsed": "Void knight top",
             "tier": "2",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 2
         },
         {
             "name": "Blood moon equipment",
@@ -40,7 +41,8 @@
             "imageUsed": "Blood moon chestplate",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "Blue moon equipment",
@@ -59,7 +61,8 @@
             "imageUsed": "Blue moon chestplate",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "Eclipse moon equipment",
@@ -78,7 +81,8 @@
             "imageUsed": "Eclipse moon chestplate",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "Ahrim's equipment",
@@ -98,7 +102,8 @@
             "imageUsed": "Ahrim's hood",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Dharok's equipment",
@@ -118,7 +123,8 @@
             "imageUsed": "Dharok's helm",
             "tier": "4",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 4
         },
         {
             "name": "Guthan's equipment",
@@ -137,7 +143,8 @@
             "imageUsed": "Guthan's helm",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "Karil's equipment",
@@ -157,7 +164,8 @@
             "imageUsed": "Karil's coif",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Torag's equipment",
@@ -176,7 +184,8 @@
             "imageUsed": "Torag's helm",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "Verac's equipment",
@@ -196,7 +205,8 @@
             "imageUsed": "Verac's helm",
             "tier": "2",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 2
         },
         {
             "name": "God books",
@@ -217,7 +227,8 @@
             "imageUsed": "Holy book",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "God capes",
@@ -235,7 +246,8 @@
             "imageUsed": "Saradomin cape",
             "tier": "1",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 1
         },
         {
             "name": "Imbued god capes",
@@ -253,7 +265,8 @@
             "imageUsed": "Imbued saradomin cape",
             "tier": "3",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 3
         },
         {
             "name": "Dark bow and seeking dragon arrows",
@@ -271,7 +284,8 @@
             "imageUsed": "Dark bow",
             "tier": "4",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 4
         },
         {
             "name": "Granite maul and ornate handle",
@@ -289,7 +303,8 @@
             "imageUsed": "Granite maul",
             "tier": "4",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 4
         },
         {
             "name": "Obsidian weapons and berserker necklace",
@@ -314,7 +329,8 @@
             "imageUsed": "Tzhaar-ket-om",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "Dagannoth rings",
@@ -333,7 +349,8 @@
             "imageUsed": "Berserker ring",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "Imbued Dagannoth rings",
@@ -352,7 +369,8 @@
             "imageUsed": "Berserker ring (i)",
             "tier": null,
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": null
         },
         {
             "name": "God staves",
@@ -370,7 +388,8 @@
             "imageUsed": "Saradomin staff",
             "tier": "1",
             "alwaysAvailable": false,
-            "unlocked": false
+            "unlocked": false,
+            "cost": 1
         }
     ]
 }
