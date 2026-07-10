@@ -173,3 +173,26 @@ Ring of suffering
 Necklace of anguish
 Tormented bracelet
 Amulet of torture
+
+Magic shortbow scroll
+Amethyst dart
+Scroll of imbuing
+Saradomin's tear
+
+Blood moon helm
+Blood moon chestplate
+Blood moon tassets
+Dual macuahuitl
+
+Blue moon helm
+Blue moon chestplate
+Blue moon tassets
+Blue moon spear
+
+Eclipse moon helm
+Eclipse moon chestplate
+Eclipse moon tassets
+Eclipse atlatl
+
+Rune arrow
+Rune dart

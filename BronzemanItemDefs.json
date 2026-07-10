@@ -1913,7 +1913,7 @@
                       "imageName":  "Seeking dragon arrow.png",
                       "imagePath":  "images/items/Seeking dragon arrow.png",
                       "tags":  [
-                                   "talent",
+                                   "shop",
                                    "consumables"
                                ],
                       "alwaysAvailable":  false,
@@ -2964,6 +2964,318 @@
                       "alwaysAvailable":  false,
                       "unlocked":  false,
                       "source":  "manual-wiki",
+                      "status":  "non-item"
+                  },
+                  {
+                      "id":  "magic-shortbow-scroll",
+                      "name":  "Magic shortbow scroll",
+                      "itemId":  12786,
+                      "alias":  "Magic shortbow scroll",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Magic_shortbow_scroll",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Magic%20shortbow%20scroll.png",
+                      "imageName":  "Magic shortbow scroll.png",
+                      "imagePath":  "images/items/Magic shortbow scroll.png",
+                      "tags":  [
+                                   "shop",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "amethyst-dart",
+                      "name":  "Amethyst dart",
+                      "itemId":  25849,
+                      "alias":  "Amethyst dart",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Amethyst_dart",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Amethyst%20dart.png",
+                      "imageName":  "Amethyst dart.png",
+                      "imagePath":  "images/items/Amethyst dart.png",
+                      "tags":  [
+                                   "shop",
+                                   "consumables"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "scroll-of-imbuing",
+                      "name":  "Scroll of imbuing",
+                      "itemId":  26706,
+                      "alias":  "Scroll of imbuing",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Scroll_of_imbuing",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Scroll%20of%20imbuing.png",
+                      "imageName":  "Scroll of imbuing.png",
+                      "imagePath":  "images/items/Scroll of imbuing.png",
+                      "tags":  [
+                                   "shop",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "saradomins-tear",
+                      "name":  "Saradomin\u0027s tear",
+                      "itemId":  12804,
+                      "alias":  "Saradomin\u0027s tear",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Saradomin%27s_tear",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Saradomin%27s%20tear.png",
+                      "imageName":  "Saradomin\u0027s tear.png",
+                      "imagePath":  "images/items/Saradomin\u0027s tear.png",
+                      "tags":  [
+                                   "shop",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "blood-moon-helm",
+                      "name":  "Blood moon helm",
+                      "itemId":  29028,
+                      "alias":  "Blood moon helm",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Blood_moon_helm",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Blood%20moon%20helm.png",
+                      "imageName":  "Blood moon helm.png",
+                      "imagePath":  "images/items/Blood moon helm.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "blood-moon-chestplate",
+                      "name":  "Blood moon chestplate",
+                      "itemId":  29022,
+                      "alias":  "Blood moon chestplate",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Blood_moon_chestplate",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Blood%20moon%20chestplate.png",
+                      "imageName":  "Blood moon chestplate.png",
+                      "imagePath":  "images/items/Blood moon chestplate.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "blood-moon-tassets",
+                      "name":  "Blood moon tassets",
+                      "itemId":  29025,
+                      "alias":  "Blood moon tassets",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Blood_moon_tassets",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Blood%20moon%20tassets.png",
+                      "imageName":  "Blood moon tassets.png",
+                      "imagePath":  "images/items/Blood moon tassets.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dual-macuahuitl",
+                      "name":  "Dual macuahuitl",
+                      "itemId":  28997,
+                      "alias":  "Dual macuahuitl",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dual_macuahuitl",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dual%20macuahuitl.png",
+                      "imageName":  "Dual macuahuitl.png",
+                      "imagePath":  "images/items/Dual macuahuitl.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "blue-moon-helm",
+                      "name":  "Blue moon helm",
+                      "itemId":  29019,
+                      "alias":  "Blue moon helm",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Blue_moon_helm",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Blue%20moon%20helm.png",
+                      "imageName":  "Blue moon helm.png",
+                      "imagePath":  "images/items/Blue moon helm.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "blue-moon-chestplate",
+                      "name":  "Blue moon chestplate",
+                      "itemId":  29013,
+                      "alias":  "Blue moon chestplate",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Blue_moon_chestplate",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Blue%20moon%20chestplate.png",
+                      "imageName":  "Blue moon chestplate.png",
+                      "imagePath":  "images/items/Blue moon chestplate.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "blue-moon-tassets",
+                      "name":  "Blue moon tassets",
+                      "itemId":  29016,
+                      "alias":  "Blue moon tassets",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Blue_moon_tassets",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Blue%20moon%20tassets.png",
+                      "imageName":  "Blue moon tassets.png",
+                      "imagePath":  "images/items/Blue moon tassets.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "blue-moon-spear",
+                      "name":  "Blue moon spear",
+                      "itemId":  28988,
+                      "alias":  "Blue moon spear",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Blue_moon_spear",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Blue%20moon%20spear.png",
+                      "imageName":  "Blue moon spear.png",
+                      "imagePath":  "images/items/Blue moon spear.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "eclipse-moon-helm",
+                      "name":  "Eclipse moon helm",
+                      "itemId":  29010,
+                      "alias":  "Eclipse moon helm",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Eclipse_moon_helm",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Eclipse%20moon%20helm.png",
+                      "imageName":  "Eclipse moon helm.png",
+                      "imagePath":  "images/items/Eclipse moon helm.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "eclipse-moon-chestplate",
+                      "name":  "Eclipse moon chestplate",
+                      "itemId":  29004,
+                      "alias":  "Eclipse moon chestplate",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Eclipse_moon_chestplate",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Eclipse%20moon%20chestplate.png",
+                      "imageName":  "Eclipse moon chestplate.png",
+                      "imagePath":  "images/items/Eclipse moon chestplate.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "eclipse-moon-tassets",
+                      "name":  "Eclipse moon tassets",
+                      "itemId":  29007,
+                      "alias":  "Eclipse moon tassets",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Eclipse_moon_tassets",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Eclipse%20moon%20tassets.png",
+                      "imageName":  "Eclipse moon tassets.png",
+                      "imagePath":  "images/items/Eclipse moon tassets.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "eclipse-atlatl",
+                      "name":  "Eclipse atlatl",
+                      "itemId":  29000,
+                      "alias":  "Eclipse atlatl",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Eclipse_atlatl",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Eclipse%20atlatl.png",
+                      "imageName":  "Eclipse atlatl.png",
+                      "imagePath":  "images/items/Eclipse atlatl.png",
+                      "tags":  [
+
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "zulrah-scales",
+                      "name":  "Zulrah\u0027s scales",
+                      "itemId":  12934,
+                      "alias":  "Zulrah\u0027s scales",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Zulrah%27s_scales",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Zulrah%27s%20scales%205.png",
+                      "imageName":  "Zulrah\u0027s_scales_5.png",
+                      "imagePath":  "images/Zulrah\u0027s_scales_5.png",
+                      "tags":  [
+                                   "shop",
+                                   "consumables"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-shop",
+                      "status":  "matched-manual-image"
+                  },
+                  {
+                      "id":  "recharge-dragonstone",
+                      "name":  "Recharge Dragonstone",
+                      "itemId":  null,
+                      "alias":  "Recharge Dragonstone",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Recharging_jewellery",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Recharge%20Dragonstone.png",
+                      "imageName":  "Recharge_Dragonstone.png",
+                      "imagePath":  "images/Recharge_Dragonstone.png",
+                      "tags":  [
+                                   "shop",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-shop",
                       "status":  "non-item"
                   }
               ],
