@@ -266,15 +266,14 @@
             "uid": "amulet-of-glory-4",
             "itemId": 1712,
             "tags": [
-                "talent",
                 "generic gear"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_glory(4)",
             "imageName": "Amulet of glory(4).png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Pineapple pizza",
@@ -666,16 +665,15 @@
             "uid": "dragon-scimitar",
             "itemId": 4587,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_scimitar",
             "imageName": "Dragon scimitar.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Ahrim's hood",
@@ -943,16 +941,15 @@
             "uid": "dragon-dagger-p",
             "itemId": 5698,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_dagger(p%2B%2B)",
             "imageName": "Dragon dagger(p++).png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Toktz-xil-ul",
@@ -1162,13 +1159,12 @@
             "uid": "rune-gloves",
             "itemId": 7460,
             "tags": [
-                "talent",
                 "melee arm",
                 "generic gear"
             ],
             "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Rune_gloves",
             "imageName": "Rune gloves.png",
             "cost": 1
@@ -1183,12 +1179,12 @@
                 "melee arm",
                 "generic gear"
             ],
-            "tier": 4,
+            "tier": 2,
             "alwaysAvailable": false,
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Barrows_gloves",
             "imageName": "Barrows gloves.png",
-            "cost": 4
+            "cost": 2
         },
         {
             "name": "Void knight top",
@@ -1275,15 +1271,14 @@
             "uid": "rune-crossbow",
             "itemId": 9185,
             "tags": [
-                "talent",
                 "range wep"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Rune_crossbow",
             "imageName": "Rune crossbow.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Ava's accumulator",
@@ -1291,16 +1286,15 @@
             "uid": "avas-accumulator",
             "itemId": 10499,
             "tags": [
-                "talent",
                 "range arm",
                 "generic gear"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Ava%27s_accumulator",
             "imageName": "Ava's accumulator.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Fighter torso",
@@ -1337,7 +1331,6 @@
             "uid": "barrelchest-anchor",
             "itemId": 10887,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -2425,7 +2418,6 @@
             "uid": "colossal-blade",
             "itemId": 27021,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -2758,19 +2750,6 @@
             "cost": 2
         },
         {
-            "name": "Extended stamina potion",
-            "alias": "Extended stamina potion",
-            "uid": "extended-stamina-potion",
-            "itemId": null,
-            "tags": [],
-            "tier": null,
-            "alwaysAvailable": false,
-            "unlocked": false,
-            "wikiLink": "https://oldschool.runescape.wiki/w/Extended_stamina_potion",
-            "imageName": "Extended stamina potion.png",
-            "cost": null
-        },
-        {
             "name": "Halibut",
             "alias": "Halibut",
             "uid": "halibut",
@@ -2853,12 +2832,12 @@
                 "potions",
                 "consumables"
             ],
-            "tier": 1,
+            "tier": 2,
             "alwaysAvailable": false,
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Extended_stamina_potion(4)",
             "imageName": "Extended stamina potion(4).png",
-            "cost": 1
+            "cost": 2
         }
     ],
     "otherImages": [],
