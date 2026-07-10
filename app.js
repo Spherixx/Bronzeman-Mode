@@ -17,7 +17,14 @@ const db = getFirestore(firebaseApp);
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: "select_account" });
 const STORAGE_KEY = "bronzeman-point-challenges-v2";
-const ITEM_DEFS_URL = "BronzemanItemDefs.json";
+const DATA_URLS = {
+  items: "data/BronzemanItems.json",
+  itemSets: "data/BronzemanItemSets.json",
+  unlocks: "data/BronzemanUnlocks.json",
+  pvm: "data/BronzemanPvM.json",
+  pvp: "data/BronzemanPvP.json",
+  shop: "data/BronzemanShop.json"
+};
 
 function localImage(folder, fileName) {
   return `${folder}/${encodeURIComponent(fileName)}`;
@@ -27,8 +34,25 @@ function itemImage(fileName) {
   return localImage("images/items", fileName);
 }
 
+const specialImageFolders = {
+  "Blood_money_10000.png": "other",
+  "Coins_10000.png": "other",
+  "Recharge_Dragonstone.png": "other",
+  "Zulrah's_scales_5.png": "other",
+  "Standard_spellbook.png": "spellbooks",
+  "Ancient_spellbook.png": "spellbooks",
+  "Lunar_spellbook.png": "spellbooks",
+  "Arceuus_spellbook.png": "spellbooks",
+  "Augury.png": "prayers",
+  "Chivalry.png": "prayers",
+  "Deadeye.png": "prayers",
+  "Mystic_Vigour.png": "prayers",
+  "Piety.png": "prayers",
+  "Rigour.png": "prayers"
+};
+
 function imageAsset(fileName) {
-  return localImage("images", fileName);
+  return localImage(`images/${specialImageFolders[fileName] ?? "other"}`, fileName);
 }
 
 function task(title, points = 1) {
@@ -212,7 +236,7 @@ const itemImages = {
   rechargeDragonstone: imageAsset("Recharge_Dragonstone.png")
 };
 
-const challenges = {
+const legacyChallenges = {
   pvm: [
     {
       stage: "Early",
@@ -405,7 +429,7 @@ const challenges = {
 
 
 
-const unlocks = [
+const legacyUnlocks = [
   { id: "god-capes", name: "God Capes", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["saradomin-cape", "guthix-cape", "zamorak-cape"], images: [itemImages.zamorakCape] },
   { id: "god-staves", name: "God Staves", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["saradomin-staff", "guthix-staff", "zamorak-staff"], images: [itemImages.zamorakStaff] },
   { id: "glory", name: "Amulet of Glory", cost: 1, tier: 1, collectionCategory: "Range Gear", requires: [], images: [itemImages.amuletGlory] },
@@ -500,57 +524,16 @@ const unlockIdAliases = {
   "colossal-barrelchest": "colossal-blade"
 };
 
-const shopCategories = ["Runes / Ammo", "Food", "Potions", "Other"];
-
-const shopItems = [
-  { id: "barrages", category: "Runes / Ammo", name: "Barrage sacks", cost: 1, items: [{ image: itemImages.ancientIceSack, amount: "100" }] },
-  { id: "tb-sacks", category: "Runes / Ammo", name: "TB + entangle sacks", cost: 1, items: [{ image: itemImages.blightedTeleport, amount: "10" }, { image: itemImages.blightedEntangle, amount: "10" }] },
-  { id: "veng-sacks", category: "Runes / Ammo", name: "Veng sacks", cost: 1, items: [{ image: itemImages.vengeanceSack, amount: "25" }] },
-  { id: "elemental-runes", category: "Runes / Ammo", name: "Elemental runes", cost: 1, items: [{ image: itemImages.air, amount: "5k" }, { image: itemImages.water, amount: "5k" }, { image: itemImages.earth, amount: "5k" }, { image: itemImages.fire, amount: "5k" }] },
-  { id: "chaos-runes", category: "Runes / Ammo", name: "Chaos runes", cost: 1, items: [{ image: itemImages.chaos, amount: "2k" }] },
-  { id: "death-runes", category: "Runes / Ammo", name: "Death runes", cost: 1, items: [{ image: itemImages.death, amount: "2k" }] },
-  { id: "blood-runes", category: "Runes / Ammo", name: "Blood runes", cost: 1, items: [{ image: itemImages.blood, amount: "2k" }] },
-  { id: "astral-nature-soul-runes", category: "Runes / Ammo", name: "Astral / nature / soul runes", cost: 1, items: [{ image: itemImages.astral, amount: "1k" }, { image: itemImages.nature, amount: "1k" }, { image: itemImages.soul, amount: "1k" }] },
-  { id: "amethyst-arrows", category: "Runes / Ammo", name: "Amethyst arrows", cost: 1, items: [{ image: itemImages.amethystArrow, amount: "250" }] },
-  { id: "amethyst-darts", category: "Runes / Ammo", name: "Amethyst darts", cost: 1, items: [{ image: itemImages.amethystDart, amount: "250" }] },
-  { id: "dragon-bolts", category: "Runes / Ammo", name: "Dragonstone bolts", cost: 1, items: [{ image: itemImages.dragonBolt, amount: "100" }] },
-  { id: "dragon-seeker-arrows", category: "Runes / Ammo", name: "Dragon seeker arrows", cost: 1, items: [{ image: itemImages.seekerArrow, amount: "100" }] },
-  { id: "dragon-knives", category: "Runes / Ammo", name: "Dragon knives", cost: 1, items: [{ image: itemImages.dragonKnife, amount: "50" }] },
-  { id: "dragon-thrownaxes", category: "Runes / Ammo", name: "Dragon thrownaxes", cost: 1, items: [{ image: itemImages.dragonThrownaxe, amount: "50" }] },
-  { id: "zulrah-scales", category: "Runes / Ammo", name: "Zulrah scales", cost: 1, items: [{ image: itemImages.zulrahScales, amount: "1k" }] },
-  { id: "combo-food", category: "Food", name: "Halibut", cost: 2, items: [{ image: itemImages.halibut, amount: "50" }] },
-  { id: "standard-food", category: "Food", name: "Anglers / marlin", cost: 1, items: [{ image: itemImages.angler, amount: "100" }, { image: itemImages.marlin, amount: "100" }] },
-  { id: "surge-potions", category: "Potions", name: "Surge pots", cost: 2, items: [{ image: itemImages.surgePotion, amount: "5" }] },
-  { id: "brews", category: "Potions", name: "Brews", cost: 1, items: [{ image: itemImages.brew, amount: "20" }] },
-  { id: "restores", category: "Potions", name: "Restores", cost: 1, items: [{ image: itemImages.restore, amount: "10" }] },
-  { id: "range-pots", category: "Potions", name: "Range pots", cost: 1, items: [{ image: itemImages.ranging, amount: "5" }] },
-  { id: "super-combats", category: "Potions", name: "Super combats", cost: 1, items: [{ image: itemImages.superCombat, amount: "5" }] },
-  { id: "antivenom", category: "Potions", name: "Antivenom", cost: 1, items: [{ image: itemImages.antivenom, amount: "2" }] },
-  { id: "trouver", category: "Other", name: "Trouver Parchment", cost: 2, items: [{ image: itemImages.trouver }] },
-  { id: "msb-imbue-scroll", category: "Other", name: "MSB imbue scroll", cost: 1, items: [{ image: itemImages.msbImbueScroll }] },
-  { id: "dagannoth-ring-reimbue", category: "Other", name: "Dagannoth ring re-imbue", cost: 1, items: [{ image: itemImages.scrollOfImbuing }] },
-  { id: "rune-pouch-rebuy", category: "Other", name: "Rune pouch rebuy", cost: 1, items: [{ image: itemImages.runePouch }] },
-  { id: "sarasword-bless", category: "Other", name: "Sarasword bless item", cost: 1, items: [{ image: itemImages.saradominsTear }] },
-  { id: "jewellery-recharge", category: "Other", name: "Jewellery recharge", cost: 1, items: [{ image: itemImages.rechargeDragonstone, amount: "10" }] },
-  { id: "avas-accumulator-reclaim", category: "Other", name: "Ava's accumulator reclaim", cost: 1, items: [{ image: itemImages.avasAccumulator }] },
-  { id: "avas-assembler-reclaim", category: "Other", name: "Ava's assembler reclaim", cost: 1, items: [{ image: itemImages.avasAssembler }] },
-  { id: "seed-pod-reclaim", category: "Other", name: "Seed pod reclaim", cost: 1, items: [{ image: itemImages.seedPod }] },
-  { id: "god-book-reclaim", category: "Other", name: "God book reclaim", cost: 1, items: [{ image: itemImages.unholyBook }] },
-  { id: "god-cape-reclaim", category: "Other", name: "God cape reclaim", cost: 1, items: [{ image: itemImages.zamorakCape }] },
-  { id: "god-staff-reclaim", category: "Other", name: "God staff reclaim", cost: 1, items: [{ image: itemImages.zamorakStaff }] },
-  { id: "rune-gloves-reclaim", category: "Other", name: "Rune gloves reclaim", cost: 1, items: [{ image: itemImages.runeGloves }] },
-  { id: "barrows-gloves-reclaim", category: "Other", name: "Barrows gloves reclaim", cost: 1, items: [{ image: itemImages.barrowsGloves }] },
-  { id: "dragon-defender-reclaim", category: "Other", name: "Dragon defender reclaim", cost: 1, items: [{ image: itemImages.defenders }] },
-  { id: "fighter-torso-reclaim", category: "Other", name: "Fighter torso reclaim", cost: 1, items: [{ image: itemImages.torso }] },
-  { id: "void-reclaim", category: "Other", name: "Void reclaim", cost: 1, items: [{ image: itemImages.void }] },
-  { id: "fire-cape-reclaim", category: "Other", name: "Fire cape reclaim", cost: 1, items: [{ image: itemImages.fireCape }] },
-  { id: "ma2-cape-reclaim", category: "Other", name: "MA2 cape reclaim", cost: 1, items: [{ image: itemImages.ma2Cape }] },
-  { id: "rev-kit", category: "Other", name: "Rev kit", cost: 2, items: [{ image: itemImages.bracelet }, { image: itemImages.revenantEther, amount: "100" }, { image: itemImages.burningAmulet }] }
-];
+let shopCategories = [];
+let shopItems = [];
 const shopIdAliases = {
   "tb-runes": "tb-sacks",
   "veng-runes": "veng-sacks"
 };
+let challenges = legacyChallenges;
+let unlocks = legacyUnlocks;
+
+let collectionSetDefinitions = [];
 let itemDefinitions = [];
 const state = loadState();
 let currentUser = null;
@@ -580,7 +563,7 @@ const collectionFilterDefinitions = [
 
 const collectionCategoryPriority = ["spec", "range", "mage", "melee", "gear", "potions", "runes", "ammo", "food", "talent", "shop", "other"];
 const hiddenCollectionItemIds = new Set(["warrior-guild-token"]);
-const collectionSetDefinitions = [
+const legacyCollectionSetDefinitions = [
   { id: "set-god-capes", name: "God Capes", itemIds: ["saradomin-cape", "guthix-cape", "zamorak-cape"] },
   { id: "set-imbued-god-capes", name: "Imbued God Capes", itemIds: ["imbued-saradomin-cape", "imbued-guthix-cape", "imbued-zamorak-cape"] },
   { id: "set-god-books", name: "God Books", itemIds: ["holy-book", "unholy-book", "book-of-balance", "book-of-war", "book-of-law", "book-of-darkness"] },
@@ -591,6 +574,14 @@ const collectionSetDefinitions = [
   { id: "set-dharoks", name: "Dharok's Set", itemIds: ["dharoks-helm", "dharoks-platebody", "dharoks-platelegs", "dharoks-greataxe"] },
   { id: "set-obsidian-weapons", name: "Obsidian Weapons", itemIds: ["toktz-xil-ek", "toktz-xil-ak", "tzhaar-ket-em", "tzhaar-ket-om", "toktz-xil-ul", "toktz-mej-tal"] }
 ];
+collectionSetDefinitions = legacyCollectionSetDefinitions;
+
+const dataWarnings = [];
+let challengeIdAliases = {};
+let repeatableIdAliases = {};
+let itemRowsByUid = new Map();
+let itemRowsByItemId = new Map();
+let itemRowsByName = new Map();
 
 function collectionFilterOptions() {
   return collectionFilterDefinitions;
@@ -629,8 +620,9 @@ function sanitizeState(rawState) {
   }
 
   Object.entries(rawState?.repeatablePurchases ?? {}).forEach(([id, count]) => {
-    if (validRepeatables.has(id) && Number.isFinite(count)) {
-      repeatablePurchases[id] = Math.max(repeatablePurchases[id] ?? 0, Math.floor(count));
+    const nextId = repeatableIdAliases[id] ?? id;
+    if (validRepeatables.has(nextId) && Number.isFinite(count)) {
+      repeatablePurchases[nextId] = Math.max(repeatablePurchases[nextId] ?? 0, Math.floor(count));
     }
   });
 
@@ -649,7 +641,7 @@ function sanitizeState(rawState) {
 
   return {
     completed: Array.isArray(rawState?.completed)
-      ? [...new Set(rawState.completed)].filter((id) => validChallenges.has(id))
+      ? [...new Set(rawState.completed.map((id) => challengeIdAliases[id] ?? id))].filter((id) => validChallenges.has(id))
       : [],
     purchased: Array.isArray(rawState?.purchased)
       ? [...new Set(rawState.purchased.map((id) => unlockIdAliases[id] ?? id))].filter((id) => validUnlocks.has(id))
@@ -863,7 +855,8 @@ function challengePoints(challenge) {
 function flattenPvmChallenges() {
   return challenges.pvm.flatMap((group, groupIndex) =>
     group.items.flatMap((challenge, index) => challenge.repeatable ? [] : [{
-      id: challengeId("pvm", groupIndex, index),
+      id: challenge.id || challengeId("pvm", groupIndex, index),
+      legacyId: challenge.legacyId || challengeId("pvm", groupIndex, index),
       title: challengeTitle(challenge),
       points: challengePoints(challenge),
       stage: group.stage,
@@ -875,8 +868,8 @@ function flattenPvmChallenges() {
 function flattenRepeatables() {
   return challenges.pvm.flatMap((group, groupIndex) =>
     group.items.flatMap((challenge, index) => challenge.repeatable ? [{
-      id: challengeId("repeatable", groupIndex, index),
-      legacyId: challengeId("pvm", groupIndex, index),
+      id: challenge.id || challengeId("repeatable", groupIndex, index),
+      legacyId: challenge.legacyId || challengeId("pvm", groupIndex, index),
       title: challengeTitle(challenge),
       cost: challenge.cost ?? 5,
       stage: group.stage
@@ -888,7 +881,8 @@ function flattenRepeatables() {
 
 function flattenPvpChallenges() {
   return challenges.pvp.map((challenge, index) => ({
-    id: challengeId("pvp", index),
+    id: challenge.id || challengeId("pvp", index),
+    legacyId: challenge.legacyId || challengeId("pvp", index),
     title: challengeTitle(challenge),
     points: challengePoints(challenge)
   }));
@@ -991,7 +985,7 @@ function renderPvmChallenges() {
     const stage = document.createElement("section");
     stage.className = `challenge-stage ${unlocked ? "unlocked" : "locked"}`;
 
-    const completed = visibleItems.filter(({ index }) => state.completed.includes(challengeId("pvm", groupIndex, index))).length;
+    const completed = visibleItems.filter(({ challenge, index }) => state.completed.includes(challenge.id || challengeId("pvm", groupIndex, index))).length;
     stage.innerHTML = `
       <div class="stage-header">
         <div>
@@ -1007,7 +1001,7 @@ function renderPvmChallenges() {
 
     visibleItems.forEach(({ challenge, index }) => {
       renderChallengeItem({
-        id: challengeId("pvm", groupIndex, index),
+        id: challenge.id || challengeId("pvm", groupIndex, index),
         title: challengeTitle(challenge),
         points: challengePoints(challenge),
         stage: group.stage,
@@ -1285,6 +1279,284 @@ function uniqueTags(tags) {
   return [...new Set((tags ?? []).map((tag) => String(tag).trim()).filter(Boolean))];
 }
 
+function toArray(value) {
+  return Array.isArray(value) ? value : [];
+}
+
+function toNumber(value, fallback = 0) {
+  if (value === null || value === undefined || value === "") return fallback;
+  const number = Number(value);
+  return Number.isFinite(number) ? number : fallback;
+}
+
+function dataDisplayName(entry, fallback = "Item") {
+  return entry?.alias || entry?.name || fallback;
+}
+
+function dataUid(entry, fallbackPrefix = "item") {
+  return String(entry?.uid || entry?.id || slugifyItemId(dataDisplayName(entry, fallbackPrefix)));
+}
+
+function withoutTrailingPeriod(value) {
+  return String(value ?? "").replace(/\.+$/g, "");
+}
+
+function normalizeDataText(value) {
+  return normalizeCollectionText(withoutTrailingPeriod(value));
+}
+
+function indexItemRows(items) {
+  itemRowsByUid = new Map();
+  itemRowsByItemId = new Map();
+  itemRowsByName = new Map();
+
+  toArray(items).forEach((item) => {
+    const uid = dataUid(item);
+    itemRowsByUid.set(uid, item);
+    if (item.itemId !== null && item.itemId !== undefined) itemRowsByItemId.set(String(item.itemId), item);
+    [item.name, item.alias, item.imageUsed, item.imageName?.replace(/\.png$/i, "")].filter(Boolean).forEach((name) => {
+      itemRowsByName.set(normalizeDataText(name), item);
+    });
+  });
+}
+
+function itemIdsFromDataIds(itemIds) {
+  return toArray(itemIds).map((id) => {
+    const key = String(id);
+    return itemRowsByItemId.get(key)?.uid || itemRowsByUid.get(key)?.uid || key;
+  });
+}
+
+function imageNameForSpecialAsset(name, tags = []) {
+  const label = withoutTrailingPeriod(name);
+  const normalized = normalizeDataText(label);
+  const tagSet = new Set(tags);
+
+  if (tagSet.has("spellbook") || normalized.endsWith("spellbook")) {
+    return `${titleCase(normalized).replace(/ /g, "_")}.png`;
+  }
+
+  if (tagSet.has("prayer") || ["piety", "rigour", "augury", "chivalry", "deadeye", "mystic vigour"].includes(normalized)) {
+    return `${label.replace(/ /g, "_").replace("Mystic_Vigour", "Mystic_Vigour")}.png`;
+  }
+
+  return null;
+}
+
+function resolveDataImage(name, tags = []) {
+  if (!name) return "";
+  const value = String(name);
+  if (value.includes("/")) return value;
+
+  const itemRow = itemRowsByName.get(normalizeDataText(value));
+  if (itemRow?.imageName) return itemImage(itemRow.imageName);
+
+  const specialName = imageNameForSpecialAsset(value, tags);
+  if (specialName) return imageAsset(specialName);
+
+  return itemImage(value.endsWith(".png") ? value : `${value}.png`);
+}
+
+function imageForDataEntry(entry) {
+  return entry?.imagePath || (entry?.imageName ? itemImage(entry.imageName) : resolveDataImage(entry?.imageUsed, entry?.tags));
+}
+
+function normalizeChallengeTask(taskEntry, type, legacyId) {
+  const uid = dataUid(taskEntry, type);
+  const id = `${type}-${uid}`;
+  if (legacyId) challengeIdAliases[legacyId] = id;
+
+  return {
+    ...taskEntry,
+    id,
+    legacyId,
+    title: dataDisplayName(taskEntry, "Task"),
+    points: toNumber(taskEntry?.points, 1),
+    repeatable: Boolean(taskEntry?.repeatable),
+    cost: toNumber(taskEntry?.cost, 5)
+  };
+}
+
+function normalizePvmChallenges(data) {
+  return toArray(data?.pvmStages).map((stage, groupIndex) => ({
+    stage: stage.stage || `Stage ${groupIndex + 1}`,
+    killRequirement: toNumber(stage.killRequirement, 0),
+    items: toArray(stage.tasks || stage.items).map((taskEntry, index) => {
+      const legacyId = challengeId("pvm", groupIndex, index);
+      const normalized = normalizeChallengeTask(taskEntry, "pvm", legacyId);
+      if (normalized.repeatable) {
+        normalized.id = `repeatable-${dataUid(taskEntry, "task")}`;
+        repeatableIdAliases[challengeId("repeatable", groupIndex, index)] = normalized.id;
+        repeatableIdAliases[legacyId] = normalized.id;
+      }
+      return normalized;
+    })
+  }));
+}
+
+function normalizePvpChallenges(data) {
+  return toArray(data?.pvpTasks).map((taskEntry, index) => normalizeChallengeTask(taskEntry, "pvp", challengeId("pvp", index)));
+}
+
+function normalizeCollectionSetDefinitions(data) {
+  const sets = toArray(data?.itemSets).map((setEntry) => ({
+    ...setEntry,
+    id: dataUid(setEntry, "set"),
+    name: dataDisplayName(setEntry, "Set"),
+    originalName: setEntry.name,
+    itemIds: itemIdsFromDataIds(setEntry.itemIds),
+    tags: uniqueTags(setEntry.tags ?? []),
+    images: [imageForDataEntry(setEntry)].filter(Boolean)
+  }));
+
+  return sets.length ? sets : legacyCollectionSetDefinitions;
+}
+
+function normalizeTalentUnlock(entry, sourceType) {
+  const cost = toNumber(entry.cost, NaN);
+  const tier = toNumber(entry.tier, NaN);
+  if (!Number.isFinite(cost) || cost <= 0 || !Number.isFinite(tier) || tier <= 0) return null;
+
+  const tags = uniqueTags([...(entry.tags ?? []), "talent"]);
+  const collectionIds = sourceType === "set"
+    ? itemIdsFromDataIds(entry.itemIds)
+    : [dataUid(entry)].filter(Boolean);
+
+  return {
+    id: dataUid(entry),
+    name: dataDisplayName(entry, "Unlock"),
+    cost,
+    tier,
+    tags,
+    requires: toArray(entry.requires),
+    collectionIds,
+    images: [imageForDataEntry({ ...entry, tags })].filter(Boolean),
+    collectionCategory: collectionCategoryFromTags(tags)
+  };
+}
+
+function buildDataUnlocks(itemsData, itemSetsData, unlocksData) {
+  const itemUnlocks = toArray(itemsData?.items)
+    .filter((item) => toArray(item.tags).includes("talent") || item.cost !== null || item.tier !== null)
+    .map((item) => normalizeTalentUnlock(item, "item"));
+  const setUnlocks = toArray(itemSetsData?.itemSets)
+    .filter((itemSet) => toArray(itemSet.tags).includes("talent") || itemSet.cost !== null || itemSet.tier !== null)
+    .map((itemSet) => normalizeTalentUnlock(itemSet, "set"));
+  const nonItemUnlocks = toArray(unlocksData?.unlocks).map((unlock) => normalizeTalentUnlock(unlock, "unlock"));
+
+  return [...itemUnlocks, ...setUnlocks, ...nonItemUnlocks].filter(Boolean);
+}
+
+function mergeUnlocks(dataUnlocks) {
+  const byId = new Map(dataUnlocks.map((unlock) => [unlock.id, unlock]));
+  const byName = new Map(dataUnlocks.map((unlock) => [normalizeDataText(unlock.name), unlock]));
+  const used = new Set();
+
+  const merged = legacyUnlocks.map((legacyUnlock) => {
+    const replacement = byId.get(legacyUnlock.id) || byName.get(normalizeDataText(legacyUnlock.name));
+    if (!replacement) return legacyUnlock;
+    used.add(replacement.id);
+    return { ...legacyUnlock, ...replacement, id: legacyUnlock.id };
+  });
+
+  dataUnlocks.forEach((unlock) => {
+    if (!used.has(unlock.id) && !merged.some((item) => normalizeDataText(item.name) === normalizeDataText(unlock.name))) {
+      merged.push(unlock);
+    }
+  });
+
+  return merged;
+}
+
+function normalizeShopItems(data) {
+  const jsonShopItems = toArray(data?.shopItems).map((shopItem) => ({
+    id: dataUid(shopItem, "shop"),
+    category: shopItem.category || "Other",
+    name: dataDisplayName(shopItem, "Shop item"),
+    cost: toNumber(shopItem.cost, 1),
+    items: toArray(shopItem.items).map((entry) => ({
+      image: entry.image ? resolveDataImage(entry.image, entry.tags) : resolveDataImage(entry.imageUsed || entry.name || entry.uid, entry.tags),
+      amount: entry.amount
+    }))
+  }));
+
+  shopCategories = toArray(data?.categories).length
+    ? toArray(data.categories).map((category) => String(category)).filter(Boolean)
+    : [...new Set(jsonShopItems.map((item) => item.category))];
+
+  if (!jsonShopItems.length) dataWarnings.push("BronzemanShop.json does not define any shopItems.");
+  return jsonShopItems;
+}
+
+async function fetchJson(url) {
+  const response = await fetch(url);
+  if (!response.ok) throw new Error(`${url} returned ${response.status}`);
+  return response.json();
+}
+
+function enrichCollectionSignals(items) {
+  return items.map((item) => {
+    const tags = uniqueTags(item.tags ?? []);
+    if (unlocks.some((unlock) => unlockMatchesCollectionItem(unlock, item)) && !tags.includes("talent")) tags.push("talent");
+    if (shopItems.some((shopItem) => shopMatchesCollectionItem(shopItem, item)) && !tags.includes("shop")) tags.push("shop");
+
+    const displayTags = uniqueTags(tags.map(collectionDisplayTag));
+    return {
+      ...item,
+      tags,
+      category: collectionCategoryFromTags(tags),
+      sourceType: collectionSourceType({ ...item, tags }),
+      automatic: collectionSourceType({ ...item, tags }) !== "collection",
+      searchText: normalizeCollectionText(`${item.name} ${item.originalName ?? ""} ${tags.join(" ")} ${displayTags.join(" ")}`)
+    };
+  });
+}
+
+async function loadAppData() {
+  try {
+    const [itemsData, itemSetsData, unlocksData, pvmData, pvpData, shopData] = await Promise.all([
+      fetchJson(DATA_URLS.items),
+      fetchJson(DATA_URLS.itemSets),
+      fetchJson(DATA_URLS.unlocks),
+      fetchJson(DATA_URLS.pvm),
+      fetchJson(DATA_URLS.pvp),
+      fetchJson(DATA_URLS.shop)
+    ]);
+
+    challengeIdAliases = {};
+    repeatableIdAliases = {};
+    indexItemRows(itemsData.items);
+
+    challenges = {
+      pvm: normalizePvmChallenges(pvmData),
+      pvp: normalizePvpChallenges(pvpData)
+    };
+    collectionSetDefinitions = normalizeCollectionSetDefinitions(itemSetsData);
+    unlocks = mergeUnlocks(buildDataUnlocks(itemsData, itemSetsData, unlocksData));
+    shopItems = normalizeShopItems(shopData);
+
+    const seen = new Set();
+    const items = toArray(itemsData.items)
+      .map(collectionItemFromDefinition)
+      .filter((item) => {
+        const key = item.id || normalizeAssetPath(item.images?.[0]) || normalizeCollectionText(item.name);
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+    itemDefinitions = enrichCollectionSignals(collapseCollectionSets(items));
+  } catch (error) {
+    console.warn("Could not load Bronzeman JSON data", error);
+    dataWarnings.push("Could not load one or more Bronzeman JSON files; using built-in task/talent fallback and an empty shop.");
+    challenges = legacyChallenges;
+    unlocks = legacyUnlocks;
+    shopItems = [];
+    collectionSetDefinitions = legacyCollectionSetDefinitions;
+    itemDefinitions = [];
+  }
+}
+
 function itemDisplayName(item) {
   return item.alias || item.name || "Item";
 }
@@ -1363,9 +1635,10 @@ function collectionItemFromDefinition(item) {
 
   return {
     ...item,
-    id: item.id || `item-${item.itemId ?? slugifyItemId(item.name)}`,
+    id: item.uid || item.id || `item-${item.itemId ?? slugifyItemId(item.name)}`,
     name,
     originalName: item.name,
+    itemId: item.itemId,
     category: collectionCategoryFromTags(tags),
     sourceType,
     automatic: sourceType !== "collection",
@@ -1379,23 +1652,25 @@ function mergedCollectionSet(definition, itemsById) {
   const members = definition.itemIds.map((id) => itemsById.get(id)).filter(Boolean);
   if (!members.length) return null;
 
-  const tags = uniqueTags(members.flatMap((item) => item.tags ?? []));
-  const images = members[0].images?.slice(0, 1) ?? [];
-  const sourceType = tags.includes("talent") ? "talent" : tags.includes("shop") ? "shop" : "collection";
+  const tags = uniqueTags([...(definition.tags ?? []), ...members.flatMap((item) => item.tags ?? [])]);
+  const images = definition.images?.length ? definition.images : members[0].images?.slice(0, 1) ?? [];
+  const sourceType = collectionSourceType({ ...definition, tags });
   const displayTags = uniqueTags(tags.map(collectionDisplayTag));
+  const name = dataDisplayName(definition, definition.name || "Set");
 
   return {
     ...members[0],
+    ...definition,
     id: definition.id,
     collectionIds: definition.itemIds,
-    name: definition.name,
-    originalName: definition.name,
+    name,
+    originalName: definition.originalName || definition.name,
     category: collectionCategoryFromTags(tags),
     sourceType,
     automatic: sourceType !== "collection",
     images,
     tags,
-    searchText: normalizeCollectionText(`${definition.name} ${members.map((item) => item.name).join(" ")} ${tags.join(" ")} ${displayTags.join(" ")}`)
+    searchText: normalizeCollectionText(`${name} ${members.map((item) => item.name).join(" ")} ${tags.join(" ")} ${displayTags.join(" ")}`)
   };
 }
 
@@ -1410,31 +1685,6 @@ function collapseCollectionSets(items) {
   ];
 }
 
-async function loadItemDefinitions() {
-  try {
-    const response = await fetch(ITEM_DEFS_URL);
-    if (!response.ok) throw new Error(`Item definitions returned ${response.status}`);
-    const data = await response.json();
-    const seen = new Set();
-    const items = (Array.isArray(data.items) ? data.items : [])
-      .map(collectionItemFromDefinition)
-      .filter((item) => {
-        const key = item.id || normalizeAssetPath(item.images?.[0]) || normalizeCollectionText(item.name);
-        if (seen.has(key)) return false;
-        seen.add(key);
-        return true;
-      });
-
-    itemDefinitions = collapseCollectionSets(items);
-  } catch (error) {
-    console.warn("Could not load BronzemanItemDefs.json", error);
-    itemDefinitions = [];
-  } finally {
-    refreshCollectionFilterButtons();
-    refreshCollectionSearchDatalist();
-    renderUnlocks();
-  }
-}
 
 function collectionItems() {
   return itemDefinitions;
@@ -1754,11 +2004,18 @@ document.getElementById("resetButton").addEventListener("click", () => {
   render();
 });
 
-initCollectionControls();
-showTab("tasks");
-render();
-loadItemDefinitions();
-initFirebaseAuth();
+async function initApp() {
+  await loadAppData();
+  Object.assign(state, sanitizeState(state));
+  initCollectionControls();
+  showTab("tasks");
+  render();
+  initFirebaseAuth();
+
+  if (dataWarnings.length) console.warn("Bronzeman data warnings", dataWarnings);
+}
+
+initApp();
 
 
 
