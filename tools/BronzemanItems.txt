@@ -17,7 +17,6 @@ Magic shortbow (i)
 Rune crossbow
 Hunters' sunlight crossbow
 Dark bow
-Seeking dragon arrow
 Ancient mace
 Dragon thrownaxe
 Dragon knife(p++)
@@ -57,8 +56,6 @@ Anti-venom+(4)
 Shark
 Anglerfish
 Cooked karambwan
-Halibut
-Marlin
 Pineapple pizza
 Manta ray
 Blighted manta ray
@@ -93,7 +90,6 @@ Mystic robe bottom
 Burning claws
 Dragon warhammer
 Dragon crossbow
-Sunlight hunter's crossbow
 Tome of fire
 Tome of water
 Berserker ring
@@ -118,3 +114,62 @@ Book of balance
 Book of war
 Book of law
 Book of darkness
+
+Dragon scimitar
+Ava's accumulator
+Rune pouch
+Dragon mace
+Dragon battleaxe
+Mystic hat
+Mystic robe top
+Mystic robe bottom
+Mystic gloves
+Mystic boots
+
+Abyssal whip
+Zombie axe
+Dragon halberd
+Light ballista
+Amulet of fury
+Saradomin sword
+Verac's helm
+Verac's brassard
+Verac's plateskirt
+Verac's flail
+
+Abyssal dagger
+Crystal halberd
+Saradomin's blessed sword
+Ahrim's hood
+Ahrim's robetop
+Ahrim's robeskirt
+Ahrim's staff
+Karil's coif
+Karil's leathertop
+Karil's leatherskirt
+Karil's crossbow
+Toxic blowpipe
+Armadyl crossbow
+Occult necklace
+Ava's assembler
+
+Heavy ballista
+Dharok's helm
+Dharok's platebody
+Dharok's platelegs
+Dharok's greataxe
+Serpentine helm
+Amulet of torture
+Necklace of anguish
+Tormented bracelet
+Dinh's bulwark
+
+Dragon claws
+Volatile nightmare staff
+Armadyl godsword
+Elder maul
+Necklace of rupture
+Ring of suffering
+Necklace of anguish
+Tormented bracelet
+Amulet of torture

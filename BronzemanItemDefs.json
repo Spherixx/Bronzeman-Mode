@@ -105,6 +105,7 @@
                       "imageName":  "Colossal blade.png",
                       "imagePath":  "images/items/Colossal blade.png",
                       "tags":  [
+                                   "spec wep",
                                    "melee wep",
                                    "talent"
                                ],
@@ -172,7 +173,8 @@
                       "imagePath":  "images/items/Dragon scimitar.png",
                       "tags":  [
                                    "spec wep",
-                                   "melee wep"
+                                   "melee wep",
+                                   "talent"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -1338,7 +1340,8 @@
                       "imageName":  "Mystic robe top.png",
                       "imagePath":  "images/items/Mystic robe top.png",
                       "tags":  [
-                                   "mage arm"
+                                   "mage arm",
+                                   "talent"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -1353,7 +1356,8 @@
                       "imageName":  "Mystic robe bottom.png",
                       "imagePath":  "images/items/Mystic robe bottom.png",
                       "tags":  [
-                                   "mage arm"
+                                   "mage arm",
+                                   "talent"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -1972,24 +1976,6 @@
                       "status":  "missing-item-id"
                   },
                   {
-                      "id":  "Hunters-sunlight-crossbow",
-                      "name":  "Hunters\u0027 sunlight crossbow",
-                      "itemId":  null,
-                      "alias":  "Hunters\u0027 sunlight crossbow",
-                      "wikiLink":  "https://oldschool.runescape.wiki/w/Sunlight_hunter%27s_crossbow",
-                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Sunlight%20hunter%27s%20crossbow.png",
-                      "imageName":  "Hunters\u0027 sunlight crossbow.png",
-                      "imagePath":  "images/items/Hunters\u0027 sunlight crossbow.png",
-                      "tags":  [
-                                   "range wep",
-                                   "talent"
-                               ],
-                      "alwaysAvailable":  false,
-                      "unlocked":  false,
-                      "source":  "manual-wiki",
-                      "status":  "missing-item-id"
-                  },
-                  {
                       "id":  "surge-potion-4",
                       "name":  "Surge potion(4)",
                       "itemId":  null,
@@ -2045,6 +2031,940 @@
                       "unlocked":  false,
                       "source":  "manual-wiki",
                       "status":  "missing-item-id"
+                  },
+                  {
+                      "id":  "avas-accumulator",
+                      "name":  "Ava\u0027s accumulator",
+                      "itemId":  10499,
+                      "alias":  "Ava\u0027s accumulator",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ava%27s_accumulator",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ava%27s%20accumulator.png",
+                      "imageName":  "Ava\u0027s accumulator.png",
+                      "imagePath":  "images/items/Ava\u0027s accumulator.png",
+                      "tags":  [
+                                   "range arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "rune-pouch",
+                      "name":  "Rune pouch",
+                      "itemId":  12791,
+                      "alias":  "Rune pouch",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Rune_pouch",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Rune%20pouch.png",
+                      "imageName":  "Rune pouch.png",
+                      "imagePath":  "images/items/Rune pouch.png",
+                      "tags":  [
+                                   "generic gear",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dragon-mace",
+                      "name":  "Dragon mace",
+                      "itemId":  1434,
+                      "alias":  "Dragon mace",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dragon_mace",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20mace.png",
+                      "imageName":  "Dragon mace.png",
+                      "imagePath":  "images/items/Dragon mace.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dragon-battleaxe",
+                      "name":  "Dragon battleaxe",
+                      "itemId":  1377,
+                      "alias":  "Dragon battleaxe",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dragon_battleaxe",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20battleaxe.png",
+                      "imageName":  "Dragon battleaxe.png",
+                      "imagePath":  "images/items/Dragon battleaxe.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "mystic-hat",
+                      "name":  "Mystic hat",
+                      "itemId":  4089,
+                      "alias":  "Mystic hat",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Mystic_hat",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20hat.png",
+                      "imageName":  "Mystic hat.png",
+                      "imagePath":  "images/items/Mystic hat.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "mystic-gloves",
+                      "name":  "Mystic gloves",
+                      "itemId":  4095,
+                      "alias":  "Mystic gloves",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Mystic_gloves",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20gloves.png",
+                      "imageName":  "Mystic gloves.png",
+                      "imagePath":  "images/items/Mystic gloves.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "mystic-boots",
+                      "name":  "Mystic boots",
+                      "itemId":  4097,
+                      "alias":  "Mystic boots",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Mystic_boots",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20boots.png",
+                      "imageName":  "Mystic boots.png",
+                      "imagePath":  "images/items/Mystic boots.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "abyssal-whip",
+                      "name":  "Abyssal whip",
+                      "itemId":  4151,
+                      "alias":  "Abyssal whip",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Abyssal_whip",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Abyssal%20whip.png",
+                      "imageName":  "Abyssal whip.png",
+                      "imagePath":  "images/items/Abyssal whip.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "zombie-axe",
+                      "name":  "Zombie axe",
+                      "itemId":  28810,
+                      "alias":  "Zombie axe",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Zombie_axe",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Zombie%20axe.png",
+                      "imageName":  "Zombie axe.png",
+                      "imagePath":  "images/items/Zombie axe.png",
+                      "tags":  [
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dragon-halberd",
+                      "name":  "Dragon halberd",
+                      "itemId":  3204,
+                      "alias":  "Dragon halberd",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dragon_halberd",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20halberd.png",
+                      "imageName":  "Dragon halberd.png",
+                      "imagePath":  "images/items/Dragon halberd.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "light-ballista",
+                      "name":  "Light ballista",
+                      "itemId":  19478,
+                      "alias":  "Light ballista",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Light_ballista",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Light%20ballista.png",
+                      "imageName":  "Light ballista.png",
+                      "imagePath":  "images/items/Light ballista.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "range wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "amulet-of-fury",
+                      "name":  "Amulet of fury",
+                      "itemId":  6585,
+                      "alias":  "Amulet of fury",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Amulet_of_fury",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Amulet%20of%20fury.png",
+                      "imageName":  "Amulet of fury.png",
+                      "imagePath":  "images/items/Amulet of fury.png",
+                      "tags":  [
+                                   "generic gear",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "saradomin-sword",
+                      "name":  "Saradomin sword",
+                      "itemId":  11838,
+                      "alias":  "Saradomin sword",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Saradomin_sword",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Saradomin%20sword.png",
+                      "imageName":  "Saradomin sword.png",
+                      "imagePath":  "images/items/Saradomin sword.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "veracs-helm",
+                      "name":  "Verac\u0027s helm",
+                      "itemId":  4753,
+                      "alias":  "Verac\u0027s helm",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Verac%27s_helm",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Verac%27s%20helm.png",
+                      "imageName":  "Verac\u0027s helm.png",
+                      "imagePath":  "images/items/Verac\u0027s helm.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "veracs-brassard",
+                      "name":  "Verac\u0027s brassard",
+                      "itemId":  4757,
+                      "alias":  "Verac\u0027s brassard",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Verac%27s_brassard",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Verac%27s%20brassard.png",
+                      "imageName":  "Verac\u0027s brassard.png",
+                      "imagePath":  "images/items/Verac\u0027s brassard.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "veracs-plateskirt",
+                      "name":  "Verac\u0027s plateskirt",
+                      "itemId":  4759,
+                      "alias":  "Verac\u0027s plateskirt",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Verac%27s_plateskirt",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Verac%27s%20plateskirt.png",
+                      "imageName":  "Verac\u0027s plateskirt.png",
+                      "imagePath":  "images/items/Verac\u0027s plateskirt.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "veracs-flail",
+                      "name":  "Verac\u0027s flail",
+                      "itemId":  4755,
+                      "alias":  "Verac\u0027s flail",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Verac%27s_flail",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Verac%27s%20flail.png",
+                      "imageName":  "Verac\u0027s flail.png",
+                      "imagePath":  "images/items/Verac\u0027s flail.png",
+                      "tags":  [
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "abyssal-dagger",
+                      "name":  "Abyssal dagger",
+                      "itemId":  13265,
+                      "alias":  "Abyssal dagger",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Abyssal_dagger",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Abyssal%20dagger.png",
+                      "imageName":  "Abyssal dagger.png",
+                      "imagePath":  "images/items/Abyssal dagger.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "crystal-halberd",
+                      "name":  "Crystal halberd",
+                      "itemId":  23987,
+                      "alias":  "Crystal halberd",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Crystal_halberd",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Crystal%20halberd.png",
+                      "imageName":  "Crystal halberd.png",
+                      "imagePath":  "images/items/Crystal halberd.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "ahrims-hood",
+                      "name":  "Ahrim\u0027s hood",
+                      "itemId":  4708,
+                      "alias":  "Ahrim\u0027s hood",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ahrim%27s_hood",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ahrim%27s%20hood.png",
+                      "imageName":  "Ahrim\u0027s hood.png",
+                      "imagePath":  "images/items/Ahrim\u0027s hood.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "ahrims-robetop",
+                      "name":  "Ahrim\u0027s robetop",
+                      "itemId":  4712,
+                      "alias":  "Ahrim\u0027s robetop",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ahrim%27s_robetop",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ahrim%27s%20robetop.png",
+                      "imageName":  "Ahrim\u0027s robetop.png",
+                      "imagePath":  "images/items/Ahrim\u0027s robetop.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "ahrims-robeskirt",
+                      "name":  "Ahrim\u0027s robeskirt",
+                      "itemId":  4714,
+                      "alias":  "Ahrim\u0027s robeskirt",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ahrim%27s_robeskirt",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ahrim%27s%20robeskirt.png",
+                      "imageName":  "Ahrim\u0027s robeskirt.png",
+                      "imagePath":  "images/items/Ahrim\u0027s robeskirt.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "ahrims-staff",
+                      "name":  "Ahrim\u0027s staff",
+                      "itemId":  4710,
+                      "alias":  "Ahrim\u0027s staff",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ahrim%27s_staff",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ahrim%27s%20staff.png",
+                      "imageName":  "Ahrim\u0027s staff.png",
+                      "imagePath":  "images/items/Ahrim\u0027s staff.png",
+                      "tags":  [
+                                   "mage wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "karils-coif",
+                      "name":  "Karil\u0027s coif",
+                      "itemId":  4732,
+                      "alias":  "Karil\u0027s coif",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Karil%27s_coif",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Karil%27s%20coif.png",
+                      "imageName":  "Karil\u0027s coif.png",
+                      "imagePath":  "images/items/Karil\u0027s coif.png",
+                      "tags":  [
+                                   "range arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "karils-leathertop",
+                      "name":  "Karil\u0027s leathertop",
+                      "itemId":  4736,
+                      "alias":  "Karil\u0027s leathertop",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Karil%27s_leathertop",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Karil%27s%20leathertop.png",
+                      "imageName":  "Karil\u0027s leathertop.png",
+                      "imagePath":  "images/items/Karil\u0027s leathertop.png",
+                      "tags":  [
+                                   "range arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "karils-leatherskirt",
+                      "name":  "Karil\u0027s leatherskirt",
+                      "itemId":  4738,
+                      "alias":  "Karil\u0027s leatherskirt",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Karil%27s_leatherskirt",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Karil%27s%20leatherskirt.png",
+                      "imageName":  "Karil\u0027s leatherskirt.png",
+                      "imagePath":  "images/items/Karil\u0027s leatherskirt.png",
+                      "tags":  [
+                                   "range arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "karils-crossbow",
+                      "name":  "Karil\u0027s crossbow",
+                      "itemId":  4734,
+                      "alias":  "Karil\u0027s crossbow",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Karil%27s_crossbow",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Karil%27s%20crossbow.png",
+                      "imageName":  "Karil\u0027s crossbow.png",
+                      "imagePath":  "images/items/Karil\u0027s crossbow.png",
+                      "tags":  [
+                                   "range wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "toxic-blowpipe",
+                      "name":  "Toxic blowpipe",
+                      "itemId":  12926,
+                      "alias":  "Toxic blowpipe",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Toxic_blowpipe",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Toxic%20blowpipe.png",
+                      "imageName":  "Toxic blowpipe.png",
+                      "imagePath":  "images/items/Toxic blowpipe.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "range wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "armadyl-crossbow",
+                      "name":  "Armadyl crossbow",
+                      "itemId":  11785,
+                      "alias":  "Armadyl crossbow",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Armadyl_crossbow",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Armadyl%20crossbow.png",
+                      "imageName":  "Armadyl crossbow.png",
+                      "imagePath":  "images/items/Armadyl crossbow.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "range wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "occult-necklace",
+                      "name":  "Occult necklace",
+                      "itemId":  12002,
+                      "alias":  "Occult necklace",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Occult_necklace",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Occult%20necklace.png",
+                      "imageName":  "Occult necklace.png",
+                      "imagePath":  "images/items/Occult necklace.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "avas-assembler",
+                      "name":  "Ava\u0027s assembler",
+                      "itemId":  22109,
+                      "alias":  "Ava\u0027s assembler",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ava%27s_assembler",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ava%27s%20assembler.png",
+                      "imageName":  "Ava\u0027s assembler.png",
+                      "imagePath":  "images/items/Ava\u0027s assembler.png",
+                      "tags":  [
+                                   "range arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "heavy-ballista",
+                      "name":  "Heavy ballista",
+                      "itemId":  19481,
+                      "alias":  "Heavy ballista",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Heavy_ballista",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Heavy%20ballista.png",
+                      "imageName":  "Heavy ballista.png",
+                      "imagePath":  "images/items/Heavy ballista.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "range wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dharoks-helm",
+                      "name":  "Dharok\u0027s helm",
+                      "itemId":  4716,
+                      "alias":  "Dharok\u0027s helm",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dharok%27s_helm",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dharok%27s%20helm.png",
+                      "imageName":  "Dharok\u0027s helm.png",
+                      "imagePath":  "images/items/Dharok\u0027s helm.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dharoks-platebody",
+                      "name":  "Dharok\u0027s platebody",
+                      "itemId":  4720,
+                      "alias":  "Dharok\u0027s platebody",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dharok%27s_platebody",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dharok%27s%20platebody.png",
+                      "imageName":  "Dharok\u0027s platebody.png",
+                      "imagePath":  "images/items/Dharok\u0027s platebody.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dharoks-platelegs",
+                      "name":  "Dharok\u0027s platelegs",
+                      "itemId":  4722,
+                      "alias":  "Dharok\u0027s platelegs",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dharok%27s_platelegs",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dharok%27s%20platelegs.png",
+                      "imageName":  "Dharok\u0027s platelegs.png",
+                      "imagePath":  "images/items/Dharok\u0027s platelegs.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dharoks-greataxe",
+                      "name":  "Dharok\u0027s greataxe",
+                      "itemId":  4718,
+                      "alias":  "Dharok\u0027s greataxe",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dharok%27s_greataxe",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dharok%27s%20greataxe.png",
+                      "imageName":  "Dharok\u0027s greataxe.png",
+                      "imagePath":  "images/items/Dharok\u0027s greataxe.png",
+                      "tags":  [
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "serpentine-helm",
+                      "name":  "Serpentine helm",
+                      "itemId":  12931,
+                      "alias":  "Serpentine helm",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Serpentine_helm",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Serpentine%20helm.png",
+                      "imageName":  "Serpentine helm.png",
+                      "imagePath":  "images/items/Serpentine helm.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "amulet-of-torture",
+                      "name":  "Amulet of torture",
+                      "itemId":  19553,
+                      "alias":  "Amulet of torture",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Amulet_of_torture",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Amulet%20of%20torture.png",
+                      "imageName":  "Amulet of torture.png",
+                      "imagePath":  "images/items/Amulet of torture.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "necklace-of-anguish",
+                      "name":  "Necklace of anguish",
+                      "itemId":  19547,
+                      "alias":  "Necklace of anguish",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Necklace_of_anguish",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Necklace%20of%20anguish.png",
+                      "imageName":  "Necklace of anguish.png",
+                      "imagePath":  "images/items/Necklace of anguish.png",
+                      "tags":  [
+                                   "range arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "tormented-bracelet",
+                      "name":  "Tormented bracelet",
+                      "itemId":  19544,
+                      "alias":  "Tormented bracelet",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Tormented_bracelet",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Tormented%20bracelet.png",
+                      "imageName":  "Tormented bracelet.png",
+                      "imagePath":  "images/items/Tormented bracelet.png",
+                      "tags":  [
+                                   "mage arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dinhs-bulwark",
+                      "name":  "Dinh\u0027s bulwark",
+                      "itemId":  21015,
+                      "alias":  "Dinh\u0027s bulwark",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dinh%27s_bulwark",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dinh%27s%20bulwark.png",
+                      "imageName":  "Dinh\u0027s bulwark.png",
+                      "imagePath":  "images/items/Dinh\u0027s bulwark.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "dragon-claws",
+                      "name":  "Dragon claws",
+                      "itemId":  13652,
+                      "alias":  "Dragon claws",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Dragon_claws",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Dragon%20claws.png",
+                      "imageName":  "Dragon claws.png",
+                      "imagePath":  "images/items/Dragon claws.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "volatile-nightmare-staff",
+                      "name":  "Volatile nightmare staff",
+                      "itemId":  24424,
+                      "alias":  "Volatile nightmare staff",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Volatile_nightmare_staff",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Volatile%20nightmare%20staff.png",
+                      "imageName":  "Volatile nightmare staff.png",
+                      "imagePath":  "images/items/Volatile nightmare staff.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "mage wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "armadyl-godsword",
+                      "name":  "Armadyl godsword",
+                      "itemId":  11802,
+                      "alias":  "Armadyl godsword",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Armadyl_godsword",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Armadyl%20godsword.png",
+                      "imageName":  "Armadyl godsword.png",
+                      "imagePath":  "images/items/Armadyl godsword.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "elder-maul",
+                      "name":  "Elder maul",
+                      "itemId":  21003,
+                      "alias":  "Elder maul",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Elder_maul",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Elder%20maul.png",
+                      "imageName":  "Elder maul.png",
+                      "imagePath":  "images/items/Elder maul.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "ring-of-suffering",
+                      "name":  "Ring of suffering",
+                      "itemId":  19550,
+                      "alias":  "Ring of suffering",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ring_of_suffering",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ring%20of%20suffering.png",
+                      "imageName":  "Ring of suffering.png",
+                      "imagePath":  "images/items/Ring of suffering.png",
+                      "tags":  [
+                                   "generic gear",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "necklace-of-rupture",
+                      "name":  "Necklace of rupture",
+                      "itemId":  null,
+                      "alias":  "Necklace of rupture",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Necklace_of_rupture",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Necklace%20of%20rupture.png",
+                      "imageName":  "Necklace of rupture.png",
+                      "imagePath":  "images/items/Necklace of rupture.png",
+                      "tags":  [
+                                   "melee arm",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-wiki",
+                      "status":  "missing-item-id"
+                  },
+                  {
+                      "id":  "saradomins-blessed-sword",
+                      "name":  "Saradomin\u0027s blessed sword",
+                      "itemId":  12809,
+                      "alias":  "Saradomin\u0027s blessed sword",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Saradomin%27s_blessed_sword",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Saradomin%27s%20blessed%20sword.png",
+                      "imageName":  "Saradomin\u0027s blessed sword.png",
+                      "imagePath":  "images/items/Saradomin\u0027s blessed sword.png",
+                      "tags":  [
+                                   "spec wep",
+                                   "melee wep",
+                                   "talent"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "osrs-dump",
+                      "status":  "matched"
+                  },
+                  {
+                      "id":  "piety",
+                      "name":  "Piety",
+                      "itemId":  null,
+                      "alias":  "Piety",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Piety",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Piety.png",
+                      "imageName":  "Piety.png",
+                      "imagePath":  "images/Piety.png",
+                      "tags":  [
+                                   "talent",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-wiki",
+                      "status":  "non-item"
+                  },
+                  {
+                      "id":  "augury",
+                      "name":  "Augury",
+                      "itemId":  null,
+                      "alias":  "Augury",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Augury",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Augury.png",
+                      "imageName":  "Augury.png",
+                      "imagePath":  "images/Augury.png",
+                      "tags":  [
+                                   "talent",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-wiki",
+                      "status":  "non-item"
+                  },
+                  {
+                      "id":  "rigour",
+                      "name":  "Rigour",
+                      "itemId":  null,
+                      "alias":  "Rigour",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Rigour",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Rigour.png",
+                      "imageName":  "Rigour.png",
+                      "imagePath":  "images/Rigour.png",
+                      "tags":  [
+                                   "talent",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-wiki",
+                      "status":  "non-item"
                   }
               ],
     "otherImages":  [
