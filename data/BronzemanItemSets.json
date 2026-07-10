@@ -19,10 +19,10 @@
                 "talent"
             ],
             "imageUsed": "Void knight top",
-            "tier": "4",
+            "tier": "2",
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 4
+            "cost": 2
         },
         {
             "name": "Blood moon equipment",
@@ -367,10 +367,10 @@
                 "talent"
             ],
             "imageUsed": "Berserker ring (i)",
-            "tier": 4,
+            "tier": 2,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 4
+            "cost": 2
         },
         {
             "name": "God staves",
@@ -411,25 +411,6 @@
             "alwaysAvailable": false,
             "unlocked": false,
             "cost": 1
-        },
-        {
-            "name": "Barrelchest & Colossal",
-            "alias": "Barrelchest & Colossal",
-            "uid": "barrelchest-colossal",
-            "itemIds": [
-                "10887",
-                "27021"
-            ],
-            "tags": [
-                "melee wep",
-                "spec wep",
-                "talent"
-            ],
-            "imageUsed": "Barrelchest Anchor",
-            "tier": "4",
-            "alwaysAvailable": false,
-            "unlocked": false,
-            "cost": 4
         }
     ]
 }

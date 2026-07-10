@@ -89,9 +89,6 @@ const collectionFilterDefinitions = [
 
 const collectionCategoryPriority = ["spec", "range", "mage", "melee", "gear", "potions", "runes", "ammo", "food", "talent", "shop", "other"];
 const TALENT_TIER_REQUIREMENT = 10;
-const TALENT_TIER_REQUIREMENTS = {
-  2: 5
-};
 const dataWarnings = [];
 let challengeIdAliases = {};
 let repeatableIdAliases = {};
@@ -450,8 +447,7 @@ function purchasedInTier(tier) {
 function tierRequirementProgress(tier) {
   if (tier <= 1) return { required: 0, purchased: 0, unlocked: true };
   const purchased = purchasedInTier(tier - 1);
-  const required = talentTierRequirement(tier);
-  return { required, purchased, unlocked: purchased >= required };
+  return { required: TALENT_TIER_REQUIREMENT, purchased, unlocked: purchased >= TALENT_TIER_REQUIREMENT };
 }
 
 function canBuy(unlock) {
