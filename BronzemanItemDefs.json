@@ -325,7 +325,7 @@
                       "imagePath":  "images/items/Amethyst arrow.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "ammo"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -341,7 +341,7 @@
                       "imagePath":  "images/items/Dragonstone dragon bolts (e) 5.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "ammo"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -633,7 +633,7 @@
                       "imagePath":  "images/items/Blighted ancient ice sack.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "runes"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -649,7 +649,7 @@
                       "imagePath":  "images/items/Blighted vengeance sack.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "runes"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -841,7 +841,7 @@
                       "imagePath":  "images/items/Shark.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  true,
                       "unlocked":  true,
@@ -857,7 +857,7 @@
                       "imagePath":  "images/items/Anglerfish.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -873,7 +873,7 @@
                       "imagePath":  "images/items/Cooked karambwan.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -889,7 +889,7 @@
                       "imagePath":  "images/items/Pineapple pizza.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -905,7 +905,7 @@
                       "imagePath":  "images/items/Manta ray.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -921,7 +921,7 @@
                       "imagePath":  "images/items/Blighted manta ray.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -953,7 +953,7 @@
                       "imagePath":  "images/items/Blighted entangle sack.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "runes"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -969,7 +969,7 @@
                       "imagePath":  "images/items/Blighted teleport spell sack.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "runes"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -1001,7 +1001,7 @@
                       "imagePath":  "images/items/Revenant ether.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "ammo"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -1914,7 +1914,7 @@
                       "imagePath":  "images/items/Seeking dragon arrow.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "ammo"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -1950,7 +1950,7 @@
                       "imagePath":  "images/items/Halibut.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -1968,7 +1968,7 @@
                       "imagePath":  "images/items/Marlin.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "food"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -2995,7 +2995,7 @@
                       "imagePath":  "images/items/Amethyst dart.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "ammo"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -3253,7 +3253,7 @@
                       "imagePath":  "images/Zulrah\u0027s_scales_5.png",
                       "tags":  [
                                    "shop",
-                                   "consumables"
+                                   "ammo"
                                ],
                       "alwaysAvailable":  false,
                       "unlocked":  false,
@@ -3276,6 +3276,60 @@
                       "alwaysAvailable":  false,
                       "unlocked":  false,
                       "source":  "manual-shop",
+                      "status":  "non-item"
+                  },
+                  {
+                      "id":  "ancient-magicks",
+                      "name":  "Ancient Magicks",
+                      "itemId":  null,
+                      "alias":  "Ancient Magicks",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Ancient_Magicks",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Ancient_spellbook.png",
+                      "imageName":  "Ancient_spellbook.png",
+                      "imagePath":  "images/Ancient_spellbook.png",
+                      "tags":  [
+                                   "talent",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-wiki",
+                      "status":  "non-item"
+                  },
+                  {
+                      "id":  "lunar-spellbook",
+                      "name":  "Lunar Spellbook",
+                      "itemId":  null,
+                      "alias":  "Lunar Spellbook",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Lunar_Spellbook",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Lunar_spellbook.png",
+                      "imageName":  "Lunar_spellbook.png",
+                      "imagePath":  "images/Lunar_spellbook.png",
+                      "tags":  [
+                                   "talent",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-wiki",
+                      "status":  "non-item"
+                  },
+                  {
+                      "id":  "arceuus-spellbook",
+                      "name":  "Arceuus Spellbook",
+                      "itemId":  null,
+                      "alias":  "Arceuus Spellbook",
+                      "wikiLink":  "https://oldschool.runescape.wiki/w/Arceuus_Spellbook",
+                      "iconLink":  "https://oldschool.runescape.wiki/w/Special:FilePath/Arceuus_spellbook.png",
+                      "imageName":  "Arceuus_spellbook.png",
+                      "imagePath":  "images/Arceuus_spellbook.png",
+                      "tags":  [
+                                   "talent",
+                                   "other"
+                               ],
+                      "alwaysAvailable":  false,
+                      "unlocked":  false,
+                      "source":  "manual-wiki",
                       "status":  "non-item"
                   }
               ],
@@ -3345,9 +3399,10 @@
                            "generic gear",
                            "talent",
                            "shop",
-                           "consumables",
                            "potions",
                            "runes",
-                           "other"
+                           "other",
+                           "ammo",
+                           "food"
                        ]
 }

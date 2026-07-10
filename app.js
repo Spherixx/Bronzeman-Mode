@@ -556,26 +556,29 @@ const state = loadState();
 let currentUser = null;
 let saveTimer = null;
 let isApplyingRemoteState = false;
-let collectionFilter = "all";
+let collectionFilterMode = "all";
+const collectionActiveFilters = new Set();
 let collectionSearch = "";
 
 const collectionFilterDefinitions = [
-  { id: "all", label: "All" },
-  { id: "unlocked", label: "Unlocked" },
-  { id: "locked", label: "Locked" },
-  { id: "spec", label: "Spec" },
-  { id: "range", label: "Range" },
-  { id: "mage", label: "Mage" },
-  { id: "melee", label: "Melee" },
-  { id: "gear", label: "Gear" },
-  { id: "talent", label: "Talent" },
-  { id: "shop", label: "Shop" },
-  { id: "consumable", label: "Consumable" },
-  { id: "potions", label: "Potions" },
-  { id: "other", label: "Other" }
+  { id: "all", label: "All", type: "mode" },
+  { id: "unlocked", label: "Unlocked", type: "mode" },
+  { id: "locked", label: "Locked", type: "mode" },
+  { id: "spec", label: "Spec", type: "tag" },
+  { id: "range", label: "Range", type: "tag" },
+  { id: "mage", label: "Mage", type: "tag" },
+  { id: "melee", label: "Melee", type: "tag" },
+  { id: "gear", label: "Gear", type: "tag" },
+  { id: "talent", label: "Talent", type: "tag" },
+  { id: "shop", label: "Shop", type: "tag" },
+  { id: "potions", label: "Potions", type: "tag" },
+  { id: "runes", label: "Runes", type: "tag" },
+  { id: "ammo", label: "Ammo", type: "tag" },
+  { id: "food", label: "Food", type: "tag" },
+  { id: "other", label: "Other", type: "tag" }
 ];
 
-const collectionCategoryPriority = ["spec", "range", "mage", "melee", "gear", "potions", "consumable", "talent", "shop", "other"];
+const collectionCategoryPriority = ["spec", "range", "mage", "melee", "gear", "potions", "runes", "ammo", "food", "talent", "shop", "other"];
 const hiddenCollectionItemIds = new Set(["warrior-guild-token"]);
 const collectionSetDefinitions = [
   { id: "set-god-capes", name: "God Capes", itemIds: ["saradomin-cape", "guthix-cape", "zamorak-cape"] },
@@ -1313,8 +1316,11 @@ function collectionTagGroups(tags) {
     else if (tag === "generic gear") groups.add("gear");
     else if (tag === "talent") groups.add("talent");
     else if (tag === "shop") groups.add("shop");
-    else if (tag === "consumables" || tag === "runes") groups.add("consumable");
     else if (tag === "potions") groups.add("potions");
+    else if (tag === "runes") groups.add("runes");
+    else if (tag === "ammo") groups.add("ammo");
+    else if (tag === "food") groups.add("food");
+    else if (tag === "consumables") groups.add("other");
     else groups.add("other");
   });
 
@@ -1331,8 +1337,7 @@ function collectionDisplayTag(tag) {
   if (tag === "mage wep" || tag === "mage arm") return "mage";
   if (tag === "melee wep" || tag === "melee arm") return "melee";
   if (tag === "generic gear") return "generic";
-  if (tag === "consumables" || tag === "runes") return "consumable";
-  if (tag === "potions") return "potions";
+  if (tag === "consumables") return "other";
   return tag;
 }
 
@@ -1467,10 +1472,12 @@ function collectionStatusLabel(item) {
 
 function collectionMatchesFilter(item) {
   const unlocked = collectionIsUnlocked(item);
-  if (collectionFilter === "unlocked") return unlocked;
-  if (collectionFilter === "locked") return !unlocked;
-  if (collectionFilter === "all") return true;
-  return collectionTagGroups(item.tags ?? []).includes(collectionFilter);
+  if (collectionFilterMode === "unlocked") return unlocked;
+  if (collectionFilterMode === "locked") return !unlocked;
+  if (collectionFilterMode === "all" || !collectionActiveFilters.size) return true;
+
+  const groups = collectionTagGroups(item.tags ?? []);
+  return groups.some((group) => collectionActiveFilters.has(group));
 }
 
 function visibleCollectionItems() {
@@ -1532,13 +1539,28 @@ function refreshCollectionFilterButtons() {
   const target = document.getElementById("collectionFilters");
   if (!target) return;
 
-  target.innerHTML = collectionFilterOptions().map((filter) => `
-    <button type="button" data-collection-filter="${filter.id}" class="${filter.id === collectionFilter ? "active" : ""}" aria-pressed="${filter.id === collectionFilter}">${filter.label}</button>
-  `).join("");
+  target.innerHTML = collectionFilterOptions().map((filter) => {
+    const active = filter.type === "mode" ? filter.id === collectionFilterMode : collectionActiveFilters.has(filter.id);
+    return `
+    <button type="button" data-collection-filter="${filter.id}" class="${active ? "active" : ""}" aria-pressed="${active}">${filter.label}</button>
+  `;
+  }).join("");
 
   target.querySelectorAll("button").forEach((button) => {
     button.addEventListener("click", () => {
-      collectionFilter = button.dataset.collectionFilter;
+      const filter = collectionFilterDefinitions.find((definition) => definition.id === button.dataset.collectionFilter);
+      if (!filter) return;
+
+      if (filter.type === "mode") {
+        collectionFilterMode = filter.id;
+        collectionActiveFilters.clear();
+      } else {
+        collectionFilterMode = "custom";
+        if (collectionActiveFilters.has(filter.id)) collectionActiveFilters.delete(filter.id);
+        else collectionActiveFilters.add(filter.id);
+        if (!collectionActiveFilters.size) collectionFilterMode = "all";
+      }
+
       refreshCollectionFilterButtons();
       renderUnlocks();
     });
