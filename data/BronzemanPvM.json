@@ -1,0 +1,511 @@
+{
+    "schemaVersion": 2,
+    "pvmStages": [
+        {
+            "stage": "Early",
+            "killRequirement": 25,
+            "tasks": [
+                {
+                    "uid": "obtain-looting-bag",
+                    "alias": "Obtain a looting bag.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "mage-arena-god-cape",
+                    "alias": "Get a god cape from Mage Arena.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "charged-bracelet-of-ethereum",
+                    "alias": "Obtain and charge a bracelet of ethereum.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "wilderness-slayer-larrans-key",
+                    "alias": "Obtain a Larran's key from Wilderness Slayer.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "wilderness-slayer-task-one-trip",
+                    "alias": "Complete a Wilderness Slayer task in one trip.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "complete-25-wilderness-slayer-tasks",
+                    "alias": "Complete 25 Wilderness Slayer tasks.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "rogues-castle-chest",
+                    "alias": "Thieve from Rogue's Castle chest.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "100-wilderness-laps-one-trip",
+                    "alias": "Complete 100 Wilderness laps in one trip.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "zombie-pirates-dragon-longsword",
+                    "alias": "Get a dragon longsword from Zombie Pirates.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "crazy-archaeologist-rune-crossbow",
+                    "alias": "Get a rune crossbow from Crazy Archaeologist.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "defeat-crazy-archaeologist-chaos-fanatic-scorpia",
+                    "alias": "Defeat Crazy Archaeologist, Chaos Fanatic, and Scorpia.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "defeat-chaos-elemental",
+                    "alias": "Defeat Chaos Elemental.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "wilderness-boss-while-skulled",
+                    "alias": "Defeat a Wilderness boss while skulled.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "repeat-25-kc-minor-wilderness-boss",
+                    "alias": "25 KC at any minor Wilderness boss.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "5"
+                },
+                {
+                    "uid": "repeat-25-kc-singles-plus-wilderness-boss",
+                    "alias": "25 KC at any singles-plus Wilderness boss.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "5"
+                },
+                {
+                    "uid": "repeat-10-wilderness-slayer-tasks",
+                    "alias": "Complete 10 Wilderness Slayer tasks.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "5"
+                },
+                {
+                    "uid": "repeat-50-revenants-while-skulled",
+                    "alias": "Kill 50 Revenants while skulled.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "5"
+                }
+            ]
+        },
+        {
+            "stage": "Mid",
+            "killRequirement": 50,
+            "tasks": [
+                {
+                    "uid": "fire-cape-challenge-gear",
+                    "alias": "Get Fire Cape with challenge gear.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "mage-arena-2-cape-challenge-gear",
+                    "alias": "Get Mage Arena 2 cape with challenge gear.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "wilderness-hard-diaries",
+                    "alias": "Complete Wilderness Hard Diaries.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "complete-50-duo-wilderness-slayer-tasks",
+                    "alias": "Complete 50 duo Wilderness Slayer tasks.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "open-25-larrans-big-chests",
+                    "alias": "Open 25 Larran's big chests.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "defeat-artio-calvarion-spindel",
+                    "alias": "Defeat Artio, Calvar'ion, and Spindel.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "obtain-one-voidwaker-piece",
+                    "alias": "Obtain one Voidwaker piece.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "multi-boss-with-challenge-gear",
+                    "alias": "Defeat Callisto, Vet'ion, or Venenatis with challenge gear.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "10-wilderness-boss-kills-skulled",
+                    "alias": "Complete 10 Wilderness boss kills while skulled.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "singles-plus-bosses-one-trip",
+                    "alias": "Defeat Artio, Calvar'ion, and Spindel in one trip.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "dragon-pickaxe-drop",
+                    "alias": "Get a dragon pickaxe drop.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "wilderness-boss-ring-drop",
+                    "alias": "Obtain a Wilderness boss ring as a drop.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "complete-one-wilderness-ward",
+                    "alias": "Complete an odium ward or malediction ward.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "ring-of-wealth-scroll-wilderness-content",
+                    "alias": "Get a ring of wealth scroll from Wilderness content.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "any-revenant-unique-drop",
+                    "alias": "Obtain any revenant unique drop.",
+                    "difficulty": "1",
+                    "points": "1",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "revenant-amulet-of-avarice",
+                    "alias": "Obtain an amulet of avarice from a revenant.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "revenant-ancient-crystal",
+                    "alias": "Obtain an ancient crystal from a revenant.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "repeat-50-kc-singles-plus-wilderness-boss",
+                    "alias": "50 KC at any singles-plus Wilderness boss.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "10"
+                },
+                {
+                    "uid": "repeat-25-kc-multi-combat-wilderness-boss",
+                    "alias": "25 KC at any multi-combat Wilderness boss.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "10"
+                },
+                {
+                    "uid": "repeat-10-kc-three-wilderness-bosses",
+                    "alias": "10 KC at three different Wilderness bosses.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "10"
+                },
+                {
+                    "uid": "repeat-50-kc-chaos-elemental",
+                    "alias": "50 KC at Chaos Elemental.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "10"
+                },
+                {
+                    "uid": "repeat-25-wilderness-slayer-tasks",
+                    "alias": "Complete 25 Wilderness Slayer tasks.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "10"
+                },
+                {
+                    "uid": "repeat-100-revenants-while-skulled",
+                    "alias": "Kill 100 Revenants while skulled.",
+                    "difficulty": "2",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "10"
+                }
+            ]
+        },
+        {
+            "stage": "Late",
+            "killRequirement": 100,
+            "tasks": [
+                {
+                    "uid": "wilderness-elite-diaries",
+                    "alias": "Complete Wilderness Elite Diaries.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "complete-250-wilderness-slayer-tasks",
+                    "alias": "Complete 250 Wilderness Slayer tasks.",
+                    "difficulty": "3",
+                    "points": "5",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "every-wilderness-boss-while-skulled",
+                    "alias": "Defeat every Wilderness boss while skulled.",
+                    "difficulty": "3",
+                    "points": "4",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "multi-combat-bosses-one-trip",
+                    "alias": "Defeat Callisto, Vet'ion, and Venenatis in one trip.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "25-wilderness-boss-kills-one-trip",
+                    "alias": "Complete 25 Wilderness boss kills in one trip.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "complete-voidwaker",
+                    "alias": "Complete a Voidwaker.",
+                    "difficulty": "3",
+                    "points": "4",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "all-three-wilderness-boss-rings",
+                    "alias": "Obtain all three Wilderness boss rings.",
+                    "difficulty": "3",
+                    "points": "4",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "complete-both-wilderness-wards",
+                    "alias": "Complete both an odium ward and a malediction ward.",
+                    "difficulty": "3",
+                    "points": "4",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "wilderness-weapon-upgrade-attachment",
+                    "alias": "Obtain a Wilderness weapon upgrade attachment.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "revenant-weapon-pvm-drop",
+                    "alias": "Obtain a revenant weapon as a PvM drop.",
+                    "difficulty": "3",
+                    "points": "4",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "full-revenant-ether-stack",
+                    "alias": "Build a full revenant ether stack.",
+                    "difficulty": "2",
+                    "points": "2",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "open-100-larrans-big-chests",
+                    "alias": "Open 100 Larran's big chests.",
+                    "difficulty": "3",
+                    "points": "3",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "full-dagonhai-set",
+                    "alias": "Get a full Dagon'hai set from Larran's keys.",
+                    "difficulty": "3",
+                    "points": "5",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "greenlog-wilderness-boss",
+                    "alias": "Greenlog a Wilderness boss.",
+                    "difficulty": "3",
+                    "points": "4",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "wilderness-pet",
+                    "alias": "Get a Wilderness pet.",
+                    "difficulty": "3",
+                    "points": "5",
+                    "repeatable": false,
+                    "cost": null
+                },
+                {
+                    "uid": "repeat-50-kc-each-singles-plus-wilderness-boss",
+                    "alias": "50 KC at each singles-plus Wilderness boss.",
+                    "difficulty": "3",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "15"
+                },
+                {
+                    "uid": "repeat-25-kc-each-multi-combat-wilderness-boss",
+                    "alias": "25 KC at each multi-combat Wilderness boss.",
+                    "difficulty": "3",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "20"
+                },
+                {
+                    "uid": "repeat-100-kc-across-five-wilderness-bosses",
+                    "alias": "Gain 100 KC across five different Wilderness bosses.",
+                    "difficulty": "3",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "15"
+                },
+                {
+                    "uid": "repeat-100-kc-chaos-elemental",
+                    "alias": "100 KC at Chaos Elemental.",
+                    "difficulty": "3",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "15"
+                },
+                {
+                    "uid": "repeat-50-wilderness-slayer-tasks",
+                    "alias": "Complete 50 Wilderness Slayer tasks.",
+                    "difficulty": "3",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "15"
+                },
+                {
+                    "uid": "repeat-250-revenants-while-skulled",
+                    "alias": "Kill 250 Revenants while skulled.",
+                    "difficulty": "3",
+                    "points": "1",
+                    "repeatable": true,
+                    "cost": "15"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+BronzemanItems		Complete Individual item list
+BrzonemanUnlocks	Unlocks that aren't items like prayers, areas, spellbooks
+BronzemanItemSets	Anything that unlocks multiple items per unlock
+BronzemanTalents	Anything that exists as a talent
+BronzemanPvPTasks	PvP tasks
+BronzemanPvMTasks	PvM tasks

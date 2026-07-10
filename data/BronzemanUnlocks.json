@@ -1,0 +1,231 @@
+{
+    "schemaVersion": 2,
+    "unlocks": [
+        {
+            "name": "Standard spellbook",
+            "alias": "Standard spellbook",
+            "uid": "standard-spellbook",
+            "tags": [
+                "spellbook",
+                "talent"
+            ],
+            "imageUsed": "Standard spellbook",
+            "tier": "0",
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Arceuus spellbook",
+            "alias": "Arceuus spellbook",
+            "uid": "arceuus-spellbook",
+            "tags": [
+                "spellbook",
+                "talent"
+            ],
+            "imageUsed": "Arceuus spellbook",
+            "tier": "0",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Ancient spellbook",
+            "alias": "Ancient spellbook",
+            "uid": "ancient-spellbook",
+            "tags": [
+                "spellbook",
+                "talent"
+            ],
+            "imageUsed": "Ancient spellbook",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Lunar spellbook",
+            "alias": "Lunar spellbook",
+            "uid": "lunar-spellbook",
+            "tags": [
+                "spellbook",
+                "talent"
+            ],
+            "imageUsed": "Lunar spellbook",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Chivalry",
+            "alias": "Chivalry",
+            "uid": "chivalry",
+            "tags": [
+                "prayer",
+                "talent"
+            ],
+            "imageUsed": "Chivalry",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Piety",
+            "alias": "Piety",
+            "uid": "piety",
+            "tags": [
+                "prayer",
+                "talent"
+            ],
+            "imageUsed": "Piety",
+            "tier": "4",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Rigour",
+            "alias": "Rigour",
+            "uid": "rigour",
+            "tags": [
+                "prayer",
+                "talent"
+            ],
+            "imageUsed": "Rigour",
+            "tier": "5",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Augury",
+            "alias": "Augury",
+            "uid": "augury",
+            "tags": [
+                "prayer",
+                "talent"
+            ],
+            "imageUsed": "Augury",
+            "tier": "4",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Deadeye",
+            "alias": "Deadeye",
+            "uid": "deadeye",
+            "tags": [
+                "prayer",
+                "talent"
+            ],
+            "imageUsed": "Deadeye",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Mystic Vigour",
+            "alias": "Mystic Vigour",
+            "uid": "mystic-vigour",
+            "tags": [
+                "prayer",
+                "talent"
+            ],
+            "imageUsed": "Mystic Vigour",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Steel Skin",
+            "alias": "Steel Skin",
+            "uid": "steel-skin",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Steel Skin",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Incredible Reflexes",
+            "alias": "Incredible Reflexes",
+            "uid": "incredible-reflexes",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Incredible Reflexes",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Ultimate Strength",
+            "alias": "Ultimate Strength",
+            "uid": "ultimate-strength",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Ultimate Strength",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Eagle Eye",
+            "alias": "Eagle Eye",
+            "uid": "eagle-eye",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Eagle Eye",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Mystic Might",
+            "alias": "Mystic Might",
+            "uid": "mystic-might",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Mystic Might",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Protect from Magic",
+            "alias": "Protect from Magic",
+            "uid": "protect-from-magic",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Protect from Magic",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Protect from Missiles",
+            "alias": "Protect from Missiles",
+            "uid": "protect-from-missiles",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Protect from Missiles",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        },
+        {
+            "name": "Protect from Melee",
+            "alias": "Protect from Melee",
+            "uid": "protect-from-melee",
+            "tags": [
+                "prayer"
+            ],
+            "imageUsed": "Protect from Melee",
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true
+        }
+    ]
+}

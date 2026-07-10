@@ -1,0 +1,376 @@
+{
+    "schemaVersion": 2,
+    "itemSets": [
+        {
+            "name": "Void knight equipment",
+            "alias": "Void gear",
+            "uid": "void-knight-equipment",
+            "itemIds": [
+                "8839",
+                "8840",
+                "8841",
+                "8842",
+                "11663",
+                "11664",
+                "11665"
+            ],
+            "tags": [
+                "generic gear",
+                "talent"
+            ],
+            "imageUsed": "Void knight top",
+            "tier": "2",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Blood moon equipment",
+            "alias": "Blood moon set",
+            "uid": "blood-moon-equipment",
+            "itemIds": [
+                "29028",
+                "29022",
+                "29025",
+                "28997"
+            ],
+            "tags": [
+                "melee arm",
+                "melee wep"
+            ],
+            "imageUsed": "Blood moon chestplate",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Blue moon equipment",
+            "alias": "Blue moon set",
+            "uid": "blue-moon-equipment",
+            "itemIds": [
+                "29019",
+                "29013",
+                "29016",
+                "28988"
+            ],
+            "tags": [
+                "mage arm",
+                "mage wep"
+            ],
+            "imageUsed": "Blue moon chestplate",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Eclipse moon equipment",
+            "alias": "Eclipse moon set",
+            "uid": "eclipse-moon-equipment",
+            "itemIds": [
+                "29010",
+                "29004",
+                "29007",
+                "29000"
+            ],
+            "tags": [
+                "range arm",
+                "range wep"
+            ],
+            "imageUsed": "Eclipse moon chestplate",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Ahrim's equipment",
+            "alias": "Ahrim's set",
+            "uid": "ahrims-equipment",
+            "itemIds": [
+                "4708",
+                "4712",
+                "4714",
+                "4710"
+            ],
+            "tags": [
+                "mage arm",
+                "mage wep",
+                "talent"
+            ],
+            "imageUsed": "Ahrim's hood",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Dharok's equipment",
+            "alias": "Dharok's set",
+            "uid": "dharoks-equipment",
+            "itemIds": [
+                "4716",
+                "4720",
+                "4722",
+                "4718"
+            ],
+            "tags": [
+                "melee arm",
+                "melee wep",
+                "talent"
+            ],
+            "imageUsed": "Dharok's helm",
+            "tier": "4",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Guthan's equipment",
+            "alias": "Guthan's set",
+            "uid": "guthans-equipment",
+            "itemIds": [
+                "4724",
+                "4728",
+                "4730",
+                "4726"
+            ],
+            "tags": [
+                "melee arm",
+                "melee wep"
+            ],
+            "imageUsed": "Guthan's helm",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Karil's equipment",
+            "alias": "Karil's set",
+            "uid": "karils-equipment",
+            "itemIds": [
+                "4732",
+                "4736",
+                "4738",
+                "4734"
+            ],
+            "tags": [
+                "range arm",
+                "range wep",
+                "talent"
+            ],
+            "imageUsed": "Karil's coif",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Torag's equipment",
+            "alias": "Torag's set",
+            "uid": "torags-equipment",
+            "itemIds": [
+                "4745",
+                "4749",
+                "4751",
+                "4747"
+            ],
+            "tags": [
+                "melee arm",
+                "melee wep"
+            ],
+            "imageUsed": "Torag's helm",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Verac's equipment",
+            "alias": "Verac's set",
+            "uid": "veracs-equipment",
+            "itemIds": [
+                "4753",
+                "4757",
+                "4759",
+                "4755"
+            ],
+            "tags": [
+                "melee arm",
+                "melee wep",
+                "talent"
+            ],
+            "imageUsed": "Verac's helm",
+            "tier": "2",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "God books",
+            "alias": "God books",
+            "uid": "god-books",
+            "itemIds": [
+                "3840",
+                "3842",
+                "3844",
+                "12608",
+                "12610",
+                "12612"
+            ],
+            "tags": [
+                "generic gear",
+                "talent"
+            ],
+            "imageUsed": "Holy book",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "God capes",
+            "alias": "Mage Arena capes",
+            "uid": "god-capes",
+            "itemIds": [
+                "2412",
+                "2413",
+                "2414"
+            ],
+            "tags": [
+                "mage arm",
+                "talent"
+            ],
+            "imageUsed": "Saradomin cape",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Imbued god capes",
+            "alias": "Mage Arena II capes",
+            "uid": "imbued-god-capes",
+            "itemIds": [
+                "21791",
+                "21793",
+                "21795"
+            ],
+            "tags": [
+                "mage arm",
+                "talent"
+            ],
+            "imageUsed": "Imbued saradomin cape",
+            "tier": "3",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Dark bow and seeking dragon arrows",
+            "alias": "Dark bow bundle",
+            "uid": "dark-bow-seeking-dragon-arrows",
+            "itemIds": [
+                "11235",
+                "33595"
+            ],
+            "tags": [
+                "spec wep",
+                "range wep",
+                "talent"
+            ],
+            "imageUsed": "Dark bow",
+            "tier": "4",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Granite maul and ornate handle",
+            "alias": "Ornate granite maul",
+            "uid": "granite-maul-ornate-handle",
+            "itemIds": [
+                "4153",
+                "24229"
+            ],
+            "tags": [
+                "spec wep",
+                "melee wep",
+                "talent"
+            ],
+            "imageUsed": "Granite maul",
+            "tier": "4",
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Obsidian weapons and berserker necklace",
+            "alias": "Obby weapons",
+            "uid": "obsidian-weapons-berserker-necklace",
+            "itemIds": [
+                "6525",
+                "6523",
+                "6527",
+                "6528",
+                "6522",
+                "6526",
+                "11128"
+            ],
+            "tags": [
+                "melee wep",
+                "range wep",
+                "mage wep",
+                "generic gear",
+                "talent"
+            ],
+            "imageUsed": "Tzhaar-ket-om",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Dagannoth rings",
+            "alias": "DKS rings",
+            "uid": "dagannoth-rings",
+            "itemIds": [
+                "6737",
+                "6733",
+                "6735",
+                "6731"
+            ],
+            "tags": [
+                "generic gear",
+                "talent"
+            ],
+            "imageUsed": "Berserker ring",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "Imbued Dagannoth rings",
+            "alias": "Imbued DKS rings",
+            "uid": "imbued-dagannoth-rings",
+            "itemIds": [
+                "11773",
+                "11771",
+                "11772",
+                "11770"
+            ],
+            "tags": [
+                "generic gear",
+                "talent"
+            ],
+            "imageUsed": "Berserker ring (i)",
+            "tier": null,
+            "alwaysAvailable": false,
+            "unlocked": false
+        },
+        {
+            "name": "God staves",
+            "alias": "Mage Arena staves",
+            "uid": "god-staves",
+            "itemIds": [
+                "2415",
+                "2416",
+                "2417"
+            ],
+            "tags": [
+                "mage wep",
+                "talent"
+            ],
+            "imageUsed": "Saradomin staff",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false
+        }
+    ]
+}
