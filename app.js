@@ -17,6 +17,7 @@ const db = getFirestore(firebaseApp);
 const googleProvider = new GoogleAuthProvider();
 googleProvider.setCustomParameters({ prompt: "select_account" });
 const STORAGE_KEY = "bronzeman-point-challenges-v2";
+const ITEM_DEFS_URL = "BronzemanItemDefs.json";
 
 function localImage(folder, fileName) {
   return `${folder}/${encodeURIComponent(fileName)}`;
@@ -260,12 +261,13 @@ const challenges = {
 
 
 const unlocks = [
-  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.zamorakCape] },
-  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.zamorakStaff] },
+  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["saradomin-cape", "guthix-cape", "zamorak-cape"], images: [itemImages.zamorakCape] },
+  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["saradomin-staff", "guthix-staff", "zamorak-staff"], images: [itemImages.zamorakStaff] },
   { id: "glory", name: "Amulet of Glory", cost: 1, tier: 1, collectionCategory: "Range Gear", requires: [], images: [itemImages.amuletGlory] },
   { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, collectionCategory: "Range Weapons", requires: [], images: [itemImages.rcb] },
   { id: "sunlight-hunters-crossbow", name: "Sunlight Hunter's Crossbow", cost: 2, tier: 2, collectionCategory: "Range Weapons", requires: [], images: [itemImages.sunlightHuntersCrossbow] },
   { id: "tome-water", name: "Tome of Water", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.tomeWater] },
+  { id: "god-books", name: "God Books", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["holy-book", "unholy-book", "book-of-balance", "book-of-war", "book-of-law", "book-of-darkness"], images: [itemImages.unholyBook] },
   { id: "dds", name: "DDS", cost: 1, tier: 1, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dds] },
   { id: "rune-gloves", name: "Rune Gloves", cost: 1, tier: 1, collectionCategory: "Melee Gear", requires: [], images: [itemImages.runeGloves] },
   { id: "extended-stamina-potions", name: "Extended Stam Pots", cost: 1, tier: 1, collectionCategory: "Potions", requires: [], images: [itemImages.extendedStamina] },
@@ -288,7 +290,7 @@ const unlocks = [
 
   { id: "seed-pod", name: "Seed Pod", cost: 3, tier: 3, collectionCategory: "Teleports", requires: [], images: [itemImages.seedPod] },
   { id: "firecape", name: "Fire Cape", cost: 3, tier: 3, collectionCategory: "Melee Gear", requires: [], images: [itemImages.fireCape] },
-  { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, collectionCategory: "Mage Gear", requires: [], images: [itemImages.ma2Cape] },
+  { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, collectionCategory: "Mage Gear", requires: [], collectionIds: ["imbued-saradomin-cape", "imbued-guthix-cape", "imbued-zamorak-cape"], images: [itemImages.ma2Cape] },
   { id: "surge-potions", name: "Surge Potions", cost: 4, tier: 4, collectionCategory: "Potions", requires: [], images: [itemImages.surgePotion] },
   { id: "dragon-spear", name: "Dragon Spear", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonSpear] },
   { id: "dragon-knives", name: "Dragon Knives", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonKnife] },
@@ -339,7 +341,7 @@ const shopItems = [
   { id: "super-combats", category: "Potions", name: "Super combats", cost: 1, items: [{ image: itemImages.superCombat, amount: "5" }] },
   { id: "antivenom", category: "Potions", name: "Antivenom", cost: 1, items: [{ image: itemImages.antivenom, amount: "2" }] },
   { id: "trouver", category: "Other", name: "Trouver Parchment", cost: 2, items: [{ image: itemImages.trouver }] },
-  { id: "god-books", category: "Other", name: "God books", cost: 1, collection: true, items: [{ image: itemImages.unholyBook }] },
+  { id: "god-book-reclaim", category: "Other", name: "God book reclaim", cost: 1, items: [{ image: itemImages.unholyBook }] },
   { id: "god-cape-reclaim", category: "Other", name: "God cape reclaim", cost: 1, items: [{ image: itemImages.zamorakCape }] },
   { id: "god-staff-reclaim", category: "Other", name: "God staff reclaim", cost: 1, items: [{ image: itemImages.zamorakStaff }] },
   { id: "rune-gloves-reclaim", category: "Other", name: "Rune gloves reclaim", cost: 1, items: [{ image: itemImages.runeGloves }] },
@@ -355,119 +357,41 @@ const shopIdAliases = {
   "tb-runes": "tb-sacks",
   "veng-runes": "veng-sacks"
 };
-const basicUnlockGroups = [
-  {
-    category: "Runes",
-    source: "Loot unlock",
-    sourceType: "loot",
-    items: [
-      { id: "rune-air", name: "Air Rune", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.air], tags: ["rune", "consumable", "always"] },
-      { id: "rune-water", name: "Water Rune", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.water], tags: ["rune", "consumable", "always"] },
-      { id: "rune-earth", name: "Earth Rune", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.earth], tags: ["rune", "consumable", "always"] },
-      { id: "rune-fire", name: "Fire Rune", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.fire], tags: ["rune", "consumable", "always"] },
-      { id: "rune-body", name: "Body Rune", images: [itemImages.body], tags: ["rune", "consumable", "loot"] },
-      { id: "rune-mind", name: "Mind Rune", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.mind], tags: ["rune", "consumable", "always"] },
-      { id: "rune-chaos", name: "Chaos Rune", images: [itemImages.chaos], tags: ["rune", "consumable", "loot"] },
-      { id: "rune-death", name: "Death Rune", images: [itemImages.death], tags: ["rune", "consumable", "loot"] },
-      { id: "rune-blood", name: "Blood Rune", images: [itemImages.blood], tags: ["rune", "consumable", "loot"] },
-      { id: "rune-soul", name: "Soul Rune", images: [itemImages.soul], tags: ["rune", "consumable", "loot"] },
-      { id: "rune-nature", name: "Nature Rune", images: [itemImages.nature], tags: ["rune", "consumable", "loot"] },
-      { id: "rune-law", name: "Law Rune", images: [itemImages.law], tags: ["rune", "consumable", "loot"] },
-      { id: "rune-astral", name: "Astral Rune", images: [itemImages.astral], tags: ["rune", "consumable", "loot"] }
-    ]
-  },
-  {
-    category: "Food",
-    source: "Loot unlock",
-    sourceType: "loot",
-    items: [
-      { id: "basic-sharks", name: "Sharks", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.shark], tags: ["food", "consumable", "always"] },
-      { id: "basic-karambwan", name: "Karambwan", images: [itemImages.karambwan], tags: ["food", "consumable", "loot"] },
-      { id: "basic-anglerfish", name: "Anglerfish", images: [itemImages.angler], tags: ["food", "consumable", "loot"] },
-      { id: "basic-manta-ray", name: "Manta Ray", images: [itemImages.manta], tags: ["food", "consumable", "loot"] }
-    ]
-  },
-  {
-    category: "Potions",
-    source: "Loot unlock",
-    sourceType: "loot",
-    items: [
-      { id: "basic-prayer-potion", name: "Prayer Potion", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.prayer], tags: ["potion", "consumable", "always"] },
-      { id: "basic-stamina-potion", name: "Stamina Potion", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.stamina], tags: ["potion", "consumable", "always"] },
-      { id: "basic-blighted-restore", name: "Blighted Restore", images: [itemImages.blightedRestore], tags: ["potion", "consumable", "loot"] }
-    ]
-  },
-  {
-    category: "Range Weapons",
-    source: "PK loot",
-    sourceType: "loot",
-    items: [
-      { id: "basic-rcb", name: "Rune Crossbow", images: [itemImages.rcb], tags: ["loot"] }
-    ]
-  },
-  {
-    category: "Spec Weapons",
-    source: "PK loot",
-    sourceType: "loot",
-    items: [
-      { id: "basic-msb", name: "Magic Shortbow", images: [itemImages.msb], tags: ["loot"] },
-      { id: "basic-dragon-scimitar", name: "Dragon Scimitar", images: [itemImages.dragonScimitar], tags: ["loot"] },
-      { id: "basic-dds", name: "DDS", images: [itemImages.dds], tags: ["loot"] },
-      { id: "basic-gmaul", name: "Granite Maul", images: [itemImages.gmaul], tags: ["loot"] }
-    ]
-  },
-  {
-    category: "Range Gear",
-    source: "PK loot",
-    sourceType: "loot",
-    items: [
-      { id: "basic-black-dhide", name: "Black d'hide", images: [itemImages.blackDhideBody], tags: ["loot"] },
-      { id: "basic-glory", name: "Amulet of Glory", images: [itemImages.amuletGlory], tags: ["loot"] },
-      { id: "basic-climbing-boots", name: "Climbing Boots", images: [itemImages.climbingBoots], tags: ["loot"] }
-    ]
-  },
-  {
-    category: "Mage Gear",
-    source: "PK loot",
-    sourceType: "loot",
-    items: [
-      { id: "basic-xerician", name: "Xerician Set", images: [itemImages.xericianTop], tags: ["loot"] },
-      { id: "basic-mystic", name: "Mystic Set", images: [itemImages.mysticRobeTopLight], tags: ["loot"] }
-    ]
-  },
-  {
-    category: "Melee Gear",
-    source: "PK loot",
-    sourceType: "loot",
-    items: [
-      { id: "basic-fremmy-helms", name: "Fremmy Helms", images: [itemImages.berserkerHelm], tags: ["loot"] },
-      { id: "basic-neitz", name: "Neitiznot Helm", images: [itemImages.helmNeitiznot], tags: ["loot"] }
-    ]
-  }
-];
+let itemDefinitions = [];
 const state = loadState();
 let currentUser = null;
 let saveTimer = null;
 let isApplyingRemoteState = false;
 let collectionFilter = "all";
-let collectionSort = "name";
 let collectionSearch = "";
-let itemSearchIndex = [];
-let itemSearchIndexLoaded = false;
 
-const collectionFilterOptions = [
+const collectionFilterDefinitions = [
   { id: "all", label: "All" },
   { id: "unlocked", label: "Unlocked" },
   { id: "locked", label: "Locked" },
-  { id: "loot", label: "Loot" },
+  { id: "spec", label: "Spec" },
+  { id: "range", label: "Range" },
+  { id: "mage", label: "Mage" },
+  { id: "melee", label: "Melee" },
+  { id: "gear", label: "Gear" },
   { id: "talent", label: "Talent" },
   { id: "shop", label: "Shop" },
-  { id: "always", label: "Always Available" },
-  { id: "consumables", label: "Consumables" }
+  { id: "consumable", label: "Consumable" },
+  { id: "potions", label: "Potions" },
+  { id: "other", label: "Other" }
 ];
 
-function flattenBasicUnlocks() {
-  return basicUnlockGroups.flatMap((group) => group.items);
+const collectionCategoryPriority = ["spec", "range", "mage", "melee", "gear", "potions", "consumable", "talent", "shop", "other"];
+const hiddenCollectionItemIds = new Set(["warrior-guild-token"]);
+const collectionSetDefinitions = [
+  { id: "set-god-capes", name: "God Capes", itemIds: ["saradomin-cape", "guthix-cape", "zamorak-cape"] },
+  { id: "set-imbued-god-capes", name: "Imbued God Capes", itemIds: ["imbued-saradomin-cape", "imbued-guthix-cape", "imbued-zamorak-cape"] },
+  { id: "set-god-books", name: "God Books", itemIds: ["holy-book", "unholy-book", "book-of-balance", "book-of-war", "book-of-law", "book-of-darkness"] },
+  { id: "set-obsidian-weapons", name: "Obsidian Weapons", itemIds: ["toktz-xil-ek", "toktz-xil-ak", "tzhaar-ket-em", "tzhaar-ket-om", "toktz-xil-ul", "toktz-mej-tal"] }
+];
+
+function collectionFilterOptions() {
+  return collectionFilterDefinitions;
 }
 
 function mergeCountMaps(first, second) {
@@ -484,7 +408,6 @@ function defaultState() {
 
 function sanitizeState(rawState) {
   const validUnlocks = new Set(unlocks.map((unlock) => unlock.id));
-  const validBasicUnlocks = new Set(flattenBasicUnlocks().map((item) => item.id));
   const validShopItems = new Set(shopItems.map((item) => item.id));
   const validChallenges = new Set([...flattenPvmChallenges(), ...flattenPvpChallenges()].map((challenge) => challenge.id));
   const repeatables = flattenRepeatables();
@@ -518,12 +441,9 @@ function sanitizeState(rawState) {
   }
 
   const basicUnlocks = Array.isArray(rawState?.basicUnlocks)
-    ? [...new Set(rawState.basicUnlocks)].filter((id) => validBasicUnlocks.has(id) || id.startsWith("manual-item-"))
+    ? [...new Set(rawState.basicUnlocks)].filter((id) => typeof id === "string" && id.length)
     : [];
 
-  if ((rawState?.shopPurchases?.["stamina-pots"] ?? 0) > 0 && !basicUnlocks.includes("basic-stamina-potion")) {
-    basicUnlocks.push("basic-stamina-potion");
-  }
 
   return {
     completed: Array.isArray(rawState?.completed)
@@ -1147,177 +1067,206 @@ function normalizeCollectionText(value) {
   return String(value ?? "").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
 }
 
-function sourceTypeFromSource(source) {
-  const normalized = normalizeCollectionText(source);
-  if (normalized.includes("always")) return "always";
-  if (normalized.includes("talent")) return "talent";
-  if (normalized.includes("shop")) return "shop";
-  return "loot";
+function normalizeAssetPath(value) {
+  try {
+    return decodeURIComponent(String(value ?? "")).replace(/\\/g, "/").toLowerCase();
+  } catch {
+    return String(value ?? "").replace(/\\/g, "/").toLowerCase();
+  }
+}
+
+function titleCase(value) {
+  return String(value ?? "")
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
+    .join(" ");
 }
 
 function uniqueTags(tags) {
-  return [...new Set(tags.filter(Boolean))];
+  return [...new Set((tags ?? []).map((tag) => String(tag).trim()).filter(Boolean))];
 }
 
-function inferItemTags(name, category = "") {
-  const lower = `${name} ${category}`.toLowerCase();
-  const tags = [];
-  if (lower.includes("rune")) tags.push("rune", "consumable");
-  if (lower.includes("potion") || lower.includes("brew") || lower.includes("restore") || lower.includes("anti-venom")) tags.push("potion", "consumable");
-  if (["shark", "angler", "karambwan", "manta", "halibut", "marlin", "pizza"].some((food) => lower.includes(food))) tags.push("food", "consumable");
-  if (["sack", "arrow", "bolt", "knife", "thrownaxe", "ether"].some((ammo) => lower.includes(ammo))) tags.push("ammo", "consumable");
-  if (lower.includes("spellbook") || lower.includes("magicks")) tags.push("spellbook");
-  return uniqueTags(tags);
+function itemDisplayName(item) {
+  return item.alias || item.name || "Item";
 }
 
-function inferCollectionCategory(name, fallback = "Loot") {
-  const lower = name.toLowerCase();
-  if (lower.includes("spellbook") || lower.includes("magicks")) return "General";
-  if (lower.includes("rune") || lower.includes("sack") || lower.includes("arrow") || lower.includes("bolt") || lower.includes("ether")) return "Runes / Ammo";
-  if (lower.includes("potion") || lower.includes("brew") || lower.includes("restore") || lower.includes("anti-venom")) return "Potions";
-  if (["shark", "angler", "karambwan", "manta", "halibut", "marlin", "pizza"].some((food) => lower.includes(food))) return "Food";
-  if (lower.includes("bow") || lower.includes("crossbow")) return "Range Weapons";
-  if (lower.includes("robe") || lower.includes("cape") || lower.includes("staff") || lower.includes("book") || lower.includes("tome") || lower.includes("sceptre")) return "Mage Gear";
-  if (lower.includes("ring") || lower.includes("helm") || lower.includes("body") || lower.includes("chaps") || lower.includes("boots") || lower.includes("gloves")) return "Gear";
-  return fallback;
+function itemTagList(item) {
+  return uniqueTags(item.tags ?? []);
 }
 
-const hiddenManualCollectionNames = new Set([
-  "Saradomin cape",
-  "Guthix cape",
-  "Zamorak cape",
-  "Saradomin staff",
-  "Guthix staff",
-  "Zamorak staff",
-  "Holy book",
-  "Unholy book",
-  "Book of balance",
-  "Book of darkness",
-  "Book of law",
-  "Book of war",
-  "Archers ring",
-  "Berserker ring",
-  "Seers ring",
-  "Warrior ring",
-  "Tzhaar-ket-om",
-  "Toktz-xil-ek",
-  "Tzhaar-ket-em",
-  "Toktz-xil-ul",
-  "Toktz-mej-tal",
-  "Berserker necklace",
-  "Void knight top",
-  "Fighter torso",
-  "Dragon defender",
-  "Fire cape",
-  "Imbued saradomin cape",
-  "Rune gloves",
-  "Barrows gloves"
-].map(normalizeCollectionText));
+function itemImagePath(item) {
+  return item.imagePath || (item.imageName ? itemImage(item.imageName) : "");
+}
 
-function buildManualCollectionItem(item) {
-  const category = inferCollectionCategory(item.name);
-  const tags = uniqueTags([...inferItemTags(item.name, category), "loot"]);
+function collectionSourceType(item) {
+  const tags = itemTagList(item);
+  if (item.alwaysAvailable || item.unlocked) return "always";
+  if (tags.includes("talent")) return "talent";
+  if (tags.includes("shop")) return "shop";
+  return "collection";
+}
+
+function collectionTagGroups(tags) {
+  const groups = new Set();
+
+  (tags ?? []).forEach((tag) => {
+    if (tag === "spec wep") groups.add("spec");
+    else if (tag === "range wep" || tag === "range arm") groups.add("range");
+    else if (tag === "mage wep" || tag === "mage arm") groups.add("mage");
+    else if (tag === "melee wep" || tag === "melee arm") groups.add("melee");
+    else if (tag === "generic gear") groups.add("gear");
+    else if (tag === "talent") groups.add("talent");
+    else if (tag === "shop") groups.add("shop");
+    else if (tag === "consumables" || tag === "runes") groups.add("consumable");
+    else if (tag === "potions") groups.add("potions");
+    else groups.add("other");
+  });
+
+  return [...groups];
+}
+
+function collectionFilterLabel(id) {
+  return collectionFilterDefinitions.find((filter) => filter.id === id)?.label ?? titleCase(id);
+}
+
+function collectionDisplayTag(tag) {
+  if (tag === "spec wep") return "spec";
+  if (tag === "range wep" || tag === "range arm") return "range";
+  if (tag === "mage wep" || tag === "mage arm") return "mage";
+  if (tag === "melee wep" || tag === "melee arm") return "melee";
+  if (tag === "generic gear") return "generic";
+  if (tag === "consumables" || tag === "runes") return "consumable";
+  if (tag === "potions") return "potions";
+  return tag;
+}
+
+function collectionDisplayTags(item) {
+  return uniqueTags((item.tags ?? []).map(collectionDisplayTag));
+}
+
+function collectionPrimaryGroup(tags) {
+  const groups = collectionTagGroups(tags);
+  return collectionCategoryPriority.find((group) => groups.includes(group)) ?? "other";
+}
+
+function collectionCategoryFromTags(tags) {
+  return collectionFilterLabel(collectionPrimaryGroup(tags));
+}
+
+function collectionItemFromDefinition(item) {
+  const tags = itemTagList(item);
+  const name = itemDisplayName(item);
+  const image = itemImagePath(item);
+  const sourceType = collectionSourceType(item);
+  const displayTags = uniqueTags(tags.map(collectionDisplayTag));
+
   return {
-    id: `manual-item-${item.itemId ?? slugifyItemId(item.name)}`,
-    name: item.name,
-    category,
-    source: "Loot unlock",
-    sourceType: "loot",
-    automatic: false,
-    images: [itemImage(item.imageName)],
+    ...item,
+    id: item.id || `item-${item.itemId ?? slugifyItemId(item.name)}`,
+    name,
+    originalName: item.name,
+    category: collectionCategoryFromTags(tags),
+    sourceType,
+    automatic: sourceType !== "collection",
+    images: image ? [image] : [],
     tags,
-    wikiLink: item.wikiLink,
-    searchText: normalizeCollectionText(`${item.name} ${category} ${tags.join(" ")}`)
+    searchText: normalizeCollectionText(`${name} ${item.name ?? ""} ${tags.join(" ")} ${displayTags.join(" ")}`)
   };
 }
 
-async function loadItemSearchIndex() {
+function mergedCollectionSet(definition, itemsById) {
+  const members = definition.itemIds.map((id) => itemsById.get(id)).filter(Boolean);
+  if (!members.length) return null;
+
+  const tags = uniqueTags(members.flatMap((item) => item.tags ?? []));
+  const images = uniqueTags(members.flatMap((item) => item.images ?? []));
+  const sourceType = tags.includes("talent") ? "talent" : tags.includes("shop") ? "shop" : "collection";
+  const displayTags = uniqueTags(tags.map(collectionDisplayTag));
+
+  return {
+    ...members[0],
+    id: definition.id,
+    collectionIds: definition.itemIds,
+    name: definition.name,
+    originalName: definition.name,
+    category: collectionCategoryFromTags(tags),
+    sourceType,
+    automatic: sourceType !== "collection",
+    images,
+    tags,
+    searchText: normalizeCollectionText(`${definition.name} ${members.map((item) => item.name).join(" ")} ${tags.join(" ")} ${displayTags.join(" ")}`)
+  };
+}
+
+function collapseCollectionSets(items) {
+  const itemsById = new Map(items.map((item) => [item.id, item]));
+  const mergedItemIds = new Set(collectionSetDefinitions.flatMap((definition) => definition.itemIds));
+  const mergedItems = collectionSetDefinitions.map((definition) => mergedCollectionSet(definition, itemsById)).filter(Boolean);
+
+  return [
+    ...items.filter((item) => !hiddenCollectionItemIds.has(item.id) && !mergedItemIds.has(item.id)),
+    ...mergedItems
+  ];
+}
+
+async function loadItemDefinitions() {
   try {
-    const response = await fetch("tools/BronzemanItems.json");
-    if (!response.ok) throw new Error(`Item index returned ${response.status}`);
-    const items = await response.json();
-    itemSearchIndex = Array.isArray(items) ? items.filter((item) => !hiddenManualCollectionNames.has(normalizeCollectionText(item.name))).map(buildManualCollectionItem) : [];
+    const response = await fetch(ITEM_DEFS_URL);
+    if (!response.ok) throw new Error(`Item definitions returned ${response.status}`);
+    const data = await response.json();
+    const seen = new Set();
+    const items = (Array.isArray(data.items) ? data.items : [])
+      .map(collectionItemFromDefinition)
+      .filter((item) => {
+        const key = item.id || normalizeAssetPath(item.images?.[0]) || normalizeCollectionText(item.name);
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+
+    itemDefinitions = collapseCollectionSets(items);
   } catch (error) {
-    console.warn("Could not load BronzemanItems.json", error);
-    itemSearchIndex = [];
+    console.warn("Could not load BronzemanItemDefs.json", error);
+    itemDefinitions = [];
   } finally {
-    itemSearchIndexLoaded = true;
+    refreshCollectionFilterButtons();
     refreshCollectionSearchDatalist();
     renderUnlocks();
   }
 }
 
-function basicCollectionItems() {
-  return basicUnlockGroups.flatMap((group) => group.items.map((item) => {
-    const source = item.source ?? group.source;
-    const sourceType = item.sourceType ?? group.sourceType ?? sourceTypeFromSource(source);
-    return {
-      ...item,
-      category: group.category,
-      source,
-      sourceType,
-      tags: uniqueTags([...(group.tags ?? []), ...(item.tags ?? []), sourceType === "always" ? "always" : sourceType]),
-      automatic: Boolean(item.automatic)
-    };
-  }));
-}
-
-function spellbookCollectionItems() {
-  const talentSpellbooks = unlocks
-    .filter((unlock) => unlock.collectionCategory === "Spellbooks")
-    .map((unlock) => ({ ...unlock, category: "General", source: "Talent", sourceType: "talent", automatic: true, tags: uniqueTags([...(unlock.tags ?? []), "talent", "spellbook"]) }));
-
-  return [
-    { id: "spellbook-standard", name: "Standard Spellbook", category: "General", source: "Always available", sourceType: "always", automatic: true, images: [itemImages.standardSpellbook], tags: ["always", "spellbook"] },
-    ...talentSpellbooks
-  ];
-}
-
-function talentCollectionItems() {
-  return unlocks
-    .filter((unlock) => unlock.collectionCategory !== "Spellbooks")
-    .map((unlock) => ({ ...unlock, category: unlock.collectionCategory ?? "Weapons", source: "Talent", sourceType: "talent", automatic: true, tags: uniqueTags([...(unlock.tags ?? []), "talent", ...inferItemTags(unlock.name, unlock.collectionCategory ?? "")]) }));
-}
-
-function shopCollectionItems() {
-  return shopItems.filter((item) => item.collection).map((item) => {
-    const entries = item.items ?? (item.images ?? []).map((image) => ({ image }));
-    return {
-      id: `shop-${item.id}`,
-      shopId: item.id,
-      name: item.name,
-      category: item.category,
-      source: "Shop",
-      sourceType: "shop",
-      automatic: true,
-      images: entries.map((entry) => entry.image),
-      tags: uniqueTags(["shop", ...inferItemTags(item.name, item.category)])
-    };
-  });
-}
-
 function collectionItems() {
-  return [
-    ...spellbookCollectionItems(),
-    ...basicCollectionItems(),
-    ...itemSearchIndex,
-    ...talentCollectionItems(),
-    ...shopCollectionItems()
-  ].map((item) => ({
-    ...item,
-    searchText: item.searchText ?? normalizeCollectionText(`${item.name} ${item.category} ${item.source} ${(item.tags ?? []).join(" ")}`)
-  }));
+  return itemDefinitions;
+}
+
+function unlockMatchesCollectionItem(unlock, item) {
+  const itemIds = [item.id, ...(item.collectionIds ?? [])];
+  if (itemIds.some((id) => (unlock.collectionIds ?? []).includes(id))) return true;
+
+  const itemImages = new Set((item.images ?? []).map(normalizeAssetPath));
+  return (unlock.images ?? [unlock.image]).some((image) => itemImages.has(normalizeAssetPath(image)));
+}
+
+function shopMatchesCollectionItem(shopItem, item) {
+  const itemImages = new Set((item.images ?? []).map(normalizeAssetPath));
+  const entries = shopItem.items ?? (shopItem.images ?? []).map((image) => ({ image }));
+  return entries.some((entry) => itemImages.has(normalizeAssetPath(entry.image)));
 }
 
 function collectionIsUnlocked(item) {
   if (item.sourceType === "always") return true;
-  if (item.sourceType === "talent") return state.purchased.includes(item.id);
-  if (item.sourceType === "shop") return (state.shopPurchases[item.shopId] ?? 0) > 0;
+
+  const tags = item.tags ?? [];
+  const unlockedByTalent = tags.includes("talent") && unlocks.some((unlock) => state.purchased.includes(unlock.id) && unlockMatchesCollectionItem(unlock, item));
+  const unlockedByShop = tags.includes("shop") && shopItems.some((shopItem) => (state.shopPurchases[shopItem.id] ?? 0) > 0 && shopMatchesCollectionItem(shopItem, item));
+
+  if (unlockedByTalent || unlockedByShop) return true;
+  if (tags.includes("talent") || tags.includes("shop")) return false;
   return state.basicUnlocks.includes(item.id);
 }
-
 function collectionStatusLabel(item) {
-  if (item.sourceType === "always") return "Always";
+  if (item.sourceType === "always") return "Unlocked";
   return collectionIsUnlocked(item) ? "Unlocked" : "Locked";
 }
 
@@ -1325,12 +1274,8 @@ function collectionMatchesFilter(item) {
   const unlocked = collectionIsUnlocked(item);
   if (collectionFilter === "unlocked") return unlocked;
   if (collectionFilter === "locked") return !unlocked;
-  if (collectionFilter === "loot") return item.sourceType === "loot";
-  if (collectionFilter === "talent") return item.sourceType === "talent";
-  if (collectionFilter === "shop") return item.sourceType === "shop";
-  if (collectionFilter === "always") return item.sourceType === "always" || (item.tags ?? []).includes("always");
-  if (collectionFilter === "consumables") return (item.tags ?? []).includes("consumable");
-  return true;
+  if (collectionFilter === "all") return true;
+  return collectionTagGroups(item.tags ?? []).includes(collectionFilter);
 }
 
 function visibleCollectionItems() {
@@ -1339,11 +1284,7 @@ function visibleCollectionItems() {
     return collectionMatchesFilter(item) && (!query || item.searchText.includes(query));
   });
 
-  return items.sort((a, b) => {
-    if (collectionSort === "source") return `${a.source} ${a.name}`.localeCompare(`${b.source} ${b.name}`);
-    if (collectionSort === "status") return `${collectionStatusLabel(a)} ${a.name}`.localeCompare(`${collectionStatusLabel(b)} ${b.name}`);
-    return a.name.localeCompare(b.name);
-  });
+  return items.sort((a, b) => a.name.localeCompare(b.name));
 }
 
 function collectionGroups() {
@@ -1363,7 +1304,7 @@ function collectionGroups() {
 }
 
 function renderUnlockCard(item) {
-  const checkable = !item.automatic && item.sourceType === "loot";
+  const checkable = !item.automatic && item.sourceType === "collection";
   const label = document.createElement(checkable ? "label" : "article");
   const unlocked = collectionIsUnlocked(item);
   const status = collectionStatusLabel(item);
@@ -1377,7 +1318,7 @@ function renderUnlockCard(item) {
     <div class="unlocked-art">${images}</div>
     <div class="unlocked-copy">
       <h3>${escapeHtml(item.name)}</h3>
-      <span>${escapeHtml(item.source)} / ${status}</span>
+      <span>${escapeHtml(collectionDisplayTags(item).join(", ") || "No tags")}</span>
     </div>
   `;
 
@@ -1396,7 +1337,7 @@ function refreshCollectionFilterButtons() {
   const target = document.getElementById("collectionFilters");
   if (!target) return;
 
-  target.innerHTML = collectionFilterOptions.map((filter) => `
+  target.innerHTML = collectionFilterOptions().map((filter) => `
     <button type="button" data-collection-filter="${filter.id}" class="${filter.id === collectionFilter ? "active" : ""}" aria-pressed="${filter.id === collectionFilter}">${filter.label}</button>
   `).join("");
 
@@ -1422,7 +1363,7 @@ function refreshCollectionSearchDatalist() {
       return true;
     })
     .sort((a, b) => a.name.localeCompare(b.name))
-    .map((item) => `<option value="${escapeHtml(item.name)}" label="${escapeHtml(item.source)}"></option>`)
+    .map((item) => `<option value="${escapeHtml(item.name)}" label="${escapeHtml(collectionDisplayTags(item).join(", "))}"></option>`)
     .join("");
 
   datalist.innerHTML = options;
@@ -1434,7 +1375,7 @@ function manuallyUnlockSearchSelection() {
   const normalized = normalizeCollectionText(value);
   if (!normalized) return;
 
-  const match = collectionItems().find((item) => normalizeCollectionText(item.name) === normalized && item.sourceType === "loot");
+  const match = collectionItems().find((item) => normalizeCollectionText(item.name) === normalized && item.sourceType === "collection");
   if (!match) return;
 
   setBasicUnlockChecked(match.id, true);
@@ -1449,7 +1390,6 @@ function initCollectionControls() {
   refreshCollectionSearchDatalist();
 
   const searchInput = document.getElementById("collectionSearch");
-  const sortSelect = document.getElementById("collectionSort");
   const unlockButton = document.getElementById("manualUnlockButton");
 
   searchInput?.addEventListener("input", (event) => {
@@ -1462,11 +1402,6 @@ function initCollectionControls() {
     if (event.key !== "Enter") return;
     event.preventDefault();
     manuallyUnlockSearchSelection();
-  });
-
-  sortSelect?.addEventListener("change", (event) => {
-    collectionSort = event.target.value;
-    renderUnlocks();
   });
 
   unlockButton?.addEventListener("click", manuallyUnlockSearchSelection);
@@ -1605,7 +1540,7 @@ document.getElementById("resetButton").addEventListener("click", () => {
 initCollectionControls();
 showTab("tasks");
 render();
-loadItemSearchIndex();
+loadItemDefinitions();
 initFirebaseAuth();
 
 

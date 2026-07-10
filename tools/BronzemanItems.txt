@@ -3,21 +3,21 @@ Fighter torso
 Dragon defender
 Fire cape
 Imbued saradomin cape
+Imbued zamorak cape
+Imbued guthix cape
 Trouver parchment
 Colossal blade
 Barrelchest anchor
 Granite maul
 Ornate maul handle
-Granite maul (ornate handle)
-Arkan blade
 Dragon scimitar
 Dragon spear
 Dragon dagger(p++)
 Magic shortbow (i)
 Rune crossbow
-Sunlight hunter's crossbow
+Hunters' sunlight crossbow
 Dark bow
-Seeker arrow
+Seeking dragon arrow
 Ancient mace
 Dragon thrownaxe
 Dragon knife(p++)
@@ -29,7 +29,6 @@ Webweaver bow
 Ursine chainmace
 Toxic staff of the dead
 Zamorak godsword
-Surge potion(4)
 Loot key
 Warrior guild token
 Astral rune
@@ -41,7 +40,7 @@ Mind rune
 Body rune
 Soul rune
 Nature rune
-Burning amulet
+Burning amulet(5)
 Blighted ancient ice sack
 Blighted vengeance sack
 Blood rune
@@ -49,7 +48,6 @@ Death rune
 Law rune
 Chaos rune
 Stamina potion(4)
-Extended stamina potion(4)
 Prayer potion(4)
 Saradomin brew(4)
 Super restore(4)
@@ -93,17 +91,16 @@ Mystic robe top (light)
 Mystic robe top
 Mystic robe bottom
 Burning claws
-Crimson kisten
 Dragon warhammer
-Sunlight hunter's crossbow
 Dragon crossbow
+Sunlight hunter's crossbow
 Tome of fire
 Tome of water
-Antler guard
 Berserker ring
 Archers ring
 Warrior ring
 Seers ring
+Berserker necklace
 Toktz-xil-ek
 Toktz-xil-ak
 Tzhaar-ket-em

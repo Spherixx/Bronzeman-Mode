@@ -1,310 +1,219 @@
+import argparse
 import json
 import time
-import argparse
+import urllib.error
+import urllib.request
 from pathlib import Path
-from urllib.parse import quote, urlparse, unquote
-from urllib.request import Request, urlopen
-from urllib.error import HTTPError, URLError
+from urllib.parse import quote
 
-INPUT_JSON = Path("tools/BronzemanItems.json")
-OTHER_IMAGES_PATH = Path("tools/OtherImages.txt")
-OUTPUT_JSON = Path("tools/BronzemanItems.cached.json")
 
-ICON_DIR = Path("images/items")
-OTHER_IMAGE_DIR = Path("images")
-
-REQUEST_DELAY_SECONDS = 0.15
+DEFAULT_JSON_PATH = Path("BronzemanItemDefs.json")
 
 USER_AGENT = (
-    "BronzemanTracker/1.0 "
-    "(personal OSRS tracker)"
+    "BronzemanTrackerImageCache/1.0 "
+    "(personal OSRS tracker; contact: none)"
 )
 
 
-def wiki_image_url(file_name: str) -> str:
+def wiki_file_path_url(image_name: str) -> str:
+    return f"https://oldschool.runescape.wiki/w/Special:FilePath/{quote(image_name)}"
+
+
+def get_image_name(entry: dict) -> str | None:
+    image_name = entry.get("imageName")
+
+    if image_name:
+        return str(image_name).strip()
+
+    name = entry.get("name")
+    if name:
+        return f"{str(name).strip()}.png"
+
+    return None
+
+
+def get_download_url(entry: dict, image_name: str) -> str:
     """
-    Python equivalent of:
-
-    function wikiImage(fileName) {
-      return `https://oldschool.runescape.wiki/w/Special:FilePath/${encodeURIComponent(fileName)}`;
-    }
+    Prefer explicit URLs from the JSON.
+    Fall back to OSRS Wiki Special:FilePath using imageName.
     """
-    encoded_file_name = quote(file_name, safe="")
-    return f"https://oldschool.runescape.wiki/w/Special:FilePath/{encoded_file_name}"
+    return (
+        entry.get("iconLink")
+        or entry.get("imageUrl")
+        or entry.get("sourceUrl")
+        or wiki_file_path_url(image_name)
+    )
 
 
-def safe_local_filename(file_name: str) -> str:
+def item_output_path(entry: dict) -> Path:
     """
-    Keeps the filename mostly intact, but removes characters that can be bad
-    on Windows or awkward in static file paths.
+    Items go in images/items.
+    This intentionally ignores weird old paths and standardizes the cache location.
     """
-    replacements = {
-        "<": "",
-        ">": "",
-        ":": "",
-        '"': "",
-        "/": "-",
-        "\\": "-",
-        "|": "",
-        "?": "",
-        "*": "",
-    }
+    image_name = get_image_name(entry)
+    if not image_name:
+        raise ValueError(f"Item is missing imageName/name: {entry}")
 
-    cleaned = file_name.strip()
-
-    for bad, replacement in replacements.items():
-        cleaned = cleaned.replace(bad, replacement)
-
-    return cleaned
+    return Path("images") / "items" / image_name
 
 
-def filename_from_url(url: str) -> str:
+def other_image_output_path(entry: dict) -> Path:
     """
-    Extracts a usable filename from URLs like:
-
-    https://oldschool.runescape.wiki/w/Special:Redirect/file/Coins_10000.png
-
-    Result:
-    Coins_10000.png
+    Other images go in images.
     """
-    parsed = urlparse(url.strip())
-    path = parsed.path.rstrip("/")
-    filename = path.split("/")[-1]
+    image_name = get_image_name(entry)
+    if not image_name:
+        raise ValueError(f"Other image is missing imageName/name: {entry}")
 
-    filename = unquote(filename)
-
-    if not filename:
-        raise ValueError(f"Could not determine filename from URL: {url}")
-
-    return safe_local_filename(filename)
+    return Path("images") / image_name
 
 
-def download_file(url: str, destination: Path) -> bool:
-    request = Request(
+def download_file(url: str, output_path: Path, retries: int = 3, delay: float = 0.5) -> None:
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    tmp_path = output_path.with_suffix(output_path.suffix + ".part")
+
+    request = urllib.request.Request(
         url,
         headers={
             "User-Agent": USER_AGENT,
+            "Accept": "image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8",
         },
     )
 
-    try:
-        with urlopen(request, timeout=30) as response:
-            content_type = response.headers.get("Content-Type", "")
+    last_error = None
 
-            if "image" not in content_type.lower():
-                print(f"Warning: URL did not return an image: {url}")
-                print(f"Content-Type: {content_type}")
-
-            data = response.read()
-
-        destination.parent.mkdir(parents=True, exist_ok=True)
-
-        with destination.open("wb") as f:
-            f.write(data)
-
-        return True
-
-    except HTTPError as e:
-        print(f"HTTP error {e.code} while downloading: {url}")
-        return False
-
-    except URLError as e:
-        print(f"URL error while downloading {url}: {e}")
-        return False
-
-    except TimeoutError:
-        print(f"Timed out while downloading: {url}")
-        return False
-
-
-def load_other_image_urls(path: Path) -> list[str]:
-    if not path.exists():
-        return []
-
-    with path.open("r", encoding="utf-8") as f:
-        return [
-            line.strip()
-            for line in f
-            if line.strip() and not line.strip().startswith("#")
-        ]
-
-
-def cache_item_icons(items: list[dict], icon_dir: Path, force: bool) -> tuple[int, int, int]:
-    downloaded = 0
-    skipped = 0
-    failed = 0
-
-    for item in items:
-        image_name = item.get("imageName")
-
-        if not image_name:
-            print(f"Missing imageName for item: {item.get('name', 'Unknown')}")
-            failed += 1
-            continue
-
-        local_filename = safe_local_filename(image_name)
-        local_path = icon_dir / local_filename
-        local_path_for_json = local_path.as_posix()
-
-        item["imageUrl"] = wiki_image_url(image_name)
-        item["localImagePath"] = local_path_for_json
-
-        if local_path.exists() and not force:
-            print(f"Skipping existing item icon: {image_name}")
-            skipped += 1
-            continue
-
-        print(f"Downloading item icon: {image_name}")
-
-        success = download_file(item["imageUrl"], local_path)
-
-        if success:
-            downloaded += 1
-            time.sleep(REQUEST_DELAY_SECONDS)
-        else:
-            failed += 1
-
-    return downloaded, skipped, failed
-
-
-def cache_other_images(urls: list[str], other_image_dir: Path, force: bool) -> tuple[list[dict], int, int, int]:
-    other_images = []
-
-    downloaded = 0
-    skipped = 0
-    failed = 0
-
-    for url in urls:
+    for attempt in range(1, retries + 1):
         try:
-            local_filename = filename_from_url(url)
-        except ValueError as e:
-            print(e)
-            failed += 1
+            with urllib.request.urlopen(request, timeout=30) as response:
+                content = response.read()
+
+            if not content:
+                raise RuntimeError("Downloaded file was empty.")
+
+            tmp_path.write_bytes(content)
+            tmp_path.replace(output_path)
+            return
+
+        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError, RuntimeError) as error:
+            last_error = error
+
+            if tmp_path.exists():
+                tmp_path.unlink()
+
+            if attempt < retries:
+                time.sleep(delay * attempt)
+
+    raise RuntimeError(f"Failed after {retries} attempts: {last_error}")
+
+
+def collect_download_jobs(data: dict) -> list[dict]:
+    jobs = []
+
+    for entry in data.get("items", []):
+        image_name = get_image_name(entry)
+        if not image_name:
             continue
 
-        local_path = other_image_dir / local_filename
+        jobs.append({
+            "kind": "item",
+            "name": entry.get("name", image_name),
+            "url": get_download_url(entry, image_name),
+            "path": item_output_path(entry),
+        })
 
-        entry = {
-            "sourceUrl": url,
-            "imageName": local_filename,
-            "localImagePath": local_path.as_posix(),
-        }
-
-        other_images.append(entry)
-
-        if local_path.exists() and not force:
-            print(f"Skipping existing other image: {local_filename}")
-            skipped += 1
+    for entry in data.get("otherImages", []):
+        image_name = get_image_name(entry)
+        if not image_name:
             continue
 
-        print(f"Downloading other image: {local_filename}")
+        jobs.append({
+            "kind": "other",
+            "name": entry.get("name", image_name),
+            "url": get_download_url(entry, image_name),
+            "path": other_image_output_path(entry),
+        })
 
-        success = download_file(url, local_path)
-
-        if success:
-            downloaded += 1
-            time.sleep(REQUEST_DELAY_SECONDS)
-        else:
-            failed += 1
-
-    return other_images, downloaded, skipped, failed
+    return jobs
 
 
-def main():
+def main() -> None:
     parser = argparse.ArgumentParser(
-        description="Cache OSRS wiki inventory icons and extra wiki images locally."
+        description="Download missing Bronzeman item and UI images from BronzemanItemDefs.json."
     )
 
     parser.add_argument(
-        "--input",
-        default=str(INPUT_JSON),
-        help="Input JSON file. Default: bronzeman_items.json",
-    )
-
-    parser.add_argument(
-        "--other-images",
-        default=str(OTHER_IMAGES_PATH),
-        help="Plain text file of extra image URLs. Default: OtherImages.txt",
-    )
-
-    parser.add_argument(
-        "--output",
-        default=str(OUTPUT_JSON),
-        help="Output JSON file. Default: bronzeman_items.cached.json",
-    )
-
-    parser.add_argument(
-        "--icon-dir",
-        default=str(ICON_DIR),
-        help="Directory to cache item icons in. Default: cache/icons",
-    )
-
-    parser.add_argument(
-        "--other-image-dir",
-        default=str(OTHER_IMAGE_DIR),
-        help="Directory to cache extra images in. Default: cache/other",
+        "--json",
+        type=Path,
+        default=DEFAULT_JSON_PATH,
+        help="Path to BronzemanItemDefs.json. Defaults to ./BronzemanItemDefs.json",
     )
 
     parser.add_argument(
         "--force",
         action="store_true",
-        help="Re-download images even if they already exist.",
+        help="Redownload images even if they already exist.",
+    )
+
+    parser.add_argument(
+        "--delay",
+        type=float,
+        default=0.15,
+        help="Delay in seconds between downloads. Defaults to 0.15.",
     )
 
     args = parser.parse_args()
 
-    input_path = Path(args.input)
-    other_images_path = Path(args.other_images)
-    output_path = Path(args.output)
+    if not args.json.exists():
+        raise FileNotFoundError(f"Could not find JSON file: {args.json}")
 
-    icon_dir = Path(args.icon_dir)
-    other_image_dir = Path(args.other_image_dir)
+    data = json.loads(args.json.read_text(encoding="utf-8"))
+    jobs = collect_download_jobs(data)
 
-    with input_path.open("r", encoding="utf-8") as f:
-        items = json.load(f)
+    downloaded = 0
+    skipped = 0
+    failed = []
 
-    if not isinstance(items, list):
-        raise TypeError("Input JSON should be a list of item objects.")
-
-    other_image_urls = load_other_image_urls(other_images_path)
-
-    print("Caching item icons...")
-    item_downloaded, item_skipped, item_failed = cache_item_icons(
-        items=items,
-        icon_dir=icon_dir,
-        force=args.force,
-    )
-
+    print(f"Found {len(jobs)} image entries.")
+    print(f"Using JSON: {args.json}")
     print()
-    print("Caching other images...")
-    other_images, other_downloaded, other_skipped, other_failed = cache_other_images(
-        urls=other_image_urls,
-        other_image_dir=other_image_dir,
-        force=args.force,
-    )
 
-    output_data = {
-        "items": items,
-        "otherImages": other_images,
-    }
+    for job in jobs:
+        output_path: Path = job["path"]
 
-    with output_path.open("w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=2, ensure_ascii=False)
+        if output_path.exists() and not args.force:
+            skipped += 1
+            continue
+
+        try:
+            print(f'Downloading {job["kind"]}: {job["name"]}')
+            print(f"  -> {output_path}")
+            download_file(job["url"], output_path)
+            downloaded += 1
+            time.sleep(args.delay)
+
+        except Exception as error:
+            failed.append({
+                "name": job["name"],
+                "url": job["url"],
+                "path": str(output_path),
+                "error": str(error),
+            })
 
     print()
     print("Done.")
-    print()
-    print("Item icons:")
-    print(f"  Downloaded: {item_downloaded}")
-    print(f"  Skipped:    {item_skipped}")
-    print(f"  Failed:     {item_failed}")
-    print()
-    print("Other images:")
-    print(f"  Downloaded: {other_downloaded}")
-    print(f"  Skipped:    {other_skipped}")
-    print(f"  Failed:     {other_failed}")
-    print()
-    print(f"Wrote: {output_path}")
+    print(f"Downloaded: {downloaded}")
+    print(f"Skipped existing: {skipped}")
+    print(f"Failed: {len(failed)}")
+
+    if failed:
+        print()
+        print("Failed downloads:")
+        for item in failed:
+            print(f'  - {item["name"]}')
+            print(f'    URL: {item["url"]}')
+            print(f'    Path: {item["path"]}')
+            print(f'    Error: {item["error"]}')
 
 
 if __name__ == "__main__":
