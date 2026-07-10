@@ -678,6 +678,22 @@ h1 span {
   color: var(--bronze);
   font-weight: 500;
 }
+.tier-requirement {
+  position: absolute;
+  top: 13px;
+  right: 16px;
+  color: var(--faint);
+  font: 0.64rem "DM Mono", monospace;
+  letter-spacing: 0.04em;
+}
+
+.tier-requirement.unlocked {
+  color: var(--good);
+}
+
+.tier-requirement.locked {
+  color: var(--muted);
+}
 
 .talent-node {
   position: relative;
@@ -989,7 +1005,6 @@ body {
 .hero-copy,
 .rule-strip,
 .tree-help,
-.shop-copy p,
 .node-meta {
   display: none;
 }

@@ -225,10 +225,10 @@
                 "talent"
             ],
             "imageUsed": "Holy book",
-            "tier": null,
+            "tier": 1,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": null
+            "cost": 1
         },
         {
             "name": "God capes",
@@ -327,10 +327,10 @@
                 "talent"
             ],
             "imageUsed": "Tzhaar-ket-om",
-            "tier": null,
+            "tier": 2,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": null
+            "cost": 2
         },
         {
             "name": "Dagannoth rings",
@@ -347,10 +347,10 @@
                 "talent"
             ],
             "imageUsed": "Berserker ring",
-            "tier": null,
+            "tier": 2,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": null
+            "cost": 2
         },
         {
             "name": "Imbued Dagannoth rings",
@@ -367,10 +367,10 @@
                 "talent"
             ],
             "imageUsed": "Berserker ring (i)",
-            "tier": null,
+            "tier": 2,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": null
+            "cost": 2
         },
         {
             "name": "God staves",
@@ -386,6 +386,27 @@
                 "talent"
             ],
             "imageUsed": "Saradomin staff",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "cost": 1
+        },
+        {
+            "name": "Mystic equipment",
+            "alias": "Mystic set",
+            "uid": "mystic-equipment",
+            "itemIds": [
+                "4089",
+                "4091",
+                "4093",
+                "4095",
+                "4097"
+            ],
+            "tags": [
+                "mage arm",
+                "talent"
+            ],
+            "imageUsed": "Mystic hat",
             "tier": "1",
             "alwaysAvailable": false,
             "unlocked": false,

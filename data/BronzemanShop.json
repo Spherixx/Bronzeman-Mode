@@ -1,543 +1,544 @@
 {
-  "schemaVersion": 2,
-  "categories": [
-    "Runes / Ammo",
-    "Food",
-    "Potions",
-    "Other"
-  ],
-  "shopItems": [
-    {
-      "uid": "barrages",
-      "alias": "Barrage sacks",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
+    "schemaVersion": 2,
+    "categories": [
+        "Runes / Ammo",
+        "Food",
+        "Potions",
+        "Other"
+    ],
+    "shopItems": [
         {
-          "imageUsed": "Blighted ancient ice sack",
-          "amount": "100"
-        }
-      ]
-    },
-    {
-      "uid": "tb-sacks",
-      "alias": "TB + entangle sacks",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Blighted teleport spell sack",
-          "amount": "10"
+            "uid": "barrages",
+            "alias": "Barrage sacks",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Blighted ancient ice sack",
+                    "amount": "100"
+                }
+            ]
         },
         {
-          "imageUsed": "Blighted entangle sack",
-          "amount": "10"
-        }
-      ]
-    },
-    {
-      "uid": "veng-sacks",
-      "alias": "Veng sacks",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Blighted vengeance sack",
-          "amount": "25"
-        }
-      ]
-    },
-    {
-      "uid": "elemental-runes",
-      "alias": "Elemental runes",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Air rune",
-          "amount": "5k"
+            "uid": "tb-sacks",
+            "alias": "TB + entangle sacks",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Blighted teleport spell sack",
+                    "amount": "10"
+                },
+                {
+                    "imageUsed": "Blighted entangle sack",
+                    "amount": "10"
+                }
+            ]
         },
         {
-          "imageUsed": "Water rune",
-          "amount": "5k"
+            "uid": "veng-sacks",
+            "alias": "Veng sacks",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Blighted vengeance sack",
+                    "amount": "25"
+                }
+            ]
         },
         {
-          "imageUsed": "Earth rune",
-          "amount": "5k"
+            "uid": "elemental-runes",
+            "alias": "Elemental runes",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Air rune",
+                    "amount": "10k"
+                },
+                {
+                    "imageUsed": "Water rune",
+                    "amount": "10k"
+                },
+                {
+                    "imageUsed": "Earth rune",
+                    "amount": "10k"
+                },
+                {
+                    "imageUsed": "Fire rune",
+                    "amount": "10k"
+                }
+            ]
         },
         {
-          "imageUsed": "Fire rune",
-          "amount": "5k"
-        }
-      ]
-    },
-    {
-      "uid": "chaos-runes",
-      "alias": "Chaos runes",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Chaos rune",
-          "amount": "2k"
-        }
-      ]
-    },
-    {
-      "uid": "death-runes",
-      "alias": "Death runes",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Death rune",
-          "amount": "2k"
-        }
-      ]
-    },
-    {
-      "uid": "blood-runes",
-      "alias": "Blood runes",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Blood rune",
-          "amount": "2k"
-        }
-      ]
-    },
-    {
-      "uid": "astral-nature-soul-runes",
-      "alias": "Astral / nature / soul runes",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Astral rune",
-          "amount": "1k"
+            "uid": "chaos-runes",
+            "alias": "Chaos runes",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Chaos rune",
+                    "amount": "4k"
+                }
+            ]
         },
         {
-          "imageUsed": "Nature rune",
-          "amount": "1k"
+            "uid": "death-runes",
+            "alias": "Death runes",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Death rune",
+                    "amount": "4k"
+                }
+            ]
         },
         {
-          "imageUsed": "Soul rune",
-          "amount": "1k"
-        }
-      ]
-    },
-    {
-      "uid": "amethyst-arrows",
-      "alias": "Amethyst arrows",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Amethyst arrow",
-          "amount": "250"
-        }
-      ]
-    },
-    {
-      "uid": "amethyst-darts",
-      "alias": "Amethyst darts",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Amethyst dart",
-          "amount": "250"
-        }
-      ]
-    },
-    {
-      "uid": "dragon-bolts",
-      "alias": "Dragonstone bolts",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Dragonstone dragon bolts (e)",
-          "amount": "100"
-        }
-      ]
-    },
-    {
-      "uid": "dragon-seeker-arrows",
-      "alias": "Dragon seeker arrows",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Seeking dragon arrow",
-          "amount": "100"
-        }
-      ]
-    },
-    {
-      "uid": "dragon-knives",
-      "alias": "Dragon knives",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Dragon knife(p++)",
-          "amount": "50"
-        }
-      ]
-    },
-    {
-      "uid": "dragon-thrownaxes",
-      "alias": "Dragon thrownaxes",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Dragon thrownaxe",
-          "amount": "50"
-        }
-      ]
-    },
-    {
-      "uid": "zulrah-scales",
-      "alias": "Zulrah scales",
-      "category": "Runes / Ammo",
-      "cost": 1,
-      "items": [
-        {
-          "image": "images/other/Zulrah's_scales_5.png",
-          "amount": "1k"
-        }
-      ]
-    },
-    {
-      "uid": "combo-food",
-      "alias": "Halibut",
-      "category": "Food",
-      "cost": 2,
-      "items": [
-        {
-          "imageUsed": "Halibut",
-          "amount": "50"
-        }
-      ]
-    },
-    {
-      "uid": "standard-food",
-      "alias": "Anglers / marlin",
-      "category": "Food",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Anglerfish",
-          "amount": "100"
+            "uid": "blood-runes",
+            "alias": "Blood runes",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Blood rune",
+                    "amount": "4k"
+                }
+            ]
         },
         {
-          "imageUsed": "Marlin",
-          "amount": "100"
-        }
-      ]
-    },
-    {
-      "uid": "surge-potions",
-      "alias": "Surge pots",
-      "category": "Potions",
-      "cost": 2,
-      "items": [
-        {
-          "imageUsed": "Surge potion",
-          "amount": "5"
-        }
-      ]
-    },
-    {
-      "uid": "brews",
-      "alias": "Brews",
-      "category": "Potions",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Saradomin brew(4)",
-          "amount": "20"
-        }
-      ]
-    },
-    {
-      "uid": "restores",
-      "alias": "Restores",
-      "category": "Potions",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Super restore(4)",
-          "amount": "10"
-        }
-      ]
-    },
-    {
-      "uid": "range-pots",
-      "alias": "Range pots",
-      "category": "Potions",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Ranging potion(4)",
-          "amount": "5"
-        }
-      ]
-    },
-    {
-      "uid": "super-combats",
-      "alias": "Super combats",
-      "category": "Potions",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Super combat potion(4)",
-          "amount": "5"
-        }
-      ]
-    },
-    {
-      "uid": "antivenom",
-      "alias": "Antivenom",
-      "category": "Potions",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Anti-venom+(4)",
-          "amount": "2"
-        }
-      ]
-    },
-    {
-      "uid": "trouver",
-      "alias": "Trouver Parchment",
-      "category": "Other",
-      "cost": 2,
-      "items": [
-        {
-          "imageUsed": "Trouver parchment"
-        }
-      ]
-    },
-    {
-      "uid": "msb-imbue-scroll",
-      "alias": "MSB imbue scroll",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Magic shortbow scroll"
-        }
-      ]
-    },
-    {
-      "uid": "dagannoth-ring-reimbue",
-      "alias": "Dagannoth ring re-imbue",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Scroll of imbuing"
-        }
-      ]
-    },
-    {
-      "uid": "rune-pouch-rebuy",
-      "alias": "Rune pouch rebuy",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Rune pouch"
-        }
-      ]
-    },
-    {
-      "uid": "sarasword-bless",
-      "alias": "Sarasword bless item",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Saradomin's tear"
-        }
-      ]
-    },
-    {
-      "uid": "jewellery-recharge",
-      "alias": "Jewellery recharge",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "image": "images/other/Recharge_Dragonstone.png",
-          "amount": "10"
-        }
-      ]
-    },
-    {
-      "uid": "avas-accumulator-reclaim",
-      "alias": "Ava's accumulator reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Ava's accumulator"
-        }
-      ]
-    },
-    {
-      "uid": "avas-assembler-reclaim",
-      "alias": "Ava's assembler reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Ava's assembler"
-        }
-      ]
-    },
-    {
-      "uid": "seed-pod-reclaim",
-      "alias": "Seed pod reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Royal seed pod"
-        }
-      ]
-    },
-    {
-      "uid": "god-book-reclaim",
-      "alias": "God book reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Unholy book"
-        }
-      ]
-    },
-    {
-      "uid": "god-cape-reclaim",
-      "alias": "God cape reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Zamorak cape"
-        }
-      ]
-    },
-    {
-      "uid": "god-staff-reclaim",
-      "alias": "God staff reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Zamorak staff"
-        }
-      ]
-    },
-    {
-      "uid": "rune-gloves-reclaim",
-      "alias": "Rune gloves reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Rune gloves"
-        }
-      ]
-    },
-    {
-      "uid": "barrows-gloves-reclaim",
-      "alias": "Barrows gloves reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Barrows gloves"
-        }
-      ]
-    },
-    {
-      "uid": "dragon-defender-reclaim",
-      "alias": "Dragon defender reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Dragon defender"
-        }
-      ]
-    },
-    {
-      "uid": "fighter-torso-reclaim",
-      "alias": "Fighter torso reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Fighter torso"
-        }
-      ]
-    },
-    {
-      "uid": "void-reclaim",
-      "alias": "Void reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Void knight top"
-        }
-      ]
-    },
-    {
-      "uid": "fire-cape-reclaim",
-      "alias": "Fire cape reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Fire cape"
-        }
-      ]
-    },
-    {
-      "uid": "ma2-cape-reclaim",
-      "alias": "MA2 cape reclaim",
-      "category": "Other",
-      "cost": 1,
-      "items": [
-        {
-          "imageUsed": "Imbued saradomin cape"
-        }
-      ]
-    },
-    {
-      "uid": "rev-kit",
-      "alias": "Rev kit",
-      "category": "Other",
-      "cost": 2,
-      "items": [
-        {
-          "imageUsed": "Bracelet of ethereum"
+            "uid": "astral-nature-soul-runes",
+            "alias": "Astral / nature / soul runes (choose one)",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Astral rune",
+                    "amount": "2k"
+                },
+                {
+                    "imageUsed": "Nature rune",
+                    "amount": "2k"
+                },
+                {
+                    "imageUsed": "Soul rune",
+                    "amount": "2k"
+                }
+            ],
+            "note": "Choose one rune type per purchase."
         },
         {
-          "imageUsed": "Revenant ether",
-          "amount": "100"
+            "uid": "amethyst-arrows",
+            "alias": "Amethyst arrows",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Amethyst arrow",
+                    "amount": "250"
+                }
+            ]
         },
         {
-          "imageUsed": "Burning amulet"
+            "uid": "amethyst-darts",
+            "alias": "Amethyst darts",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Amethyst dart",
+                    "amount": "250"
+                }
+            ]
+        },
+        {
+            "uid": "dragon-bolts",
+            "alias": "Dragonstone bolts",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Dragonstone dragon bolts (e)",
+                    "amount": "100"
+                }
+            ]
+        },
+        {
+            "uid": "dragon-seeker-arrows",
+            "alias": "Dragon seeker arrows",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Seeking dragon arrow",
+                    "amount": "100"
+                }
+            ]
+        },
+        {
+            "uid": "dragon-knives",
+            "alias": "Dragon knives",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Dragon knife(p++)",
+                    "amount": "50"
+                }
+            ]
+        },
+        {
+            "uid": "dragon-thrownaxes",
+            "alias": "Dragon thrownaxes",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Dragon thrownaxe",
+                    "amount": "50"
+                }
+            ]
+        },
+        {
+            "uid": "zulrah-scales",
+            "alias": "Zulrah scales",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "image": "images/other/Zulrah's_scales_5.png",
+                    "amount": "5k"
+                }
+            ]
+        },
+        {
+            "uid": "combo-food",
+            "alias": "Halibut",
+            "category": "Food",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Halibut",
+                    "amount": "50"
+                }
+            ]
+        },
+        {
+            "uid": "standard-food",
+            "alias": "Anglers / marlin",
+            "category": "Food",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Anglerfish",
+                    "amount": "100"
+                },
+                {
+                    "imageUsed": "Marlin",
+                    "amount": "100"
+                }
+            ]
+        },
+        {
+            "uid": "surge-potions",
+            "alias": "Surge pots",
+            "category": "Potions",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Surge potion",
+                    "amount": "5"
+                }
+            ]
+        },
+        {
+            "uid": "brews",
+            "alias": "Brews",
+            "category": "Potions",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Saradomin brew(4)",
+                    "amount": "20"
+                }
+            ]
+        },
+        {
+            "uid": "restores",
+            "alias": "Restores",
+            "category": "Potions",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Super restore(4)",
+                    "amount": "10"
+                }
+            ]
+        },
+        {
+            "uid": "range-pots",
+            "alias": "Range pots",
+            "category": "Potions",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Ranging potion(4)",
+                    "amount": "5"
+                }
+            ]
+        },
+        {
+            "uid": "super-combats",
+            "alias": "Super combats",
+            "category": "Potions",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Super combat potion(4)",
+                    "amount": "5"
+                }
+            ]
+        },
+        {
+            "uid": "antivenom",
+            "alias": "Antivenom",
+            "category": "Potions",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Anti-venom+(4)",
+                    "amount": "2"
+                }
+            ]
+        },
+        {
+            "uid": "trouver",
+            "alias": "Trouver Parchment",
+            "category": "Other",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Trouver parchment"
+                }
+            ]
+        },
+        {
+            "uid": "msb-imbue-scroll",
+            "alias": "MSB imbue scroll",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Magic shortbow scroll"
+                }
+            ]
+        },
+        {
+            "uid": "dagannoth-ring-reimbue",
+            "alias": "Dagannoth ring re-imbue",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Scroll of imbuing"
+                }
+            ]
+        },
+        {
+            "uid": "rune-pouch-rebuy",
+            "alias": "Rune pouch rebuy",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Rune pouch"
+                }
+            ]
+        },
+        {
+            "uid": "sarasword-bless",
+            "alias": "Sarasword bless item",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Saradomin's tear"
+                }
+            ]
+        },
+        {
+            "uid": "jewellery-recharge",
+            "alias": "Jewellery recharge",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "image": "images/other/Recharge_Dragonstone.png",
+                    "amount": "10"
+                }
+            ]
+        },
+        {
+            "uid": "avas-accumulator-reclaim",
+            "alias": "Ava's accumulator reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Ava's accumulator"
+                }
+            ]
+        },
+        {
+            "uid": "avas-assembler-reclaim",
+            "alias": "Ava's assembler reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Ava's assembler"
+                }
+            ]
+        },
+        {
+            "uid": "seed-pod-reclaim",
+            "alias": "Seed pod reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Royal seed pod"
+                }
+            ]
+        },
+        {
+            "uid": "god-book-reclaim",
+            "alias": "God book reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Unholy book"
+                }
+            ]
+        },
+        {
+            "uid": "god-cape-reclaim",
+            "alias": "God cape reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Zamorak cape"
+                }
+            ]
+        },
+        {
+            "uid": "god-staff-reclaim",
+            "alias": "God staff reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Zamorak staff"
+                }
+            ]
+        },
+        {
+            "uid": "rune-gloves-reclaim",
+            "alias": "Rune gloves reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Rune gloves"
+                }
+            ]
+        },
+        {
+            "uid": "barrows-gloves-reclaim",
+            "alias": "Barrows gloves reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Barrows gloves"
+                }
+            ]
+        },
+        {
+            "uid": "dragon-defender-reclaim",
+            "alias": "Dragon defender reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Dragon defender"
+                }
+            ]
+        },
+        {
+            "uid": "fighter-torso-reclaim",
+            "alias": "Fighter torso reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Fighter torso"
+                }
+            ]
+        },
+        {
+            "uid": "void-reclaim",
+            "alias": "Void reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Void knight top"
+                }
+            ]
+        },
+        {
+            "uid": "fire-cape-reclaim",
+            "alias": "Fire cape reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Fire cape"
+                }
+            ]
+        },
+        {
+            "uid": "ma2-cape-reclaim",
+            "alias": "MA2 cape reclaim",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Imbued saradomin cape"
+                }
+            ]
+        },
+        {
+            "uid": "rev-kit",
+            "alias": "Rev kit",
+            "category": "Other",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Bracelet of ethereum"
+                },
+                {
+                    "imageUsed": "Revenant ether",
+                    "amount": "100"
+                },
+                {
+                    "imageUsed": "Burning amulet"
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }

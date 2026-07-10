@@ -55,484 +55,10 @@ function imageAsset(fileName) {
   return localImage(`images/${specialImageFolders[fileName] ?? "other"}`, fileName);
 }
 
-function task(title, points = 1) {
-  return { title, points };
-}
-
-function repeatableTask(title, cost) {
-  return { title, cost, repeatable: true };
-}
-
-const itemImages = {
-  void: itemImage("Void knight top.png"),
-  torso: itemImage("Fighter torso.png"),
-  defenders: itemImage("Dragon defender.png"),
-  fireCape: itemImage("Fire cape.png"),
-  ma2Cape: itemImage("Imbued saradomin cape.png"),
-  trouver: itemImage("Trouver parchment.png"),
-  colossal: itemImage("Colossal blade.png"),
-  barrelchest: itemImage("Barrelchest anchor.png"),
-  gmaul: itemImage("Granite maul.png"),
-  ornateMaul: itemImage("Ornate maul handle.png"),
-  arkanBlade: itemImage("Arkan blade.png"),
-  standardSpellbook: imageAsset("Standard_spellbook.png"),
-  ancientMagicks: imageAsset("Ancient_spellbook.png"),
-  lunarSpellbook: imageAsset("Lunar_spellbook.png"),
-  arceuusSpellbook: imageAsset("Arceuus_spellbook.png"),
-  dragonScimitar: itemImage("Dragon scimitar.png"),
-  dragonSpear: itemImage("Dragon spear.png"),
-  dds: itemImage("Dragon dagger(p++).png"),
-  msb: itemImage("Magic shortbow (i).png"),
-  rcb: itemImage("Rune crossbow.png"),
-  sunlightHuntersCrossbow: itemImage("Hunters' sunlight crossbow.png"),
-  burningClaws: itemImage("Burning claws.png"),
-  crimsonKisten: itemImage("Crimson kisten.png"),
-  dragonWarhammer: itemImage("Dragon warhammer.png"),
-  dragonCrossbow: itemImage("Dragon crossbow.png"),
-  obsidianCape: itemImage("Obsidian cape.png"),
-  obsidianHelmet: itemImage("Obsidian helmet.png"),
-  obsidianPlatebody: itemImage("Obsidian platebody.png"),
-  obsidianPlatelegs: itemImage("Obsidian platelegs.png"),
-  obsidianMaul: itemImage("Tzhaar-ket-om.png"),
-  obsidianSword: itemImage("Toktz-xil-ek.png"),
-  obsidianMace: itemImage("Tzhaar-ket-em.png"),
-  obsidianThrowingRings: itemImage("Toktz-xil-ul.png"),
-  obsidianStaff: itemImage("Toktz-mej-tal.png"),
-  berserkerNecklace: itemImage("Berserker necklace.png"),
-  tomeWater: itemImage("Tome of water.png"),
-  tomeFire: itemImage("Tome of fire.png"),
-  antlerGuard: itemImage("Antler guard.png"),
-  archersRing: itemImage("Archers ring.png"),
-  berserkerRing: itemImage("Berserker ring.png"),
-  seersRing: itemImage("Seers ring.png"),
-  warriorRing: itemImage("Warrior ring.png"),
-  holyBook: itemImage("Holy book.png"),
-  bookBalance: itemImage("Book of balance.png"),
-  bookDarkness: itemImage("Book of darkness.png"),
-  bookLaw: itemImage("Book of law.png"),
-  bookWar: itemImage("Book of war.png"),
-  unholyBook: itemImage("Unholy book.png"),
-  darkBow: itemImage("Dark bow.png"),
-  seekerArrow: itemImage("Seeking dragon arrow.png"),
-  ancientMace: itemImage("Ancient mace.png"),
-  dragonThrownaxe: itemImage("Dragon thrownaxe.png"),
-  dragonKnife: itemImage("Dragon knife(p++).png"),
-  amethystArrow: itemImage("Amethyst arrow 5.png"),
-  dragonBolt: itemImage("Dragonstone dragon bolts (e) 5.png"),
-  voidwaker: itemImage("Voidwaker.png"),
-  accursed: itemImage("Accursed sceptre.png"),
-  webweaver: itemImage("Webweaver bow.png"),
-  chainmace: itemImage("Ursine chainmace.png"),
-  toxicStaff: itemImage("Toxic staff of the dead.png"),
-  zamorakGodsword: itemImage("Zamorak godsword.png"),
-  surgePotion: itemImage("Surge potion(4).png"),
-  lootKey: itemImage("Loot key.png"),
-  talentToken: imageAsset("Blood_money_10000.png"),
-  astral: itemImage("Astral rune.png"),
-  air: itemImage("Air rune.png"),
-  water: itemImage("Water rune.png"),
-  earth: itemImage("Earth rune.png"),
-  fire: itemImage("Fire rune.png"),
-  mind: itemImage("Mind rune.png"),
-  body: itemImage("Body rune.png"),
-  soul: itemImage("Soul rune.png"),
-  nature: itemImage("Nature rune.png"),
-  burningAmulet: itemImage("Burning amulet.png"),
-  ancientIceSack: itemImage("Blighted ancient ice sack.png"),
-  vengeanceSack: itemImage("Blighted vengeance sack.png"),
-  blood: itemImage("Blood rune.png"),
-  death: itemImage("Death rune.png"),
-  law: itemImage("Law rune.png"),
-  chaos: itemImage("Chaos rune.png"),
-  coins: imageAsset("Coins_10000.png"),
-  stamina: itemImage("Stamina potion(4).png"),
-  extendedStamina: itemImage("Extended stamina potion(4).png"),
-  prayer: itemImage("Prayer potion(4).png"),
-  brew: itemImage("Saradomin brew(4).png"),
-  restore: itemImage("Super restore(4).png"),
-  ranging: itemImage("Ranging potion(4).png"),
-  superCombat: itemImage("Super combat potion(4).png"),
-  antivenom: itemImage("Anti-venom+(4).png"),
-  shark: itemImage("Shark.png"),
-  angler: itemImage("Anglerfish.png"),
-  karambwan: itemImage("Cooked karambwan.png"),
-  halibut: itemImage("Halibut.png"),
-  marlin: itemImage("Marlin.png"),
-  pineapplePizza: itemImage("Pineapple pizza.png"),
-  manta: itemImage("Manta ray.png"),
-  blightedManta: itemImage("Blighted manta ray.png"),
-  blightedRestore: itemImage("Blighted super restore(4).png"),
-  blightedEntangle: itemImage("Blighted entangle sack.png"),
-  blightedTeleport: itemImage("Blighted teleport spell sack.png"),
-  seedPod: itemImage("Royal seed pod.png"),
-  revenantEther: itemImage("Revenant ether 5.png"),
-  bracelet: itemImage("Bracelet of ethereum.png"),
-  blackDhideBody: itemImage("Black d'hide body.png"),
-  blackDhideChaps: itemImage("Black d'hide chaps.png"),
-  xericianHat: itemImage("Xerician hat.png"),
-  xericianTop: itemImage("Xerician top.png"),
-  xericianRobe: itemImage("Xerician robe.png"),
-  helmNeitiznot: itemImage("Helm of neitiznot.png"),
-  berserkerHelm: itemImage("Berserker helm.png"),
-  archerHelm: itemImage("Archer helm.png"),
-  farseerHelm: itemImage("Farseer helm.png"),
-  climbingBoots: itemImage("Climbing boots.png"),
-  amuletGlory: itemImage("Amulet of glory(4).png"),
-  runeGloves: itemImage("Rune gloves.png"),
-  barrowsGloves: itemImage("Barrows gloves.png"),
-  saradominCape: itemImage("Saradomin cape.png"),
-  guthixCape: itemImage("Guthix cape.png"),
-  zamorakCape: itemImage("Zamorak cape.png"),
-  saradominStaff: itemImage("Saradomin staff.png"),
-  guthixStaff: itemImage("Guthix staff.png"),
-  zamorakStaff: itemImage("Zamorak staff.png"),
-  mysticRobeTopLight: itemImage("Mystic robe top (light).png"),
-  mysticRobeTop: itemImage("Mystic robe top.png"),
-  mysticRobeBottom: itemImage("Mystic robe bottom.png"),
-  mysticHat: itemImage("Mystic hat.png"),
-  mysticGloves: itemImage("Mystic gloves.png"),
-  mysticBoots: itemImage("Mystic boots.png"),
-  avasAccumulator: itemImage("Ava's accumulator.png"),
-  avasAssembler: itemImage("Ava's assembler.png"),
-  runePouch: itemImage("Rune pouch.png"),
-  dragonMace: itemImage("Dragon mace.png"),
-  dragonBattleaxe: itemImage("Dragon battleaxe.png"),
-  abyssalWhip: itemImage("Abyssal whip.png"),
-  zombieAxe: itemImage("Zombie axe.png"),
-  dragonHalberd: itemImage("Dragon halberd.png"),
-  lightBallista: itemImage("Light ballista.png"),
-  heavyBallista: itemImage("Heavy ballista.png"),
-  amuletFury: itemImage("Amulet of fury.png"),
-  saradominSword: itemImage("Saradomin sword.png"),
-  blessedSaradominSword: itemImage("Saradomin's blessed sword.png"),
-  veracsHelm: itemImage("Verac's helm.png"),
-  ahrimsHood: itemImage("Ahrim's hood.png"),
-  karilsCoif: itemImage("Karil's coif.png"),
-  dharoksHelm: itemImage("Dharok's helm.png"),
-  abyssalDagger: itemImage("Abyssal dagger.png"),
-  crystalHalberd: itemImage("Crystal halberd.png"),
-  toxicBlowpipe: itemImage("Toxic blowpipe.png"),
-  armadylCrossbow: itemImage("Armadyl crossbow.png"),
-  occultNecklace: itemImage("Occult necklace.png"),
-  serpentineHelm: itemImage("Serpentine helm.png"),
-  piety: imageAsset("Piety.png"),
-  augury: imageAsset("Augury.png"),
-  rigour: imageAsset("Rigour.png"),
-  amuletTorture: itemImage("Amulet of torture.png"),
-  necklaceAnguish: itemImage("Necklace of anguish.png"),
-  tormentedBracelet: itemImage("Tormented bracelet.png"),
-  dinhsBulwark: itemImage("Dinh's bulwark.png"),
-  dragonClaws: itemImage("Dragon claws.png"),
-  volatileNightmareStaff: itemImage("Volatile nightmare staff.png"),
-  armadylGodsword: itemImage("Armadyl godsword.png"),
-  elderMaul: itemImage("Elder maul.png"),
-  necklaceRupture: itemImage("Necklace of rupture.png"),
-  ringOfSuffering: itemImage("Ring of suffering.png"),
-  msbImbueScroll: itemImage("Magic shortbow scroll.png"),
-  zulrahScales: imageAsset("Zulrah's_scales_5.png"),
-  amethystDart: itemImage("Amethyst dart.png"),
-  scrollOfImbuing: itemImage("Scroll of imbuing.png"),
-  saradominsTear: itemImage("Saradomin's tear.png"),
-  rechargeDragonstone: imageAsset("Recharge_Dragonstone.png")
-};
-
-const legacyChallenges = {
-  pvm: [
-    {
-      stage: "Early",
-      killRequirement: 25,
-      items: [
-        // Basic Wilderness setup
-        task("Obtain a looting bag"),
-        task("Get a god cape from Mage Arena"),
-        task("Obtain and charge a bracelet of ethereum"),
-
-        // Wilderness Slayer and general content
-        task("Obtain a Larran's key from Wilderness Slayer"),
-        task("Complete a Wilderness Slayer task in one trip"),
-        task("Complete 25 Wilderness Slayer tasks", 2),
-        task("Thieve from Rogue's Castle chest"),
-        task("Complete 100 Wilderness laps in one trip", 2),
-
-        // Early PvM drops
-        task("Get a dragon longsword from Zombie Pirates"),
-        task("Get a rune crossbow from Crazy Archaeologist"),
-
-        // Early boss progression
-        task("Defeat Crazy Archaeologist, Chaos Fanatic, and Scorpia", 2),
-        task("Defeat Chaos Elemental", 2),
-        task("Defeat a Wilderness boss while skulled", 2),
-
-        // Repeatable tasks
-        repeatableTask("25 KC at any minor Wilderness boss", 5),
-        repeatableTask("25 KC at any singles-plus Wilderness boss", 5),
-        repeatableTask("Complete 10 Wilderness Slayer tasks", 5),
-        repeatableTask("Kill 50 Revenants while skulled", 5)
-      ]
-    },
-    {
-      stage: "Mid",
-      killRequirement: 50,
-      items: [
-        // Account and gear progression
-        task("Get Fire Cape with challenge gear", 2),
-        task("Get Mage Arena 2 cape with challenge gear", 2),
-        task("Complete Wilderness Hard Diaries", 2),
-
-        // Wilderness Slayer and Larran's keys
-        task("Complete 50 duo Wilderness Slayer tasks", 3),
-        task("Open 25 Larran's big chests", 2),
-
-        // Singles-plus boss progression
-        task("Defeat Artio, Calvar'ion, and Spindel", 2),
-        task("Obtain one Voidwaker piece", 3),
-
-        // Multi-combat and risk challenges
-        task("Defeat Callisto, Vet'ion, or Venenatis with challenge gear", 2),
-        task("Complete 10 Wilderness boss kills while skulled", 2),
-        task("Defeat Artio, Calvar'ion, and Spindel in one trip", 3),
-
-        // Wilderness boss drops
-        task("Get a dragon pickaxe drop", 2),
-        task("Obtain a Wilderness boss ring as a drop", 2),
-        task("Complete an odium ward or malediction ward", 3),
-
-        // Revenant progression
-        task("Get a ring of wealth scroll from Wilderness content"),
-        task("Obtain any revenant unique drop"),
-        task("Obtain an amulet of avarice from a revenant", 2),
-        task("Obtain an ancient crystal from a revenant", 2),
-
-        // Repeatable tasks
-        repeatableTask("50 KC at any singles-plus Wilderness boss", 10),
-        repeatableTask("25 KC at any multi-combat Wilderness boss", 10),
-        repeatableTask("10 KC at three different Wilderness bosses", 10),
-        repeatableTask("50 KC at Chaos Elemental", 10),
-        repeatableTask("Complete 25 Wilderness Slayer tasks", 10),
-        repeatableTask("Kill 100 Revenants while skulled", 10)
-      ]
-    },
-    {
-      stage: "Late",
-      killRequirement: 100,
-      items: [
-        // Major account progression
-        task("Complete Wilderness Elite Diaries", 3),
-        task("Complete 250 Wilderness Slayer tasks", 5),
-
-        // High-risk boss challenges
-        task("Defeat every Wilderness boss while skulled", 4),
-        task("Defeat Callisto, Vet'ion, and Venenatis in one trip", 3),
-        task("Complete 25 Wilderness boss kills in one trip", 3),
-
-        // Major boss completion goals
-        task("Complete a Voidwaker", 4),
-        task("Obtain all three Wilderness boss rings", 4),
-        task("Complete both an odium ward and a malediction ward", 4),
-        task("Obtain a Wilderness weapon upgrade attachment", 3),
-
-        // Revenant completion goals
-        task("Obtain a revenant weapon as a PvM drop", 4),
-        task("Build a full revenant ether stack", 2),
-
-        // Larran's key completion goals
-        task("Open 100 Larran's big chests", 3),
-        task("Get a full Dagon'hai set from Larran's keys", 5),
-
-        // Long-term RNG and collection goals
-        task("Greenlog a Wilderness boss", 4),
-        task("Get a Wilderness pet", 5),
-
-        // Repeatable tasks
-        repeatableTask("50 KC at each singles-plus Wilderness boss", 15),
-        repeatableTask("25 KC at each multi-combat Wilderness boss", 20),
-        repeatableTask("Gain 100 KC across five different Wilderness bosses", 15),
-        repeatableTask("100 KC at Chaos Elemental", 15),
-        repeatableTask("Complete 50 Wilderness Slayer tasks", 15),
-        repeatableTask("Kill 250 Revenants while skulled", 15)
-      ]
-    }
-  ],
-  pvp: [
-    // First milestones and Wilderness locations
-    task("Get your first Wilderness kill"),
-    task("Get your first smite"),
-    task("Successfully rush a player"),
-    task("Kill a player you teleblocked"),
-    task("Kill a player at Chaos Altar"),
-    task("Kill a player in Revenant Caves"),
-    task("Get a kill above level 50 Wilderness"),
-
-    // Budget and combat-style challenges
-    task("Win a fight with a budget Xerician set"),
-    task("Get a kill while risking under 500k"),
-    task("Get a kill using ranged only"),
-    task("Get a kill using magic only"),
-    task("Get a kill using melee only"),
-    task("Get a kill using all three combat styles", 2),
-    task("Get a kill with a Dark bow special attack"),
-    task("Get a KO with any obsidian weapon"),
-    task("Get a kill with a poisoned dragon knife special attack", 2),
-    task("Get a KO with Barrelchest's anchor", 2),
-    task("Get a kill with a Dragon thrownaxe special attack", 2),
-    task("Get a KO with Vengeance", 2),
-    task("Get a kill using only special attacks", 2),
-    task("Get an Ancient Mace smite kill", 3),
-
-    // Smite milestones
-    task("Smite a +1 worth 5m+", 2),
-    task("Smite a +1 worth 10m+", 3),
-    task("Smite a +1 worth 25m+", 4),
-    task("Smite a +1 worth 50m+", 5),
-
-    // Individual loot-value milestones
-    task("Get a single loot key worth 10m+", 2),
-    task("Get a single loot key worth 20m+", 3),
-    task("Get a single loot key worth 50m+", 4),
-    task("Get a single loot key worth 100m+", 5),
-    task("PK a Wilderness weapon", 3),
-    task("Earn 2.5m+ PKing one bot farm", 2),
-
-    // Loot-key accumulation
-    task("Carry 5 loot keys at once", 2),
-    task("Carry 10 loot keys at once", 4),
-    task("Obtain 50 loot keys total", 2),
-    task("Obtain 100 loot keys total", 3),
-    task("Obtain 250 loot keys total", 4),
-    task("Obtain 500 loot keys total", 5),
-
-    // Anti-PK challenges
-    task("Anti-PK a 5m+ kill", 2),
-    task("Anti-PK a 10m+ kill", 3),
-    task("Anti-PK a 25m+ kill", 4),
-    task("Anti-rush a rusher", 2),
-
-    // Outnumbered and survival challenges
-    task("Win a 1v2 or worse fight", 3),
-    task("Win a 1v3 or worse fight", 5),
-    task("Escape a multi team while carrying a loot key", 3),
-    task("Escape after a full Tele Block while carrying a loot key", 3),
-    task("Get another kill while carrying a 10m+ loot key", 3),
-    task("Get a 10-kill streak without dying", 4),
-
-    // High-risk fights
-    task("Get a kill while risking over 10m", 3),
-    task("Get a kill while risking over 25m", 4),
-    task("Win a no-overhead honor fight", 2),
-
-    // Trick and community challenges
-    task("Skulltrick someone", 2),
-    task("2v1 a viewer"),
-    task("BS a clanmate")
-  ]
-};
-
-
-
-const legacyUnlocks = [
-  { id: "god-capes", name: "God Capes", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["saradomin-cape", "guthix-cape", "zamorak-cape"], images: [itemImages.zamorakCape] },
-  { id: "god-staves", name: "God Staves", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["saradomin-staff", "guthix-staff", "zamorak-staff"], images: [itemImages.zamorakStaff] },
-  { id: "glory", name: "Amulet of Glory", cost: 1, tier: 1, collectionCategory: "Range Gear", requires: [], images: [itemImages.amuletGlory] },
-  { id: "rcb", name: "Rune Crossbow", cost: 1, tier: 1, collectionCategory: "Range Weapons", requires: [], images: [itemImages.rcb] },
-  { id: "tome-water", name: "Tome of Water", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], images: [itemImages.tomeWater] },
-  { id: "god-books", name: "God Books", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["holy-book", "unholy-book", "book-of-balance", "book-of-war", "book-of-law", "book-of-darkness"], images: [itemImages.unholyBook] },
-  { id: "dds", name: "DDS", cost: 1, tier: 1, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dds] },
-  { id: "rune-gloves", name: "Rune Gloves", cost: 1, tier: 1, collectionCategory: "Melee Gear", requires: [], images: [itemImages.runeGloves] },
-  { id: "extended-stamina-potions", name: "Extended Stam Pots", cost: 1, tier: 1, collectionCategory: "Potions", requires: [], images: [itemImages.extendedStamina] },
-  { id: "dragon-scimitar", name: "Dragon Scimitar", cost: 1, tier: 1, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["dragon-scimitar"], images: [itemImages.dragonScimitar] },
-  { id: "avas-accumulator", name: "Ava's Accumulator", cost: 1, tier: 1, collectionCategory: "Range Gear", requires: [], collectionIds: ["avas-accumulator"], images: [itemImages.avasAccumulator] },
-  { id: "rune-pouch", name: "Rune Pouch", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["rune-pouch"], images: [itemImages.runePouch] },
-  { id: "dragon-mace", name: "Dragon Mace", cost: 1, tier: 1, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["dragon-mace"], images: [itemImages.dragonMace] },
-  { id: "dragon-battleaxe", name: "Dragon Battleaxe", cost: 1, tier: 1, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["dragon-battleaxe"], images: [itemImages.dragonBattleaxe] },
-  { id: "mystic-set", name: "Mystic Set", cost: 1, tier: 1, collectionCategory: "Mage Gear", requires: [], collectionIds: ["mystic-hat", "mystic-robe-top", "mystic-robe-bottom", "mystic-gloves", "mystic-boots"], images: [itemImages.mysticHat] },
-
-  { id: "void", name: "Void", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.void] },
-  { id: "torso", name: "Fighter Torso", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.torso] },
-  { id: "defenders", name: "Defenders", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.defenders] },
-  { id: "msb", name: "MSB(i)", cost: 2, tier: 2, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.msb] },
-  { id: "tome-fire", name: "Tome of Fire", cost: 2, tier: 2, collectionCategory: "Mage Gear", requires: [], images: [itemImages.tomeFire] },
-  { id: "ancient-magicks", name: "Ancient Magicks", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.ancientMagicks], tags: ["spellbook"] },
-  { id: "lunar-spellbook", name: "Lunar Spellbook", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.lunarSpellbook], tags: ["spellbook"] },
-  { id: "arceuus-spellbook", name: "Arceuus Spellbook", cost: 2, tier: 2, collectionCategory: "Spellbooks", requires: [], images: [itemImages.arceuusSpellbook], tags: ["spellbook"] },
-  { id: "crimson-kisten", name: "Crimson Kisten", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.crimsonKisten] },
-  { id: "dragon-crossbow", name: "Dragon Crossbow", cost: 2, tier: 2, collectionCategory: "Range Weapons", requires: [], images: [itemImages.dragonCrossbow] },
-  { id: "obsidian-berserker", name: "Obsidian Weaponry + Berserker Neck", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.obsidianMaul, itemImages.berserkerNecklace] },
-  { id: "antler-guard", name: "Antler Guard", cost: 2, tier: 2, collectionCategory: "Range Gear", requires: [], images: [itemImages.antlerGuard] },
-  { id: "dagannoth-rings", name: "Dagannoth Rings", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], images: [itemImages.berserkerRing] },
-  { id: "sunlight-hunters-crossbow", name: "Hunters' Sunlight Crossbow", cost: 2, tier: 2, collectionCategory: "Range Weapons", requires: [], collectionIds: ["hunters-sunlight-crossbow"], images: [itemImages.sunlightHuntersCrossbow] },
-  { id: "abyssal-whip", name: "Abyssal Whip", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], collectionIds: ["abyssal-whip"], images: [itemImages.abyssalWhip] },
-  { id: "zombie-axe", name: "Zombie Axe", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], collectionIds: ["zombie-axe"], images: [itemImages.zombieAxe] },
-  { id: "dragon-halberd", name: "Dragon Halberd", cost: 2, tier: 2, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["dragon-halberd"], images: [itemImages.dragonHalberd] },
-  { id: "light-ballista", name: "Light Ballista", cost: 2, tier: 2, collectionCategory: "Range Weapons", requires: [], collectionIds: ["light-ballista"], images: [itemImages.lightBallista] },
-  { id: "amulet-of-fury", name: "Amulet of Fury", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], collectionIds: ["amulet-of-fury"], images: [itemImages.amuletFury] },
-  { id: "saradomin-sword", name: "Saradomin Sword", cost: 2, tier: 2, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["saradomin-sword"], images: [itemImages.saradominSword] },
-  { id: "veracs-set", name: "Verac's Set", cost: 2, tier: 2, collectionCategory: "Melee Gear", requires: [], collectionIds: ["veracs-helm", "veracs-brassard", "veracs-plateskirt", "veracs-flail"], images: [itemImages.veracsHelm] },
-
-  { id: "arkan-blade", name: "Arkan Blade", cost: 3, tier: 3, collectionCategory: "Melee Gear", requires: [], images: [itemImages.arkanBlade] },
-  { id: "dragon-warhammer", name: "Dragon Warhammer", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonWarhammer] },
-  { id: "seed-pod", name: "Seed Pod", cost: 3, tier: 3, collectionCategory: "Teleports", requires: [], images: [itemImages.seedPod] },
-  { id: "firecape", name: "Fire Cape", cost: 3, tier: 3, collectionCategory: "Melee Gear", requires: [], images: [itemImages.fireCape] },
-  { id: "ma2-cape", name: "MA2 Cape", cost: 3, tier: 3, collectionCategory: "Mage Gear", requires: [], collectionIds: ["imbued-saradomin-cape", "imbued-guthix-cape", "imbued-zamorak-cape"], images: [itemImages.ma2Cape] },
-  { id: "dragon-spear", name: "Dragon Spear", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonSpear] },
-  { id: "dragon-knives", name: "Dragon Knives", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonKnife] },
-  { id: "ancient-mace", name: "Ancient Mace", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.ancientMace] },
-  { id: "abyssal-dagger", name: "Abyssal Dagger", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["abyssal-dagger"], images: [itemImages.abyssalDagger] },
-  { id: "crystal-halberd", name: "Crystal Halberd", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["crystal-halberd"], images: [itemImages.crystalHalberd] },
-  { id: "blessed-saradomin-sword", name: "Blessed Saradomin Sword", cost: 3, tier: 3, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["saradomins-blessed-sword"], images: [itemImages.blessedSaradominSword] },
-  { id: "ahrims-set", name: "Ahrim's Set", cost: 3, tier: 3, collectionCategory: "Mage Gear", requires: [], collectionIds: ["ahrims-hood", "ahrims-robetop", "ahrims-robeskirt", "ahrims-staff"], images: [itemImages.ahrimsHood] },
-  { id: "karils-set", name: "Karil's Set", cost: 3, tier: 3, collectionCategory: "Range Gear", requires: [], collectionIds: ["karils-coif", "karils-leathertop", "karils-leatherskirt", "karils-crossbow"], images: [itemImages.karilsCoif] },
-  { id: "toxic-blowpipe", name: "Toxic Blowpipe", cost: 3, tier: 3, collectionCategory: "Range Weapons", requires: [], collectionIds: ["toxic-blowpipe"], images: [itemImages.toxicBlowpipe] },
-  { id: "armadyl-crossbow", name: "Armadyl Crossbow", cost: 3, tier: 3, collectionCategory: "Range Weapons", requires: [], collectionIds: ["armadyl-crossbow"], images: [itemImages.armadylCrossbow] },
-  { id: "occult-necklace", name: "Occult Necklace", cost: 3, tier: 3, collectionCategory: "Mage Gear", requires: [], collectionIds: ["occult-necklace"], images: [itemImages.occultNecklace] },
-  { id: "avas-assembler", name: "Ava's Assembler", cost: 3, tier: 3, collectionCategory: "Range Gear", requires: [], collectionIds: ["avas-assembler"], images: [itemImages.avasAssembler] },
-
-  { id: "surge-potions", name: "Surge Potions", cost: 4, tier: 4, collectionCategory: "Potions", requires: [], images: [itemImages.surgePotion] },
-  { id: "gmaul", name: "Granite Maul + Ornate Handle", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.gmaul, itemImages.ornateMaul] },
-  { id: "anchor", name: "Barrelchest Anchor", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.barrelchest] },
-  { id: "dark-bow", name: "Dark Bow + Seeker", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.darkBow, itemImages.seekerArrow] },
-  { id: "dragon-thrownaxe", name: "Dragon Thrownaxe", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.dragonThrownaxe] },
-  { id: "toxic-staff", name: "Toxic Staff", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.toxicStaff] },
-  { id: "barrows-gloves", name: "Barrows Gloves", cost: 4, tier: 4, collectionCategory: "Melee Gear", requires: [], images: [itemImages.barrowsGloves] },
-  { id: "burning-claws", name: "Burning Claws", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.burningClaws] },
-  { id: "colossal-blade", name: "Colossal Blade", cost: 4, tier: 4, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["colossal-blade"], images: [itemImages.colossal] },
-  { id: "heavy-ballista", name: "Heavy Ballista", cost: 4, tier: 4, collectionCategory: "Range Weapons", requires: [], collectionIds: ["heavy-ballista"], images: [itemImages.heavyBallista] },
-  { id: "dharoks-set", name: "Dharok's Set", cost: 4, tier: 4, collectionCategory: "Melee Gear", requires: [], collectionIds: ["dharoks-helm", "dharoks-platebody", "dharoks-platelegs", "dharoks-greataxe"], images: [itemImages.dharoksHelm] },
-  { id: "serpentine-helm", name: "Serpentine Helm", cost: 4, tier: 4, collectionCategory: "Melee Gear", requires: [], collectionIds: ["serpentine-helm"], images: [itemImages.serpentineHelm] },
-  { id: "piety", name: "Piety", cost: 4, tier: 4, collectionCategory: "Prayers", requires: [], collectionIds: ["piety"], images: [itemImages.piety] },
-  { id: "augury", name: "Augury", cost: 4, tier: 4, collectionCategory: "Prayers", requires: [], collectionIds: ["augury"], images: [itemImages.augury] },
-  { id: "amulet-of-torture", name: "Amulet of Torture", cost: 4, tier: 4, collectionCategory: "Melee Gear", requires: [], collectionIds: ["amulet-of-torture"], images: [itemImages.amuletTorture] },
-  { id: "necklace-of-anguish", name: "Necklace of Anguish", cost: 4, tier: 4, collectionCategory: "Range Gear", requires: [], collectionIds: ["necklace-of-anguish"], images: [itemImages.necklaceAnguish] },
-  { id: "tormented-bracelet", name: "Tormented Bracelet", cost: 4, tier: 4, collectionCategory: "Mage Gear", requires: [], collectionIds: ["tormented-bracelet"], images: [itemImages.tormentedBracelet] },
-  { id: "dinhs-bulwark", name: "Dinh's Bulwark", cost: 4, tier: 4, collectionCategory: "Melee Gear", requires: [], collectionIds: ["dinhs-bulwark"], images: [itemImages.dinhsBulwark] },
-
-  { id: "zgs", name: "ZGS Freeze", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.zamorakGodsword] },
-  { id: "accursed", name: "Accursed Sceptre", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.accursed] },
-  { id: "webweaver", name: "Webweaver Bow", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.webweaver] },
-  { id: "chainmace", name: "Ursine Chainmace", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.chainmace] },
-  { id: "voidwaker", name: "Voidwaker", cost: 6, tier: 5, collectionCategory: "Spec Weapons", requires: [], images: [itemImages.voidwaker] },
-  { id: "dragon-claws", name: "Dragon Claws", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["dragon-claws"], images: [itemImages.dragonClaws] },
-  { id: "volatile-nightmare-staff", name: "Volatile Nightmare Staff", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["volatile-nightmare-staff"], images: [itemImages.volatileNightmareStaff] },
-  { id: "rigour", name: "Rigour", cost: 5, tier: 5, collectionCategory: "Prayers", requires: [], collectionIds: ["rigour"], images: [itemImages.rigour] },
-  { id: "armadyl-godsword", name: "Armadyl Godsword", cost: 5, tier: 5, collectionCategory: "Spec Weapons", requires: [], collectionIds: ["armadyl-godsword"], images: [itemImages.armadylGodsword] },
-  { id: "elder-maul", name: "Elder Maul", cost: 5, tier: 5, collectionCategory: "Melee Gear", requires: [], collectionIds: ["elder-maul"], images: [itemImages.elderMaul] },
-  { id: "necklace-of-rupture", name: "Necklace of Rupture", cost: 5, tier: 5, collectionCategory: "Melee Gear", requires: [], collectionIds: ["necklace-of-rupture"], images: [itemImages.necklaceRupture] },
-  { id: "ring-of-suffering", name: "Ring of Suffering", cost: 5, tier: 5, collectionCategory: "Melee Gear", requires: [], collectionIds: ["ring-of-suffering"], images: [itemImages.ringOfSuffering] }
-];
-
-const unlockIdAliases = {
-  "ornate-maul": "gmaul",
-  "colossal-barrelchest": "colossal-blade"
-};
-
+let challenges = { pvm: [], pvp: [] };
+let unlocks = [];
 let shopCategories = [];
 let shopItems = [];
-const shopIdAliases = {
-  "tb-runes": "tb-sacks",
-  "veng-runes": "veng-sacks"
-};
-let challenges = legacyChallenges;
-let unlocks = legacyUnlocks;
-
 let collectionSetDefinitions = [];
 let itemDefinitions = [];
 const state = loadState();
@@ -562,20 +88,7 @@ const collectionFilterDefinitions = [
 ];
 
 const collectionCategoryPriority = ["spec", "range", "mage", "melee", "gear", "potions", "runes", "ammo", "food", "talent", "shop", "other"];
-const hiddenCollectionItemIds = new Set(["warrior-guild-token"]);
-const legacyCollectionSetDefinitions = [
-  { id: "set-god-capes", name: "God Capes", itemIds: ["saradomin-cape", "guthix-cape", "zamorak-cape"] },
-  { id: "set-imbued-god-capes", name: "Imbued God Capes", itemIds: ["imbued-saradomin-cape", "imbued-guthix-cape", "imbued-zamorak-cape"] },
-  { id: "set-god-books", name: "God Books", itemIds: ["holy-book", "unholy-book", "book-of-balance", "book-of-war", "book-of-law", "book-of-darkness"] },
-  { id: "set-mystic", name: "Mystic Set", itemIds: ["mystic-hat", "mystic-robe-top", "mystic-robe-bottom", "mystic-gloves", "mystic-boots"] },
-  { id: "set-veracs", name: "Verac's Set", itemIds: ["veracs-helm", "veracs-brassard", "veracs-plateskirt", "veracs-flail"] },
-  { id: "set-ahrims", name: "Ahrim's Set", itemIds: ["ahrims-hood", "ahrims-robetop", "ahrims-robeskirt", "ahrims-staff"] },
-  { id: "set-karils", name: "Karil's Set", itemIds: ["karils-coif", "karils-leathertop", "karils-leatherskirt", "karils-crossbow"] },
-  { id: "set-dharoks", name: "Dharok's Set", itemIds: ["dharoks-helm", "dharoks-platebody", "dharoks-platelegs", "dharoks-greataxe"] },
-  { id: "set-obsidian-weapons", name: "Obsidian Weapons", itemIds: ["toktz-xil-ek", "toktz-xil-ak", "tzhaar-ket-em", "tzhaar-ket-om", "toktz-xil-ul", "toktz-mej-tal"] }
-];
-collectionSetDefinitions = legacyCollectionSetDefinitions;
-
+const TALENT_TIER_REQUIREMENT = 10;
 const dataWarnings = [];
 let challengeIdAliases = {};
 let repeatableIdAliases = {};
@@ -609,7 +122,7 @@ function sanitizeState(rawState) {
   const repeatablePurchases = {};
 
   Object.entries(rawState?.shopPurchases ?? {}).forEach(([id, count]) => {
-    const nextId = shopIdAliases[id] ?? id;
+    const nextId = id;
     if (validShopItems.has(nextId) && Number.isFinite(count)) {
       shopPurchases[nextId] = Math.max(shopPurchases[nextId] ?? 0, Math.floor(count));
     }
@@ -644,7 +157,7 @@ function sanitizeState(rawState) {
       ? [...new Set(rawState.completed.map((id) => challengeIdAliases[id] ?? id))].filter((id) => validChallenges.has(id))
       : [],
     purchased: Array.isArray(rawState?.purchased)
-      ? [...new Set(rawState.purchased.map((id) => unlockIdAliases[id] ?? id))].filter((id) => validUnlocks.has(id))
+      ? [...new Set(rawState.purchased)].filter((id) => validUnlocks.has(id))
       : [],
     shopPurchases,
     repeatablePurchases,
@@ -674,7 +187,8 @@ function mergeStates(localState, remoteState) {
 
 function loadState() {
   try {
-    return sanitizeState(JSON.parse(localStorage.getItem(STORAGE_KEY)));
+    const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY));
+    return { ...defaultState(), ...(parsed && typeof parsed === "object" ? parsed : {}) };
   } catch {
     return defaultState();
   }
@@ -926,12 +440,24 @@ function availableKillPoints() {
 
 
 
+function purchasedInTier(tier) {
+  return unlocks.filter((unlock) => unlock.tier === tier && state.purchased.includes(unlock.id)).length;
+}
+
+function tierRequirementProgress(tier) {
+  if (tier <= 1) return { required: 0, purchased: 0, unlocked: true };
+  const purchased = purchasedInTier(tier - 1);
+  return { required: TALENT_TIER_REQUIREMENT, purchased, unlocked: purchased >= TALENT_TIER_REQUIREMENT };
+}
+
 function canBuy(unlock) {
-  return !state.purchased.includes(unlock.id) && availablePoints() >= unlock.cost;
+  return !state.purchased.includes(unlock.id) && tierRequirementProgress(unlock.tier).unlocked && availablePoints() >= unlock.cost;
 }
 
 function lockReason(unlock) {
   if (state.purchased.includes(unlock.id)) return "Purchased - click to refund";
+  const tierProgress = tierRequirementProgress(unlock.tier);
+  if (!tierProgress.unlocked) return `Buy ${tierProgress.required - tierProgress.purchased} more tier ${unlock.tier - 1} talents`;
   if (availablePoints() < unlock.cost) return `Need ${unlock.cost - availablePoints()} more talent points`;
   return "Available to buy";
 }
@@ -1077,16 +603,22 @@ function updateRepeatableState() {
 function renderTalentTree() {
   const tree = document.getElementById("talentTree");
   tree.innerHTML = "";
-  const maxTier = Math.max(...unlocks.map((unlock) => unlock.tier));
+  const maxTier = Math.max(0, ...unlocks.map((unlock) => unlock.tier));
 
   for (let tierNumber = 1; tierNumber <= maxTier; tierNumber += 1) {
     const tier = document.createElement("div");
     tier.className = "tier";
+    tier.dataset.tier = tierNumber;
 
     const label = document.createElement("div");
+    const requirement = document.createElement("div");
+    const tierProgress = tierRequirementProgress(tierNumber);
     label.className = "tier-label";
+    requirement.className = `tier-requirement ${tierProgress.unlocked ? "unlocked" : "locked"}`;
     label.innerHTML = `<b>TIER ${tierNumber}</b> | ${tierNumber === 1 ? "BASE" : tierNumber === maxTier ? "ENDGAME" : "POWER"}`;
+    requirement.textContent = tierNumber === 1 ? "Open" : `Tier ${tierNumber - 1}: ${Math.min(tierProgress.purchased, tierProgress.required)} / ${tierProgress.required}`;
     tier.appendChild(label);
+    tier.appendChild(requirement);
 
     unlocks.filter((unlock) => unlock.tier === tierNumber).forEach((unlock) => {
       const purchased = state.purchased.includes(unlock.id);
@@ -1122,6 +654,17 @@ function renderTalentTree() {
 }
 
 function updateTalentTreeState() {
+  document.querySelectorAll(".tier").forEach((tierElement) => {
+    const tierNumber = Number(tierElement.dataset.tier);
+    const requirement = tierElement.querySelector(".tier-requirement");
+    if (!tierNumber || !requirement) return;
+
+    const tierProgress = tierRequirementProgress(tierNumber);
+    requirement.classList.toggle("unlocked", tierProgress.unlocked);
+    requirement.classList.toggle("locked", !tierProgress.unlocked);
+    requirement.textContent = tierNumber === 1 ? "Open" : `Tier ${tierNumber - 1}: ${Math.min(tierProgress.purchased, tierProgress.required)} / ${tierProgress.required}`;
+  });
+
   unlocks.forEach((unlock) => {
     const button = document.querySelector(`[data-unlock-id="${unlock.id}"]`);
     if (!button) return;
@@ -1177,6 +720,7 @@ function renderShopCard(item) {
     <div class="shop-art">${images}</div>
     <div class="shop-copy">
       <h3>${item.name}</h3>
+      ${item.note ? `<p>${escapeHtml(item.note)}</p>` : ""}
       <span class="purchase-count">Bought ${owned}</span>
     </div>
     <button type="button" ${canAfford ? "" : "disabled"}>${killCostLabel(item.cost)}</button>
@@ -1184,6 +728,8 @@ function renderShopCard(item) {
 
   card.querySelector("button").addEventListener("click", () => {
     if (availableKillPoints() < item.cost) return;
+    const confirmed = window.confirm(`Buy ${item.name} for ${killCostLabel(item.cost)}?`);
+    if (!confirmed) return;
     const currentOwned = state.shopPurchases[item.id] ?? 0;
     state.shopPurchases[item.id] = currentOwned + 1;
     saveState();
@@ -1333,7 +879,13 @@ function imageNameForSpecialAsset(name, tags = []) {
   const tagSet = new Set(tags);
 
   if (tagSet.has("spellbook") || normalized.endsWith("spellbook")) {
-    return `${titleCase(normalized).replace(/ /g, "_")}.png`;
+    const spellbookImages = {
+      "standard spellbook": "Standard_spellbook.png",
+      "ancient spellbook": "Ancient_spellbook.png",
+      "lunar spellbook": "Lunar_spellbook.png",
+      "arceuus spellbook": "Arceuus_spellbook.png"
+    };
+    return spellbookImages[normalized] ?? `${titleCase(normalized).replace(/ /g, "_")}.png`;
   }
 
   if (tagSet.has("prayer") || ["piety", "rigour", "augury", "chivalry", "deadeye", "mystic vigour"].includes(normalized)) {
@@ -1409,7 +961,7 @@ function normalizeCollectionSetDefinitions(data) {
     images: [imageForDataEntry(setEntry)].filter(Boolean)
   }));
 
-  return sets.length ? sets : legacyCollectionSetDefinitions;
+  return sets;
 }
 
 function normalizeTalentUnlock(entry, sourceType) {
@@ -1448,24 +1000,12 @@ function buildDataUnlocks(itemsData, itemSetsData, unlocksData) {
 }
 
 function mergeUnlocks(dataUnlocks) {
-  const byId = new Map(dataUnlocks.map((unlock) => [unlock.id, unlock]));
-  const byName = new Map(dataUnlocks.map((unlock) => [normalizeDataText(unlock.name), unlock]));
-  const used = new Set();
-
-  const merged = legacyUnlocks.map((legacyUnlock) => {
-    const replacement = byId.get(legacyUnlock.id) || byName.get(normalizeDataText(legacyUnlock.name));
-    if (!replacement) return legacyUnlock;
-    used.add(replacement.id);
-    return { ...legacyUnlock, ...replacement, id: legacyUnlock.id };
+  const seen = new Set();
+  return dataUnlocks.filter((unlock) => {
+    if (!unlock?.id || seen.has(unlock.id)) return false;
+    seen.add(unlock.id);
+    return true;
   });
-
-  dataUnlocks.forEach((unlock) => {
-    if (!used.has(unlock.id) && !merged.some((item) => normalizeDataText(item.name) === normalizeDataText(unlock.name))) {
-      merged.push(unlock);
-    }
-  });
-
-  return merged;
 }
 
 function normalizeShopItems(data) {
@@ -1548,11 +1088,12 @@ async function loadAppData() {
     itemDefinitions = enrichCollectionSignals(collapseCollectionSets(items));
   } catch (error) {
     console.warn("Could not load Bronzeman JSON data", error);
-    dataWarnings.push("Could not load one or more Bronzeman JSON files; using built-in task/talent fallback and an empty shop.");
-    challenges = legacyChallenges;
-    unlocks = legacyUnlocks;
+    dataWarnings.push("Could not load one or more Bronzeman JSON files.");
+    challenges = { pvm: [], pvp: [] };
+    unlocks = [];
     shopItems = [];
-    collectionSetDefinitions = legacyCollectionSetDefinitions;
+    shopCategories = [];
+    collectionSetDefinitions = [];
     itemDefinitions = [];
   }
 }
@@ -1680,7 +1221,7 @@ function collapseCollectionSets(items) {
   const mergedItems = collectionSetDefinitions.map((definition) => mergedCollectionSet(definition, itemsById)).filter(Boolean);
 
   return [
-    ...items.filter((item) => !hiddenCollectionItemIds.has(item.id) && !mergedItemIds.has(item.id)),
+    ...items.filter((item) => !item.hidden && !mergedItemIds.has(item.id)),
     ...mergedItems
   ];
 }
