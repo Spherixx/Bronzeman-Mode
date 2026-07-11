@@ -439,6 +439,26 @@
                     "amount": "10"
                 }
             ]
+        },
+        {
+            "uid": "blessed-dhide",
+            "alias": "Blessed Dragonhide",
+            "category": "Gear",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Guthix coif"
+                },
+                {
+                    "imageUsed": "Guthix d'hide body"
+                },
+                {
+                    "imageUsed": "Guthix chaps"
+                },
+                {
+                    "imageUsed": "Guthix d'hide shield"
+                }
+            ]
         }
     ]
 }

@@ -464,10 +464,9 @@
                 "10380"
             ],
             "tags": [
-                "range arm",
-                "talent"
+                "range arm"
             ],
-            "imageUsed": "Black d'hide body",
+            "imageUsed": "Guthix d'hide body",
             "tier": "1",
             "alwaysAvailable": false,
             "unlocked": false,

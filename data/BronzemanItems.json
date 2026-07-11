@@ -6,7 +6,9 @@
       "alias": "Shark",
       "uid": "shark",
       "itemId": 385,
-      "tags": [],
+      "tags": [
+        "consumables"
+    ],
       "tier": null,
       "alwaysAvailable": true,
       "unlocked": true,
@@ -19,7 +21,9 @@
       "alias": "Manta ray",
       "uid": "manta-ray",
       "itemId": 391,
-      "tags": [],
+      "tags": [
+        "consumables"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -483,10 +487,12 @@
       "alias": "Climbing boots",
       "uid": "climbing-boots",
       "itemId": 3105,
-      "tags": [],
+      "tags": [
+        "generic gear"
+      ],
       "tier": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
+      "alwaysAvailable": true,
+      "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Climbing_boots",
       "imageName": "Climbing boots.png",
       "cost": null
@@ -496,7 +502,9 @@
       "alias": "Cooked karambwan",
       "uid": "cooked-karambwan",
       "itemId": 3144,
-      "tags": [],
+      "tags": [
+        "consumables"
+      ],
       "tier": null,
       "alwaysAvailable": true,
       "unlocked": true,
@@ -712,7 +720,6 @@
       "uid": "dragon-scimitar",
       "itemId": 4587,
       "tags": [
-        "spec wep",
         "melee wep"
       ],
       "tier": null,
@@ -1490,7 +1497,6 @@
       "uid": "rune-gloves",
       "itemId": 7460,
       "tags": [
-        "melee arm",
         "generic gear"
       ],
       "tier": 1,
@@ -1788,7 +1794,6 @@
       "uid": "avas-accumulator",
       "itemId": 10499,
       "tags": [
-        "range arm",
         "generic gear"
       ],
       "tier": null,
@@ -2776,8 +2781,7 @@
       "itemId": 22109,
       "tags": [
         "talent",
-        "range arm",
-        "generic gear"
+        "range arm"
       ],
       "tier": 3,
       "alwaysAvailable": false,
