@@ -107,7 +107,6 @@ const CHALLENGE_CATALOG = [
   {
     id: "obsidian-tri-brid",
     title: "Obsidian Tri-Brid",
-    reward: "One attempt to unlock a piece of Perilous Moons gear.",
     requirementGroups: [
       ["Rock-shell plate", "Spined body", "Skeletal top"],
       ["Tzhaar-ket-om", "Toktz-xil-ul", "Toktz-mej-tal"]
@@ -117,7 +116,8 @@ const CHALLENGE_CATALOG = [
       "Wear at least two pieces from each of the other two sets.",
       "Use an obsidian melee weapon, obsidian staff, and obsidian thrown weapon.",
       "Damage the opponent with melee, ranged, and magic during the fight using only obsidian weapons.",
-      "The opponent must fight back in legitimate combat gear. Bots or escape-only players do not count."
+      "The opponent must either be a legitimate pker or have a key worth at least 500k",
+      "Challenge requirements must be observed by all participating players in multi combat areas."
     ]
   }
 ];
@@ -1120,7 +1120,6 @@ function renderChallengeUnlockCard(challenge) {
         <ul>
           ${challenge.rules.map((rule) => `<li>${escapeHtml(rule)}</li>`).join("")}
         </ul>
-        <p><b>Reward:</b> ${escapeHtml(challenge.reward)}</p>
         <p class="challenge-disclaimer">*Reward items are not removed from the roulette after unlocking, so duplicate hits are possible and you will probably need more than 12 challenge completions.</p>
       </div>
     </div>
