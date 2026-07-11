@@ -1513,7 +1513,6 @@
       "itemId": 7462,
       "tags": [
         "talent",
-        "melee arm",
         "generic gear"
       ],
       "tier": 4,
@@ -1794,7 +1793,7 @@
       "uid": "avas-accumulator",
       "itemId": 10499,
       "tags": [
-        "generic gear"
+        "range arm"
       ],
       "tier": null,
       "alwaysAvailable": true,
@@ -2003,8 +2002,7 @@
       "itemId": 12002,
       "tags": [
         "talent",
-        "mage arm",
-        "generic gear"
+        "mage arm"
       ],
       "tier": 3,
       "alwaysAvailable": false,
@@ -2163,7 +2161,6 @@
       "itemId": 12791,
       "tags": [
         "talent",
-        "mage arm",
         "generic gear"
       ],
       "tier": 1,
@@ -2420,8 +2417,7 @@
       "itemId": 19544,
       "tags": [
         "talent",
-        "mage arm",
-        "generic gear"
+        "mage arm"
       ],
       "tier": 4,
       "alwaysAvailable": false,

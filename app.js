@@ -89,6 +89,38 @@ const collectionFilterDefinitions = [
 
 const collectionCategoryPriority = ["spec", "range", "mage", "melee", "gear", "potions", "runes", "ammo", "food", "talent", "shop", "other"];
 const TALENT_TIER_REQUIREMENT = 10;
+const PERILOUS_MOONS_REWARD_IDS = [
+  "blood-moon-helm",
+  "blood-moon-chestplate",
+  "blood-moon-tassets",
+  "dual-macuahuitl",
+  "blue-moon-helm",
+  "blue-moon-chestplate",
+  "blue-moon-tassets",
+  "blue-moon-spear",
+  "eclipse-moon-helm",
+  "eclipse-moon-chestplate",
+  "eclipse-moon-tassets",
+  "eclipse-atlatl"
+];
+const CHALLENGE_CATALOG = [
+  {
+    id: "obsidian-tri-brid",
+    title: "Obsidian Tri-Brid",
+    reward: "One attempt to unlock a piece of Perilous Moons gear.",
+    requirementGroups: [
+      ["Rock-shell helm", "Spined helm", "Skeletal helm"],
+      ["Tzhaar-ket-om", "Toktz-xil-ul", "Toktz-mej-tal"]
+    ],
+    rules: [
+      "Defeat a real opponent while using one full set of Rock-shell, Spined, or Skeletal armor.",
+      "Wear at least two pieces from each of the other two sets.",
+      "Use an obsidian melee weapon, obsidian staff, and obsidian thrown weapon.",
+      "Damage the opponent with melee, ranged, and magic during the fight using only obsidian weapons.",
+      "The opponent must fight back in legitimate combat gear. Bots or escape-only players do not count."
+    ]
+  }
+];
 const dataWarnings = [];
 let challengeIdAliases = {};
 let repeatableIdAliases = {};
@@ -109,7 +141,17 @@ function mergeCountMaps(first, second) {
 }
 
 function defaultState() {
-  return { completed: [], purchased: [], shopPurchases: {}, repeatablePurchases: {}, basicUnlocks: [], playerKills: 0 };
+  return {
+    completed: [],
+    purchased: [],
+    shopPurchases: {},
+    repeatablePurchases: {},
+    basicUnlocks: [],
+    challengeCompletions: {},
+    challengeRewardUnlocks: [],
+    challengeRolls: {},
+    playerKills: 0
+  };
 }
 
 function sanitizeState(rawState) {
@@ -118,8 +160,12 @@ function sanitizeState(rawState) {
   const validChallenges = new Set([...flattenPvmChallenges(), ...flattenPvpChallenges()].map((challenge) => challenge.id));
   const repeatables = flattenRepeatables();
   const validRepeatables = new Set(repeatables.map((repeatable) => repeatable.id));
+  const validChallengeUnlocks = new Set(PERILOUS_MOONS_REWARD_IDS);
+  const validChallengeIds = new Set(CHALLENGE_CATALOG.map((challenge) => challenge.id));
   const shopPurchases = {};
   const repeatablePurchases = {};
+  const challengeCompletions = {};
+  const challengeRolls = {};
 
   Object.entries(rawState?.shopPurchases ?? {}).forEach(([id, count]) => {
     const nextId = id;
@@ -151,6 +197,21 @@ function sanitizeState(rawState) {
     ? [...new Set(rawState.basicUnlocks)].filter((id) => typeof id === "string" && id.length)
     : [];
 
+  Object.entries(rawState?.challengeCompletions ?? {}).forEach(([id, count]) => {
+    if (validChallengeIds.has(id) && Number.isFinite(count)) {
+      challengeCompletions[id] = Math.max(0, Math.floor(count));
+    }
+  });
+
+  Object.entries(rawState?.challengeRolls ?? {}).forEach(([id, rewardId]) => {
+    if (validChallengeIds.has(id) && validChallengeUnlocks.has(rewardId)) {
+      challengeRolls[id] = rewardId;
+    }
+  });
+
+  const challengeRewardUnlocks = Array.isArray(rawState?.challengeRewardUnlocks)
+    ? [...new Set(rawState.challengeRewardUnlocks)].filter((id) => validChallengeUnlocks.has(id))
+    : [];
 
   return {
     completed: Array.isArray(rawState?.completed)
@@ -162,6 +223,9 @@ function sanitizeState(rawState) {
     shopPurchases,
     repeatablePurchases,
     basicUnlocks,
+    challengeCompletions,
+    challengeRewardUnlocks,
+    challengeRolls,
     playerKills: Number.isFinite(rawState?.playerKills) ? Math.max(0, Math.floor(rawState.playerKills)) : 0
   };
 }
@@ -175,12 +239,20 @@ function mergeStates(localState, remoteState) {
     shopPurchases[id] = Math.max(shopPurchases[id] ?? 0, count);
   });
 
+  const challengeCompletions = { ...local.challengeCompletions };
+  Object.entries(remote.challengeCompletions).forEach(([id, count]) => {
+    challengeCompletions[id] = Math.max(challengeCompletions[id] ?? 0, count);
+  });
+
   return sanitizeState({
     completed: [...local.completed, ...remote.completed],
     purchased: [...local.purchased, ...remote.purchased],
     shopPurchases,
     repeatablePurchases: mergeCountMaps(local.repeatablePurchases, remote.repeatablePurchases),
     basicUnlocks: [...local.basicUnlocks, ...remote.basicUnlocks],
+    challengeCompletions,
+    challengeRewardUnlocks: [...local.challengeRewardUnlocks, ...remote.challengeRewardUnlocks],
+    challengeRolls: { ...local.challengeRolls, ...remote.challengeRolls },
     playerKills: Math.max(local.playerKills, remote.playerKills)
   });
 }
@@ -787,6 +859,157 @@ function setBasicUnlockChecked(id, checked) {
   }
 }
 
+function challengeRequirementEntry(name) {
+  const itemRow = itemRowsByName.get(normalizeDataText(name));
+  return {
+    name: dataDisplayName(itemRow, name),
+    image: itemRow ? imageForDataEntry(itemRow) : resolveDataImage(name)
+  };
+}
+
+function challengeRewardItems() {
+  return PERILOUS_MOONS_REWARD_IDS
+    .map((id) => collectionItems().find((item) => item.id === id))
+    .filter(Boolean);
+}
+
+function challengeRewardIsUnlocked(id) {
+  return state.challengeRewardUnlocks.includes(id);
+}
+
+function challengeCollectionUnlocksItem(item) {
+  const itemIds = [item.id, ...(item.collectionIds ?? [])];
+  return itemIds.some((id) => challengeRewardIsUnlocked(id));
+}
+
+function renderChallengeIconGrid(groups) {
+  return groups.map((group) => `
+    <div class="challenge-kit-row">
+      ${group.map((name) => {
+        const entry = challengeRequirementEntry(name);
+        return `
+          <span class="challenge-kit-item" title="${escapeHtml(entry.name)}">
+            <img src="${entry.image}" alt="" loading="lazy" />
+            <b>${escapeHtml(entry.name)}</b>
+          </span>
+        `;
+      }).join("")}
+    </div>
+  `).join("");
+}
+
+function renderRewardRoulette(challenge) {
+  const rewards = challengeRewardItems();
+  const latestId = state.challengeRolls[challenge.id];
+  if (!rewards.length) return `<p class="challenge-empty">Perilous Moons reward items are missing.</p>`;
+
+  return `
+    <div class="roulette-strip" aria-label="Perilous Moons roulette rewards">
+      ${rewards.map((item) => {
+        const unlocked = challengeRewardIsUnlocked(item.id);
+        const latest = latestId === item.id;
+        return `
+          <span class="roulette-item ${unlocked ? "is-unlocked" : ""} ${latest ? "latest" : ""}" title="${escapeHtml(item.name)}">
+            ${renderItemImages(item.images)}
+            <b>${escapeHtml(item.name)}</b>
+          </span>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function renderChallengeUnlockedRewards() {
+  const rewards = challengeRewardItems();
+  if (!rewards.length) return `<p class="challenge-empty">No Perilous Moons reward items found.</p>`;
+
+  return `
+    <div class="challenge-reward-grid">
+      ${rewards.map((item) => {
+        const unlocked = challengeRewardIsUnlocked(item.id);
+        return `
+          <article class="challenge-reward-item ${unlocked ? "is-unlocked" : "is-locked"}">
+            <div class="challenge-reward-art">${renderItemImages(item.images)}</div>
+            <div>
+              <h4>${escapeHtml(item.name)}</h4>
+              <span>${unlocked ? "Unlocked" : "Locked"}</span>
+            </div>
+          </article>
+        `;
+      }).join("")}
+    </div>
+  `;
+}
+
+function completeChallengeRoll(challengeId) {
+  const rewards = challengeRewardItems();
+  if (!rewards.length) return;
+
+  const reward = rewards[Math.floor(Math.random() * rewards.length)];
+  state.challengeCompletions[challengeId] = (state.challengeCompletions[challengeId] ?? 0) + 1;
+  state.challengeRolls[challengeId] = reward.id;
+  if (!challengeRewardIsUnlocked(reward.id)) state.challengeRewardUnlocks.push(reward.id);
+
+  saveState();
+  renderChallengeUnlocks();
+  renderUnlocks();
+}
+
+function renderChallengeUnlockCard(challenge) {
+  const card = document.createElement("article");
+  const completions = state.challengeCompletions[challenge.id] ?? 0;
+  const latest = collectionItems().find((item) => item.id === state.challengeRolls[challenge.id]);
+  const rewardsAvailable = challengeRewardItems().length > 0;
+
+  card.className = "challenge-unlock-card";
+  card.innerHTML = `
+    <div class="challenge-unlock-header">
+      <div>
+        <span class="challenge-eyebrow">PvP unlock challenge</span>
+        <h3>${escapeHtml(challenge.title)}</h3>
+      </div>
+      <span class="challenge-completions">${completions} completions</span>
+    </div>
+
+    <div class="challenge-shop-card">
+      <div class="challenge-kit">${renderChallengeIconGrid(challenge.requirementGroups)}</div>
+      <div class="challenge-copy">
+        <ul>
+          ${challenge.rules.map((rule) => `<li>${escapeHtml(rule)}</li>`).join("")}
+        </ul>
+        <p><b>Reward:</b> ${escapeHtml(challenge.reward)}</p>
+      </div>
+    </div>
+
+    <div class="challenge-roll-panel">
+      <div class="challenge-roll-header">
+        <div>
+          <h4>Perilous Moons Roulette</h4>
+          <span>${latest ? `Latest roll: ${escapeHtml(latest.name)}` : "No rolls yet"}</span>
+        </div>
+        <button type="button" ${rewardsAvailable ? "" : "disabled"}>Complete + Roll</button>
+      </div>
+      ${renderRewardRoulette(challenge)}
+    </div>
+
+    <div class="challenge-unlocked-panel">
+      <h4>Unlocked From This Challenge</h4>
+      ${renderChallengeUnlockedRewards()}
+    </div>
+  `;
+
+  card.querySelector("button")?.addEventListener("click", () => completeChallengeRoll(challenge.id));
+  return card;
+}
+
+function renderChallengeUnlocks() {
+  const target = document.getElementById("challengeUnlockList");
+  if (!target) return;
+
+  target.innerHTML = "";
+  CHALLENGE_CATALOG.forEach((challenge) => target.appendChild(renderChallengeUnlockCard(challenge)));
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replaceAll("&", "&amp;")
@@ -1220,8 +1443,12 @@ function mergedCollectionSet(definition, itemsById) {
 
 function collapseCollectionSets(items) {
   const itemsById = new Map(items.map((item) => [item.id, item]));
-  const mergedItemIds = new Set(collectionSetDefinitions.flatMap((definition) => definition.itemIds));
-  const mergedItems = collectionSetDefinitions.map((definition) => mergedCollectionSet(definition, itemsById)).filter(Boolean);
+  const challengeRewardIds = new Set(PERILOUS_MOONS_REWARD_IDS);
+  const collapsibleSets = collectionSetDefinitions.filter((definition) => {
+    return !definition.itemIds.some((id) => challengeRewardIds.has(id));
+  });
+  const mergedItemIds = new Set(collapsibleSets.flatMap((definition) => definition.itemIds));
+  const mergedItems = collapsibleSets.map((definition) => mergedCollectionSet(definition, itemsById)).filter(Boolean);
 
   return [
     ...items.filter((item) => !item.hidden && !mergedItemIds.has(item.id)),
@@ -1250,6 +1477,7 @@ function shopMatchesCollectionItem(shopItem, item) {
 
 function collectionIsUnlocked(item) {
   if (item.sourceType === "always") return true;
+  if (challengeCollectionUnlocksItem(item)) return true;
 
   const tags = item.tags ?? [];
   const unlockedByTalent = tags.includes("talent") && unlocks.some((unlock) => state.purchased.includes(unlock.id) && unlockMatchesCollectionItem(unlock, item));
@@ -1509,6 +1737,7 @@ function render() {
   renderRepeatables();
   renderTalentTree();
   renderShop();
+  renderChallengeUnlocks();
   renderUnlocks();
 }
 
@@ -1545,7 +1774,7 @@ document.getElementById("removeKillButton").addEventListener("click", () => {
 
 document.getElementById("resetButton").addEventListener("click", () => {
   setSettingsOpen(false);
-  const shouldReset = window.confirm("Reset completed challenges, talents, collection checks, PK points, repeatables, and shop purchases?");
+  const shouldReset = window.confirm("Reset completed challenges, talents, collection checks, challenge rolls, PK points, repeatables, and shop purchases?");
   if (!shouldReset) return;
   Object.assign(state, defaultState());
   saveState();
