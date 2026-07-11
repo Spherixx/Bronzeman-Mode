@@ -131,7 +131,8 @@ let challengeRewardDisplayOrders = {};
 let activeChallengeRoll = null;
 let challengeCountdownTimer = null;
 const CHALLENGE_COUNTDOWN_SECONDS = 3;
-const CHALLENGE_ROLL_DURATION_MS = 3200;
+const CHALLENGE_ROLL_DURATION_MS = 4600;
+const CHALLENGE_ROLL_RESULT_HOLD_MS = 2200;
 
 function collectionFilterOptions() {
   return collectionFilterDefinitions;
@@ -965,7 +966,6 @@ function renderRewardRoulette(challenge) {
       ${activeRoll?.phase === "countdown" ? `
         <div class="roulette-countdown" aria-live="polite">
           <strong>${activeRoll.countdown}</strong>
-          <span>Roll starts soon</span>
         </div>
       ` : ""}
       <div class="roulette-strip">
@@ -1052,7 +1052,9 @@ function startChallengeRollAnimation() {
     fill: "forwards"
   });
 
-  animation.onfinish = finalizeChallengeRoll;
+  animation.onfinish = () => {
+    window.setTimeout(finalizeChallengeRoll, CHALLENGE_ROLL_RESULT_HOLD_MS);
+  };
 }
 
 function tickChallengeCountdown() {
@@ -1938,11 +1940,3 @@ async function initApp() {
 }
 
 initApp();
-
-
-
-
-
-
-
-

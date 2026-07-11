@@ -2515,8 +2515,6 @@ body {
   inset: 8px;
   display: grid;
   place-items: center;
-  align-content: center;
-  gap: 4px;
   background: rgba(8, 9, 11, 0.72);
   border: 1px solid rgba(240, 177, 108, 0.35);
   backdrop-filter: blur(4px);
@@ -2530,13 +2528,6 @@ body {
   line-height: 0.9;
   text-shadow: 0 0 26px rgba(240, 177, 108, 0.5);
   animation: countdownNumberPop 1s ease-in-out infinite;
-}
-
-.roulette-countdown span {
-  color: var(--text);
-  font: 0.72rem "DM Mono", monospace;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
 }
 
 @keyframes countdownPanelPulse {
