@@ -175,7 +175,9 @@
             "alias": "Soul rune",
             "uid": "soul-rune",
             "itemId": 566,
-            "tags": [],
+            "tags": [
+                "runes"
+            ],
             "tier": null,
             "alwaysAvailable": false,
             "unlocked": false,
@@ -188,8 +190,10 @@
             "alias": "Rune dart",
             "uid": "rune-dart",
             "itemId": 811,
-            "tags": [],
-            "tier": null,
+            "tags": [
+                "consumables"
+            ],
+            "tier": "1",
             "alwaysAvailable": false,
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Rune_dart",
@@ -201,10 +205,12 @@
             "alias": "Rune arrow",
             "uid": "rune-arrow",
             "itemId": 892,
-            "tags": [],
-            "tier": null,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tags": [
+                "consumables"
+            ],
+            "tier": "1",
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Rune_arrow",
             "imageName": "Rune arrow.png",
             "cost": null
@@ -231,8 +237,11 @@
             "alias": "Dragon longsword",
             "uid": "dragon-longsword",
             "itemId": 1305,
-            "tags": [],
-            "tier": null,
+            "tags": [
+                "spec wep",
+                "melee wep"
+            ],
+            "tier": "1",
             "cost": null,
             "alwaysAvailable": true,
             "unlocked": true,
@@ -262,7 +271,6 @@
             "uid": "dragon-mace",
             "itemId": 1434,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -271,7 +279,7 @@
             "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace",
             "imageName": "Dragon mace.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Amulet of glory(4)",
@@ -966,6 +974,21 @@
             "cost": 1
         },
         {
+            "name": "Snakeskin boots",
+            "alias": "Snakeskin boots",
+            "uid": "snakeskin-boots",
+            "itemId": 6328,
+            "tags": [
+                "range arm"
+            ],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Snakeskin_boots",
+            "imageName": "Snakeskin boots.png"
+        },
+        {
             "name": "Toktz-xil-ul",
             "alias": "Toktz-xil-ul",
             "uid": "toktz-xil-ul",
@@ -1120,7 +1143,9 @@
             "alias": "Seers ring",
             "uid": "seers-ring",
             "itemId": 6731,
-            "tags": [],
+            "tags": [
+                "generic gear"
+            ],
             "tier": null,
             "alwaysAvailable": false,
             "unlocked": false,
@@ -1133,7 +1158,9 @@
             "alias": "Archers ring",
             "uid": "archers-ring",
             "itemId": 6733,
-            "tags": [],
+            "tags": [
+                "generic gear"
+            ],
             "tier": null,
             "alwaysAvailable": false,
             "unlocked": false,
@@ -1146,7 +1173,9 @@
             "alias": "Warrior ring",
             "uid": "warrior-ring",
             "itemId": 6735,
-            "tags": [],
+            "tags": [
+                "generic gear"
+            ],
             "tier": null,
             "alwaysAvailable": false,
             "unlocked": false,
@@ -1159,7 +1188,9 @@
             "alias": "Berserker ring",
             "uid": "berserker-ring",
             "itemId": 6737,
-            "tags": [],
+            "tags": [
+                "generic gear"
+            ],
             "tier": null,
             "alwaysAvailable": false,
             "unlocked": false,
@@ -1168,21 +1199,85 @@
             "cost": null
         },
         {
+            "name": "Infinity top",
+            "alias": "Infinity top",
+            "uid": "infinity-top",
+            "itemId": 6916,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_top",
+            "imageName": "Infinity top.png"
+        },
+        {
+            "name": "Infinity hat",
+            "alias": "Infinity hat",
+            "uid": "infinity-hat",
+            "itemId": 6918,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_hat",
+            "imageName": "Infinity hat.png"
+        },
+        {
+            "name": "Infinity boots",
+            "alias": "Infinity boots",
+            "uid": "infinity-boots",
+            "itemId": 6920,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_boots",
+            "imageName": "Infinity boots.png"
+        },
+        {
+            "name": "Infinity gloves",
+            "alias": "Infinity gloves",
+            "uid": "infinity-gloves",
+            "itemId": 6922,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_gloves",
+            "imageName": "Infinity gloves.png"
+        },
+        {
+            "name": "Infinity bottoms",
+            "alias": "Infinity bottoms",
+            "uid": "infinity-bottoms",
+            "itemId": 6924,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_bottoms",
+            "imageName": "Infinity bottoms.png"
+        },
+        {
             "name": "Rune gloves",
             "alias": "Rune gloves",
             "uid": "rune-gloves",
             "itemId": 7460,
             "tags": [
-                "talent",
                 "melee arm",
                 "generic gear"
             ],
             "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Rune_gloves",
             "imageName": "Rune gloves.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Barrows gloves",
@@ -1281,6 +1376,97 @@
             "hidden": true
         },
         {
+            "name": "Moonclan helm",
+            "alias": "Moonclan helm",
+            "uid": "moonclan-helm",
+            "itemId": 9068,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_helm",
+            "imageName": "Moonclan helm.png"
+        },
+        {
+            "name": "Moonclan hat",
+            "alias": "Moonclan hat",
+            "uid": "moonclan-hat",
+            "itemId": 9069,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_hat",
+            "imageName": "Moonclan hat.png"
+        },
+        {
+            "name": "Moonclan armour",
+            "alias": "Moonclan armour",
+            "uid": "moonclan-armour",
+            "itemId": 9070,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_armour",
+            "imageName": "Moonclan armour.png"
+        },
+        {
+            "name": "Moonclan skirt",
+            "alias": "Moonclan skirt",
+            "uid": "moonclan-skirt",
+            "itemId": 9071,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_skirt",
+            "imageName": "Moonclan skirt.png"
+        },
+        {
+            "name": "Moonclan gloves",
+            "alias": "Moonclan gloves",
+            "uid": "moonclan-gloves",
+            "itemId": 9072,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_gloves",
+            "imageName": "Moonclan gloves.png"
+        },
+        {
+            "name": "Moonclan boots",
+            "alias": "Moonclan boots",
+            "uid": "moonclan-boots",
+            "itemId": 9073,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_boots",
+            "imageName": "Moonclan boots.png"
+        },
+        {
+            "name": "Moonclan cape",
+            "alias": "Moonclan cape",
+            "uid": "moonclan-cape",
+            "itemId": 9074,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_cape",
+            "imageName": "Moonclan cape.png"
+        },
+        {
             "name": "Astral rune",
             "alias": "Astral rune",
             "uid": "astral-rune",
@@ -1292,6 +1478,21 @@
             "wikiLink": "https://oldschool.runescape.wiki/w/Astral_rune",
             "imageName": "Astral rune.png",
             "cost": null
+        },
+        {
+            "name": "Lunar ring",
+            "alias": "Lunar ring",
+            "uid": "lunar-ring",
+            "itemId": 9104,
+            "tags": [
+                "generic gear"
+            ],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Lunar_ring",
+            "imageName": "Lunar ring.png"
         },
         {
             "name": "Rune crossbow",
@@ -1535,6 +1736,54 @@
             "cost": 3
         },
         {
+            "name": "Ring of the gods",
+            "alias": "Ring of the gods",
+            "uid": "ring-of-the-gods",
+            "itemId": 12601,
+            "tags": [
+                "talent",
+                "generic gear"
+            ],
+            "tier": "1",
+            "cost": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Ring_of_the_gods",
+            "imageName": "Ring of the gods.png"
+        },
+        {
+            "name": "Tyrannical ring",
+            "alias": "Tyrannical ring",
+            "uid": "tyrannical-ring",
+            "itemId": 12603,
+            "tags": [
+                "talent",
+                "generic gear"
+            ],
+            "tier": "1",
+            "cost": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Tyrannical_ring",
+            "imageName": "Tyrannical ring.png"
+        },
+        {
+            "name": "Treasonous ring",
+            "alias": "Treasonous ring",
+            "uid": "treasonous-ring",
+            "itemId": 12605,
+            "tags": [
+                "talent",
+                "generic gear"
+            ],
+            "tier": "1",
+            "cost": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Treasonous_ring",
+            "imageName": "Treasonous ring.png"
+        },
+        {
             "name": "Book of war",
             "alias": "Book of war",
             "uid": "book-of-war",
@@ -1661,7 +1910,7 @@
         },
         {
             "name": "Saradomin's blessed sword",
-            "alias": "Saradomin's blessed sword",
+            "alias": "Bleessed Sarasword",
             "uid": "saradomins-blessed-sword",
             "itemId": 12809,
             "tags": [
@@ -2027,7 +2276,7 @@
                 "melee wep"
             ],
             "tier": "1",
-            "cost": "1",
+            "cost": null,
             "alwaysAvailable": false,
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_sword",
@@ -2237,6 +2486,32 @@
             "wikiLink": "https://oldschool.runescape.wiki/w/Ava%27s_assembler",
             "imageName": "Ava's assembler.png",
             "cost": 3
+        },
+        {
+            "name": "Black d'hide shield",
+            "alias": "Black d'hide shield",
+            "uid": "black-dhide-shield",
+            "itemId": 22284,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Black_d%27hide_shield",
+            "imageName": "Black d'hide shield.png"
+        },
+        {
+            "name": "Ivandis flail",
+            "alias": "Ivandis flail",
+            "uid": "ivandis-flail",
+            "itemId": 22398,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Ivandis_flail",
+            "imageName": "Ivandis flail.png"
         },
         {
             "name": "Dragon knife(p++)",
@@ -2459,6 +2734,19 @@
             "wikiLink": "https://oldschool.runescape.wiki/w/Loot_key",
             "imageName": "Loot key.png",
             "cost": null
+        },
+        {
+            "name": "Blighted surge sack",
+            "alias": "Blighted surge sack",
+            "uid": "blighted-surge-sack",
+            "itemId": 26705,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_surge_sack",
+            "imageName": "Blighted surge sack.png"
         },
         {
             "name": "Scroll of imbuing",
@@ -2925,6 +3213,22 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Granite_longsword",
             "imageName": "Granite longsword.png"
+        },
+        {
+            "name": "Belle's folly",
+            "alias": "Belle's folly",
+            "uid": "belles-folly",
+            "itemId": null,
+            "tags": [
+                "melee wep",
+                "talent"
+            ],
+            "tier": "2",
+            "cost": "2",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Belle%27s_folly",
+            "imageName": "Belle's folly.png"
         }
     ],
     "otherImages": [],

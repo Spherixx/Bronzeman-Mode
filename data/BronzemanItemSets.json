@@ -411,6 +411,48 @@
             "alwaysAvailable": false,
             "unlocked": false,
             "cost": 1
+        },
+        {
+            "name": "Moonclan Robes",
+            "alias": "Moonclan Robes",
+            "uid": "moonclan-equipment",
+            "itemIds": [
+                "9068",
+                "9069",
+                "9070",
+                "9071",
+                "9072",
+                "9073",
+                "9074"
+            ],
+            "tags": [
+                "mage arm"
+            ],
+            "imageUsed": "Moonclan armour",
+            "tier": "1",
+            "alwaysAvailable": true,
+            "unlocked": true,
+            "cost": 1
+        },
+        {
+            "name": "Infinity Robes",
+            "alias": "Infinity Robes",
+            "uid": "infinity-equipment",
+            "itemIds": [
+                "6916",
+                "6918",
+                "6920",
+                "6922",
+                "6924"
+            ],
+            "tags": [
+                "mage arm"
+            ],
+            "imageUsed": "Infinity hat",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "cost": 1
         }
     ]
 }

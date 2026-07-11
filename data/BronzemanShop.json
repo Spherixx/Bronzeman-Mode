@@ -4,7 +4,8 @@
         "Runes / Ammo",
         "Food",
         "Potions",
-        "Other"
+        "Other",
+        "Gear"
     ],
     "shopItems": [
         {
@@ -383,6 +384,34 @@
                 },
                 {
                     "imageUsed": "Burning amulet"
+                }
+            ]
+        },
+        {
+            "uid": "infinity-set",
+            "alias": "Infinity Robes",
+            "category": "Gear",
+            "cost": 3,
+            "items": [
+                {
+                    "imageUsed": "Infinity hat"
+                },
+                {
+                    "imageUsed": "Infinity top"
+                },
+                {
+                    "imageUsed": "Infinity bottoms"
+                }
+            ]
+        },
+        {
+            "uid": "blighted-surge-sack",
+            "alias": "Surge Sacks",
+            "category": "Runes / Ammo",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Blighted surge sack"
                 }
             ]
         }
