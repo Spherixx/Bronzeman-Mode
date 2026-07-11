@@ -109,7 +109,7 @@ const CHALLENGE_CATALOG = [
     title: "Obsidian Tri-Brid",
     reward: "One attempt to unlock a piece of Perilous Moons gear.",
     requirementGroups: [
-      ["Rock-shell helm", "Spined helm", "Skeletal helm"],
+      ["Rock-shell plate", "Spined body", "Skeletal top"],
       ["Tzhaar-ket-om", "Toktz-xil-ul", "Toktz-mej-tal"]
     ],
     rules: [
@@ -127,6 +127,11 @@ let repeatableIdAliases = {};
 let itemRowsByUid = new Map();
 let itemRowsByItemId = new Map();
 let itemRowsByName = new Map();
+let challengeRewardDisplayOrders = {};
+let activeChallengeRoll = null;
+let challengeCountdownTimer = null;
+const CHALLENGE_COUNTDOWN_SECONDS = 3;
+const CHALLENGE_ROLL_DURATION_MS = 3200;
 
 function collectionFilterOptions() {
   return collectionFilterDefinitions;
@@ -873,6 +878,55 @@ function challengeRewardItems() {
     .filter(Boolean);
 }
 
+function itemByCollectionId(id) {
+  return collectionItems().find((item) => item.id === id);
+}
+
+function rewardItemsFromIds(ids) {
+  return ids.map(itemByCollectionId).filter(Boolean);
+}
+
+function shuffledItems(items) {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
+
+function idleChallengeRewardItems(challengeId) {
+  const rewards = challengeRewardItems();
+  const rewardIds = rewards.map((item) => item.id);
+  const currentOrder = challengeRewardDisplayOrders[challengeId] ?? [];
+  const hasCurrentOrder = currentOrder.length === rewardIds.length && rewardIds.every((id) => currentOrder.includes(id));
+
+  if (!hasCurrentOrder) {
+    challengeRewardDisplayOrders[challengeId] = shuffledItems(rewards).map((item) => item.id);
+  }
+
+  return rewardItemsFromIds(challengeRewardDisplayOrders[challengeId]);
+}
+
+function buildChallengeReel(rewards, rewardId) {
+  const rewardIds = rewards.map((item) => item.id);
+  const reelIds = [];
+
+  for (let cycle = 0; cycle < 4; cycle += 1) {
+    reelIds.push(...shuffledItems(rewardIds));
+  }
+
+  const landingGroup = shuffledItems(rewardIds.filter((id) => id !== rewardId));
+  const landingOffset = Math.min(landingGroup.length, 4 + Math.floor(Math.random() * 4));
+  landingGroup.splice(landingOffset, 0, rewardId);
+  reelIds.push(...landingGroup);
+
+  return {
+    reelIds,
+    targetIndex: reelIds.lastIndexOf(rewardId)
+  };
+}
+
 function challengeRewardIsUnlocked(id) {
   return state.challengeRewardUnlocks.includes(id);
 }
@@ -900,21 +954,33 @@ function renderChallengeIconGrid(groups) {
 
 function renderRewardRoulette(challenge) {
   const rewards = challengeRewardItems();
+  const activeRoll = activeChallengeRoll?.challengeId === challenge.id ? activeChallengeRoll : null;
   const latestId = state.challengeRolls[challenge.id];
   if (!rewards.length) return `<p class="challenge-empty">Perilous Moons reward items are missing.</p>`;
+  const visibleRewards = activeRoll ? rewardItemsFromIds(activeRoll.reelIds) : idleChallengeRewardItems(challenge.id);
 
   return `
-    <div class="roulette-strip" aria-label="Perilous Moons roulette rewards">
-      ${rewards.map((item) => {
+    <div class="roulette-stage ${activeRoll?.phase ?? "idle"}" data-challenge-id="${escapeHtml(challenge.id)}" aria-label="Perilous Moons roulette rewards">
+      <span class="roulette-pointer" aria-hidden="true"></span>
+      ${activeRoll?.phase === "countdown" ? `
+        <div class="roulette-countdown" aria-live="polite">
+          <strong>${activeRoll.countdown}</strong>
+          <span>Roll starts soon</span>
+        </div>
+      ` : ""}
+      <div class="roulette-strip">
+      ${visibleRewards.map((item, index) => {
         const unlocked = challengeRewardIsUnlocked(item.id);
         const latest = latestId === item.id;
+        const target = activeRoll?.targetIndex === index;
         return `
-          <span class="roulette-item ${unlocked ? "is-unlocked" : ""} ${latest ? "latest" : ""}" title="${escapeHtml(item.name)}">
+          <span class="roulette-item ${unlocked ? "is-unlocked" : ""} ${latest ? "latest" : ""} ${target ? "target" : ""}" title="${escapeHtml(item.name)}">
             ${renderItemImages(item.images)}
             <b>${escapeHtml(item.name)}</b>
           </span>
         `;
       }).join("")}
+      </div>
     </div>
   `;
 }
@@ -941,25 +1007,100 @@ function renderChallengeUnlockedRewards() {
   `;
 }
 
-function completeChallengeRoll(challengeId) {
-  const rewards = challengeRewardItems();
-  if (!rewards.length) return;
+function clearChallengeCountdownTimer() {
+  if (!challengeCountdownTimer) return;
+  window.clearInterval(challengeCountdownTimer);
+  challengeCountdownTimer = null;
+}
 
-  const reward = rewards[Math.floor(Math.random() * rewards.length)];
+function finalizeChallengeRoll() {
+  if (!activeChallengeRoll) return;
+
+  const { challengeId, rewardId } = activeChallengeRoll;
   state.challengeCompletions[challengeId] = (state.challengeCompletions[challengeId] ?? 0) + 1;
-  state.challengeRolls[challengeId] = reward.id;
-  if (!challengeRewardIsUnlocked(reward.id)) state.challengeRewardUnlocks.push(reward.id);
+  state.challengeRolls[challengeId] = rewardId;
+  if (!challengeRewardIsUnlocked(rewardId)) state.challengeRewardUnlocks.push(rewardId);
 
+  challengeRewardDisplayOrders[challengeId] = shuffledItems(challengeRewardItems()).map((item) => item.id);
+  activeChallengeRoll = null;
+  clearChallengeCountdownTimer();
   saveState();
   renderChallengeUnlocks();
   renderUnlocks();
 }
 
+function startChallengeRollAnimation() {
+  if (!activeChallengeRoll || activeChallengeRoll.phase !== "rolling" || activeChallengeRoll.animationStarted) return;
+
+  const stage = document.querySelector(`.roulette-stage.rolling[data-challenge-id="${activeChallengeRoll.challengeId}"]`);
+  const strip = stage?.querySelector(".roulette-strip");
+  const target = stage?.querySelector(".roulette-item.target");
+  if (!stage || !strip || !target) return;
+
+  activeChallengeRoll.animationStarted = true;
+  const targetOffset = target.offsetLeft + (target.offsetWidth / 2);
+  const destination = (stage.clientWidth / 2) - targetOffset;
+  const wobble = Math.min(24, Math.max(10, target.offsetWidth * 0.18));
+  const animation = strip.animate([
+    { transform: "translateX(0)" },
+    { transform: `translateX(${destination - wobble}px)`, offset: 0.84 },
+    { transform: `translateX(${destination + (wobble * 0.35)}px)`, offset: 0.94 },
+    { transform: `translateX(${destination}px)` }
+  ], {
+    duration: CHALLENGE_ROLL_DURATION_MS,
+    easing: "cubic-bezier(.08,.84,.18,1)",
+    fill: "forwards"
+  });
+
+  animation.onfinish = finalizeChallengeRoll;
+}
+
+function tickChallengeCountdown() {
+  if (!activeChallengeRoll || activeChallengeRoll.phase !== "countdown") {
+    clearChallengeCountdownTimer();
+    return;
+  }
+
+  activeChallengeRoll.countdown -= 1;
+  if (activeChallengeRoll.countdown <= 0) {
+    activeChallengeRoll.phase = "rolling";
+    activeChallengeRoll.countdown = 0;
+    clearChallengeCountdownTimer();
+  }
+
+  renderChallengeUnlocks();
+}
+
+function completeChallengeRoll(challengeId) {
+  if (activeChallengeRoll) return;
+  const rewards = challengeRewardItems();
+  if (!rewards.length) return;
+
+  const reward = rewards[Math.floor(Math.random() * rewards.length)];
+  const reel = buildChallengeReel(rewards, reward.id);
+  activeChallengeRoll = {
+    challengeId,
+    rewardId: reward.id,
+    phase: "countdown",
+    countdown: CHALLENGE_COUNTDOWN_SECONDS,
+    animationStarted: false,
+    ...reel
+  };
+
+  clearChallengeCountdownTimer();
+  challengeCountdownTimer = window.setInterval(tickChallengeCountdown, 1000);
+  renderChallengeUnlocks();
+}
+
 function renderChallengeUnlockCard(challenge) {
   const card = document.createElement("article");
   const completions = state.challengeCompletions[challenge.id] ?? 0;
-  const latest = collectionItems().find((item) => item.id === state.challengeRolls[challenge.id]);
+  const latest = itemByCollectionId(state.challengeRolls[challenge.id]);
   const rewardsAvailable = challengeRewardItems().length > 0;
+  const isRolling = activeChallengeRoll?.challengeId === challenge.id;
+  const rollButtonLabel = isRolling
+    ? activeChallengeRoll.phase === "countdown" ? `Rolling in ${activeChallengeRoll.countdown}` : "Rolling..."
+    : "Complete + Roll";
 
   card.className = "challenge-unlock-card";
   card.innerHTML = `
@@ -978,6 +1119,7 @@ function renderChallengeUnlockCard(challenge) {
           ${challenge.rules.map((rule) => `<li>${escapeHtml(rule)}</li>`).join("")}
         </ul>
         <p><b>Reward:</b> ${escapeHtml(challenge.reward)}</p>
+        <p class="challenge-disclaimer">*Reward items are not removed from the roulette after unlocking, so duplicate hits are possible and you will probably need more than 12 challenge completions.</p>
       </div>
     </div>
 
@@ -987,7 +1129,7 @@ function renderChallengeUnlockCard(challenge) {
           <h4>Perilous Moons Roulette</h4>
           <span>${latest ? `Latest roll: ${escapeHtml(latest.name)}` : "No rolls yet"}</span>
         </div>
-        <button type="button" ${rewardsAvailable ? "" : "disabled"}>Complete + Roll</button>
+        <button type="button" ${rewardsAvailable && !activeChallengeRoll ? "" : "disabled"}>${rollButtonLabel}</button>
       </div>
       ${renderRewardRoulette(challenge)}
     </div>
@@ -1008,6 +1150,9 @@ function renderChallengeUnlocks() {
 
   target.innerHTML = "";
   CHALLENGE_CATALOG.forEach((challenge) => target.appendChild(renderChallengeUnlockCard(challenge)));
+  if (activeChallengeRoll?.phase === "rolling") {
+    window.requestAnimationFrame(startChallengeRollAnimation);
+  }
 }
 
 function escapeHtml(value) {
