@@ -447,7 +447,7 @@ function purchasedInTier(tier) {
 function tierRequirementProgress(tier) {
   if (tier <= 1) return { required: 0, purchased: 0, unlocked: true };
   const purchased = purchasedInTier(tier - 1);
-  const required = tier === 2 ? 5 : TALENT_TIER_REQUIREMENT;
+  const required = TALENT_TIER_REQUIREMENT;
   return { required, purchased, unlocked: purchased >= required };
 }
 

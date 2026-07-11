@@ -353,26 +353,6 @@
             "cost": 2
         },
         {
-            "name": "Imbued Dagannoth rings",
-            "alias": "Imbued DK Rings",
-            "uid": "imbued-dagannoth-rings",
-            "itemIds": [
-                "11773",
-                "11771",
-                "11772",
-                "11770"
-            ],
-            "tags": [
-                "generic gear",
-                "talent"
-            ],
-            "imageUsed": "Berserker ring (i)",
-            "tier": 2,
-            "alwaysAvailable": false,
-            "unlocked": false,
-            "cost": 2
-        },
-        {
             "name": "God staves",
             "alias": "Mage Arena staves",
             "uid": "god-staves",
@@ -449,6 +429,108 @@
                 "mage arm"
             ],
             "imageUsed": "Infinity hat",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "cost": 1
+        },
+        {
+            "name": "Black dragonhide",
+            "alias": "Black D'Hide",
+            "uid": "black-dragonhide-armor",
+            "itemIds": [
+                "2491",
+                "2497",
+                "2503",
+                "22284"
+            ],
+            "tags": [
+                "range arm"
+            ],
+            "imageUsed": "Black d'hide body",
+            "tier": "1",
+            "alwaysAvailable": true,
+            "unlocked": true,
+            "cost": 1
+        },
+        {
+            "name": "Blessed dragonhide",
+            "alias": "Blessed D'Hide",
+            "uid": "blessed-dragonhide-armor",
+            "itemIds": [
+                "23188",
+                "10376",
+                "10378",
+                "10380"
+            ],
+            "tags": [
+                "range arm",
+                "talent"
+            ],
+            "imageUsed": "Black d'hide body",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "cost": 1
+        },
+        {
+            "name": "Rock-shell armor",
+            "alias": "Rockshell Armor",
+            "uid": "rock-shell-armor",
+            "itemIds": [
+                "6128",
+                "6129",
+                "6130",
+                "6145",
+                "6151"
+            ],
+            "tags": [
+                "melee arm",
+                "talent"
+            ],
+            "imageUsed": "Rock-shell plate",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "cost": 1
+        },
+        {
+            "name": "Spined armor",
+            "alias": "Spined Armor",
+            "uid": "spined-armor",
+            "itemIds": [
+                "6131",
+                "6133",
+                "6135",
+                "6143",
+                "6149"
+            ],
+            "tags": [
+                "range arm",
+                "talent"
+            ],
+            "imageUsed": "Spined body",
+            "tier": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "cost": 1
+        },
+        {
+            "name": "Skeletal armor",
+            "alias": "Skeletal Armor",
+            "uid": "skeletal-armor",
+            "itemIds": [
+                "6137",
+                "6139",
+                "6141",
+                "6147",
+                "6153"
+            ],
+            "tags": [
+                "mage arm",
+                "talent"
+            ],
+            "imageUsed": "Skeletal top",
             "tier": "1",
             "alwaysAvailable": false,
             "unlocked": false,

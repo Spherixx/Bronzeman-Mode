@@ -336,10 +336,10 @@
             ]
         },
         {
-            "uid": "dagannoth-ring-reimbue",
-            "alias": "Dagannoth ring re-imbue",
+            "uid": "ring-imbue",
+            "alias": "DK or Wildy Ring Imbue",
             "category": "Other",
-            "cost": 1,
+            "cost": 2,
             "items": [
                 {
                     "imageUsed": "Scroll of imbuing"
@@ -411,7 +411,32 @@
             "cost": 1,
             "items": [
                 {
-                    "imageUsed": "Blighted surge sack"
+                    "imageUsed": "Blighted surge sack",
+                    "amount": "10"
+                }
+            ]
+        },
+        {
+            "uid": "wilderness-crabs-teleport",
+            "alias": "Wilderness crabs teleport",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Wilderness crabs teleport",
+                    "amount": "10"
+                }
+            ]
+        },
+        {
+            "uid": "ring-of-dueling",
+            "alias": "Ring of Dueling",
+            "category": "Other",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Ring of Dueling",
+                    "amount": "10"
                 }
             ]
         }
