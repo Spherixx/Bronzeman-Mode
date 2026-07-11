@@ -62,8 +62,7 @@
             "alias": "Chivalry",
             "uid": "chivalry",
             "tags": [
-                "prayer",
-                "talent"
+                "prayer"
             ],
             "imageUsed": "Chivalry",
             "tier": "3",
@@ -76,8 +75,7 @@
             "alias": "Piety",
             "uid": "piety",
             "tags": [
-                "prayer",
-                "talent"
+                "prayer"
             ],
             "imageUsed": "Piety",
             "tier": "4",
@@ -104,8 +102,7 @@
             "alias": "Augury",
             "uid": "augury",
             "tags": [
-                "prayer",
-                "talent"
+                "prayer"
             ],
             "imageUsed": "Augury",
             "tier": "4",

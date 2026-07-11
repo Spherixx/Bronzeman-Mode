@@ -447,7 +447,8 @@ function purchasedInTier(tier) {
 function tierRequirementProgress(tier) {
   if (tier <= 1) return { required: 0, purchased: 0, unlocked: true };
   const purchased = purchasedInTier(tier - 1);
-  return { required: TALENT_TIER_REQUIREMENT, purchased, unlocked: purchased >= TALENT_TIER_REQUIREMENT };
+  const required = tier === 2 ? 5 : TALENT_TIER_REQUIREMENT;
+  return { required, purchased, unlocked: purchased >= required };
 }
 
 function canBuy(unlock) {
@@ -969,7 +970,7 @@ function normalizeTalentUnlock(entry, sourceType) {
   const tier = toNumber(entry.tier, NaN);
   if (!Number.isFinite(cost) || cost <= 0 || !Number.isFinite(tier) || tier <= 0) return null;
 
-  const tags = uniqueTags([...(entry.tags ?? []), "talent"]);
+  const tags = uniqueTags(entry.tags ?? []);
   const collectionIds = sourceType === "set"
     ? itemIdsFromDataIds(entry.itemIds)
     : [dataUid(entry)].filter(Boolean);
@@ -989,12 +990,14 @@ function normalizeTalentUnlock(entry, sourceType) {
 
 function buildDataUnlocks(itemsData, itemSetsData, unlocksData) {
   const itemUnlocks = toArray(itemsData?.items)
-    .filter((item) => toArray(item.tags).includes("talent") || item.cost !== null || item.tier !== null)
+    .filter((item) => toArray(item.tags).includes("talent"))
     .map((item) => normalizeTalentUnlock(item, "item"));
   const setUnlocks = toArray(itemSetsData?.itemSets)
-    .filter((itemSet) => toArray(itemSet.tags).includes("talent") || itemSet.cost !== null || itemSet.tier !== null)
+    .filter((itemSet) => toArray(itemSet.tags).includes("talent"))
     .map((itemSet) => normalizeTalentUnlock(itemSet, "set"));
-  const nonItemUnlocks = toArray(unlocksData?.unlocks).map((unlock) => normalizeTalentUnlock(unlock, "unlock"));
+  const nonItemUnlocks = toArray(unlocksData?.unlocks)
+    .filter((unlock) => toArray(unlock.tags).includes("talent"))
+    .map((unlock) => normalizeTalentUnlock(unlock, "unlock"));
 
   return [...itemUnlocks, ...setUnlocks, ...nonItemUnlocks].filter(Boolean);
 }
@@ -1464,6 +1467,10 @@ function renderStats() {
   const repeatables = flattenRepeatables();
   const pvmCompleted = pvmChallenges.filter((challenge) => state.completed.includes(challenge.id)).length;
   const pvpCompleted = pvpChallenges.filter((challenge) => state.completed.includes(challenge.id)).length;
+  const pvmPoints = pvmChallenges.reduce((sum, challenge) => sum + challenge.points, 0);
+  const pvpPoints = pvpChallenges.reduce((sum, challenge) => sum + challenge.points, 0);
+  const pvmEarnedPoints = pvmChallenges.reduce((sum, challenge) => sum + (state.completed.includes(challenge.id) ? challenge.points : 0), 0);
+  const pvpEarnedPoints = pvpChallenges.reduce((sum, challenge) => sum + (state.completed.includes(challenge.id) ? challenge.points : 0), 0);
   const repeatablePurchased = repeatables.reduce((sum, repeatable) => sum + (state.repeatablePurchases[repeatable.id] ?? 0), 0);
   const complete = totalCompleted();
   const total = pvmChallenges.length + pvpChallenges.length;
@@ -1478,8 +1485,8 @@ function renderStats() {
   document.getElementById("shopSpent").textContent = totalShopSpent() + totalRepeatableSpent();
   document.getElementById("challengeProgress").textContent = `${complete} / ${total}`;
   document.getElementById("repeatableCount").textContent = `${repeatablePurchased} bought`;
-  document.getElementById("pvmCount").textContent = `${pvmCompleted} / ${pvmChallenges.length}`;
-  document.getElementById("pvpCount").textContent = `${pvpCompleted} / ${pvpChallenges.length}`;
+  document.getElementById("pvmCount").textContent = `${pvmCompleted} / ${pvmChallenges.length} tasks | ${pvmEarnedPoints} / ${pvmPoints} points`;
+  document.getElementById("pvpCount").textContent = `${pvpCompleted} / ${pvpChallenges.length} tasks | ${pvpEarnedPoints} / ${pvpPoints} points`;
   document.getElementById("progressBar").style.width = `${percent}%`;
 }
 

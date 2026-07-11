@@ -227,6 +227,19 @@
             "cost": 3
         },
         {
+            "name": "Dragon longsword",
+            "alias": "Dragon longsword",
+            "uid": "dragon-longsword",
+            "itemId": 1305,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_longsword",
+            "imageName": "Dragon longsword.png"
+        },
+        {
             "name": "Dragon battleaxe",
             "alias": "Dragon battleaxe",
             "uid": "dragon-battleaxe",
@@ -254,8 +267,8 @@
                 "melee wep"
             ],
             "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace",
             "imageName": "Dragon mace.png",
             "cost": 1
@@ -266,15 +279,14 @@
             "uid": "amulet-of-glory-4",
             "itemId": 1712,
             "tags": [
-                "talent",
                 "generic gear"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_glory(4)",
             "imageName": "Amulet of glory(4).png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Pineapple pizza",
@@ -666,16 +678,15 @@
             "uid": "dragon-scimitar",
             "itemId": 4587,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_scimitar",
             "imageName": "Dragon scimitar.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Ahrim's hood",
@@ -1243,6 +1254,19 @@
             "cost": null
         },
         {
+            "name": "Rune defender",
+            "alias": "Rune defender",
+            "uid": "rune-defender",
+            "itemId": 8850,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Rune_defender",
+            "imageName": "Rune defender.png"
+        },
+        {
             "name": "Warrior guild token",
             "alias": "Warrior guild token",
             "uid": "warrior-guild-token",
@@ -1275,15 +1299,14 @@
             "uid": "rune-crossbow",
             "itemId": 9185,
             "tags": [
-                "talent",
                 "range wep"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Rune_crossbow",
             "imageName": "Rune crossbow.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Ava's accumulator",
@@ -1291,16 +1314,15 @@
             "uid": "avas-accumulator",
             "itemId": 10499,
             "tags": [
-                "talent",
                 "range arm",
                 "generic gear"
             ],
-            "tier": 1,
-            "alwaysAvailable": false,
-            "unlocked": false,
+            "tier": null,
+            "alwaysAvailable": true,
+            "unlocked": true,
             "wikiLink": "https://oldschool.runescape.wiki/w/Ava%27s_accumulator",
             "imageName": "Ava's accumulator.png",
-            "cost": 1
+            "cost": null
         },
         {
             "name": "Fighter torso",
@@ -1452,7 +1474,6 @@
             "uid": "armadyl-godsword",
             "itemId": 11802,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -1461,7 +1482,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_godsword",
             "imageName": "Armadyl godsword.png",
-            "cost": 5
+            "cost": null
         },
         {
             "name": "Zamorak godsword",
@@ -1469,7 +1490,6 @@
             "uid": "zamorak-godsword",
             "itemId": 11808,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -1478,7 +1498,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_godsword",
             "imageName": "Zamorak godsword.png",
-            "cost": 5
+            "cost": null
         },
         {
             "name": "Saradomin sword",
@@ -1662,7 +1682,6 @@
             "uid": "toxic-staff-of-the-dead",
             "itemId": 12904,
             "tags": [
-                "talent",
                 "spec wep",
                 "mage wep"
             ],
@@ -1671,7 +1690,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Toxic_staff_of_the_dead",
             "imageName": "Toxic staff of the dead.png",
-            "cost": 4
+            "cost": null
         },
         {
             "name": "Anti-venom+(4)",
@@ -1708,7 +1727,6 @@
             "uid": "serpentine-helm",
             "itemId": 12931,
             "tags": [
-                "talent",
                 "melee arm"
             ],
             "tier": 4,
@@ -1716,7 +1734,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Serpentine_helm",
             "imageName": "Serpentine helm.png",
-            "cost": 4
+            "cost": null
         },
         {
             "name": "Dragon defender",
@@ -1724,7 +1742,6 @@
             "uid": "dragon-defender",
             "itemId": 12954,
             "tags": [
-                "talent",
                 "melee arm",
                 "generic gear"
             ],
@@ -1733,7 +1750,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_defender",
             "imageName": "Dragon defender.png",
-            "cost": 2
+            "cost": null
         },
         {
             "name": "Abyssal dagger",
@@ -1741,7 +1758,6 @@
             "uid": "abyssal-dagger",
             "itemId": 13265,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -1750,7 +1766,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_dagger",
             "imageName": "Abyssal dagger.png",
-            "cost": 3
+            "cost": null
         },
         {
             "name": "Xerician hat",
@@ -1947,12 +1963,12 @@
                 "talent",
                 "generic gear"
             ],
-            "tier": 3,
+            "tier": 1,
             "alwaysAvailable": false,
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Royal_seed_pod",
             "imageName": "Royal seed pod.png",
-            "cost": 3
+            "cost": 1
         },
         {
             "name": "Tome of fire",
@@ -1993,7 +2009,6 @@
             "uid": "elder-maul",
             "itemId": 21003,
             "tags": [
-                "talent",
                 "melee wep"
             ],
             "tier": 5,
@@ -2001,7 +2016,22 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Elder_maul",
             "imageName": "Elder maul.png",
-            "cost": 5
+            "cost": null
+        },
+        {
+            "name": "Dragon sword",
+            "alias": "Dragon sword",
+            "uid": "dragon-sword",
+            "itemId": 21009,
+            "tags": [
+                "melee wep"
+            ],
+            "tier": "1",
+            "cost": "1",
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_sword",
+            "imageName": "Dragon sword.png"
         },
         {
             "name": "Dinh's bulwark",
@@ -2009,7 +2039,6 @@
             "uid": "dinhs-bulwark",
             "itemId": 21015,
             "tags": [
-                "talent",
                 "melee arm",
                 "generic gear"
             ],
@@ -2018,7 +2047,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Dinh%27s_bulwark",
             "imageName": "Dinh's bulwark.png",
-            "cost": 4
+            "cost": null
         },
         {
             "name": "Burning amulet(5)",
@@ -2084,6 +2113,19 @@
             "wikiLink": "https://oldschool.runescape.wiki/w/Amethyst_arrow",
             "imageName": "Amethyst arrow.png",
             "cost": null
+        },
+        {
+            "name": "Granite hammer",
+            "alias": "Granite hammer",
+            "uid": "granite-hammer",
+            "itemId": 21742,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Granite_hammer",
+            "imageName": "Granite hammer.png"
         },
         {
             "name": "Imbued saradomin cape",
@@ -2214,12 +2256,24 @@
             "cost": 3
         },
         {
+            "name": "Brimstone ring",
+            "alias": "Brimstone ring",
+            "uid": "brimstone-ring",
+            "itemId": 22975,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_ring",
+            "imageName": "Brimstone ring.png"
+        },
+        {
             "name": "Crystal halberd",
             "alias": "Crystal halberd",
             "uid": "crystal-halberd",
             "itemId": 23987,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -2228,7 +2282,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Crystal_halberd",
             "imageName": "Crystal halberd.png",
-            "cost": 3
+            "cost": null
         },
         {
             "name": "Trouver parchment",
@@ -2493,7 +2547,6 @@
             "uid": "voidwaker",
             "itemId": 27690,
             "tags": [
-                "talent",
                 "spec wep",
                 "melee wep"
             ],
@@ -2502,7 +2555,7 @@
             "unlocked": false,
             "wikiLink": "https://oldschool.runescape.wiki/w/Voidwaker",
             "imageName": "Voidwaker.png",
-            "cost": 6
+            "cost": null
         },
         {
             "name": "Zombie axe",
@@ -2859,6 +2912,19 @@
             "wikiLink": "https://oldschool.runescape.wiki/w/Extended_stamina_potion(4)",
             "imageName": "Extended stamina potion(4).png",
             "cost": 1
+        },
+        {
+            "name": "Granite longsword",
+            "alias": "Granite longsword",
+            "uid": "granite-longsword",
+            "itemId": null,
+            "tags": [],
+            "tier": null,
+            "cost": null,
+            "alwaysAvailable": false,
+            "unlocked": false,
+            "wikiLink": "https://oldschool.runescape.wiki/w/Granite_longsword",
+            "imageName": "Granite longsword.png"
         }
     ],
     "otherImages": [],

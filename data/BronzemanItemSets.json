@@ -334,7 +334,7 @@
         },
         {
             "name": "Dagannoth rings",
-            "alias": "DKS rings",
+            "alias": "DK Rings",
             "uid": "dagannoth-rings",
             "itemIds": [
                 "6737",
@@ -354,7 +354,7 @@
         },
         {
             "name": "Imbued Dagannoth rings",
-            "alias": "Imbued DKS rings",
+            "alias": "Imbued DK Rings",
             "uid": "imbued-dagannoth-rings",
             "itemIds": [
                 "11773",
