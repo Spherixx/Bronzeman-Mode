@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 2,
+  "info": [
+    {
+    "Bronzeman Mode": "Wilderness Bronzeman is a PvP-first OSRS challenge where progress comes from Wilderness content, player kills, and milestone unlocks."
+    }
+  ],
+  "rules": [
+    {
+      "Wilderness Locked": "Progress stays in the Wilderness and PvP spaces, including LMS and other PvP minigames.",
+      "PK Loot Unlocks": "PK loot unlocks regular collection items, but anything that exists as a talent still requires buying that talent before use.",
+      "Talent Items": "Buying a talent unlocks one copy. If the item uses an attachment or imbue, future rebuilds require buying that attachment from the shop, like Saradomin's tear for a blessed Saradomin sword.",
+      "PvM Task Timing": "Items that complete PvM challenges do not award talent points until the account also meets that challenge tier's kill requirement.",
+      "Tasks Buy Talents": "Completed tasks award talent points for account power.",
+      "Kills Buy Supplies": "Each player kill awards PK points that can be spent on GE shop purchases and repeatable KC grinds.",
+      "GE Purchases Use Shop": "The shop is for items bought from the Grand Exchange instead of earned through Wilderness content.",
+      "Honor The Spirit": "Off-meta, risky, and funny PK setups are encouraged."
+    }
+  ]
+}

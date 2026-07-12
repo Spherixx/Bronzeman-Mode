@@ -15,8 +15,12 @@
                 "11665"
             ],
             "tags": [
-                "generic gear",
-                "talent"
+                "talent",
+                "melee",
+                "range",
+                "mage",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Void knight top",
             "tier": "2",
@@ -35,8 +39,9 @@
                 "28997"
             ],
             "tags": [
-                "melee arm",
-                "melee wep"
+                "melee",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Blood moon chestplate",
             "tier": null,
@@ -55,8 +60,9 @@
                 "28988"
             ],
             "tags": [
-                "mage arm",
-                "mage wep"
+                "mage",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Blue moon chestplate",
             "tier": null,
@@ -75,8 +81,9 @@
                 "29000"
             ],
             "tags": [
-                "range arm",
-                "range wep"
+                "range",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Eclipse moon chestplate",
             "tier": null,
@@ -95,9 +102,10 @@
                 "4710"
             ],
             "tags": [
-                "mage arm",
-                "mage wep",
-                "talent"
+                "talent",
+                "mage",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Ahrim's hood",
             "tier": "3",
@@ -116,9 +124,10 @@
                 "4718"
             ],
             "tags": [
-                "melee arm",
-                "melee wep",
-                "talent"
+                "talent",
+                "melee",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Dharok's helm",
             "tier": "4",
@@ -137,8 +146,9 @@
                 "4726"
             ],
             "tags": [
-                "melee arm",
-                "melee wep"
+                "melee",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Guthan's helm",
             "tier": null,
@@ -157,9 +167,10 @@
                 "4734"
             ],
             "tags": [
-                "range arm",
-                "range wep",
-                "talent"
+                "talent",
+                "range",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Karil's coif",
             "tier": "3",
@@ -178,8 +189,9 @@
                 "4747"
             ],
             "tags": [
-                "melee arm",
-                "melee wep"
+                "melee",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Torag's helm",
             "tier": null,
@@ -198,9 +210,10 @@
                 "4755"
             ],
             "tags": [
-                "melee arm",
-                "melee wep",
-                "talent"
+                "talent",
+                "melee",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Verac's helm",
             "tier": "2",
@@ -221,8 +234,8 @@
                 "12612"
             ],
             "tags": [
-                "generic gear",
-                "talent"
+                "talent",
+                "armor"
             ],
             "imageUsed": "Holy book",
             "tier": 1,
@@ -240,8 +253,9 @@
                 "2414"
             ],
             "tags": [
-                "mage arm",
-                "talent"
+                "talent",
+                "mage",
+                "armor"
             ],
             "imageUsed": "Saradomin cape",
             "tier": "1",
@@ -259,8 +273,9 @@
                 "21795"
             ],
             "tags": [
-                "mage arm",
-                "talent"
+                "talent",
+                "mage",
+                "armor"
             ],
             "imageUsed": "Imbued saradomin cape",
             "tier": "3",
@@ -277,9 +292,10 @@
                 "33595"
             ],
             "tags": [
-                "spec wep",
-                "range wep",
-                "talent"
+                "talent",
+                "range",
+                "weapon",
+                "spec"
             ],
             "imageUsed": "Dark bow",
             "tier": "4",
@@ -296,9 +312,10 @@
                 "24229"
             ],
             "tags": [
-                "spec wep",
-                "melee wep",
-                "talent"
+                "talent",
+                "melee",
+                "weapon",
+                "spec"
             ],
             "imageUsed": "Granite maul",
             "tier": "4",
@@ -320,11 +337,12 @@
                 "11128"
             ],
             "tags": [
-                "melee wep",
-                "range wep",
-                "mage wep",
-                "generic gear",
-                "talent"
+                "talent",
+                "melee",
+                "range",
+                "mage",
+                "weapon",
+                "armor"
             ],
             "imageUsed": "Tzhaar-ket-om",
             "tier": 2,
@@ -343,8 +361,9 @@
                 "6731"
             ],
             "tags": [
-                "generic gear",
-                "talent"
+                "talent",
+                "armor",
+                "jewellery"
             ],
             "imageUsed": "Berserker ring",
             "tier": 2,
@@ -362,8 +381,9 @@
                 "2417"
             ],
             "tags": [
-                "mage wep",
-                "talent"
+                "talent",
+                "mage",
+                "weapon"
             ],
             "imageUsed": "Saradomin staff",
             "tier": "1",
@@ -383,8 +403,9 @@
                 "4097"
             ],
             "tags": [
-                "mage arm",
-                "talent"
+                "talent",
+                "mage",
+                "armor"
             ],
             "imageUsed": "Mystic hat",
             "tier": "1",
@@ -406,7 +427,8 @@
                 "9074"
             ],
             "tags": [
-                "mage arm"
+                "mage",
+                "armor"
             ],
             "imageUsed": "Moonclan armour",
             "tier": "1",
@@ -426,7 +448,8 @@
                 "6924"
             ],
             "tags": [
-                "mage arm"
+                "mage",
+                "armor"
             ],
             "imageUsed": "Infinity hat",
             "tier": "1",
@@ -445,7 +468,8 @@
                 "22284"
             ],
             "tags": [
-                "range arm"
+                "range",
+                "armor"
             ],
             "imageUsed": "Black d'hide body",
             "tier": "1",
@@ -464,7 +488,8 @@
                 "10380"
             ],
             "tags": [
-                "range arm"
+                "range",
+                "armor"
             ],
             "imageUsed": "Guthix d'hide body",
             "tier": "1",
@@ -484,8 +509,9 @@
                 "6151"
             ],
             "tags": [
-                "melee arm",
-                "talent"
+                "talent",
+                "melee",
+                "armor"
             ],
             "imageUsed": "Rock-shell plate",
             "tier": "1",
@@ -505,8 +531,9 @@
                 "6149"
             ],
             "tags": [
-                "range arm",
-                "talent"
+                "talent",
+                "range",
+                "armor"
             ],
             "imageUsed": "Spined body",
             "tier": "1",
@@ -526,8 +553,9 @@
                 "6153"
             ],
             "tags": [
-                "mage arm",
-                "talent"
+                "talent",
+                "mage",
+                "armor"
             ],
             "imageUsed": "Skeletal top",
             "tier": "1",
@@ -535,5 +563,24 @@
             "unlocked": false,
             "cost": 1
         }
+    ],
+    "tagDefinitions": [
+        "talent",
+        "shop",
+        "melee",
+        "range",
+        "mage",
+        "weapon",
+        "armor",
+        "spec",
+        "jewellery",
+        "rune",
+        "food",
+        "potion",
+        "teleport",
+        "ammo",
+        "hidden",
+        "consumable",
+        "other"
     ]
 }

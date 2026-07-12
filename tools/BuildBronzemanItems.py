@@ -23,19 +23,22 @@ WIKI_API_URL = "https://oldschool.runescape.wiki/api.php"
 WIKI_USER_AGENT = "BronzemanItemBuilder/1.0"
 
 TAG_DEFINITIONS = [
-    "spec wep",
-    "range wep",
-    "range arm",
-    "melee wep",
-    "melee arm",
-    "mage wep",
-    "mage arm",
-    "generic gear",
     "talent",
     "shop",
-    "consumables",
-    "potions",
-    "runes",
+    "melee",
+    "range",
+    "mage",
+    "weapon",
+    "armor",
+    "spec",
+    "jewellery",
+    "rune",
+    "food",
+    "potion",
+    "teleport",
+    "ammo",
+    "hidden",
+    "consumable",
     "other",
 ]
 

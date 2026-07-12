@@ -17,13 +17,17 @@ export const COLLECTION_FILTERS = [
   { id: "range", label: "Range", type: "tag" },
   { id: "mage", label: "Mage", type: "tag" },
   { id: "melee", label: "Melee", type: "tag" },
-  { id: "gear", label: "Gear", type: "tag" },
+  { id: "weapon", label: "Weapon", type: "tag" },
+  { id: "armor", label: "Armor", type: "tag" },
+  { id: "jewellery", label: "Jewellery", type: "tag" },
   { id: "talent", label: "Talent", type: "tag" },
   { id: "shop", label: "Shop", type: "tag" },
-  { id: "potions", label: "Potions", type: "tag" },
-  { id: "runes", label: "Runes", type: "tag" },
+  { id: "rune", label: "Runes", type: "tag" },
   { id: "ammo", label: "Ammo", type: "tag" },
   { id: "food", label: "Food", type: "tag" },
+  { id: "potion", label: "Potions", type: "tag" },
+  { id: "teleport", label: "Teleports", type: "tag" },
+  { id: "consumable", label: "Consumables", type: "tag" },
   { id: "other", label: "Other", type: "tag" }
 ];
 
@@ -32,13 +36,17 @@ export const COLLECTION_CATEGORY_PRIORITY = [
   "range",
   "mage",
   "melee",
-  "gear",
-  "potions",
-  "runes",
+  "weapon",
+  "armor",
+  "jewellery",
+  "rune",
   "ammo",
   "food",
+  "potion",
+  "teleport",
   "talent",
   "shop",
+  "consumable",
   "other"
 ];
 

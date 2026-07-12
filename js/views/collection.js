@@ -8,6 +8,20 @@ import {
   slugifyItemId
 } from "../utils.js";
 
+const LEGACY_TAG_GROUPS = {
+  "spec wep": ["spec", "weapon"],
+  "range wep": ["range", "weapon"],
+  "range arm": ["range", "armor"],
+  "mage wep": ["mage", "weapon"],
+  "mage arm": ["mage", "armor"],
+  "melee wep": ["melee", "weapon"],
+  "melee arm": ["melee", "armor"],
+  "generic gear": ["armor"],
+  potions: ["potion"],
+  runes: ["rune"],
+  consumables: ["consumable"]
+};
+
 export function createCollection(ctx) {
   function itemDisplayName(item) {
     return item.alias || item.name || "Item";
@@ -33,21 +47,13 @@ export function createCollection(ctx) {
     const groups = new Set();
 
     (tags ?? []).forEach((tag) => {
-      if (tag === "spec wep") groups.add("spec");
-      else if (tag === "range wep" || tag === "range arm") groups.add("range");
-      else if (tag === "mage wep" || tag === "mage arm") groups.add("mage");
-      else if (tag === "melee wep" || tag === "melee arm") groups.add("melee");
-      else if (tag === "generic gear") groups.add("gear");
-      else if (tag === "talent") groups.add("talent");
-      else if (tag === "shop") groups.add("shop");
-      else if (tag === "potions") groups.add("potions");
-      else if (tag === "runes") groups.add("runes");
-      else if (tag === "ammo") groups.add("ammo");
-      else if (tag === "food") groups.add("food");
-      else if (tag === "consumables") groups.add("other");
-      else groups.add("other");
+      const mappedTags = LEGACY_TAG_GROUPS[tag] ?? [tag];
+      mappedTags.forEach((mappedTag) => {
+        if (COLLECTION_FILTERS.some((filter) => filter.id === mappedTag && filter.type === "tag")) groups.add(mappedTag);
+      });
     });
 
+    if (!groups.size) groups.add("other");
     return [...groups];
   }
 
@@ -60,13 +66,7 @@ export function createCollection(ctx) {
   }
 
   function collectionDisplayTag(tag) {
-    if (tag === "spec wep") return "spec";
-    if (tag === "range wep" || tag === "range arm") return "range";
-    if (tag === "mage wep" || tag === "mage arm") return "mage";
-    if (tag === "melee wep" || tag === "melee arm") return "melee";
-    if (tag === "generic gear") return "generic";
-    if (tag === "consumables") return "other";
-    return tag;
+    return LEGACY_TAG_GROUPS[tag]?.[0] ?? tag;
   }
 
   function collectionDisplayTags(item) {
@@ -140,7 +140,7 @@ export function createCollection(ctx) {
     const mergedItems = collapsibleSets.map((definition) => mergedCollectionSet(definition, itemsById)).filter(Boolean);
 
     return [
-      ...items.filter((item) => !item.hidden && !mergedItemIds.has(item.id)),
+      ...items.filter((item) => !item.hidden && !(item.tags ?? []).includes("hidden") && !mergedItemIds.has(item.id)),
       ...mergedItems
     ];
   }

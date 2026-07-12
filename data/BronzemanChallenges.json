@@ -1,0 +1,39 @@
+{
+    "schemaVersion": 2,
+    "challenges": [
+        {
+            "challengeName": "Obsidian Tri-Brid",
+            "challengeRules": [
+                "Defeat a real opponent while using one full set of Rock-shell, Spined, or Skeletal armor.",
+                "Wear at least two pieces from each of the other two sets.",
+                "Use an obsidian melee weapon, obsidian staff, and obsidian thrown weapon.",
+                "Damage the opponent with melee, ranged, and magic during the fight using only obsidian weapons.",
+                "The opponent must either be a legitimate pker or have a key worth at least 500k",
+                "Challenge requirements must be observed by all participating players in multi combat areas."
+            ],
+            "disclaimer": "*Reward items are not removed from the roulette after unlocking, so duplicate hits are possible and you will probably need more than 12 challenge completions.",
+            "requiredItems": [
+                "Rock-shell plate",
+                "Spined body",
+                "Skeletal top",
+                "Tzhaar-ket-om",
+                "Toktz-xil-ul",
+                "Toktz-mej-tal"
+            ],
+            "rewardItems": [
+                "Blood moon helm",
+                "Blood moon chestplate",
+                "Blood moon tassets",
+                "Dual macuahuitl",
+                "Blue moon helm",
+                "Blue moon chestplate",
+                "Blue moon tassets",
+                "Blue moon spear",
+                "Eclipse moon helm",
+                "Eclipse moon chestplate",
+                "Eclipse moon tassets",
+                "Eclipse atlatl"
+            ]
+        }
+    ]
+}

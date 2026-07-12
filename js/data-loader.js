@@ -181,19 +181,34 @@ export function createDataLoader(ctx) {
     });
   }
 
+  function normalizeShopSection(shopItem, tags) {
+    if (tags.includes("unlock") || shopItem.section === "unlocks" || shopItem.category === "Gear") return "unlocks";
+    return "resupply";
+  }
+
+  function normalizeShopCategory(shopItem, tags) {
+    const categoryTags = tags.filter((tag) => !["shop", "resupply", "unlock"].includes(tag));
+    if (categoryTags.length) return ctx.collection.collectionCategoryFromTags(categoryTags);
+    return shopItem.category || "Other";
+  }
+
   function normalizeShopItems(data) {
-    const jsonShopItems = toArray(data?.shopItems).map((shopItem) => ({
-      id: dataUid(shopItem, "shop"),
-      category: shopItem.category || "Other",
-      section: shopItem.section === "unlocks" || shopItem.category === "Gear" ? "unlocks" : "resupply",
-      name: dataDisplayName(shopItem, "Shop item"),
-      cost: toNumber(shopItem.cost, 1),
-      note: shopItem.note,
-      items: toArray(shopItem.items).map((entry) => ({
-        image: entry.image ? resolveDataImage(entry.image, entry.tags) : resolveDataImage(entry.imageUsed || entry.name || entry.uid, entry.tags),
-        amount: entry.amount
-      }))
-    }));
+    const jsonShopItems = toArray(data?.shopItems).map((shopItem) => {
+      const tags = uniqueTags(shopItem.tags ?? []);
+      return {
+        id: dataUid(shopItem, "shop"),
+        category: normalizeShopCategory(shopItem, tags),
+        section: normalizeShopSection(shopItem, tags),
+        name: dataDisplayName(shopItem, "Shop item"),
+        cost: toNumber(shopItem.cost, 1),
+        note: shopItem.note,
+        tags,
+        items: toArray(shopItem.items).map((entry) => ({
+          image: entry.image ? resolveDataImage(entry.image, entry.tags ?? tags) : resolveDataImage(entry.imageUsed || entry.name || entry.uid, entry.tags ?? tags),
+          amount: entry.amount
+        }))
+      };
+    });
 
     ctx.data.shopCategories = toArray(data?.categories).length
       ? toArray(data.categories).map((category) => String(category)).filter(Boolean)

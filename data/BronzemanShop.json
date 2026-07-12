@@ -1,29 +1,26 @@
 {
     "schemaVersion": 2,
-    "categories": [
-        "Runes / Ammo",
-        "Food",
-        "Potions",
-        "Other",
-        "Gear"
-    ],
     "shopItems": [
         {
             "uid": "barrages",
             "alias": "Barrage sacks",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Blighted ancient ice sack",
                     "amount": "100"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "tb-sacks",
             "alias": "TB + entangle sacks",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
@@ -34,24 +31,34 @@
                     "imageUsed": "Blighted entangle sack",
                     "amount": "10"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "veng-sacks",
             "alias": "Veng sacks",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Blighted vengeance sack",
                     "amount": "25"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "elemental-runes",
             "alias": "Elemental runes",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
@@ -70,48 +77,64 @@
                     "imageUsed": "Fire rune",
                     "amount": "10k"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "resupply"
             ]
         },
         {
             "uid": "chaos-runes",
             "alias": "Chaos runes",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Chaos rune",
                     "amount": "4k"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "resupply"
             ]
         },
         {
             "uid": "death-runes",
             "alias": "Death runes",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Death rune",
                     "amount": "4k"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "resupply"
             ]
         },
         {
             "uid": "blood-runes",
             "alias": "Blood runes",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Blood rune",
                     "amount": "4k"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "resupply"
             ]
         },
         {
             "uid": "astral-nature-soul-runes",
             "alias": "Astral / nature / soul runes (choose one)",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
@@ -127,108 +150,144 @@
                     "amount": "2k"
                 }
             ],
-            "note": "Choose one rune type per purchase."
+            "note": "Choose one rune type per purchase.",
+            "tags": [
+                "shop",
+                "rune",
+                "resupply"
+            ]
         },
         {
             "uid": "amethyst-arrows",
             "alias": "Amethyst arrows",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Amethyst arrow",
                     "amount": "250"
                 }
+            ],
+            "tags": [
+                "shop",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "amethyst-darts",
             "alias": "Amethyst darts",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Amethyst dart",
                     "amount": "250"
                 }
+            ],
+            "tags": [
+                "shop",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "dragon-bolts",
             "alias": "Dragonstone bolts",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Dragonstone dragon bolts (e)",
                     "amount": "100"
                 }
+            ],
+            "tags": [
+                "shop",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "dragon-seeker-arrows",
             "alias": "Dragon seeker arrows",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Seeking dragon arrow",
                     "amount": "100"
                 }
+            ],
+            "tags": [
+                "shop",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "dragon-knives",
             "alias": "Dragon knives",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Dragon knife(p++)",
                     "amount": "50"
                 }
+            ],
+            "tags": [
+                "shop",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "dragon-thrownaxes",
             "alias": "Dragon thrownaxes",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Dragon thrownaxe",
                     "amount": "50"
                 }
+            ],
+            "tags": [
+                "shop",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "zulrah-scales",
             "alias": "Zulrah scales",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "image": "images/other/Zulrah's_scales_5.png",
                     "amount": "5k"
                 }
+            ],
+            "tags": [
+                "shop",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "combo-food",
             "alias": "Halibut",
-            "category": "Food",
             "cost": 2,
             "items": [
                 {
                     "imageUsed": "Halibut",
                     "amount": "50"
                 }
+            ],
+            "tags": [
+                "shop",
+                "food",
+                "resupply"
             ]
         },
         {
             "uid": "standard-food",
             "alias": "Anglers / marlin",
-            "category": "Food",
             "cost": 1,
             "items": [
                 {
@@ -239,144 +298,188 @@
                     "imageUsed": "Marlin",
                     "amount": "100"
                 }
+            ],
+            "tags": [
+                "shop",
+                "food",
+                "resupply"
             ]
         },
         {
             "uid": "surge-potions",
             "alias": "Surge pots",
-            "category": "Potions",
             "cost": 2,
             "items": [
                 {
                     "imageUsed": "Surge potion",
                     "amount": "5"
                 }
+            ],
+            "tags": [
+                "shop",
+                "potion",
+                "resupply"
             ]
         },
         {
             "uid": "brews",
             "alias": "Brews",
-            "category": "Potions",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Saradomin brew(4)",
                     "amount": "20"
                 }
+            ],
+            "tags": [
+                "shop",
+                "potion",
+                "resupply"
             ]
         },
         {
             "uid": "restores",
             "alias": "Restores",
-            "category": "Potions",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Super restore(4)",
                     "amount": "10"
                 }
+            ],
+            "tags": [
+                "shop",
+                "potion",
+                "resupply"
             ]
         },
         {
             "uid": "range-pots",
             "alias": "Range pots",
-            "category": "Potions",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Ranging potion(4)",
                     "amount": "5"
                 }
+            ],
+            "tags": [
+                "shop",
+                "potion",
+                "resupply"
             ]
         },
         {
             "uid": "super-combats",
             "alias": "Super combats",
-            "category": "Potions",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Super combat potion(4)",
                     "amount": "5"
                 }
+            ],
+            "tags": [
+                "shop",
+                "potion",
+                "resupply"
             ]
         },
         {
             "uid": "antivenom",
             "alias": "Antivenom",
-            "category": "Potions",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Anti-venom+(4)",
                     "amount": "2"
                 }
+            ],
+            "tags": [
+                "shop",
+                "potion",
+                "resupply"
             ]
         },
         {
             "uid": "trouver",
             "alias": "Trouver Parchment",
-            "category": "Other",
-            "section": "unlocks",
             "cost": 2,
             "items": [
                 {
                     "imageUsed": "Trouver parchment"
                 }
+            ],
+            "tags": [
+                "shop",
+                "consumable",
+                "unlock"
             ]
         },
         {
             "uid": "msb-imbue-scroll",
             "alias": "MSB imbue scroll",
-            "category": "Other",
-            "section": "unlocks",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Magic shortbow scroll"
                 }
+            ],
+            "tags": [
+                "shop",
+                "consumable",
+                "unlock"
             ]
         },
         {
             "uid": "ring-imbue",
             "alias": "DK or Wildy Ring Imbue",
-            "category": "Other",
-            "section": "unlocks",
             "cost": 2,
             "items": [
                 {
                     "imageUsed": "Scroll of imbuing"
                 }
+            ],
+            "tags": [
+                "shop",
+                "consumable",
+                "unlock"
             ]
         },
         {
             "uid": "sarasword-bless",
             "alias": "Sarasword bless item",
-            "category": "Other",
-            "section": "unlocks",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Saradomin's tear"
                 }
+            ],
+            "tags": [
+                "shop",
+                "consumable",
+                "unlock"
             ]
         },
         {
             "uid": "jewellery-recharge",
             "alias": "Jewellery recharge",
-            "category": "Other",
             "cost": 1,
             "items": [
                 {
                     "image": "images/other/Recharge_Dragonstone.png",
                     "amount": "10"
                 }
+            ],
+            "tags": [
+                "shop",
+                "jewellery",
+                "resupply"
             ]
         },
         {
             "uid": "rev-kit",
             "alias": "Rev kit",
-            "category": "Other",
             "cost": 2,
             "items": [
                 {
@@ -387,14 +490,20 @@
                     "amount": "100"
                 },
                 {
-                    "imageUsed": "Burning amulet"
+                    "imageUsed": "Burning amulet(5)"
                 }
+            ],
+            "tags": [
+                "shop",
+                "jewellery",
+                "teleport",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "infinity-set",
             "alias": "Infinity Robes",
-            "category": "Gear",
             "cost": 3,
             "items": [
                 {
@@ -406,48 +515,67 @@
                 {
                     "imageUsed": "Infinity bottoms"
                 }
+            ],
+            "tags": [
+                "shop",
+                "mage",
+                "armor",
+                "unlock"
             ]
         },
         {
             "uid": "blighted-surge-sack",
             "alias": "Surge Sacks",
-            "category": "Runes / Ammo",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Blighted surge sack",
                     "amount": "10"
                 }
+            ],
+            "tags": [
+                "shop",
+                "rune",
+                "ammo",
+                "resupply"
             ]
         },
         {
             "uid": "wilderness-crabs-teleport",
             "alias": "Wilderness crabs teleport",
-            "category": "Other",
             "cost": 1,
             "items": [
                 {
                     "imageUsed": "Wilderness crabs teleport",
                     "amount": "10"
                 }
+            ],
+            "tags": [
+                "shop",
+                "teleport",
+                "resupply"
             ]
         },
         {
             "uid": "ring-of-dueling",
             "alias": "Ring of Dueling",
-            "category": "Other",
             "cost": 1,
             "items": [
                 {
-                    "imageUsed": "Ring of Dueling",
+                    "imageUsed": "Ring of dueling(8)",
                     "amount": "10"
                 }
+            ],
+            "tags": [
+                "shop",
+                "jewellery",
+                "teleport",
+                "resupply"
             ]
         },
         {
             "uid": "blessed-dhide",
             "alias": "Blessed Dragonhide",
-            "category": "Gear",
             "cost": 2,
             "items": [
                 {
@@ -462,7 +590,34 @@
                 {
                     "imageUsed": "Guthix d'hide shield"
                 }
+            ],
+            "tags": [
+                "shop",
+                "range",
+                "armor",
+                "unlock"
             ]
         }
+    ],
+    "tagDefinitions": [
+        "talent",
+        "shop",
+        "melee",
+        "range",
+        "mage",
+        "weapon",
+        "armor",
+        "spec",
+        "jewellery",
+        "rune",
+        "food",
+        "potion",
+        "teleport",
+        "ammo",
+        "hidden",
+        "consumable",
+        "other",
+        "resupply",
+        "unlock"
     ]
 }
