@@ -840,11 +840,17 @@ function updateShopState() {
 }
 
 function renderShop() {
-  const shop = document.getElementById("shopList");
+  renderShopSection("shopResupplyList", "resupply");
+  renderShopSection("shopUnlocksList", "unlocks");
+}
+
+function renderShopSection(targetId, shopSection) {
+  const shop = document.getElementById(targetId);
+  if (!shop) return;
   shop.innerHTML = "";
 
   shopCategories.forEach((category) => {
-    const categoryItems = shopItems.filter((item) => item.category === category);
+    const categoryItems = shopItems.filter((item) => item.category === category && item.section === shopSection);
     if (!categoryItems.length) return;
 
     const section = document.createElement("section");
@@ -1040,15 +1046,16 @@ function startChallengeRollAnimation() {
   activeChallengeRoll.animationStarted = true;
   const targetOffset = target.offsetLeft + (target.offsetWidth / 2);
   const destination = (stage.clientWidth / 2) - targetOffset;
-  const wobble = Math.min(24, Math.max(10, target.offsetWidth * 0.18));
+  const finalApproach = Math.min(360, Math.max(220, target.offsetWidth * 2.8));
+  const settle = Math.min(18, Math.max(8, target.offsetWidth * 0.12));
   const animation = strip.animate([
-    { transform: "translateX(0)" },
-    { transform: `translateX(${destination - wobble}px)`, offset: 0.84 },
-    { transform: `translateX(${destination + (wobble * 0.35)}px)`, offset: 0.94 },
+    { transform: "translateX(0)", easing: "cubic-bezier(.12,.68,.18,1)" },
+    { transform: `translateX(${destination + finalApproach}px)`, offset: 0.64, easing: "cubic-bezier(.16,.62,.2,1)" },
+    { transform: `translateX(${destination + (finalApproach * 0.32)}px)`, offset: 0.84, easing: "cubic-bezier(.18,.68,.24,1)" },
+    { transform: `translateX(${destination + settle}px)`, offset: 0.95, easing: "ease-out" },
     { transform: `translateX(${destination}px)` }
   ], {
     duration: CHALLENGE_ROLL_DURATION_MS,
-    easing: "cubic-bezier(.08,.84,.18,1)",
     fill: "forwards"
   });
 
@@ -1384,8 +1391,10 @@ function normalizeShopItems(data) {
   const jsonShopItems = toArray(data?.shopItems).map((shopItem) => ({
     id: dataUid(shopItem, "shop"),
     category: shopItem.category || "Other",
+    section: shopItem.section === "unlocks" || shopItem.category === "Gear" ? "unlocks" : "resupply",
     name: dataDisplayName(shopItem, "Shop item"),
     cost: toNumber(shopItem.cost, 1),
+    note: shopItem.note,
     items: toArray(shopItem.items).map((entry) => ({
       image: entry.image ? resolveDataImage(entry.image, entry.tags) : resolveDataImage(entry.imageUsed || entry.name || entry.uid, entry.tags),
       amount: entry.amount
@@ -1876,6 +1885,18 @@ function showTab(tabName) {
   });
 }
 
+function showSubtab(groupName, tabName) {
+  document.querySelectorAll(`[data-subtab-group="${groupName}"]`).forEach((button) => {
+    const active = button.dataset.subtab === tabName;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-selected", String(active));
+  });
+
+  document.querySelectorAll(`[data-subtab-panel-group="${groupName}"]`).forEach((panel) => {
+    panel.classList.toggle("active", panel.dataset.subtabPanel === tabName);
+  });
+}
+
 function render() {
   renderStats();
   renderPvmChallenges();
@@ -1889,6 +1910,10 @@ function render() {
 
 document.querySelectorAll(".tab-button").forEach((button) => {
   button.addEventListener("click", () => showTab(button.dataset.tab));
+});
+
+document.querySelectorAll(".section-subtab").forEach((button) => {
+  button.addEventListener("click", () => showSubtab(button.dataset.subtabGroup, button.dataset.subtab));
 });
 
 document.getElementById("playerKills").addEventListener("input", (event) => {

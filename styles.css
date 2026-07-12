@@ -2559,6 +2559,58 @@ body {
   }
 }
 
+/* Page-level segmented views */
+.section-subtabs {
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(120px, 1fr);
+  gap: 4px;
+  margin-bottom: 16px;
+  padding: 4px;
+  background: rgba(9, 11, 14, 0.72);
+  border: 1px solid var(--line);
+}
+
+.section-subtab {
+  min-height: 38px;
+  padding: 0 18px;
+  color: var(--muted);
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font: 0.7rem "DM Mono", monospace;
+  transition: 150ms ease;
+}
+
+.section-subtab:hover {
+  color: var(--text);
+}
+
+.section-subtab.active {
+  color: var(--bronze-bright);
+  background: var(--panel-2);
+  border-color: var(--line);
+}
+
+.subtab-panel {
+  display: none;
+}
+
+.subtab-panel.active {
+  display: grid;
+}
+
+.challenge-area[data-subtab-panel="pvp"] {
+  grid-template-columns: 1fr;
+}
+
+@media (max-width: 520px) {
+  .section-subtabs {
+    width: 100%;
+    grid-auto-columns: 1fr;
+  }
+}
+
 .challenge-reward-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
