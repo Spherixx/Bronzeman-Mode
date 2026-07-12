@@ -73,6 +73,16 @@ export function createCollection(ctx) {
     return uniqueTags((item.tags ?? []).map(collectionDisplayTag));
   }
 
+  function collectionExcluded(item) {
+    const tags = itemTagList(item);
+    return Boolean(
+      item.hidden ||
+      item.excludeFromCollection ||
+      item.collectionHidden ||
+      tags.includes("hidden")
+    );
+  }
+
   function collectionPrimaryGroup(tags) {
     const groups = collectionTagGroups(tags);
     return COLLECTION_CATEGORY_PRIORITY.find((group) => groups.includes(group)) ?? "other";
@@ -134,14 +144,14 @@ export function createCollection(ctx) {
     const itemsById = new Map(items.map((item) => [item.id, item]));
     const challengeRewardIds = new Set(ctx.config.perilousMoonsRewardIds);
     const collapsibleSets = ctx.data.collectionSetDefinitions.filter((definition) => {
-      return !definition.itemIds.some((id) => challengeRewardIds.has(id));
+      return !collectionExcluded(definition) && !definition.itemIds.some((id) => challengeRewardIds.has(id));
     });
     const mergedItemIds = new Set(collapsibleSets.flatMap((definition) => definition.itemIds));
     const mergedItems = collapsibleSets.map((definition) => mergedCollectionSet(definition, itemsById)).filter(Boolean);
 
     return [
-      ...items.filter((item) => !item.hidden && !(item.tags ?? []).includes("hidden") && !mergedItemIds.has(item.id)),
-      ...mergedItems
+      ...items.filter((item) => !collectionExcluded(item) && !mergedItemIds.has(item.id)),
+      ...mergedItems.filter((item) => !collectionExcluded(item))
     ];
   }
 
@@ -378,6 +388,7 @@ export function createCollection(ctx) {
     collectionFilterLabel,
     collectionDisplayTag,
     collectionDisplayTags,
+    collectionExcluded,
     collectionCategoryFromTags,
     collectionItemFromDefinition,
     collapseCollectionSets,

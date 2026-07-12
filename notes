@@ -17,7 +17,7 @@ food		Food items. Do not also tag these as consumable.
 potion		Potions, brews, restores, and antivenom. Do not also tag these as consumable.
 teleport	Teleport items and charged teleport jewellery.
 ammo		Arrows, bolts, darts, thrown weapons, scales, ether, and spell sacks.
-hidden		Item is hidden from the collection page.
+hidden		Item is hidden from the collection page. You can also set hidden, excludeFromCollection, or collectionHidden to true.
 consumable	Non-resupply consumable unlock items like MSB imbue scrolls, trouver parchment, imbue scrolls, handles, and attachment parchments.
 other		Anything that does not fit another tag.
 

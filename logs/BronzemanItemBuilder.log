@@ -1,0 +1,411 @@
+2026-07-12 03:37:23,532 | INFO    | ==========================================================================================
+2026-07-12 03:37:23,532 | INFO    | RUN START
+2026-07-12 03:37:23,532 | INFO    | CSV: data\BronzemanItems.csv
+2026-07-12 03:37:23,532 | INFO    | OSRS dump: data\OSRSItems.json
+2026-07-12 03:37:23,532 | INFO    | Input JSON: data\BronzemanItems.json
+2026-07-12 03:37:23,532 | INFO    | Output JSON: data\BronzemanItems.json
+2026-07-12 03:37:23,665 | INFO    | UNCHANGED | Abyssal dagger | itemId=13265 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,665 | WARNING | CSV row 3: multiple dump entries matched 'Abyssal whip'. Selected Abyssal whip (4151). Choices: Abyssal whip (4151), Abyssal whip (4178), Abyssal whip (20405)
+2026-07-12 03:37:23,665 | INFO    | UNCHANGED | Abyssal whip | itemId=4151 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Accursed sceptre | itemId=27665 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Ahrim's hood | itemId=4708 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | WARNING | CSV row 6: multiple dump entries matched "Ahrim's robeskirt". Selected Ahrim's robeskirt (4714). Choices: Ahrim's robeskirt (4714), Ahrim's robeskirt (20599)
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Ahrim's robeskirt | itemId=4714 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | WARNING | CSV row 7: multiple dump entries matched "Ahrim's robetop". Selected Ahrim's robetop (4712). Choices: Ahrim's robetop (4712), Ahrim's robetop (20598)
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Ahrim's robetop | itemId=4712 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | WARNING | CSV row 8: multiple dump entries matched "Ahrim's staff". Selected Ahrim's staff (4710). Choices: Ahrim's staff (4710), Ahrim's staff (23653)
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Ahrim's staff | itemId=4710 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | WARNING | CSV row 9: multiple dump entries matched 'Air rune'. Selected Air rune (556). Choices: Air rune (556), Air rune (6422), Air rune (7558), Air rune (9693), Air rune (11688)
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Air rune | itemId=556 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Amethyst arrow | itemId=21326 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Amethyst dart | itemId=25849 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | WARNING | CSV row 12: multiple dump entries matched 'Amulet of fury'. Selected Amulet of fury (6585). Choices: Amulet of fury (6585), Amulet of fury (23640)
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Amulet of fury | itemId=6585 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Amulet of glory(4) | itemId=1712 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | WARNING | CSV row 14: multiple dump entries matched 'Amulet of torture'. Selected Amulet of torture (19553). Choices: Amulet of torture (19553), Amulet of torture (27173)
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Amulet of torture | itemId=19553 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Ancient mace | itemId=11061 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Anglerfish | itemId=13441 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,666 | INFO    | UNCHANGED | Anti-venom+(4) | itemId=12913 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,734 | WARNING | CSV row 18: 'Antler guard' was not found in the OSRS dump. Suggestions: Winter garden
+2026-07-12 03:37:23,996 | INFO    | WIKI FOUND | CSV name='Antler guard' | resolved page='Antler guard' | itemId=null
+2026-07-12 03:37:23,996 | INFO    | UNCHANGED | Antler guard | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:23,996 | WARNING | CSV row 19: multiple dump entries matched 'Archer helm'. Selected Archer helm (3749). Choices: Archer helm (3749), Archer helm (20572)
+2026-07-12 03:37:23,996 | INFO    | UNCHANGED | Archer helm | itemId=3749 | source=OSRS dump via normalized name
+2026-07-12 03:37:23,996 | INFO    | UNCHANGED | Archers ring | itemId=6733 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,053 | WARNING | CSV row 21: 'Arkan blade' was not found in the OSRS dump. Suggestions: none
+2026-07-12 03:37:24,242 | INFO    | WIKI FOUND | CSV name='Arkan blade' | resolved page='Arkan blade' | itemId=null
+2026-07-12 03:37:24,242 | INFO    | UNCHANGED | Arkan blade | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:24,242 | WARNING | CSV row 22: multiple dump entries matched 'Armadyl crossbow'. Selected Armadyl crossbow (11785). Choices: Armadyl crossbow (11785), Armadyl crossbow (23611)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Armadyl crossbow | itemId=11785 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 23: multiple dump entries matched 'Armadyl godsword'. Selected Armadyl godsword (11802). Choices: Armadyl godsword (11802), Armadyl godsword (20593), Armadyl godsword (22665)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Armadyl godsword | itemId=11802 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 24: multiple dump entries matched 'Astral rune'. Selected Astral rune (9075). Choices: Astral rune (9075), Astral rune (11699)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Astral rune | itemId=9075 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 25: multiple dump entries matched "Ava's accumulator". Selected Ava's accumulator (10499). Choices: Ava's accumulator (10499), Ava's accumulator (23609)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Ava's accumulator | itemId=10499 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Ava's assembler | itemId=22109 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 27: multiple dump entries matched 'Barrelchest anchor'. Selected Barrelchest anchor (10887). Choices: Barrelchest anchor (10887), Barrelchest anchor (10888)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Barrelchest anchor | itemId=10887 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 28: multiple dump entries matched 'Barrows gloves'. Selected Barrows gloves (7462). Choices: Barrows gloves (7462), Barrows gloves (23593)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Barrows gloves | itemId=7462 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 29: multiple dump entries matched 'Berserker helm'. Selected Berserker helm (3751). Choices: Berserker helm (3751), Berserker helm (27169)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Berserker helm | itemId=3751 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Berserker necklace | itemId=11128 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 31: multiple dump entries matched 'Berserker ring'. Selected Berserker ring (6737). Choices: Berserker ring (6737), Berserker ring (23595)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Berserker ring | itemId=6737 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,243 | WARNING | CSV row 32: multiple dump entries matched "Black d'hide body". Selected Black d'hide body (2503). Choices: Black d'hide body (2503), Black d'hide body (20423)
+2026-07-12 03:37:24,243 | INFO    | UNCHANGED | Black d'hide body | itemId=2503 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | WARNING | CSV row 33: multiple dump entries matched "Black d'hide chaps". Selected Black d'hide chaps (2497). Choices: Black d'hide chaps (2497), Black d'hide chaps (20424)
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Black d'hide chaps | itemId=2497 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blighted ancient ice sack | itemId=24607 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blighted entangle sack | itemId=24613 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blighted manta ray | itemId=24589 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blighted super restore(4) | itemId=24598 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blighted teleport spell sack | itemId=24615 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blighted vengeance sack | itemId=24621 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | WARNING | CSV row 40: multiple dump entries matched 'Blood moon chestplate'. Selected Blood moon chestplate (29022). Choices: Blood moon chestplate (29022), Blood moon chestplate (29043), Blood moon chestplate (29846)
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blood moon chestplate | itemId=29022 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | WARNING | CSV row 41: multiple dump entries matched 'Blood moon helm'. Selected Blood moon helm (29028). Choices: Blood moon helm (29028), Blood moon helm (29047), Blood moon helm (29848)
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blood moon helm | itemId=29028 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,244 | WARNING | CSV row 42: multiple dump entries matched 'Blood moon tassets'. Selected Blood moon tassets (29025). Choices: Blood moon tassets (29025), Blood moon tassets (29045), Blood moon tassets (29847)
+2026-07-12 03:37:24,244 | INFO    | UNCHANGED | Blood moon tassets | itemId=29025 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | WARNING | CSV row 43: multiple dump entries matched 'Blood rune'. Selected Blood rune (565). Choices: Blood rune (565), Blood rune (11697)
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Blood rune | itemId=565 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | WARNING | CSV row 44: multiple dump entries matched 'Blue moon chestplate'. Selected Blue moon chestplate (29013). Choices: Blue moon chestplate (29013), Blue moon chestplate (29037), Blue moon chestplate (29843)
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Blue moon chestplate | itemId=29013 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | WARNING | CSV row 45: multiple dump entries matched 'Blue moon helm'. Selected Blue moon helm (29019). Choices: Blue moon helm (29019), Blue moon helm (29041), Blue moon helm (29845)
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Blue moon helm | itemId=29019 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | WARNING | CSV row 46: multiple dump entries matched 'Blue moon spear'. Selected Blue moon spear (28988). Choices: Blue moon spear (28988), Blue moon spear (29849)
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Blue moon spear | itemId=28988 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | WARNING | CSV row 47: multiple dump entries matched 'Blue moon tassets'. Selected Blue moon tassets (29016). Choices: Blue moon tassets (29016), Blue moon tassets (29039), Blue moon tassets (29844)
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Blue moon tassets | itemId=29016 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | WARNING | CSV row 48: multiple dump entries matched 'Body rune'. Selected Body rune (559). Choices: Body rune (559), Body rune (6438), Body rune (11691)
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Body rune | itemId=559 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Book of balance | itemId=3844 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Book of darkness | itemId=12612 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Book of law | itemId=12610 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Book of war | itemId=12608 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Bracelet of ethereum | itemId=21816 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Burning amulet(5) | itemId=21166 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | INFO    | UNCHANGED | Burning claws | itemId=29577 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,245 | WARNING | CSV row 56: multiple dump entries matched 'Chaos rune'. Selected Chaos rune (562). Choices: Chaos rune (562), Chaos rune (6430), Chaos rune (7560), Chaos rune (11694)
+2026-07-12 03:37:24,246 | INFO    | UNCHANGED | Chaos rune | itemId=562 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,246 | WARNING | CSV row 57: multiple dump entries matched 'Climbing boots'. Selected Climbing boots (3105). Choices: Climbing boots (3105), Climbing boots (20578)
+2026-07-12 03:37:24,246 | INFO    | UNCHANGED | Climbing boots | itemId=3105 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,246 | INFO    | UNCHANGED | Colossal blade | itemId=27021 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,246 | WARNING | CSV row 59: multiple dump entries matched 'Cooked karambwan'. Selected Cooked karambwan (3144). Choices: Cooked karambwan (3144), Cooked karambwan (3147), Cooked karambwan (23533)
+2026-07-12 03:37:24,246 | INFO    | UNCHANGED | Cooked karambwan | itemId=3144 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,321 | WARNING | CSV row 60: 'Crimson kisten' was not found in the OSRS dump. Suggestions: Crimson swift, Crimson fibre
+2026-07-12 03:37:24,554 | INFO    | WIKI FOUND | CSV name='Crimson kisten' | resolved page='Crimson kisten' | itemId=null
+2026-07-12 03:37:24,554 | INFO    | UNCHANGED | Crimson kisten | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:24,555 | WARNING | CSV row 61: multiple dump entries matched 'Crystal halberd'. Selected Crystal halberd (23987). Choices: Crystal halberd (23987), Crystal halberd (24125)
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Crystal halberd | itemId=23987 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | WARNING | CSV row 62: multiple dump entries matched 'Dark bow'. Selected Dark bow (11235). Choices: Dark bow (11235), Dark bow (12765), Dark bow (12766), Dark bow (12767), Dark bow (12768), Dark bow (20408)
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Dark bow | itemId=11235 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | WARNING | CSV row 63: multiple dump entries matched 'Death rune'. Selected Death rune (560). Choices: Death rune (560), Death rune (6432), Death rune (11692)
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Death rune | itemId=560 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | WARNING | CSV row 64: multiple dump entries matched "Dharok's greataxe". Selected Dharok's greataxe (4718). Choices: Dharok's greataxe (4718), Dharok's greataxe (25516)
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Dharok's greataxe | itemId=4718 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | WARNING | CSV row 65: multiple dump entries matched "Dharok's helm". Selected Dharok's helm (4716). Choices: Dharok's helm (4716), Dharok's helm (23639)
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Dharok's helm | itemId=4716 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | WARNING | CSV row 66: multiple dump entries matched "Dharok's platebody". Selected Dharok's platebody (4720). Choices: Dharok's platebody (4720), Dharok's platebody (25515)
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Dharok's platebody | itemId=4720 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | WARNING | CSV row 67: multiple dump entries matched "Dharok's platelegs". Selected Dharok's platelegs (4722). Choices: Dharok's platelegs (4722), Dharok's platelegs (23633)
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Dharok's platelegs | itemId=4722 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Dinh's bulwark | itemId=21015 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,555 | INFO    | UNCHANGED | Dragon battleaxe | itemId=1377 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | WARNING | CSV row 70: multiple dump entries matched 'Dragon claws'. Selected Dragon claws (13652). Choices: Dragon claws (13652), Dragon claws (20784)
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon claws | itemId=13652 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon crossbow | itemId=21902 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon dagger(p++) | itemId=5698 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | WARNING | CSV row 73: multiple dump entries matched 'Dragon defender'. Selected Dragon defender (12954). Choices: Dragon defender (12954), Dragon defender (23597)
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon defender | itemId=12954 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon halberd | itemId=3204 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon knife(p++) | itemId=22810 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon mace | itemId=1434 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | WARNING | CSV row 77: multiple dump entries matched 'Dragon scimitar'. Selected Dragon scimitar (4587). Choices: Dragon scimitar (4587), Dragon scimitar (20406)
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon scimitar | itemId=4587 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon spear | itemId=1249 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | WARNING | CSV row 79: multiple dump entries matched 'Dragon thrownaxe'. Selected Dragon thrownaxe (20849). Choices: Dragon thrownaxe (20849), Dragon thrownaxe (21207)
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon thrownaxe | itemId=20849 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | WARNING | CSV row 80: multiple dump entries matched 'Dragon warhammer'. Selected Dragon warhammer (13576). Choices: Dragon warhammer (13576), Dragon warhammer (20785)
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragon warhammer | itemId=13576 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dragonstone dragon bolts (e) | itemId=21948 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,556 | WARNING | CSV row 82: multiple dump entries matched 'Dual macuahuitl'. Selected Dual macuahuitl (28997). Choices: Dual macuahuitl (28997), Dual macuahuitl (29850)
+2026-07-12 03:37:24,556 | INFO    | UNCHANGED | Dual macuahuitl | itemId=28997 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,557 | WARNING | CSV row 83: multiple dump entries matched 'Earth rune'. Selected Earth rune (557). Choices: Earth rune (557), Earth rune (6426), Earth rune (9695), Earth rune (11689)
+2026-07-12 03:37:24,557 | INFO    | UNCHANGED | Earth rune | itemId=557 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,557 | WARNING | CSV row 84: multiple dump entries matched 'Eclipse atlatl'. Selected Eclipse atlatl (29000). Choices: Eclipse atlatl (29000), Eclipse atlatl (29851)
+2026-07-12 03:37:24,557 | INFO    | UNCHANGED | Eclipse atlatl | itemId=29000 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,557 | WARNING | CSV row 85: multiple dump entries matched 'Eclipse moon chestplate'. Selected Eclipse moon chestplate (29004). Choices: Eclipse moon chestplate (29004), Eclipse moon chestplate (29031), Eclipse moon chestplate (29840)
+2026-07-12 03:37:24,557 | INFO    | UNCHANGED | Eclipse moon chestplate | itemId=29004 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,557 | WARNING | CSV row 86: multiple dump entries matched 'Eclipse moon helm'. Selected Eclipse moon helm (29010). Choices: Eclipse moon helm (29010), Eclipse moon helm (29035), Eclipse moon helm (29842)
+2026-07-12 03:37:24,557 | INFO    | UNCHANGED | Eclipse moon helm | itemId=29010 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,557 | WARNING | CSV row 87: multiple dump entries matched 'Eclipse moon tassets'. Selected Eclipse moon tassets (29007). Choices: Eclipse moon tassets (29007), Eclipse moon tassets (29033), Eclipse moon tassets (29841)
+2026-07-12 03:37:24,557 | INFO    | UNCHANGED | Eclipse moon tassets | itemId=29007 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,557 | WARNING | CSV row 88: multiple dump entries matched 'Elder maul'. Selected Elder maul (21003). Choices: Elder maul (21003), Elder maul (21205)
+2026-07-12 03:37:24,557 | INFO    | UNCHANGED | Elder maul | itemId=21003 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,651 | WARNING | CSV row 89: 'Extended stamina potion(4)' was not found in the OSRS dump. Suggestions: Stamina potion(4), Stamina potion(3), Stamina potion(2), Stamina potion(1)
+2026-07-12 03:37:24,849 | INFO    | WIKI FOUND | CSV name='Extended stamina potion(4)' | resolved page='Extended stamina potion' | itemId=null
+2026-07-12 03:37:24,850 | INFO    | UNCHANGED | Extended stamina potion | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:24,850 | WARNING | CSV row 90: multiple dump entries matched 'Farseer helm'. Selected Farseer helm (3755). Choices: Farseer helm (3755), Farseer helm (20573)
+2026-07-12 03:37:24,850 | INFO    | UNCHANGED | Farseer helm | itemId=3755 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,850 | INFO    | UNCHANGED | Fighter torso | itemId=10551 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,850 | WARNING | CSV row 92: multiple dump entries matched 'Fire cape'. Selected Fire cape (6570). Choices: Fire cape (6570), Fire cape (10566)
+2026-07-12 03:37:24,850 | INFO    | UNCHANGED | Fire cape | itemId=6570 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,850 | WARNING | CSV row 93: multiple dump entries matched 'Fire rune'. Selected Fire rune (554). Choices: Fire rune (554), Fire rune (6428), Fire rune (7554), Fire rune (9699), Fire rune (11686)
+2026-07-12 03:37:24,850 | INFO    | UNCHANGED | Fire rune | itemId=554 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,850 | WARNING | CSV row 94: multiple dump entries matched 'Granite maul'. Selected Granite maul (4153). Choices: Granite maul (4153), Granite maul (12848), Granite maul (20557), Granite maul (24225), Granite maul (24227)
+2026-07-12 03:37:24,850 | INFO    | UNCHANGED | Granite maul | itemId=4153 | source=OSRS dump via normalized name
+2026-07-12 03:37:24,928 | WARNING | CSV row 95: 'Granite maul (ornate handle)' was not found in the OSRS dump. Suggestions: none
+2026-07-12 03:37:25,127 | INFO    | WIKI FOUND | CSV name='Granite maul (ornate handle)' | resolved page='Granite maul (ornate handle)' | itemId=24225
+2026-07-12 03:37:25,128 | INFO    | UNCHANGED | Granite maul (ornate handle) | itemId=24225 | source=manual CSV itemId; Wiki page verified
+2026-07-12 03:37:25,128 | INFO    | UNCHANGED | Guthix cape | itemId=2413 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,128 | INFO    | UNCHANGED | Guthix staff | itemId=2416 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,196 | WARNING | CSV row 98: 'Halibut' was not found in the OSRS dump. Suggestions: none
+2026-07-12 03:37:25,390 | INFO    | WIKI FOUND | CSV name='Halibut' | resolved page='Halibut' | itemId=null
+2026-07-12 03:37:25,390 | INFO    | UNCHANGED | Halibut | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:25,391 | WARNING | CSV row 99: multiple dump entries matched 'Heavy ballista'. Selected Heavy ballista (19481). Choices: Heavy ballista (19481), Heavy ballista (23630)
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Heavy ballista | itemId=19481 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | WARNING | CSV row 100: multiple dump entries matched 'Helm of neitiznot'. Selected Helm of neitiznot (10828). Choices: Helm of neitiznot (10828), Helm of neitiznot (23591)
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Helm of neitiznot | itemId=10828 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Holy book | itemId=3840 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Hunters' sunlight crossbow | itemId=28869 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | WARNING | CSV row 103: multiple dump entries matched 'Imbued guthix cape'. Selected Imbued guthix cape (21793). Choices: Imbued guthix cape (21793), Imbued guthix cape (23603)
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Imbued guthix cape | itemId=21793 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | WARNING | CSV row 104: multiple dump entries matched 'Imbued saradomin cape'. Selected Imbued saradomin cape (21791). Choices: Imbued saradomin cape (21791), Imbued saradomin cape (23607)
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Imbued saradomin cape | itemId=21791 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | WARNING | CSV row 105: multiple dump entries matched 'Imbued zamorak cape'. Selected Imbued zamorak cape (21795). Choices: Imbued zamorak cape (21795), Imbued zamorak cape (23605)
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Imbued zamorak cape | itemId=21795 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Karil's coif | itemId=4732 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Karil's crossbow | itemId=4734 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | INFO    | UNCHANGED | Karil's leatherskirt | itemId=4738 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,391 | WARNING | CSV row 109: multiple dump entries matched "Karil's leathertop". Selected Karil's leathertop (4736). Choices: Karil's leathertop (4736), Karil's leathertop (23632)
+2026-07-12 03:37:25,392 | INFO    | UNCHANGED | Karil's leathertop | itemId=4736 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,392 | WARNING | CSV row 110: multiple dump entries matched 'Law rune'. Selected Law rune (563). Choices: Law rune (563), Law rune (6434), Law rune (11695)
+2026-07-12 03:37:25,392 | INFO    | UNCHANGED | Law rune | itemId=563 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,392 | WARNING | CSV row 111: multiple dump entries matched 'Light ballista'. Selected Light ballista (19478). Choices: Light ballista (19478), Light ballista (27188)
+2026-07-12 03:37:25,392 | INFO    | UNCHANGED | Light ballista | itemId=19478 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,392 | WARNING | CSV row 112: multiple dump entries matched 'Loot key'. Selected Loot key (26651). Choices: Loot key (26651), Loot key (26652), Loot key (26653), Loot key (26654), Loot key (26655)
+2026-07-12 03:37:25,392 | INFO    | UNCHANGED | Loot key | itemId=26651 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,392 | INFO    | UNCHANGED | Magic shortbow (i) | itemId=12788 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,392 | INFO    | UNCHANGED | Magic shortbow scroll | itemId=12786 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,392 | INFO    | UNCHANGED | Manta ray | itemId=391 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,451 | WARNING | CSV row 116: 'Marlin' was not found in the OSRS dump. Suggestions: none
+2026-07-12 03:37:25,652 | INFO    | WIKI FOUND | CSV name='Marlin' | resolved page='Marlin' | itemId=null
+2026-07-12 03:37:25,652 | INFO    | UNCHANGED | Marlin | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:25,653 | WARNING | CSV row 117: multiple dump entries matched 'Mind rune'. Selected Mind rune (558). Choices: Mind rune (558), Mind rune (6436), Mind rune (9697), Mind rune (11690)
+2026-07-12 03:37:25,653 | INFO    | UNCHANGED | Mind rune | itemId=558 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,653 | WARNING | CSV row 118: multiple dump entries matched 'Mystic boots'. Selected Mystic boots (4097). Choices: Mystic boots (4097), Mystic boots (20579)
+2026-07-12 03:37:25,653 | INFO    | UNCHANGED | Mystic boots | itemId=4097 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,653 | INFO    | UNCHANGED | Mystic gloves | itemId=4095 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,653 | WARNING | CSV row 120: multiple dump entries matched 'Mystic hat'. Selected Mystic hat (4089). Choices: Mystic hat (4089), Mystic hat (20562)
+2026-07-12 03:37:25,653 | INFO    | UNCHANGED | Mystic hat | itemId=4089 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,653 | WARNING | CSV row 121: multiple dump entries matched 'Mystic robe bottom'. Selected Mystic robe bottom (4093). Choices: Mystic robe bottom (4093), Mystic robe bottom (20426)
+2026-07-12 03:37:25,653 | INFO    | UNCHANGED | Mystic robe bottom | itemId=4093 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,653 | WARNING | CSV row 122: multiple dump entries matched 'Mystic robe top'. Selected Mystic robe top (4091). Choices: Mystic robe top (4091), Mystic robe top (20425)
+2026-07-12 03:37:25,653 | INFO    | UNCHANGED | Mystic robe top | itemId=4091 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,653 | WARNING | CSV row 123: multiple dump entries matched 'Mystic robe top (light)'. Selected Mystic robe top (light) (4111). Choices: Mystic robe top (light) (4111), Mystic robe top (light) (27160)
+2026-07-12 03:37:25,653 | INFO    | UNCHANGED | Mystic robe top (light) | itemId=4111 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,653 | WARNING | CSV row 124: multiple dump entries matched 'Nature rune'. Selected Nature rune (561). Choices: Nature rune (561), Nature rune (11693)
+2026-07-12 03:37:25,654 | INFO    | UNCHANGED | Nature rune | itemId=561 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,654 | WARNING | CSV row 125: multiple dump entries matched 'Necklace of anguish'. Selected Necklace of anguish (19547). Choices: Necklace of anguish (19547), Necklace of anguish (27172)
+2026-07-12 03:37:25,654 | INFO    | UNCHANGED | Necklace of anguish | itemId=19547 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,775 | WARNING | CSV row 126: 'Necklace of rupture' was not found in the OSRS dump. Suggestions: Necklace of faith
+2026-07-12 03:37:25,992 | INFO    | WIKI FOUND | CSV name='Necklace of rupture' | resolved page='Necklace of rupture' | itemId=null
+2026-07-12 03:37:25,992 | INFO    | UNCHANGED | Necklace of rupture | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:25,992 | INFO    | UNCHANGED | Obsidian cape | itemId=6568 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,992 | INFO    | UNCHANGED | Obsidian helmet | itemId=21298 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,992 | INFO    | UNCHANGED | Obsidian platebody | itemId=21301 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,993 | INFO    | UNCHANGED | Obsidian platelegs | itemId=21304 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,993 | WARNING | CSV row 131: multiple dump entries matched 'Occult necklace'. Selected Occult necklace (12002). Choices: Occult necklace (12002), Occult necklace (23654)
+2026-07-12 03:37:25,993 | INFO    | UNCHANGED | Occult necklace | itemId=12002 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,993 | INFO    | UNCHANGED | Ornate maul handle | itemId=24229 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,993 | INFO    | UNCHANGED | Pineapple pizza | itemId=2301 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,993 | WARNING | CSV row 134: multiple dump entries matched 'Prayer potion(4)'. Selected Prayer potion(4) (2434). Choices: Prayer potion(4) (2434), Prayer potion(4) (20393)
+2026-07-12 03:37:25,993 | INFO    | UNCHANGED | Prayer potion(4) | itemId=2434 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,993 | WARNING | CSV row 135: multiple dump entries matched 'Ranging potion(4)'. Selected Ranging potion(4) (2444). Choices: Ranging potion(4) (2444), Ranging potion(4) (23551)
+2026-07-12 03:37:25,993 | INFO    | UNCHANGED | Ranging potion(4) | itemId=2444 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,993 | INFO    | UNCHANGED | Revenant ether | itemId=21820 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Ring of suffering | itemId=19550 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Royal seed pod | itemId=19564 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | WARNING | CSV row 139: multiple dump entries matched 'Rune arrow'. Selected Rune arrow (892). Choices: Rune arrow (892), Rune arrow (20600)
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Rune arrow | itemId=892 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | WARNING | CSV row 140: multiple dump entries matched 'Rune crossbow'. Selected Rune crossbow (9185). Choices: Rune crossbow (9185), Rune crossbow (23601)
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Rune crossbow | itemId=9185 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Rune dart | itemId=811 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | WARNING | CSV row 142: multiple dump entries matched 'Rune gloves'. Selected Rune gloves (7460). Choices: Rune gloves (7460), Rune gloves (20583)
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Rune gloves | itemId=7460 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | WARNING | CSV row 143: multiple dump entries matched 'Rune pouch'. Selected Rune pouch (12791). Choices: Rune pouch (12791), Rune pouch (23650), Rune pouch (27086)
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Rune pouch | itemId=12791 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | WARNING | CSV row 144: multiple dump entries matched 'Saradomin brew(4)'. Selected Saradomin brew(4) (6685). Choices: Saradomin brew(4) (6685), Saradomin brew(4) (23575)
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Saradomin brew(4) | itemId=6685 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Saradomin cape | itemId=2412 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Saradomin staff | itemId=2415 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,994 | INFO    | UNCHANGED | Saradomin sword | itemId=11838 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,995 | INFO    | UNCHANGED | Saradomin's blessed sword | itemId=12809 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,995 | INFO    | UNCHANGED | Saradomin's tear | itemId=12804 | source=OSRS dump via normalized name
+2026-07-12 03:37:25,995 | INFO    | UNCHANGED | Scroll of imbuing | itemId=26706 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,130 | WARNING | CSV row 151: 'Seeking dragon arrow' was not found in the OSRS dump. Suggestions: Dragon arrow
+2026-07-12 03:37:26,324 | INFO    | WIKI FOUND | CSV name='Seeking dragon arrow' | resolved page='Seeking dragon arrow' | itemId=null
+2026-07-12 03:37:26,325 | INFO    | UNCHANGED | Seeking dragon arrow | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:26,325 | INFO    | UNCHANGED | Seers ring | itemId=6731 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,325 | INFO    | UNCHANGED | Serpentine helm | itemId=12931 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,325 | WARNING | CSV row 154: multiple dump entries matched 'Shark'. Selected Shark (385). Choices: Shark (385), Shark (6969), Shark (20390)
+2026-07-12 03:37:26,325 | INFO    | UNCHANGED | Shark | itemId=385 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,325 | WARNING | CSV row 155: multiple dump entries matched 'Soul rune'. Selected Soul rune (566). Choices: Soul rune (566), Soul rune (11698)
+2026-07-12 03:37:26,325 | INFO    | UNCHANGED | Soul rune | itemId=566 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,325 | WARNING | CSV row 156: multiple dump entries matched 'Stamina potion(4)'. Selected Stamina potion(4) (12625). Choices: Stamina potion(4) (12625), Stamina potion(4) (23583)
+2026-07-12 03:37:26,326 | INFO    | UNCHANGED | Stamina potion(4) | itemId=12625 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,326 | WARNING | CSV row 157: multiple dump entries matched 'Super combat potion(4)'. Selected Super combat potion(4) (12695). Choices: Super combat potion(4) (12695), Super combat potion(4) (23543)
+2026-07-12 03:37:26,326 | INFO    | UNCHANGED | Super combat potion(4) | itemId=12695 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,326 | WARNING | CSV row 158: multiple dump entries matched 'Super restore(4)'. Selected Super restore(4) (3024). Choices: Super restore(4) (3024), Super restore(4) (23567)
+2026-07-12 03:37:26,326 | INFO    | UNCHANGED | Super restore(4) | itemId=3024 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,494 | WARNING | CSV row 159: 'Surge potion(4)' was not found in the OSRS dump. Suggestions: Strength potion(4), Prayer potion(4), Hunter potion(4), Energy potion(4), Strange potion
+2026-07-12 03:37:26,690 | INFO    | WIKI FOUND | CSV name='Surge potion(4)' | resolved page='Surge potion' | itemId=null
+2026-07-12 03:37:26,690 | INFO    | UNCHANGED | Surge potion | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Toktz-ket-xil | itemId=6524 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Toktz-mej-tal | itemId=6526 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | WARNING | CSV row 162: multiple dump entries matched 'Toktz-xil-ak'. Selected Toktz-xil-ak (6523). Choices: Toktz-xil-ak (6523), Toktz-xil-ak (20554)
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Toktz-xil-ak | itemId=6523 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Toktz-xil-ek | itemId=6525 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Toktz-xil-ul | itemId=6522 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | WARNING | CSV row 165: multiple dump entries matched 'Tome of fire'. Selected Tome of fire (20714). Choices: Tome of fire (20714), Tome of fire (27358)
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Tome of fire | itemId=20714 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Tome of water | itemId=25574 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Torag's hammers | itemId=4747 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | WARNING | CSV row 168: multiple dump entries matched "Torag's helm". Selected Torag's helm (4745). Choices: Torag's helm (4745), Torag's helm (23637)
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Torag's helm | itemId=4745 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Torag's platebody | itemId=4749 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | WARNING | CSV row 170: multiple dump entries matched "Torag's platelegs". Selected Torag's platelegs (4751). Choices: Torag's platelegs (4751), Torag's platelegs (23634)
+2026-07-12 03:37:26,691 | INFO    | UNCHANGED | Torag's platelegs | itemId=4751 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,691 | WARNING | CSV row 171: multiple dump entries matched 'Tormented bracelet'. Selected Tormented bracelet (19544). Choices: Tormented bracelet (19544), Tormented bracelet (27171)
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Tormented bracelet | itemId=19544 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Toxic blowpipe | itemId=12926 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Toxic staff of the dead | itemId=12904 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Trouver parchment | itemId=24187 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Tzhaar-ket-em | itemId=6527 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Tzhaar-ket-om | itemId=6528 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | WARNING | CSV row 177: multiple dump entries matched 'Unholy book'. Selected Unholy book (3842). Choices: Unholy book (3842), Unholy book (27191)
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Unholy book | itemId=3842 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Ursine chainmace | itemId=27660 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | WARNING | CSV row 179: multiple dump entries matched "Verac's brassard". Selected Verac's brassard (4757). Choices: Verac's brassard (4757), Verac's brassard (27190)
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Verac's brassard | itemId=4757 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | WARNING | CSV row 180: multiple dump entries matched "Verac's flail". Selected Verac's flail (4755). Choices: Verac's flail (4755), Verac's flail (27189)
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Verac's flail | itemId=4755 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | WARNING | CSV row 181: multiple dump entries matched "Verac's helm". Selected Verac's helm (4753). Choices: Verac's helm (4753), Verac's helm (23636)
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Verac's helm | itemId=4753 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,692 | WARNING | CSV row 182: multiple dump entries matched "Verac's plateskirt". Selected Verac's plateskirt (4759). Choices: Verac's plateskirt (4759), Verac's plateskirt (23635)
+2026-07-12 03:37:26,692 | INFO    | UNCHANGED | Verac's plateskirt | itemId=4759 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Void knight gloves | itemId=8842 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Void knight mace | itemId=8841 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Void knight robe | itemId=8840 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Void knight top | itemId=8839 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Void mage helm | itemId=11663 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Void melee helm | itemId=11665 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Void ranger helm | itemId=11664 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | WARNING | CSV row 190: multiple dump entries matched 'Voidwaker'. Selected Voidwaker (27690). Choices: Voidwaker (27690), Voidwaker (27869)
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Voidwaker | itemId=27690 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | WARNING | CSV row 191: multiple dump entries matched 'Volatile nightmare staff'. Selected Volatile nightmare staff (24424). Choices: Volatile nightmare staff (24424), Volatile nightmare staff (25517)
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Volatile nightmare staff | itemId=24424 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Warrior guild token | itemId=8851 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Warrior ring | itemId=6735 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | WARNING | CSV row 194: multiple dump entries matched 'Water rune'. Selected Water rune (555). Choices: Water rune (555), Water rune (6424), Water rune (7556), Water rune (9691), Water rune (11687)
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Water rune | itemId=555 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,693 | INFO    | UNCHANGED | Webweaver bow | itemId=27655 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Xerician hat | itemId=13385 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Xerician robe | itemId=13389 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Xerician top | itemId=13387 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Zamorak cape | itemId=2414 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Zamorak godsword | itemId=11808 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Zamorak staff | itemId=2417 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Zombie axe | itemId=28810 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Dragon longsword | itemId=1305 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,694 | INFO    | UNCHANGED | Brimstone ring | itemId=22975 | source=OSRS dump via normalized name
+2026-07-12 03:37:26,808 | WARNING | CSV row 205: 'Granite sword' was not found in the OSRS dump. Suggestions: Granite longsword, Granite body, Rune sword, Blurite sword, White sword
+2026-07-12 03:37:27,009 | INFO    | WIKI FOUND | CSV name='Granite sword' | resolved page='Granite longsword' | itemId=null
+2026-07-12 03:37:27,009 | INFO    | UNCHANGED | Granite longsword | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:27,009 | INFO    | UNCHANGED | Granite hammer | itemId=21742 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,009 | WARNING | CSV row 207: multiple dump entries matched 'Rune defender'. Selected Rune defender (8850). Choices: Rune defender (8850), Rune defender (27185)
+2026-07-12 03:37:27,009 | INFO    | UNCHANGED | Rune defender | itemId=8850 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,009 | WARNING | CSV row 208: multiple dump entries matched 'Dragon sword'. Selected Dragon sword (21009). Choices: Dragon sword (21009), Dragon sword (21206)
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Dragon sword | itemId=21009 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Treasonous ring | itemId=12605 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Tyrannical ring | itemId=12603 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Ring of the gods | itemId=12601 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Lunar ring | itemId=9104 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Infinity hat | itemId=6918 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | WARNING | CSV row 214: multiple dump entries matched 'Infinity top'. Selected Infinity top (6916). Choices: Infinity top (6916), Infinity top (20574)
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Infinity top | itemId=6916 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | WARNING | CSV row 215: multiple dump entries matched 'Infinity bottoms'. Selected Infinity bottoms (6924). Choices: Infinity bottoms (6924), Infinity bottoms (20575)
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Infinity bottoms | itemId=6924 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Infinity gloves | itemId=6922 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,010 | WARNING | CSV row 217: multiple dump entries matched 'Infinity boots'. Selected Infinity boots (6920). Choices: Infinity boots (6920), Infinity boots (27170)
+2026-07-12 03:37:27,010 | INFO    | UNCHANGED | Infinity boots | itemId=6920 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Moonclan helm | itemId=9068 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Moonclan hat | itemId=9069 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Moonclan armour | itemId=9070 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Moonclan skirt | itemId=9071 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Moonclan gloves | itemId=9072 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Moonclan boots | itemId=9073 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Moonclan cape | itemId=9074 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Ivandis flail | itemId=22398 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Black d'hide shield | itemId=22284 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | WARNING | CSV row 227: multiple dump entries matched 'Snakeskin boots'. Selected Snakeskin boots (6328). Choices: Snakeskin boots (6328), Snakeskin boots (20580)
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Snakeskin boots | itemId=6328 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,011 | INFO    | UNCHANGED | Blighted surge sack | itemId=26705 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,116 | WARNING | CSV row 229: "Belle's folly" was not found in the OSRS dump. Suggestions: none
+2026-07-12 03:37:27,304 | INFO    | WIKI FOUND | CSV name="Belle's folly" | resolved page="Belle's folly" | itemId=null
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Belle's folly | no numeric itemId resolved | source=Wiki page verified; no itemId available
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Black d'hide vambraces | itemId=2491 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Revenant cave teleport | itemId=21802 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Wilderness crabs teleport | itemId=24251 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Ring of dueling(8) | itemId=2552 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Guthix coif | itemId=10382 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Guthix d'hide body | itemId=10378 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | WARNING | CSV row 236: multiple dump entries matched 'Guthix chaps'. Selected Guthix chaps (10380). Choices: Guthix chaps (10380), Guthix chaps (27180)
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Guthix chaps | itemId=10380 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Guthix bracers | itemId=10376 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Guthix d'hide boots | itemId=19927 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Guthix d'hide shield | itemId=23188 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Rock-shell helm | itemId=6128 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,305 | INFO    | UNCHANGED | Rock-shell plate | itemId=6129 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Rock-shell legs | itemId=6130 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Rock-shell gloves | itemId=6151 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Rock-shell boots | itemId=6145 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Spined helm | itemId=6131 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Spined body | itemId=6133 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Spined gloves | itemId=6149 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Spined boots | itemId=6143 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Spined chaps | itemId=6135 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Skeletal helm | itemId=6137 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Skeletal top | itemId=6139 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Skeletal bottoms | itemId=6141 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Skeletal gloves | itemId=6153 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | INFO    | UNCHANGED | Skeletal boots | itemId=6147 | source=OSRS dump via normalized name
+2026-07-12 03:37:27,306 | WARNING | CSV row 255: multiple dump entries matched 'Odium ward'. Selected Odium ward (11926). Choices: Odium ward (11926), Odium ward (12807)
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Odium ward | itemId=11926 | source=OSRS dump via normalized name | CSV name='Odium ward'
+2026-07-12 03:37:27,307 | WARNING | CSV row 256: multiple dump entries matched 'Malediction ward'. Selected Malediction ward (11924). Choices: Malediction ward (11924), Malediction ward (12806)
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Malediction ward | itemId=11924 | source=OSRS dump via normalized name | CSV name='Malediction ward'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Rune defender ornament kit | itemId=23227 | source=OSRS dump via normalized name | CSV name='Rune defender ornament kit'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Dragon boots ornament kit | itemId=22231 | source=OSRS dump via normalized name | CSV name='Dragon boots ornament kit'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Dragon scimitar ornament kit | itemId=20002 | source=OSRS dump via normalized name | CSV name='Dragon scimitar ornament kit'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Tzhaar-ket-om ornament kit | itemId=23232 | source=OSRS dump via normalized name | CSV name='Tzhaar-ket-om ornament kit'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Berserker necklace ornament kit | itemId=23237 | source=OSRS dump via normalized name | CSV name='Berserker necklace ornament kit'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Dark infinity colour kit | itemId=12528 | source=OSRS dump via normalized name | CSV name='Dark infinity colour kit'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Light infinity colour kit | itemId=12530 | source=OSRS dump via normalized name | CSV name='Light infinity colour kit'
+2026-07-12 03:37:27,307 | INFO    | ADDED     | Occult ornament kit | itemId=20065 | source=OSRS dump via normalized name | CSV name='Occult ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Ward upgrade kit | itemId=12802 | source=OSRS dump via normalized name | CSV name='Ward upgrade kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Elder chaos robes ornament kit | itemId=27113 | source=OSRS dump via normalized name | CSV name='Elder chaos robes ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Elder maul ornament kit | itemId=27098 | source=OSRS dump via normalized name | CSV name='Elder maul ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Heavy ballista ornament kit | itemId=26711 | source=OSRS dump via normalized name | CSV name='Heavy ballista ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Bounty hunter ornament kit | itemId=28017 | source=OSRS dump via normalized name | CSV name='Bounty hunter ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Shattered relics variety ornament kit | itemId=26421 | source=OSRS dump via normalized name | CSV name='Shattered relics variety ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Shattered relics void ornament kit | itemId=26479 | source=OSRS dump via normalized name | CSV name='Shattered relics void ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Shattered relics mystic ornament kit | itemId=26541 | source=OSRS dump via normalized name | CSV name='Shattered relics mystic ornament kit'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Armageddon cape fabric | itemId=29628 | source=OSRS dump via normalized name | CSV name='Armageddon cape fabric'
+2026-07-12 03:37:27,308 | INFO    | ADDED     | Armageddon weapon scroll | itemId=29625 | source=OSRS dump via normalized name | CSV name='Armageddon weapon scroll'
+2026-07-12 03:37:27,320 | INFO    | Saved JSON: data\BronzemanItems.json
+2026-07-12 03:37:27,321 | INFO    | SUMMARY | CSV rows=273 | added=20 | updated IDs=0 | unchanged=253 | skipped=0 | missing from dump=12 | Wiki pages found=12 | warnings=105 | errors=0
+2026-07-12 03:37:27,321 | INFO    | RUN END

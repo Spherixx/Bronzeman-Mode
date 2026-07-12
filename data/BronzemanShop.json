@@ -14,7 +14,6 @@
             "tags": [
                 "shop",
                 "rune",
-                "ammo",
                 "resupply"
             ]
         },
@@ -35,7 +34,6 @@
             "tags": [
                 "shop",
                 "rune",
-                "ammo",
                 "resupply"
             ]
         },
@@ -52,7 +50,6 @@
             "tags": [
                 "shop",
                 "rune",
-                "ammo",
                 "resupply"
             ]
         },
@@ -412,8 +409,7 @@
             ],
             "tags": [
                 "shop",
-                "consumable",
-                "unlock"
+                "consumable"
             ]
         },
         {
@@ -427,8 +423,7 @@
             ],
             "tags": [
                 "shop",
-                "consumable",
-                "unlock"
+                "consumable"
             ]
         },
         {
@@ -442,8 +437,7 @@
             ],
             "tags": [
                 "shop",
-                "consumable",
-                "unlock"
+                "consumable"
             ]
         },
         {
@@ -536,7 +530,6 @@
             "tags": [
                 "shop",
                 "rune",
-                "ammo",
                 "resupply"
             ]
         },
@@ -595,6 +588,276 @@
                 "shop",
                 "range",
                 "armor",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "rune-defender-ornament",
+            "alias": "Rune defender ornament",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Rune defender ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "dragon-boots-ornament",
+            "alias": "Dragon boots ornament",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Dragon boots ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "dragon-scimitar-ornament",
+            "alias": "Dragon scimitar ornament",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Dragon scimitar ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "tzhaar-ket-om-ornament",
+            "alias": "Tzhaar-ket-om ornament",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Tzhaar-ket-om ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "berserker-necklace-ornament",
+            "alias": "Berserker necklace ornament",
+            "cost": 1,
+            "items": [
+                {
+                    "imageUsed": "Berserker necklace ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "dark-infinity-colour",
+            "alias": "Dark infinity colour",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Dark infinity colour kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "light-infinity-colour",
+            "alias": "Light infinity colour",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Light infinity colour kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "occult-ornament",
+            "alias": "Occult ornament",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Occult ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "ward-upgrade",
+            "alias": "Ward upgrade",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Ward upgrade kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "elder-chaos-robes-ornament",
+            "alias": "Elder chaos robes ornament",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Elder chaos robes ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "elder-maul-ornament",
+            "alias": "Elder maul ornament",
+            "cost": 3,
+            "items": [
+                {
+                    "imageUsed": "Elder maul ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "heavy-ballista-ornament",
+            "alias": "Heavy ballista ornament",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Heavy ballista ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "bounty-hunter-ornament",
+            "alias": "Bounty hunter ornament",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Bounty hunter ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "shattered-relics-variety-ornament",
+            "alias": "Shattered relics variety ornament",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Shattered relics variety ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "shattered-relics-void-ornament",
+            "alias": "Shattered relics void ornament",
+            "cost": 3,
+            "items": [
+                {
+                    "imageUsed": "Shattered relics void ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "shattered-relics-mystic-ornament",
+            "alias": "Shattered relics mystic ornament",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Shattered relics mystic ornament kit"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "armageddon-cape-fabric",
+            "alias": "Armageddon cape fabric",
+            "cost": 2,
+            "items": [
+                {
+                    "imageUsed": "Armageddon cape fabric"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
+                "unlock"
+            ]
+        },
+        {
+            "uid": "armageddon-weapon-scroll",
+            "alias": "Armageddon weapon scroll",
+            "cost": 3,
+            "items": [
+                {
+                    "imageUsed": "Armageddon weapon scroll"
+                }
+            ],
+            "tags": [
+                "shop",
+                "other",
                 "unlock"
             ]
         }
