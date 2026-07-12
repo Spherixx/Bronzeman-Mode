@@ -3,3 +3,9 @@ BrzonemanUnlocks	Unlocks that aren't items like prayers, areas, spellbooks
 BronzemanItemSets	Anything that unlocks multiple items per unlock
 BronzemanPvPTasks	PvP tasks
 BronzemanPvMTasks	PvM tasks
+
+Hardcoded candidates to move into JSON later:
+Firebase config and tracker document id live in js/firebase-service.js
+Collection filters, category priority, talent tier requirement, and Perilous Moons reward ids live in js/config.js
+Challenge definitions/rules live in js/config.js; consider data/BronzemanChallenges.json
+Special image folder routing lives in js/assets.js; consider an asset manifest JSON
