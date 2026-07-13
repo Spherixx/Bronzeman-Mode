@@ -31,7 +31,6 @@ export function createAppContext() {
       unlocks: [],
       shopCategories: [],
       shopItems: [],
-      collectionSetDefinitions: [],
       itemDefinitions: [],
       dataWarnings: []
     },

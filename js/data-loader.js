@@ -123,18 +123,6 @@ export function createDataLoader(ctx) {
     return toArray(data?.pvpTasks).map((taskEntry, index) => normalizeChallengeTask(taskEntry, "pvp", ctx.domain.challengeId("pvp", index)));
   }
 
-  function normalizeCollectionSetDefinitions(data) {
-    return toArray(data?.itemSets).map((setEntry) => ({
-      ...setEntry,
-      id: dataUid(setEntry, "set"),
-      name: dataDisplayName(setEntry, "Set"),
-      originalName: setEntry.name,
-      itemIds: itemIdsFromDataIds(setEntry.itemIds),
-      tags: uniqueTags(setEntry.tags ?? []),
-      images: [imageForDataEntry(setEntry)].filter(Boolean)
-    }));
-  }
-
   function normalizeTalentUnlock(entry, sourceType) {
     const cost = toNumber(entry.cost, NaN);
     const tier = toNumber(entry.tier, NaN);
@@ -261,7 +249,6 @@ export function createDataLoader(ctx) {
         pvm: normalizePvmChallenges(pvmData),
         pvp: normalizePvpChallenges(pvpData)
       };
-      ctx.data.collectionSetDefinitions = normalizeCollectionSetDefinitions(itemSetsData);
       ctx.data.unlocks = mergeUnlocks(buildDataUnlocks(itemsData, itemSetsData, unlocksData));
       ctx.data.shopItems = normalizeShopItems(shopData);
 
@@ -275,7 +262,7 @@ export function createDataLoader(ctx) {
           return true;
         });
 
-      ctx.data.itemDefinitions = enrichCollectionSignals(ctx.collection.collapseCollectionSets(items));
+      ctx.data.itemDefinitions = enrichCollectionSignals(items.filter((item) => !ctx.collection.collectionExcluded(item)));
     } catch (error) {
       console.warn("Could not load Bronzeman JSON data", error);
       ctx.data.dataWarnings.push("Could not load one or more Bronzeman JSON files.");
@@ -283,7 +270,6 @@ export function createDataLoader(ctx) {
       ctx.data.unlocks = [];
       ctx.data.shopItems = [];
       ctx.data.shopCategories = [];
-      ctx.data.collectionSetDefinitions = [];
       ctx.data.itemDefinitions = [];
     }
   }

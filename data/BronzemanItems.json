@@ -116,7 +116,6 @@
       "uid": "body-rune",
       "itemId": 559,
       "tags": [
-        "armor",
         "rune"
       ],
       "tier": null,
@@ -331,7 +330,6 @@
       "uid": "amulet-of-glory-4",
       "itemId": 1712,
       "tags": [
-        "armor",
         "jewellery"
       ],
       "tier": null,
@@ -1586,7 +1584,6 @@
       "itemId": 6585,
       "tags": [
         "talent",
-        "armor",
         "jewellery"
       ],
       "tier": 2,
@@ -1618,8 +1615,8 @@
       "uid": "seers-ring",
       "itemId": 6731,
       "tags": [
-        "armor",
-        "jewellery"
+        "jewellery",
+        "mage"
       ],
       "tier": null,
       "alwaysAvailable": false,
@@ -1635,7 +1632,6 @@
       "itemId": 6733,
       "tags": [
         "range",
-        "armor",
         "jewellery"
       ],
       "tier": null,
@@ -1652,7 +1648,6 @@
       "itemId": 6735,
       "tags": [
         "melee",
-        "armor",
         "jewellery"
       ],
       "tier": null,
@@ -1669,7 +1664,6 @@
       "itemId": 6737,
       "tags": [
         "melee",
-        "armor",
         "jewellery"
       ],
       "tier": null,
@@ -2022,7 +2016,6 @@
       "uid": "lunar-ring",
       "itemId": 9104,
       "tags": [
-        "armor",
         "jewellery"
       ],
       "tier": null,
@@ -2347,11 +2340,31 @@
       "cost": 2
     },
     {
+      "name": "Trident of the seas",
+      "alias": "Trident of the seas",
+      "uid": "trident-of-the-seas",
+      "itemId": 11907,
+      "tags": [
+        "talent",
+        "weapon",
+        "mage"
+      ],
+      "tier": "2",
+      "cost": "2",
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Trident_of_the_seas",
+      "imageName": "Trident of the seas.png"
+    },
+    {
       "name": "Malediction ward",
       "alias": "Malediction ward",
       "uid": "malediction-ward",
       "itemId": 11924,
-      "tags": [],
+      "tags": [
+        "mage",
+        "armor"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -2364,7 +2377,10 @@
       "alias": "Odium ward",
       "uid": "odium-ward",
       "itemId": 11926,
-      "tags": [],
+      "tags": [
+        "range",
+        "armor"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -2380,7 +2396,6 @@
       "tags": [
         "talent",
         "mage",
-        "armor",
         "jewellery"
       ],
       "tier": 3,
@@ -2423,7 +2438,6 @@
       "itemId": 12601,
       "tags": [
         "talent",
-        "armor",
         "jewellery"
       ],
       "tier": "1",
@@ -2440,7 +2454,6 @@
       "itemId": 12603,
       "tags": [
         "talent",
-        "armor",
         "jewellery"
       ],
       "tier": "1",
@@ -2457,7 +2470,6 @@
       "itemId": 12605,
       "tags": [
         "talent",
-        "armor",
         "jewellery"
       ],
       "tier": "1",
@@ -2640,6 +2652,23 @@
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin%27s_blessed_sword",
       "imageName": "Saradomin's blessed sword.png",
       "cost": 3
+    },
+    {
+      "name": "Trident of the swamp",
+      "alias": "Trident of the swamp",
+      "uid": "trident-of-the-swamp",
+      "itemId": 12899,
+      "tags": [
+        "talent",
+        "mage",
+        "weapon"
+      ],
+      "tier": "4",
+      "cost": "4",
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Trident_of_the_swamp",
+      "imageName": "Trident of the swamp.png"
     },
     {
       "name": "Toxic staff of the dead",
@@ -2953,7 +2982,6 @@
       "itemId": 19564,
       "tags": [
         "talent",
-        "armor",
         "teleport"
       ],
       "tier": 1,
@@ -2984,7 +3012,9 @@
       "alias": "Dragon scimitar ornament kit",
       "uid": "dragon-scimitar-ornament-kit",
       "itemId": 20002,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -2997,7 +3027,9 @@
       "alias": "Occult ornament kit",
       "uid": "occult-ornament-kit",
       "itemId": 20065,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3273,7 +3305,7 @@
       "itemId": 21820,
       "tags": [
         "shop",
-        "ammo"
+        "consumable"
       ],
       "tier": null,
       "alwaysAvailable": false,
@@ -3337,7 +3369,9 @@
       "alias": "Dragon boots ornament kit",
       "uid": "dragon-boots-ornament-kit",
       "itemId": 22231,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3379,7 +3413,7 @@
     },
     {
       "name": "Dragon knife(p++)",
-      "alias": "Dragon knife(p++)",
+      "alias": "Dragon Knives",
       "uid": "dragon-knife-p",
       "itemId": 22810,
       "tags": [
@@ -3434,7 +3468,9 @@
       "alias": "Rune defender ornament kit",
       "uid": "rune-defender-ornament-kit",
       "itemId": 23227,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3447,7 +3483,9 @@
       "alias": "Tzhaar-ket-om ornament kit",
       "uid": "tzhaar-ket-om-ornament-kit",
       "itemId": 23232,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3460,7 +3498,9 @@
       "alias": "Berserker necklace ornament kit",
       "uid": "berserker-necklace-ornament-kit",
       "itemId": 23237,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3635,7 +3675,6 @@
       "itemId": 24615,
       "tags": [
         "shop",
-        "teleport",
         "ammo"
       ],
       "tier": null,
@@ -3701,7 +3740,9 @@
       "alias": "Shattered relics variety ornament kit",
       "uid": "shattered-relics-variety-ornament-kit",
       "itemId": 26421,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3714,7 +3755,9 @@
       "alias": "Shattered relics void ornament kit",
       "uid": "shattered-relics-void-ornament-kit",
       "itemId": 26479,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3727,7 +3770,9 @@
       "alias": "Shattered relics mystic ornament kit",
       "uid": "shattered-relics-mystic-ornament-kit",
       "itemId": 26541,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3788,7 +3833,9 @@
       "alias": "Heavy ballista ornament kit",
       "uid": "heavy-ballista-ornament-kit",
       "itemId": 26711,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3819,7 +3866,9 @@
       "alias": "Elder maul ornament kit",
       "uid": "elder-maul-ornament-kit",
       "itemId": 27098,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -3832,13 +3881,31 @@
       "alias": "Elder chaos robes ornament kit",
       "uid": "elder-chaos-robes-ornament-kit",
       "itemId": 27113,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_robes_ornament_kit",
       "imageName": "Elder chaos robes ornament kit.png"
+    },
+    {
+      "name": "Thread of elidinis",
+      "alias": "Thread of elidinis",
+      "uid": "thread-of-elidinis",
+      "itemId": 27279,
+      "tags": [
+        "talent",
+        "consumable"
+      ],
+      "tier": "2",
+      "cost": 2,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Thread_of_elidinis",
+      "imageName": "Thread of elidinis.png"
     },
     {
       "name": "Webweaver bow",
@@ -3916,7 +3983,9 @@
       "alias": "Bounty hunter ornament kit",
       "uid": "bounty-hunter-ornament-kit",
       "itemId": 28017,
-      "tags": [],
+      "tags": [
+        "other"
+      ],
       "tier": null,
       "cost": null,
       "alwaysAvailable": false,
@@ -4282,7 +4351,6 @@
       "tags": [
         "talent",
         "melee",
-        "armor",
         "jewellery"
       ],
       "tier": 5,

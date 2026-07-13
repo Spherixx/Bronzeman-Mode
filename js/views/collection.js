@@ -114,47 +114,6 @@ export function createCollection(ctx) {
     };
   }
 
-  function mergedCollectionSet(definition, itemsById) {
-    const members = definition.itemIds.map((id) => itemsById.get(id)).filter(Boolean);
-    if (!members.length) return null;
-
-    const tags = uniqueTags([...(definition.tags ?? []), ...members.flatMap((item) => item.tags ?? [])]);
-    const images = definition.images?.length ? definition.images : members[0].images?.slice(0, 1) ?? [];
-    const sourceType = collectionSourceType({ ...definition, tags });
-    const displayTags = uniqueTags(tags.map(collectionDisplayTag));
-    const name = ctx.dataHelpers.dataDisplayName(definition, definition.name || "Set");
-
-    return {
-      ...members[0],
-      ...definition,
-      id: definition.id,
-      collectionIds: definition.itemIds,
-      name,
-      originalName: definition.originalName || definition.name,
-      category: collectionCategoryFromTags(tags),
-      sourceType,
-      automatic: sourceType !== "collection",
-      images,
-      tags,
-      searchText: normalizeCollectionText(`${name} ${members.map((item) => item.name).join(" ")} ${tags.join(" ")} ${displayTags.join(" ")}`)
-    };
-  }
-
-  function collapseCollectionSets(items) {
-    const itemsById = new Map(items.map((item) => [item.id, item]));
-    const challengeRewardIds = new Set(ctx.config.perilousMoonsRewardIds);
-    const collapsibleSets = ctx.data.collectionSetDefinitions.filter((definition) => {
-      return !collectionExcluded(definition) && !definition.itemIds.some((id) => challengeRewardIds.has(id));
-    });
-    const mergedItemIds = new Set(collapsibleSets.flatMap((definition) => definition.itemIds));
-    const mergedItems = collapsibleSets.map((definition) => mergedCollectionSet(definition, itemsById)).filter(Boolean);
-
-    return [
-      ...items.filter((item) => !collectionExcluded(item) && !mergedItemIds.has(item.id)),
-      ...mergedItems.filter((item) => !collectionExcluded(item))
-    ];
-  }
-
   function collectionItems() {
     return ctx.data.itemDefinitions;
   }
@@ -391,7 +350,6 @@ export function createCollection(ctx) {
     collectionExcluded,
     collectionCategoryFromTags,
     collectionItemFromDefinition,
-    collapseCollectionSets,
     collectionItems,
     unlockMatchesCollectionItem,
     shopMatchesCollectionItem,
