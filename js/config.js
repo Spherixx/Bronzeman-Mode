@@ -87,8 +87,8 @@ export const CHALLENGE_CATALOG = [
 ];
 
 export const CHALLENGE_COUNTDOWN_SECONDS = 3;
-export const CHALLENGE_ROLL_DURATION_MS = 4600;
-export const CHALLENGE_ROLL_RESULT_HOLD_MS = 2200;
+export const CHALLENGE_ROLL_DURATION_MS = 5000;
+export const CHALLENGE_ROLL_RESULT_HOLD_MS = 3000;
 
 export const HARD_CODED_DATA_NOTES = [
   "Firebase project settings and tracker document path are currently configured in js/firebase-service.js.",

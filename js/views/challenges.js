@@ -72,14 +72,14 @@ export function createChallengeView(ctx) {
     return groups.map((group) => `
       <div class="challenge-kit-row">
         ${group.map((name) => {
-          const entry = challengeRequirementEntry(name);
-          return `
+      const entry = challengeRequirementEntry(name);
+      return `
             <span class="challenge-kit-item" title="${ctx.actions.escapeHtml(entry.name)}">
               <img src="${entry.image}" alt="" loading="lazy" />
               <b>${ctx.actions.escapeHtml(entry.name)}</b>
             </span>
           `;
-        }).join("")}
+    }).join("")}
       </div>
     `).join("");
   }
@@ -101,16 +101,16 @@ export function createChallengeView(ctx) {
         ` : ""}
         <div class="roulette-strip">
         ${visibleRewards.map((item, index) => {
-          const unlocked = ctx.domain.challengeRewardIsUnlocked(item.id);
-          const latest = latestId === item.id;
-          const target = activeRoll?.targetIndex === index;
-          return `
+      const unlocked = ctx.domain.challengeRewardIsUnlocked(item.id);
+      const latest = latestId === item.id;
+      const target = activeRoll?.targetIndex === index;
+      return `
             <span class="roulette-item ${unlocked ? "is-unlocked" : ""} ${latest ? "latest" : ""} ${target ? "target" : ""}" title="${ctx.actions.escapeHtml(item.name)}">
               ${ctx.actions.renderItemImages(item.images)}
               <b>${ctx.actions.escapeHtml(item.name)}</b>
             </span>
           `;
-        }).join("")}
+    }).join("")}
         </div>
       </div>
     `;
@@ -123,8 +123,8 @@ export function createChallengeView(ctx) {
     return `
       <div class="challenge-reward-grid">
         ${rewards.map((item) => {
-          const unlocked = ctx.domain.challengeRewardIsUnlocked(item.id);
-          return `
+      const unlocked = ctx.domain.challengeRewardIsUnlocked(item.id);
+      return `
             <article class="challenge-reward-item ${unlocked ? "is-unlocked" : "is-locked"}">
               <div class="challenge-reward-art">${ctx.actions.renderItemImages(item.images)}</div>
               <div>
@@ -133,7 +133,7 @@ export function createChallengeView(ctx) {
               </div>
             </article>
           `;
-        }).join("")}
+    }).join("")}
       </div>
     `;
   }
@@ -164,29 +164,52 @@ export function createChallengeView(ctx) {
     const activeRoll = ctx.challengeUi.activeRoll;
     if (!activeRoll || activeRoll.phase !== "rolling" || activeRoll.animationStarted) return;
 
-    const stage = document.querySelector(`.roulette-stage.rolling[data-challenge-id="${activeRoll.challengeId}"]`);
+    const stage = document.querySelector(
+      `.roulette-stage.rolling[data-challenge-id="${activeRoll.challengeId}"]`
+    );
     const strip = stage?.querySelector(".roulette-strip");
     const target = stage?.querySelector(".roulette-item.target");
+
     if (!stage || !strip || !target) return;
 
     activeRoll.animationStarted = true;
-    const targetOffset = target.offsetLeft + (target.offsetWidth / 2);
-    const destination = (stage.clientWidth / 2) - targetOffset;
-    const finalApproach = Math.min(360, Math.max(220, target.offsetWidth * 2.8));
-    const settle = Math.min(18, Math.max(8, target.offsetWidth * 0.12));
-    const animation = strip.animate([
-      { transform: "translateX(0)", easing: "cubic-bezier(.12,.68,.18,1)" },
-      { transform: `translateX(${destination + finalApproach}px)`, offset: 0.64, easing: "cubic-bezier(.16,.62,.2,1)" },
-      { transform: `translateX(${destination + (finalApproach * 0.32)}px)`, offset: 0.84, easing: "cubic-bezier(.18,.68,.24,1)" },
-      { transform: `translateX(${destination + settle}px)`, offset: 0.95, easing: "ease-out" },
-      { transform: `translateX(${destination}px)` }
-    ], {
-      duration: CHALLENGE_ROLL_DURATION_MS,
-      fill: "forwards"
-    });
+
+    const targetCenter = target.offsetLeft + (target.offsetWidth / 2);
+    const stageCenter = stage.clientWidth / 2;
+    const destination = stageCenter - targetCenter;
+
+    // Small overshoot near the final item.
+    const overshoot = Math.min(
+      50,
+      Math.max(24, target.offsetWidth * 0.35)
+    );
+
+    const animation = strip.animate(
+      [
+        {
+          transform: "translateX(0)"
+        },
+        {
+          transform: `translateX(${destination + overshoot}px)`,
+          offset: 0.92
+        },
+        {
+          transform: `translateX(${destination}px)`,
+          offset: 1
+        }
+      ],
+      {
+        duration: CHALLENGE_ROLL_DURATION_MS,
+        easing: "cubic-bezier(0.12, 0.72, 0.18, 1)",
+        fill: "forwards"
+      }
+    );
 
     animation.onfinish = () => {
-      window.setTimeout(finalizeChallengeRoll, CHALLENGE_ROLL_RESULT_HOLD_MS);
+      window.setTimeout(
+        finalizeChallengeRoll,
+        CHALLENGE_ROLL_RESULT_HOLD_MS
+      );
     };
   }
 

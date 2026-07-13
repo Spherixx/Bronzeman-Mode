@@ -12,7 +12,7 @@ weapon		Equippable weapon. Use with melee/range/mage when style-specific.
 armor		Equippable armor or worn gear. Use with melee/range/mage when style-specific.
 spec		Weapon has a special attack. Use alongside weapon and its combat style.
 jewellery	Amulets, necklaces, rings, and bracelets.
-rune		Rune items.
+rune		Runes.
 food		Food items. Do not also tag these as consumable.
 potion		Potions, brews, restores, and antivenom. Do not also tag these as consumable.
 teleport	Teleport items and charged teleport jewellery.
