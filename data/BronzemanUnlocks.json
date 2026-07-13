@@ -38,10 +38,10 @@
                 "talent"
             ],
             "imageUsed": "Ancient spellbook",
-            "tier": "3",
+            "tier": "2",
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 3
+            "cost": 2
         },
         {
             "name": "Lunar spellbook",
@@ -52,10 +52,10 @@
                 "talent"
             ],
             "imageUsed": "Lunar spellbook",
-            "tier": "3",
+            "tier": "2",
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 3
+            "cost": 2
         },
         {
             "name": "Chivalry",

@@ -1586,12 +1586,12 @@
         "talent",
         "jewellery"
       ],
-      "tier": 2,
+      "tier": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_fury",
       "imageName": "Amulet of fury.png",
-      "cost": 2
+      "cost": 4
     },
     {
       "name": "Saradomin brew(4)",
@@ -2167,12 +2167,12 @@
         "weapon",
         "spec"
       ],
-      "tier": 4,
+      "tier": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Barrelchest_anchor",
       "imageName": "Barrelchest anchor.png",
-      "cost": 4
+      "cost": 2
     },
     {
       "name": "Ancient mace",
@@ -2280,12 +2280,12 @@
         "range",
         "weapon"
       ],
-      "tier": 3,
+      "tier": 4,
+      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_crossbow",
-      "imageName": "Armadyl crossbow.png",
-      "cost": 3
+      "imageName": "Armadyl crossbow.png"
     },
     {
       "name": "Armadyl godsword",
@@ -2879,12 +2879,12 @@
         "range",
         "weapon"
       ],
-      "tier": 2,
+      "tier": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Light_ballista",
       "imageName": "Light ballista.png",
-      "cost": 2
+      "cost": 3
     },
     {
       "name": "Heavy ballista",
@@ -3324,12 +3324,12 @@
         "range",
         "weapon"
       ],
-      "tier": 2,
+      "tier": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_crossbow",
       "imageName": "Dragon crossbow.png",
-      "cost": 2
+      "cost": 3
     },
     {
       "name": "Dragonstone dragon bolts (e)",
@@ -3854,12 +3854,12 @@
         "weapon",
         "spec"
       ],
-      "tier": 4,
+      "tier": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Colossal_blade",
       "imageName": "Colossal blade.png",
-      "cost": 4
+      "cost": 2
     },
     {
       "name": "Elder maul ornament kit",
@@ -4003,12 +4003,12 @@
         "melee",
         "weapon"
       ],
-      "tier": 2,
+      "tier": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zombie_axe",
       "imageName": "Zombie axe.png",
-      "cost": 2
+      "cost": 3
     },
     {
       "name": "Hunters' sunlight crossbow",
@@ -4304,12 +4304,12 @@
         "melee",
         "armor"
       ],
-      "tier": 2,
+      "tier": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Crimson_kisten",
       "imageName": "Crimson kisten.png",
-      "cost": 2
+      "cost": 4
     },
     {
       "name": "Halibut",
@@ -4388,12 +4388,12 @@
         "shop",
         "potion"
       ],
-      "tier": 3,
+      "tier": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Surge_potion",
       "imageName": "Surge potion.png",
-      "cost": 3
+      "cost": 2
     },
     {
       "name": "Extended stamina potion(4)",
