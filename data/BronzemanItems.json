@@ -3068,12 +3068,12 @@
         "spec",
         "ammo"
       ],
-      "tier": 4,
+      "tier": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_thrownaxe",
       "imageName": "Dragon thrownaxe.png",
-      "cost": 4
+      "cost": 3
     },
     {
       "name": "Elder maul",

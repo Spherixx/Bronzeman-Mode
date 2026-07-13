@@ -241,6 +241,20 @@
             "alwaysAvailable": true,
             "unlocked": true,
             "cost": null
+        },
+        {
+            "name": "God spells",
+            "alias": "God Spells",
+            "uid": "god-spells",
+            "tags": [
+                "talent",
+                "hidden"
+            ],
+            "imageUsed": "Flames of zamorak",
+            "tier": "1",
+            "alwaysAvailable": true,
+            "unlocked": true,
+            "cost": "1"
         }
     ]
 }
