@@ -1,7 +1,6 @@
 ﻿name,itemId
 Abyssal dagger,0
 Abyssal whip,0
-Accursed sceptre,0
 Ahrim's hood,0
 Ahrim's robeskirt,0
 Ahrim's robetop,0
@@ -124,6 +123,7 @@ Mystic robe top (light),0
 Nature rune,0
 Necklace of anguish,0
 Necklace of rupture,0
+Amulet of rancour,0
 Obsidian cape,0
 Obsidian helmet,0
 Obsidian platebody,0
@@ -175,7 +175,6 @@ Trouver parchment,0
 Tzhaar-ket-em,0
 Tzhaar-ket-om,0
 Unholy book,0
-Ursine chainmace,0
 Verac's brassard,0
 Verac's flail,0
 Verac's helm,0
@@ -192,7 +191,6 @@ Volatile nightmare staff,0
 Warrior guild token,0
 Warrior ring,0
 Water rune,0
-Webweaver bow,0
 Xerician hat,0
 Xerician robe,0
 Xerician top,0
@@ -275,3 +273,55 @@ Armageddon weapon scroll,0
 Thread of elidinis,0
 Trident of the seas,0
 Trident of the swamp,0
+Dragon mace imbue scroll,0
+Dragon mace (bh),0
+Craw's bow,0
+Webweaver bow,0
+Thammaron's sceptre,0
+Thammaron's sceptre (a),0
+Accursed sceptre,0
+Accursed sceptre (a),0
+Viggora's chainmace,0
+Ursine chainmace,0
+Holy elixir,0
+Dagon'hai hat,0
+Dagon'hai robe top,0
+Dagon'hai robe bottom,0
+Spirit shield,0
+Blessed spirit shield,0
+Arcane spirit shield,0
+Elysian spirit shield,0
+Spectral spirit shield,0
+Elder chaos hood,0
+Elder chaos top,0
+Elder chaos robe,0
+Saradomin coif,0
+Saradomin d'hide body,0
+Saradomin chaps,0
+Saradomin bracers,0
+Saradomin d'hide boots,0
+Saradomin d'hide shield,0
+Zamorak coif,0
+Zamorak d'hide body,0
+Zamorak chaps,0
+Zamorak bracers,0
+Zamorak d'hide boots,0
+Zamorak d'hide shield,0
+Armadyl coif,0
+Armadyl d'hide body,0
+Armadyl chaps,0
+Armadyl bracers,0
+Armadyl d'hide boots,0
+Armadyl d'hide shield,0
+Bandos coif,0
+Bandos d'hide body,0
+Bandos chaps,0
+Bandos bracers,0
+Bandos d'hide boots,0
+Bandos d'hide shield,0
+Ancient coif,0
+Ancient d'hide body,0
+Ancient chaps,0
+Ancient bracers,0
+Ancient d'hide boots,0
+Ancient d'hide shield,0

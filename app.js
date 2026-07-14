@@ -1,8 +1,4 @@
-import {
-  CHALLENGE_CATALOG,
-  HARD_CODED_DATA_NOTES,
-  PERILOUS_MOONS_REWARD_IDS
-} from "./js/config.js";
+import { HARD_CODED_DATA_NOTES } from "./js/config.js";
 import { createAppContext, defaultState } from "./js/context.js";
 import { createAuth } from "./js/auth.js";
 import { createDataLoader } from "./js/data-loader.js";
@@ -20,9 +16,8 @@ import { createViewHelpers } from "./js/views/shared.js";
 
 const ctx = createAppContext();
 ctx.config = {
-  challengeCatalog: CHALLENGE_CATALOG,
-  hardCodedDataNotes: HARD_CODED_DATA_NOTES,
-  perilousMoonsRewardIds: PERILOUS_MOONS_REWARD_IDS
+  challengeCatalog: [],
+  hardCodedDataNotes: HARD_CODED_DATA_NOTES
 };
 
 ctx.domain = createDomain(ctx);

@@ -2346,6 +2346,36 @@ body {
   font: 0.72rem "DM Mono", monospace;
 }
 
+.challenge-milestone-panel {
+  display: grid;
+  gap: 14px;
+  padding: 14px;
+  background: rgba(8, 9, 11, 0.48);
+  border: 1px solid var(--line-soft);
+}
+
+.challenge-milestone-track {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.challenge-milestone-track span {
+  display: grid;
+  min-height: 44px;
+  place-items: center;
+  color: var(--muted);
+  background: rgba(18, 22, 27, 0.82);
+  border: 1px solid var(--line-soft);
+  font: 0.72rem "DM Mono", monospace;
+}
+
+.challenge-milestone-track span.is-complete {
+  color: #17120d;
+  background: var(--bronze-bright);
+  border-color: var(--bronze-bright);
+}
+
 .challenge-roll-panel,
 .challenge-unlocked-panel {
   display: grid;

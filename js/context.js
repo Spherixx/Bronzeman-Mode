@@ -28,6 +28,7 @@ export function createAppContext() {
     state: loadLocalState(),
     data: {
       challenges: { pvm: [], pvp: [] },
+      challengeCatalog: [],
       unlocks: [],
       shopCategories: [],
       shopItems: [],

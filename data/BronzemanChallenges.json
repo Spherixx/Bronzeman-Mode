@@ -5,13 +5,13 @@
             "challengeName": "Obsidian Tri-Brid",
             "challengeRules": [
                 "Defeat a real opponent while using one full set of Rock-shell, Spined, or Skeletal armor.",
-                "Wear at least two pieces from each of the other two sets.",
+                "Wear at least two pieces from each of the other two armor sets.",
                 "Use an obsidian melee weapon, obsidian staff, and obsidian thrown weapon.",
-                "Damage the opponent with melee, ranged, and magic during the fight using only obsidian weapons.",
-                "The opponent must either be a legitimate pker or have a key worth at least 500k",
-                "Challenge requirements must be observed by all participating players in multi combat areas."
+                "Damage the opponent with melee, ranged, and magic using only obsidian weapons.",
+                "The opponent must either be a legitimate PKer or have a loot key worth at least 500k.",
+                "All challenge requirements must be observed by participating players when completed in a multi-combat area."
             ],
-            "disclaimer": "*Reward items are not removed from the roulette after unlocking, so duplicate hits are possible and you will probably need more than 12 challenge completions.",
+            "disclaimer": "*Reward items are not removed from the roulette after being unlocked, so duplicate hits are possible and you will probably need more than 12 challenge completions.",
             "requiredItems": [
                 "Rock-shell plate",
                 "Spined body",
@@ -33,6 +33,25 @@
                 "Eclipse moon chestplate",
                 "Eclipse moon tassets",
                 "Eclipse atlatl"
+            ]
+        },
+        {
+            "challengeName": "The Kisten Bounty",
+            "completionsRequired": 3,
+            "challengeRules": [
+                "Defeat a real opponent while using Dragon mace(bh) as your only spec weapon.",
+                "The opponent must either be a legitimate pker or have a key worth at least 500k",
+                "The killing blow on your opponent must be a max hit and have the special max hitsplat.",
+                "Defeating 3 opponents in this manner completes the challenge."
+            ],
+            "disclaimer": "",
+            "requiredItems": [
+                "Dragon mace",
+                "Dragon mace imbue scroll",
+                "Dragon mace (bh)"
+            ],
+            "rewardItems": [
+                "Crimson kisten"
             ]
         }
     ]

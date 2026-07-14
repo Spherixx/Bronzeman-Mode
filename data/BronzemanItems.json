@@ -1586,12 +1586,12 @@
         "talent",
         "jewellery"
       ],
-      "tier": 4,
+      "tier": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_fury",
       "imageName": "Amulet of fury.png",
-      "cost": 4
+      "cost": 3
     },
     {
       "name": "Saradomin brew(4)",
@@ -2042,6 +2042,58 @@
       "cost": null
     },
     {
+      "name": "Zamorak bracers",
+      "alias": "Zamorak bracers",
+      "uid": "zamorak-bracers",
+      "itemId": 10368,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_bracers",
+      "imageName": "Zamorak bracers.png"
+    },
+    {
+      "name": "Zamorak d'hide body",
+      "alias": "Zamorak d'hide body",
+      "uid": "zamorak-dhide-body",
+      "itemId": 10370,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_d%27hide_body",
+      "imageName": "Zamorak d'hide body.png"
+    },
+    {
+      "name": "Zamorak chaps",
+      "alias": "Zamorak chaps",
+      "uid": "zamorak-chaps",
+      "itemId": 10372,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_chaps",
+      "imageName": "Zamorak chaps.png"
+    },
+    {
+      "name": "Zamorak coif",
+      "alias": "Zamorak coif",
+      "uid": "zamorak-coif",
+      "itemId": 10374,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_coif",
+      "imageName": "Zamorak coif.png"
+    },
+    {
       "name": "Guthix bracers",
       "alias": "Guthix bracers",
       "uid": "guthix-bracers",
@@ -2106,6 +2158,58 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_coif",
       "imageName": "Guthix coif.png"
+    },
+    {
+      "name": "Saradomin bracers",
+      "alias": "Saradomin bracers",
+      "uid": "saradomin-bracers",
+      "itemId": 10384,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_bracers",
+      "imageName": "Saradomin bracers.png"
+    },
+    {
+      "name": "Saradomin d'hide body",
+      "alias": "Saradomin d'hide body",
+      "uid": "saradomin-dhide-body",
+      "itemId": 10386,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_d%27hide_body",
+      "imageName": "Saradomin d'hide body.png"
+    },
+    {
+      "name": "Saradomin chaps",
+      "alias": "Saradomin chaps",
+      "uid": "saradomin-chaps",
+      "itemId": 10388,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_chaps",
+      "imageName": "Saradomin chaps.png"
+    },
+    {
+      "name": "Saradomin coif",
+      "alias": "Saradomin coif",
+      "uid": "saradomin-coif",
+      "itemId": 10390,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_coif",
+      "imageName": "Saradomin coif.png"
     },
     {
       "name": "Ava's accumulator",
@@ -2350,7 +2454,7 @@
         "mage"
       ],
       "tier": "2",
-      "cost": "2",
+      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Trident_of_the_seas",
@@ -2398,12 +2502,168 @@
         "mage",
         "jewellery"
       ],
-      "tier": 3,
+      "tier": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Occult_necklace",
       "imageName": "Occult necklace.png",
-      "cost": 3
+      "cost": 4
+    },
+    {
+      "name": "Ancient bracers",
+      "alias": "Ancient bracers",
+      "uid": "ancient-bracers",
+      "itemId": 12490,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_bracers",
+      "imageName": "Ancient bracers.png"
+    },
+    {
+      "name": "Ancient d'hide body",
+      "alias": "Ancient d'hide body",
+      "uid": "ancient-dhide-body",
+      "itemId": 12492,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_body",
+      "imageName": "Ancient d'hide body.png"
+    },
+    {
+      "name": "Ancient chaps",
+      "alias": "Ancient chaps",
+      "uid": "ancient-chaps",
+      "itemId": 12494,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_chaps",
+      "imageName": "Ancient chaps.png"
+    },
+    {
+      "name": "Ancient coif",
+      "alias": "Ancient coif",
+      "uid": "ancient-coif",
+      "itemId": 12496,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_coif",
+      "imageName": "Ancient coif.png"
+    },
+    {
+      "name": "Bandos bracers",
+      "alias": "Bandos bracers",
+      "uid": "bandos-bracers",
+      "itemId": 12498,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_bracers",
+      "imageName": "Bandos bracers.png"
+    },
+    {
+      "name": "Bandos d'hide body",
+      "alias": "Bandos d'hide body",
+      "uid": "bandos-dhide-body",
+      "itemId": 12500,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_d%27hide_body",
+      "imageName": "Bandos d'hide body.png"
+    },
+    {
+      "name": "Bandos chaps",
+      "alias": "Bandos chaps",
+      "uid": "bandos-chaps",
+      "itemId": 12502,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_chaps",
+      "imageName": "Bandos chaps.png"
+    },
+    {
+      "name": "Bandos coif",
+      "alias": "Bandos coif",
+      "uid": "bandos-coif",
+      "itemId": 12504,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_coif",
+      "imageName": "Bandos coif.png"
+    },
+    {
+      "name": "Armadyl bracers",
+      "alias": "Armadyl bracers",
+      "uid": "armadyl-bracers",
+      "itemId": 12506,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_bracers",
+      "imageName": "Armadyl bracers.png"
+    },
+    {
+      "name": "Armadyl d'hide body",
+      "alias": "Armadyl d'hide body",
+      "uid": "armadyl-dhide-body",
+      "itemId": 12508,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_body",
+      "imageName": "Armadyl d'hide body.png"
+    },
+    {
+      "name": "Armadyl chaps",
+      "alias": "Armadyl chaps",
+      "uid": "armadyl-chaps",
+      "itemId": 12510,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_chaps",
+      "imageName": "Armadyl chaps.png"
+    },
+    {
+      "name": "Armadyl coif",
+      "alias": "Armadyl coif",
+      "uid": "armadyl-coif",
+      "itemId": 12512,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_coif",
+      "imageName": "Armadyl coif.png"
     },
     {
       "name": "Dark infinity colour kit",
@@ -2654,6 +2914,84 @@
       "cost": 3
     },
     {
+      "name": "Elysian spirit shield",
+      "alias": "Elysian spirit shield",
+      "uid": "elysian-spirit-shield",
+      "itemId": 12817,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Elysian_spirit_shield",
+      "imageName": "Elysian spirit shield.png"
+    },
+    {
+      "name": "Spectral spirit shield",
+      "alias": "Spectral spirit shield",
+      "uid": "spectral-spirit-shield",
+      "itemId": 12821,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Spectral_spirit_shield",
+      "imageName": "Spectral spirit shield.png"
+    },
+    {
+      "name": "Arcane spirit shield",
+      "alias": "Arcane spirit shield",
+      "uid": "arcane-spirit-shield",
+      "itemId": 12825,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Arcane_spirit_shield",
+      "imageName": "Arcane spirit shield.png"
+    },
+    {
+      "name": "Spirit shield",
+      "alias": "Spirit shield",
+      "uid": "spirit-shield",
+      "itemId": 12829,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Spirit_shield",
+      "imageName": "Spirit shield.png"
+    },
+    {
+      "name": "Blessed spirit shield",
+      "alias": "Blessed spirit shield",
+      "uid": "blessed-spirit-shield",
+      "itemId": 12831,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Blessed_spirit_shield",
+      "imageName": "Blessed spirit shield.png"
+    },
+    {
+      "name": "Holy elixir",
+      "alias": "Holy elixir",
+      "uid": "holy-elixir",
+      "itemId": 12833,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Holy_elixir",
+      "imageName": "Holy elixir.png"
+    },
+    {
       "name": "Trident of the swamp",
       "alias": "Trident of the swamp",
       "uid": "trident-of-the-swamp",
@@ -2664,7 +3002,7 @@
         "weapon"
       ],
       "tier": "4",
-      "cost": "4",
+      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Trident_of_the_swamp",
@@ -2929,7 +3267,6 @@
       "tags": [
         "talent",
         "range",
-        "armor",
         "jewellery"
       ],
       "tier": 4,
@@ -2965,7 +3302,6 @@
       "tags": [
         "talent",
         "melee",
-        "armor",
         "jewellery"
       ],
       "tier": 4,
@@ -2992,6 +3328,32 @@
       "cost": 1
     },
     {
+      "name": "Ancient d'hide boots",
+      "alias": "Ancient d'hide boots",
+      "uid": "ancient-dhide-boots",
+      "itemId": 19921,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_boots",
+      "imageName": "Ancient d'hide boots.png"
+    },
+    {
+      "name": "Bandos d'hide boots",
+      "alias": "Bandos d'hide boots",
+      "uid": "bandos-dhide-boots",
+      "itemId": 19924,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_d%27hide_boots",
+      "imageName": "Bandos d'hide boots.png"
+    },
+    {
       "name": "Guthix d'hide boots",
       "alias": "Guthix d'hide boots",
       "uid": "guthix-dhide-boots",
@@ -3006,6 +3368,45 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_d%27hide_boots",
       "imageName": "Guthix d'hide boots.png"
+    },
+    {
+      "name": "Armadyl d'hide boots",
+      "alias": "Armadyl d'hide boots",
+      "uid": "armadyl-dhide-boots",
+      "itemId": 19930,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_boots",
+      "imageName": "Armadyl d'hide boots.png"
+    },
+    {
+      "name": "Saradomin d'hide boots",
+      "alias": "Saradomin d'hide boots",
+      "uid": "saradomin-dhide-boots",
+      "itemId": 19933,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_d%27hide_boots",
+      "imageName": "Saradomin d'hide boots.png"
+    },
+    {
+      "name": "Zamorak d'hide boots",
+      "alias": "Zamorak d'hide boots",
+      "uid": "zamorak-dhide-boots",
+      "itemId": 19936,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_d%27hide_boots",
+      "imageName": "Zamorak d'hide boots.png"
     },
     {
       "name": "Dragon scimitar ornament kit",
@@ -3036,6 +3437,45 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Occult_ornament_kit",
       "imageName": "Occult ornament kit.png"
+    },
+    {
+      "name": "Elder chaos top",
+      "alias": "Elder chaos top",
+      "uid": "elder-chaos-top",
+      "itemId": 20517,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_top",
+      "imageName": "Elder chaos top.png"
+    },
+    {
+      "name": "Elder chaos robe",
+      "alias": "Elder chaos robe",
+      "uid": "elder-chaos-robe",
+      "itemId": 20520,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_robe",
+      "imageName": "Elder chaos robe.png"
+    },
+    {
+      "name": "Elder chaos hood",
+      "alias": "Elder chaos hood",
+      "uid": "elder-chaos-hood",
+      "itemId": 20595,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_hood",
+      "imageName": "Elder chaos hood.png"
     },
     {
       "name": "Tome of fire",
@@ -3412,6 +3852,55 @@
       "imageName": "Ivandis flail.png"
     },
     {
+      "name": "Viggora's chainmace",
+      "alias": "Viggora's chainmace",
+      "uid": "viggoras-chainmace",
+      "itemId": 22545,
+      "tags": [
+        "melee",
+        "weapon",
+        "spec",
+        "talent"
+      ],
+      "tier": 5,
+      "cost": 5,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Viggora%27s_chainmace",
+      "imageName": "Viggora's chainmace.png"
+    },
+    {
+      "name": "Craw's bow",
+      "alias": "Craw's bow",
+      "uid": "craws-bow",
+      "itemId": 22550,
+      "tags": [
+        "weapon",
+        "spec",
+        "range",
+        "talent"
+      ],
+      "tier": 5,
+      "cost": 5,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Craw%27s_bow",
+      "imageName": "Craw's bow.png"
+    },
+    {
+      "name": "Thammaron's sceptre",
+      "alias": "Thammaron's sceptre",
+      "uid": "thammarons-sceptre",
+      "itemId": 22555,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Thammaron%27s_sceptre",
+      "imageName": "Thammaron's sceptre.png"
+    },
+    {
       "name": "Dragon knife(p++)",
       "alias": "Dragon Knives",
       "uid": "dragon-knife-p",
@@ -3462,6 +3951,71 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_d%27hide_shield",
       "imageName": "Guthix d'hide shield.png"
+    },
+    {
+      "name": "Saradomin d'hide shield",
+      "alias": "Saradomin d'hide shield",
+      "uid": "saradomin-dhide-shield",
+      "itemId": 23191,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_d%27hide_shield",
+      "imageName": "Saradomin d'hide shield.png"
+    },
+    {
+      "name": "Zamorak d'hide shield",
+      "alias": "Zamorak d'hide shield",
+      "uid": "zamorak-dhide-shield",
+      "itemId": 23194,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_d%27hide_shield",
+      "imageName": "Zamorak d'hide shield.png"
+    },
+    {
+      "name": "Ancient d'hide shield",
+      "alias": "Ancient d'hide shield",
+      "uid": "ancient-dhide-shield",
+      "itemId": 23197,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_shield",
+      "imageName": "Ancient d'hide shield.png"
+    },
+    {
+      "name": "Armadyl d'hide shield",
+      "alias": "Armadyl d'hide shield",
+      "uid": "armadyl-dhide-shield",
+      "itemId": 23200,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_shield",
+      "imageName": "Armadyl d'hide shield.png"
+    },
+    {
+      "name": "Bandos d'hide shield",
+      "alias": "Bandos d'hide shield",
+      "uid": "bandos-dhide-shield",
+      "itemId": 23203,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_d%27hide_shield",
+      "imageName": "Bandos d'hide shield.png"
     },
     {
       "name": "Rune defender ornament kit",
@@ -3587,6 +4141,45 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness_crabs_teleport",
       "imageName": "Wilderness crabs teleport.png"
+    },
+    {
+      "name": "Dagon'hai hat",
+      "alias": "Dagon'hai hat",
+      "uid": "dagonhai-hat",
+      "itemId": 24288,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_hat",
+      "imageName": "Dagon'hai hat.png"
+    },
+    {
+      "name": "Dagon'hai robe top",
+      "alias": "Dagon'hai robe top",
+      "uid": "dagonhai-robe-top",
+      "itemId": 24291,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_robe_top",
+      "imageName": "Dagon'hai robe top.png"
+    },
+    {
+      "name": "Dagon'hai robe bottom",
+      "alias": "Dagon'hai robe bottom",
+      "uid": "dagonhai-robe-bottom",
+      "itemId": 24294,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_robe_bottom",
+      "imageName": "Dagon'hai robe bottom.png"
     },
     {
       "name": "Volatile nightmare staff",
@@ -3913,7 +4506,6 @@
       "uid": "webweaver-bow",
       "itemId": 27655,
       "tags": [
-        "talent",
         "range",
         "weapon",
         "spec"
@@ -3931,7 +4523,6 @@
       "uid": "ursine-chainmace",
       "itemId": 27660,
       "tags": [
-        "talent",
         "melee",
         "weapon",
         "spec"
@@ -3949,7 +4540,6 @@
       "uid": "accursed-sceptre",
       "itemId": 27665,
       "tags": [
-        "talent",
         "mage",
         "weapon",
         "spec"
@@ -3960,6 +4550,19 @@
       "wikiLink": "https://oldschool.runescape.wiki/w/Accursed_sceptre",
       "imageName": "Accursed sceptre.png",
       "cost": 5
+    },
+    {
+      "name": "Accursed sceptre (a)",
+      "alias": "Accursed sceptre (a)",
+      "uid": "accursed-sceptre-a",
+      "itemId": 27679,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Accursed_sceptre_(a)",
+      "imageName": "Accursed sceptre (a).png"
     },
     {
       "name": "Voidwaker",
@@ -3979,6 +4582,32 @@
       "cost": null
     },
     {
+      "name": "Thammaron's sceptre (a)",
+      "alias": "Thammaron's sceptre (a)",
+      "uid": "thammarons-sceptre-a",
+      "itemId": 27788,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Thammaron%27s_sceptre_(a)",
+      "imageName": "Thammaron's sceptre (a).png"
+    },
+    {
+      "name": "Dragon mace (bh)",
+      "alias": "Dragon mace (bh)",
+      "uid": "dragon-mace-bh",
+      "itemId": 27857,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace_(bh)",
+      "imageName": "Dragon mace (bh).png"
+    },
+    {
       "name": "Bounty hunter ornament kit",
       "alias": "Bounty hunter ornament kit",
       "uid": "bounty-hunter-ornament-kit",
@@ -3992,6 +4621,19 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bounty_hunter_ornament_kit",
       "imageName": "Bounty hunter ornament kit.png"
+    },
+    {
+      "name": "Dragon mace imbue scroll",
+      "alias": "Dragon mace imbue scroll",
+      "uid": "dragon-mace-imbue-scroll",
+      "itemId": 28076,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace_imbue_scroll",
+      "imageName": "Dragon mace imbue scroll.png"
     },
     {
       "name": "Zombie axe",
@@ -4261,6 +4903,23 @@
       "imageName": "Armageddon cape fabric.png"
     },
     {
+      "name": "Amulet of rancour",
+      "alias": "Amulet of rancour",
+      "uid": "amulet-of-rancour",
+      "itemId": 29801,
+      "tags": [
+        "jewellery",
+        "melee",
+        "talent"
+      ],
+      "tier": "5",
+      "cost": 5,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_rancour",
+      "imageName": "Amulet of rancour.png"
+    },
+    {
       "name": "Antler guard",
       "alias": "Antler guard",
       "uid": "antler-guard",
@@ -4350,7 +5009,7 @@
       "itemId": null,
       "tags": [
         "talent",
-        "melee",
+        "range",
         "jewellery"
       ],
       "tier": 5,

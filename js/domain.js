@@ -1,4 +1,4 @@
-import { PERILOUS_MOONS_REWARD_IDS, TALENT_TIER_REQUIREMENT } from "./config.js";
+import { TALENT_TIER_REQUIREMENT } from "./config.js";
 
 export function createDomain(ctx) {
   function challengeId(type, stageOrIndex, index) {
@@ -156,7 +156,7 @@ export function createDomain(ctx) {
     const validChallenges = new Set([...flattenPvmChallenges(), ...flattenPvpChallenges()].map((challenge) => challenge.id));
     const repeatables = flattenRepeatables();
     const validRepeatables = new Set(repeatables.map((repeatable) => repeatable.id));
-    const validChallengeUnlocks = new Set(PERILOUS_MOONS_REWARD_IDS);
+    const validChallengeUnlocks = new Set(ctx.config.challengeCatalog.flatMap((challenge) => challenge.rewardIds));
     const validChallengeIds = new Set(ctx.config.challengeCatalog.map((challenge) => challenge.id));
     const shopPurchases = {};
     const repeatablePurchases = {};
@@ -207,6 +207,13 @@ export function createDomain(ctx) {
     const challengeRewardUnlocks = Array.isArray(rawState?.challengeRewardUnlocks)
       ? [...new Set(rawState.challengeRewardUnlocks)].filter((id) => validChallengeUnlocks.has(id))
       : [];
+
+    ctx.config.challengeCatalog
+      .filter((challenge) => challenge.mode === "milestone" && (challengeCompletions[challenge.id] ?? 0) >= challenge.completionTarget)
+      .flatMap((challenge) => challenge.rewardIds)
+      .forEach((id) => {
+        if (!challengeRewardUnlocks.includes(id)) challengeRewardUnlocks.push(id);
+      });
 
     return {
       completed: Array.isArray(rawState?.completed)

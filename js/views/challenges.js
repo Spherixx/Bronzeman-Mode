@@ -13,8 +13,8 @@ export function createChallengeView(ctx) {
     };
   }
 
-  function challengeRewardItems() {
-    return ctx.config.perilousMoonsRewardIds
+  function challengeRewardItems(challenge) {
+    return challenge.rewardIds
       .map((id) => ctx.collection.collectionItems().find((item) => item.id === id))
       .filter(Boolean);
   }
@@ -36,8 +36,9 @@ export function createChallengeView(ctx) {
     return shuffled;
   }
 
-  function idleChallengeRewardItems(challengeId) {
-    const rewards = challengeRewardItems();
+  function idleChallengeRewardItems(challenge) {
+    const rewards = challengeRewardItems(challenge);
+    const challengeId = challenge.id;
     const rewardIds = rewards.map((item) => item.id);
     const currentOrder = ctx.challengeUi.rewardDisplayOrders[challengeId] ?? [];
     const hasCurrentOrder = currentOrder.length === rewardIds.length && rewardIds.every((id) => currentOrder.includes(id));
@@ -85,11 +86,11 @@ export function createChallengeView(ctx) {
   }
 
   function renderRewardRoulette(challenge) {
-    const rewards = challengeRewardItems();
+    const rewards = challengeRewardItems(challenge);
     const activeRoll = ctx.challengeUi.activeRoll?.challengeId === challenge.id ? ctx.challengeUi.activeRoll : null;
     const latestId = ctx.state.challengeRolls[challenge.id];
     if (!rewards.length) return `<p class="challenge-empty">Perilous Moons reward items are missing.</p>`;
-    const visibleRewards = activeRoll ? rewardItemsFromIds(activeRoll.reelIds) : idleChallengeRewardItems(challenge.id);
+    const visibleRewards = activeRoll ? rewardItemsFromIds(activeRoll.reelIds) : idleChallengeRewardItems(challenge);
 
     return `
       <div class="roulette-stage ${activeRoll?.phase ?? "idle"}" data-challenge-id="${ctx.actions.escapeHtml(challenge.id)}" aria-label="Perilous Moons roulette rewards">
@@ -116,8 +117,8 @@ export function createChallengeView(ctx) {
     `;
   }
 
-  function renderChallengeUnlockedRewards() {
-    const rewards = challengeRewardItems();
+  function renderChallengeUnlockedRewards(challenge) {
+    const rewards = challengeRewardItems(challenge);
     if (!rewards.length) return `<p class="challenge-empty">No Perilous Moons reward items found.</p>`;
 
     return `
@@ -148,11 +149,13 @@ export function createChallengeView(ctx) {
     if (!ctx.challengeUi.activeRoll) return;
 
     const { challengeId, rewardId } = ctx.challengeUi.activeRoll;
+    const challenge = ctx.config.challengeCatalog.find((entry) => entry.id === challengeId);
+    if (!challenge) return;
     ctx.state.challengeCompletions[challengeId] = (ctx.state.challengeCompletions[challengeId] ?? 0) + 1;
     ctx.state.challengeRolls[challengeId] = rewardId;
     if (!ctx.domain.challengeRewardIsUnlocked(rewardId)) ctx.state.challengeRewardUnlocks.push(rewardId);
 
-    ctx.challengeUi.rewardDisplayOrders[challengeId] = shuffledItems(challengeRewardItems()).map((item) => item.id);
+    ctx.challengeUi.rewardDisplayOrders[challengeId] = shuffledItems(challengeRewardItems(challenge)).map((item) => item.id);
     ctx.challengeUi.activeRoll = null;
     clearChallengeCountdownTimer();
     ctx.actions.saveState();
@@ -229,9 +232,10 @@ export function createChallengeView(ctx) {
     renderChallengeUnlocks();
   }
 
-  function completeChallengeRoll(challengeId) {
+  function completeChallengeRoll(challenge) {
     if (ctx.challengeUi.activeRoll) return;
-    const rewards = challengeRewardItems();
+    const challengeId = challenge.id;
+    const rewards = challengeRewardItems(challenge);
     if (!rewards.length) return;
 
     const reward = rewards[Math.floor(Math.random() * rewards.length)];
@@ -250,57 +254,50 @@ export function createChallengeView(ctx) {
     renderChallengeUnlocks();
   }
 
+  function recordMilestoneCompletion(challenge) {
+    const current = ctx.state.challengeCompletions[challenge.id] ?? 0;
+    if (current >= challenge.completionTarget) return;
+    const next = current + 1;
+    ctx.state.challengeCompletions[challenge.id] = next;
+    if (next >= challenge.completionTarget) challenge.rewardIds.forEach((id) => {
+      if (!ctx.domain.challengeRewardIsUnlocked(id)) ctx.state.challengeRewardUnlocks.push(id);
+    });
+    ctx.actions.saveState();
+    renderChallengeUnlocks();
+    ctx.actions.renderUnlocks();
+  }
+
+  function renderMilestonePanel(challenge, completions) {
+    const complete = completions >= challenge.completionTarget;
+    return `
+      <div class="challenge-milestone-panel"><div class="challenge-roll-header">
+        <div><h4>Challenge Progress</h4><span>${complete ? "Reward unlocked" : `${completions} of ${challenge.completionTarget} completions`}</span></div>
+        <button type="button" data-action="complete" ${complete ? "disabled" : ""}>${complete ? "Completed" : "Record Completion"}</button>
+      </div><div class="challenge-milestone-track">${Array.from({ length: challenge.completionTarget }, (_, i) => `<span class="${i < completions ? "is-complete" : ""}">${i + 1}</span>`).join("")}</div></div>`;
+  }
+
   function renderChallengeUnlockCard(challenge) {
     const card = document.createElement("article");
     const completions = ctx.state.challengeCompletions[challenge.id] ?? 0;
     const latest = itemByCollectionId(ctx.state.challengeRolls[challenge.id]);
-    const rewardsAvailable = challengeRewardItems().length > 0;
-    const isRolling = ctx.challengeUi.activeRoll?.challengeId === challenge.id;
-    const rollButtonLabel = isRolling
-      ? ctx.challengeUi.activeRoll.phase === "countdown" ? `Rolling in ${ctx.challengeUi.activeRoll.countdown}` : "Rolling..."
-      : "Complete + Roll";
-
+    const rolling = ctx.challengeUi.activeRoll?.challengeId === challenge.id;
+    const rollLabel = rolling ? (ctx.challengeUi.activeRoll.phase === "countdown" ? `Rolling in ${ctx.challengeUi.activeRoll.countdown}` : "Rolling...") : "Complete + Roll";
+    const roulette = `<div class="challenge-roll-panel"><div class="challenge-roll-header">
+      <div><h4>Perilous Moons Roulette</h4><span>${latest ? `Latest roll: ${ctx.actions.escapeHtml(latest.name)}` : "No rolls yet"}</span></div>
+      <button type="button" data-action="roll" ${challengeRewardItems(challenge).length && !ctx.challengeUi.activeRoll ? "" : "disabled"}>${rollLabel}</button>
+      </div>${renderRewardRoulette(challenge)}</div>`;
     card.className = "challenge-unlock-card";
-    card.innerHTML = `
-      <div class="challenge-unlock-header">
-        <div>
-          <span class="challenge-eyebrow">PvP unlock challenge</span>
-          <h3>${ctx.actions.escapeHtml(challenge.title)}</h3>
-        </div>
-        <span class="challenge-completions">${completions} completions</span>
-      </div>
-
-      <div class="challenge-shop-card">
-        <div class="challenge-kit">${renderChallengeIconGrid(challenge.requirementGroups)}</div>
-        <div class="challenge-copy">
-          <ul>
-            ${challenge.rules.map((rule) => `<li>${ctx.actions.escapeHtml(rule)}</li>`).join("")}
-          </ul>
-          <p class="challenge-disclaimer">*Reward items are not removed from the roulette after unlocking, so duplicate hits are possible and you will probably need more than 12 challenge completions.</p>
-        </div>
-      </div>
-
-      <div class="challenge-roll-panel">
-        <div class="challenge-roll-header">
-          <div>
-            <h4>Perilous Moons Roulette</h4>
-            <span>${latest ? `Latest roll: ${ctx.actions.escapeHtml(latest.name)}` : "No rolls yet"}</span>
-          </div>
-          <button type="button" ${rewardsAvailable && !ctx.challengeUi.activeRoll ? "" : "disabled"}>${rollButtonLabel}</button>
-        </div>
-        ${renderRewardRoulette(challenge)}
-      </div>
-
-      <div class="challenge-unlocked-panel">
-        <h4>Unlocked From This Challenge</h4>
-        ${renderChallengeUnlockedRewards()}
-      </div>
-    `;
-
-    card.querySelector("button")?.addEventListener("click", () => completeChallengeRoll(challenge.id));
+    card.innerHTML = `<div class="challenge-unlock-header"><div><span class="challenge-eyebrow">PvP unlock challenge</span><h3>${ctx.actions.escapeHtml(challenge.title)}</h3></div>
+      <span class="challenge-completions">${completions} completion${completions === 1 ? "" : "s"}</span></div>
+      <div class="challenge-shop-card"><div class="challenge-kit">${renderChallengeIconGrid(challenge.requirementGroups)}</div><div class="challenge-copy">
+      <ul>${challenge.rules.map((rule) => `<li>${ctx.actions.escapeHtml(rule)}</li>`).join("")}</ul>
+      ${challenge.disclaimer ? `<p class="challenge-disclaimer">${ctx.actions.escapeHtml(challenge.disclaimer)}</p>` : ""}</div></div>
+      ${challenge.mode === "roulette" ? roulette : renderMilestonePanel(challenge, completions)}
+      <div class="challenge-unlocked-panel"><h4>Unlocked From This Challenge</h4>${renderChallengeUnlockedRewards(challenge)}</div>`;
+    card.querySelector('[data-action="roll"]')?.addEventListener("click", () => completeChallengeRoll(challenge));
+    card.querySelector('[data-action="complete"]')?.addEventListener("click", () => recordMilestoneCompletion(challenge));
     return card;
   }
-
   function renderChallengeUnlocks() {
     const target = document.getElementById("challengeUnlockList");
     if (!target) return;

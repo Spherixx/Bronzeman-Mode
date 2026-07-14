@@ -123,6 +123,32 @@ export function createDataLoader(ctx) {
     return toArray(data?.pvpTasks).map((taskEntry, index) => normalizeChallengeTask(taskEntry, "pvp", ctx.domain.challengeId("pvp", index)));
   }
 
+  function normalizeUnlockChallenges(data) {
+    return toArray(data?.challenges).map((challenge, index) => {
+      const title = String(challenge?.challengeName || ("Challenge " + (index + 1)));
+      const requiredItems = toArray(challenge?.requiredItems).map(String).filter(Boolean);
+      const rewardIds = toArray(challenge?.rewardItems).map((name) => {
+        return ctx.indexes.itemRowsByName.get(normalizeDataText(name))?.uid || slugifyItemId(name);
+      });
+      const completionTarget = toNumber(challenge?.completionsRequired, NaN);
+      const isMilestone = Number.isFinite(completionTarget);
+
+      return {
+        id: slugifyItemId(title),
+        title,
+        rules: toArray(challenge?.challengeRules).map(String).filter(Boolean),
+        disclaimer: String(challenge?.disclaimer || ""),
+        requirementGroups: Array.from(
+          { length: Math.ceil(requiredItems.length / 3) },
+          (_, groupIndex) => requiredItems.slice(groupIndex * 3, (groupIndex + 1) * 3)
+        ),
+        rewardIds,
+        mode: isMilestone ? "milestone" : "roulette",
+        completionTarget: isMilestone ? Math.max(1, completionTarget) : null
+      };
+    });
+  }
+
   function normalizeTalentUnlock(entry, sourceType) {
     const cost = toNumber(entry.cost, NaN);
     const tier = toNumber(entry.tier, NaN);
@@ -232,18 +258,21 @@ export function createDataLoader(ctx) {
 
   async function loadAppData() {
     try {
-      const [itemsData, itemSetsData, unlocksData, pvmData, pvpData, shopData] = await Promise.all([
+      const [itemsData, itemSetsData, unlocksData, pvmData, pvpData, shopData, challengesData] = await Promise.all([
         fetchJson(DATA_URLS.items),
         fetchJson(DATA_URLS.itemSets),
         fetchJson(DATA_URLS.unlocks),
         fetchJson(DATA_URLS.pvm),
         fetchJson(DATA_URLS.pvp),
-        fetchJson(DATA_URLS.shop)
+        fetchJson(DATA_URLS.shop),
+        fetchJson(DATA_URLS.challenges)
       ]);
 
       ctx.indexes.challengeIdAliases = {};
       ctx.indexes.repeatableIdAliases = {};
       indexItemRows(itemsData.items);
+      ctx.config.challengeCatalog = normalizeUnlockChallenges(challengesData);
+      ctx.data.challengeCatalog = ctx.config.challengeCatalog;
 
       ctx.data.challenges = {
         pvm: normalizePvmChallenges(pvmData),
@@ -267,6 +296,8 @@ export function createDataLoader(ctx) {
       console.warn("Could not load Bronzeman JSON data", error);
       ctx.data.dataWarnings.push("Could not load one or more Bronzeman JSON files.");
       ctx.data.challenges = { pvm: [], pvp: [] };
+      ctx.config.challengeCatalog = [];
+      ctx.data.challengeCatalog = [];
       ctx.data.unlocks = [];
       ctx.data.shopItems = [];
       ctx.data.shopCategories = [];
