@@ -199,10 +199,10 @@ export function createDataLoader(ctx) {
     });
   }
 
-  function normalizeShopSection(entry, behaviors) {
-    if (behaviors.includes("resupply") || entry.section === "resupply") return "resupply";
-    if (behaviors.includes("unlock") || entry.section === "unlocks") return "unlocks";
-    return "unlocks";
+  function normalizeShopSection(behaviors) {
+    if (behaviors.includes("resupply")) return "resupply";
+    if (behaviors.includes("unlock")) return "unlocks";
+    return "other";
   }
 
   function normalizeShopCategory(entry, tags) {
@@ -229,7 +229,7 @@ export function createDataLoader(ctx) {
     return {
       id: dataUid(entry, "shop"),
       category: normalizeShopCategory(entry, tags),
-      section: normalizeShopSection(entry, behaviors),
+      section: normalizeShopSection(behaviors),
       name: dataDisplayName(entry, "Shop item"),
       cost: toNumber(entry.cost, 1),
       note: entry.note,

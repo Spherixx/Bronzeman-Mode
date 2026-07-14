@@ -57,6 +57,7 @@ export function createShopView(ctx) {
   function renderShop() {
     renderShopSection("shopResupplyList", "resupply");
     renderShopSection("shopUnlocksList", "unlocks");
+    renderShopSection("shopOtherList", "other");
   }
 
   function renderShopSection(targetId, shopSection) {
