@@ -3,8 +3,9 @@ export function createTalentView(ctx) {
     const tree = document.getElementById("talentTree");
     tree.innerHTML = "";
     const maxTier = Math.max(0, ...ctx.data.unlocks.map((unlock) => unlock.tier));
+    const minTier = Math.min(0, ...ctx.data.unlocks.map((unlock) => unlock.tier));
 
-    for (let tierNumber = 1; tierNumber <= maxTier; tierNumber += 1) {
+    for (let tierNumber = minTier; tierNumber <= maxTier; tierNumber += 1) {
       const tier = document.createElement("div");
       tier.className = "tier";
       tier.dataset.tier = tierNumber;
@@ -14,8 +15,8 @@ export function createTalentView(ctx) {
       const tierProgress = ctx.domain.tierRequirementProgress(tierNumber);
       label.className = "tier-label";
       requirement.className = `tier-requirement ${tierProgress.unlocked ? "unlocked" : "locked"}`;
-      label.innerHTML = `<b>TIER ${tierNumber}</b> | ${tierNumber === 1 ? "BASE" : tierNumber === maxTier ? "ENDGAME" : "POWER"}`;
-      requirement.textContent = tierNumber === 1 ? "Open" : `Tier ${tierNumber - 1}: ${Math.min(tierProgress.purchased, tierProgress.required)} / ${tierProgress.required}`;
+      label.innerHTML = `<b>TIER ${tierNumber}</b> | ${tierNumber === 0 ? "STARTER" : tierNumber === 1 ? "BASE" : tierNumber === maxTier ? "ENDGAME" : "POWER"}`;
+      requirement.textContent = tierNumber <= 1 ? "Open" : `Tier ${tierNumber - 1}: ${Math.min(tierProgress.purchased, tierProgress.required)} / ${tierProgress.required}`;
       tier.appendChild(label);
       tier.appendChild(requirement);
 
@@ -56,12 +57,12 @@ export function createTalentView(ctx) {
     document.querySelectorAll(".tier").forEach((tierElement) => {
       const tierNumber = Number(tierElement.dataset.tier);
       const requirement = tierElement.querySelector(".tier-requirement");
-      if (!tierNumber || !requirement) return;
+      if (!Number.isFinite(tierNumber) || !requirement) return;
 
       const tierProgress = ctx.domain.tierRequirementProgress(tierNumber);
       requirement.classList.toggle("unlocked", tierProgress.unlocked);
       requirement.classList.toggle("locked", !tierProgress.unlocked);
-      requirement.textContent = tierNumber === 1 ? "Open" : `Tier ${tierNumber - 1}: ${Math.min(tierProgress.purchased, tierProgress.required)} / ${tierProgress.required}`;
+      requirement.textContent = tierNumber <= 1 ? "Open" : `Tier ${tierNumber - 1}: ${Math.min(tierProgress.purchased, tierProgress.required)} / ${tierProgress.required}`;
     });
 
     ctx.data.unlocks.forEach((unlock) => {

@@ -1,0 +1,20 @@
+/////ADDITIONS/////
+added granite gear
+added swampbark
+added fremmy helms
+added lightbearer
+added imbued dk rings
+added set images for barrows
+added set images for blessed dhide
+added set images for spined,rockshell,skeletal
+
+/////BALANCE/////
+moved arkan blade up to tier 4
+removed rigour from talents
+
+/////BUG FIXES/////
+fixed god spell icon not loading in talents
+fixed dozens of incorrectly tagged items for better sorting in collection tab
+
+/////SYSTEM/////
+changed the way shop items are loaded from json so there are no more hardcode image paths

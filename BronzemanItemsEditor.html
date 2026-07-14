@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bronzeman Items Editor</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111315;
+      --panel: #1a1d21;
+      --panel-2: #22262b;
+      --border: #343a40;
+      --text: #f2f3f5;
+      --muted: #aeb4bc;
+      --accent: #c68b3c;
+      --accent-hover: #dda657;
+      --danger: #b84a4a;
+      --success: #4f9d69;
+      --input: #15181b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(198, 139, 60, 0.08), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    button,
+    input,
+    select,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      border-color: var(--accent);
+    }
+
+    button.primary {
+      background: var(--accent);
+      color: #17110a;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    button.primary:hover {
+      background: var(--accent-hover);
+    }
+
+    button.danger {
+      background: var(--danger);
+      border-color: var(--danger);
+    }
+
+    button.small {
+      padding: 0.45rem 0.7rem;
+      font-size: 0.9rem;
+    }
+
+    input,
+    select,
+    textarea {
+      width: 100%;
+      color: var(--text);
+      background: var(--input);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.7rem 0.8rem;
+      outline: none;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(198, 139, 60, 0.14);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .app {
+      min-height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(17, 19, 21, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+
+    .title {
+      margin-right: auto;
+    }
+
+    .title h1 {
+      font-size: 1.15rem;
+      margin: 0;
+    }
+
+    .title p {
+      margin: 0.2rem 0 0;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(280px, 360px) 1fr;
+      min-height: 0;
+    }
+
+    .sidebar {
+      border-right: 1px solid var(--border);
+      background: var(--panel);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      max-height: calc(100vh - 74px);
+      position: sticky;
+      top: 74px;
+    }
+
+    .sidebar-controls {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .search-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+    }
+
+    .item-count {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .item-list {
+      overflow-y: auto;
+      padding: 0.5rem;
+    }
+
+    .item-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 0.75rem;
+      align-items: center;
+      text-align: left;
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 0.65rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .item-row:hover,
+    .item-row.active {
+      background: var(--panel-2);
+      border-color: var(--border);
+    }
+
+    .item-row.active {
+      border-color: var(--accent);
+    }
+
+    .item-row img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      background: #0e1012;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .item-row strong,
+    .item-row span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .item-row span {
+      color: var(--muted);
+      font-size: 0.8rem;
+      margin-top: 0.2rem;
+    }
+
+    .editor {
+      padding: 1.25rem;
+      min-width: 0;
+    }
+
+    .empty-state {
+      height: 100%;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+    }
+
+    .editor-card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .editor-header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+
+    .preview {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #101214;
+    }
+
+    .editor-heading h2 {
+      margin: 0 0 0.35rem;
+      font-size: 1.35rem;
+    }
+
+    .editor-heading p {
+      margin: 0;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .field {
+      display: grid;
+      gap: 0.4rem;
+      min-width: 0;
+    }
+
+    .field.full {
+      grid-column: 1 / -1;
+    }
+
+    .field label {
+      color: var(--muted);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .checkbox-row {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .checkbox-label input {
+      width: auto;
+    }
+
+    .tag-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 0.55rem;
+      padding: 0.75rem;
+      background: var(--input);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .custom-tag-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .form-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+
+    .status {
+      margin-left: auto;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+    }
+
+    .status.dirty {
+      color: var(--accent-hover);
+    }
+
+    .status.saved {
+      color: var(--success);
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    @media (max-width: 850px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        position: static;
+        max-height: 42vh;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .editor-header {
+        grid-template-columns: 90px 1fr;
+      }
+
+      .preview {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .field.full {
+        grid-column: auto;
+      }
+
+      .editor {
+        padding: 0.75rem;
+      }
+
+      .topbar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="title">
+        <h1>Bronzeman Items Editor</h1>
+        <p>Load, edit, search, and export BronzemanItems.json</p>
+      </div>
+
+      <input id="fileInput" type="file" accept=".json,application/json" class="hidden" />
+      <button id="loadButton">Load JSON</button>
+      <button id="newItemButton">Add Item</button>
+      <button id="exportButton" class="primary">Export JSON</button>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-controls">
+          <div class="search-row">
+            <input id="searchInput" type="search" placeholder="Search name, alias, UID, ID, or tag..." />
+            <button id="clearSearchButton" class="small">Clear</button>
+          </div>
+
+          <select id="filterSelect">
+            <option value="all">All items</option>
+            <option value="unlocked">Unlocked only</option>
+            <option value="locked">Locked only</option>
+            <option value="available">Always available</option>
+            <option value="talent">Talent items</option>
+            <option value="shop">Shop items</option>
+          </select>
+
+          <div id="itemCount" class="item-count">0 items</div>
+        </div>
+
+        <div id="itemList" class="item-list"></div>
+      </aside>
+
+      <section class="editor">
+        <div id="emptyState" class="empty-state">
+          <div>
+            <strong>No item selected</strong>
+            <div>Load a JSON file or add a new item.</div>
+          </div>
+        </div>
+
+        <div id="editorCard" class="editor-card hidden">
+          <div class="editor-header">
+            <img id="imagePreview" class="preview" alt="Item preview" />
+            <div class="editor-heading">
+              <h2 id="editorTitle">Item</h2>
+              <p id="editorSubtitle"></p>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="nameInput">Name</label>
+              <input id="nameInput" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="aliasInput">Alias</label>
+              <input id="aliasInput" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="uidInput">UID</label>
+              <input id="uidInput" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="itemIdInput">Item ID</label>
+              <input id="itemIdInput" type="number" step="1" />
+            </div>
+
+            <div class="field">
+              <label for="tierInput">Tier</label>
+              <input id="tierInput" type="number" step="1" placeholder="null" />
+            </div>
+
+            <div class="field">
+              <label for="costInput">Cost</label>
+              <input id="costInput" type="number" step="1" placeholder="null" />
+            </div>
+
+            <div class="field full">
+              <label>Flags</label>
+              <div class="checkbox-row">
+                <label class="checkbox-label">
+                  <input id="alwaysAvailableInput" type="checkbox" />
+                  Always available
+                </label>
+                <label class="checkbox-label">
+                  <input id="unlockedInput" type="checkbox" />
+                  Unlocked
+                </label>
+              </div>
+            </div>
+
+            <div class="field full">
+              <label for="wikiLinkInput">Wiki Link</label>
+              <input id="wikiLinkInput" type="url" />
+            </div>
+
+            <div class="field full">
+              <label for="imageNameInput">Image Name</label>
+              <input id="imageNameInput" type="text" placeholder="Shark.png" />
+            </div>
+
+            <div class="field full">
+              <label>Tags</label>
+              <div id="tagGrid" class="tag-grid"></div>
+              <div class="custom-tag-row">
+                <input id="customTagInput" type="text" placeholder="Add custom tag definition" />
+                <button id="addTagButton" class="small">Add Tag</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button id="duplicateButton">Duplicate Item</button>
+            <button id="deleteButton" class="danger">Delete Item</button>
+            <div id="statusText" class="status saved">Saved in memory</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const defaultTagDefinitions = [
+      "talent",
+      "shop",
+      "melee",
+      "range",
+      "mage",
+      "weapon",
+      "armor",
+      "spec",
+      "jewellery",
+      "rune",
+      "food",
+      "potion",
+      "teleport",
+      "ammo",
+      "hidden",
+      "consumable",
+      "other"
+    ];
+
+    const state = {
+      data: {
+        schemaVersion: 2,
+        items: [],
+        tagDefinitions: [...defaultTagDefinitions]
+      },
+      selectedIndex: -1,
+      dirty: false,
+      fileName: "BronzemanItems.json"
+    };
+
+    const elements = {
+      fileInput: document.getElementById("fileInput"),
+      loadButton: document.getElementById("loadButton"),
+      newItemButton: document.getElementById("newItemButton"),
+      exportButton: document.getElementById("exportButton"),
+      searchInput: document.getElementById("searchInput"),
+      clearSearchButton: document.getElementById("clearSearchButton"),
+      filterSelect: document.getElementById("filterSelect"),
+      itemCount: document.getElementById("itemCount"),
+      itemList: document.getElementById("itemList"),
+      emptyState: document.getElementById("emptyState"),
+      editorCard: document.getElementById("editorCard"),
+      imagePreview: document.getElementById("imagePreview"),
+      editorTitle: document.getElementById("editorTitle"),
+      editorSubtitle: document.getElementById("editorSubtitle"),
+      nameInput: document.getElementById("nameInput"),
+      aliasInput: document.getElementById("aliasInput"),
+      uidInput: document.getElementById("uidInput"),
+      itemIdInput: document.getElementById("itemIdInput"),
+      tierInput: document.getElementById("tierInput"),
+      costInput: document.getElementById("costInput"),
+      alwaysAvailableInput: document.getElementById("alwaysAvailableInput"),
+      unlockedInput: document.getElementById("unlockedInput"),
+      wikiLinkInput: document.getElementById("wikiLinkInput"),
+      imageNameInput: document.getElementById("imageNameInput"),
+      tagGrid: document.getElementById("tagGrid"),
+      customTagInput: document.getElementById("customTagInput"),
+      addTagButton: document.getElementById("addTagButton"),
+      duplicateButton: document.getElementById("duplicateButton"),
+      deleteButton: document.getElementById("deleteButton"),
+      statusText: document.getElementById("statusText")
+    };
+
+    function normalizeData(data) {
+      if (!data || typeof data !== "object") {
+        throw new Error("The JSON root must be an object.");
+      }
+
+      if (!Array.isArray(data.items)) {
+        throw new Error('The JSON must contain an "items" array.');
+      }
+
+      if (!Array.isArray(data.tagDefinitions)) {
+        data.tagDefinitions = [...defaultTagDefinitions];
+      }
+
+      if (data.schemaVersion === undefined) {
+        data.schemaVersion = 2;
+      }
+
+      data.items = data.items.map(item => ({
+        name: item.name ?? "",
+        alias: item.alias ?? item.name ?? "",
+        uid: item.uid ?? slugify(item.name ?? ""),
+        itemId: toNullableNumber(item.itemId),
+        tags: Array.isArray(item.tags) ? item.tags.map(String) : [],
+        tier: toNullableNumber(item.tier),
+        alwaysAvailable: Boolean(item.alwaysAvailable),
+        unlocked: Boolean(item.unlocked),
+        wikiLink: item.wikiLink ?? "",
+        imageName: item.imageName ?? "",
+        cost: toNullableNumber(item.cost)
+      }));
+
+      data.tagDefinitions = [...new Set(data.tagDefinitions.map(String))];
+
+      for (const item of data.items) {
+        for (const tag of item.tags) {
+          if (!data.tagDefinitions.includes(tag)) {
+            data.tagDefinitions.push(tag);
+          }
+        }
+      }
+
+      return data;
+    }
+
+    function toNullableNumber(value) {
+      if (value === null || value === undefined || value === "") {
+        return null;
+      }
+
+      const number = Number(value);
+      return Number.isFinite(number) ? number : null;
+    }
+
+    function slugify(value) {
+      return String(value)
+        .trim()
+        .toLowerCase()
+        .replace(/['’]/g, "")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-+|-+$/g, "");
+    }
+
+    function imagePath(item) {
+      if (!item?.imageName) {
+        return "";
+      }
+
+      return `images/items/${encodeURIComponent(item.imageName).replace(/%2F/g, "/")}`;
+    }
+
+    function setDirty(isDirty = true) {
+      state.dirty = isDirty;
+      elements.statusText.textContent = isDirty ? "Unsaved changes" : "Saved in memory";
+      elements.statusText.classList.toggle("dirty", isDirty);
+      elements.statusText.classList.toggle("saved", !isDirty);
+    }
+
+    function currentItem() {
+      return state.selectedIndex >= 0 ? state.data.items[state.selectedIndex] : null;
+    }
+
+    function filteredItems() {
+      const query = elements.searchInput.value.trim().toLowerCase();
+      const filter = elements.filterSelect.value;
+
+      return state.data.items
+        .map((item, index) => ({ item, index }))
+        .filter(({ item }) => {
+          const matchesQuery =
+            !query ||
+            item.name.toLowerCase().includes(query) ||
+            item.alias.toLowerCase().includes(query) ||
+            item.uid.toLowerCase().includes(query) ||
+            String(item.itemId ?? "").includes(query) ||
+            item.tags.some(tag => tag.toLowerCase().includes(query));
+
+          if (!matchesQuery) {
+            return false;
+          }
+
+          switch (filter) {
+            case "unlocked":
+              return item.unlocked;
+            case "locked":
+              return !item.unlocked;
+            case "available":
+              return item.alwaysAvailable;
+            case "talent":
+              return item.tags.includes("talent");
+            case "shop":
+              return item.tags.includes("shop");
+            default:
+              return true;
+          }
+        });
+    }
+
+    function renderItemList() {
+      const matches = filteredItems();
+      elements.itemList.innerHTML = "";
+      elements.itemCount.textContent = `${matches.length} of ${state.data.items.length} items`;
+
+      const fragment = document.createDocumentFragment();
+
+      for (const { item, index } of matches) {
+        const button = document.createElement("button");
+        button.className = `item-row${index === state.selectedIndex ? " active" : ""}`;
+        button.type = "button";
+        button.addEventListener("click", () => selectItem(index));
+
+        const image = document.createElement("img");
+        image.src = imagePath(item);
+        image.alt = "";
+        image.onerror = () => {
+          image.style.opacity = "0.2";
+          image.removeAttribute("src");
+        };
+
+        const text = document.createElement("div");
+        const name = document.createElement("strong");
+        name.textContent = item.name || "(Unnamed item)";
+        const details = document.createElement("span");
+        details.textContent = `${item.uid || "no-uid"} · ${item.itemId ?? "no ID"}`;
+
+        text.append(name, details);
+        button.append(image, text);
+        fragment.append(button);
+      }
+
+      elements.itemList.append(fragment);
+    }
+
+    function renderTagGrid() {
+      const item = currentItem();
+      elements.tagGrid.innerHTML = "";
+
+      if (!item) {
+        return;
+      }
+
+      const fragment = document.createDocumentFragment();
+
+      for (const tag of state.data.tagDefinitions) {
+        const label = document.createElement("label");
+        label.className = "checkbox-label";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = item.tags.includes(tag);
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            if (!item.tags.includes(tag)) {
+              item.tags.push(tag);
+            }
+          } else {
+            item.tags = item.tags.filter(existingTag => existingTag !== tag);
+          }
+
+          setDirty();
+          renderItemList();
+        });
+
+        const text = document.createElement("span");
+        text.textContent = tag;
+
+        label.append(checkbox, text);
+        fragment.append(label);
+      }
+
+      elements.tagGrid.append(fragment);
+    }
+
+    function renderEditor() {
+      const item = currentItem();
+      const hasItem = Boolean(item);
+
+      elements.emptyState.classList.toggle("hidden", hasItem);
+      elements.editorCard.classList.toggle("hidden", !hasItem);
+
+      if (!item) {
+        return;
+      }
+
+      elements.nameInput.value = item.name;
+      elements.aliasInput.value = item.alias;
+      elements.uidInput.value = item.uid;
+      elements.itemIdInput.value = item.itemId ?? "";
+      elements.tierInput.value = item.tier ?? "";
+      elements.costInput.value = item.cost ?? "";
+      elements.alwaysAvailableInput.checked = item.alwaysAvailable;
+      elements.unlockedInput.checked = item.unlocked;
+      elements.wikiLinkInput.value = item.wikiLink;
+      elements.imageNameInput.value = item.imageName;
+
+      elements.editorTitle.textContent = item.name || "(Unnamed item)";
+      elements.editorSubtitle.textContent = item.uid || "No UID";
+
+      elements.imagePreview.src = imagePath(item);
+      elements.imagePreview.style.opacity = "1";
+      elements.imagePreview.onerror = () => {
+        elements.imagePreview.style.opacity = "0.2";
+        elements.imagePreview.removeAttribute("src");
+      };
+
+      renderTagGrid();
+      setDirty(state.dirty);
+    }
+
+    function selectItem(index) {
+      state.selectedIndex = index;
+      renderItemList();
+      renderEditor();
+    }
+
+    function addItem() {
+      const item = {
+        name: "New item",
+        alias: "New item",
+        uid: makeUniqueUid("new-item"),
+        itemId: null,
+        tags: [],
+        tier: null,
+        alwaysAvailable: false,
+        unlocked: false,
+        wikiLink: "",
+        imageName: "",
+        cost: null
+      };
+
+      state.data.items.push(item);
+      state.selectedIndex = state.data.items.length - 1;
+      setDirty();
+      renderItemList();
+      renderEditor();
+      elements.nameInput.focus();
+      elements.nameInput.select();
+    }
+
+    function duplicateItem() {
+      const item = currentItem();
+      if (!item) {
+        return;
+      }
+
+      const copy = structuredClone(item);
+      copy.name = `${item.name} Copy`;
+      copy.alias = `${item.alias} Copy`;
+      copy.uid = makeUniqueUid(`${item.uid || slugify(item.name)}-copy`);
+
+      state.data.items.splice(state.selectedIndex + 1, 0, copy);
+      state.selectedIndex += 1;
+
+      setDirty();
+      renderItemList();
+      renderEditor();
+    }
+
+    function deleteItem() {
+      const item = currentItem();
+      if (!item) {
+        return;
+      }
+
+      const confirmed = confirm(`Delete "${item.name || "this item"}"?`);
+      if (!confirmed) {
+        return;
+      }
+
+      state.data.items.splice(state.selectedIndex, 1);
+
+      if (state.data.items.length === 0) {
+        state.selectedIndex = -1;
+      } else if (state.selectedIndex >= state.data.items.length) {
+        state.selectedIndex = state.data.items.length - 1;
+      }
+
+      setDirty();
+      renderItemList();
+      renderEditor();
+    }
+
+    function makeUniqueUid(baseUid) {
+      const normalized = slugify(baseUid) || "item";
+      const existing = new Set(state.data.items.map(item => item.uid));
+
+      if (!existing.has(normalized)) {
+        return normalized;
+      }
+
+      let counter = 2;
+      while (existing.has(`${normalized}-${counter}`)) {
+        counter += 1;
+      }
+
+      return `${normalized}-${counter}`;
+    }
+
+    function addTagDefinition() {
+      const tag = elements.customTagInput.value.trim().toLowerCase();
+
+      if (!tag) {
+        return;
+      }
+
+      if (!state.data.tagDefinitions.includes(tag)) {
+        state.data.tagDefinitions.push(tag);
+      }
+
+      const item = currentItem();
+      if (item && !item.tags.includes(tag)) {
+        item.tags.push(tag);
+      }
+
+      elements.customTagInput.value = "";
+      setDirty();
+      renderTagGrid();
+      renderItemList();
+    }
+
+    function updateCurrentItem(field, value) {
+      const item = currentItem();
+      if (!item) {
+        return;
+      }
+
+      item[field] = value;
+      setDirty();
+
+      if (["name", "uid", "itemId", "imageName"].includes(field)) {
+        renderItemList();
+      }
+
+      if (["name", "uid", "imageName"].includes(field)) {
+        elements.editorTitle.textContent = item.name || "(Unnamed item)";
+        elements.editorSubtitle.textContent = item.uid || "No UID";
+        elements.imagePreview.src = imagePath(item);
+        elements.imagePreview.style.opacity = "1";
+      }
+    }
+
+    function exportJson() {
+      const output = JSON.stringify(state.data, null, 2) + "\n";
+      const blob = new Blob([output], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+
+      anchor.href = url;
+      anchor.download = state.fileName || "BronzemanItems.json";
+      document.body.append(anchor);
+      anchor.click();
+      anchor.remove();
+
+      URL.revokeObjectURL(url);
+      setDirty(false);
+    }
+
+    async function loadJsonFile(file) {
+      try {
+        const text = await file.text();
+        const parsed = JSON.parse(text);
+
+        state.data = normalizeData(parsed);
+        state.selectedIndex = state.data.items.length ? 0 : -1;
+        state.fileName = file.name || "BronzemanItems.json";
+
+        elements.searchInput.value = "";
+        elements.filterSelect.value = "all";
+
+        setDirty(false);
+        renderItemList();
+        renderEditor();
+      } catch (error) {
+        alert(`Could not load JSON:\n${error.message}`);
+      } finally {
+        elements.fileInput.value = "";
+      }
+    }
+
+    elements.loadButton.addEventListener("click", () => elements.fileInput.click());
+    elements.fileInput.addEventListener("change", event => {
+      const file = event.target.files?.[0];
+      if (file) {
+        loadJsonFile(file);
+      }
+    });
+
+    elements.newItemButton.addEventListener("click", addItem);
+    elements.exportButton.addEventListener("click", exportJson);
+    elements.duplicateButton.addEventListener("click", duplicateItem);
+    elements.deleteButton.addEventListener("click", deleteItem);
+
+    elements.searchInput.addEventListener("input", renderItemList);
+    elements.filterSelect.addEventListener("change", renderItemList);
+    elements.clearSearchButton.addEventListener("click", () => {
+      elements.searchInput.value = "";
+      elements.searchInput.focus();
+      renderItemList();
+    });
+
+    elements.addTagButton.addEventListener("click", addTagDefinition);
+    elements.customTagInput.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        addTagDefinition();
+      }
+    });
+
+    elements.nameInput.addEventListener("input", event => {
+      updateCurrentItem("name", event.target.value);
+    });
+
+    elements.aliasInput.addEventListener("input", event => {
+      updateCurrentItem("alias", event.target.value);
+    });
+
+    elements.uidInput.addEventListener("input", event => {
+      updateCurrentItem("uid", event.target.value);
+    });
+
+    elements.itemIdInput.addEventListener("input", event => {
+      updateCurrentItem("itemId", toNullableNumber(event.target.value));
+    });
+
+    elements.tierInput.addEventListener("input", event => {
+      updateCurrentItem("tier", toNullableNumber(event.target.value));
+    });
+
+    elements.costInput.addEventListener("input", event => {
+      updateCurrentItem("cost", toNullableNumber(event.target.value));
+    });
+
+    elements.alwaysAvailableInput.addEventListener("change", event => {
+      updateCurrentItem("alwaysAvailable", event.target.checked);
+    });
+
+    elements.unlockedInput.addEventListener("change", event => {
+      updateCurrentItem("unlocked", event.target.checked);
+    });
+
+    elements.wikiLinkInput.addEventListener("input", event => {
+      updateCurrentItem("wikiLink", event.target.value);
+    });
+
+    elements.imageNameInput.addEventListener("input", event => {
+      updateCurrentItem("imageName", event.target.value);
+    });
+
+    window.addEventListener("beforeunload", event => {
+      if (!state.dirty) {
+        return;
+      }
+
+      event.preventDefault();
+      event.returnValue = "";
+    });
+
+    renderItemList();
+    renderEditor();
+  </script>
+</body>
+</html>

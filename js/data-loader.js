@@ -1,10 +1,9 @@
 import { DATA_URLS } from "./config.js";
-import { imageAsset, itemImage } from "./assets.js";
+import { itemImage, otherImage } from "./assets.js";
 import {
   normalizeAssetPath,
   normalizeCollectionText,
   slugifyItemId,
-  titleCase,
   toArray,
   toNumber,
   uniqueTags,
@@ -46,44 +45,21 @@ export function createDataLoader(ctx) {
     });
   }
 
-  function imageNameForSpecialAsset(name, tags = []) {
-    const label = withoutTrailingPeriod(name);
-    const normalized = normalizeDataText(label);
-    const tagSet = new Set(tags);
-
-    if (tagSet.has("spellbook") || normalized.endsWith("spellbook")) {
-      const spellbookImages = {
-        "standard spellbook": "Standard_spellbook.png",
-        "ancient spellbook": "Ancient_spellbook.png",
-        "lunar spellbook": "Lunar_spellbook.png",
-        "arceuus spellbook": "Arceuus_spellbook.png"
-      };
-      return spellbookImages[normalized] ?? `${titleCase(normalized).replace(/ /g, "_")}.png`;
-    }
-
-    if (tagSet.has("prayer") || ["piety", "rigour", "augury", "chivalry", "deadeye", "mystic vigour"].includes(normalized)) {
-      return `${label.replace(/ /g, "_").replace("Mystic_Vigour", "Mystic_Vigour")}.png`;
-    }
-
-    return null;
-  }
-
-  function resolveDataImage(name, tags = []) {
+  function resolveDataImage(name) {
     if (!name) return "";
     const value = String(name);
     if (value.includes("/")) return value;
 
-    const itemRow = ctx.indexes.itemRowsByName.get(normalizeDataText(value));
+    const baseName = value.replace(/\.png$/i, "");
+    const itemRow = ctx.indexes.itemRowsByName.get(normalizeDataText(baseName));
     if (itemRow?.imageName) return itemImage(itemRow.imageName);
 
-    const specialName = imageNameForSpecialAsset(value, tags);
-    if (specialName) return imageAsset(specialName);
-
-    return itemImage(value.endsWith(".png") ? value : `${value}.png`);
+    const fileName = value.endsWith(".png") ? value : `${value.replace(/ /g, "_")}.png`;
+    return otherImage(fileName);
   }
 
   function imageForDataEntry(entry) {
-    return entry?.imagePath || (entry?.imageName ? itemImage(entry.imageName) : resolveDataImage(entry?.imageUsed, entry?.tags));
+    return entry?.imagePath || resolveDataImage(entry?.imageName || entry?.imageUsed);
   }
 
   function normalizeChallengeTask(taskEntry, type, legacyId) {
@@ -152,7 +128,7 @@ export function createDataLoader(ctx) {
   function normalizeTalentUnlock(entry, sourceType) {
     const cost = toNumber(entry.cost, NaN);
     const tier = toNumber(entry.tier, NaN);
-    if (!Number.isFinite(cost) || cost <= 0 || !Number.isFinite(tier) || tier <= 0) return null;
+    if (!Number.isFinite(cost) || cost < 0 || !Number.isFinite(tier) || tier < 0) return null;
 
     const tags = uniqueTags(entry.tags ?? []);
     const collectionIds = sourceType === "set"
@@ -195,41 +171,63 @@ export function createDataLoader(ctx) {
     });
   }
 
-  function normalizeShopSection(shopItem, tags) {
-    if (tags.includes("unlock") || shopItem.section === "unlocks" || shopItem.category === "Gear") return "unlocks";
-    return "resupply";
+  function normalizeShopSection(entry, tags) {
+    if (tags.includes("unlock") || entry.section === "unlocks") return "unlocks";
+    if (tags.includes("resupply") || entry.section === "resupply") return "resupply";
+    return tags.some((tag) => ["rune", "ammo", "food", "potion"].includes(tag)) ? "resupply" : "unlocks";
   }
 
-  function normalizeShopCategory(shopItem, tags) {
+  function normalizeShopCategory(entry, tags) {
     const categoryTags = tags.filter((tag) => !["shop", "resupply", "unlock"].includes(tag));
     if (categoryTags.length) return ctx.collection.collectionCategoryFromTags(categoryTags);
-    return shopItem.category || "Other";
+    return entry.category || "Other";
   }
 
-  function normalizeShopItems(data) {
-    const jsonShopItems = toArray(data?.shopItems).map((shopItem) => {
-      const tags = uniqueTags(shopItem.tags ?? []);
-      return {
-        id: dataUid(shopItem, "shop"),
-        category: normalizeShopCategory(shopItem, tags),
-        section: normalizeShopSection(shopItem, tags),
-        name: dataDisplayName(shopItem, "Shop item"),
-        cost: toNumber(shopItem.cost, 1),
-        note: shopItem.note,
-        tags,
-        items: toArray(shopItem.items).map((entry) => ({
-          image: entry.image ? resolveDataImage(entry.image, entry.tags ?? tags) : resolveDataImage(entry.imageUsed || entry.name || entry.uid, entry.tags ?? tags),
-          amount: entry.amount
-        }))
-      };
+  function shopItemImages(entry, sourceType) {
+    if (sourceType === "set") {
+      return itemIdsFromDataIds(entry.itemIds).map((uid) => {
+        const item = ctx.indexes.itemRowsByUid.get(uid);
+        return { image: imageForDataEntry(item) };
+      }).filter((item) => item.image);
+    }
+
+    const image = imageForDataEntry(entry);
+    return image ? [{ image }] : [];
+  }
+
+  function normalizeShopItem(entry, sourceType) {
+    const tags = uniqueTags(entry.tags ?? []);
+    return {
+      id: dataUid(entry, "shop"),
+      category: normalizeShopCategory(entry, tags),
+      section: normalizeShopSection(entry, tags),
+      name: dataDisplayName(entry, "Shop item"),
+      cost: toNumber(entry.cost, 1),
+      note: entry.note,
+      tags,
+      items: shopItemImages(entry, sourceType)
+    };
+  }
+
+  function buildDataShopItems(itemsData, itemSetsData, unlocksData) {
+    const sources = [
+      [itemsData?.items, "item"],
+      [itemSetsData?.itemSets, "set"],
+      [unlocksData?.unlocks, "unlock"]
+    ];
+    const seen = new Set();
+    const shopItems = sources.flatMap(([entries, sourceType]) => {
+      return toArray(entries)
+        .filter((entry) => uniqueTags(entry.tags ?? []).includes("shop"))
+        .map((entry) => normalizeShopItem(entry, sourceType));
+    }).filter((item) => {
+      if (!item.id || seen.has(item.id)) return false;
+      seen.add(item.id);
+      return true;
     });
 
-    ctx.data.shopCategories = toArray(data?.categories).length
-      ? toArray(data.categories).map((category) => String(category)).filter(Boolean)
-      : [...new Set(jsonShopItems.map((item) => item.category))];
-
-    if (!jsonShopItems.length) ctx.data.dataWarnings.push("BronzemanShop.json does not define any shopItems.");
-    return jsonShopItems;
+    ctx.data.shopCategories = [...new Set(shopItems.map((item) => item.category))];
+    return shopItems;
   }
 
   async function fetchJson(url) {
@@ -258,13 +256,12 @@ export function createDataLoader(ctx) {
 
   async function loadAppData() {
     try {
-      const [itemsData, itemSetsData, unlocksData, pvmData, pvpData, shopData, challengesData] = await Promise.all([
+      const [itemsData, itemSetsData, unlocksData, pvmData, pvpData, challengesData] = await Promise.all([
         fetchJson(DATA_URLS.items),
         fetchJson(DATA_URLS.itemSets),
         fetchJson(DATA_URLS.unlocks),
         fetchJson(DATA_URLS.pvm),
         fetchJson(DATA_URLS.pvp),
-        fetchJson(DATA_URLS.shop),
         fetchJson(DATA_URLS.challenges)
       ]);
 
@@ -279,7 +276,7 @@ export function createDataLoader(ctx) {
         pvp: normalizePvpChallenges(pvpData)
       };
       ctx.data.unlocks = mergeUnlocks(buildDataUnlocks(itemsData, itemSetsData, unlocksData));
-      ctx.data.shopItems = normalizeShopItems(shopData);
+      ctx.data.shopItems = buildDataShopItems(itemsData, itemSetsData, unlocksData);
 
       const seen = new Set();
       const items = toArray(itemsData.items)

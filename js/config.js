@@ -6,7 +6,6 @@ export const DATA_URLS = {
   unlocks: "data/BronzemanUnlocks.json",
   pvm: "data/BronzemanPvM.json",
   pvp: "data/BronzemanPvP.json",
-  shop: "data/BronzemanShop.json",
   challenges: "data/BronzemanChallenges.json"
 };
 
@@ -59,6 +58,5 @@ export const CHALLENGE_ROLL_RESULT_HOLD_MS = 3000;
 
 export const HARD_CODED_DATA_NOTES = [
   "Firebase project settings and tracker document path are currently configured in js/firebase-service.js.",
-  "Collection filter definitions, category priority, and the talent tier requirement live in js/config.js and could move into JSON if they should be admin-editable.",
-  "Special image folder routing for spellbooks, prayers, and misc assets lives in js/assets.js and could move to an asset manifest JSON."
+  "Collection filter definitions, category priority, and the talent tier requirement live in js/config.js and could move into JSON if they should be admin-editable."
 ];

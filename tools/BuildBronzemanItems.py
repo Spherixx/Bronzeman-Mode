@@ -116,6 +116,7 @@ def wiki_link(name: str) -> str:
 def new_item(
     name: str,
     item_id: int | None,
+    tags: list[str],
     used_uids: set[str],
 ) -> dict:
     """
@@ -128,7 +129,7 @@ def new_item(
         "alias": name,
         "uid": unique_uid(name, used_uids),
         "itemId": item_id,
-        "tags": [],
+        "tags": list(tags),
         "tier": None,
         "cost": None,
         "alwaysAvailable": False,
@@ -136,6 +137,55 @@ def new_item(
         "wikiLink": wiki_link(name),
         "imageName": f"{name}.png",
     }
+
+
+def parse_tags(
+    raw_tags: str,
+    row_number: int,
+    logger: logging.Logger,
+    stats: dict,
+) -> tuple[list[str], bool]:
+    """
+    Parse an optional CSV tags value.
+
+    Tags may be separated by commas, semicolons, or pipes. A blank cell
+    leaves tags unchanged on an existing item. Use [] or none to explicitly
+    clear all tags. Unknown tags are ignored and logged as warnings.
+    """
+    value = str(raw_tags or "").strip()
+
+    if not value:
+        return [], False
+
+    if normalize(value) in {"[]", "none", "null"}:
+        return [], True
+
+    parts = re.split(r"[,;|]", value)
+    allowed = {normalize(tag): tag for tag in TAG_DEFINITIONS}
+    parsed = []
+    seen = set()
+
+    for part in parts:
+        tag_key = normalize(part)
+        if not tag_key:
+            continue
+
+        canonical = allowed.get(tag_key)
+        if canonical is None:
+            stats["warnings"] += 1
+            logger.warning(
+                "CSV row %d: unknown tag %r ignored. Valid tags: %s",
+                row_number,
+                part.strip(),
+                ", ".join(TAG_DEFINITIONS),
+            )
+            continue
+
+        if canonical not in seen:
+            seen.add(canonical)
+            parsed.append(canonical)
+
+    return parsed, True
 
 
 def load_csv(
@@ -149,6 +199,13 @@ def load_csv(
     Required headers:
 
         name,itemId
+
+    Optional headers:
+
+        tags
+
+    Tags may be separated with commas, semicolons, or pipes. Because commas
+    are also CSV delimiters, comma-separated tag lists must be quoted.
 
     itemId rules:
 
@@ -184,6 +241,7 @@ def load_csv(
 
         name_header = headers.get("name")
         id_header = headers.get("itemid")
+        tags_header = headers.get("tags")
 
         if name_header is None or id_header is None:
             raise ValueError(
@@ -199,7 +257,13 @@ def load_csv(
                 row.get(id_header, "") or ""
             ).strip()
 
-            if not name and not raw_id:
+            raw_tags = (
+                str(row.get(tags_header, "") or "").strip()
+                if tags_header is not None
+                else ""
+            )
+
+            if not name and not raw_id and not raw_tags:
                 continue
 
             stats["csv_rows"] += 1
@@ -258,6 +322,13 @@ def load_csv(
 
             seen_names[normalized_name] = row_number
 
+            tags, tags_specified = parse_tags(
+                raw_tags,
+                row_number,
+                logger,
+                stats,
+            )
+
             rows.append(
                 {
                     "name": name,
@@ -266,6 +337,8 @@ def load_csv(
                         if parsed_id > 0
                         else None
                     ),
+                    "tags": tags,
+                    "tags_specified": tags_specified,
                     "row": row_number,
                 }
             )
@@ -326,7 +399,6 @@ def load_json(path: Path) -> dict:
         return {
             "schemaVersion": 2,
             "items": [],
-            "otherImages": [],
             "tagDefinitions": TAG_DEFINITIONS,
         }
 
@@ -341,7 +413,6 @@ def load_json(path: Path) -> dict:
 
     data.setdefault("schemaVersion", 2)
     data.setdefault("items", [])
-    data.setdefault("otherImages", [])
     data.setdefault(
         "tagDefinitions",
         TAG_DEFINITIONS,
@@ -610,11 +681,10 @@ def add_or_update(
     stats: dict,
 ) -> None:
     """
-    Match an existing item by name.
+    Match an existing item by name and apply CSV-managed fields.
 
-    Existing items keep all of their manually edited values.
-    The only existing value this function is allowed to change
-    is itemId.
+    Existing objects are preserved. The CSV may update itemId and, when a
+    nonblank tags value is supplied, replace the item's tags.
     """
     (
         used_uids,
@@ -623,24 +693,16 @@ def add_or_update(
         by_id,
     ) = indexes
 
-    existing = by_name.get(
-        normalize(official_name)
-    )
+    existing = by_name.get(normalize(official_name))
 
     if existing is None:
-        existing = by_name.get(
-            normalize(csv_row["name"])
-        )
+        existing = by_name.get(normalize(csv_row["name"]))
 
     if existing is None:
-        existing = by_loose_name.get(
-            normalize_loose(official_name)
-        )
+        existing = by_loose_name.get(normalize_loose(official_name))
 
     if existing is None:
-        existing = by_loose_name.get(
-            normalize_loose(csv_row["name"])
-        )
+        existing = by_loose_name.get(normalize_loose(csv_row["name"]))
 
     if resolved_id is not None:
         owner = by_id.get(resolved_id)
@@ -660,76 +722,64 @@ def add_or_update(
             return
 
     if existing is not None:
-        if resolved_id is None:
-            stats["unchanged"] += 1
-
-            logger.info(
-                "UNCHANGED | %s | no numeric itemId "
-                "resolved | source=%s",
-                item_name(existing),
-                source,
-            )
-            return
+        changes = []
 
         try:
-            old_id = int(
-                existing.get("itemId")
-            )
+            old_id = int(existing.get("itemId"))
         except (TypeError, ValueError):
             old_id = None
 
-        if old_id == resolved_id:
-            stats["unchanged"] += 1
+        if resolved_id is not None and old_id != resolved_id:
+            if old_id is not None and by_id.get(old_id) is existing:
+                del by_id[old_id]
 
+            existing["itemId"] = resolved_id
+            by_id[resolved_id] = existing
+            changes.append(
+                f"itemId {'null' if old_id is None else old_id} -> {resolved_id}"
+            )
+
+        if csv_row["tags_specified"]:
+            old_tags = existing.get("tags")
+            if not isinstance(old_tags, list):
+                old_tags = []
+
+            new_tags = csv_row["tags"]
+            if old_tags != new_tags:
+                existing["tags"] = list(new_tags)
+                changes.append(
+                    f"tags {json.dumps(old_tags)} -> {json.dumps(new_tags)}"
+                )
+
+        if changes:
+            stats["updated"] += 1
             logger.info(
-                "UNCHANGED | %s | itemId=%d | source=%s",
+                "UPDATED   | %s | %s | source=%s",
                 item_name(existing),
-                resolved_id,
+                " | ".join(changes),
                 source,
             )
-            return
-
-        if (
-            old_id is not None
-            and by_id.get(old_id) is existing
-        ):
-            del by_id[old_id]
-
-        # Do not rebuild or replace the existing object.
-        # Only correct its itemId.
-        existing["itemId"] = resolved_id
-        by_id[resolved_id] = existing
-
-        stats["updated"] += 1
-
-        logger.info(
-            "UPDATED   | %s | itemId %s -> %d | source=%s",
-            item_name(existing),
-            (
-                "null"
-                if old_id is None
-                else old_id
-            ),
-            resolved_id,
-            source,
-        )
+        else:
+            stats["unchanged"] += 1
+            logger.info(
+                "UNCHANGED | %s | itemId=%s | tags=%s | source=%s",
+                item_name(existing),
+                "null" if old_id is None else old_id,
+                json.dumps(existing.get("tags") or []),
+                source,
+            )
         return
 
     item = new_item(
         official_name,
         resolved_id,
+        csv_row["tags"] if csv_row["tags_specified"] else [],
         used_uids,
     )
 
     data["items"].append(item)
-
-    by_name[
-        normalize(official_name)
-    ] = item
-
-    by_loose_name[
-        normalize_loose(official_name)
-    ] = item
+    by_name[normalize(official_name)] = item
+    by_loose_name[normalize_loose(official_name)] = item
 
     if resolved_id is not None:
         by_id[resolved_id] = item
@@ -737,14 +787,10 @@ def add_or_update(
     stats["added"] += 1
 
     logger.info(
-        "ADDED     | %s | itemId=%s | "
-        "source=%s | CSV name=%r",
+        "ADDED     | %s | itemId=%s | tags=%s | source=%s | CSV name=%r",
         official_name,
-        (
-            "null"
-            if resolved_id is None
-            else resolved_id
-        ),
+        "null" if resolved_id is None else resolved_id,
+        json.dumps(item["tags"]),
         source,
         csv_row["name"],
     )
@@ -1053,21 +1099,16 @@ def run(
         output_path,
     )
 
-    logger.info(
-        "SUMMARY | CSV rows=%d | added=%d | "
-        "updated IDs=%d | unchanged=%d | "
-        "skipped=%d | missing from dump=%d | "
-        "Wiki pages found=%d | warnings=%d | errors=%d",
-        stats["csv_rows"],
-        stats["added"],
-        stats["updated"],
-        stats["unchanged"],
-        stats["skipped"],
-        stats["missing_dump"],
-        stats["wiki_found"],
-        stats["warnings"],
-        stats["errors"],
-    )
+    summary = (
+        "SUMMARY | CSV rows={csv_rows} | added={added} | "
+        "updated={updated} | unchanged={unchanged} | "
+        "skipped={skipped} | missing from dump={missing_dump} | "
+        "Wiki pages found={wiki_found} | warnings={warnings} | "
+        "errors={errors}"
+    ).format(**stats)
+
+    logger.info(summary)
+    print(summary)
 
     logger.info("RUN END")
 
@@ -1076,8 +1117,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
             "Build Bronzeman item definitions from a "
-            "name,itemId CSV while preserving existing "
-            "item fields."
+            "name,itemId,tags CSV while preserving existing "
+            "item fields not managed by the CSV."
         )
     )
 
@@ -1086,7 +1127,7 @@ def main() -> None:
         type=Path,
         default=CSV_PATH,
         help=(
-            "Input CSV containing name,itemId columns. "
+            "Input CSV containing name,itemId and optional tags columns. "
             f"Default: {CSV_PATH}"
         ),
     )

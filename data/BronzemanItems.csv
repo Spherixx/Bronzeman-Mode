@@ -200,8 +200,6 @@ Zamorak staff,0
 Zombie axe,0
 Dragon longsword,0
 Brimstone ring,0
-Granite sword,0
-Granite hammer,0
 Rune defender,0
 Dragon sword,0
 Treasonous ring,0
@@ -325,3 +323,45 @@ Ancient chaps,0
 Ancient bracers,0
 Ancient d'hide boots,0
 Ancient d'hide shield,0
+Granite helm,0,armor;melee
+Granite body,0,armor;melee
+Granite legs,0,armor;melee
+Granite gloves,0,armor;melee
+Granite boots,0,armor;melee
+Granite shield,0,armor;melee
+Granite ring,0,jewellery
+Granite ring (i),0,jewellery
+Granite longsword,0,weapon;melee
+Granite hammer,0,weapon;melee
+Swampbark helm,0,armor;magic
+Swampbark body,0,armor;magic
+Swampbark legs,0,armor;magic
+Swampbark gauntlets,0,armor;magic
+Swampbark boots,0,armor;magic
+Archer helm,0,armor;range
+Berserker helm,0,armor;melee
+Farseer helm,0,armor;magic
+Warrior helm,0,armor;melee
+Helm of neitiznot,0,armor;melee
+Lightbearer,0,jewellery
+Archers ring (i),0,jewellery;range
+Berserker ring (i),0,jewellery;melee
+Seers ring (i),0,jewellery;mage
+Warrior ring (i),0,jewellery;melee
+Ahrim's armour set,0,armor;magic;hidden
+Dharok's armour set,0,armor;melee;hidden
+Guthan's armour set,0,armor;melee;hidden
+Karil's armour set,0,armor;range;hidden
+Torag's armour set,0,armor;melee;hidden
+Verac's armour set,0,armor;melee;hidden
+Guthix dragonhide set,0,armor;range;hidden
+Saradomin dragonhide set,0,armor;range;hidden
+Zamorak dragonhide set,0,armor;range;hidden
+Ancient dragonhide set,0,armor;range;hidden
+Armadyl dragonhide set,0,armor;range;hidden
+Bandos dragonhide set,0,armor;range;hidden
+Red dragonhide set,0,armor;range;hidden
+Black dragonhide set,0,armor;range;hidden
+Spined armour set,0,armor;range;hidden
+Rock-shell armour set,0,armor;melee;hidden
+Skeletal armour set,0,armor;magic;hidden
