@@ -37,7 +37,6 @@
       "uid": "fire-rune",
       "itemId": 554,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -53,7 +52,6 @@
       "uid": "water-rune",
       "itemId": 555,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -69,7 +67,6 @@
       "uid": "air-rune",
       "itemId": 556,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -85,7 +82,6 @@
       "uid": "earth-rune",
       "itemId": 557,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -131,7 +127,6 @@
       "uid": "death-rune",
       "itemId": 560,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -147,7 +142,6 @@
       "uid": "nature-rune",
       "itemId": 561,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -163,7 +157,6 @@
       "uid": "chaos-rune",
       "itemId": 562,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -194,7 +187,6 @@
       "uid": "blood-rune",
       "itemId": 565,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -210,7 +202,6 @@
       "uid": "soul-rune",
       "itemId": 566,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -226,8 +217,6 @@
       "uid": "rune-dart",
       "itemId": 811,
       "tags": [
-        "range",
-        "weapon",
         "ammo"
       ],
       "tier": 1,
@@ -243,8 +232,6 @@
       "uid": "rune-arrow",
       "itemId": 892,
       "tags": [
-        "range",
-        "weapon",
         "ammo"
       ],
       "tier": 1,
@@ -330,7 +317,8 @@
       "uid": "amulet-of-glory-4",
       "itemId": 1712,
       "tags": [
-        "jewellery"
+        "jewellery",
+        "teleport"
       ],
       "tier": null,
       "alwaysAvailable": true,
@@ -471,7 +459,6 @@
       "uid": "ranging-potion-4",
       "itemId": 2444,
       "tags": [
-        "shop",
         "potion"
       ],
       "tier": null,
@@ -552,7 +539,6 @@
       "uid": "super-restore-4",
       "itemId": 3024,
       "tags": [
-        "shop",
         "potion"
       ],
       "tier": null,
@@ -2050,7 +2036,6 @@
       "uid": "astral-rune",
       "itemId": 9075,
       "tags": [
-        "shop",
         "rune"
       ],
       "tier": null,
@@ -2874,7 +2859,10 @@
       "alias": "Dark infinity colour kit",
       "uid": "dark-infinity-colour-kit",
       "itemId": 12528,
-      "tags": [],
+      "tags": [
+        "consumable",
+        "shop"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -2887,7 +2875,10 @@
       "alias": "Light infinity colour kit",
       "uid": "light-infinity-colour-kit",
       "itemId": 12530,
-      "tags": [],
+      "tags": [
+        "consumable",
+        "shop"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3009,7 +3000,6 @@
       "uid": "super-combat-potion-4",
       "itemId": 12695,
       "tags": [
-        "shop",
         "potion"
       ],
       "tier": null,
@@ -3060,8 +3050,7 @@
       "uid": "rune-pouch",
       "itemId": 12791,
       "tags": [
-        "talent",
-        "armor"
+        "talent"
       ],
       "tier": 1,
       "alwaysAvailable": false,
@@ -3075,7 +3064,10 @@
       "alias": "Ward upgrade kit",
       "uid": "ward-upgrade-kit",
       "itemId": 12802,
-      "tags": [],
+      "tags": [
+        "consumable",
+        "shop"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3214,7 +3206,10 @@
       "alias": "Red dragonhide set",
       "uid": "red-dragonhide-set",
       "itemId": 12869,
-      "tags": [],
+      "tags": [
+        "range",
+        "armor"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3227,7 +3222,10 @@
       "alias": "Black dragonhide set",
       "uid": "black-dragonhide-set",
       "itemId": 12871,
-      "tags": [],
+      "tags": [
+        "range",
+        "armor"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3240,7 +3238,10 @@
       "alias": "Guthan's armour set",
       "uid": "guthans-armour-set",
       "itemId": 12873,
-      "tags": [],
+      "tags": [
+        "armor",
+        "melee"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3253,7 +3254,10 @@
       "alias": "Verac's armour set",
       "uid": "veracs-armour-set",
       "itemId": 12875,
-      "tags": [],
+      "tags": [
+        "armor",
+        "melee"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3266,7 +3270,10 @@
       "alias": "Dharok's armour set",
       "uid": "dharoks-armour-set",
       "itemId": 12877,
-      "tags": [],
+      "tags": [
+        "armor",
+        "melee"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3279,7 +3286,10 @@
       "alias": "Torag's armour set",
       "uid": "torags-armour-set",
       "itemId": 12879,
-      "tags": [],
+      "tags": [
+        "armor",
+        "melee"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3292,7 +3302,10 @@
       "alias": "Ahrim's armour set",
       "uid": "ahrims-armour-set",
       "itemId": 12881,
-      "tags": [],
+      "tags": [
+        "armor",
+        "mage"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3305,7 +3318,10 @@
       "alias": "Karil's armour set",
       "uid": "karils-armour-set",
       "itemId": 12883,
-      "tags": [],
+      "tags": [
+        "armor",
+        "range"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3353,7 +3369,6 @@
       "uid": "anti-venom-4",
       "itemId": 12913,
       "tags": [
-        "shop",
         "potion"
       ],
       "tier": null,
@@ -3585,7 +3600,6 @@
       "uid": "anglerfish",
       "itemId": 13441,
       "tags": [
-        "shop",
         "food"
       ],
       "tier": null,
@@ -3884,7 +3898,10 @@
       "alias": "Elder chaos top",
       "uid": "elder-chaos-top",
       "itemId": 20517,
-      "tags": [],
+      "tags": [
+        "armor",
+        "mage"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3897,7 +3914,10 @@
       "alias": "Elder chaos robe",
       "uid": "elder-chaos-robe",
       "itemId": 20520,
-      "tags": [],
+      "tags": [
+        "armor",
+        "mage"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3910,7 +3930,10 @@
       "alias": "Elder chaos hood",
       "uid": "elder-chaos-hood",
       "itemId": 20595,
-      "tags": [],
+      "tags": [
+        "armor",
+        "mage"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -3943,11 +3966,9 @@
       "tags": [
         "talent",
         "shop",
-        "melee",
         "range",
         "weapon",
-        "spec",
-        "ammo"
+        "spec"
       ],
       "tier": 3,
       "alwaysAvailable": false,
@@ -4076,9 +4097,6 @@
       "uid": "amethyst-arrow",
       "itemId": 21326,
       "tags": [
-        "shop",
-        "range",
-        "weapon",
         "ammo"
       ],
       "tier": null,
@@ -4300,7 +4318,6 @@
       "uid": "dragonstone-dragon-bolts-e",
       "itemId": 21948,
       "tags": [
-        "shop",
         "ammo"
       ],
       "tier": null,
@@ -4437,8 +4454,7 @@
         "shop",
         "range",
         "weapon",
-        "spec",
-        "ammo"
+        "spec"
       ],
       "tier": 3,
       "alwaysAvailable": false,
@@ -4951,8 +4967,6 @@
       "itemId": 25849,
       "tags": [
         "shop",
-        "range",
-        "weapon",
         "ammo"
       ],
       "tier": null,
@@ -5260,7 +5274,11 @@
       "alias": "Dragon mace (bh)",
       "uid": "dragon-mace-bh",
       "itemId": 27857,
-      "tags": [],
+      "tags": [
+        "melee",
+        "weapon",
+        "spec"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -5289,7 +5307,10 @@
       "alias": "Dragon mace imbue scroll",
       "uid": "dragon-mace-imbue-scroll",
       "itemId": 28076,
-      "tags": [],
+      "tags": [
+        "consumable",
+        "shop"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -5543,7 +5564,10 @@
       "alias": "Armageddon weapon scroll",
       "uid": "armageddon-weapon-scroll",
       "itemId": 29625,
-      "tags": [],
+      "tags": [
+        "consumable",
+        "shop"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -5556,7 +5580,10 @@
       "alias": "Armageddon cape fabric",
       "uid": "armageddon-cape-fabric",
       "itemId": 29628,
-      "tags": [],
+      "tags": [
+        "consumable",
+        "shop"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -5638,7 +5665,6 @@
       "uid": "halibut",
       "itemId": null,
       "tags": [
-        "shop",
         "food"
       ],
       "tier": null,
@@ -5654,7 +5680,6 @@
       "uid": "marlin",
       "itemId": null,
       "tags": [
-        "shop",
         "food"
       ],
       "tier": null,
@@ -5688,8 +5713,6 @@
       "itemId": null,
       "tags": [
         "shop",
-        "range",
-        "weapon",
         "ammo"
       ],
       "tier": null,
@@ -5706,7 +5729,6 @@
       "itemId": null,
       "tags": [
         "talent",
-        "shop",
         "potion"
       ],
       "tier": 2,
@@ -5754,7 +5776,10 @@
       "alias": "Spined armour set",
       "uid": "spined-armour-set",
       "itemId": null,
-      "tags": [],
+      "tags": [
+        "armor",
+        "range"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -5767,7 +5792,10 @@
       "alias": "Rock-shell armour set",
       "uid": "rock-shell-armour-set",
       "itemId": null,
-      "tags": [],
+      "tags": [
+        "armor",
+        "melee"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,
@@ -5780,7 +5808,10 @@
       "alias": "Skeletal armour set",
       "uid": "skeletal-armour-set",
       "itemId": null,
-      "tags": [],
+      "tags": [
+        "armor",
+        "mage"
+      ],
       "tier": null,
       "alwaysAvailable": false,
       "unlocked": false,

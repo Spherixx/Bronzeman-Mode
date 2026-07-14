@@ -15,6 +15,7 @@ removed rigour from talents
 /////BUG FIXES/////
 fixed god spell icon not loading in talents
 fixed dozens of incorrectly tagged items for better sorting in collection tab
+removed standard and arceuus spellbook from talents
 
 /////SYSTEM/////
 changed the way shop items are loaded from json so there are no more hardcode image paths
