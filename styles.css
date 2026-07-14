@@ -2723,3 +2723,124 @@ body {
     grid-template-columns: 1fr;
   }
 }
+/* Info changelog */
+.changelog-wrap {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.changelog-heading {
+  display: grid;
+  gap: 4px;
+}
+
+.changelog-heading h2 {
+  margin: 0;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.changelog-heading .section-kicker,
+.changelog-label {
+  color: var(--bronze-bright);
+  font: 0.72rem "DM Mono", monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.changelog-list {
+  display: grid;
+  gap: 16px;
+}
+
+.changelog-card {
+  overflow: hidden;
+  background: linear-gradient(145deg, rgba(26, 31, 37, 0.98), rgba(18, 22, 27, 0.98));
+  border: 1px solid var(--line);
+  border-top: 3px solid var(--bronze-bright);
+  box-shadow: var(--shadow);
+}
+
+.changelog-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  background: rgba(255, 255, 255, 0.025);
+  border-bottom: 1px solid var(--line);
+}
+
+.changelog-card-header div {
+  display: grid;
+  gap: 4px;
+}
+
+.changelog-card-header time {
+  color: var(--text);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.changelog-version {
+  padding: 7px 10px;
+  color: var(--bronze-bright);
+  background: rgba(190, 126, 58, 0.12);
+  border: 1px solid rgba(190, 126, 58, 0.45);
+  border-radius: 999px;
+  font: 0.75rem "DM Mono", monospace;
+}
+
+.changelog-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 16px;
+}
+
+.change-group {
+  padding: 15px;
+  background: rgba(9, 12, 15, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.change-group h4 {
+  margin: 0 0 10px;
+  color: var(--bronze-bright);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.change-group ul {
+  display: grid;
+  gap: 7px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.change-group li,
+.changelog-status {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.changelog-status {
+  margin: 0;
+  padding: 18px;
+  background: rgba(18, 22, 27, 0.78);
+  border: 1px dashed var(--line);
+}
+
+@media (max-width: 720px) {
+  .changelog-body {
+    grid-template-columns: 1fr;
+  }
+
+  .changelog-card-header {
+    align-items: flex-start;
+  }
+}

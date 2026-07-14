@@ -7,6 +7,10 @@ added imbued dk rings
 added set images for barrows
 added set images for blessed dhide
 added set images for spined,rockshell,skeletal
+added the ability to manually learn or un-learn any item via the collection page
+un-learning a talent item should refund the talent
+changed rules page to info and added patch notes
+
 
 /////BALANCE/////
 moved arkan blade up to tier 4
@@ -19,3 +23,5 @@ removed standard and arceuus spellbook from talents
 
 /////SYSTEM/////
 changed the way shop items are loaded from json so there are no more hardcode image paths
+separated functional and non functional tags in json for clarity and more granularity in loading shop items
+changelogs are automatically read from /changelogs, will try and create a new file daily

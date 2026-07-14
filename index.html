@@ -65,7 +65,7 @@
     </header>
 
     <nav class="tabs" aria-label="Progress sections">
-      <button class="tab-button" type="button" data-tab="rules" aria-selected="false">Rules</button>
+      <button class="tab-button" type="button" data-tab="info" aria-selected="false">Info</button>
       <button class="tab-button active" type="button" data-tab="tasks" aria-selected="true">Tasks</button>
       <button class="tab-button" type="button" data-tab="talents" aria-selected="false">Talents</button>
       <button class="tab-button" type="button" data-tab="unlocks" aria-selected="false">Collection</button>
@@ -180,9 +180,9 @@
       <section class="challenge-unlock-wrap" id="challengeUnlockList" aria-label="Challenge unlocks"></section>
     </section>
 
-    <section class="tab-panel" id="rulesPanel">
+    <section class="tab-panel" id="infoPanel">
       <section class="section-heading compact-heading">
-        <h2>Rules</h2>
+        <h2>Info</h2>
       </section>
 
       <section class="rules-wrap" aria-label="Bronzeman mode rules and information">
@@ -224,6 +224,15 @@
             <h3>Honor The Spirit</h3>
             <p>Off-meta, risky, and funny PK setups are encouraged.</p>
           </article>
+        </div>
+      </section>
+      <section class="changelog-wrap" aria-labelledby="changesHeading">
+        <div class="changelog-heading">
+          <span class="section-kicker">App history</span>
+          <h2 id="changesHeading">Changes</h2>
+        </div>
+        <div class="changelog-list" id="changelogList" aria-live="polite">
+          <p class="changelog-status">Loading changes.</p>
         </div>
       </section>
     </section>

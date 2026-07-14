@@ -8,6 +8,7 @@ import { createPersistence } from "./js/persistence.js";
 import * as firebaseService from "./js/firebase-service.js";
 import { createChallengeView } from "./js/views/challenges.js";
 import { createCollection } from "./js/views/collection.js";
+import { createInfoView } from "./js/views/info.js";
 import { createShopView } from "./js/views/shop.js";
 import { createStatsView } from "./js/views/stats.js";
 import { createTaskView } from "./js/views/tasks.js";
@@ -30,6 +31,7 @@ const persistence = createPersistence(ctx, firebaseService);
 const auth = createAuth(ctx, firebaseService);
 const navigation = createNavigation(ctx);
 const statsView = createStatsView(ctx);
+const infoView = createInfoView(ctx);
 const taskView = createTaskView(ctx);
 const talentView = createTalentView(ctx);
 const shopView = createShopView(ctx);
@@ -44,6 +46,7 @@ function render() {
   shopView.renderShop();
   challengeView.renderChallengeUnlocks();
   ctx.collection.renderUnlocks();
+  infoView.renderChangelogs();
 }
 
 Object.assign(ctx.actions, {
@@ -53,6 +56,7 @@ Object.assign(ctx.actions, {
   ...auth,
   ...navigation,
   ...statsView,
+  ...infoView,
   ...taskView,
   ...talentView,
   ...shopView,
