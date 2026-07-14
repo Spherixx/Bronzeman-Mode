@@ -58,17 +58,31 @@ export function createDataLoader(ctx) {
   }
 
   function resolveDataImage(name) {
-    if (!name) return "";
-    const value = String(name);
-    if (value.includes("/")) return value;
+  if (!name) return "";
 
-    const baseName = value.replace(/\.png$/i, "");
-    const itemRow = ctx.indexes.itemRowsByName.get(normalizeDataText(baseName));
-    if (itemRow?.imageName) return itemImage(itemRow.imageName);
+  const value = String(name).trim();
 
-    const fileName = value.endsWith(".png") ? value : `${value.replace(/ /g, "_")}.png`;
-    return otherImage(fileName);
+  if (value.includes("/")) {
+    return value;
   }
+
+  const baseName = value.replace(/\.png$/i, "");
+  const normalizedBaseName = baseName.replace(/_/g, " ");
+
+  const itemRow = ctx.indexes.itemRowsByName.get(
+    normalizeDataText(normalizedBaseName)
+  );
+
+  if (itemRow?.imageName) {
+    return itemImage(itemRow.imageName);
+  }
+
+  const fileName = /\.png$/i.test(value)
+    ? value.replace(/_/g, " ")
+    : `${value.replace(/_/g, " ")}.png`;
+
+  return otherImage(fileName);
+}
 
   function imageForDataEntry(entry) {
     return entry?.imagePath || resolveDataImage(entry?.imageName || entry?.imageUsed);

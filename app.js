@@ -1,4 +1,3 @@
-import { HARD_CODED_DATA_NOTES } from "./js/config.js";
 import { createAppContext, defaultState } from "./js/context.js";
 import { createAuth } from "./js/auth.js";
 import { createDataLoader } from "./js/data-loader.js";
@@ -18,7 +17,6 @@ import { createViewHelpers } from "./js/views/shared.js";
 const ctx = createAppContext();
 ctx.config = {
   challengeCatalog: [],
-  hardCodedDataNotes: HARD_CODED_DATA_NOTES
 };
 
 ctx.domain = createDomain(ctx);
@@ -75,7 +73,6 @@ async function initApp() {
   auth.initFirebaseAuth();
 
   if (ctx.data.dataWarnings.length) console.warn("Bronzeman data warnings", ctx.data.dataWarnings);
-  if (ctx.config.hardCodedDataNotes.length) console.info("Bronzeman hardcoded data notes", ctx.config.hardCodedDataNotes);
 }
 
 initApp();

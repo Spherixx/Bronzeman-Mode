@@ -25,3 +25,4 @@ removed standard and arceuus spellbook from talents
 changed the way shop items are loaded from json so there are no more hardcode image paths
 separated functional and non functional tags in json for clarity and more granularity in loading shop items
 changelogs are automatically read from /changelogs, will try and create a new file daily
+re-wrote image resolver so it no longer cares if the image name has spaces or underscores, it also doesn't care if you specify file extension
