@@ -520,6 +520,15 @@
                 <button id="addTagButton" class="small">Add Tag</button>
               </div>
             </div>
+
+            <div class="field full">
+              <label>Behaviors</label>
+              <div id="behaviorGrid" class="tag-grid"></div>
+              <div class="custom-tag-row">
+                <input id="customBehaviorInput" type="text" placeholder="Add custom behavior definition" />
+                <button id="addBehaviorButton" class="small">Add Behavior</button>
+              </div>
+            </div>
           </div>
 
           <div class="form-actions">
@@ -534,8 +543,6 @@
 
   <script>
     const defaultTagDefinitions = [
-      "talent",
-      "shop",
       "melee",
       "range",
       "mage",
@@ -548,16 +555,24 @@
       "potion",
       "teleport",
       "ammo",
-      "hidden",
       "consumable",
       "other"
+    ];
+
+    const defaultBehaviorDefinitions = [
+      "hidden",
+      "talent",
+      "shop",
+      "unlock",
+      "resupply"
     ];
 
     const state = {
       data: {
         schemaVersion: 2,
         items: [],
-        tagDefinitions: [...defaultTagDefinitions]
+        tagDefinitions: [...defaultTagDefinitions],
+        behaviorDefinitions: [...defaultBehaviorDefinitions]
       },
       selectedIndex: -1,
       dirty: false,
@@ -592,6 +607,9 @@
       tagGrid: document.getElementById("tagGrid"),
       customTagInput: document.getElementById("customTagInput"),
       addTagButton: document.getElementById("addTagButton"),
+      behaviorGrid: document.getElementById("behaviorGrid"),
+      customBehaviorInput: document.getElementById("customBehaviorInput"),
+      addBehaviorButton: document.getElementById("addBehaviorButton"),
       duplicateButton: document.getElementById("duplicateButton"),
       deleteButton: document.getElementById("deleteButton"),
       statusText: document.getElementById("statusText")
@@ -610,6 +628,10 @@
         data.tagDefinitions = [...defaultTagDefinitions];
       }
 
+      if (!Array.isArray(data.behaviorDefinitions)) {
+        data.behaviorDefinitions = [...defaultBehaviorDefinitions];
+      }
+
       if (data.schemaVersion === undefined) {
         data.schemaVersion = 2;
       }
@@ -620,6 +642,7 @@
         uid: item.uid ?? slugify(item.name ?? ""),
         itemId: toNullableNumber(item.itemId),
         tags: Array.isArray(item.tags) ? item.tags.map(String) : [],
+        behaviors: Array.isArray(item.behaviors) ? item.behaviors.map(String) : [],
         tier: toNullableNumber(item.tier),
         alwaysAvailable: Boolean(item.alwaysAvailable),
         unlocked: Boolean(item.unlocked),
@@ -629,11 +652,18 @@
       }));
 
       data.tagDefinitions = [...new Set(data.tagDefinitions.map(String))];
+      data.behaviorDefinitions = [...new Set(data.behaviorDefinitions.map(String))];
 
       for (const item of data.items) {
         for (const tag of item.tags) {
           if (!data.tagDefinitions.includes(tag)) {
             data.tagDefinitions.push(tag);
+          }
+        }
+
+        for (const behavior of item.behaviors) {
+          if (!data.behaviorDefinitions.includes(behavior)) {
+            data.behaviorDefinitions.push(behavior);
           }
         }
       }
@@ -691,7 +721,8 @@
             item.alias.toLowerCase().includes(query) ||
             item.uid.toLowerCase().includes(query) ||
             String(item.itemId ?? "").includes(query) ||
-            item.tags.some(tag => tag.toLowerCase().includes(query));
+            item.tags.some(tag => tag.toLowerCase().includes(query)) ||
+            item.behaviors.some(behavior => behavior.toLowerCase().includes(query));
 
           if (!matchesQuery) {
             return false;
@@ -705,9 +736,9 @@
             case "available":
               return item.alwaysAvailable;
             case "talent":
-              return item.tags.includes("talent");
+              return item.behaviors.includes("talent");
             case "shop":
-              return item.tags.includes("shop");
+              return item.behaviors.includes("shop");
             default:
               return true;
           }
@@ -789,6 +820,46 @@
       elements.tagGrid.append(fragment);
     }
 
+    function renderBehaviorGrid() {
+      const item = currentItem();
+      elements.behaviorGrid.innerHTML = "";
+
+      if (!item) {
+        return;
+      }
+
+      const fragment = document.createDocumentFragment();
+
+      for (const behavior of state.data.behaviorDefinitions) {
+        const label = document.createElement("label");
+        label.className = "checkbox-label";
+
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = item.behaviors.includes(behavior);
+        checkbox.addEventListener("change", () => {
+          if (checkbox.checked) {
+            if (!item.behaviors.includes(behavior)) {
+              item.behaviors.push(behavior);
+            }
+          } else {
+            item.behaviors = item.behaviors.filter(existingBehavior => existingBehavior !== behavior);
+          }
+
+          setDirty();
+          renderItemList();
+        });
+
+        const text = document.createElement("span");
+        text.textContent = behavior;
+
+        label.append(checkbox, text);
+        fragment.append(label);
+      }
+
+      elements.behaviorGrid.append(fragment);
+    }
+
     function renderEditor() {
       const item = currentItem();
       const hasItem = Boolean(item);
@@ -822,6 +893,7 @@
       };
 
       renderTagGrid();
+      renderBehaviorGrid();
       setDirty(state.dirty);
     }
 
@@ -838,6 +910,7 @@
         uid: makeUniqueUid("new-item"),
         itemId: null,
         tags: [],
+        behaviors: [],
         tier: null,
         alwaysAvailable: false,
         unlocked: false,
@@ -936,6 +1009,28 @@
       renderItemList();
     }
 
+    function addBehaviorDefinition() {
+      const behavior = elements.customBehaviorInput.value.trim().toLowerCase();
+
+      if (!behavior) {
+        return;
+      }
+
+      if (!state.data.behaviorDefinitions.includes(behavior)) {
+        state.data.behaviorDefinitions.push(behavior);
+      }
+
+      const item = currentItem();
+      if (item && !item.behaviors.includes(behavior)) {
+        item.behaviors.push(behavior);
+      }
+
+      elements.customBehaviorInput.value = "";
+      setDirty();
+      renderBehaviorGrid();
+      renderItemList();
+    }
+
     function updateCurrentItem(field, value) {
       const item = currentItem();
       if (!item) {
@@ -1021,6 +1116,14 @@
       if (event.key === "Enter") {
         event.preventDefault();
         addTagDefinition();
+      }
+    });
+
+    elements.addBehaviorButton.addEventListener("click", addBehaviorDefinition);
+    elements.customBehaviorInput.addEventListener("keydown", event => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        addBehaviorDefinition();
       }
     });
 

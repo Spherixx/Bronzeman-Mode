@@ -11,11 +11,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Shark",
-      "imageName": "Shark.png"
+      "imageName": "Shark.png",
+      "cost": null
     },
     {
       "name": "Manta ray",
@@ -27,11 +27,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Manta_ray",
-      "imageName": "Manta ray.png"
+      "imageName": "Manta ray.png",
+      "cost": null
     },
     {
       "name": "Fire rune",
@@ -43,11 +43,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Fire_rune",
-      "imageName": "Fire rune.png"
+      "imageName": "Fire rune.png",
+      "cost": null
     },
     {
       "name": "Water rune",
@@ -59,11 +59,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Water_rune",
-      "imageName": "Water rune.png"
+      "imageName": "Water rune.png",
+      "cost": null
     },
     {
       "name": "Air rune",
@@ -75,11 +75,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Air_rune",
-      "imageName": "Air rune.png"
+      "imageName": "Air rune.png",
+      "cost": null
     },
     {
       "name": "Earth rune",
@@ -91,11 +91,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Earth_rune",
-      "imageName": "Earth rune.png"
+      "imageName": "Earth rune.png",
+      "cost": null
     },
     {
       "name": "Mind rune",
@@ -107,11 +107,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Mind_rune",
-      "imageName": "Mind rune.png"
+      "imageName": "Mind rune.png",
+      "cost": null
     },
     {
       "name": "Body rune",
@@ -123,11 +123,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Body_rune",
-      "imageName": "Body rune.png"
+      "imageName": "Body rune.png",
+      "cost": null
     },
     {
       "name": "Death rune",
@@ -139,11 +139,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Death_rune",
-      "imageName": "Death rune.png"
+      "imageName": "Death rune.png",
+      "cost": null
     },
     {
       "name": "Nature rune",
@@ -155,11 +155,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Nature_rune",
-      "imageName": "Nature rune.png"
+      "imageName": "Nature rune.png",
+      "cost": null
     },
     {
       "name": "Chaos rune",
@@ -171,11 +171,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Chaos_rune",
-      "imageName": "Chaos rune.png"
+      "imageName": "Chaos rune.png",
+      "cost": null
     },
     {
       "name": "Law rune",
@@ -187,11 +187,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Law_rune",
-      "imageName": "Law rune.png"
+      "imageName": "Law rune.png",
+      "cost": null
     },
     {
       "name": "Blood rune",
@@ -203,11 +203,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blood_rune",
-      "imageName": "Blood rune.png"
+      "imageName": "Blood rune.png",
+      "cost": null
     },
     {
       "name": "Soul rune",
@@ -219,11 +219,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Soul_rune",
-      "imageName": "Soul rune.png"
+      "imageName": "Soul rune.png",
+      "cost": null
     },
     {
       "name": "Rune dart",
@@ -235,11 +235,11 @@
       ],
       "behaviors": [],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_dart",
-      "imageName": "Rune dart.png"
+      "imageName": "Rune dart.png",
+      "cost": null
     },
     {
       "name": "Rune arrow",
@@ -251,11 +251,11 @@
       ],
       "behaviors": [],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_arrow",
-      "imageName": "Rune arrow.png"
+      "imageName": "Rune arrow.png",
+      "cost": null
     },
     {
       "name": "Dragon spear",
@@ -271,11 +271,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_spear",
-      "imageName": "Dragon spear.png"
+      "imageName": "Dragon spear.png",
+      "cost": 3
     },
     {
       "name": "Dragon longsword",
@@ -289,11 +289,11 @@
       ],
       "behaviors": [],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_longsword",
-      "imageName": "Dragon longsword.png"
+      "imageName": "Dragon longsword.png",
+      "cost": null
     },
     {
       "name": "Dragon battleaxe",
@@ -309,11 +309,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_battleaxe",
-      "imageName": "Dragon battleaxe.png"
+      "imageName": "Dragon battleaxe.png",
+      "cost": 1
     },
     {
       "name": "Dragon mace",
@@ -327,11 +327,11 @@
       ],
       "behaviors": [],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace",
-      "imageName": "Dragon mace.png"
+      "imageName": "Dragon mace.png",
+      "cost": null
     },
     {
       "name": "Amulet of glory(4)",
@@ -344,11 +344,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_glory(4)",
-      "imageName": "Amulet of glory(4).png"
+      "imageName": "Amulet of glory(4).png",
+      "cost": null
     },
     {
       "name": "Pineapple pizza",
@@ -360,11 +360,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Pineapple_pizza",
-      "imageName": "Pineapple pizza.png"
+      "imageName": "Pineapple pizza.png",
+      "cost": null
     },
     {
       "name": "Saradomin cape",
@@ -377,11 +377,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_cape",
-      "imageName": "Saradomin cape.png"
+      "imageName": "Saradomin cape.png",
+      "cost": null
     },
     {
       "name": "Guthix cape",
@@ -394,11 +394,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_cape",
-      "imageName": "Guthix cape.png"
+      "imageName": "Guthix cape.png",
+      "cost": null
     },
     {
       "name": "Zamorak cape",
@@ -411,11 +411,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_cape",
-      "imageName": "Zamorak cape.png"
+      "imageName": "Zamorak cape.png",
+      "cost": null
     },
     {
       "name": "Saradomin staff",
@@ -428,11 +428,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_staff",
-      "imageName": "Saradomin staff.png"
+      "imageName": "Saradomin staff.png",
+      "cost": null
     },
     {
       "name": "Guthix staff",
@@ -445,11 +445,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_staff",
-      "imageName": "Guthix staff.png"
+      "imageName": "Guthix staff.png",
+      "cost": null
     },
     {
       "name": "Zamorak staff",
@@ -462,11 +462,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_staff",
-      "imageName": "Zamorak staff.png"
+      "imageName": "Zamorak staff.png",
+      "cost": null
     },
     {
       "name": "Prayer potion(4)",
@@ -478,11 +478,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Prayer_potion(4)",
-      "imageName": "Prayer potion(4).png"
+      "imageName": "Prayer potion(4).png",
+      "cost": null
     },
     {
       "name": "Ranging potion(4)",
@@ -494,11 +494,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ranging_potion(4)",
-      "imageName": "Ranging potion(4).png"
+      "imageName": "Ranging potion(4).png",
+      "cost": null
     },
     {
       "name": "Black d'hide vambraces",
@@ -511,11 +511,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Black_d%27hide_vambraces",
-      "imageName": "Black d'hide vambraces.png"
+      "imageName": "Black d'hide vambraces.png",
+      "cost": null
     },
     {
       "name": "Black d'hide chaps",
@@ -528,11 +528,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Black_d%27hide_chaps",
-      "imageName": "Black d'hide chaps.png"
+      "imageName": "Black d'hide chaps.png",
+      "cost": null
     },
     {
       "name": "Black d'hide body",
@@ -545,11 +545,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Black_d%27hide_body",
-      "imageName": "Black d'hide body.png"
+      "imageName": "Black d'hide body.png",
+      "cost": null
     },
     {
       "name": "Ring of dueling(8)",
@@ -561,14 +561,15 @@
         "teleport"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ring_of_dueling(8)",
-      "imageName": "Ring of dueling(8).png"
+      "imageName": "Ring of dueling(8).png",
+      "cost": null
     },
     {
       "name": "Super restore(4)",
@@ -580,11 +581,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Super_restore(4)",
-      "imageName": "Super restore(4).png"
+      "imageName": "Super restore(4).png",
+      "cost": null
     },
     {
       "name": "Climbing boots",
@@ -596,11 +597,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Climbing_boots",
-      "imageName": "Climbing boots.png"
+      "imageName": "Climbing boots.png",
+      "cost": null
     },
     {
       "name": "Granite shield",
@@ -613,11 +614,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_shield",
-      "imageName": "Granite shield.png"
+      "imageName": "Granite shield.png",
+      "cost": null
     },
     {
       "name": "Cooked karambwan",
@@ -629,11 +630,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Cooked_karambwan",
-      "imageName": "Cooked karambwan.png"
+      "imageName": "Cooked karambwan.png",
+      "cost": null
     },
     {
       "name": "Dragon halberd",
@@ -649,11 +650,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_halberd",
-      "imageName": "Dragon halberd.png"
+      "imageName": "Dragon halberd.png",
+      "cost": 2
     },
     {
       "name": "Archer helm",
@@ -666,11 +667,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Archer_helm",
-      "imageName": "Archer helm.png"
+      "imageName": "Archer helm.png",
+      "cost": null
     },
     {
       "name": "Berserker helm",
@@ -683,11 +684,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_helm",
-      "imageName": "Berserker helm.png"
+      "imageName": "Berserker helm.png",
+      "cost": null
     },
     {
       "name": "Warrior helm",
@@ -700,11 +701,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Warrior_helm",
-      "imageName": "Warrior helm.png"
+      "imageName": "Warrior helm.png",
+      "cost": null
     },
     {
       "name": "Farseer helm",
@@ -717,11 +718,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Farseer_helm",
-      "imageName": "Farseer helm.png"
+      "imageName": "Farseer helm.png",
+      "cost": null
     },
     {
       "name": "Holy book",
@@ -733,11 +734,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Holy_book",
-      "imageName": "Holy book.png"
+      "imageName": "Holy book.png",
+      "cost": null
     },
     {
       "name": "Unholy book",
@@ -749,11 +750,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Unholy_book",
-      "imageName": "Unholy book.png"
+      "imageName": "Unholy book.png",
+      "cost": null
     },
     {
       "name": "Book of balance",
@@ -765,11 +766,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Book_of_balance",
-      "imageName": "Book of balance.png"
+      "imageName": "Book of balance.png",
+      "cost": null
     },
     {
       "name": "Mystic hat",
@@ -782,11 +783,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_hat",
-      "imageName": "Mystic hat.png"
+      "imageName": "Mystic hat.png",
+      "cost": null
     },
     {
       "name": "Mystic robe top",
@@ -799,11 +800,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_top",
-      "imageName": "Mystic robe top.png"
+      "imageName": "Mystic robe top.png",
+      "cost": null
     },
     {
       "name": "Mystic robe bottom",
@@ -816,11 +817,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_bottom",
-      "imageName": "Mystic robe bottom.png"
+      "imageName": "Mystic robe bottom.png",
+      "cost": null
     },
     {
       "name": "Mystic gloves",
@@ -833,11 +834,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_gloves",
-      "imageName": "Mystic gloves.png"
+      "imageName": "Mystic gloves.png",
+      "cost": null
     },
     {
       "name": "Mystic boots",
@@ -850,11 +851,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_boots",
-      "imageName": "Mystic boots.png"
+      "imageName": "Mystic boots.png",
+      "cost": null
     },
     {
       "name": "Mystic robe top (light)",
@@ -867,11 +868,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Mystic_robe_top_(light)",
-      "imageName": "Mystic robe top (light).png"
+      "imageName": "Mystic robe top (light).png",
+      "cost": null
     },
     {
       "name": "Abyssal whip",
@@ -886,11 +887,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_whip",
-      "imageName": "Abyssal whip.png"
+      "imageName": "Abyssal whip.png",
+      "cost": 2
     },
     {
       "name": "Granite maul",
@@ -904,11 +905,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_maul",
-      "imageName": "Granite maul.png"
+      "imageName": "Granite maul.png",
+      "cost": null
     },
     {
       "name": "Dragon scimitar",
@@ -921,11 +922,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_scimitar",
-      "imageName": "Dragon scimitar.png"
+      "imageName": "Dragon scimitar.png",
+      "cost": null
     },
     {
       "name": "Ahrim's hood",
@@ -938,11 +939,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ahrim%27s_hood",
-      "imageName": "Ahrim's hood.png"
+      "imageName": "Ahrim's hood.png",
+      "cost": null
     },
     {
       "name": "Ahrim's staff",
@@ -955,11 +956,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ahrim%27s_staff",
-      "imageName": "Ahrim's staff.png"
+      "imageName": "Ahrim's staff.png",
+      "cost": null
     },
     {
       "name": "Ahrim's robetop",
@@ -972,11 +973,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ahrim%27s_robetop",
-      "imageName": "Ahrim's robetop.png"
+      "imageName": "Ahrim's robetop.png",
+      "cost": null
     },
     {
       "name": "Ahrim's robeskirt",
@@ -989,11 +990,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ahrim%27s_robeskirt",
-      "imageName": "Ahrim's robeskirt.png"
+      "imageName": "Ahrim's robeskirt.png",
+      "cost": null
     },
     {
       "name": "Dharok's helm",
@@ -1006,11 +1007,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dharok%27s_helm",
-      "imageName": "Dharok's helm.png"
+      "imageName": "Dharok's helm.png",
+      "cost": null
     },
     {
       "name": "Dharok's greataxe",
@@ -1023,11 +1024,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dharok%27s_greataxe",
-      "imageName": "Dharok's greataxe.png"
+      "imageName": "Dharok's greataxe.png",
+      "cost": null
     },
     {
       "name": "Dharok's platebody",
@@ -1040,11 +1041,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dharok%27s_platebody",
-      "imageName": "Dharok's platebody.png"
+      "imageName": "Dharok's platebody.png",
+      "cost": null
     },
     {
       "name": "Dharok's platelegs",
@@ -1057,11 +1058,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dharok%27s_platelegs",
-      "imageName": "Dharok's platelegs.png"
+      "imageName": "Dharok's platelegs.png",
+      "cost": null
     },
     {
       "name": "Karil's coif",
@@ -1074,11 +1075,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Karil%27s_coif",
-      "imageName": "Karil's coif.png"
+      "imageName": "Karil's coif.png",
+      "cost": null
     },
     {
       "name": "Karil's crossbow",
@@ -1091,11 +1092,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Karil%27s_crossbow",
-      "imageName": "Karil's crossbow.png"
+      "imageName": "Karil's crossbow.png",
+      "cost": null
     },
     {
       "name": "Karil's leathertop",
@@ -1108,11 +1109,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Karil%27s_leathertop",
-      "imageName": "Karil's leathertop.png"
+      "imageName": "Karil's leathertop.png",
+      "cost": null
     },
     {
       "name": "Karil's leatherskirt",
@@ -1125,11 +1126,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Karil%27s_leatherskirt",
-      "imageName": "Karil's leatherskirt.png"
+      "imageName": "Karil's leatherskirt.png",
+      "cost": null
     },
     {
       "name": "Torag's helm",
@@ -1142,11 +1143,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Torag%27s_helm",
-      "imageName": "Torag's helm.png"
+      "imageName": "Torag's helm.png",
+      "cost": null
     },
     {
       "name": "Torag's hammers",
@@ -1159,11 +1160,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Torag%27s_hammers",
-      "imageName": "Torag's hammers.png"
+      "imageName": "Torag's hammers.png",
+      "cost": null
     },
     {
       "name": "Torag's platebody",
@@ -1176,11 +1177,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Torag%27s_platebody",
-      "imageName": "Torag's platebody.png"
+      "imageName": "Torag's platebody.png",
+      "cost": null
     },
     {
       "name": "Torag's platelegs",
@@ -1193,11 +1194,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Torag%27s_platelegs",
-      "imageName": "Torag's platelegs.png"
+      "imageName": "Torag's platelegs.png",
+      "cost": null
     },
     {
       "name": "Verac's helm",
@@ -1210,11 +1211,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Verac%27s_helm",
-      "imageName": "Verac's helm.png"
+      "imageName": "Verac's helm.png",
+      "cost": null
     },
     {
       "name": "Verac's flail",
@@ -1227,11 +1228,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Verac%27s_flail",
-      "imageName": "Verac's flail.png"
+      "imageName": "Verac's flail.png",
+      "cost": null
     },
     {
       "name": "Verac's brassard",
@@ -1244,11 +1245,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Verac%27s_brassard",
-      "imageName": "Verac's brassard.png"
+      "imageName": "Verac's brassard.png",
+      "cost": null
     },
     {
       "name": "Verac's plateskirt",
@@ -1261,11 +1262,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Verac%27s_plateskirt",
-      "imageName": "Verac's plateskirt.png"
+      "imageName": "Verac's plateskirt.png",
+      "cost": null
     },
     {
       "name": "Dragon dagger(p++)",
@@ -1281,11 +1282,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_dagger(p%2B%2B)",
-      "imageName": "Dragon dagger(p++).png"
+      "imageName": "Dragon dagger(p++).png",
+      "cost": 1
     },
     {
       "name": "Rock-shell helm",
@@ -1298,11 +1299,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rock-shell_helm",
-      "imageName": "Rock-shell helm.png"
+      "imageName": "Rock-shell helm.png",
+      "cost": null
     },
     {
       "name": "Rock-shell plate",
@@ -1315,11 +1316,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rock-shell_plate",
-      "imageName": "Rock-shell plate.png"
+      "imageName": "Rock-shell plate.png",
+      "cost": null
     },
     {
       "name": "Rock-shell legs",
@@ -1332,11 +1333,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rock-shell_legs",
-      "imageName": "Rock-shell legs.png"
+      "imageName": "Rock-shell legs.png",
+      "cost": null
     },
     {
       "name": "Spined helm",
@@ -1349,11 +1350,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spined_helm",
-      "imageName": "Spined helm.png"
+      "imageName": "Spined helm.png",
+      "cost": null
     },
     {
       "name": "Spined body",
@@ -1366,11 +1367,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spined_body",
-      "imageName": "Spined body.png"
+      "imageName": "Spined body.png",
+      "cost": null
     },
     {
       "name": "Spined chaps",
@@ -1383,11 +1384,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spined_chaps",
-      "imageName": "Spined chaps.png"
+      "imageName": "Spined chaps.png",
+      "cost": null
     },
     {
       "name": "Skeletal helm",
@@ -1400,11 +1401,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_helm",
-      "imageName": "Skeletal helm.png"
+      "imageName": "Skeletal helm.png",
+      "cost": null
     },
     {
       "name": "Skeletal top",
@@ -1417,11 +1418,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_top",
-      "imageName": "Skeletal top.png"
+      "imageName": "Skeletal top.png",
+      "cost": null
     },
     {
       "name": "Skeletal bottoms",
@@ -1434,11 +1435,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_bottoms",
-      "imageName": "Skeletal bottoms.png"
+      "imageName": "Skeletal bottoms.png",
+      "cost": null
     },
     {
       "name": "Spined boots",
@@ -1451,11 +1452,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spined_boots",
-      "imageName": "Spined boots.png"
+      "imageName": "Spined boots.png",
+      "cost": null
     },
     {
       "name": "Rock-shell boots",
@@ -1468,11 +1469,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rock-shell_boots",
-      "imageName": "Rock-shell boots.png"
+      "imageName": "Rock-shell boots.png",
+      "cost": null
     },
     {
       "name": "Skeletal boots",
@@ -1485,11 +1486,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_boots",
-      "imageName": "Skeletal boots.png"
+      "imageName": "Skeletal boots.png",
+      "cost": null
     },
     {
       "name": "Spined gloves",
@@ -1502,11 +1503,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spined_gloves",
-      "imageName": "Spined gloves.png"
+      "imageName": "Spined gloves.png",
+      "cost": null
     },
     {
       "name": "Rock-shell gloves",
@@ -1519,11 +1520,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rock-shell_gloves",
-      "imageName": "Rock-shell gloves.png"
+      "imageName": "Rock-shell gloves.png",
+      "cost": null
     },
     {
       "name": "Skeletal gloves",
@@ -1536,11 +1537,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_gloves",
-      "imageName": "Skeletal gloves.png"
+      "imageName": "Skeletal gloves.png",
+      "cost": null
     },
     {
       "name": "Snakeskin boots",
@@ -1553,11 +1554,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Snakeskin_boots",
-      "imageName": "Snakeskin boots.png"
+      "imageName": "Snakeskin boots.png",
+      "cost": null
     },
     {
       "name": "Toktz-xil-ul",
@@ -1569,11 +1570,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Toktz-xil-ul",
-      "imageName": "Toktz-xil-ul.png"
+      "imageName": "Toktz-xil-ul.png",
+      "cost": null
     },
     {
       "name": "Toktz-xil-ak",
@@ -1585,11 +1586,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Toktz-xil-ak",
-      "imageName": "Toktz-xil-ak.png"
+      "imageName": "Toktz-xil-ak.png",
+      "cost": null
     },
     {
       "name": "Toktz-ket-xil",
@@ -1601,11 +1602,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Toktz-ket-xil",
-      "imageName": "Toktz-ket-xil.png"
+      "imageName": "Toktz-ket-xil.png",
+      "cost": null
     },
     {
       "name": "Toktz-xil-ek",
@@ -1617,11 +1618,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Toktz-xil-ek",
-      "imageName": "Toktz-xil-ek.png"
+      "imageName": "Toktz-xil-ek.png",
+      "cost": null
     },
     {
       "name": "Toktz-mej-tal",
@@ -1633,11 +1634,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Toktz-mej-tal",
-      "imageName": "Toktz-mej-tal.png"
+      "imageName": "Toktz-mej-tal.png",
+      "cost": null
     },
     {
       "name": "Tzhaar-ket-em",
@@ -1649,11 +1650,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Tzhaar-ket-em",
-      "imageName": "Tzhaar-ket-em.png"
+      "imageName": "Tzhaar-ket-em.png",
+      "cost": null
     },
     {
       "name": "Tzhaar-ket-om",
@@ -1665,11 +1666,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Tzhaar-ket-om",
-      "imageName": "Tzhaar-ket-om.png"
+      "imageName": "Tzhaar-ket-om.png",
+      "cost": null
     },
     {
       "name": "Obsidian cape",
@@ -1682,11 +1683,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Obsidian_cape",
-      "imageName": "Obsidian cape.png"
+      "imageName": "Obsidian cape.png",
+      "cost": null
     },
     {
       "name": "Fire cape",
@@ -1701,11 +1702,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Fire_cape",
-      "imageName": "Fire cape.png"
+      "imageName": "Fire cape.png",
+      "cost": 3
     },
     {
       "name": "Amulet of fury",
@@ -1719,11 +1720,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_fury",
-      "imageName": "Amulet of fury.png"
+      "imageName": "Amulet of fury.png",
+      "cost": 3
     },
     {
       "name": "Saradomin brew(4)",
@@ -1735,11 +1736,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_brew(4)",
-      "imageName": "Saradomin brew(4).png"
+      "imageName": "Saradomin brew(4).png",
+      "cost": null
     },
     {
       "name": "Seers ring",
@@ -1752,11 +1753,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Seers_ring",
-      "imageName": "Seers ring.png"
+      "imageName": "Seers ring.png",
+      "cost": null
     },
     {
       "name": "Archers ring",
@@ -1769,11 +1770,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Archers_ring",
-      "imageName": "Archers ring.png"
+      "imageName": "Archers ring.png",
+      "cost": null
     },
     {
       "name": "Warrior ring",
@@ -1786,11 +1787,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Warrior_ring",
-      "imageName": "Warrior ring.png"
+      "imageName": "Warrior ring.png",
+      "cost": null
     },
     {
       "name": "Berserker ring",
@@ -1803,11 +1804,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_ring",
-      "imageName": "Berserker ring.png"
+      "imageName": "Berserker ring.png",
+      "cost": null
     },
     {
       "name": "Granite legs",
@@ -1820,11 +1821,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_legs",
-      "imageName": "Granite legs.png"
+      "imageName": "Granite legs.png",
+      "cost": null
     },
     {
       "name": "Infinity top",
@@ -1836,14 +1837,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_top",
-      "imageName": "Infinity top.png"
+      "imageName": "Infinity top.png",
+      "cost": null
     },
     {
       "name": "Infinity hat",
@@ -1855,14 +1857,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_hat",
-      "imageName": "Infinity hat.png"
+      "imageName": "Infinity hat.png",
+      "cost": null
     },
     {
       "name": "Infinity boots",
@@ -1875,11 +1878,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_boots",
-      "imageName": "Infinity boots.png"
+      "imageName": "Infinity boots.png",
+      "cost": null
     },
     {
       "name": "Infinity gloves",
@@ -1892,11 +1895,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_gloves",
-      "imageName": "Infinity gloves.png"
+      "imageName": "Infinity gloves.png",
+      "cost": null
     },
     {
       "name": "Infinity bottoms",
@@ -1908,14 +1911,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Infinity_bottoms",
-      "imageName": "Infinity bottoms.png"
+      "imageName": "Infinity bottoms.png",
+      "cost": null
     },
     {
       "name": "Rune gloves",
@@ -1927,11 +1931,11 @@
       ],
       "behaviors": [],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_gloves",
-      "imageName": "Rune gloves.png"
+      "imageName": "Rune gloves.png",
+      "cost": null
     },
     {
       "name": "Barrows gloves",
@@ -1945,11 +1949,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Barrows_gloves",
-      "imageName": "Barrows gloves.png"
+      "imageName": "Barrows gloves.png",
+      "cost": 4
     },
     {
       "name": "Void knight top",
@@ -1961,11 +1965,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_knight_top",
-      "imageName": "Void knight top.png"
+      "imageName": "Void knight top.png",
+      "cost": null
     },
     {
       "name": "Void knight robe",
@@ -1978,11 +1982,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_knight_robe",
-      "imageName": "Void knight robe.png"
+      "imageName": "Void knight robe.png",
+      "cost": null
     },
     {
       "name": "Void knight mace",
@@ -1995,11 +1999,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_knight_mace",
-      "imageName": "Void knight mace.png"
+      "imageName": "Void knight mace.png",
+      "cost": null
     },
     {
       "name": "Void knight gloves",
@@ -2011,11 +2015,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_knight_gloves",
-      "imageName": "Void knight gloves.png"
+      "imageName": "Void knight gloves.png",
+      "cost": null
     },
     {
       "name": "Rune defender",
@@ -2028,11 +2032,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_defender",
-      "imageName": "Rune defender.png"
+      "imageName": "Rune defender.png",
+      "cost": null
     },
     {
       "name": "Warrior guild token",
@@ -2046,11 +2050,11 @@
         "hidden"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Warrior_guild_token",
-      "imageName": "Warrior guild token.png"
+      "imageName": "Warrior guild token.png",
+      "cost": null
     },
     {
       "name": "Moonclan helm",
@@ -2063,11 +2067,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_helm",
-      "imageName": "Moonclan helm.png"
+      "imageName": "Moonclan helm.png",
+      "cost": null
     },
     {
       "name": "Moonclan hat",
@@ -2080,11 +2084,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_hat",
-      "imageName": "Moonclan hat.png"
+      "imageName": "Moonclan hat.png",
+      "cost": null
     },
     {
       "name": "Moonclan armour",
@@ -2097,11 +2101,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_armour",
-      "imageName": "Moonclan armour.png"
+      "imageName": "Moonclan armour.png",
+      "cost": null
     },
     {
       "name": "Moonclan skirt",
@@ -2114,11 +2118,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_skirt",
-      "imageName": "Moonclan skirt.png"
+      "imageName": "Moonclan skirt.png",
+      "cost": null
     },
     {
       "name": "Moonclan gloves",
@@ -2131,11 +2135,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_gloves",
-      "imageName": "Moonclan gloves.png"
+      "imageName": "Moonclan gloves.png",
+      "cost": null
     },
     {
       "name": "Moonclan boots",
@@ -2148,11 +2152,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_boots",
-      "imageName": "Moonclan boots.png"
+      "imageName": "Moonclan boots.png",
+      "cost": null
     },
     {
       "name": "Moonclan cape",
@@ -2165,11 +2169,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Moonclan_cape",
-      "imageName": "Moonclan cape.png"
+      "imageName": "Moonclan cape.png",
+      "cost": null
     },
     {
       "name": "Astral rune",
@@ -2181,11 +2185,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Astral_rune",
-      "imageName": "Astral rune.png"
+      "imageName": "Astral rune.png",
+      "cost": null
     },
     {
       "name": "Lunar ring",
@@ -2197,11 +2201,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Lunar_ring",
-      "imageName": "Lunar ring.png"
+      "imageName": "Lunar ring.png",
+      "cost": null
     },
     {
       "name": "Rune crossbow",
@@ -2214,11 +2218,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_crossbow",
-      "imageName": "Rune crossbow.png"
+      "imageName": "Rune crossbow.png",
+      "cost": null
     },
     {
       "name": "Zamorak bracers",
@@ -2231,11 +2235,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_bracers",
-      "imageName": "Zamorak bracers.png"
+      "imageName": "Zamorak bracers.png",
+      "cost": null
     },
     {
       "name": "Zamorak d'hide body",
@@ -2248,11 +2252,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_d%27hide_body",
-      "imageName": "Zamorak d'hide body.png"
+      "imageName": "Zamorak d'hide body.png",
+      "cost": null
     },
     {
       "name": "Zamorak chaps",
@@ -2265,11 +2269,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_chaps",
-      "imageName": "Zamorak chaps.png"
+      "imageName": "Zamorak chaps.png",
+      "cost": null
     },
     {
       "name": "Zamorak coif",
@@ -2282,11 +2286,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_coif",
-      "imageName": "Zamorak coif.png"
+      "imageName": "Zamorak coif.png",
+      "cost": null
     },
     {
       "name": "Guthix bracers",
@@ -2299,11 +2303,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_bracers",
-      "imageName": "Guthix bracers.png"
+      "imageName": "Guthix bracers.png",
+      "cost": null
     },
     {
       "name": "Guthix d'hide body",
@@ -2316,11 +2320,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_d%27hide_body",
-      "imageName": "Guthix d'hide body.png"
+      "imageName": "Guthix d'hide body.png",
+      "cost": null
     },
     {
       "name": "Guthix chaps",
@@ -2333,11 +2337,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_chaps",
-      "imageName": "Guthix chaps.png"
+      "imageName": "Guthix chaps.png",
+      "cost": null
     },
     {
       "name": "Guthix coif",
@@ -2350,11 +2354,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_coif",
-      "imageName": "Guthix coif.png"
+      "imageName": "Guthix coif.png",
+      "cost": null
     },
     {
       "name": "Saradomin bracers",
@@ -2367,11 +2371,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_bracers",
-      "imageName": "Saradomin bracers.png"
+      "imageName": "Saradomin bracers.png",
+      "cost": null
     },
     {
       "name": "Saradomin d'hide body",
@@ -2384,11 +2388,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_d%27hide_body",
-      "imageName": "Saradomin d'hide body.png"
+      "imageName": "Saradomin d'hide body.png",
+      "cost": null
     },
     {
       "name": "Saradomin chaps",
@@ -2401,11 +2405,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_chaps",
-      "imageName": "Saradomin chaps.png"
+      "imageName": "Saradomin chaps.png",
+      "cost": null
     },
     {
       "name": "Saradomin coif",
@@ -2418,11 +2422,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_coif",
-      "imageName": "Saradomin coif.png"
+      "imageName": "Saradomin coif.png",
+      "cost": null
     },
     {
       "name": "Ava's accumulator",
@@ -2435,11 +2439,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ava%27s_accumulator",
-      "imageName": "Ava's accumulator.png"
+      "imageName": "Ava's accumulator.png",
+      "cost": null
     },
     {
       "name": "Fighter torso",
@@ -2454,11 +2458,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Fighter_torso",
-      "imageName": "Fighter torso.png"
+      "imageName": "Fighter torso.png",
+      "cost": 2
     },
     {
       "name": "Granite body",
@@ -2471,11 +2475,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_body",
-      "imageName": "Granite body.png"
+      "imageName": "Granite body.png",
+      "cost": null
     },
     {
       "name": "Granite helm",
@@ -2488,11 +2492,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_helm",
-      "imageName": "Granite helm.png"
+      "imageName": "Granite helm.png",
+      "cost": null
     },
     {
       "name": "Helm of neitiznot",
@@ -2505,11 +2509,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Helm_of_neitiznot",
-      "imageName": "Helm of neitiznot.png"
+      "imageName": "Helm of neitiznot.png",
+      "cost": null
     },
     {
       "name": "Barrelchest anchor",
@@ -2525,11 +2529,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Barrelchest_anchor",
-      "imageName": "Barrelchest anchor.png"
+      "imageName": "Barrelchest anchor.png",
+      "cost": 2
     },
     {
       "name": "Ancient mace",
@@ -2545,11 +2549,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_mace",
-      "imageName": "Ancient mace.png"
+      "imageName": "Ancient mace.png",
+      "cost": 3
     },
     {
       "name": "Berserker necklace",
@@ -2562,11 +2566,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_necklace",
-      "imageName": "Berserker necklace.png"
+      "imageName": "Berserker necklace.png",
+      "cost": null
     },
     {
       "name": "Dark bow",
@@ -2579,11 +2583,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dark_bow",
-      "imageName": "Dark bow.png"
+      "imageName": "Dark bow.png",
+      "cost": null
     },
     {
       "name": "Void mage helm",
@@ -2596,11 +2600,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_mage_helm",
-      "imageName": "Void mage helm.png"
+      "imageName": "Void mage helm.png",
+      "cost": null
     },
     {
       "name": "Void ranger helm",
@@ -2612,11 +2616,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_ranger_helm",
-      "imageName": "Void ranger helm.png"
+      "imageName": "Void ranger helm.png",
+      "cost": null
     },
     {
       "name": "Void melee helm",
@@ -2628,11 +2632,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_melee_helm",
-      "imageName": "Void melee helm.png"
+      "imageName": "Void melee helm.png",
+      "cost": null
     },
     {
       "name": "Seers ring (i)",
@@ -2645,11 +2649,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Seers_ring_(i)",
-      "imageName": "Seers ring (i).png"
+      "imageName": "Seers ring (i).png",
+      "cost": null
     },
     {
       "name": "Archers ring (i)",
@@ -2662,11 +2666,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Archers_ring_(i)",
-      "imageName": "Archers ring (i).png"
+      "imageName": "Archers ring (i).png",
+      "cost": null
     },
     {
       "name": "Warrior ring (i)",
@@ -2679,11 +2683,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Warrior_ring_(i)",
-      "imageName": "Warrior ring (i).png"
+      "imageName": "Warrior ring (i).png",
+      "cost": null
     },
     {
       "name": "Berserker ring (i)",
@@ -2696,11 +2700,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_ring_(i)",
-      "imageName": "Berserker ring (i).png"
+      "imageName": "Berserker ring (i).png",
+      "cost": null
     },
     {
       "name": "Armadyl crossbow",
@@ -2715,11 +2719,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_crossbow",
-      "imageName": "Armadyl crossbow.png"
+      "imageName": "Armadyl crossbow.png",
+      "cost": 4
     },
     {
       "name": "Armadyl godsword",
@@ -2733,11 +2737,11 @@
       ],
       "behaviors": [],
       "tier": 5,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_godsword",
-      "imageName": "Armadyl godsword.png"
+      "imageName": "Armadyl godsword.png",
+      "cost": null
     },
     {
       "name": "Zamorak godsword",
@@ -2751,11 +2755,11 @@
       ],
       "behaviors": [],
       "tier": 5,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_godsword",
-      "imageName": "Zamorak godsword.png"
+      "imageName": "Zamorak godsword.png",
+      "cost": null
     },
     {
       "name": "Saradomin sword",
@@ -2771,11 +2775,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_sword",
-      "imageName": "Saradomin sword.png"
+      "imageName": "Saradomin sword.png",
+      "cost": 2
     },
     {
       "name": "Trident of the seas",
@@ -2790,11 +2794,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Trident_of_the_seas",
-      "imageName": "Trident of the seas.png"
+      "imageName": "Trident of the seas.png",
+      "cost": 2
     },
     {
       "name": "Malediction ward",
@@ -2807,11 +2811,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Malediction_ward",
-      "imageName": "Malediction ward.png"
+      "imageName": "Malediction ward.png",
+      "cost": null
     },
     {
       "name": "Odium ward",
@@ -2824,11 +2828,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Odium_ward",
-      "imageName": "Odium ward.png"
+      "imageName": "Odium ward.png",
+      "cost": null
     },
     {
       "name": "Occult necklace",
@@ -2843,11 +2847,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Occult_necklace",
-      "imageName": "Occult necklace.png"
+      "imageName": "Occult necklace.png",
+      "cost": 4
     },
     {
       "name": "Ancient bracers",
@@ -2860,11 +2864,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_bracers",
-      "imageName": "Ancient bracers.png"
+      "imageName": "Ancient bracers.png",
+      "cost": null
     },
     {
       "name": "Ancient d'hide body",
@@ -2877,11 +2881,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_body",
-      "imageName": "Ancient d'hide body.png"
+      "imageName": "Ancient d'hide body.png",
+      "cost": null
     },
     {
       "name": "Ancient chaps",
@@ -2894,11 +2898,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_chaps",
-      "imageName": "Ancient chaps.png"
+      "imageName": "Ancient chaps.png",
+      "cost": null
     },
     {
       "name": "Ancient coif",
@@ -2911,11 +2915,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_coif",
-      "imageName": "Ancient coif.png"
+      "imageName": "Ancient coif.png",
+      "cost": null
     },
     {
       "name": "Bandos bracers",
@@ -2928,11 +2932,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_bracers",
-      "imageName": "Bandos bracers.png"
+      "imageName": "Bandos bracers.png",
+      "cost": null
     },
     {
       "name": "Bandos d'hide body",
@@ -2945,11 +2949,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_d%27hide_body",
-      "imageName": "Bandos d'hide body.png"
+      "imageName": "Bandos d'hide body.png",
+      "cost": null
     },
     {
       "name": "Bandos chaps",
@@ -2962,11 +2966,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_chaps",
-      "imageName": "Bandos chaps.png"
+      "imageName": "Bandos chaps.png",
+      "cost": null
     },
     {
       "name": "Bandos coif",
@@ -2979,11 +2983,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_coif",
-      "imageName": "Bandos coif.png"
+      "imageName": "Bandos coif.png",
+      "cost": null
     },
     {
       "name": "Armadyl bracers",
@@ -2996,11 +3000,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_bracers",
-      "imageName": "Armadyl bracers.png"
+      "imageName": "Armadyl bracers.png",
+      "cost": null
     },
     {
       "name": "Armadyl d'hide body",
@@ -3013,11 +3017,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_body",
-      "imageName": "Armadyl d'hide body.png"
+      "imageName": "Armadyl d'hide body.png",
+      "cost": null
     },
     {
       "name": "Armadyl chaps",
@@ -3030,11 +3034,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_chaps",
-      "imageName": "Armadyl chaps.png"
+      "imageName": "Armadyl chaps.png",
+      "cost": null
     },
     {
       "name": "Armadyl coif",
@@ -3047,11 +3051,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_coif",
-      "imageName": "Armadyl coif.png"
+      "imageName": "Armadyl coif.png",
+      "cost": null
     },
     {
       "name": "Dark infinity colour kit",
@@ -3062,14 +3066,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dark_infinity_colour_kit",
-      "imageName": "Dark infinity colour kit.png"
+      "imageName": "Dark infinity colour kit.png",
+      "cost": null
     },
     {
       "name": "Light infinity colour kit",
@@ -3080,14 +3085,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Light_infinity_colour_kit",
-      "imageName": "Light infinity colour kit.png"
+      "imageName": "Light infinity colour kit.png",
+      "cost": null
     },
     {
       "name": "Ring of the gods",
@@ -3101,11 +3107,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ring_of_the_gods",
-      "imageName": "Ring of the gods.png"
+      "imageName": "Ring of the gods.png",
+      "cost": 1
     },
     {
       "name": "Tyrannical ring",
@@ -3119,11 +3125,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Tyrannical_ring",
-      "imageName": "Tyrannical ring.png"
+      "imageName": "Tyrannical ring.png",
+      "cost": 1
     },
     {
       "name": "Treasonous ring",
@@ -3137,11 +3143,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Treasonous_ring",
-      "imageName": "Treasonous ring.png"
+      "imageName": "Treasonous ring.png",
+      "cost": 1
     },
     {
       "name": "Book of war",
@@ -3153,11 +3159,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Book_of_war",
-      "imageName": "Book of war.png"
+      "imageName": "Book of war.png",
+      "cost": null
     },
     {
       "name": "Book of law",
@@ -3169,11 +3175,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Book_of_law",
-      "imageName": "Book of law.png"
+      "imageName": "Book of law.png",
+      "cost": null
     },
     {
       "name": "Book of darkness",
@@ -3185,11 +3191,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Book_of_darkness",
-      "imageName": "Book of darkness.png"
+      "imageName": "Book of darkness.png",
+      "cost": null
     },
     {
       "name": "Stamina potion(4)",
@@ -3201,11 +3207,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Stamina_potion(4)",
-      "imageName": "Stamina potion(4).png"
+      "imageName": "Stamina potion(4).png",
+      "cost": null
     },
     {
       "name": "Super combat potion(4)",
@@ -3217,11 +3223,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Super_combat_potion(4)",
-      "imageName": "Super combat potion(4).png"
+      "imageName": "Super combat potion(4).png",
+      "cost": null
     },
     {
       "name": "Magic shortbow scroll",
@@ -3232,14 +3238,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Magic_shortbow_scroll",
-      "imageName": "Magic shortbow scroll.png"
+      "imageName": "Magic shortbow scroll.png",
+      "cost": null
     },
     {
       "name": "Magic shortbow (i)",
@@ -3256,11 +3263,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Magic_shortbow_(i)",
-      "imageName": "Magic shortbow (i).png"
+      "imageName": "Magic shortbow (i).png",
+      "cost": 2
     },
     {
       "name": "Rune pouch",
@@ -3272,11 +3279,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_pouch",
-      "imageName": "Rune pouch.png"
+      "imageName": "Rune pouch.png",
+      "cost": 1
     },
     {
       "name": "Ward upgrade kit",
@@ -3287,14 +3294,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ward_upgrade_kit",
-      "imageName": "Ward upgrade kit.png"
+      "imageName": "Ward upgrade kit.png",
+      "cost": null
     },
     {
       "name": "Saradomin's tear",
@@ -3305,14 +3313,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin%27s_tear",
-      "imageName": "Saradomin's tear.png"
+      "imageName": "Saradomin's tear.png",
+      "cost": null
     },
     {
       "name": "Saradomin's blessed sword",
@@ -3328,11 +3337,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin%27s_blessed_sword",
-      "imageName": "Saradomin's blessed sword.png"
+      "imageName": "Saradomin's blessed sword.png",
+      "cost": 3
     },
     {
       "name": "Elysian spirit shield",
@@ -3344,11 +3353,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elysian_spirit_shield",
-      "imageName": "Elysian spirit shield.png"
+      "imageName": "Elysian spirit shield.png",
+      "cost": null
     },
     {
       "name": "Spectral spirit shield",
@@ -3360,11 +3369,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spectral_spirit_shield",
-      "imageName": "Spectral spirit shield.png"
+      "imageName": "Spectral spirit shield.png",
+      "cost": null
     },
     {
       "name": "Arcane spirit shield",
@@ -3377,11 +3386,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Arcane_spirit_shield",
-      "imageName": "Arcane spirit shield.png"
+      "imageName": "Arcane spirit shield.png",
+      "cost": null
     },
     {
       "name": "Spirit shield",
@@ -3393,11 +3402,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spirit_shield",
-      "imageName": "Spirit shield.png"
+      "imageName": "Spirit shield.png",
+      "cost": null
     },
     {
       "name": "Blessed spirit shield",
@@ -3409,11 +3418,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blessed_spirit_shield",
-      "imageName": "Blessed spirit shield.png"
+      "imageName": "Blessed spirit shield.png",
+      "cost": null
     },
     {
       "name": "Holy elixir",
@@ -3424,14 +3433,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Holy_elixir",
-      "imageName": "Holy elixir.png"
+      "imageName": "Holy elixir.png",
+      "cost": null
     },
     {
       "name": "Red dragonhide set",
@@ -3444,11 +3454,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Red_dragonhide_set",
-      "imageName": "Red dragonhide set.png"
+      "imageName": "Red dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Black dragonhide set",
@@ -3461,11 +3471,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Black_dragonhide_set",
-      "imageName": "Black dragonhide set.png"
+      "imageName": "Black dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Guthan's armour set",
@@ -3478,11 +3488,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthan%27s_armour_set",
-      "imageName": "Guthan's armour set.png"
+      "imageName": "Guthan's armour set.png",
+      "cost": null
     },
     {
       "name": "Verac's armour set",
@@ -3495,11 +3505,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Verac%27s_armour_set",
-      "imageName": "Verac's armour set.png"
+      "imageName": "Verac's armour set.png",
+      "cost": null
     },
     {
       "name": "Dharok's armour set",
@@ -3512,11 +3522,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dharok%27s_armour_set",
-      "imageName": "Dharok's armour set.png"
+      "imageName": "Dharok's armour set.png",
+      "cost": null
     },
     {
       "name": "Torag's armour set",
@@ -3529,11 +3539,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Torag%27s_armour_set",
-      "imageName": "Torag's armour set.png"
+      "imageName": "Torag's armour set.png",
+      "cost": null
     },
     {
       "name": "Ahrim's armour set",
@@ -3546,11 +3556,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ahrim%27s_armour_set",
-      "imageName": "Ahrim's armour set.png"
+      "imageName": "Ahrim's armour set.png",
+      "cost": null
     },
     {
       "name": "Karil's armour set",
@@ -3563,11 +3573,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Karil%27s_armour_set",
-      "imageName": "Karil's armour set.png"
+      "imageName": "Karil's armour set.png",
+      "cost": null
     },
     {
       "name": "Trident of the swamp",
@@ -3582,11 +3592,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Trident_of_the_swamp",
-      "imageName": "Trident of the swamp.png"
+      "imageName": "Trident of the swamp.png",
+      "cost": 4
     },
     {
       "name": "Toxic staff of the dead",
@@ -3600,11 +3610,11 @@
       ],
       "behaviors": [],
       "tier": 4,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Toxic_staff_of_the_dead",
-      "imageName": "Toxic staff of the dead.png"
+      "imageName": "Toxic staff of the dead.png",
+      "cost": null
     },
     {
       "name": "Anti-venom+(4)",
@@ -3616,11 +3626,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Anti-venom%2B(4)",
-      "imageName": "Anti-venom+(4).png"
+      "imageName": "Anti-venom+(4).png",
+      "cost": null
     },
     {
       "name": "Toxic blowpipe",
@@ -3635,11 +3645,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Toxic_blowpipe",
-      "imageName": "Toxic blowpipe.png"
+      "imageName": "Toxic blowpipe.png",
+      "cost": 3
     },
     {
       "name": "Serpentine helm",
@@ -3652,11 +3662,11 @@
       ],
       "behaviors": [],
       "tier": 4,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Serpentine_helm",
-      "imageName": "Serpentine helm.png"
+      "imageName": "Serpentine helm.png",
+      "cost": null
     },
     {
       "name": "Dragon defender",
@@ -3669,11 +3679,11 @@
       ],
       "behaviors": [],
       "tier": 2,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_defender",
-      "imageName": "Dragon defender.png"
+      "imageName": "Dragon defender.png",
+      "cost": null
     },
     {
       "name": "Zamorak dragonhide set",
@@ -3685,14 +3695,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_dragonhide_set",
-      "imageName": "Zamorak dragonhide set.png"
+      "imageName": "Zamorak dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Saradomin dragonhide set",
@@ -3704,14 +3715,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_dragonhide_set",
-      "imageName": "Saradomin dragonhide set.png"
+      "imageName": "Saradomin dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Guthix dragonhide set",
@@ -3723,14 +3735,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_dragonhide_set",
-      "imageName": "Guthix dragonhide set.png"
+      "imageName": "Guthix dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Bandos dragonhide set",
@@ -3742,14 +3755,15 @@
         "range"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_dragonhide_set",
-      "imageName": "Bandos dragonhide set.png"
+      "imageName": "Bandos dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Armadyl dragonhide set",
@@ -3761,14 +3775,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_dragonhide_set",
-      "imageName": "Armadyl dragonhide set.png"
+      "imageName": "Armadyl dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Ancient dragonhide set",
@@ -3780,14 +3795,15 @@
         "armor"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_dragonhide_set",
-      "imageName": "Ancient dragonhide set.png"
+      "imageName": "Ancient dragonhide set.png",
+      "cost": null
     },
     {
       "name": "Abyssal dagger",
@@ -3801,11 +3817,11 @@
       ],
       "behaviors": [],
       "tier": 3,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_dagger",
-      "imageName": "Abyssal dagger.png"
+      "imageName": "Abyssal dagger.png",
+      "cost": null
     },
     {
       "name": "Xerician hat",
@@ -3818,11 +3834,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Xerician_hat",
-      "imageName": "Xerician hat.png"
+      "imageName": "Xerician hat.png",
+      "cost": null
     },
     {
       "name": "Xerician top",
@@ -3835,11 +3851,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Xerician_top",
-      "imageName": "Xerician top.png"
+      "imageName": "Xerician top.png",
+      "cost": null
     },
     {
       "name": "Xerician robe",
@@ -3852,11 +3868,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Xerician_robe",
-      "imageName": "Xerician robe.png"
+      "imageName": "Xerician robe.png",
+      "cost": null
     },
     {
       "name": "Anglerfish",
@@ -3868,11 +3884,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Anglerfish",
-      "imageName": "Anglerfish.png"
+      "imageName": "Anglerfish.png",
+      "cost": null
     },
     {
       "name": "Dragon warhammer",
@@ -3888,11 +3904,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_warhammer",
-      "imageName": "Dragon warhammer.png"
+      "imageName": "Dragon warhammer.png",
+      "cost": 3
     },
     {
       "name": "Dragon claws",
@@ -3908,11 +3924,11 @@
         "talent"
       ],
       "tier": 5,
-      "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_claws",
-      "imageName": "Dragon claws.png"
+      "imageName": "Dragon claws.png",
+      "cost": 5
     },
     {
       "name": "Light ballista",
@@ -3927,11 +3943,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Light_ballista",
-      "imageName": "Light ballista.png"
+      "imageName": "Light ballista.png",
+      "cost": 3
     },
     {
       "name": "Heavy ballista",
@@ -3946,11 +3962,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Heavy_ballista",
-      "imageName": "Heavy ballista.png"
+      "imageName": "Heavy ballista.png",
+      "cost": 4
     },
     {
       "name": "Tormented bracelet",
@@ -3966,11 +3982,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_bracelet",
-      "imageName": "Tormented bracelet.png"
+      "imageName": "Tormented bracelet.png",
+      "cost": 4
     },
     {
       "name": "Necklace of anguish",
@@ -3985,11 +4001,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Necklace_of_anguish",
-      "imageName": "Necklace of anguish.png"
+      "imageName": "Necklace of anguish.png",
+      "cost": 4
     },
     {
       "name": "Ring of suffering",
@@ -4005,11 +4021,11 @@
         "talent"
       ],
       "tier": 5,
-      "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ring_of_suffering",
-      "imageName": "Ring of suffering.png"
+      "imageName": "Ring of suffering.png",
+      "cost": 5
     },
     {
       "name": "Amulet of torture",
@@ -4024,11 +4040,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_torture",
-      "imageName": "Amulet of torture.png"
+      "imageName": "Amulet of torture.png",
+      "cost": 4
     },
     {
       "name": "Royal seed pod",
@@ -4042,11 +4058,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Royal_seed_pod",
-      "imageName": "Royal seed pod.png"
+      "imageName": "Royal seed pod.png",
+      "cost": 1
     },
     {
       "name": "Ancient d'hide boots",
@@ -4059,11 +4075,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_boots",
-      "imageName": "Ancient d'hide boots.png"
+      "imageName": "Ancient d'hide boots.png",
+      "cost": null
     },
     {
       "name": "Bandos d'hide boots",
@@ -4076,11 +4092,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_d%27hide_boots",
-      "imageName": "Bandos d'hide boots.png"
+      "imageName": "Bandos d'hide boots.png",
+      "cost": null
     },
     {
       "name": "Guthix d'hide boots",
@@ -4093,11 +4109,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_d%27hide_boots",
-      "imageName": "Guthix d'hide boots.png"
+      "imageName": "Guthix d'hide boots.png",
+      "cost": null
     },
     {
       "name": "Armadyl d'hide boots",
@@ -4110,11 +4126,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_boots",
-      "imageName": "Armadyl d'hide boots.png"
+      "imageName": "Armadyl d'hide boots.png",
+      "cost": null
     },
     {
       "name": "Saradomin d'hide boots",
@@ -4127,11 +4143,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_d%27hide_boots",
-      "imageName": "Saradomin d'hide boots.png"
+      "imageName": "Saradomin d'hide boots.png",
+      "cost": null
     },
     {
       "name": "Zamorak d'hide boots",
@@ -4144,11 +4160,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_d%27hide_boots",
-      "imageName": "Zamorak d'hide boots.png"
+      "imageName": "Zamorak d'hide boots.png",
+      "cost": null
     },
     {
       "name": "Dragon scimitar ornament kit",
@@ -4159,14 +4175,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_scimitar_ornament_kit",
-      "imageName": "Dragon scimitar ornament kit.png"
+      "imageName": "Dragon scimitar ornament kit.png",
+      "cost": null
     },
     {
       "name": "Occult ornament kit",
@@ -4177,14 +4194,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Occult_ornament_kit",
-      "imageName": "Occult ornament kit.png"
+      "imageName": "Occult ornament kit.png",
+      "cost": null
     },
     {
       "name": "Elder chaos top",
@@ -4197,11 +4215,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_top",
-      "imageName": "Elder chaos top.png"
+      "imageName": "Elder chaos top.png",
+      "cost": null
     },
     {
       "name": "Elder chaos robe",
@@ -4214,11 +4232,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_robe",
-      "imageName": "Elder chaos robe.png"
+      "imageName": "Elder chaos robe.png",
+      "cost": null
     },
     {
       "name": "Elder chaos hood",
@@ -4231,11 +4249,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_hood",
-      "imageName": "Elder chaos hood.png"
+      "imageName": "Elder chaos hood.png",
+      "cost": null
     },
     {
       "name": "Tome of fire",
@@ -4250,11 +4268,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Tome_of_fire",
-      "imageName": "Tome of fire.png"
+      "imageName": "Tome of fire.png",
+      "cost": 2
     },
     {
       "name": "Dragon thrownaxe",
@@ -4268,14 +4286,15 @@
       ],
       "behaviors": [
         "talent",
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_thrownaxe",
-      "imageName": "Dragon thrownaxe.png"
+      "imageName": "Dragon thrownaxe.png",
+      "cost": 3
     },
     {
       "name": "Elder maul",
@@ -4288,11 +4307,11 @@
       ],
       "behaviors": [],
       "tier": 5,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elder_maul",
-      "imageName": "Elder maul.png"
+      "imageName": "Elder maul.png",
+      "cost": null
     },
     {
       "name": "Dragon sword",
@@ -4305,11 +4324,11 @@
       ],
       "behaviors": [],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_sword",
-      "imageName": "Dragon sword.png"
+      "imageName": "Dragon sword.png",
+      "cost": null
     },
     {
       "name": "Dinh's bulwark",
@@ -4323,11 +4342,11 @@
       ],
       "behaviors": [],
       "tier": 4,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dinh%27s_bulwark",
-      "imageName": "Dinh's bulwark.png"
+      "imageName": "Dinh's bulwark.png",
+      "cost": null
     },
     {
       "name": "Burning amulet(5)",
@@ -4339,14 +4358,15 @@
         "teleport"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Burning_amulet(5)",
-      "imageName": "Burning amulet(5).png"
+      "imageName": "Burning amulet(5).png",
+      "cost": null
     },
     {
       "name": "Obsidian helmet",
@@ -4359,11 +4379,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Obsidian_helmet",
-      "imageName": "Obsidian helmet.png"
+      "imageName": "Obsidian helmet.png",
+      "cost": null
     },
     {
       "name": "Obsidian platebody",
@@ -4376,11 +4396,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Obsidian_platebody",
-      "imageName": "Obsidian platebody.png"
+      "imageName": "Obsidian platebody.png",
+      "cost": null
     },
     {
       "name": "Obsidian platelegs",
@@ -4393,11 +4413,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Obsidian_platelegs",
-      "imageName": "Obsidian platelegs.png"
+      "imageName": "Obsidian platelegs.png",
+      "cost": null
     },
     {
       "name": "Amethyst arrow",
@@ -4409,11 +4429,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amethyst_arrow",
-      "imageName": "Amethyst arrow.png"
+      "imageName": "Amethyst arrow.png",
+      "cost": null
     },
     {
       "name": "Granite boots",
@@ -4426,11 +4446,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_boots",
-      "imageName": "Granite boots.png"
+      "imageName": "Granite boots.png",
+      "cost": null
     },
     {
       "name": "Granite longsword",
@@ -4443,11 +4463,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_longsword",
-      "imageName": "Granite longsword.png"
+      "imageName": "Granite longsword.png",
+      "cost": null
     },
     {
       "name": "Granite gloves",
@@ -4460,11 +4480,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_gloves",
-      "imageName": "Granite gloves.png"
+      "imageName": "Granite gloves.png",
+      "cost": null
     },
     {
       "name": "Granite ring",
@@ -4476,11 +4496,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_ring",
-      "imageName": "Granite ring.png"
+      "imageName": "Granite ring.png",
+      "cost": null
     },
     {
       "name": "Granite hammer",
@@ -4493,11 +4513,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_hammer",
-      "imageName": "Granite hammer.png"
+      "imageName": "Granite hammer.png",
+      "cost": null
     },
     {
       "name": "Granite ring (i)",
@@ -4509,11 +4529,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_ring_(i)",
-      "imageName": "Granite ring (i).png"
+      "imageName": "Granite ring (i).png",
+      "cost": null
     },
     {
       "name": "Imbued saradomin cape",
@@ -4526,11 +4546,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Imbued_saradomin_cape",
-      "imageName": "Imbued saradomin cape.png"
+      "imageName": "Imbued saradomin cape.png",
+      "cost": null
     },
     {
       "name": "Imbued guthix cape",
@@ -4543,11 +4563,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Imbued_guthix_cape",
-      "imageName": "Imbued guthix cape.png"
+      "imageName": "Imbued guthix cape.png",
+      "cost": null
     },
     {
       "name": "Imbued zamorak cape",
@@ -4560,11 +4580,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Imbued_zamorak_cape",
-      "imageName": "Imbued zamorak cape.png"
+      "imageName": "Imbued zamorak cape.png",
+      "cost": null
     },
     {
       "name": "Revenant cave teleport",
@@ -4576,11 +4596,11 @@
       ],
       "behaviors": [],
       "tier": 1,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Revenant_cave_teleport",
-      "imageName": "Revenant cave teleport.png"
+      "imageName": "Revenant cave teleport.png",
+      "cost": null
     },
     {
       "name": "Bracelet of ethereum",
@@ -4591,14 +4611,15 @@
         "jewellery"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bracelet_of_ethereum",
-      "imageName": "Bracelet of ethereum.png"
+      "imageName": "Bracelet of ethereum.png",
+      "cost": null
     },
     {
       "name": "Revenant ether",
@@ -4612,11 +4633,11 @@
         "shop"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Revenant_ether",
-      "imageName": "Revenant ether.png"
+      "imageName": "Revenant ether.png",
+      "cost": null
     },
     {
       "name": "Dragon crossbow",
@@ -4631,11 +4652,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_crossbow",
-      "imageName": "Dragon crossbow.png"
+      "imageName": "Dragon crossbow.png",
+      "cost": 3
     },
     {
       "name": "Dragonstone dragon bolts (e)",
@@ -4647,11 +4668,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragonstone_dragon_bolts_(e)",
-      "imageName": "Dragonstone dragon bolts (e).png"
+      "imageName": "Dragonstone dragon bolts (e).png",
+      "cost": null
     },
     {
       "name": "Ava's assembler",
@@ -4666,11 +4687,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ava%27s_assembler",
-      "imageName": "Ava's assembler.png"
+      "imageName": "Ava's assembler.png",
+      "cost": 3
     },
     {
       "name": "Dragon boots ornament kit",
@@ -4681,14 +4702,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_boots_ornament_kit",
-      "imageName": "Dragon boots ornament kit.png"
+      "imageName": "Dragon boots ornament kit.png",
+      "cost": null
     },
     {
       "name": "Black d'hide shield",
@@ -4701,11 +4723,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Black_d%27hide_shield",
-      "imageName": "Black d'hide shield.png"
+      "imageName": "Black d'hide shield.png",
+      "cost": null
     },
     {
       "name": "Ivandis flail",
@@ -4718,11 +4740,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ivandis_flail",
-      "imageName": "Ivandis flail.png"
+      "imageName": "Ivandis flail.png",
+      "cost": null
     },
     {
       "name": "Viggora's chainmace",
@@ -4738,11 +4760,11 @@
         "talent"
       ],
       "tier": 5,
-      "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Viggora%27s_chainmace",
-      "imageName": "Viggora's chainmace.png"
+      "imageName": "Viggora's chainmace.png",
+      "cost": 5
     },
     {
       "name": "Craw's bow",
@@ -4758,11 +4780,11 @@
         "talent"
       ],
       "tier": 5,
-      "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Craw%27s_bow",
-      "imageName": "Craw's bow.png"
+      "imageName": "Craw's bow.png",
+      "cost": 5
     },
     {
       "name": "Thammaron's sceptre",
@@ -4775,11 +4797,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Thammaron%27s_sceptre",
-      "imageName": "Thammaron's sceptre.png"
+      "imageName": "Thammaron's sceptre.png",
+      "cost": null
     },
     {
       "name": "Dragon knife(p++)",
@@ -4793,14 +4815,15 @@
       ],
       "behaviors": [
         "talent",
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_knife(p%2B%2B)",
-      "imageName": "Dragon knife(p++).png"
+      "imageName": "Dragon knife(p++).png",
+      "cost": 3
     },
     {
       "name": "Brimstone ring",
@@ -4812,11 +4835,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Brimstone_ring",
-      "imageName": "Brimstone ring.png"
+      "imageName": "Brimstone ring.png",
+      "cost": null
     },
     {
       "name": "Guthix d'hide shield",
@@ -4829,11 +4852,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_d%27hide_shield",
-      "imageName": "Guthix d'hide shield.png"
+      "imageName": "Guthix d'hide shield.png",
+      "cost": null
     },
     {
       "name": "Saradomin d'hide shield",
@@ -4846,11 +4869,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_d%27hide_shield",
-      "imageName": "Saradomin d'hide shield.png"
+      "imageName": "Saradomin d'hide shield.png",
+      "cost": null
     },
     {
       "name": "Zamorak d'hide shield",
@@ -4863,11 +4886,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_d%27hide_shield",
-      "imageName": "Zamorak d'hide shield.png"
+      "imageName": "Zamorak d'hide shield.png",
+      "cost": null
     },
     {
       "name": "Ancient d'hide shield",
@@ -4880,11 +4903,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_d%27hide_shield",
-      "imageName": "Ancient d'hide shield.png"
+      "imageName": "Ancient d'hide shield.png",
+      "cost": null
     },
     {
       "name": "Armadyl d'hide shield",
@@ -4897,11 +4920,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_d%27hide_shield",
-      "imageName": "Armadyl d'hide shield.png"
+      "imageName": "Armadyl d'hide shield.png",
+      "cost": null
     },
     {
       "name": "Bandos d'hide shield",
@@ -4914,11 +4937,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_d%27hide_shield",
-      "imageName": "Bandos d'hide shield.png"
+      "imageName": "Bandos d'hide shield.png",
+      "cost": null
     },
     {
       "name": "Rune defender ornament kit",
@@ -4929,14 +4952,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_defender_ornament_kit",
-      "imageName": "Rune defender ornament kit.png"
+      "imageName": "Rune defender ornament kit.png",
+      "cost": null
     },
     {
       "name": "Tzhaar-ket-om ornament kit",
@@ -4947,14 +4971,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Tzhaar-ket-om_ornament_kit",
-      "imageName": "Tzhaar-ket-om ornament kit.png"
+      "imageName": "Tzhaar-ket-om ornament kit.png",
+      "cost": null
     },
     {
       "name": "Berserker necklace ornament kit",
@@ -4965,14 +4990,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_necklace_ornament_kit",
-      "imageName": "Berserker necklace ornament kit.png"
+      "imageName": "Berserker necklace ornament kit.png",
+      "cost": null
     },
     {
       "name": "Crystal halberd",
@@ -4986,11 +5012,11 @@
       ],
       "behaviors": [],
       "tier": 3,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Crystal_halberd",
-      "imageName": "Crystal halberd.png"
+      "imageName": "Crystal halberd.png",
+      "cost": null
     },
     {
       "name": "Trouver parchment",
@@ -5001,14 +5027,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Trouver_parchment",
-      "imageName": "Trouver parchment.png"
+      "imageName": "Trouver parchment.png",
+      "cost": null
     },
     {
       "name": "Granite maul (ornate handle)",
@@ -5022,11 +5049,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_maul_(ornate_handle)",
-      "imageName": "Granite maul (ornate handle).png"
+      "imageName": "Granite maul (ornate handle).png",
+      "cost": null
     },
     {
       "name": "Ornate maul handle",
@@ -5038,11 +5065,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ornate_maul_handle",
-      "imageName": "Ornate maul handle.png"
+      "imageName": "Ornate maul handle.png",
+      "cost": null
     },
     {
       "name": "Wilderness crabs teleport",
@@ -5053,14 +5080,15 @@
         "teleport"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Wilderness_crabs_teleport",
-      "imageName": "Wilderness crabs teleport.png"
+      "imageName": "Wilderness crabs teleport.png",
+      "cost": null
     },
     {
       "name": "Dagon'hai hat",
@@ -5073,11 +5101,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_hat",
-      "imageName": "Dagon'hai hat.png"
+      "imageName": "Dagon'hai hat.png",
+      "cost": null
     },
     {
       "name": "Dagon'hai robe top",
@@ -5090,11 +5118,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_robe_top",
-      "imageName": "Dagon'hai robe top.png"
+      "imageName": "Dagon'hai robe top.png",
+      "cost": null
     },
     {
       "name": "Dagon'hai robe bottom",
@@ -5107,11 +5135,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dagon%27hai_robe_bottom",
-      "imageName": "Dagon'hai robe bottom.png"
+      "imageName": "Dagon'hai robe bottom.png",
+      "cost": null
     },
     {
       "name": "Volatile nightmare staff",
@@ -5127,11 +5155,11 @@
         "talent"
       ],
       "tier": 5,
-      "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Volatile_nightmare_staff",
-      "imageName": "Volatile nightmare staff.png"
+      "imageName": "Volatile nightmare staff.png",
+      "cost": 5
     },
     {
       "name": "Blighted manta ray",
@@ -5143,11 +5171,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_manta_ray",
-      "imageName": "Blighted manta ray.png"
+      "imageName": "Blighted manta ray.png",
+      "cost": null
     },
     {
       "name": "Blighted super restore(4)",
@@ -5159,11 +5187,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_super_restore(4)",
-      "imageName": "Blighted super restore(4).png"
+      "imageName": "Blighted super restore(4).png",
+      "cost": null
     },
     {
       "name": "Blighted ancient ice sack",
@@ -5174,14 +5202,15 @@
         "ammo"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_ancient_ice_sack",
-      "imageName": "Blighted ancient ice sack.png"
+      "imageName": "Blighted ancient ice sack.png",
+      "cost": null
     },
     {
       "name": "Blighted entangle sack",
@@ -5192,14 +5221,15 @@
         "ammo"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_entangle_sack",
-      "imageName": "Blighted entangle sack.png"
+      "imageName": "Blighted entangle sack.png",
+      "cost": null
     },
     {
       "name": "Blighted teleport spell sack",
@@ -5210,14 +5240,15 @@
         "ammo"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_teleport_spell_sack",
-      "imageName": "Blighted teleport spell sack.png"
+      "imageName": "Blighted teleport spell sack.png",
+      "cost": null
     },
     {
       "name": "Blighted vengeance sack",
@@ -5228,14 +5259,15 @@
         "ammo"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_vengeance_sack",
-      "imageName": "Blighted vengeance sack.png"
+      "imageName": "Blighted vengeance sack.png",
+      "cost": null
     },
     {
       "name": "Swampbark body",
@@ -5248,11 +5280,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_body",
-      "imageName": "Swampbark body.png"
+      "imageName": "Swampbark body.png",
+      "cost": null
     },
     {
       "name": "Swampbark gauntlets",
@@ -5265,11 +5297,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_gauntlets",
-      "imageName": "Swampbark gauntlets.png"
+      "imageName": "Swampbark gauntlets.png",
+      "cost": null
     },
     {
       "name": "Swampbark boots",
@@ -5282,11 +5314,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_boots",
-      "imageName": "Swampbark boots.png"
+      "imageName": "Swampbark boots.png",
+      "cost": null
     },
     {
       "name": "Swampbark helm",
@@ -5299,11 +5331,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_helm",
-      "imageName": "Swampbark helm.png"
+      "imageName": "Swampbark helm.png",
+      "cost": null
     },
     {
       "name": "Swampbark legs",
@@ -5316,11 +5348,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_legs",
-      "imageName": "Swampbark legs.png"
+      "imageName": "Swampbark legs.png",
+      "cost": null
     },
     {
       "name": "Tome of water",
@@ -5335,11 +5367,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Tome_of_water",
-      "imageName": "Tome of water.png"
+      "imageName": "Tome of water.png",
+      "cost": 1
     },
     {
       "name": "Amethyst dart",
@@ -5351,11 +5383,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amethyst_dart",
-      "imageName": "Amethyst dart.png"
+      "imageName": "Amethyst dart.png",
+      "cost": null
     },
     {
       "name": "Lightbearer",
@@ -5367,11 +5399,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Lightbearer",
-      "imageName": "Lightbearer.png"
+      "imageName": "Lightbearer.png",
+      "cost": null
     },
     {
       "name": "Shattered relics variety ornament kit",
@@ -5382,14 +5414,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Shattered_relics_variety_ornament_kit",
-      "imageName": "Shattered relics variety ornament kit.png"
+      "imageName": "Shattered relics variety ornament kit.png",
+      "cost": null
     },
     {
       "name": "Shattered relics void ornament kit",
@@ -5400,14 +5433,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Shattered_relics_void_ornament_kit",
-      "imageName": "Shattered relics void ornament kit.png"
+      "imageName": "Shattered relics void ornament kit.png",
+      "cost": null
     },
     {
       "name": "Shattered relics mystic ornament kit",
@@ -5418,14 +5452,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Shattered_relics_mystic_ornament_kit",
-      "imageName": "Shattered relics mystic ornament kit.png"
+      "imageName": "Shattered relics mystic ornament kit.png",
+      "cost": null
     },
     {
       "name": "Loot key",
@@ -5437,11 +5472,11 @@
         "hidden"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Loot_key",
-      "imageName": "Loot key.png"
+      "imageName": "Loot key.png",
+      "cost": null
     },
     {
       "name": "Blighted surge sack",
@@ -5452,14 +5487,15 @@
         "ammo"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blighted_surge_sack",
-      "imageName": "Blighted surge sack.png"
+      "imageName": "Blighted surge sack.png",
+      "cost": null
     },
     {
       "name": "Scroll of imbuing",
@@ -5470,14 +5506,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Scroll_of_imbuing",
-      "imageName": "Scroll of imbuing.png"
+      "imageName": "Scroll of imbuing.png",
+      "cost": null
     },
     {
       "name": "Heavy ballista ornament kit",
@@ -5488,14 +5525,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Heavy_ballista_ornament_kit",
-      "imageName": "Heavy ballista ornament kit.png"
+      "imageName": "Heavy ballista ornament kit.png",
+      "cost": null
     },
     {
       "name": "Colossal blade",
@@ -5511,11 +5549,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Colossal_blade",
-      "imageName": "Colossal blade.png"
+      "imageName": "Colossal blade.png",
+      "cost": 2
     },
     {
       "name": "Elder maul ornament kit",
@@ -5526,14 +5564,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elder_maul_ornament_kit",
-      "imageName": "Elder maul ornament kit.png"
+      "imageName": "Elder maul ornament kit.png",
+      "cost": null
     },
     {
       "name": "Elder chaos robes ornament kit",
@@ -5544,14 +5583,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Elder_chaos_robes_ornament_kit",
-      "imageName": "Elder chaos robes ornament kit.png"
+      "imageName": "Elder chaos robes ornament kit.png",
+      "cost": null
     },
     {
       "name": "Thread of elidinis",
@@ -5565,11 +5605,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Thread_of_elidinis",
-      "imageName": "Thread of elidinis.png"
+      "imageName": "Thread of elidinis.png",
+      "cost": 2
     },
     {
       "name": "Webweaver bow",
@@ -5583,11 +5623,11 @@
       ],
       "behaviors": [],
       "tier": 5,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Webweaver_bow",
-      "imageName": "Webweaver bow.png"
+      "imageName": "Webweaver bow.png",
+      "cost": null
     },
     {
       "name": "Ursine chainmace",
@@ -5601,11 +5641,11 @@
       ],
       "behaviors": [],
       "tier": 5,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ursine_chainmace",
-      "imageName": "Ursine chainmace.png"
+      "imageName": "Ursine chainmace.png",
+      "cost": null
     },
     {
       "name": "Accursed sceptre",
@@ -5619,11 +5659,11 @@
       ],
       "behaviors": [],
       "tier": 5,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Accursed_sceptre",
-      "imageName": "Accursed sceptre.png"
+      "imageName": "Accursed sceptre.png",
+      "cost": null
     },
     {
       "name": "Accursed sceptre (a)",
@@ -5637,11 +5677,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Accursed_sceptre_(a)",
-      "imageName": "Accursed sceptre (a).png"
+      "imageName": "Accursed sceptre (a).png",
+      "cost": null
     },
     {
       "name": "Voidwaker",
@@ -5655,11 +5695,11 @@
       ],
       "behaviors": [],
       "tier": 5,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Voidwaker",
-      "imageName": "Voidwaker.png"
+      "imageName": "Voidwaker.png",
+      "cost": null
     },
     {
       "name": "Thammaron's sceptre (a)",
@@ -5672,11 +5712,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Thammaron%27s_sceptre_(a)",
-      "imageName": "Thammaron's sceptre (a).png"
+      "imageName": "Thammaron's sceptre (a).png",
+      "cost": null
     },
     {
       "name": "Dragon mace (bh)",
@@ -5690,11 +5730,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace_(bh)",
-      "imageName": "Dragon mace (bh).png"
+      "imageName": "Dragon mace (bh).png",
+      "cost": null
     },
     {
       "name": "Bounty hunter ornament kit",
@@ -5705,14 +5745,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Bounty_hunter_ornament_kit",
-      "imageName": "Bounty hunter ornament kit.png"
+      "imageName": "Bounty hunter ornament kit.png",
+      "cost": null
     },
     {
       "name": "Dragon mace imbue scroll",
@@ -5723,14 +5764,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "resupply"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace_imbue_scroll",
-      "imageName": "Dragon mace imbue scroll.png"
+      "imageName": "Dragon mace imbue scroll.png",
+      "cost": null
     },
     {
       "name": "Zombie axe",
@@ -5745,11 +5787,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Zombie_axe",
-      "imageName": "Zombie axe.png"
+      "imageName": "Zombie axe.png",
+      "cost": 3
     },
     {
       "name": "Hunters' sunlight crossbow",
@@ -5764,11 +5806,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Hunters%27_sunlight_crossbow",
-      "imageName": "Hunters' sunlight crossbow.png"
+      "imageName": "Hunters' sunlight crossbow.png",
+      "cost": 2
     },
     {
       "name": "Blue moon spear",
@@ -5781,11 +5823,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blue_moon_spear",
-      "imageName": "Blue moon spear.png"
+      "imageName": "Blue moon spear.png",
+      "cost": null
     },
     {
       "name": "Dual macuahuitl",
@@ -5798,11 +5840,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dual_macuahuitl",
-      "imageName": "Dual macuahuitl.png"
+      "imageName": "Dual macuahuitl.png",
+      "cost": null
     },
     {
       "name": "Eclipse atlatl",
@@ -5815,11 +5857,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Eclipse_atlatl",
-      "imageName": "Eclipse atlatl.png"
+      "imageName": "Eclipse atlatl.png",
+      "cost": null
     },
     {
       "name": "Eclipse moon chestplate",
@@ -5831,11 +5873,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Eclipse_moon_chestplate",
-      "imageName": "Eclipse moon chestplate.png"
+      "imageName": "Eclipse moon chestplate.png",
+      "cost": null
     },
     {
       "name": "Eclipse moon tassets",
@@ -5847,11 +5889,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Eclipse_moon_tassets",
-      "imageName": "Eclipse moon tassets.png"
+      "imageName": "Eclipse moon tassets.png",
+      "cost": null
     },
     {
       "name": "Eclipse moon helm",
@@ -5863,11 +5905,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Eclipse_moon_helm",
-      "imageName": "Eclipse moon helm.png"
+      "imageName": "Eclipse moon helm.png",
+      "cost": null
     },
     {
       "name": "Blue moon chestplate",
@@ -5880,11 +5922,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blue_moon_chestplate",
-      "imageName": "Blue moon chestplate.png"
+      "imageName": "Blue moon chestplate.png",
+      "cost": null
     },
     {
       "name": "Blue moon tassets",
@@ -5897,11 +5939,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blue_moon_tassets",
-      "imageName": "Blue moon tassets.png"
+      "imageName": "Blue moon tassets.png",
+      "cost": null
     },
     {
       "name": "Blue moon helm",
@@ -5914,11 +5956,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blue_moon_helm",
-      "imageName": "Blue moon helm.png"
+      "imageName": "Blue moon helm.png",
+      "cost": null
     },
     {
       "name": "Blood moon chestplate",
@@ -5931,11 +5973,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blood_moon_chestplate",
-      "imageName": "Blood moon chestplate.png"
+      "imageName": "Blood moon chestplate.png",
+      "cost": null
     },
     {
       "name": "Blood moon tassets",
@@ -5948,11 +5990,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blood_moon_tassets",
-      "imageName": "Blood moon tassets.png"
+      "imageName": "Blood moon tassets.png",
+      "cost": null
     },
     {
       "name": "Blood moon helm",
@@ -5965,11 +6007,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Blood_moon_helm",
-      "imageName": "Blood moon helm.png"
+      "imageName": "Blood moon helm.png",
+      "cost": null
     },
     {
       "name": "Burning claws",
@@ -5985,11 +6027,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Burning_claws",
-      "imageName": "Burning claws.png"
+      "imageName": "Burning claws.png",
+      "cost": 4
     },
     {
       "name": "Armageddon weapon scroll",
@@ -6000,14 +6042,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armageddon_weapon_scroll",
-      "imageName": "Armageddon weapon scroll.png"
+      "imageName": "Armageddon weapon scroll.png",
+      "cost": null
     },
     {
       "name": "Armageddon cape fabric",
@@ -6018,14 +6061,15 @@
         "consumable"
       ],
       "behaviors": [
-        "shop"
+        "shop",
+        "unlock"
       ],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Armageddon_cape_fabric",
-      "imageName": "Armageddon cape fabric.png"
+      "imageName": "Armageddon cape fabric.png",
+      "cost": null
     },
     {
       "name": "Amulet of rancour",
@@ -6040,11 +6084,11 @@
         "talent"
       ],
       "tier": 5,
-      "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_rancour",
-      "imageName": "Amulet of rancour.png"
+      "imageName": "Amulet of rancour.png",
+      "cost": 5
     },
     {
       "name": "Antler guard",
@@ -6059,11 +6103,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Antler_guard",
-      "imageName": "Antler guard.png"
+      "imageName": "Antler guard.png",
+      "cost": 2
     },
     {
       "name": "Arkan blade",
@@ -6078,11 +6122,11 @@
         "talent"
       ],
       "tier": 3,
-      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Arkan_blade",
-      "imageName": "Arkan blade.png"
+      "imageName": "Arkan blade.png",
+      "cost": 3
     },
     {
       "name": "Crimson kisten",
@@ -6097,11 +6141,11 @@
         "talent"
       ],
       "tier": 4,
-      "cost": 4,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Crimson_kisten",
-      "imageName": "Crimson kisten.png"
+      "imageName": "Crimson kisten.png",
+      "cost": 4
     },
     {
       "name": "Halibut",
@@ -6113,11 +6157,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Halibut",
-      "imageName": "Halibut.png"
+      "imageName": "Halibut.png",
+      "cost": null
     },
     {
       "name": "Marlin",
@@ -6129,11 +6173,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Marlin",
-      "imageName": "Marlin.png"
+      "imageName": "Marlin.png",
+      "cost": null
     },
     {
       "name": "Necklace of rupture",
@@ -6148,11 +6192,11 @@
         "talent"
       ],
       "tier": 5,
-      "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Necklace_of_rupture",
-      "imageName": "Necklace of rupture.png"
+      "imageName": "Necklace of rupture.png",
+      "cost": 5
     },
     {
       "name": "Seeking dragon arrow",
@@ -6164,11 +6208,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Seeking_dragon_arrow",
-      "imageName": "Seeking dragon arrow.png"
+      "imageName": "Seeking dragon arrow.png",
+      "cost": null
     },
     {
       "name": "Surge potion",
@@ -6182,11 +6226,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Surge_potion",
-      "imageName": "Surge potion.png"
+      "imageName": "Surge potion.png",
+      "cost": 2
     },
     {
       "name": "Extended stamina potion(4)",
@@ -6200,11 +6244,11 @@
         "talent"
       ],
       "tier": 1,
-      "cost": 1,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Extended_stamina_potion(4)",
-      "imageName": "Extended stamina potion(4).png"
+      "imageName": "Extended stamina potion(4).png",
+      "cost": 1
     },
     {
       "name": "Belle's folly",
@@ -6219,11 +6263,11 @@
         "talent"
       ],
       "tier": 2,
-      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Belle%27s_folly",
-      "imageName": "Belle's folly.png"
+      "imageName": "Belle's folly.png",
+      "cost": 2
     },
     {
       "name": "Spined armour set",
@@ -6236,11 +6280,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Spined_armour_set",
-      "imageName": "Spined armour set.png"
+      "imageName": "Spined armour set.png",
+      "cost": null
     },
     {
       "name": "Rock-shell armour set",
@@ -6253,11 +6297,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rock-shell_armour_set",
-      "imageName": "Rock-shell armour set.png"
+      "imageName": "Rock-shell armour set.png",
+      "cost": null
     },
     {
       "name": "Skeletal armour set",
@@ -6270,11 +6314,11 @@
       ],
       "behaviors": [],
       "tier": null,
-      "cost": null,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_armour_set",
-      "imageName": "Skeletal armour set.png"
+      "imageName": "Skeletal armour set.png",
+      "cost": null
     }
   ],
   "tagDefinitions": [
