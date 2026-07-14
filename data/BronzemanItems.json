@@ -575,6 +575,19 @@
       "cost": null
     },
     {
+      "name": "Granite shield",
+      "alias": "Granite shield",
+      "uid": "granite-shield",
+      "itemId": 3122,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_shield",
+      "imageName": "Granite shield.png"
+    },
+    {
       "name": "Cooked karambwan",
       "alias": "Cooked karambwan",
       "uid": "cooked-karambwan",
@@ -638,6 +651,19 @@
       "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_helm",
       "imageName": "Berserker helm.png",
       "cost": null
+    },
+    {
+      "name": "Warrior helm",
+      "alias": "Warrior helm",
+      "uid": "warrior-helm",
+      "itemId": 3753,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Warrior_helm",
+      "imageName": "Warrior helm.png"
     },
     {
       "name": "Farseer helm",
@@ -1674,6 +1700,19 @@
       "cost": null
     },
     {
+      "name": "Granite legs",
+      "alias": "Granite legs",
+      "uid": "granite-legs",
+      "itemId": 6809,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_legs",
+      "imageName": "Granite legs.png"
+    },
+    {
       "name": "Infinity top",
       "alias": "Infinity top",
       "uid": "infinity-top",
@@ -2245,6 +2284,32 @@
       "cost": 2
     },
     {
+      "name": "Granite body",
+      "alias": "Granite body",
+      "uid": "granite-body",
+      "itemId": 10564,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_body",
+      "imageName": "Granite body.png"
+    },
+    {
+      "name": "Granite helm",
+      "alias": "Granite helm",
+      "uid": "granite-helm",
+      "itemId": 10589,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_helm",
+      "imageName": "Granite helm.png"
+    },
+    {
       "name": "Helm of neitiznot",
       "alias": "Helm of neitiznot",
       "uid": "helm-of-neitiznot",
@@ -2373,6 +2438,58 @@
       "wikiLink": "https://oldschool.runescape.wiki/w/Void_melee_helm",
       "imageName": "Void melee helm.png",
       "cost": null
+    },
+    {
+      "name": "Seers ring (i)",
+      "alias": "Seers ring (i)",
+      "uid": "seers-ring-i",
+      "itemId": 11770,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Seers_ring_(i)",
+      "imageName": "Seers ring (i).png"
+    },
+    {
+      "name": "Archers ring (i)",
+      "alias": "Archers ring (i)",
+      "uid": "archers-ring-i",
+      "itemId": 11771,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Archers_ring_(i)",
+      "imageName": "Archers ring (i).png"
+    },
+    {
+      "name": "Warrior ring (i)",
+      "alias": "Warrior ring (i)",
+      "uid": "warrior-ring-i",
+      "itemId": 11772,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Warrior_ring_(i)",
+      "imageName": "Warrior ring (i).png"
+    },
+    {
+      "name": "Berserker ring (i)",
+      "alias": "Berserker ring (i)",
+      "uid": "berserker-ring-i",
+      "itemId": 11773,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Berserker_ring_(i)",
+      "imageName": "Berserker ring (i).png"
     },
     {
       "name": "Armadyl crossbow",
@@ -2992,6 +3109,110 @@
       "imageName": "Holy elixir.png"
     },
     {
+      "name": "Red dragonhide set",
+      "alias": "Red dragonhide set",
+      "uid": "red-dragonhide-set",
+      "itemId": 12869,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Red_dragonhide_set",
+      "imageName": "Red dragonhide set.png"
+    },
+    {
+      "name": "Black dragonhide set",
+      "alias": "Black dragonhide set",
+      "uid": "black-dragonhide-set",
+      "itemId": 12871,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Black_dragonhide_set",
+      "imageName": "Black dragonhide set.png"
+    },
+    {
+      "name": "Guthan's armour set",
+      "alias": "Guthan's armour set",
+      "uid": "guthans-armour-set",
+      "itemId": 12873,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Guthan%27s_armour_set",
+      "imageName": "Guthan's armour set.png"
+    },
+    {
+      "name": "Verac's armour set",
+      "alias": "Verac's armour set",
+      "uid": "veracs-armour-set",
+      "itemId": 12875,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Verac%27s_armour_set",
+      "imageName": "Verac's armour set.png"
+    },
+    {
+      "name": "Dharok's armour set",
+      "alias": "Dharok's armour set",
+      "uid": "dharoks-armour-set",
+      "itemId": 12877,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Dharok%27s_armour_set",
+      "imageName": "Dharok's armour set.png"
+    },
+    {
+      "name": "Torag's armour set",
+      "alias": "Torag's armour set",
+      "uid": "torags-armour-set",
+      "itemId": 12879,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Torag%27s_armour_set",
+      "imageName": "Torag's armour set.png"
+    },
+    {
+      "name": "Ahrim's armour set",
+      "alias": "Ahrim's armour set",
+      "uid": "ahrims-armour-set",
+      "itemId": 12881,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ahrim%27s_armour_set",
+      "imageName": "Ahrim's armour set.png"
+    },
+    {
+      "name": "Karil's armour set",
+      "alias": "Karil's armour set",
+      "uid": "karils-armour-set",
+      "itemId": 12883,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Karil%27s_armour_set",
+      "imageName": "Karil's armour set.png"
+    },
+    {
       "name": "Trident of the swamp",
       "alias": "Trident of the swamp",
       "uid": "trident-of-the-swamp",
@@ -3089,6 +3310,84 @@
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_defender",
       "imageName": "Dragon defender.png",
       "cost": null
+    },
+    {
+      "name": "Zamorak dragonhide set",
+      "alias": "Zamorak dragonhide set",
+      "uid": "zamorak-dragonhide-set",
+      "itemId": 13161,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Zamorak_dragonhide_set",
+      "imageName": "Zamorak dragonhide set.png"
+    },
+    {
+      "name": "Saradomin dragonhide set",
+      "alias": "Saradomin dragonhide set",
+      "uid": "saradomin-dragonhide-set",
+      "itemId": 13163,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Saradomin_dragonhide_set",
+      "imageName": "Saradomin dragonhide set.png"
+    },
+    {
+      "name": "Guthix dragonhide set",
+      "alias": "Guthix dragonhide set",
+      "uid": "guthix-dragonhide-set",
+      "itemId": 13165,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Guthix_dragonhide_set",
+      "imageName": "Guthix dragonhide set.png"
+    },
+    {
+      "name": "Bandos dragonhide set",
+      "alias": "Bandos dragonhide set",
+      "uid": "bandos-dragonhide-set",
+      "itemId": 13167,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bandos_dragonhide_set",
+      "imageName": "Bandos dragonhide set.png"
+    },
+    {
+      "name": "Armadyl dragonhide set",
+      "alias": "Armadyl dragonhide set",
+      "uid": "armadyl-dragonhide-set",
+      "itemId": 13169,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Armadyl_dragonhide_set",
+      "imageName": "Armadyl dragonhide set.png"
+    },
+    {
+      "name": "Ancient dragonhide set",
+      "alias": "Ancient dragonhide set",
+      "uid": "ancient-dragonhide-set",
+      "itemId": 13171,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_dragonhide_set",
+      "imageName": "Ancient dragonhide set.png"
     },
     {
       "name": "Abyssal dagger",
@@ -3648,6 +3947,61 @@
       "cost": null
     },
     {
+      "name": "Granite boots",
+      "alias": "Granite boots",
+      "uid": "granite-boots",
+      "itemId": 21643,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_boots",
+      "imageName": "Granite boots.png"
+    },
+    {
+      "name": "Granite longsword",
+      "alias": "Granite longsword",
+      "uid": "granite-longsword",
+      "itemId": 21646,
+      "tags": [
+        "melee",
+        "weapon"
+      ],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_longsword",
+      "imageName": "Granite longsword.png"
+    },
+    {
+      "name": "Granite gloves",
+      "alias": "Granite gloves",
+      "uid": "granite-gloves",
+      "itemId": 21736,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_gloves",
+      "imageName": "Granite gloves.png"
+    },
+    {
+      "name": "Granite ring",
+      "alias": "Granite ring",
+      "uid": "granite-ring",
+      "itemId": 21739,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_ring",
+      "imageName": "Granite ring.png"
+    },
+    {
       "name": "Granite hammer",
       "alias": "Granite hammer",
       "uid": "granite-hammer",
@@ -3661,6 +4015,19 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Granite_hammer",
       "imageName": "Granite hammer.png"
+    },
+    {
+      "name": "Granite ring (i)",
+      "alias": "Granite ring (i)",
+      "uid": "granite-ring-i",
+      "itemId": 21752,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_ring_(i)",
+      "imageName": "Granite ring (i).png"
     },
     {
       "name": "Imbued saradomin cape",
@@ -4294,6 +4661,71 @@
       "cost": null
     },
     {
+      "name": "Swampbark body",
+      "alias": "Swampbark body",
+      "uid": "swampbark-body",
+      "itemId": 25389,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_body",
+      "imageName": "Swampbark body.png"
+    },
+    {
+      "name": "Swampbark gauntlets",
+      "alias": "Swampbark gauntlets",
+      "uid": "swampbark-gauntlets",
+      "itemId": 25392,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_gauntlets",
+      "imageName": "Swampbark gauntlets.png"
+    },
+    {
+      "name": "Swampbark boots",
+      "alias": "Swampbark boots",
+      "uid": "swampbark-boots",
+      "itemId": 25395,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_boots",
+      "imageName": "Swampbark boots.png"
+    },
+    {
+      "name": "Swampbark helm",
+      "alias": "Swampbark helm",
+      "uid": "swampbark-helm",
+      "itemId": 25398,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_helm",
+      "imageName": "Swampbark helm.png"
+    },
+    {
+      "name": "Swampbark legs",
+      "alias": "Swampbark legs",
+      "uid": "swampbark-legs",
+      "itemId": 25401,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Swampbark_legs",
+      "imageName": "Swampbark legs.png"
+    },
+    {
       "name": "Tome of water",
       "alias": "Tome of water",
       "uid": "tome-of-water",
@@ -4327,6 +4759,19 @@
       "wikiLink": "https://oldschool.runescape.wiki/w/Amethyst_dart",
       "imageName": "Amethyst dart.png",
       "cost": null
+    },
+    {
+      "name": "Lightbearer",
+      "alias": "Lightbearer",
+      "uid": "lightbearer",
+      "itemId": 25975,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Lightbearer",
+      "imageName": "Lightbearer.png"
     },
     {
       "name": "Shattered relics variety ornament kit",
@@ -4515,7 +4960,7 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Webweaver_bow",
       "imageName": "Webweaver bow.png",
-      "cost": 5
+      "cost": null
     },
     {
       "name": "Ursine chainmace",
@@ -4532,7 +4977,7 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ursine_chainmace",
       "imageName": "Ursine chainmace.png",
-      "cost": 5
+      "cost": null
     },
     {
       "name": "Accursed sceptre",
@@ -4549,7 +4994,7 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Accursed_sceptre",
       "imageName": "Accursed sceptre.png",
-      "cost": 5
+      "cost": null
     },
     {
       "name": "Accursed sceptre (a)",
@@ -5071,22 +5516,6 @@
       "cost": 1
     },
     {
-      "name": "Granite longsword",
-      "alias": "Granite longsword",
-      "uid": "granite-longsword",
-      "itemId": null,
-      "tags": [
-        "melee",
-        "weapon"
-      ],
-      "tier": null,
-      "cost": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
-      "wikiLink": "https://oldschool.runescape.wiki/w/Granite_longsword",
-      "imageName": "Granite longsword.png"
-    },
-    {
       "name": "Belle's folly",
       "alias": "Belle's folly",
       "uid": "belles-folly",
@@ -5102,6 +5531,45 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Belle%27s_folly",
       "imageName": "Belle's folly.png"
+    },
+    {
+      "name": "Spined armour set",
+      "alias": "Spined armour set",
+      "uid": "spined-armour-set",
+      "itemId": null,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Spined_armour_set",
+      "imageName": "Spined armour set.png"
+    },
+    {
+      "name": "Rock-shell armour set",
+      "alias": "Rock-shell armour set",
+      "uid": "rock-shell-armour-set",
+      "itemId": null,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Rock-shell_armour_set",
+      "imageName": "Rock-shell armour set.png"
+    },
+    {
+      "name": "Skeletal armour set",
+      "alias": "Skeletal armour set",
+      "uid": "skeletal-armour-set",
+      "itemId": null,
+      "tags": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Skeletal_armour_set",
+      "imageName": "Skeletal armour set.png"
     }
   ],
   "tagDefinitions": [
