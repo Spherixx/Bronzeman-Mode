@@ -7,6 +7,7 @@ export function defaultState() {
     shopPurchases: {},
     repeatablePurchases: {},
     basicUnlocks: [],
+    lockedItems: [],
     challengeCompletions: {},
     challengeRewardUnlocks: [],
     challengeRolls: {},

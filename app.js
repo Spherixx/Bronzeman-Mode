@@ -61,6 +61,7 @@ Object.assign(ctx.actions, {
 });
 
 async function initApp() {
+  ctx.actions.initImageFallbacks();
   await ctx.dataHelpers.loadAppData();
   Object.assign(ctx.state, ctx.domain.sanitizeState(ctx.state));
   ctx.collection.initCollectionControls();

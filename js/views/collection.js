@@ -22,13 +22,21 @@ const LEGACY_TAG_GROUPS = {
   consumables: ["consumable"]
 };
 
+const BEHAVIOR_TAGS = new Set(["hidden", "shop", "talent", "unlock", "resupply"]);
+
 export function createCollection(ctx) {
   function itemDisplayName(item) {
     return item.alias || item.name || "Item";
   }
 
   function itemTagList(item) {
-    return uniqueTags(item.tags ?? []);
+    const tags = uniqueTags(item.tags ?? []);
+    return Array.isArray(item.behaviors) ? tags : tags.filter((tag) => !BEHAVIOR_TAGS.has(tag));
+  }
+
+  function itemBehaviorList(item) {
+    if (Array.isArray(item.behaviors)) return uniqueTags(item.behaviors);
+    return uniqueTags(item.tags ?? []).filter((tag) => BEHAVIOR_TAGS.has(tag));
   }
 
   function itemImagePath(item) {
@@ -36,10 +44,10 @@ export function createCollection(ctx) {
   }
 
   function collectionSourceType(item) {
-    const tags = itemTagList(item);
+    const behaviors = itemBehaviorList(item);
     if (item.alwaysAvailable || item.unlocked) return "always";
-    if (tags.includes("talent")) return "talent";
-    if (tags.includes("shop")) return "shop";
+    if (behaviors.includes("talent")) return "talent";
+    if (behaviors.includes("shop")) return "shop";
     return "collection";
   }
 
@@ -74,12 +82,12 @@ export function createCollection(ctx) {
   }
 
   function collectionExcluded(item) {
-    const tags = itemTagList(item);
+    const behaviors = itemBehaviorList(item);
     return Boolean(
       item.hidden ||
       item.excludeFromCollection ||
       item.collectionHidden ||
-      tags.includes("hidden")
+      behaviors.includes("hidden")
     );
   }
 
@@ -94,9 +102,10 @@ export function createCollection(ctx) {
 
   function collectionItemFromDefinition(item) {
     const tags = itemTagList(item);
+    const behaviors = itemBehaviorList(item);
     const name = itemDisplayName(item);
     const image = itemImagePath(item);
-    const sourceType = collectionSourceType(item);
+    const sourceType = collectionSourceType({ ...item, behaviors });
     const displayTags = uniqueTags(tags.map(collectionDisplayTag));
 
     return {
@@ -107,9 +116,10 @@ export function createCollection(ctx) {
       itemId: item.itemId,
       category: collectionCategoryFromTags(tags),
       sourceType,
-      automatic: sourceType !== "collection",
+      automatic: false,
       images: image ? [image] : [],
       tags,
+      behaviors,
       searchText: normalizeCollectionText(`${name} ${item.name ?? ""} ${tags.join(" ")} ${displayTags.join(" ")}`)
     };
   }
@@ -138,24 +148,24 @@ export function createCollection(ctx) {
   }
 
   function collectionIsUnlocked(item) {
+    if (ctx.state.lockedItems.includes(item.id)) return false;
+    if (ctx.state.basicUnlocks.includes(item.id)) return true;
     if (item.sourceType === "always") return true;
     if (challengeCollectionUnlocksItem(item)) return true;
 
-    const tags = item.tags ?? [];
-    const unlockedByTalent = tags.includes("talent") && ctx.data.unlocks.some((unlock) => {
+    const behaviors = item.behaviors ?? [];
+    const unlockedByTalent = behaviors.includes("talent") && ctx.data.unlocks.some((unlock) => {
       return ctx.state.purchased.includes(unlock.id) && unlockMatchesCollectionItem(unlock, item);
     });
-    const unlockedByShop = tags.includes("shop") && ctx.data.shopItems.some((shopItem) => {
+    const unlockedByShop = behaviors.includes("shop") && ctx.data.shopItems.some((shopItem) => {
       return (ctx.state.shopPurchases[shopItem.id] ?? 0) > 0 && shopMatchesCollectionItem(shopItem, item);
     });
 
     if (unlockedByTalent || unlockedByShop) return true;
-    if (tags.includes("talent") || tags.includes("shop")) return false;
-    return ctx.state.basicUnlocks.includes(item.id);
+    return false;
   }
 
   function collectionStatusLabel(item) {
-    if (item.sourceType === "always") return "Unlocked";
     return collectionIsUnlocked(item) ? "Unlocked" : "Locked";
   }
 
@@ -195,17 +205,15 @@ export function createCollection(ctx) {
   }
 
   function renderUnlockCard(item) {
-    const checkable = !item.automatic && item.sourceType === "collection";
-    const label = document.createElement(checkable ? "label" : "article");
+    const label = document.createElement("label");
     const unlocked = collectionIsUnlocked(item);
-    const status = collectionStatusLabel(item);
-    label.className = `unlocked-item ${checkable ? "checkable" : "auto"} ${unlocked ? "is-unlocked" : "is-locked"} source-${item.sourceType}`;
-    label.title = checkable ? `${unlocked ? "Lock" : "Unlock"} ${item.name}` : `${item.name} - ${status}`;
-    if (checkable) label.setAttribute("aria-label", `${unlocked ? "Lock" : "Unlock"} ${item.name}`);
+    label.className = `unlocked-item checkable ${unlocked ? "is-unlocked" : "is-locked"} source-${item.sourceType}`;
+    label.title = `${unlocked ? "Lock" : "Unlock"} ${item.name}`;
+    label.setAttribute("aria-label", `${unlocked ? "Lock" : "Unlock"} ${item.name}`);
 
     const images = ctx.actions.renderItemImages(item.images ?? [item.image]);
     label.innerHTML = `
-      ${checkable ? `<input type="checkbox" ${unlocked ? "checked" : ""} aria-label="Unlock ${ctx.actions.escapeHtml(item.name)}" />` : ""}
+      <input type="checkbox" ${unlocked ? "checked" : ""} aria-label="${unlocked ? "Lock" : "Unlock"} ${ctx.actions.escapeHtml(item.name)}" />
       <div class="unlocked-art">${images}</div>
       <div class="unlocked-copy">
         <h3>${ctx.actions.escapeHtml(item.name)}</h3>
@@ -213,13 +221,18 @@ export function createCollection(ctx) {
       </div>
     `;
 
-    if (checkable) {
-      label.querySelector("input").addEventListener("change", (event) => {
-        ctx.domain.setBasicUnlockChecked(item.id, event.target.checked);
-        ctx.actions.saveState();
-        renderUnlocks();
-      });
-    }
+    label.querySelector("input").addEventListener("change", (event) => {
+      const shouldUnlock = event.target.checked;
+      if (!shouldUnlock && !window.confirm(`Are you sure you want to lock ${item.name}?`)) {
+        event.target.checked = true;
+        return;
+      }
+
+      const talentUnlockIds = ctx.data.unlocks
+        .filter((unlock) => ctx.state.purchased.includes(unlock.id) && unlockMatchesCollectionItem(unlock, item))
+        .map((unlock) => unlock.id);
+      ctx.domain.setCollectionItemLocked(item.id, !shouldUnlock, talentUnlockIds);
+    });
 
     return label;
   }
@@ -281,14 +294,12 @@ export function createCollection(ctx) {
     const normalized = normalizeCollectionText(value);
     if (!normalized) return;
 
-    const match = collectionItems().find((item) => normalizeCollectionText(item.name) === normalized && item.sourceType === "collection");
+    const match = collectionItems().find((item) => normalizeCollectionText(item.name) === normalized);
     if (!match) return;
 
-    ctx.domain.setBasicUnlockChecked(match.id, true);
     ctx.collectionUi.search = match.name;
     if (input) input.value = match.name;
-    ctx.actions.saveState();
-    renderUnlocks();
+    ctx.domain.setCollectionItemLocked(match.id, false);
   }
 
   function initCollectionControls() {
@@ -341,6 +352,7 @@ export function createCollection(ctx) {
   return {
     itemDisplayName,
     itemTagList,
+    itemBehaviorList,
     itemImagePath,
     collectionSourceType,
     collectionTagGroups,

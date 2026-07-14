@@ -120,6 +120,23 @@ export function createDomain(ctx) {
     }
   }
 
+  function setCollectionItemLocked(id, locked, talentUnlockIds = []) {
+    if (locked) {
+      ctx.state.basicUnlocks = ctx.state.basicUnlocks.filter((item) => item !== id);
+      if (!ctx.state.lockedItems.includes(id)) ctx.state.lockedItems.push(id);
+      const refunded = new Set(talentUnlockIds);
+      ctx.state.purchased = ctx.state.purchased.filter((item) => !refunded.has(item));
+    } else {
+      ctx.state.lockedItems = ctx.state.lockedItems.filter((item) => item !== id);
+      if (!ctx.state.basicUnlocks.includes(id)) ctx.state.basicUnlocks.push(id);
+    }
+
+    ctx.actions.saveState();
+    ctx.actions.renderStats();
+    ctx.actions.updateTalentTreeState();
+    ctx.actions.renderUnlocks();
+  }
+
   function buyUnlock(id) {
     const unlock = ctx.data.unlocks.find((item) => item.id === id);
     if (!unlock || !canBuy(unlock)) return;
@@ -191,6 +208,10 @@ export function createDomain(ctx) {
     const basicUnlocks = Array.isArray(rawState?.basicUnlocks)
       ? [...new Set(rawState.basicUnlocks)].filter((id) => typeof id === "string" && id.length)
       : [];
+    const validCollectionItems = new Set(ctx.data.itemDefinitions.map((item) => item.id));
+    const lockedItems = Array.isArray(rawState?.lockedItems)
+      ? [...new Set(rawState.lockedItems)].filter((id) => validCollectionItems.has(id))
+      : [];
 
     Object.entries(rawState?.challengeCompletions ?? {}).forEach(([id, count]) => {
       if (validChallengeIds.has(id) && Number.isFinite(count)) {
@@ -225,6 +246,7 @@ export function createDomain(ctx) {
       shopPurchases,
       repeatablePurchases,
       basicUnlocks,
+      lockedItems,
       challengeCompletions,
       challengeRewardUnlocks,
       challengeRolls,
@@ -252,6 +274,7 @@ export function createDomain(ctx) {
       shopPurchases,
       repeatablePurchases: mergeCountMaps(local.repeatablePurchases, remote.repeatablePurchases),
       basicUnlocks: [...local.basicUnlocks, ...remote.basicUnlocks],
+      lockedItems: [...local.lockedItems, ...remote.lockedItems],
       challengeCompletions,
       challengeRewardUnlocks: [...local.challengeRewardUnlocks, ...remote.challengeRewardUnlocks],
       challengeRolls: { ...local.challengeRolls, ...remote.challengeRolls },
@@ -279,6 +302,7 @@ export function createDomain(ctx) {
     lockReason,
     setChallengeCompleted,
     setBasicUnlockChecked,
+    setCollectionItemLocked,
     buyUnlock,
     refundUnlock,
     challengeRewardIsUnlocked,

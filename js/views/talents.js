@@ -2,10 +2,11 @@ export function createTalentView(ctx) {
   function renderTalentTree() {
     const tree = document.getElementById("talentTree");
     tree.innerHTML = "";
-    const maxTier = Math.max(0, ...ctx.data.unlocks.map((unlock) => unlock.tier));
-    const minTier = Math.min(0, ...ctx.data.unlocks.map((unlock) => unlock.tier));
-
-    for (let tierNumber = minTier; tierNumber <= maxTier; tierNumber += 1) {
+    const tierNumbers = [...new Set(ctx.data.unlocks.map((unlock) => unlock.tier))]
+      .filter((tier) => Number.isFinite(tier) && tier > 0)
+      .sort((a, b) => a - b);
+    const maxTier = tierNumbers.at(-1);
+    tierNumbers.forEach((tierNumber) => {
       const tier = document.createElement("div");
       tier.className = "tier";
       tier.dataset.tier = tierNumber;
@@ -15,7 +16,7 @@ export function createTalentView(ctx) {
       const tierProgress = ctx.domain.tierRequirementProgress(tierNumber);
       label.className = "tier-label";
       requirement.className = `tier-requirement ${tierProgress.unlocked ? "unlocked" : "locked"}`;
-      label.innerHTML = `<b>TIER ${tierNumber}</b> | ${tierNumber === 0 ? "STARTER" : tierNumber === 1 ? "BASE" : tierNumber === maxTier ? "ENDGAME" : "POWER"}`;
+      label.innerHTML = `<b>TIER ${tierNumber}</b> | ${tierNumber === 1 ? "BASE" : tierNumber === maxTier ? "ENDGAME" : "POWER"}`;
       requirement.textContent = tierNumber <= 1 ? "Open" : `Tier ${tierNumber - 1}: ${Math.min(tierProgress.purchased, tierProgress.required)} / ${tierProgress.required}`;
       tier.appendChild(label);
       tier.appendChild(requirement);
@@ -50,7 +51,7 @@ export function createTalentView(ctx) {
       });
 
       tree.appendChild(tier);
-    }
+    });
   }
 
   function updateTalentTreeState() {

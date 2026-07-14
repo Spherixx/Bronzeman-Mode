@@ -10,7 +10,19 @@ import {
   withoutTrailingPeriod
 } from "./utils.js";
 
+const BEHAVIOR_TAGS = new Set(["hidden", "shop", "talent", "unlock", "resupply"]);
+
 export function createDataLoader(ctx) {
+  function dataBehaviors(entry) {
+    if (Array.isArray(entry?.behaviors)) return uniqueTags(entry.behaviors);
+    return uniqueTags(entry?.tags ?? []).filter((tag) => BEHAVIOR_TAGS.has(tag));
+  }
+
+  function dataTags(entry) {
+    const tags = uniqueTags(entry?.tags ?? []);
+    return Array.isArray(entry?.behaviors) ? tags : tags.filter((tag) => !BEHAVIOR_TAGS.has(tag));
+  }
+
   function dataDisplayName(entry, fallback = "Item") {
     return entry?.alias || entry?.name || fallback;
   }
@@ -128,9 +140,10 @@ export function createDataLoader(ctx) {
   function normalizeTalentUnlock(entry, sourceType) {
     const cost = toNumber(entry.cost, NaN);
     const tier = toNumber(entry.tier, NaN);
-    if (!Number.isFinite(cost) || cost < 0 || !Number.isFinite(tier) || tier < 0) return null;
+    if (!Number.isFinite(cost) || cost < 0 || !Number.isFinite(tier) || tier <= 0) return null;
 
-    const tags = uniqueTags(entry.tags ?? []);
+    const tags = dataTags(entry);
+    const behaviors = dataBehaviors(entry);
     const collectionIds = sourceType === "set"
       ? itemIdsFromDataIds(entry.itemIds)
       : [dataUid(entry)].filter(Boolean);
@@ -141,6 +154,7 @@ export function createDataLoader(ctx) {
       cost,
       tier,
       tags,
+      behaviors,
       requires: toArray(entry.requires),
       collectionIds,
       images: [imageForDataEntry({ ...entry, tags })].filter(Boolean),
@@ -150,13 +164,13 @@ export function createDataLoader(ctx) {
 
   function buildDataUnlocks(itemsData, itemSetsData, unlocksData) {
     const itemUnlocks = toArray(itemsData?.items)
-      .filter((item) => toArray(item.tags).includes("talent"))
+      .filter((item) => dataBehaviors(item).includes("talent"))
       .map((item) => normalizeTalentUnlock(item, "item"));
     const setUnlocks = toArray(itemSetsData?.itemSets)
-      .filter((itemSet) => toArray(itemSet.tags).includes("talent"))
+      .filter((itemSet) => dataBehaviors(itemSet).includes("talent"))
       .map((itemSet) => normalizeTalentUnlock(itemSet, "set"));
     const nonItemUnlocks = toArray(unlocksData?.unlocks)
-      .filter((unlock) => toArray(unlock.tags).includes("talent"))
+      .filter((unlock) => dataBehaviors(unlock).includes("talent"))
       .map((unlock) => normalizeTalentUnlock(unlock, "unlock"));
 
     return [...itemUnlocks, ...setUnlocks, ...nonItemUnlocks].filter(Boolean);
@@ -171,10 +185,10 @@ export function createDataLoader(ctx) {
     });
   }
 
-  function normalizeShopSection(entry, tags) {
-    if (tags.includes("unlock") || entry.section === "unlocks") return "unlocks";
-    if (tags.includes("resupply") || entry.section === "resupply") return "resupply";
-    return tags.some((tag) => ["rune", "ammo", "food", "potion"].includes(tag)) ? "resupply" : "unlocks";
+  function normalizeShopSection(entry, behaviors) {
+    if (behaviors.includes("resupply") || entry.section === "resupply") return "resupply";
+    if (behaviors.includes("unlock") || entry.section === "unlocks") return "unlocks";
+    return "unlocks";
   }
 
   function normalizeShopCategory(entry, tags) {
@@ -196,15 +210,17 @@ export function createDataLoader(ctx) {
   }
 
   function normalizeShopItem(entry, sourceType) {
-    const tags = uniqueTags(entry.tags ?? []);
+    const tags = dataTags(entry);
+    const behaviors = dataBehaviors(entry);
     return {
       id: dataUid(entry, "shop"),
       category: normalizeShopCategory(entry, tags),
-      section: normalizeShopSection(entry, tags),
+      section: normalizeShopSection(entry, behaviors),
       name: dataDisplayName(entry, "Shop item"),
       cost: toNumber(entry.cost, 1),
       note: entry.note,
       tags,
+      behaviors,
       items: shopItemImages(entry, sourceType)
     };
   }
@@ -218,7 +234,7 @@ export function createDataLoader(ctx) {
     const seen = new Set();
     const shopItems = sources.flatMap(([entries, sourceType]) => {
       return toArray(entries)
-        .filter((entry) => uniqueTags(entry.tags ?? []).includes("shop"))
+        .filter((entry) => dataBehaviors(entry).includes("shop"))
         .map((entry) => normalizeShopItem(entry, sourceType));
     }).filter((item) => {
       if (!item.id || seen.has(item.id)) return false;
@@ -239,16 +255,18 @@ export function createDataLoader(ctx) {
   function enrichCollectionSignals(items) {
     return items.map((item) => {
       const tags = uniqueTags(item.tags ?? []);
-      if (ctx.data.unlocks.some((unlock) => ctx.collection.unlockMatchesCollectionItem(unlock, item)) && !tags.includes("talent")) tags.push("talent");
-      if (ctx.data.shopItems.some((shopItem) => ctx.collection.shopMatchesCollectionItem(shopItem, item)) && !tags.includes("shop")) tags.push("shop");
+      const behaviors = uniqueTags(item.behaviors ?? []);
+      if (ctx.data.unlocks.some((unlock) => ctx.collection.unlockMatchesCollectionItem(unlock, item)) && !behaviors.includes("talent")) behaviors.push("talent");
+      if (ctx.data.shopItems.some((shopItem) => ctx.collection.shopMatchesCollectionItem(shopItem, item)) && !behaviors.includes("shop")) behaviors.push("shop");
 
       const displayTags = uniqueTags(tags.map(ctx.collection.collectionDisplayTag));
       return {
         ...item,
         tags,
+        behaviors,
         category: ctx.collection.collectionCategoryFromTags(tags),
-        sourceType: ctx.collection.collectionSourceType({ ...item, tags }),
-        automatic: ctx.collection.collectionSourceType({ ...item, tags }) !== "collection",
+        sourceType: ctx.collection.collectionSourceType({ ...item, behaviors }),
+        automatic: false,
         searchText: normalizeCollectionText(`${item.name} ${item.originalName ?? ""} ${tags.join(" ")} ${displayTags.join(" ")}`)
       };
     });
