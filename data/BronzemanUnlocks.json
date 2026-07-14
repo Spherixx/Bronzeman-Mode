@@ -6,8 +6,7 @@
             "alias": "Standard spellbook",
             "uid": "standard-spellbook",
             "tags": [
-                "spellbook",
-                "talent"
+                "spellbook"
             ],
             "imageUsed": "Standard spellbook",
             "tier": "0",
@@ -20,8 +19,7 @@
             "alias": "Arceuus spellbook",
             "uid": "arceuus-spellbook",
             "tags": [
-                "spellbook",
-                "talent"
+                "spellbook"
             ],
             "imageUsed": "Arceuus spellbook",
             "tier": "0",
