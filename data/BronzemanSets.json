@@ -1,0 +1,590 @@
+{
+  "sets": [
+    {
+      "uid": "ahrims-equipment",
+      "alias": "Ahrims equipment",
+      "tags": [
+        "mage",
+        "armor",
+        "weapon"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 3,
+      "cost": 3,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Ahrim's hood.png"
+    },
+    {
+      "uid": "ancient-dhide",
+      "alias": "Ancient dhide",
+      "tags": [
+        "range",
+        "armor"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Ancient bracers.png"
+    },
+    {
+      "uid": "armadyl-dhide",
+      "alias": "Armadyl dhide",
+      "tags": [
+        "range",
+        "armor"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Armadyl bracers.png"
+    },
+    {
+      "uid": "bandos-dhide",
+      "alias": "Bandos dhide",
+      "tags": [
+        "range",
+        "armor"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Bandos bracers.png"
+    },
+    {
+      "uid": "black-dragonhide-armor",
+      "alias": "Black dragonhide armor",
+      "tags": [
+        "range",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Black d'hide vambraces.png"
+    },
+    {
+      "uid": "blood-moon-equipment",
+      "alias": "Blood moon equipment",
+      "tags": [
+        "melee",
+        "weapon",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Dual macuahuitl.png"
+    },
+    {
+      "uid": "blue-moon-equipment",
+      "alias": "Blue moon equipment",
+      "tags": [
+        "mage",
+        "weapon",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Blue moon spear.png"
+    },
+    {
+      "uid": "dagannoth-rings",
+      "alias": "Dagannoth rings",
+      "tags": [
+        "jewellery",
+        "mage",
+        "range",
+        "melee"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 2,
+      "cost": 2,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Seers ring.png"
+    },
+    {
+      "uid": "dagonhai-robes",
+      "alias": "Dagonhai robes",
+      "tags": [
+        "mage",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Dagon'hai hat.png"
+    },
+    {
+      "uid": "dark-bow-seeking-dragon-arrows",
+      "alias": "Dark bow seeking dragon arrows",
+      "tags": [
+        "range",
+        "weapon",
+        "ammo"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 4,
+      "cost": 4,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Dark bow.png"
+    },
+    {
+      "uid": "dharoks-equipment",
+      "alias": "Dharoks equipment",
+      "tags": [
+        "melee",
+        "armor",
+        "weapon"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 4,
+      "cost": 4,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Dharok's helm.png"
+    },
+    {
+      "uid": "eclipse-moon-equipment",
+      "alias": "Eclipse moon equipment",
+      "tags": [
+        "range",
+        "weapon",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Eclipse atlatl.png"
+    },
+    {
+      "uid": "elder-chaos-robes",
+      "alias": "Elder chaos robes",
+      "tags": [
+        "armor",
+        "mage"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Elder chaos top.png"
+    },
+    {
+      "uid": "god-books",
+      "alias": "God books",
+      "tags": [
+        "armor"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 1,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Holy book.png"
+    },
+    {
+      "uid": "god-capes",
+      "alias": "God capes",
+      "tags": [
+        "armor",
+        "mage"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 1,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Saradomin cape.png"
+    },
+    {
+      "uid": "god-staves",
+      "alias": "God staves",
+      "tags": [
+        "mage",
+        "weapon"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 1,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Saradomin staff.png"
+    },
+    {
+      "uid": "granite-maul-ornate-handle",
+      "alias": "Granite maul ornate handle",
+      "tags": [
+        "melee",
+        "weapon",
+        "spec",
+        "consumable"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 4,
+      "cost": 4,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Granite maul.png"
+    },
+    {
+      "uid": "guthix-dhide",
+      "alias": "Guthix dhide",
+      "tags": [
+        "armor",
+        "range"
+      ],
+      "behaviors": [
+        "shop"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Guthix bracers.png"
+    },
+    {
+      "uid": "imbued-god-capes",
+      "alias": "Imbued god capes",
+      "tags": [
+        "armor",
+        "mage"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 3,
+      "cost": 3,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Imbued saradomin cape.png"
+    },
+    {
+      "uid": "infinity-equipment",
+      "alias": "Infinity equipment",
+      "tags": [
+        "mage",
+        "armor"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Infinity top.png"
+    },
+    {
+      "uid": "karils-equipment",
+      "alias": "Karils equipment",
+      "tags": [
+        "range",
+        "armor",
+        "weapon"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 3,
+      "cost": 3,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Karil's coif.png"
+    },
+    {
+      "uid": "moonclan-equipment",
+      "alias": "Moonclan equipment",
+      "tags": [
+        "mage",
+        "armor"
+      ],
+      "behaviors": [
+        "shop"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Moonclan helm.png"
+    },
+    {
+      "uid": "mystic-equipment",
+      "alias": "Mystic equipment",
+      "tags": [
+        "mage",
+        "armor"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 1,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Mystic hat.png"
+    },
+    {
+      "uid": "obsidian-armor",
+      "alias": "Obsidian armor",
+      "tags": [
+        "melee",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Obsidian helmet.png"
+    },
+    {
+      "uid": "obsidian-weapons-berserker-necklace",
+      "alias": "Obsidian weapons berserker necklace",
+      "tags": [
+        "weapon",
+        "melee",
+        "jewellery"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 2,
+      "cost": 2,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Toktz-xil-ul.png"
+    },
+    {
+      "uid": "rock-shell-armor",
+      "alias": "Rock shell armor",
+      "tags": [
+        "melee",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Rock-shell helm.png"
+    },
+    {
+      "uid": "saradomin-dhide",
+      "alias": "Saradomin dhide",
+      "tags": [
+        "range",
+        "armor"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Saradomin bracers.png"
+    },
+    {
+      "uid": "skeletal-armor",
+      "alias": "Skeletal armor",
+      "tags": [
+        "mage",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Skeletal helm.png"
+    },
+    {
+      "uid": "spined-armor",
+      "alias": "Spined armor",
+      "tags": [
+        "range",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Spined helm.png"
+    },
+    {
+      "uid": "swampbark-armor",
+      "alias": "Swampbark armor",
+      "tags": [
+        "armor",
+        "mage"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Swampbark body.png"
+    },
+    {
+      "uid": "torags-equipment",
+      "alias": "Torags equipment",
+      "tags": [
+        "melee",
+        "armor"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Torag's helm.png"
+    },
+    {
+      "uid": "veracs-equipment",
+      "alias": "Veracs equipment",
+      "tags": [
+        "melee",
+        "armor",
+        "weapon"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 2,
+      "cost": 2,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Verac's helm.png"
+    },
+    {
+      "uid": "void-knight-equipment",
+      "alias": "Void Gear",
+      "tags": [
+        "armor",
+        "mage",
+        "melee",
+        "weapon"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 3,
+      "cost": 3,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Void knight top.png"
+    },
+    {
+      "uid": "xerician-robes",
+      "alias": "Xerician robes",
+      "tags": [
+        "mage",
+        "armor"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Xerician hat.png"
+    },
+    {
+      "uid": "zamorak-dhide",
+      "alias": "Zamorak dhide",
+      "tags": [
+        "range",
+        "armor"
+      ],
+      "behaviors": [
+        "shop",
+        "unlock"
+      ],
+      "tier": null,
+      "cost": 1,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": "Zamorak bracers.png"
+    }
+  ],
+  "tagDefinitions": [
+    "melee",
+    "range",
+    "mage",
+    "weapon",
+    "armor",
+    "spec",
+    "jewellery",
+    "rune",
+    "food",
+    "potion",
+    "teleport",
+    "ammo",
+    "consumable",
+    "other"
+  ],
+  "behaviorDefinitions": [
+    "hidden",
+    "talent",
+    "shop",
+    "unlock",
+    "resupply"
+  ]
+}

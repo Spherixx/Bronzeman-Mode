@@ -41,7 +41,8 @@ export function createAppContext() {
       repeatableIdAliases: {},
       itemRowsByUid: new Map(),
       itemRowsByItemId: new Map(),
-      itemRowsByName: new Map()
+      itemRowsByName: new Map(),
+      itemRowsBySetUid: new Map()
     },
     auth: {
       currentUser: null,

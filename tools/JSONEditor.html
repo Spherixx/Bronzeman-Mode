@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Generic JSON Editor</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #111315;
+      --panel: #1a1d21;
+      --panel-2: #22262b;
+      --border: #343a40;
+      --text: #f2f3f5;
+      --muted: #aeb4bc;
+      --accent: #c68b3c;
+      --accent-hover: #dda657;
+      --danger: #b84a4a;
+      --success: #4f9d69;
+      --input: #15181b;
+      --warning: #d4a24e;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, rgba(198, 139, 60, 0.08), transparent 32rem),
+        var(--bg);
+      color: var(--text);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    button, input, select, textarea { font: inherit; }
+
+    button {
+      border: 1px solid var(--border);
+      background: var(--panel-2);
+      color: var(--text);
+      padding: 0.7rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover { border-color: var(--accent); }
+    button:disabled { opacity: 0.45; cursor: not-allowed; }
+
+    button.primary {
+      background: var(--accent);
+      color: #17110a;
+      border-color: var(--accent);
+      font-weight: 700;
+    }
+
+    button.primary:hover { background: var(--accent-hover); }
+    button.danger { background: var(--danger); border-color: var(--danger); }
+    button.small { padding: 0.45rem 0.7rem; font-size: 0.9rem; }
+
+    input, select, textarea {
+      width: 100%;
+      color: var(--text);
+      background: var(--input);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.7rem 0.8rem;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(198, 139, 60, 0.14);
+    }
+
+    textarea { resize: vertical; min-height: 100px; }
+
+    .app { min-height: 100vh; display: grid; grid-template-rows: auto 1fr; }
+
+    .topbar {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      background: rgba(17, 19, 21, 0.96);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(12px);
+    }
+
+    .title { margin-right: auto; }
+    .title h1 { font-size: 1.15rem; margin: 0; }
+    .title p { margin: 0.2rem 0 0; color: var(--muted); font-size: 0.85rem; }
+
+    .layout { display: grid; grid-template-columns: minmax(290px, 370px) 1fr; min-height: 0; }
+
+    .sidebar {
+      border-right: 1px solid var(--border);
+      background: var(--panel);
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      max-height: calc(100vh - 74px);
+      position: sticky;
+      top: 74px;
+    }
+
+    .sidebar-controls {
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .search-row { display: grid; grid-template-columns: 1fr auto; gap: 0.5rem; }
+    .record-count, .hint { color: var(--muted); font-size: 0.85rem; }
+    .record-list { overflow-y: auto; padding: 0.5rem; }
+
+    .record-row {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 0.75rem;
+      align-items: center;
+      text-align: left;
+      background: transparent;
+      border: 1px solid transparent;
+      padding: 0.65rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .record-row.no-image { grid-template-columns: minmax(0, 1fr); }
+    .record-row:hover, .record-row.active { background: var(--panel-2); border-color: var(--border); }
+    .record-row.active { border-color: var(--accent); }
+
+    .record-row img {
+      width: 42px;
+      height: 42px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      background: #0e1012;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+    }
+
+    .record-row strong, .record-row span {
+      display: block;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .record-row span { color: var(--muted); font-size: 0.8rem; margin-top: 0.2rem; }
+
+    .editor { padding: 1.25rem; min-width: 0; }
+
+    .empty-state {
+      height: 100%;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      text-align: center;
+      border: 1px dashed var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+    }
+
+    .editor-card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+
+    .editor-header {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+
+    .editor-header.no-preview { grid-template-columns: 1fr; }
+
+    .preview {
+      width: 120px;
+      height: 120px;
+      object-fit: contain;
+      image-rendering: pixelated;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: #101214;
+    }
+
+    .editor-heading h2 { margin: 0 0 0.35rem; font-size: 1.35rem; overflow-wrap: anywhere; }
+    .editor-heading p { margin: 0; color: var(--muted); overflow-wrap: anywhere; }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    .field { display: grid; gap: 0.4rem; min-width: 0; }
+    .field.full { grid-column: 1 / -1; }
+    .field > label, .nested-title { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+
+    .checkbox-label { display: inline-flex; align-items: center; gap: 0.55rem; color: var(--text); }
+    .checkbox-label input { width: auto; }
+
+    .definition-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+      gap: 0.55rem;
+      padding: 0.75rem;
+      background: var(--input);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .nested-object {
+      grid-column: 1 / -1;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.85rem;
+      background: rgba(0, 0, 0, 0.08);
+    }
+
+    .nested-title { grid-column: 1 / -1; font-size: 0.95rem; color: var(--text); }
+
+    .field-note { color: var(--muted); font-size: 0.78rem; }
+    .field-error { color: #f08a8a; font-size: 0.8rem; min-height: 1em; }
+
+    .form-actions {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+      padding: 1rem;
+      border-top: 1px solid var(--border);
+      background: var(--panel-2);
+    }
+
+    .status { margin-left: auto; color: var(--muted); display: flex; align-items: center; font-size: 0.9rem; }
+    .status.dirty { color: var(--accent-hover); }
+    .status.saved { color: var(--success); }
+    .status.invalid { color: #f08a8a; }
+    .hidden { display: none !important; }
+
+    @media (max-width: 850px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; max-height: 42vh; border-right: 0; border-bottom: 1px solid var(--border); }
+      .editor-header { grid-template-columns: 90px 1fr; }
+      .preview { width: 90px; height: 90px; }
+    }
+
+    @media (max-width: 600px) {
+      .form-grid, .nested-object { grid-template-columns: 1fr; }
+      .field.full, .nested-object, .nested-title { grid-column: auto; }
+      .editor { padding: 0.75rem; }
+      .topbar { position: static; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="title">
+        <h1>Generic JSON Editor</h1>
+        <p>Best for shallow JSON objects and arrays of records</p>
+      </div>
+
+      <input id="fileInput" type="file" accept=".json,application/json" class="hidden" />
+      <button id="loadButton">Load JSON</button>
+      <button id="addButton" disabled>Add Record</button>
+      <button id="exportButton" class="primary" disabled>Export JSON</button>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-controls">
+          <div class="field">
+            <label for="collectionSelect">Collection</label>
+            <select id="collectionSelect" disabled></select>
+          </div>
+
+          <div class="search-row">
+            <input id="searchInput" type="search" placeholder="Search this collection..." disabled />
+            <button id="clearSearchButton" class="small" disabled>Clear</button>
+          </div>
+
+          <div id="recordCount" class="record-count">No JSON loaded</div>
+          <div id="collectionHint" class="hint"></div>
+        </div>
+
+        <div id="recordList" class="record-list"></div>
+      </aside>
+
+      <section class="editor">
+        <div id="emptyState" class="empty-state">
+          <div>
+            <strong>Load a JSON file</strong>
+            <div>The editor will detect editable record collections automatically.</div>
+          </div>
+        </div>
+
+        <div id="editorCard" class="editor-card hidden">
+          <div id="editorHeader" class="editor-header no-preview">
+            <img id="imagePreview" class="preview hidden" alt="Record preview" />
+            <div class="editor-heading">
+              <h2 id="editorTitle">Record</h2>
+              <p id="editorSubtitle"></p>
+            </div>
+          </div>
+
+          <div id="formGrid" class="form-grid"></div>
+
+          <div class="form-actions">
+            <button id="duplicateButton">Duplicate Record</button>
+            <button id="deleteButton" class="danger">Delete Record</button>
+            <div id="statusText" class="status saved">Saved in memory</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const state = {
+      data: null,
+      fileName: "data.json",
+      collections: [],
+      collectionKey: null,
+      selectedIndex: -1,
+      dirty: false,
+      invalidFields: new Set()
+    };
+
+    const elements = {
+      fileInput: document.getElementById("fileInput"),
+      loadButton: document.getElementById("loadButton"),
+      addButton: document.getElementById("addButton"),
+      exportButton: document.getElementById("exportButton"),
+      collectionSelect: document.getElementById("collectionSelect"),
+      searchInput: document.getElementById("searchInput"),
+      clearSearchButton: document.getElementById("clearSearchButton"),
+      recordCount: document.getElementById("recordCount"),
+      collectionHint: document.getElementById("collectionHint"),
+      recordList: document.getElementById("recordList"),
+      emptyState: document.getElementById("emptyState"),
+      editorCard: document.getElementById("editorCard"),
+      editorHeader: document.getElementById("editorHeader"),
+      imagePreview: document.getElementById("imagePreview"),
+      editorTitle: document.getElementById("editorTitle"),
+      editorSubtitle: document.getElementById("editorSubtitle"),
+      formGrid: document.getElementById("formGrid"),
+      duplicateButton: document.getElementById("duplicateButton"),
+      deleteButton: document.getElementById("deleteButton"),
+      statusText: document.getElementById("statusText")
+    };
+
+    function isPlainObject(value) {
+      return value !== null && typeof value === "object" && !Array.isArray(value);
+    }
+
+    function deepClone(value) {
+      return typeof structuredClone === "function"
+        ? structuredClone(value)
+        : JSON.parse(JSON.stringify(value));
+    }
+
+    function detectCollections(data) {
+      if (Array.isArray(data)) {
+        return [{ key: "$root", label: "Root array", array: data }];
+      }
+
+      if (!isPlainObject(data)) return [];
+
+      return Object.entries(data)
+        .filter(([, value]) => Array.isArray(value))
+        .map(([key, array]) => ({ key, label: key, array }));
+    }
+
+    function currentCollection() {
+      return state.collections.find(collection => collection.key === state.collectionKey) || null;
+    }
+
+    function currentArray() {
+      return currentCollection()?.array || [];
+    }
+
+    function currentRecord() {
+      const array = currentArray();
+      return state.selectedIndex >= 0 ? array[state.selectedIndex] : null;
+    }
+
+    function setDirty(value = true) {
+      state.dirty = value;
+      updateStatus();
+    }
+
+    function updateStatus() {
+      const invalid = state.invalidFields.size > 0;
+      elements.statusText.className = `status ${invalid ? "invalid" : state.dirty ? "dirty" : "saved"}`;
+      elements.statusText.textContent = invalid
+        ? `${state.invalidFields.size} invalid JSON field${state.invalidFields.size === 1 ? "" : "s"}`
+        : state.dirty
+          ? "Unsaved changes"
+          : "Saved in memory";
+      elements.exportButton.disabled = !state.data || invalid;
+    }
+
+    function inferFieldKeys(array) {
+      const keys = [];
+      const seen = new Set();
+
+      for (const record of array) {
+        if (!isPlainObject(record)) continue;
+        for (const key of Object.keys(record)) {
+          if (!seen.has(key)) {
+            seen.add(key);
+            keys.push(key);
+          }
+        }
+      }
+
+      return keys;
+    }
+
+    function findDefinitionArray(fieldName) {
+      if (!isPlainObject(state.data)) return null;
+
+      const singular = fieldName.endsWith("s") ? fieldName.slice(0, -1) : fieldName;
+      const candidates = [
+        `${fieldName}Definitions`,
+        `${singular}Definitions`,
+        `${fieldName}Options`,
+        `${singular}Options`,
+        `${fieldName}Values`,
+        `${singular}Values`
+      ];
+
+      const normalizedCandidates = candidates.map(value => value.toLowerCase());
+      const match = Object.keys(state.data).find(key => normalizedCandidates.includes(key.toLowerCase()));
+      const value = match ? state.data[match] : null;
+
+      return Array.isArray(value) && value.every(entry => ["string", "number", "boolean"].includes(typeof entry))
+        ? value
+        : null;
+    }
+
+    function getImageField(record) {
+      if (!isPlainObject(record)) return null;
+
+      const exactCandidates = ["imageName", "imageFile", "image", "iconName", "iconFile", "icon"];
+      const exact = Object.keys(record).find(key => exactCandidates.includes(key));
+      if (exact && typeof record[exact] === "string") return exact;
+
+      return Object.keys(record).find(key => {
+        const normalized = key.toLowerCase();
+        return typeof record[key] === "string" &&
+          (normalized.includes("image") || normalized.includes("icon")) &&
+          !normalized.includes("url") && !normalized.includes("link");
+      }) || null;
+    }
+
+    function imageCandidates(record) {
+      const field = getImageField(record);
+      const fileName = field ? String(record[field] || "").trim() : "";
+      if (!fileName) return [];
+
+      if (/^(https?:|data:|blob:|\/)/i.test(fileName)) return [fileName];
+
+      const encoded = fileName.split("/").map(encodeURIComponent).join("/");
+      return [`images/items/${encoded}`, `images/other/${encoded}`];
+    }
+
+    function loadImageWithFallback(image, candidates) {
+      let index = 0;
+      image.style.opacity = "1";
+
+      const tryNext = () => {
+        if (index >= candidates.length) {
+          image.removeAttribute("src");
+          image.style.opacity = "0.2";
+          return;
+        }
+        image.src = candidates[index++];
+      };
+
+      image.onerror = tryNext;
+      tryNext();
+    }
+
+    function displayName(record, index) {
+      if (!isPlainObject(record)) return `${typeof record}: ${String(record)}`;
+
+      const candidates = ["name", "title", "label", "alias", "uid", "id", "itemId", "key"];
+      for (const key of candidates) {
+        if (record[key] !== undefined && record[key] !== null && record[key] !== "") {
+          return String(record[key]);
+        }
+      }
+      return `Record ${index + 1}`;
+    }
+
+    function displayDetails(record) {
+      if (!isPlainObject(record)) return "Primitive value";
+
+      const candidates = ["uid", "id", "itemId", "type", "category", "set"];
+      const parts = [];
+      for (const key of candidates) {
+        if (record[key] !== undefined && record[key] !== null && record[key] !== "") {
+          parts.push(`${key}: ${record[key]}`);
+        }
+        if (parts.length === 2) break;
+      }
+      return parts.join(" · ") || `${Object.keys(record).length} fields`;
+    }
+
+    function searchText(value) {
+      try {
+        return JSON.stringify(value).toLowerCase();
+      } catch {
+        return String(value).toLowerCase();
+      }
+    }
+
+    function filteredRecords() {
+      const query = elements.searchInput.value.trim().toLowerCase();
+      return currentArray()
+        .map((record, index) => ({ record, index }))
+        .filter(({ record }) => !query || searchText(record).includes(query));
+    }
+
+    function renderCollectionSelect() {
+      elements.collectionSelect.innerHTML = "";
+      for (const collection of state.collections) {
+        const option = document.createElement("option");
+        option.value = collection.key;
+        option.textContent = `${collection.label} (${collection.array.length})`;
+        elements.collectionSelect.append(option);
+      }
+      elements.collectionSelect.value = state.collectionKey || "";
+    }
+
+    function renderRecordList() {
+      const matches = filteredRecords();
+      const array = currentArray();
+      elements.recordList.innerHTML = "";
+      elements.recordCount.textContent = state.data
+        ? `${matches.length} of ${array.length} records`
+        : "No JSON loaded";
+
+      const fragment = document.createDocumentFragment();
+      for (const { record, index } of matches) {
+        const button = document.createElement("button");
+        const candidates = imageCandidates(record);
+        button.className = `record-row${candidates.length ? "" : " no-image"}${index === state.selectedIndex ? " active" : ""}`;
+        button.type = "button";
+        button.addEventListener("click", () => selectRecord(index));
+
+        if (candidates.length) {
+          const image = document.createElement("img");
+          image.alt = "";
+          loadImageWithFallback(image, candidates);
+          button.append(image);
+        }
+
+        const text = document.createElement("div");
+        const name = document.createElement("strong");
+        name.textContent = displayName(record, index);
+        const details = document.createElement("span");
+        details.textContent = displayDetails(record);
+        text.append(name, details);
+        button.append(text);
+        fragment.append(button);
+      }
+      elements.recordList.append(fragment);
+    }
+
+    function fieldLabel(key) {
+      return String(key)
+        .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
+        .replace(/[_-]+/g, " ")
+        .replace(/^./, character => character.toUpperCase());
+    }
+
+    function fieldId(path) {
+      return path.join(".");
+    }
+
+    function setAtPath(object, path, value) {
+      let target = object;
+      for (let i = 0; i < path.length - 1; i += 1) target = target[path[i]];
+      target[path[path.length - 1]] = value;
+      setDirty();
+      renderRecordList();
+      renderHeader();
+    }
+
+    function markFieldValidity(path, valid) {
+      const id = fieldId(path);
+      if (valid) state.invalidFields.delete(id);
+      else state.invalidFields.add(id);
+      updateStatus();
+    }
+
+    function makeFieldContainer(key, full = false) {
+      const container = document.createElement("div");
+      container.className = `field${full ? " full" : ""}`;
+      const label = document.createElement("label");
+      label.textContent = fieldLabel(key);
+      container.append(label);
+      return container;
+    }
+
+    function primitiveInput(record, path, value) {
+      const key = path[path.length - 1];
+      const container = makeFieldContainer(key, typeof value === "string" && value.length > 100);
+
+      if (typeof value === "boolean") {
+        const label = document.createElement("label");
+        label.className = "checkbox-label";
+        const input = document.createElement("input");
+        input.type = "checkbox";
+        input.checked = value;
+        input.addEventListener("change", () => setAtPath(record, path, input.checked));
+        const text = document.createElement("span");
+        text.textContent = value ? "True" : "False";
+        input.addEventListener("change", () => { text.textContent = input.checked ? "True" : "False"; });
+        label.append(input, text);
+        container.append(label);
+        return container;
+      }
+
+      const input = typeof value === "string" && (value.length > 100 || value.includes("\n"))
+        ? document.createElement("textarea")
+        : document.createElement("input");
+
+      if (input instanceof HTMLInputElement) {
+        if (typeof value === "number") {
+          input.type = "number";
+          input.step = "any";
+        } else if (/url|link/i.test(key)) {
+          input.type = "url";
+        } else {
+          input.type = "text";
+        }
+      }
+
+      input.value = value ?? "";
+      input.addEventListener("input", () => {
+        const next = typeof value === "number"
+          ? (input.value === "" ? null : Number(input.value))
+          : input.value;
+        setAtPath(record, path, next);
+      });
+      container.append(input);
+      return container;
+    }
+
+    function nullInput(record, path) {
+      const key = path[path.length - 1];
+      const container = makeFieldContainer(key);
+      const input = document.createElement("input");
+      input.type = "text";
+      input.placeholder = "null — enter text, number, true, false, [] or {}";
+      input.value = "";
+      input.addEventListener("change", () => {
+        const raw = input.value.trim();
+        if (!raw) return setAtPath(record, path, null);
+        try {
+          setAtPath(record, path, JSON.parse(raw));
+        } catch {
+          setAtPath(record, path, raw);
+        }
+        renderEditor();
+      });
+      container.append(input);
+      return container;
+    }
+
+    function definitionArrayInput(record, path, value, definitions) {
+      const key = path[path.length - 1];
+      const container = makeFieldContainer(key, true);
+      const grid = document.createElement("div");
+      grid.className = "definition-grid";
+
+      for (const definition of definitions) {
+        const label = document.createElement("label");
+        label.className = "checkbox-label";
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.checked = value.some(entry => entry === definition);
+        checkbox.addEventListener("change", () => {
+          const next = checkbox.checked
+            ? [...value, definition]
+            : value.filter(entry => entry !== definition);
+          setAtPath(record, path, next);
+          renderEditor();
+        });
+        const text = document.createElement("span");
+        text.textContent = String(definition);
+        label.append(checkbox, text);
+        grid.append(label);
+      }
+
+      container.append(grid);
+      const note = document.createElement("div");
+      note.className = "field-note";
+      note.textContent = `Options inferred from a root definition array. Values not listed are preserved.`;
+      container.append(note);
+      return container;
+    }
+
+    function commaArrayInput(record, path, value) {
+      const key = path[path.length - 1];
+      const container = makeFieldContainer(key, true);
+      const input = document.createElement("textarea");
+      input.value = value.map(entry => String(entry)).join(", ");
+      input.placeholder = "Comma-separated values";
+      input.addEventListener("input", () => {
+        const next = input.value.split(",").map(entry => entry.trim()).filter(Boolean).map(entry => {
+          if (value.every(existing => typeof existing === "number")) {
+            const number = Number(entry);
+            return Number.isFinite(number) ? number : entry;
+          }
+          if (value.every(existing => typeof existing === "boolean")) return entry.toLowerCase() === "true";
+          return entry;
+        });
+        setAtPath(record, path, next);
+      });
+      container.append(input);
+      const note = document.createElement("div");
+      note.className = "field-note";
+      note.textContent = "Primitive array stored as comma-separated values.";
+      container.append(note);
+      return container;
+    }
+
+    function rawJsonInput(record, path, value, labelText = null) {
+      const key = path[path.length - 1];
+      const container = makeFieldContainer(labelText || key, true);
+      const input = document.createElement("textarea");
+      const error = document.createElement("div");
+      error.className = "field-error";
+      input.value = JSON.stringify(value, null, 2);
+      input.spellcheck = false;
+      input.addEventListener("input", () => {
+        try {
+          const parsed = JSON.parse(input.value);
+          error.textContent = "";
+          markFieldValidity(path, true);
+          setAtPath(record, path, parsed);
+        } catch (caught) {
+          error.textContent = caught.message;
+          markFieldValidity(path, false);
+        }
+      });
+      container.append(input, error);
+      const note = document.createElement("div");
+      note.className = "field-note";
+      note.textContent = "Complex value edited as raw JSON.";
+      container.append(note);
+      return container;
+    }
+
+    function renderValueField(record, path, value, depth = 0) {
+      const key = path[path.length - 1];
+
+      if (value === null) return nullInput(record, path);
+      if (["string", "number", "boolean"].includes(typeof value)) return primitiveInput(record, path, value);
+
+      if (Array.isArray(value)) {
+        const definitions = findDefinitionArray(key);
+        const primitive = value.every(entry => entry === null || ["string", "number", "boolean"].includes(typeof entry));
+        if (definitions && primitive) return definitionArrayInput(record, path, value, definitions);
+        if (primitive) return commaArrayInput(record, path, value);
+        return rawJsonInput(record, path, value);
+      }
+
+      if (isPlainObject(value) && depth === 0) {
+        const wrapper = document.createElement("div");
+        wrapper.className = "nested-object";
+        const title = document.createElement("div");
+        title.className = "nested-title";
+        title.textContent = fieldLabel(key);
+        wrapper.append(title);
+
+        if (Object.keys(value).length === 0) {
+          wrapper.append(rawJsonInput(record, path, value, "Object JSON"));
+        } else {
+          for (const nestedKey of Object.keys(value)) {
+            wrapper.append(renderValueField(record, [...path, nestedKey], value[nestedKey], depth + 1));
+          }
+        }
+        return wrapper;
+      }
+
+      return rawJsonInput(record, path, value);
+    }
+
+    function renderHeader() {
+      const record = currentRecord();
+      if (record === null || record === undefined) return;
+
+      elements.editorTitle.textContent = displayName(record, state.selectedIndex);
+      elements.editorSubtitle.textContent = displayDetails(record);
+
+      const candidates = imageCandidates(record);
+      const hasPreview = candidates.length > 0;
+      elements.imagePreview.classList.toggle("hidden", !hasPreview);
+      elements.editorHeader.classList.toggle("no-preview", !hasPreview);
+      if (hasPreview) loadImageWithFallback(elements.imagePreview, candidates);
+    }
+
+    function renderEditor() {
+      const record = currentRecord();
+      const hasRecord = record !== null && record !== undefined;
+      elements.emptyState.classList.toggle("hidden", hasRecord);
+      elements.editorCard.classList.toggle("hidden", !hasRecord);
+      elements.formGrid.innerHTML = "";
+      state.invalidFields.clear();
+
+      if (!hasRecord) {
+        elements.emptyState.innerHTML = state.data
+          ? "<div><strong>No record selected</strong><div>Add a record or select one from the list.</div></div>"
+          : "<div><strong>Load a JSON file</strong><div>The editor will detect editable record collections automatically.</div></div>";
+        updateStatus();
+        return;
+      }
+
+      renderHeader();
+
+      if (isPlainObject(record)) {
+        const keys = Object.keys(record);
+        if (!keys.length) {
+          elements.formGrid.append(rawJsonInput(currentArray(), [state.selectedIndex], record, "Record JSON"));
+        } else {
+          for (const key of keys) elements.formGrid.append(renderValueField(record, [key], record[key]));
+        }
+      } else {
+        elements.formGrid.append(rawJsonInput(currentArray(), [state.selectedIndex], record, "Record value"));
+      }
+      updateStatus();
+    }
+
+    function selectRecord(index) {
+      state.selectedIndex = index;
+      renderRecordList();
+      renderEditor();
+    }
+
+    function makeTemplateRecord() {
+      const array = currentArray();
+      const sample = array.find(isPlainObject);
+      if (sample) {
+        const template = {};
+        for (const [key, value] of Object.entries(sample)) {
+          if (typeof value === "boolean") template[key] = false;
+          else if (typeof value === "number") template[key] = null;
+          else if (typeof value === "string") template[key] = "";
+          else if (Array.isArray(value)) template[key] = [];
+          else if (isPlainObject(value)) template[key] = Object.fromEntries(
+            Object.entries(value).map(([nestedKey, nestedValue]) => [nestedKey,
+              typeof nestedValue === "boolean" ? false :
+              typeof nestedValue === "number" ? null :
+              typeof nestedValue === "string" ? "" :
+              Array.isArray(nestedValue) ? [] : null
+            ])
+          );
+          else template[key] = null;
+        }
+        return template;
+      }
+      return {};
+    }
+
+    function addRecord() {
+      const array = currentArray();
+      array.push(makeTemplateRecord());
+      state.selectedIndex = array.length - 1;
+      setDirty();
+      refreshCollectionReferences();
+      renderAll();
+    }
+
+    function duplicateRecord() {
+      const record = currentRecord();
+      if (record === null || record === undefined) return;
+      const array = currentArray();
+      array.splice(state.selectedIndex + 1, 0, deepClone(record));
+      state.selectedIndex += 1;
+      setDirty();
+      refreshCollectionReferences();
+      renderAll();
+    }
+
+    function deleteRecord() {
+      const record = currentRecord();
+      if (record === null || record === undefined) return;
+      if (!confirm(`Delete "${displayName(record, state.selectedIndex)}"?`)) return;
+
+      const array = currentArray();
+      array.splice(state.selectedIndex, 1);
+      state.selectedIndex = array.length ? Math.min(state.selectedIndex, array.length - 1) : -1;
+      setDirty();
+      refreshCollectionReferences();
+      renderAll();
+    }
+
+    function refreshCollectionReferences() {
+      const selected = state.collectionKey;
+      state.collections = detectCollections(state.data);
+      state.collectionKey = state.collections.some(collection => collection.key === selected)
+        ? selected
+        : state.collections[0]?.key || null;
+    }
+
+    function renderAll() {
+      renderCollectionSelect();
+      renderRecordList();
+      renderEditor();
+      const enabled = Boolean(currentCollection());
+      elements.collectionSelect.disabled = state.collections.length <= 1;
+      elements.searchInput.disabled = !enabled;
+      elements.clearSearchButton.disabled = !enabled;
+      elements.addButton.disabled = !enabled;
+      elements.exportButton.disabled = !state.data || state.invalidFields.size > 0;
+      elements.collectionHint.textContent = enabled
+        ? "Fields are inferred from each value. Nested objects are supported one level deep."
+        : state.data
+          ? "No arrays were found. This editor expects a root array or arrays inside the root object."
+          : "";
+    }
+
+    async function loadJsonFile(file) {
+      try {
+        const parsed = JSON.parse(await file.text());
+        if (!Array.isArray(parsed) && !isPlainObject(parsed)) {
+          throw new Error("The JSON root must be an object or array.");
+        }
+
+        state.data = parsed;
+        state.fileName = file.name || "data.json";
+        state.collections = detectCollections(parsed);
+        state.collectionKey = state.collections[0]?.key || null;
+        state.selectedIndex = currentArray().length ? 0 : -1;
+        state.invalidFields.clear();
+        elements.searchInput.value = "";
+        setDirty(false);
+        renderAll();
+      } catch (error) {
+        alert(`Could not load JSON:\n${error.message}`);
+      } finally {
+        elements.fileInput.value = "";
+      }
+    }
+
+    function exportJson() {
+      if (state.invalidFields.size) {
+        alert("Fix invalid JSON fields before exporting.");
+        return;
+      }
+      const output = JSON.stringify(state.data, null, 2) + "\n";
+      const blob = new Blob([output], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = state.fileName || "data.json";
+      document.body.append(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+      setDirty(false);
+    }
+
+    elements.loadButton.addEventListener("click", () => elements.fileInput.click());
+    elements.fileInput.addEventListener("change", event => {
+      const file = event.target.files?.[0];
+      if (file) loadJsonFile(file);
+    });
+
+    elements.collectionSelect.addEventListener("change", () => {
+      state.collectionKey = elements.collectionSelect.value;
+      state.selectedIndex = currentArray().length ? 0 : -1;
+      elements.searchInput.value = "";
+      renderAll();
+    });
+
+    elements.searchInput.addEventListener("input", renderRecordList);
+    elements.clearSearchButton.addEventListener("click", () => {
+      elements.searchInput.value = "";
+      elements.searchInput.focus();
+      renderRecordList();
+    });
+
+    elements.addButton.addEventListener("click", addRecord);
+    elements.duplicateButton.addEventListener("click", duplicateRecord);
+    elements.deleteButton.addEventListener("click", deleteRecord);
+    elements.exportButton.addEventListener("click", exportJson);
+
+    window.addEventListener("beforeunload", event => {
+      if (!state.dirty) return;
+      event.preventDefault();
+      event.returnValue = "";
+    });
+
+    renderAll();
+  </script>
+</body>
+</html>

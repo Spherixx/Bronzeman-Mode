@@ -2,7 +2,7 @@ export const STORAGE_KEY = "bronzeman-point-challenges-v2";
 
 export const DATA_URLS = {
   items: "data/BronzemanItems.json",
-  itemSets: "data/BronzemanItemSets.json",
+  itemSets: "data/BronzemanSets.json",
   unlocks: "data/BronzemanUnlocks.json",
   pvm: "data/BronzemanPvM.json",
   pvp: "data/BronzemanPvP.json",

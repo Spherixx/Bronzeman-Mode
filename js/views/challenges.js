@@ -165,11 +165,19 @@ export function createChallengeView(ctx) {
 
   function startChallengeRollAnimation() {
     const activeRoll = ctx.challengeUi.activeRoll;
-    if (!activeRoll || activeRoll.phase !== "rolling" || activeRoll.animationStarted) return;
+
+    if (
+      !activeRoll ||
+      activeRoll.phase !== "rolling" ||
+      activeRoll.animationStarted
+    ) {
+      return;
+    }
 
     const stage = document.querySelector(
       `.roulette-stage.rolling[data-challenge-id="${activeRoll.challengeId}"]`
     );
+
     const strip = stage?.querySelector(".roulette-strip");
     const target = stage?.querySelector(".roulette-item.target");
 
@@ -177,11 +185,10 @@ export function createChallengeView(ctx) {
 
     activeRoll.animationStarted = true;
 
-    const targetCenter = target.offsetLeft + (target.offsetWidth / 2);
+    const targetCenter = target.offsetLeft + target.offsetWidth / 2;
     const stageCenter = stage.clientWidth / 2;
     const destination = stageCenter - targetCenter;
 
-    // Small overshoot near the final item.
     const overshoot = Math.min(
       50,
       Math.max(24, target.offsetWidth * 0.35)
@@ -193,17 +200,12 @@ export function createChallengeView(ctx) {
           transform: "translateX(0)"
         },
         {
-          transform: `translateX(${destination + overshoot}px)`,
-          offset: 0.92
-        },
-        {
-          transform: `translateX(${destination}px)`,
-          offset: 1
+          transform: `translateX(${destination}px)`
         }
       ],
       {
         duration: CHALLENGE_ROLL_DURATION_MS,
-        easing: "cubic-bezier(0.12, 0.72, 0.18, 1)",
+        easing: "cubic-bezier(0.08, 0.7, 0.12, 1)",
         fill: "forwards"
       }
     );

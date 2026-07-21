@@ -1,0 +1,192 @@
+.challenge-wheel {
+  --bronze: #d28c42;
+  --bronze-light: #f2b564;
+  --panel: #11171d;
+  --panel-dark: #090d11;
+  --border: #28323b;
+  --text: #e8e9ea;
+  --muted: #8f969d;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  width: min(760px, 100%);
+  margin: 0 auto;
+  color: var(--text);
+}
+
+.wheel-wrapper {
+  position: relative;
+  width: min(680px, 92vw);
+  aspect-ratio: 1;
+}
+
+.wheel {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 16px 28px rgb(0 0 0 / 55%));
+}
+
+#wheelRotator {
+  transform-origin: 0 0;
+  will-change: transform;
+}
+
+.wheel-outer-ring {
+  fill: var(--panel-dark);
+  stroke: var(--bronze);
+  stroke-width: 8;
+}
+
+.wheel-slice {
+  fill: #141a20;
+  stroke: #39414a;
+  stroke-width: 2;
+  transition:
+    fill 220ms ease,
+    stroke 220ms ease,
+    filter 220ms ease;
+}
+
+.wheel-slice:nth-child(even) {
+  fill: #10161b;
+}
+
+.wheel-slice-group.selected .wheel-slice {
+  fill: #192a22;
+  stroke: var(--bronze-light);
+  stroke-width: 5;
+  filter: url("#selectedGlow");
+}
+
+.wheel-slice-label {
+  fill: var(--muted);
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  pointer-events: none;
+  user-select: none;
+  transition:
+    fill 220ms ease,
+    font-size 220ms ease;
+}
+
+.wheel-slice-group.selected .wheel-slice-label {
+  fill: #fff1d8;
+  font-size: 17px;
+}
+
+.wheel-center-ring {
+  fill: #090d11;
+  stroke: var(--bronze);
+  stroke-width: 5;
+}
+
+.wheel-center {
+  fill: #182028;
+  stroke: #35404a;
+  stroke-width: 2;
+}
+
+.wheel-center-text {
+  fill: var(--bronze-light);
+  font-family: Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+.wheel-pointer {
+  position: absolute;
+  z-index: 5;
+  top: -4px;
+  left: 50%;
+  width: 38px;
+  height: 58px;
+  transform: translateX(-50%);
+  filter: drop-shadow(0 4px 8px rgb(0 0 0 / 70%));
+}
+
+.wheel-pointer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    #ffe0a0,
+    #d58d38 55%,
+    #8c4f1f
+  );
+  clip-path: polygon(
+    50% 100%,
+    0 28%,
+    20% 0,
+    80% 0,
+    100% 28%
+  );
+}
+
+.spin-button {
+  min-width: 220px;
+  padding: 14px 24px;
+  border: 1px solid #efa751;
+  background: linear-gradient(#e9a956, #c77c31);
+  color: #16100a;
+  font: 700 15px/1 Arial, sans-serif;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+}
+
+.spin-button:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.spin-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.challenge-result {
+  width: min(620px, 92vw);
+  padding: 20px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  text-align: center;
+}
+
+.result-label {
+  margin-bottom: 6px;
+  color: var(--bronze);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.result-name {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+.reward-label {
+  margin-top: 20px;
+}
+
+.reward-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.reward-item {
+  padding: 9px 13px;
+  border: 1px solid #35404a;
+  background: #0c1116;
+  color: #d9dde0;
+  font-size: 14px;
+}

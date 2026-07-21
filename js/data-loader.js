@@ -39,6 +39,7 @@ export function createDataLoader(ctx) {
     ctx.indexes.itemRowsByUid = new Map();
     ctx.indexes.itemRowsByItemId = new Map();
     ctx.indexes.itemRowsByName = new Map();
+    ctx.indexes.itemRowsBySetUid = new Map();
 
     toArray(items).forEach((item) => {
       const uid = dataUid(item);
@@ -47,6 +48,13 @@ export function createDataLoader(ctx) {
       [item.name, item.alias, item.imageUsed, item.imageName?.replace(/\.png$/i, "")].filter(Boolean).forEach((name) => {
         ctx.indexes.itemRowsByName.set(normalizeDataText(name), item);
       });
+
+      const setUid = typeof item.set === "string" ? item.set.trim() : "";
+      if (setUid) {
+        const members = ctx.indexes.itemRowsBySetUid.get(setUid) ?? [];
+        members.push(item);
+        ctx.indexes.itemRowsBySetUid.set(setUid, members);
+      }
     });
   }
 
@@ -55,6 +63,36 @@ export function createDataLoader(ctx) {
       const key = String(id);
       return ctx.indexes.itemRowsByItemId.get(key)?.uid || ctx.indexes.itemRowsByUid.get(key)?.uid || key;
     });
+  }
+
+  function dataSets(data) {
+    return toArray(data?.sets ?? data?.itemSets);
+  }
+
+  function itemRowsForSet(entry) {
+    const rows = [];
+    const seen = new Set();
+
+    itemIdsFromDataIds(entry?.itemIds).forEach((uid) => {
+      const item = ctx.indexes.itemRowsByUid.get(uid);
+      if (!item || seen.has(uid)) return;
+      seen.add(uid);
+      rows.push(item);
+    });
+
+    toArray(ctx.indexes.itemRowsBySetUid.get(dataUid(entry))).forEach((item) => {
+      const uid = dataUid(item);
+      if (seen.has(uid)) return;
+      seen.add(uid);
+      rows.push(item);
+    });
+
+    return rows;
+  }
+
+  function itemIdsForSet(entry) {
+    const memberIds = itemRowsForSet(entry).map((item) => dataUid(item));
+    return memberIds.length ? memberIds : itemIdsFromDataIds(entry?.itemIds);
   }
 
   function resolveDataImage(name) {
@@ -159,7 +197,7 @@ export function createDataLoader(ctx) {
     const tags = dataTags(entry);
     const behaviors = dataBehaviors(entry);
     const collectionIds = sourceType === "set"
-      ? itemIdsFromDataIds(entry.itemIds)
+      ? itemIdsForSet(entry)
       : [dataUid(entry)].filter(Boolean);
 
     return {
@@ -180,7 +218,7 @@ export function createDataLoader(ctx) {
     const itemUnlocks = toArray(itemsData?.items)
       .filter((item) => dataBehaviors(item).includes("talent"))
       .map((item) => normalizeTalentUnlock(item, "item"));
-    const setUnlocks = toArray(itemSetsData?.itemSets)
+    const setUnlocks = dataSets(itemSetsData)
       .filter((itemSet) => dataBehaviors(itemSet).includes("talent"))
       .map((itemSet) => normalizeTalentUnlock(itemSet, "set"));
     const nonItemUnlocks = toArray(unlocksData?.unlocks)
@@ -213,8 +251,7 @@ export function createDataLoader(ctx) {
 
   function shopItemImages(entry, sourceType) {
     if (sourceType === "set") {
-      return itemIdsFromDataIds(entry.itemIds).map((uid) => {
-        const item = ctx.indexes.itemRowsByUid.get(uid);
+      return itemRowsForSet(entry).map((item) => {
         return { image: imageForDataEntry(item) };
       }).filter((item) => item.image);
     }
@@ -242,7 +279,7 @@ export function createDataLoader(ctx) {
   function buildDataShopItems(itemsData, itemSetsData, unlocksData) {
     const sources = [
       [itemsData?.items, "item"],
-      [itemSetsData?.itemSets, "set"],
+      [dataSets(itemSetsData), "set"],
       [unlocksData?.unlocks, "unlock"]
     ];
     const seen = new Set();

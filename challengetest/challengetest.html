@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Bronzeman Challenge Wheel</title>
+
+  <link rel="stylesheet" href="./challengetest.css">
+</head>
+
+<body>
+  <main class="page">
+    <section class="challenge-wheel">
+      <div class="wheel-wrapper">
+        <div class="wheel-pointer" aria-hidden="true"></div>
+
+        <svg
+          id="challengeWheel"
+          class="wheel"
+          viewBox="-320 -320 640 640"
+          role="img"
+          aria-label="Bronzeman challenge wheel"
+        >
+          <defs>
+            <filter
+              id="selectedGlow"
+              x="-50%"
+              y="-50%"
+              width="200%"
+              height="200%"
+            >
+              <feGaussianBlur
+                stdDeviation="7"
+                result="blur"
+              ></feGaussianBlur>
+
+              <feFlood
+                flood-color="#f1ad56"
+                flood-opacity="0.9"
+                result="color"
+              ></feFlood>
+
+              <feComposite
+                in="color"
+                in2="blur"
+                operator="in"
+                result="glow"
+              ></feComposite>
+
+              <feMerge>
+                <feMergeNode in="glow"></feMergeNode>
+                <feMergeNode in="SourceGraphic"></feMergeNode>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <circle
+            class="wheel-outer-ring"
+            cx="0"
+            cy="0"
+            r="302"
+          ></circle>
+
+          <g id="wheelRotator">
+            <g id="wheelSlices"></g>
+
+            <circle
+              class="wheel-center-ring"
+              cx="0"
+              cy="0"
+              r="55"
+            ></circle>
+
+            <circle
+              class="wheel-center"
+              cx="0"
+              cy="0"
+              r="43"
+            ></circle>
+
+            <text
+              class="wheel-center-text"
+              x="0"
+              y="7"
+              text-anchor="middle"
+            >
+              SPIN
+            </text>
+          </g>
+        </svg>
+      </div>
+
+      <button
+        id="spinChallengeButton"
+        class="spin-button"
+        type="button"
+      >
+        Spin Challenge
+      </button>
+
+      <section
+        id="challengeResult"
+        class="challenge-result"
+        aria-live="polite"
+        hidden
+      >
+        <div class="result-label">Challenge</div>
+
+        <div
+          id="challengeResultName"
+          class="result-name"
+        ></div>
+
+        <div class="result-label reward-label">
+          Reward
+        </div>
+
+        <div
+          id="challengeReward"
+          class="reward-items"
+        ></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="./challengetest.js"></script>
+</body>
+</html>

@@ -479,6 +479,11 @@
             </div>
 
             <div class="field">
+              <label for="setInput">Set</label>
+              <input id="setInput" type="text" placeholder="null" />
+            </div>
+
+            <div class="field">
               <label for="tierInput">Tier</label>
               <input id="tierInput" type="number" step="1" placeholder="null" />
             </div>
@@ -598,6 +603,7 @@
       aliasInput: document.getElementById("aliasInput"),
       uidInput: document.getElementById("uidInput"),
       itemIdInput: document.getElementById("itemIdInput"),
+      setInput: document.getElementById("setInput"),
       tierInput: document.getElementById("tierInput"),
       costInput: document.getElementById("costInput"),
       alwaysAvailableInput: document.getElementById("alwaysAvailableInput"),
@@ -641,6 +647,9 @@
         alias: item.alias ?? item.name ?? "",
         uid: item.uid ?? slugify(item.name ?? ""),
         itemId: toNullableNumber(item.itemId),
+        set: item.set === null || item.set === undefined || item.set === ""
+          ? null
+          : String(item.set),
         tags: Array.isArray(item.tags) ? item.tags.map(String) : [],
         behaviors: Array.isArray(item.behaviors) ? item.behaviors.map(String) : [],
         tier: toNullableNumber(item.tier),
@@ -875,6 +884,7 @@
       elements.aliasInput.value = item.alias;
       elements.uidInput.value = item.uid;
       elements.itemIdInput.value = item.itemId ?? "";
+      elements.setInput.value = item.set ?? "";
       elements.tierInput.value = item.tier ?? "";
       elements.costInput.value = item.cost ?? "";
       elements.alwaysAvailableInput.checked = item.alwaysAvailable;
@@ -909,6 +919,7 @@
         alias: "New item",
         uid: makeUniqueUid("new-item"),
         itemId: null,
+        set: null,
         tags: [],
         behaviors: [],
         tier: null,
@@ -1141,6 +1152,11 @@
 
     elements.itemIdInput.addEventListener("input", event => {
       updateCurrentItem("itemId", toNullableNumber(event.target.value));
+    });
+
+    elements.setInput.addEventListener("input", event => {
+      const value = event.target.value.trim();
+      updateCurrentItem("set", value === "" ? null : value);
     });
 
     elements.tierInput.addEventListener("input", event => {
