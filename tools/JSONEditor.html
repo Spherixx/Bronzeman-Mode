@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Generic JSON Editor</title>
+  <title>JSON Editor</title>
   <style>
     :root {
       color-scheme: dark;
@@ -269,7 +269,7 @@
   <div class="app">
     <header class="topbar">
       <div class="title">
-        <h1>Generic JSON Editor</h1>
+        <h1>JSON Editor</h1>
         <p>Best for shallow JSON objects and arrays of records</p>
       </div>
 
@@ -475,7 +475,7 @@
       if (/^(https?:|data:|blob:|\/)/i.test(fileName)) return [fileName];
 
       const encoded = fileName.split("/").map(encodeURIComponent).join("/");
-      return [`images/items/${encoded}`, `images/other/${encoded}`];
+      return [`../images/items/${encoded}`, `../images/other/${encoded}`];
     }
 
     function loadImageWithFallback(image, candidates) {

@@ -1,5 +1,5 @@
 /////ADDITIONS/////
-
+added guthans for some reason it was missing
 
 /////BALANCE/////
 
@@ -8,3 +8,5 @@
 Rewrote the Perilous Moons Roulette wheel animation, should be smooth for the whole animation now
 
 /////SYSTEM/////
+re-designed how sets of items works so they're easier to define and load
+re-designed how I add items to the tracker in general so its more straightforward

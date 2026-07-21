@@ -546,7 +546,8 @@ def apply_csv_fields(
         update("uid", row["uid"])
 
     # A resolved Wiki ID fills a missing ID, while a manual CSV ID may replace one.
-    if row["itemId_specified"] or item.get("itemId") is None:
+    # Never replace a non-null value.
+    if item.get("itemId") is None and resolved_id is not None:
         update("itemId", resolved_id)
 
     if row["set_specified"]:
