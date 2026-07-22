@@ -1,0 +1,459 @@
+2026-07-22 03:02:33 | INFO     | Bronzeman image cache started.
+2026-07-22 03:02:33 | INFO     | JSON file: data\BronzemanItems.json
+2026-07-22 03:02:33 | INFO     | Image directory: images\items
+2026-07-22 03:02:33 | INFO     | Log file: logs\image_cache_2026-07-22_03-02-33.log
+2026-07-22 03:02:33 | INFO     | Force downloads: False
+2026-07-22 03:02:33 | INFO     | 
+2026-07-22 03:02:33 | INFO     | Found 429 valid image entries.
+2026-07-22 03:02:33 | INFO     | 
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [1/429] Shark | itemId=385 | uid=shark -> images\items\Shark.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [2/429] Manta ray | itemId=391 | uid=manta-ray -> images\items\Manta ray.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [3/429] Fire rune | itemId=554 | uid=fire-rune -> images\items\Fire rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [4/429] Water rune | itemId=555 | uid=water-rune -> images\items\Water rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [5/429] Air rune | itemId=556 | uid=air-rune -> images\items\Air rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [6/429] Earth rune | itemId=557 | uid=earth-rune -> images\items\Earth rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [7/429] Mind rune | itemId=558 | uid=mind-rune -> images\items\Mind rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [8/429] Body rune | itemId=559 | uid=body-rune -> images\items\Body rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [9/429] Death rune | itemId=560 | uid=death-rune -> images\items\Death rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [10/429] Nature rune | itemId=561 | uid=nature-rune -> images\items\Nature rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [11/429] Chaos rune | itemId=562 | uid=chaos-rune -> images\items\Chaos rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [12/429] Law rune | itemId=563 | uid=law-rune -> images\items\Law rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [13/429] Blood rune | itemId=565 | uid=blood-rune -> images\items\Blood rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [14/429] Soul rune | itemId=566 | uid=soul-rune -> images\items\Soul rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [15/429] Rune dart | itemId=811 | uid=rune-dart -> images\items\Rune dart.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [16/429] Rune arrow | itemId=892 | uid=rune-arrow -> images\items\Rune arrow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [17/429] Dragon spear | itemId=1249 | uid=dragon-spear -> images\items\Dragon spear.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [18/429] Dragon longsword | itemId=1305 | uid=dragon-longsword -> images\items\Dragon longsword.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [19/429] Dragon battleaxe | itemId=1377 | uid=dragon-battleaxe -> images\items\Dragon battleaxe.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [20/429] Dragon mace | itemId=1434 | uid=dragon-mace -> images\items\Dragon mace.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [21/429] Amulet of glory | itemId=1712 | uid=amulet-of-glory-4 -> images\items\Amulet of glory(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [22/429] Pineapple pizza | itemId=2301 | uid=pineapple-pizza -> images\items\Pineapple pizza.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [23/429] Saradomin cape | itemId=2412 | uid=saradomin-cape -> images\items\Saradomin cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [24/429] Guthix cape | itemId=2413 | uid=guthix-cape -> images\items\Guthix cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [25/429] Zamorak cape | itemId=2414 | uid=zamorak-cape -> images\items\Zamorak cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [26/429] Saradomin staff | itemId=2415 | uid=saradomin-staff -> images\items\Saradomin staff.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [27/429] Guthix staff | itemId=2416 | uid=guthix-staff -> images\items\Guthix staff.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [28/429] Zamorak staff | itemId=2417 | uid=zamorak-staff -> images\items\Zamorak staff.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [29/429] Prayer potion | itemId=2434 | uid=prayer-potion-4 -> images\items\Prayer potion(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [30/429] Ranging potion | itemId=2444 | uid=ranging-potion-4 -> images\items\Ranging potion(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [31/429] Black d'hide vambraces | itemId=2491 | uid=black-dhide-vambraces -> images\items\Black d'hide vambraces.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [32/429] Black d'hide chaps | itemId=2497 | uid=black-dhide-chaps -> images\items\Black d'hide chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [33/429] Black d'hide body | itemId=2503 | uid=black-dhide-body -> images\items\Black d'hide body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [34/429] Ring of dueling | itemId=2552 | uid=ring-of-dueling-8 -> images\items\Ring of dueling(8).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [35/429] Super restore | itemId=3024 | uid=super-restore-4 -> images\items\Super restore(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [36/429] Climbing boots | itemId=3105 | uid=climbing-boots -> images\items\Climbing boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [37/429] Granite shield | itemId=3122 | uid=granite-shield -> images\items\Granite shield.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [38/429] Cooked karambwan | itemId=3144 | uid=cooked-karambwan -> images\items\Cooked karambwan.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [39/429] Dragon halberd | itemId=3204 | uid=dragon-halberd -> images\items\Dragon halberd.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [40/429] Archer helm | itemId=3749 | uid=archer-helm -> images\items\Archer helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [41/429] Berserker helm | itemId=3751 | uid=berserker-helm -> images\items\Berserker helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [42/429] Warrior helm | itemId=3753 | uid=warrior-helm -> images\items\Warrior helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [43/429] Farseer helm | itemId=3755 | uid=farseer-helm -> images\items\Farseer helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [44/429] Holy book | itemId=3840 | uid=holy-book -> images\items\Holy book.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [45/429] Unholy book | itemId=3842 | uid=unholy-book -> images\items\Unholy book.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [46/429] Book of balance | itemId=3844 | uid=book-of-balance -> images\items\Book of balance.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [47/429] Salve amulet | itemId=4081 | uid=salve-amulet -> images\items\Salve amulet.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [48/429] Mystic hat | itemId=4089 | uid=mystic-hat -> images\items\Mystic hat.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [49/429] Mystic robe top | itemId=4091 | uid=mystic-robe-top -> images\items\Mystic robe top.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [50/429] Mystic robe bottom | itemId=4093 | uid=mystic-robe-bottom -> images\items\Mystic robe bottom.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [51/429] Mystic gloves | itemId=4095 | uid=mystic-gloves -> images\items\Mystic gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [52/429] Mystic boots | itemId=4097 | uid=mystic-boots -> images\items\Mystic boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [53/429] Mystic hat (dark) | itemId=4099 | uid=mystic-hat-dark -> images\items\Mystic hat (dark).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [54/429] Mystic robe top (dark) | itemId=4101 | uid=mystic-robe-top-dark -> images\items\Mystic robe top (dark).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [55/429] Mystic robe bottom (dark) | itemId=4103 | uid=mystic-robe-bottom-dark -> images\items\Mystic robe bottom (dark).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [56/429] Mystic gloves (dark) | itemId=4105 | uid=mystic-gloves-dark -> images\items\Mystic gloves (dark).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [57/429] Mystic boots (dark) | itemId=4107 | uid=mystic-boots-dark -> images\items\Mystic boots (dark).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [58/429] Mystic hat (light) | itemId=4109 | uid=mystic-hat-light -> images\items\Mystic hat (light).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [59/429] Mystic robe top (light) | itemId=4111 | uid=mystic-robe-top-light -> images\items\Mystic robe top (light).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [60/429] Mystic robe bottom (light) | itemId=4113 | uid=mystic-robe-bottom-light -> images\items\Mystic robe bottom (light).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [61/429] Mystic gloves (light) | itemId=4115 | uid=mystic-gloves-light -> images\items\Mystic gloves (light).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [62/429] Mystic boots (light) | itemId=4117 | uid=mystic-boots-light -> images\items\Mystic boots (light).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [63/429] Abyssal whip | itemId=4151 | uid=abyssal-whip -> images\items\Abyssal whip.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [64/429] Granite maul | itemId=4153 | uid=granite-maul -> images\items\Granite maul.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [65/429] Dragon scimitar | itemId=4587 | uid=dragon-scimitar -> images\items\Dragon scimitar.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [66/429] Ahrim's hood | itemId=4708 | uid=ahrims-hood -> images\items\Ahrim's hood.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [67/429] Ahrim's staff | itemId=4710 | uid=ahrims-staff -> images\items\Ahrim's staff.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [68/429] Ahrim's robetop | itemId=4712 | uid=ahrims-robetop -> images\items\Ahrim's robetop.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [69/429] Ahrim's robeskirt | itemId=4714 | uid=ahrims-robeskirt -> images\items\Ahrim's robeskirt.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [70/429] Dharok's helm | itemId=4716 | uid=dharoks-helm -> images\items\Dharok's helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [71/429] Dharok's greataxe | itemId=4718 | uid=dharoks-greataxe -> images\items\Dharok's greataxe.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [72/429] Dharok's platebody | itemId=4720 | uid=dharoks-platebody -> images\items\Dharok's platebody.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [73/429] Dharok's platelegs | itemId=4722 | uid=dharoks-platelegs -> images\items\Dharok's platelegs.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [74/429] Guthan's helm | itemId=4724 | uid=guthans-helm -> images\items\Guthan's helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [75/429] Guthan's warspear | itemId=4726 | uid=guthans-warspear -> images\items\Guthan's warspear.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [76/429] Guthan's platebody | itemId=4728 | uid=guthans-platebody -> images\items\Guthan's platebody.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [77/429] Guthan's chainskirt | itemId=4730 | uid=guthans-chainskirt -> images\items\Guthan's chainskirt.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [78/429] Karil's coif | itemId=4732 | uid=karils-coif -> images\items\Karil's coif.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [79/429] Karil's crossbow | itemId=4734 | uid=karils-crossbow -> images\items\Karil's crossbow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [80/429] Karil's leathertop | itemId=4736 | uid=karils-leathertop -> images\items\Karil's leathertop.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [81/429] Karil's leatherskirt | itemId=4738 | uid=karils-leatherskirt -> images\items\Karil's leatherskirt.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [82/429] Bolt rack | itemId=4740 | uid=bolt-rack -> images\items\Bolt rack.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [83/429] Torag's helm | itemId=4745 | uid=torags-helm -> images\items\Torag's helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [84/429] Torag's hammers | itemId=4747 | uid=torags-hammers -> images\items\Torag's hammers.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [85/429] Torag's platebody | itemId=4749 | uid=torags-platebody -> images\items\Torag's platebody.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [86/429] Torag's platelegs | itemId=4751 | uid=torags-platelegs -> images\items\Torag's platelegs.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [87/429] Verac's helm | itemId=4753 | uid=veracs-helm -> images\items\Verac's helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [88/429] Verac's flail | itemId=4755 | uid=veracs-flail -> images\items\Verac's flail.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [89/429] Verac's brassard | itemId=4757 | uid=veracs-brassard -> images\items\Verac's brassard.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [90/429] Verac's plateskirt | itemId=4759 | uid=veracs-plateskirt -> images\items\Verac's plateskirt.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [91/429] Dragon dagger | itemId=5698 | uid=dragon-dagger-p -> images\items\Dragon dagger(p++).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [92/429] Rock-shell helm | itemId=6128 | uid=rock-shell-helm -> images\items\Rock-shell helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [93/429] Rock-shell plate | itemId=6129 | uid=rock-shell-plate -> images\items\Rock-shell plate.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [94/429] Rock-shell legs | itemId=6130 | uid=rock-shell-legs -> images\items\Rock-shell legs.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [95/429] Spined helm | itemId=6131 | uid=spined-helm -> images\items\Spined helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [96/429] Spined body | itemId=6133 | uid=spined-body -> images\items\Spined body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [97/429] Spined chaps | itemId=6135 | uid=spined-chaps -> images\items\Spined chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [98/429] Skeletal helm | itemId=6137 | uid=skeletal-helm -> images\items\Skeletal helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [99/429] Skeletal top | itemId=6139 | uid=skeletal-top -> images\items\Skeletal top.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [100/429] Skeletal bottoms | itemId=6141 | uid=skeletal-bottoms -> images\items\Skeletal bottoms.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [101/429] Spined boots | itemId=6143 | uid=spined-boots -> images\items\Spined boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [102/429] Rock-shell boots | itemId=6145 | uid=rock-shell-boots -> images\items\Rock-shell boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [103/429] Skeletal boots | itemId=6147 | uid=skeletal-boots -> images\items\Skeletal boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [104/429] Spined gloves | itemId=6149 | uid=spined-gloves -> images\items\Spined gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [105/429] Rock-shell gloves | itemId=6151 | uid=rock-shell-gloves -> images\items\Rock-shell gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [106/429] Skeletal gloves | itemId=6153 | uid=skeletal-gloves -> images\items\Skeletal gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [107/429] Snakeskin boots | itemId=6328 | uid=snakeskin-boots -> images\items\Snakeskin boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [108/429] Toktz-xil-ul | itemId=6522 | uid=toktz-xil-ul -> images\items\Toktz-xil-ul.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [109/429] Toktz-xil-ak | itemId=6523 | uid=toktz-xil-ak -> images\items\Toktz-xil-ak.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [110/429] Toktz-ket-xil | itemId=6524 | uid=toktz-ket-xil -> images\items\Toktz-ket-xil.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [111/429] Toktz-xil-ek | itemId=6525 | uid=toktz-xil-ek -> images\items\Toktz-xil-ek.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [112/429] Toktz-mej-tal | itemId=6526 | uid=toktz-mej-tal -> images\items\Toktz-mej-tal.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [113/429] Tzhaar-ket-em | itemId=6527 | uid=tzhaar-ket-em -> images\items\Tzhaar-ket-em.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [114/429] Tzhaar-ket-om | itemId=6528 | uid=tzhaar-ket-om -> images\items\Tzhaar-ket-om.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [115/429] Obsidian cape | itemId=6568 | uid=obsidian-cape -> images\items\Obsidian cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [116/429] Fire cape | itemId=6570 | uid=fire-cape -> images\items\Fire cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [117/429] Amulet of fury | itemId=6585 | uid=amulet-of-fury -> images\items\Amulet of fury.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [118/429] Saradomin brew | itemId=6685 | uid=saradomin-brew-4 -> images\items\Saradomin brew(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [119/429] Seers ring | itemId=6731 | uid=seers-ring -> images\items\Seers ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [120/429] Archers ring | itemId=6733 | uid=archers-ring -> images\items\Archers ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [121/429] Warrior ring | itemId=6735 | uid=warrior-ring -> images\items\Warrior ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [122/429] Berserker ring | itemId=6737 | uid=berserker-ring -> images\items\Berserker ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [123/429] Granite legs | itemId=6809 | uid=granite-legs -> images\items\Granite legs.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [124/429] Infinity top | itemId=6916 | uid=infinity-top -> images\items\Infinity top.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [125/429] Infinity hat | itemId=6918 | uid=infinity-hat -> images\items\Infinity hat.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [126/429] Infinity boots | itemId=6920 | uid=infinity-boots -> images\items\Infinity boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [127/429] Infinity gloves | itemId=6922 | uid=infinity-gloves -> images\items\Infinity gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [128/429] Infinity bottoms | itemId=6924 | uid=infinity-bottoms -> images\items\Infinity bottoms.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [129/429] Rune gloves | itemId=7460 | uid=rune-gloves -> images\items\Rune gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [130/429] Barrows gloves | itemId=7462 | uid=barrows-gloves -> images\items\Barrows gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [131/429] Void knight top | itemId=8839 | uid=void-knight-top -> images\items\Void knight top.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [132/429] Void knight robe | itemId=8840 | uid=void-knight-robe -> images\items\Void knight robe.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [133/429] Void knight mace | itemId=8841 | uid=void-knight-mace -> images\items\Void knight mace.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [134/429] Void knight gloves | itemId=8842 | uid=void-knight-gloves -> images\items\Void knight gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [135/429] Rune defender | itemId=8850 | uid=rune-defender -> images\items\Rune defender.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [136/429] Warrior guild token | itemId=8851 | uid=warrior-guild-token -> images\items\Warrior guild token.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [137/429] Moonclan helm | itemId=9068 | uid=moonclan-helm -> images\items\Moonclan helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [138/429] Moonclan hat | itemId=9069 | uid=moonclan-hat -> images\items\Moonclan hat.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [139/429] Moonclan armour | itemId=9070 | uid=moonclan-armour -> images\items\Moonclan armour.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [140/429] Moonclan skirt | itemId=9071 | uid=moonclan-skirt -> images\items\Moonclan skirt.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [141/429] Moonclan gloves | itemId=9072 | uid=moonclan-gloves -> images\items\Moonclan gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [142/429] Moonclan boots | itemId=9073 | uid=moonclan-boots -> images\items\Moonclan boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [143/429] Moonclan cape | itemId=9074 | uid=moonclan-cape -> images\items\Moonclan cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [144/429] Astral rune | itemId=9075 | uid=astral-rune -> images\items\Astral rune.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [145/429] Lunar ring | itemId=9104 | uid=lunar-ring -> images\items\Lunar ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [146/429] Rune crossbow | itemId=9185 | uid=rune-crossbow -> images\items\Rune crossbow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [147/429] Zamorak bracers | itemId=10368 | uid=zamorak-bracers -> images\items\Zamorak bracers.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [148/429] Zamorak d'hide body | itemId=10370 | uid=zamorak-dhide-body -> images\items\Zamorak d'hide body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [149/429] Zamorak chaps | itemId=10372 | uid=zamorak-chaps -> images\items\Zamorak chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [150/429] Zamorak coif | itemId=10374 | uid=zamorak-coif -> images\items\Zamorak coif.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [151/429] Guthix bracers | itemId=10376 | uid=guthix-bracers -> images\items\Guthix bracers.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [152/429] Guthix d'hide body | itemId=10378 | uid=guthix-dhide-body -> images\items\Guthix d'hide body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [153/429] Guthix chaps | itemId=10380 | uid=guthix-chaps -> images\items\Guthix chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [154/429] Guthix coif | itemId=10382 | uid=guthix-coif -> images\items\Guthix coif.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [155/429] Saradomin bracers | itemId=10384 | uid=saradomin-bracers -> images\items\Saradomin bracers.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [156/429] Saradomin d'hide body | itemId=10386 | uid=saradomin-dhide-body -> images\items\Saradomin d'hide body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [157/429] Saradomin chaps | itemId=10388 | uid=saradomin-chaps -> images\items\Saradomin chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [158/429] Saradomin coif | itemId=10390 | uid=saradomin-coif -> images\items\Saradomin coif.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [159/429] Ava's accumulator | itemId=10499 | uid=avas-accumulator -> images\items\Ava's accumulator.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [160/429] Fighter torso | itemId=10551 | uid=fighter-torso -> images\items\Fighter torso.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [161/429] Granite body | itemId=10564 | uid=granite-body -> images\items\Granite body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [162/429] Salve amulet (e) | itemId=10588 | uid=salve-amulet-e -> images\items\Salve amulet (e).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [163/429] Granite helm | itemId=10589 | uid=granite-helm -> images\items\Granite helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [164/429] Helm of neitiznot | itemId=10828 | uid=helm-of-neitiznot -> images\items\Helm of neitiznot.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [165/429] Barrelchest anchor | itemId=10887 | uid=barrelchest-anchor -> images\items\Barrelchest anchor.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [166/429] Ancient mace | itemId=11061 | uid=ancient-mace -> images\items\Ancient mace.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [167/429] Berserker necklace | itemId=11128 | uid=berserker-necklace -> images\items\Berserker necklace.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [168/429] Dark bow | itemId=11235 | uid=dark-bow -> images\items\Dark bow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [169/429] Void mage helm | itemId=11663 | uid=void-mage-helm -> images\items\Void mage helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [170/429] Void ranger helm | itemId=11664 | uid=void-ranger-helm -> images\items\Void ranger helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [171/429] Void melee helm | itemId=11665 | uid=void-melee-helm -> images\items\Void melee helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [172/429] Seers ring (i) | itemId=11770 | uid=seers-ring-i -> images\items\Seers ring (i).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [173/429] Archers ring (i) | itemId=11771 | uid=archers-ring-i -> images\items\Archers ring (i).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [174/429] Warrior ring (i) | itemId=11772 | uid=warrior-ring-i -> images\items\Warrior ring (i).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [175/429] Berserker ring (i) | itemId=11773 | uid=berserker-ring-i -> images\items\Berserker ring (i).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [176/429] Armadyl crossbow | itemId=11785 | uid=armadyl-crossbow -> images\items\Armadyl crossbow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [177/429] Armadyl godsword | itemId=11802 | uid=armadyl-godsword -> images\items\Armadyl godsword.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [178/429] Zamorak godsword | itemId=11808 | uid=zamorak-godsword -> images\items\Zamorak godsword.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [179/429] Saradomin sword | itemId=11838 | uid=saradomin-sword -> images\items\Saradomin sword.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [180/429] Trident of the seas | itemId=11907 | uid=trident-of-the-seas -> images\items\Trident of the seas.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [181/429] Malediction ward | itemId=11924 | uid=malediction-ward -> images\items\Malediction ward.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [182/429] Odium ward | itemId=11926 | uid=odium-ward -> images\items\Odium ward.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [183/429] Occult necklace | itemId=12002 | uid=occult-necklace -> images\items\Occult necklace.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [184/429] Amulet of fury (or) | itemId=12436 | uid=amulet-of-fury-or -> images\items\Amulet of fury (or).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [185/429] Ancient bracers | itemId=12490 | uid=ancient-bracers -> images\items\Ancient bracers.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [186/429] Ancient d'hide body | itemId=12492 | uid=ancient-dhide-body -> images\items\Ancient d'hide body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [187/429] Ancient chaps | itemId=12494 | uid=ancient-chaps -> images\items\Ancient chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [188/429] Ancient coif | itemId=12496 | uid=ancient-coif -> images\items\Ancient coif.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [189/429] Bandos bracers | itemId=12498 | uid=bandos-bracers -> images\items\Bandos bracers.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [190/429] Bandos d'hide body | itemId=12500 | uid=bandos-dhide-body -> images\items\Bandos d'hide body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [191/429] Bandos chaps | itemId=12502 | uid=bandos-chaps -> images\items\Bandos chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [192/429] Bandos coif | itemId=12504 | uid=bandos-coif -> images\items\Bandos coif.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [193/429] Armadyl bracers | itemId=12506 | uid=armadyl-bracers -> images\items\Armadyl bracers.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [194/429] Armadyl d'hide body | itemId=12508 | uid=armadyl-dhide-body -> images\items\Armadyl d'hide body.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [195/429] Armadyl chaps | itemId=12510 | uid=armadyl-chaps -> images\items\Armadyl chaps.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [196/429] Armadyl coif | itemId=12512 | uid=armadyl-coif -> images\items\Armadyl coif.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [197/429] Dark infinity colour kit | itemId=12528 | uid=dark-infinity-colour-kit -> images\items\Dark infinity colour kit.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [198/429] Light infinity colour kit | itemId=12530 | uid=light-infinity-colour-kit -> images\items\Light infinity colour kit.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [199/429] Ring of the gods | itemId=12601 | uid=ring-of-the-gods -> images\items\Ring of the gods.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [200/429] Tyrannical ring | itemId=12603 | uid=tyrannical-ring -> images\items\Tyrannical ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [201/429] Treasonous ring | itemId=12605 | uid=treasonous-ring -> images\items\Treasonous ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [202/429] Book of war | itemId=12608 | uid=book-of-war -> images\items\Book of war.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [203/429] Book of law | itemId=12610 | uid=book-of-law -> images\items\Book of law.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [204/429] Book of darkness | itemId=12612 | uid=book-of-darkness -> images\items\Book of darkness.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [205/429] Stamina potion | itemId=12625 | uid=stamina-potion-4 -> images\items\Stamina potion(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [206/429] Super combat potion | itemId=12695 | uid=super-combat-potion-4 -> images\items\Super combat potion(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [207/429] Magic shortbow scroll | itemId=12786 | uid=magic-shortbow-scroll -> images\items\Magic shortbow scroll.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [208/429] Magic shortbow (i) | itemId=12788 | uid=magic-shortbow-i -> images\items\Magic shortbow (i).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [209/429] Rune pouch | itemId=12791 | uid=rune-pouch -> images\items\Rune pouch.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [210/429] Ward upgrade kit | itemId=12802 | uid=ward-upgrade-kit -> images\items\Ward upgrade kit.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [211/429] Saradomin's tear | itemId=12804 | uid=saradomins-tear -> images\items\Saradomin's tear.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [212/429] Saradomin's blessed sword | itemId=12809 | uid=saradomins-blessed-sword -> images\items\Saradomin's blessed sword.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [213/429] Elysian spirit shield | itemId=12817 | uid=elysian-spirit-shield -> images\items\Elysian spirit shield.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [214/429] Spectral spirit shield | itemId=12821 | uid=spectral-spirit-shield -> images\items\Spectral spirit shield.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [215/429] Arcane spirit shield | itemId=12825 | uid=arcane-spirit-shield -> images\items\Arcane spirit shield.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [216/429] Spirit shield | itemId=12829 | uid=spirit-shield -> images\items\Spirit shield.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [217/429] Blessed spirit shield | itemId=12831 | uid=blessed-spirit-shield -> images\items\Blessed spirit shield.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [218/429] Holy elixir | itemId=12833 | uid=holy-elixir -> images\items\Holy elixir.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [219/429] Red dragonhide set | itemId=12869 | uid=red-dragonhide-set -> images\items\Red dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [220/429] Black dragonhide set | itemId=12871 | uid=black-dragonhide-set -> images\items\Black dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [221/429] Guthan's armour set | itemId=12873 | uid=guthans-armour-set -> images\items\Guthan's armour set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [222/429] Verac's armour set | itemId=12875 | uid=veracs-armour-set -> images\items\Verac's armour set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [223/429] Dharok's armour set | itemId=12877 | uid=dharoks-armour-set -> images\items\Dharok's armour set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [224/429] Torag's armour set | itemId=12879 | uid=torags-armour-set -> images\items\Torag's armour set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [225/429] Ahrim's armour set | itemId=12881 | uid=ahrims-armour-set -> images\items\Ahrim's armour set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [226/429] Karil's armour set | itemId=12883 | uid=karils-armour-set -> images\items\Karil's armour set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [227/429] Trident of the swamp | itemId=12899 | uid=trident-of-the-swamp -> images\items\Trident of the swamp.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [228/429] Toxic staff of the dead | itemId=12904 | uid=toxic-staff-of-the-dead -> images\items\Toxic staff of the dead.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [229/429] Anti-venom+ | itemId=12913 | uid=anti-venom-4 -> images\items\Anti-venom+(4).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [230/429] Toxic blowpipe | itemId=12926 | uid=toxic-blowpipe -> images\items\Toxic blowpipe.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [231/429] Serpentine helm | itemId=12931 | uid=serpentine-helm -> images\items\Serpentine helm.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [232/429] Dragon defender | itemId=12954 | uid=dragon-defender -> images\items\Dragon defender.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [233/429] Zamorak dragonhide set | itemId=13161 | uid=zamorak-dragonhide-set -> images\items\Zamorak dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [234/429] Saradomin dragonhide set | itemId=13163 | uid=saradomin-dragonhide-set -> images\items\Saradomin dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [235/429] Guthix dragonhide set | itemId=13165 | uid=guthix-dragonhide-set -> images\items\Guthix dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [236/429] Bandos dragonhide set | itemId=13167 | uid=bandos-dragonhide-set -> images\items\Bandos dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [237/429] Armadyl dragonhide set | itemId=13169 | uid=armadyl-dragonhide-set -> images\items\Armadyl dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [238/429] Ancient dragonhide set | itemId=13171 | uid=ancient-dragonhide-set -> images\items\Ancient dragonhide set.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [239/429] Abyssal dagger | itemId=13265 | uid=abyssal-dagger -> images\items\Abyssal dagger.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [240/429] Xerician hat | itemId=13385 | uid=xerician-hat -> images\items\Xerician hat.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [241/429] Xerician top | itemId=13387 | uid=xerician-top -> images\items\Xerician top.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [242/429] Xerician robe | itemId=13389 | uid=xerician-robe -> images\items\Xerician robe.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [243/429] Anglerfish | itemId=13441 | uid=anglerfish -> images\items\Anglerfish.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [244/429] Dragon warhammer | itemId=13576 | uid=dragon-warhammer -> images\items\Dragon warhammer.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [245/429] Dragon claws | itemId=13652 | uid=dragon-claws -> images\items\Dragon claws.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [246/429] Light ballista | itemId=19478 | uid=light-ballista -> images\items\Light ballista.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [247/429] Heavy ballista | itemId=19481 | uid=heavy-ballista -> images\items\Heavy ballista.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [248/429] Tormented bracelet | itemId=19544 | uid=tormented-bracelet -> images\items\Tormented bracelet.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [249/429] Necklace of anguish | itemId=19547 | uid=necklace-of-anguish -> images\items\Necklace of anguish.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [250/429] Ring of suffering | itemId=19550 | uid=ring-of-suffering -> images\items\Ring of suffering.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [251/429] Amulet of torture | itemId=19553 | uid=amulet-of-torture -> images\items\Amulet of torture.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [252/429] Royal seed pod | itemId=19564 | uid=royal-seed-pod -> images\items\Royal seed pod.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [253/429] Ancient d'hide boots | itemId=19921 | uid=ancient-dhide-boots -> images\items\Ancient d'hide boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [254/429] Bandos d'hide boots | itemId=19924 | uid=bandos-dhide-boots -> images\items\Bandos d'hide boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [255/429] Guthix d'hide boots | itemId=19927 | uid=guthix-dhide-boots -> images\items\Guthix d'hide boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [256/429] Armadyl d'hide boots | itemId=19930 | uid=armadyl-dhide-boots -> images\items\Armadyl d'hide boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [257/429] Saradomin d'hide boots | itemId=19933 | uid=saradomin-dhide-boots -> images\items\Saradomin d'hide boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [258/429] Zamorak d'hide boots | itemId=19936 | uid=zamorak-dhide-boots -> images\items\Zamorak d'hide boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [259/429] Dragon scimitar ornament kit | itemId=20002 | uid=dragon-scimitar-ornament-kit -> images\items\Dragon scimitar ornament kit.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [260/429] Occult ornament kit | itemId=20065 | uid=occult-ornament-kit -> images\items\Occult ornament kit.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [261/429] Holy blessing | itemId=20220 | uid=holy-blessing -> images\items\Holy blessing.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [262/429] Unholy blessing | itemId=20223 | uid=unholy-blessing -> images\items\Unholy blessing.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [263/429] Peaceful blessing | itemId=20226 | uid=peaceful-blessing -> images\items\Peaceful blessing.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [264/429] Honourable blessing | itemId=20229 | uid=honourable-blessing -> images\items\Honourable blessing.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [265/429] War blessing | itemId=20232 | uid=war-blessing -> images\items\War blessing.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [266/429] Ancient blessing | itemId=20235 | uid=ancient-blessing -> images\items\Ancient blessing.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [267/429] Elder chaos top | itemId=20517 | uid=elder-chaos-top -> images\items\Elder chaos top.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [268/429] Elder chaos robe | itemId=20520 | uid=elder-chaos-robe -> images\items\Elder chaos robe.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [269/429] Elder chaos hood | itemId=20595 | uid=elder-chaos-hood -> images\items\Elder chaos hood.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [270/429] Tome of fire | itemId=20714 | uid=tome-of-fire -> images\items\Tome of fire.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [271/429] Dragon thrownaxe | itemId=20849 | uid=dragon-thrownaxe -> images\items\Dragon thrownaxe.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [272/429] Elder maul | itemId=21003 | uid=elder-maul -> images\items\Elder maul.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [273/429] Dragon sword | itemId=21009 | uid=dragon-sword -> images\items\Dragon sword.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [274/429] Dinh's bulwark | itemId=21015 | uid=dinhs-bulwark -> images\items\Dinh's bulwark.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [275/429] Burning amulet | itemId=21166 | uid=burning-amulet-5 -> images\items\Burning amulet(5).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [276/429] Obsidian helmet | itemId=21298 | uid=obsidian-helmet -> images\items\Obsidian helmet.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [277/429] Obsidian platebody | itemId=21301 | uid=obsidian-platebody -> images\items\Obsidian platebody.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [278/429] Obsidian platelegs | itemId=21304 | uid=obsidian-platelegs -> images\items\Obsidian platelegs.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [279/429] Amethyst arrow | itemId=21326 | uid=amethyst-arrow -> images\items\Amethyst arrow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [280/429] Granite boots | itemId=21643 | uid=granite-boots -> images\items\Granite boots.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [281/429] Granite longsword | itemId=21646 | uid=granite-longsword -> images\items\Granite longsword.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [282/429] Granite gloves | itemId=21736 | uid=granite-gloves -> images\items\Granite gloves.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [283/429] Granite ring | itemId=21739 | uid=granite-ring -> images\items\Granite ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [284/429] Granite hammer | itemId=21742 | uid=granite-hammer -> images\items\Granite hammer.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [285/429] Granite ring (i) | itemId=21752 | uid=granite-ring-i -> images\items\Granite ring (i).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [286/429] Imbued saradomin cape | itemId=21791 | uid=imbued-saradomin-cape -> images\items\Imbued saradomin cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [287/429] Imbued guthix cape | itemId=21793 | uid=imbued-guthix-cape -> images\items\Imbued guthix cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [288/429] Imbued zamorak cape | itemId=21795 | uid=imbued-zamorak-cape -> images\items\Imbued zamorak cape.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [289/429] Revenant cave teleport | itemId=21802 | uid=revenant-cave-teleport -> images\items\Revenant cave teleport.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [290/429] Bracelet of ethereum | itemId=21816 | uid=bracelet-of-ethereum -> images\items\Bracelet of ethereum.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [291/429] Revenant ether | itemId=21820 | uid=revenant-ether -> images\items\Revenant ether.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [292/429] Dragon crossbow | itemId=21902 | uid=dragon-crossbow -> images\items\Dragon crossbow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [293/429] Dragonstone dragon bolts (e) | itemId=21948 | uid=dragonstone-dragon-bolts-e -> images\items\Dragonstone dragon bolts (e).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [294/429] Ava's assembler | itemId=22109 | uid=avas-assembler -> images\items\Ava's assembler.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [295/429] Dragon boots ornament kit | itemId=22231 | uid=dragon-boots-ornament-kit -> images\items\Dragon boots ornament kit.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [296/429] Black d'hide shield | itemId=22284 | uid=black-dhide-shield -> images\items\Black d'hide shield.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [297/429] Ivandis flail | itemId=22398 | uid=ivandis-flail -> images\items\Ivandis flail.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [298/429] Viggora's chainmace | itemId=22545 | uid=viggoras-chainmace -> images\items\Viggora's chainmace.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [299/429] Craw's bow | itemId=22550 | uid=craws-bow -> images\items\Craw's bow.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [300/429] Thammaron's sceptre | itemId=22555 | uid=thammarons-sceptre -> images\items\Thammaron's sceptre.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [301/429] Amulet of avarice | itemId=22557 | uid=amulet-of-avarice -> images\items\Amulet of avarice.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [302/429] Dragon knife | itemId=22810 | uid=dragon-knife-p -> images\items\Dragon knife(p++).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [303/429] Brimstone ring | itemId=22975 | uid=brimstone-ring -> images\items\Brimstone ring.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [304/429] Bonecrusher necklace | itemId=22986 | uid=bonecrusher-necklace -> images\items\Bonecrusher necklace.png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [305/429] Mystic hat (dusk) | itemId=23047 | uid=mystic-hat-dusk -> images\items\Mystic hat (dusk).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [306/429] Mystic robe top (dusk) | itemId=23050 | uid=mystic-robe-top-dusk -> images\items\Mystic robe top (dusk).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [307/429] Mystic robe bottom (dusk) | itemId=23053 | uid=mystic-robe-bottom-dusk -> images\items\Mystic robe bottom (dusk).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [308/429] Mystic gloves (dusk) | itemId=23056 | uid=mystic-gloves-dusk -> images\items\Mystic gloves (dusk).png
+2026-07-22 03:02:33 | DEBUG    | Skipped existing: [309/429] Mystic boots (dusk) | itemId=23059 | uid=mystic-boots-dusk -> images\items\Mystic boots (dusk).png
+2026-07-22 03:02:33 | INFO     | Downloading [310/429] Mystic set (light) | itemId=23110 | uid=mystic-set-light
+2026-07-22 03:02:33 | INFO     |   URL: https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20set%20%28light%29.png
+2026-07-22 03:02:33 | INFO     |   Path: images\items\Mystic set (light).png
+2026-07-22 03:02:34 | INFO     |   Result: downloaded
+2026-07-22 03:02:34 | INFO     | 
+2026-07-22 03:02:34 | INFO     | Downloading [311/429] Mystic set (blue) | itemId=23113 | uid=mystic-set-blue
+2026-07-22 03:02:34 | INFO     |   URL: https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20set%20%28blue%29.png
+2026-07-22 03:02:34 | INFO     |   Path: images\items\Mystic set (blue).png
+2026-07-22 03:02:34 | INFO     |   Result: downloaded
+2026-07-22 03:02:34 | INFO     | 
+2026-07-22 03:02:34 | INFO     | Downloading [312/429] Mystic set (dark) | itemId=23116 | uid=mystic-set-dark
+2026-07-22 03:02:34 | INFO     |   URL: https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20set%20%28dark%29.png
+2026-07-22 03:02:34 | INFO     |   Path: images\items\Mystic set (dark).png
+2026-07-22 03:02:35 | INFO     |   Result: downloaded
+2026-07-22 03:02:35 | INFO     | 
+2026-07-22 03:02:35 | INFO     | Downloading [313/429] Mystic set (dusk) | itemId=23119 | uid=mystic-set-dusk
+2026-07-22 03:02:35 | INFO     |   URL: https://oldschool.runescape.wiki/w/Special:FilePath/Mystic%20set%20%28dusk%29.png
+2026-07-22 03:02:35 | INFO     |   Path: images\items\Mystic set (dusk).png
+2026-07-22 03:02:35 | INFO     |   Result: downloaded
+2026-07-22 03:02:35 | INFO     | 
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [314/429] Guthix d'hide shield | itemId=23188 | uid=guthix-dhide-shield -> images\items\Guthix d'hide shield.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [315/429] Saradomin d'hide shield | itemId=23191 | uid=saradomin-dhide-shield -> images\items\Saradomin d'hide shield.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [316/429] Zamorak d'hide shield | itemId=23194 | uid=zamorak-dhide-shield -> images\items\Zamorak d'hide shield.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [317/429] Ancient d'hide shield | itemId=23197 | uid=ancient-dhide-shield -> images\items\Ancient d'hide shield.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [318/429] Armadyl d'hide shield | itemId=23200 | uid=armadyl-dhide-shield -> images\items\Armadyl d'hide shield.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [319/429] Bandos d'hide shield | itemId=23203 | uid=bandos-dhide-shield -> images\items\Bandos d'hide shield.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [320/429] Rune defender ornament kit | itemId=23227 | uid=rune-defender-ornament-kit -> images\items\Rune defender ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [321/429] Tzhaar-ket-om ornament kit | itemId=23232 | uid=tzhaar-ket-om-ornament-kit -> images\items\Tzhaar-ket-om ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [322/429] Berserker necklace ornament kit | itemId=23237 | uid=berserker-necklace-ornament-kit -> images\items\Berserker necklace ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [323/429] Crystal halberd | itemId=23987 | uid=crystal-halberd -> images\items\Crystal halberd.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [324/429] Trouver parchment | itemId=24187 | uid=trouver-parchment -> images\items\Trouver parchment.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [325/429] Granite maul (ornate handle) | itemId=24225 | uid=granite-maul-ornate-handle -> images\items\Granite maul (ornate handle).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [326/429] Ornate maul handle | itemId=24229 | uid=ornate-maul-handle -> images\items\Ornate maul handle.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [327/429] Wilderness crabs teleport | itemId=24251 | uid=wilderness-crabs-teleport -> images\items\Wilderness crabs teleport.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [328/429] Dagon'hai hat | itemId=24288 | uid=dagonhai-hat -> images\items\Dagon'hai hat.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [329/429] Dagon'hai robe top | itemId=24291 | uid=dagonhai-robe-top -> images\items\Dagon'hai robe top.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [330/429] Dagon'hai robe bottom | itemId=24294 | uid=dagonhai-robe-bottom -> images\items\Dagon'hai robe bottom.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [331/429] Volatile nightmare staff | itemId=24424 | uid=volatile-nightmare-staff -> images\items\Volatile nightmare staff.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [332/429] Blade of saeldor (c) | itemId=24551 | uid=blade-of-saeldor-c -> images\items\Blade of saeldor (c).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [333/429] Blighted manta ray | itemId=24589 | uid=blighted-manta-ray -> images\items\Blighted manta ray.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [334/429] Blighted super restore | itemId=24598 | uid=blighted-super-restore-4 -> images\items\Blighted super restore(4).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [335/429] Blighted ancient ice sack | itemId=24607 | uid=blighted-ancient-ice-sack -> images\items\Blighted ancient ice sack.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [336/429] Blighted entangle sack | itemId=24613 | uid=blighted-entangle-sack -> images\items\Blighted entangle sack.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [337/429] Blighted teleport spell sack | itemId=24615 | uid=blighted-teleport-spell-sack -> images\items\Blighted teleport spell sack.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [338/429] Blighted vengeance sack | itemId=24621 | uid=blighted-vengeance-sack -> images\items\Blighted vengeance sack.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [339/429] Amulet of blood fury | itemId=24780 | uid=amulet-of-blood-fury -> images\items\Amulet of blood fury.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [340/429] Swampbark body | itemId=25389 | uid=swampbark-body -> images\items\Swampbark body.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [341/429] Swampbark gauntlets | itemId=25392 | uid=swampbark-gauntlets -> images\items\Swampbark gauntlets.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [342/429] Swampbark boots | itemId=25395 | uid=swampbark-boots -> images\items\Swampbark boots.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [343/429] Swampbark helm | itemId=25398 | uid=swampbark-helm -> images\items\Swampbark helm.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [344/429] Swampbark legs | itemId=25401 | uid=swampbark-legs -> images\items\Swampbark legs.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [345/429] Tome of water | itemId=25574 | uid=tome-of-water -> images\items\Tome of water.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [346/429] Amethyst dart | itemId=25849 | uid=amethyst-dart -> images\items\Amethyst dart.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [347/429] Bow of faerdhinen (c) | itemId=25867 | uid=bow-of-faerdhinen-c -> images\items\Bow of faerdhinen (c).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [348/429] Lightbearer | itemId=25975 | uid=lightbearer -> images\items\Lightbearer.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [349/429] Shattered relics variety ornament kit | itemId=26421 | uid=shattered-relics-variety-ornament-kit -> images\items\Shattered relics variety ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [350/429] Shattered relics void ornament kit | itemId=26479 | uid=shattered-relics-void-ornament-kit -> images\items\Shattered relics void ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [351/429] Mystic hat (or) | itemId=26531 | uid=mystic-hat-or -> images\items\Mystic hat (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [352/429] Mystic robe top (or) | itemId=26533 | uid=mystic-robe-top-or -> images\items\Mystic robe top (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [353/429] Mystic robe bottom (or) | itemId=26535 | uid=mystic-robe-bottom-or -> images\items\Mystic robe bottom (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [354/429] Mystic gloves (or) | itemId=26537 | uid=mystic-gloves-or -> images\items\Mystic gloves (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [355/429] Mystic boots (or) | itemId=26539 | uid=mystic-boots-or -> images\items\Mystic boots (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [356/429] Shattered relics mystic ornament kit | itemId=26541 | uid=shattered-relics-mystic-ornament-kit -> images\items\Shattered relics mystic ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [357/429] Loot key | itemId=26651 | uid=loot-key -> images\items\Loot key.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [358/429] Blighted surge sack | itemId=26705 | uid=blighted-surge-sack -> images\items\Blighted surge sack.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [359/429] Scroll of imbuing | itemId=26706 | uid=scroll-of-imbuing -> images\items\Scroll of imbuing.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [360/429] Heavy ballista ornament kit | itemId=26711 | uid=heavy-ballista-ornament-kit -> images\items\Heavy ballista ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [361/429] Colossal blade | itemId=27021 | uid=colossal-blade -> images\items\Colossal blade.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [362/429] Elder maul ornament kit | itemId=27098 | uid=elder-maul-ornament-kit -> images\items\Elder maul ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [363/429] Elder chaos robes ornament kit | itemId=27113 | uid=elder-chaos-robes-ornament-kit -> images\items\Elder chaos robes ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [364/429] Thread of elidinis | itemId=27279 | uid=thread-of-elidinis -> images\items\Thread of elidinis.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [365/429] Webweaver bow | itemId=27655 | uid=webweaver-bow -> images\items\Webweaver bow.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [366/429] Ursine chainmace | itemId=27660 | uid=ursine-chainmace -> images\items\Ursine chainmace.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [367/429] Accursed sceptre | itemId=27665 | uid=accursed-sceptre -> images\items\Accursed sceptre.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [368/429] Accursed sceptre (a) | itemId=27679 | uid=accursed-sceptre-a -> images\items\Accursed sceptre (a).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [369/429] Voidwaker | itemId=27690 | uid=voidwaker -> images\items\Voidwaker.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [370/429] Thammaron's sceptre (a) | itemId=27788 | uid=thammarons-sceptre-a -> images\items\Thammaron's sceptre (a).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [371/429] Dragon mace (bh) | itemId=27857 | uid=dragon-mace-bh -> images\items\Dragon mace (bh).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [372/429] Bounty hunter ornament kit | itemId=28017 | uid=bounty-hunter-ornament-kit -> images\items\Bounty hunter ornament kit.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [373/429] Dragon mace imbue scroll | itemId=28076 | uid=dragon-mace-imbue-scroll -> images\items\Dragon mace imbue scroll.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [374/429] Zombie axe | itemId=28810 | uid=zombie-axe -> images\items\Zombie axe.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [375/429] Hunters' sunlight crossbow | itemId=28869 | uid=hunters-sunlight-crossbow -> images\items\Hunters' sunlight crossbow.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [376/429] Sunlight antler bolts | itemId=28872 | uid=sunlight-antler-bolts -> images\items\Sunlight antler bolts.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [377/429] Blue moon spear | itemId=28988 | uid=blue-moon-spear -> images\items\Blue moon spear.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [378/429] Dual macuahuitl | itemId=28997 | uid=dual-macuahuitl -> images\items\Dual macuahuitl.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [379/429] Eclipse atlatl | itemId=29000 | uid=eclipse-atlatl -> images\items\Eclipse atlatl.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [380/429] Eclipse moon chestplate | itemId=29004 | uid=eclipse-moon-chestplate -> images\items\Eclipse moon chestplate.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [381/429] Eclipse moon tassets | itemId=29007 | uid=eclipse-moon-tassets -> images\items\Eclipse moon tassets.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [382/429] Eclipse moon helm | itemId=29010 | uid=eclipse-moon-helm -> images\items\Eclipse moon helm.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [383/429] Blue moon chestplate | itemId=29013 | uid=blue-moon-chestplate -> images\items\Blue moon chestplate.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [384/429] Blue moon tassets | itemId=29016 | uid=blue-moon-tassets -> images\items\Blue moon tassets.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [385/429] Blue moon helm | itemId=29019 | uid=blue-moon-helm -> images\items\Blue moon helm.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [386/429] Blood moon chestplate | itemId=29022 | uid=blood-moon-chestplate -> images\items\Blood moon chestplate.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [387/429] Blood moon tassets | itemId=29025 | uid=blood-moon-tassets -> images\items\Blood moon tassets.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [388/429] Blood moon helm | itemId=29028 | uid=blood-moon-helm -> images\items\Blood moon helm.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [389/429] Burning claws | itemId=29577 | uid=burning-claws -> images\items\Burning claws.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [390/429] Armageddon weapon scroll | itemId=29625 | uid=armageddon-weapon-scroll -> images\items\Armageddon weapon scroll.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [391/429] Armageddon cape fabric | itemId=29628 | uid=armageddon-cape-fabric -> images\items\Armageddon cape fabric.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [392/429] Amulet of rancour | itemId=29801 | uid=amulet-of-rancour -> images\items\Amulet of rancour.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [393/429] Surge potion | itemId=30875 | uid=surge-potion -> images\items\Surge potion.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [394/429] Arkan blade | itemId=30955 | uid=arkan-blade -> images\items\Arkan blade.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [395/429] Antler guard | itemId=31081 | uid=antler-guard -> images\items\Antler guard.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [396/429] Rock-shell armour set | itemId=31151 | uid=rock-shell-armour-set -> images\items\Rock-shell armour set.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [397/429] Skeletal armour set | itemId=31154 | uid=skeletal-armour-set -> images\items\Skeletal armour set.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [398/429] Spined armour set | itemId=31157 | uid=spined-armour-set -> images\items\Spined armour set.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [399/429] Belle's folly | itemId=31248 | uid=belles-folly -> images\items\Belle's folly.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [400/429] Extended stamina potion | itemId=31638 | uid=extended-stamina-potion-4 -> images\items\Extended stamina potion(4).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [401/429] Halibut | itemId=32336 | uid=halibut -> images\items\Halibut.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [402/429] Marlin | itemId=32352 | uid=marlin -> images\items\Marlin.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [403/429] Seeking dragon arrow | itemId=33595 | uid=seeking-dragon-arrow -> images\items\Seeking dragon arrow.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [404/429] Crimson kisten | itemId=33631 | uid=crimson-kisten -> images\items\Crimson kisten.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [405/429] Necklace of rupture | itemId=33639 | uid=necklace-of-rupture -> images\items\Necklace of rupture.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [406/429] Amethyst javelin | uid=amethyst-javelin -> images\items\Amethyst javelin.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [407/429] Dragon javelin | uid=dragon-javelin -> images\items\Dragon javelin.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [408/429] Rune javelin | uid=rune-javelin -> images\items\Rune javelin.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [409/429] Crystal helm | uid=crystal-helm -> images\items\Crystal helm.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [410/429] Crystal body | uid=crystal-body -> images\items\Crystal body.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [411/429] Crystal legs | uid=crystal-legs -> images\items\Crystal legs.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [412/429] Blade of saeldor | uid=blade-of-saeldor -> images\items\Blade of saeldor.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [413/429] Bow of faerdhinen | uid=bow-of-faerdhinen -> images\items\Bow of faerdhinen.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [414/429] Crystal bow | uid=crystal-bow -> images\items\Crystal bow.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [415/429] Crystal shield | uid=crystal-shield -> images\items\Crystal shield.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [416/429] Elite void top | uid=elite-void-top -> images\items\Elite void top.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [417/429] Elite void robe | uid=elite-void-robe -> images\items\Elite void robe.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [418/429] Elite void robe (or) | uid=elite-void-robe-or -> images\items\Elite void robe (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [419/429] Elite void top (or) | uid=elite-void-top-or -> images\items\Elite void top (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [420/429] Void knight gloves (or) | uid=void-knight-gloves-or -> images\items\Void knight gloves (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [421/429] Void knight robe (or) | uid=void-knight-robe-or -> images\items\Void knight robe (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [422/429] Void knight top (or) | uid=void-knight-top-or -> images\items\Void knight top (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [423/429] Void mage helm (or) | uid=void-mage-helm-or -> images\items\Void mage helm (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [424/429] Void melee helm (or) | uid=void-melee-helm-or -> images\items\Void melee helm (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [425/429] Void ranger helm (or) | uid=void-ranger-helm-or -> images\items\Void ranger helm (or).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [426/429] Amulet of the damned | uid=amulet-of-the-damned -> images\items\Amulet of the damned.png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [427/429] Salve amulet(ei) | uid=salve-amulet-ei -> images\items\Salve amulet(ei).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [428/429] Salve amulet(i) | uid=salve-amulet-i -> images\items\Salve amulet(i).png
+2026-07-22 03:02:36 | DEBUG    | Skipped existing: [429/429] Surge potion | uid=surge-potion-4 -> images\items\Surge potion.png
+2026-07-22 03:02:36 | INFO     | Download process complete.
+2026-07-22 03:02:36 | INFO     | Downloaded: 4
+2026-07-22 03:02:36 | INFO     | Skipped existing: 425
+2026-07-22 03:02:36 | INFO     | Failed: 0
+2026-07-22 03:02:36 | INFO     | 
+2026-07-22 03:02:36 | INFO     | Full log written to: logs\image_cache_2026-07-22_03-02-33.log

@@ -74,19 +74,6 @@
       "imageUsed": "Black d'hide vambraces.png"
     },
     {
-      "uid": "blessings",
-      "alias": "Blessings",
-      "tags": [
-        "jewellery"
-      ],
-      "behaviors": [],
-      "tier": null,
-      "cost": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
-      "imageUsed": "Holy blessing.png"
-    },
-    {
       "uid": "blood-moon-equipment",
       "alias": "Blood moon equipment",
       "tags": [
@@ -115,20 +102,6 @@
       "alwaysAvailable": false,
       "unlocked": false,
       "imageUsed": "Blue moon spear.png"
-    },
-    {
-      "uid": "crystal-gear",
-      "alias": "Crystal gear",
-      "tags": [
-        "armor",
-        "range"
-      ],
-      "behaviors": [],
-      "tier": null,
-      "cost": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
-      "imageUsed": "Crystal helm.png"
     },
     {
       "uid": "dagannoth-rings",
@@ -384,34 +357,6 @@
       "imageUsed": "Moonclan helm.png"
     },
     {
-      "uid": "mystic-dark",
-      "alias": "Mystic dark",
-      "tags": [
-        "armor",
-        "mage"
-      ],
-      "behaviors": [],
-      "tier": null,
-      "cost": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
-      "imageUsed": "Mystic hat (dark).png"
-    },
-    {
-      "uid": "mystic-dusk",
-      "alias": "Mystic dusk",
-      "tags": [
-        "armor",
-        "mage"
-      ],
-      "behaviors": [],
-      "tier": null,
-      "cost": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
-      "imageUsed": "Mystic hat (dusk).png"
-    },
-    {
       "uid": "mystic-equipment",
       "alias": "Mystic equipment",
       "tags": [
@@ -426,34 +371,6 @@
       "alwaysAvailable": false,
       "unlocked": false,
       "imageUsed": "Mystic hat.png"
-    },
-    {
-      "uid": "mystic-light",
-      "alias": "Mystic light",
-      "tags": [
-        "mage",
-        "armor"
-      ],
-      "behaviors": [],
-      "tier": null,
-      "cost": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
-      "imageUsed": "Mystic hat (light).png"
-    },
-    {
-      "uid": "mystic-or",
-      "alias": "Mystic or",
-      "tags": [
-        "armor",
-        "mage"
-      ],
-      "behaviors": [],
-      "tier": null,
-      "cost": null,
-      "alwaysAvailable": false,
-      "unlocked": false,
-      "imageUsed": "Mystic hat (or).png"
     },
     {
       "uid": "obsidian-armor",
