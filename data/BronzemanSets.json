@@ -22,10 +22,7 @@
         "range",
         "armor"
       ],
-      "behaviors": [
-        "unlock",
-        "shop"
-      ],
+      "behaviors": [],
       "tier": null,
       "cost": 1,
       "alwaysAvailable": false,
@@ -39,10 +36,7 @@
         "range",
         "armor"
       ],
-      "behaviors": [
-        "unlock",
-        "shop"
-      ],
+      "behaviors": [],
       "tier": null,
       "cost": 1,
       "alwaysAvailable": false,
@@ -56,10 +50,7 @@
         "range",
         "armor"
       ],
-      "behaviors": [
-        "shop",
-        "unlock"
-      ],
+      "behaviors": [],
       "tier": null,
       "cost": 1,
       "alwaysAvailable": false,
@@ -296,10 +287,7 @@
         "armor",
         "range"
       ],
-      "behaviors": [
-        "unlock",
-        "shop"
-      ],
+      "behaviors": [],
       "tier": null,
       "cost": 1,
       "alwaysAvailable": false,
@@ -436,10 +424,7 @@
         "range",
         "armor"
       ],
-      "behaviors": [
-        "shop",
-        "unlock"
-      ],
+      "behaviors": [],
       "tier": null,
       "cost": 1,
       "alwaysAvailable": false,
@@ -558,10 +543,7 @@
         "range",
         "armor"
       ],
-      "behaviors": [
-        "shop",
-        "unlock"
-      ],
+      "behaviors": [],
       "tier": null,
       "cost": 1,
       "alwaysAvailable": false,

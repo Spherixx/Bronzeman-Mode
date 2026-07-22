@@ -1,11 +1,24 @@
 /////ADDITIONS/////
 added guthans for some reason it was missing
+added javelins and bolt racks as ammo
+added amulet of avarice as shop unlock
+added blood fury as talent(dunno where to put it)
+added blessings in the jewllery category
+added crystal weapons and armor
+added bonecrusher necklace (maybe a random challenge unlock?)
+added other mystic sets
+added salve ammy and variants as jewllery
+
 
 /////BALANCE/////
 
 
 /////BUG FIXES/////
 Rewrote the Perilous Moons Roulette wheel animation, should be smooth for the whole animation now
+removed infinity items from shop instead shop just has a single item as a set
+removed duplicate surge potion
+removed duplicate god hide sets from shop
+hid a bunch of items from the collection page that had set boxes displayed
 
 /////SYSTEM/////
 re-designed how sets of items works so they're easier to define and load
