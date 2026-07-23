@@ -158,23 +158,25 @@
       "behaviors": [
         "talent"
       ],
-      "tier": 4,
-      "cost": 4,
+      "tier": 3,
+      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
-      "imageUsed": "Dagon'hai hat.png"
+      "imageUsed": "Dagon'hai robe top.png"
     },
     {
       "uid": "dark-bow-seeking-dragon-arrows",
-      "alias": "Dark bow seeking dragon arrows",
+      "alias": "Dark bow & Seeking Arrows",
       "tags": [
         "range",
         "weapon",
         "ammo"
       ],
-      "behaviors": [],
-      "tier": null,
-      "cost": null,
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 3,
+      "cost": 3,
       "alwaysAvailable": false,
       "unlocked": false,
       "imageUsed": "Dark bow.png"
@@ -632,6 +634,21 @@
       "alwaysAvailable": false,
       "unlocked": false,
       "imageUsed": "Zamorak bracers.png"
+    },
+    {
+      "uid": "dt2-rings",
+      "alias": "DT2 Rings",
+      "tags": [
+        "jewellery"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 5,
+      "cost": 5,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "imageUsed": ""
     }
   ],
   "tagDefinitions": [

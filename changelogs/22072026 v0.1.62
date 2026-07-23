@@ -1,0 +1,20 @@
+/////ADDITIONS/////
+added rune gloves to talent tier 1
+added seeking amethyst arrows to talent tier 2
+added thammarons sceptre to tier 5
+added abyssal bludgeon to tier 3
+added tormented synapse to tier 5
+
+/////BALANCE/////
+barrows gloves to tier 2
+dspear to tier 2
+ancient mace to tier 2
+dagonhai to tier 3
+removed whip from talents
+removed thread of elidinis from talents
+
+/////BUG FIXES/////
+re-added dark bow & dragon seeking arrows to tier 3
+
+/////SYSTEM/////
+shop changes have to wait till I seprate backend cost into shop and talent cost, right now they're shared

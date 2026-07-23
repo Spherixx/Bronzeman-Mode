@@ -287,8 +287,8 @@
       "behaviors": [
         "talent"
       ],
-      "tier": 3,
-      "cost": 3,
+      "tier": 2,
+      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_spear",
@@ -2410,9 +2410,11 @@
       "tags": [
         "armor"
       ],
-      "behaviors": [],
+      "behaviors": [
+        "talent"
+      ],
       "tier": 1,
-      "cost": null,
+      "cost": 1,
       "alwaysAvailable": true,
       "unlocked": true,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_gloves",
@@ -2430,8 +2432,8 @@
       "behaviors": [
         "talent"
       ],
-      "tier": 4,
-      "cost": 4,
+      "tier": 2,
+      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Barrows_gloves",
@@ -3082,8 +3084,8 @@
       "behaviors": [
         "talent"
       ],
-      "tier": 3,
-      "cost": 3,
+      "tier": 2,
+      "cost": 2,
       "alwaysAvailable": false,
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_mace",
@@ -4426,6 +4428,25 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ancient_dragonhide_set",
       "imageName": "Ancient dragonhide set.png"
+    },
+    {
+      "name": "Abyssal bludgeon",
+      "alias": "Abyssal bludgeon",
+      "uid": "abyssal-bludgeon",
+      "itemId": 13263,
+      "set": null,
+      "tags": [
+        "melee"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 3,
+      "cost": 3,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Abyssal_bludgeon",
+      "imageName": "Abyssal bludgeon.png"
     },
     {
       "name": "Abyssal dagger",
@@ -6967,6 +6988,74 @@
       "imageName": "Dragon mace imbue scroll.png"
     },
     {
+      "name": "Ultor ring",
+      "alias": "Ultor ring",
+      "uid": "ultor-ring",
+      "itemId": 28307,
+      "set": "dt2-rings",
+      "tags": [
+        "jewellery"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Ultor_ring",
+      "imageName": "Ultor ring.png"
+    },
+    {
+      "name": "Venator ring",
+      "alias": "Venator ring",
+      "uid": "venator-ring",
+      "itemId": 28310,
+      "set": "dt2-rings",
+      "tags": [
+        "jewellery"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Venator_ring",
+      "imageName": "Venator ring.png"
+    },
+    {
+      "name": "Magus ring",
+      "alias": "Magus ring",
+      "uid": "magus-ring",
+      "itemId": 28313,
+      "set": "dt2-rings",
+      "tags": [
+        "jewellery"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Magus_ring",
+      "imageName": "Magus ring.png"
+    },
+    {
+      "name": "Bellator ring",
+      "alias": "Bellator ring",
+      "uid": "bellator-ring",
+      "itemId": 28316,
+      "set": "dt2-rings",
+      "tags": [
+        "jewellery"
+      ],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Bellator_ring",
+      "imageName": "Bellator ring.png"
+    },
+    {
       "name": "Zombie axe",
       "alias": "Zombie axe",
       "uid": "zombie-axe",
@@ -7258,6 +7347,25 @@
       "imageName": "Burning claws.png"
     },
     {
+      "name": "Tormented synapse",
+      "alias": "Tormented synapse",
+      "uid": "tormented-synapse",
+      "itemId": 29580,
+      "set": null,
+      "tags": [
+        "consumable"
+      ],
+      "behaviors": [
+        "talent"
+      ],
+      "tier": 3,
+      "cost": 3,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Tormented_synapse",
+      "imageName": "Tormented synapse.png"
+    },
+    {
       "name": "Armageddon weapon scroll",
       "alias": "Armageddon weapon scroll",
       "uid": "armageddon-weapon-scroll",
@@ -7502,6 +7610,21 @@
       "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Marlin",
       "imageName": "Marlin.png"
+    },
+    {
+      "name": "Seeking amethyst arrow",
+      "alias": "Seeking amethyst arrow",
+      "uid": "seeking-amethyst-arrow",
+      "itemId": 33589,
+      "set": null,
+      "tags": [],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Seeking_amethyst_arrow",
+      "imageName": "Seeking amethyst arrow.png"
     },
     {
       "name": "Seeking dragon arrow",
