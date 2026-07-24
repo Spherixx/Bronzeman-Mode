@@ -219,8 +219,7 @@
         "mage"
       ],
       "behaviors": [
-        "unlock",
-        "shop"
+        "unlock"
       ],
       "tier": null,
       "cost": 1,
@@ -346,10 +345,7 @@
         "mage",
         "armor"
       ],
-      "behaviors": [
-        "shop",
-        "unlock"
-      ],
+      "behaviors": [],
       "tier": null,
       "cost": 1,
       "alwaysAvailable": false,
@@ -648,7 +644,7 @@
       "cost": 5,
       "alwaysAvailable": false,
       "unlocked": false,
-      "imageUsed": ""
+      "imageUsed": "Ultor ring.png"
     }
   ],
   "tagDefinitions": [
@@ -664,14 +660,14 @@
     "potion",
     "teleport",
     "ammo",
+    "spellbook",
+    "prayer",
     "consumable",
+    "cosmetic",
     "other"
   ],
   "behaviorDefinitions": [
     "hidden",
-    "talent",
-    "shop",
-    "unlock",
-    "resupply"
+    "talent"
   ]
 }

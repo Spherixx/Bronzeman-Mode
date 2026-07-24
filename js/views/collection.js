@@ -22,7 +22,7 @@ const LEGACY_TAG_GROUPS = {
   consumables: ["consumable"]
 };
 
-const BEHAVIOR_TAGS = new Set(["hidden", "shop", "talent", "unlock", "resupply"]);
+const BEHAVIOR_TAGS = new Set(["hidden", "talent"]);
 
 export function createCollection(ctx) {
   function itemDisplayName(item) {
@@ -35,7 +35,9 @@ export function createCollection(ctx) {
   }
 
   function itemBehaviorList(item) {
-    if (Array.isArray(item.behaviors)) return uniqueTags(item.behaviors);
+    if (Array.isArray(item.behaviors)) {
+      return uniqueTags(item.behaviors).filter((behavior) => BEHAVIOR_TAGS.has(behavior));
+    }
     return uniqueTags(item.tags ?? []).filter((tag) => BEHAVIOR_TAGS.has(tag));
   }
 
@@ -47,7 +49,7 @@ export function createCollection(ctx) {
     const behaviors = itemBehaviorList(item);
     if (item.alwaysAvailable || item.unlocked) return "always";
     if (behaviors.includes("talent")) return "talent";
-    if (behaviors.includes("shop")) return "shop";
+    if (item.shopItem) return "shop";
     return "collection";
   }
 
@@ -137,6 +139,9 @@ export function createCollection(ctx) {
   }
 
   function shopMatchesCollectionItem(shopItem, item) {
+    const itemIds = [item.id, ...(item.collectionIds ?? [])];
+    if (itemIds.some((id) => (shopItem.collectionIds ?? []).includes(id))) return true;
+
     const itemImages = new Set((item.images ?? []).map(normalizeAssetPath));
     const entries = shopItem.items ?? (shopItem.images ?? []).map((image) => ({ image }));
     return entries.some((entry) => itemImages.has(normalizeAssetPath(entry.image)));
@@ -157,7 +162,7 @@ export function createCollection(ctx) {
     const unlockedByTalent = behaviors.includes("talent") && ctx.data.unlocks.some((unlock) => {
       return ctx.state.purchased.includes(unlock.id) && unlockMatchesCollectionItem(unlock, item);
     });
-    const unlockedByShop = behaviors.includes("shop") && ctx.data.shopItems.some((shopItem) => {
+    const unlockedByShop = ctx.data.shopItems.some((shopItem) => {
       return (ctx.state.shopPurchases[shopItem.id] ?? 0) > 0 && shopMatchesCollectionItem(shopItem, item);
     });
 
@@ -176,7 +181,12 @@ export function createCollection(ctx) {
     if (ctx.collectionUi.filterMode === "all" || !ctx.collectionUi.activeFilters.size) return true;
 
     const groups = collectionTagGroups(item.tags ?? []);
-    return groups.some((group) => ctx.collectionUi.activeFilters.has(group));
+    const matchesTag = groups.some((group) => ctx.collectionUi.activeFilters.has(group));
+    const matchesTalent = ctx.collectionUi.activeFilters.has("talent") && itemBehaviorList(item).includes("talent");
+    const matchesShop = ctx.collectionUi.activeFilters.has("shop") && ctx.data.shopItems.some((shopItem) => {
+      return shopMatchesCollectionItem(shopItem, item);
+    });
+    return matchesTag || matchesTalent || matchesShop;
   }
 
   function visibleCollectionItems() {
@@ -356,6 +366,7 @@ export function createCollection(ctx) {
     itemImagePath,
     collectionSourceType,
     collectionTagGroups,
+    collectionFilterOptions,
     collectionFilterLabel,
     collectionDisplayTag,
     collectionDisplayTags,

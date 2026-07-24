@@ -17,4 +17,5 @@ removed thread of elidinis from talents
 re-added dark bow & dragon seeking arrows to tier 3
 
 /////SYSTEM/////
-shop changes have to wait till I seprate backend cost into shop and talent cost, right now they're shared
+Separated shop cost and talent cost on the backend so I can have items in the shop that also exist as talents
+Completely re-wrote the shop

@@ -2,256 +2,275 @@
     "schemaVersion": 2,
     "unlocks": [
         {
-            "name": "Standard spellbook",
-            "alias": "Standard spellbook",
             "uid": "standard-spellbook",
+            "alias": "Standard spellbook",
+            "set": null,
             "tags": [
                 "spellbook"
             ],
-            "imageUsed": "Standard spellbook",
-            "tier": "0",
+            "behaviors": [],
+            "tier": 0,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": 0
+            "imageUsed": "Standard spellbook"
         },
         {
-            "name": "Arceuus spellbook",
-            "alias": "Arceuus spellbook",
             "uid": "arceuus-spellbook",
+            "alias": "Arceuus spellbook",
+            "set": null,
             "tags": [
                 "spellbook"
             ],
-            "imageUsed": "Arceuus spellbook",
-            "tier": "0",
+            "behaviors": [],
+            "tier": 0,
+            "cost": 0,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 0
+            "imageUsed": "Arceuus spellbook"
         },
         {
-            "name": "Ancient spellbook",
-            "alias": "Ancient spellbook",
             "uid": "ancient-spellbook",
+            "alias": "Ancient spellbook",
+            "set": null,
             "tags": [
                 "spellbook",
                 "talent"
             ],
-            "imageUsed": "Ancient spellbook",
-            "tier": "2",
+            "behaviors": [],
+            "tier": 2,
+            "cost": 2,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 2
+            "imageUsed": "Ancient spellbook"
         },
         {
-            "name": "Lunar spellbook",
-            "alias": "Lunar spellbook",
             "uid": "lunar-spellbook",
+            "alias": "Lunar spellbook",
+            "set": null,
             "tags": [
                 "spellbook",
                 "talent"
             ],
-            "imageUsed": "Lunar spellbook",
-            "tier": "2",
+            "behaviors": [],
+            "tier": 2,
+            "cost": 2,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 2
+            "imageUsed": "Lunar spellbook"
         },
         {
-            "name": "Chivalry",
-            "alias": "Chivalry",
             "uid": "chivalry",
+            "alias": "Chivalry",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Chivalry",
-            "tier": "3",
+            "behaviors": [],
+            "tier": 3,
+            "cost": 3,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 3
+            "imageUsed": "Chivalry"
         },
         {
-            "name": "Piety",
-            "alias": "Piety",
             "uid": "piety",
+            "alias": "Piety",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Piety",
-            "tier": "4",
+            "behaviors": [],
+            "tier": 4,
+            "cost": 4,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 4
+            "imageUsed": "Piety"
         },
         {
-            "name": "Rigour",
-            "alias": "Rigour",
             "uid": "rigour",
+            "alias": "Rigour",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Rigour",
-            "tier": "5",
+            "behaviors": [],
+            "tier": 5,
+            "cost": 5,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 5
+            "imageUsed": "Rigour"
         },
         {
-            "name": "Augury",
-            "alias": "Augury",
             "uid": "augury",
+            "alias": "Augury",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Augury",
-            "tier": "4",
+            "behaviors": [],
+            "tier": 4,
+            "cost": 4,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 4
+            "imageUsed": "Augury"
         },
         {
-            "name": "Deadeye",
-            "alias": "Deadeye",
             "uid": "deadeye",
+            "alias": "Deadeye",
+            "set": null,
             "tags": [
                 "prayer",
                 "talent"
             ],
-            "imageUsed": "Deadeye",
-            "tier": "3",
+            "behaviors": [],
+            "tier": 3,
+            "cost": 3,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 3
+            "imageUsed": "Deadeye"
         },
         {
-            "name": "Mystic Vigour",
-            "alias": "Mystic Vigour",
             "uid": "mystic-vigour",
+            "alias": "Mystic Vigour",
+            "set": null,
             "tags": [
                 "prayer",
                 "talent"
             ],
-            "imageUsed": "Mystic vigour",
-            "tier": "3",
+            "behaviors": [],
+            "tier": 3,
+            "cost": 3,
             "alwaysAvailable": false,
             "unlocked": false,
-            "cost": 3
+            "imageUsed": "Mystic vigour"
         },
         {
-            "name": "Steel Skin",
-            "alias": "Steel Skin",
             "uid": "steel-skin",
+            "alias": "Steel Skin",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Steel Skin",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Steel Skin"
         },
         {
-            "name": "Incredible Reflexes",
-            "alias": "Incredible Reflexes",
             "uid": "incredible-reflexes",
+            "alias": "Incredible Reflexes",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Incredible Reflexes",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Incredible Reflexes"
         },
         {
-            "name": "Ultimate Strength",
-            "alias": "Ultimate Strength",
             "uid": "ultimate-strength",
+            "alias": "Ultimate Strength",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Ultimate Strength",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Ultimate Strength"
         },
         {
-            "name": "Eagle Eye",
-            "alias": "Eagle Eye",
             "uid": "eagle-eye",
+            "alias": "Eagle Eye",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Eagle Eye",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Eagle Eye"
         },
         {
-            "name": "Mystic Might",
-            "alias": "Mystic Might",
             "uid": "mystic-might",
+            "alias": "Mystic Might",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Mystic Might",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Mystic Might"
         },
         {
-            "name": "Protect from Magic",
-            "alias": "Protect from Magic",
             "uid": "protect-from-magic",
+            "alias": "Protect from Magic",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Protect from Magic",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Protect from Magic"
         },
         {
-            "name": "Protect from Missiles",
-            "alias": "Protect from Missiles",
             "uid": "protect-from-missiles",
+            "alias": "Protect from Missiles",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Protect from Missiles",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Protect from Missiles"
         },
         {
-            "name": "Protect from Melee",
-            "alias": "Protect from Melee",
             "uid": "protect-from-melee",
+            "alias": "Protect from Melee",
+            "set": null,
             "tags": [
                 "prayer"
             ],
-            "imageUsed": "Protect from Melee",
+            "behaviors": [],
             "tier": null,
+            "cost": 0,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": null
+            "imageUsed": "Protect from Melee"
         },
         {
-            "name": "God spells",
-            "alias": "God Spells",
             "uid": "god-spells",
+            "alias": "God Spells",
+            "set": null,
             "tags": [
                 "talent",
                 "hidden"
             ],
-            "imageUsed": "Flames of zamorak",
-            "tier": "1",
+            "behaviors": [],
+            "tier": 1,
+            "cost": 1,
             "alwaysAvailable": true,
             "unlocked": true,
-            "cost": "1"
+            "imageUsed": "Flames of zamorak"
         }
     ]
 }

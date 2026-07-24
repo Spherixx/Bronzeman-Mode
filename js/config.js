@@ -4,6 +4,7 @@ export const DATA_URLS = {
   items: "data/BronzemanItems.json",
   itemSets: "data/BronzemanSets.json",
   unlocks: "data/BronzemanUnlocks.json",
+  shop: "data/BronzemanShop.json",
   pvm: "data/BronzemanPvM.json",
   pvp: "data/BronzemanPvP.json",
   challenges: "data/BronzemanChallenges.json"
@@ -20,13 +21,14 @@ export const COLLECTION_FILTERS = [
   { id: "weapon", label: "Weapon", type: "tag" },
   { id: "armor", label: "Armor", type: "tag" },
   { id: "jewellery", label: "Jewellery", type: "tag" },
-  { id: "talent", label: "Talent", type: "tag" },
-  { id: "shop", label: "Shop", type: "tag" },
+  { id: "talent", label: "Talent", type: "source" },
+  { id: "shop", label: "Shop", type: "source" },
   { id: "rune", label: "Runes", type: "tag" },
   { id: "ammo", label: "Ammo", type: "tag" },
   { id: "food", label: "Food", type: "tag" },
   { id: "potion", label: "Potions", type: "tag" },
   { id: "teleport", label: "Teleports", type: "tag" },
+  { id: "cosmetic", label: "Cosmetic", type: "tag" },
   { id: "consumable", label: "Consumables", type: "tag" },
   { id: "other", label: "Other", type: "tag" }
 ];
@@ -44,8 +46,7 @@ export const COLLECTION_CATEGORY_PRIORITY = [
   "food",
   "potion",
   "teleport",
-  "talent",
-  "shop",
+  "cosmetic",
   "consumable",
   "other"
 ];

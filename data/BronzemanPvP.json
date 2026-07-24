@@ -1,376 +1,376 @@
 {
-    "schemaVersion": 2,
-    "pvpTasks": [
-        {
-            "uid": "first-wilderness-kill",
-            "alias": "Get your first Wilderness kill.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "first-smite",
-            "alias": "Get your first smite.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "successful-rush",
-            "alias": "Successfully rush a player.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "teleblock-kill",
-            "alias": "Kill a player you teleblocked.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "chaos-altar-kill",
-            "alias": "Kill a player at Chaos Altar.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "revenant-caves-kill",
-            "alias": "Kill a player in Revenant Caves.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "deep-wilderness-kill",
-            "alias": "Get a kill above level 50 Wilderness.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "budget-xerician-win",
-            "alias": "Win a fight with a budget Xerician set.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "under-500k-risk-kill",
-            "alias": "Get a kill while risking under 500k.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "ranged-only-kill",
-            "alias": "Get a kill using ranged only.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "magic-only-kill",
-            "alias": "Get a kill using magic only.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "melee-only-kill",
-            "alias": "Get a kill using melee only.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "tribrid-kill",
-            "alias": "Get a kill using all three combat styles.",
-            "difficulty": "2",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "dark-bow-special-kill",
-            "alias": "Get a kill with a Dark bow special attack.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "obsidian-weapon-ko",
-            "alias": "Get a KO with any obsidian weapon.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "poisoned-dragon-knife-kill",
-            "alias": "Get a kill with a poisoned dragon knife special attack.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "barrelchests-anchor-ko",
-            "alias": "Get a KO with Barrelchest's anchor.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "dragon-thrownaxe-kill",
-            "alias": "Get a kill with a Dragon thrownaxe special attack.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "vengeance-ko",
-            "alias": "Get a KO with Vengeance.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "special-attacks-only-kill",
-            "alias": "Get a kill using only special attacks.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "ancient-mace-smite-kill",
-            "alias": "Get an Ancient Mace smite kill.",
-            "difficulty": "4",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "smite-5m-plus-one",
-            "alias": "Smite a +1 worth 5m+.",
-            "difficulty": "2",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "smite-10m-plus-one",
-            "alias": "Smite a +1 worth 10m+.",
-            "difficulty": "3",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "smite-25m-plus-one",
-            "alias": "Smite a +1 worth 25m+.",
-            "difficulty": "4",
-            "points": "4",
-            "repeatable": false
-        },
-        {
-            "uid": "smite-50m-plus-one",
-            "alias": "Smite a +1 worth 50m+.",
-            "difficulty": "5",
-            "points": "5",
-            "repeatable": false
-        },
-        {
-            "uid": "loot-key-10m",
-            "alias": "Get a single loot key worth 10m+.",
-            "difficulty": "2",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "loot-key-20m",
-            "alias": "Get a single loot key worth 20m+.",
-            "difficulty": "3",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "loot-key-50m",
-            "alias": "Get a single loot key worth 50m+.",
-            "difficulty": "4",
-            "points": "4",
-            "repeatable": false
-        },
-        {
-            "uid": "loot-key-100m",
-            "alias": "Get a single loot key worth 100m+.",
-            "difficulty": "5",
-            "points": "5",
-            "repeatable": false
-        },
-        {
-            "uid": "pk-wilderness-weapon",
-            "alias": "PK a Wilderness weapon.",
-            "difficulty": "4",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "bot-farm-2-5m",
-            "alias": "Earn 2.5m+ PKing one bot farm.",
-            "difficulty": "2",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "carry-5-loot-keys",
-            "alias": "Carry 5 loot keys at once.",
-            "difficulty": "2",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "carry-10-loot-keys",
-            "alias": "Carry 10 loot keys at once.",
-            "difficulty": "4",
-            "points": "4",
-            "repeatable": false
-        },
-        {
-            "uid": "obtain-50-loot-keys",
-            "alias": "Obtain 50 loot keys total.",
-            "difficulty": "2",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "obtain-100-loot-keys",
-            "alias": "Obtain 100 loot keys total.",
-            "difficulty": "3",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "obtain-250-loot-keys",
-            "alias": "Obtain 250 loot keys total.",
-            "difficulty": "4",
-            "points": "4",
-            "repeatable": false
-        },
-        {
-            "uid": "obtain-500-loot-keys",
-            "alias": "Obtain 500 loot keys total.",
-            "difficulty": "5",
-            "points": "5",
-            "repeatable": false
-        },
-        {
-            "uid": "anti-pk-5m",
-            "alias": "Anti-PK a 5m+ kill.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "anti-pk-10m",
-            "alias": "Anti-PK a 10m+ kill.",
-            "difficulty": "4",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "anti-pk-25m",
-            "alias": "Anti-PK a 25m+ kill.",
-            "difficulty": "5",
-            "points": "4",
-            "repeatable": false
-        },
-        {
-            "uid": "anti-rush-rusher",
-            "alias": "Anti-rush a rusher.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "win-1v2",
-            "alias": "Win a 1v2 or worse fight.",
-            "difficulty": "4",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "win-1v3",
-            "alias": "Win a 1v3 or worse fight.",
-            "difficulty": "5",
-            "points": "5",
-            "repeatable": false
-        },
-        {
-            "uid": "escape-multi-team-with-key",
-            "alias": "Escape a multi team while carrying a loot key.",
-            "difficulty": "4",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "escape-full-teleblock-with-key",
-            "alias": "Escape after a full Tele Block while carrying a loot key.",
-            "difficulty": "4",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "kill-while-carrying-10m-key",
-            "alias": "Get another kill while carrying a 10m+ loot key.",
-            "difficulty": "4",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "ten-kill-streak",
-            "alias": "Get a 10-kill streak without dying.",
-            "difficulty": "5",
-            "points": "4",
-            "repeatable": false
-        },
-        {
-            "uid": "risk-over-10m-kill",
-            "alias": "Get a kill while risking over 10m.",
-            "difficulty": "3",
-            "points": "3",
-            "repeatable": false
-        },
-        {
-            "uid": "risk-over-25m-kill",
-            "alias": "Get a kill while risking over 25m.",
-            "difficulty": "4",
-            "points": "4",
-            "repeatable": false
-        },
-        {
-            "uid": "no-overhead-honor-fight",
-            "alias": "Win a no-overhead honor fight.",
-            "difficulty": "2",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "skulltrick-player",
-            "alias": "Skulltrick someone.",
-            "difficulty": "3",
-            "points": "2",
-            "repeatable": false
-        },
-        {
-            "uid": "two-v-one-viewer",
-            "alias": "2v1 a viewer.",
-            "difficulty": "2",
-            "points": "1",
-            "repeatable": false
-        },
-        {
-            "uid": "bs-clanmate",
-            "alias": "BS a clanmate.",
-            "difficulty": "1",
-            "points": "1",
-            "repeatable": false
-        }
-    ]
+  "schemaVersion": 2,
+  "pvpTasks": [
+    {
+      "uid": "first-wilderness-kill",
+      "alias": "Get your first Wilderness kill.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "first-smite",
+      "alias": "Get your first smite.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "successful-rush",
+      "alias": "Successfully rush a player.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "teleblock-kill",
+      "alias": "Kill a player you teleblocked.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "chaos-altar-kill",
+      "alias": "Kill a player at Chaos Altar.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "revenant-caves-kill",
+      "alias": "Kill a player in Revenant Caves.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "deep-wilderness-kill",
+      "alias": "Get a kill above level 50 Wilderness.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "budget-xerician-win",
+      "alias": "Win a fight with a budget Xerician set.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "under-500k-risk-kill",
+      "alias": "Get a kill while risking under 500k.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "ranged-only-kill",
+      "alias": "Get a kill using ranged only.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "magic-only-kill",
+      "alias": "Get a kill using magic only.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "melee-only-kill",
+      "alias": "Get a kill using melee only.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "tribrid-kill",
+      "alias": "Get a kill using all three combat styles.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "dark-bow-special-kill",
+      "alias": "Get a kill with a Dark bow special attack.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "obsidian-weapon-ko",
+      "alias": "Get a KO with any obsidian weapon.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "poisoned-dragon-knife-kill",
+      "alias": "Get a kill with a poisoned dragon knife special attack.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "barrelchests-anchor-ko",
+      "alias": "Get a KO with Barrelchest's anchor.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "dragon-thrownaxe-kill",
+      "alias": "Get a kill with a Dragon thrownaxe special attack.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "vengeance-ko",
+      "alias": "Get a KO with Vengeance.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "special-attacks-only-kill",
+      "alias": "Get a kill using only special attacks.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "ancient-mace-smite-kill",
+      "alias": "Get an Ancient Mace smite kill.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "smite-5m-plus-one",
+      "alias": "Smite a +1 worth 5m+.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "smite-10m-plus-one",
+      "alias": "Smite a +1 worth 10m+.",
+      "difficulty": "3",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "smite-25m-plus-one",
+      "alias": "Smite a +1 worth 25m+.",
+      "difficulty": "4",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "smite-50m-plus-one",
+      "alias": "Smite a +1 worth 50m+.",
+      "difficulty": "5",
+      "points": "5",
+      "repeatable": false
+    },
+    {
+      "uid": "loot-key-10m",
+      "alias": "Get a single loot key worth 10m+.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "loot-key-20m",
+      "alias": "Get a single loot key worth 20m+.",
+      "difficulty": "3",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "loot-key-50m",
+      "alias": "Get a single loot key worth 50m+.",
+      "difficulty": "4",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "loot-key-100m",
+      "alias": "Get a single loot key worth 100m+.",
+      "difficulty": "5",
+      "points": "5",
+      "repeatable": false
+    },
+    {
+      "uid": "pk-wilderness-weapon",
+      "alias": "PK a Wilderness weapon.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "bot-farm-2-5m",
+      "alias": "Earn 2.5m+ PKing one bot farm.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "carry-5-loot-keys",
+      "alias": "Carry 5 loot keys at once.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "carry-10-loot-keys",
+      "alias": "Carry 10 loot keys at once.",
+      "difficulty": "4",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "obtain-50-loot-keys",
+      "alias": "Obtain 50 loot keys total.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "obtain-100-loot-keys",
+      "alias": "Obtain 100 loot keys total.",
+      "difficulty": "3",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "obtain-250-loot-keys",
+      "alias": "Obtain 250 loot keys total.",
+      "difficulty": "4",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "obtain-500-loot-keys",
+      "alias": "Obtain 500 loot keys total.",
+      "difficulty": "5",
+      "points": "5",
+      "repeatable": false
+    },
+    {
+      "uid": "anti-pk-5m",
+      "alias": "Anti-PK a 5m+ kill.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "anti-pk-10m",
+      "alias": "Anti-PK a 10m+ kill.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "anti-pk-25m",
+      "alias": "Anti-PK a 25m+ kill.",
+      "difficulty": "5",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "anti-rush-rusher",
+      "alias": "Anti-rush a rusher.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "win-1v2",
+      "alias": "Win a 1v2 or worse fight.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "win-1v3",
+      "alias": "Win a 1v3 or worse fight.",
+      "difficulty": "5",
+      "points": "5",
+      "repeatable": false
+    },
+    {
+      "uid": "escape-multi-team-with-key",
+      "alias": "Escape a multi team while carrying a loot key.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "escape-full-teleblock-with-key",
+      "alias": "Escape after a full Tele Block while carrying a loot key.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "kill-while-carrying-10m-key",
+      "alias": "Get another kill while carrying a 10m+ loot key.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "ten-kill-streak",
+      "alias": "Get a 10-kill streak without dying.",
+      "difficulty": "5",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "risk-over-10m-kill",
+      "alias": "Get a kill while risking over 10m.",
+      "difficulty": "3",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "risk-over-25m-kill",
+      "alias": "Get a kill while risking over 25m.",
+      "difficulty": "4",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "no-overhead-honor-fight",
+      "alias": "Win a no-overhead honor fight.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "skulltrick-player",
+      "alias": "Skulltrick someone.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "two-v-one-viewer",
+      "alias": "2v1 a viewer.",
+      "difficulty": "2",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "bs-clanmate",
+      "alias": "BS a clanmate.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    }
+  ]
 }

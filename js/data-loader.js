@@ -10,11 +10,13 @@ import {
   withoutTrailingPeriod
 } from "./utils.js";
 
-const BEHAVIOR_TAGS = new Set(["hidden", "shop", "talent", "unlock", "resupply"]);
+const BEHAVIOR_TAGS = new Set(["hidden", "talent"]);
 
 export function createDataLoader(ctx) {
   function dataBehaviors(entry) {
-    if (Array.isArray(entry?.behaviors)) return uniqueTags(entry.behaviors);
+    if (Array.isArray(entry?.behaviors)) {
+      return uniqueTags(entry.behaviors).filter((behavior) => BEHAVIOR_TAGS.has(behavior));
+    }
     return uniqueTags(entry?.tags ?? []).filter((tag) => BEHAVIOR_TAGS.has(tag));
   }
 
@@ -214,15 +216,19 @@ export function createDataLoader(ctx) {
     };
   }
 
+  function isTalentEntry(entry) {
+    return dataBehaviors(entry).includes("talent") || uniqueTags(entry?.tags ?? []).includes("talent");
+  }
+
   function buildDataUnlocks(itemsData, itemSetsData, unlocksData) {
     const itemUnlocks = toArray(itemsData?.items)
-      .filter((item) => dataBehaviors(item).includes("talent"))
+      .filter(isTalentEntry)
       .map((item) => normalizeTalentUnlock(item, "item"));
     const setUnlocks = dataSets(itemSetsData)
-      .filter((itemSet) => dataBehaviors(itemSet).includes("talent"))
+      .filter(isTalentEntry)
       .map((itemSet) => normalizeTalentUnlock(itemSet, "set"));
     const nonItemUnlocks = toArray(unlocksData?.unlocks)
-      .filter((unlock) => dataBehaviors(unlock).includes("talent"))
+      .filter(isTalentEntry)
       .map((unlock) => normalizeTalentUnlock(unlock, "unlock"));
 
     return [...itemUnlocks, ...setUnlocks, ...nonItemUnlocks].filter(Boolean);
@@ -237,63 +243,69 @@ export function createDataLoader(ctx) {
     });
   }
 
-  function normalizeShopSection(behaviors) {
-    if (behaviors.includes("resupply")) return "resupply";
-    if (behaviors.includes("unlock")) return "unlocks";
+  function normalizeShopSection(category) {
+    const value = String(category || "").trim().toLowerCase();
+    if (value === "resupply") return "resupply";
+    if (value === "unlock" || value === "unlocks") return "unlocks";
     return "other";
   }
 
-  function normalizeShopCategory(entry, tags) {
-    const categoryTags = tags.filter((tag) => !["shop", "resupply", "unlock"].includes(tag));
-    if (categoryTags.length) return ctx.collection.collectionCategoryFromTags(categoryTags);
-    return entry.category || "Other";
+  function shopAmount(entry, index) {
+    if (Array.isArray(entry?.amount)) return entry.amount[index] ?? null;
+    return entry?.amount ?? null;
   }
 
-  function shopItemImages(entry, sourceType) {
-    if (sourceType === "set") {
-      return itemRowsForSet(entry).map((item) => {
-        return { image: imageForDataEntry(item) };
-      }).filter((item) => item.image);
-    }
+  function shopItemImages(entry, itemDefinition) {
+    const configuredImages = toArray(entry?.images).map((imageEntry, index) => {
+      const imageName = typeof imageEntry === "string"
+        ? imageEntry
+        : imageEntry?.image || imageEntry?.imagePath || imageEntry?.imageName;
+      const amount = typeof imageEntry === "object" && imageEntry !== null
+        ? imageEntry.amount ?? shopAmount(entry, index)
+        : shopAmount(entry, index);
+      const image = resolveDataImage(imageName);
+      return image ? { image, amount } : null;
+    }).filter(Boolean);
 
-    const image = imageForDataEntry(entry);
-    return image ? [{ image }] : [];
+    if (configuredImages.length) return configuredImages;
+
+    const image = imageForDataEntry(itemDefinition);
+    return image ? [{ image, amount: shopAmount(entry, 0) }] : [];
   }
 
-  function normalizeShopItem(entry, sourceType) {
-    const tags = dataTags(entry);
-    const behaviors = dataBehaviors(entry);
+  function normalizeShopItem(entry) {
+    const id = dataUid(entry, "shop");
+    const itemDefinition = ctx.indexes.itemRowsByUid.get(id);
+    const tags = dataTags(itemDefinition ?? entry);
     return {
-      id: dataUid(entry, "shop"),
-      category: normalizeShopCategory(entry, tags),
-      section: normalizeShopSection(behaviors),
+      id,
+      category: ctx.collection.collectionCategoryFromTags(tags),
+      section: normalizeShopSection(entry.category),
       name: dataDisplayName(entry, "Shop item"),
       cost: toNumber(entry.cost, 1),
       note: entry.note,
       tags,
-      behaviors,
-      items: shopItemImages(entry, sourceType)
+      collectionIds: [id],
+      items: shopItemImages(entry, itemDefinition)
     };
   }
 
-  function buildDataShopItems(itemsData, itemSetsData, unlocksData) {
-    const sources = [
-      [itemsData?.items, "item"],
-      [dataSets(itemSetsData), "set"],
-      [unlocksData?.unlocks, "unlock"]
-    ];
+  function buildDataShopItems(shopData) {
     const seen = new Set();
-    const shopItems = sources.flatMap(([entries, sourceType]) => {
-      return toArray(entries)
-        .filter((entry) => dataBehaviors(entry).includes("shop"))
-        .map((entry) => normalizeShopItem(entry, sourceType));
-    }).filter((item) => {
+    const shopItems = toArray(shopData?.shop).map(normalizeShopItem).filter((item) => {
       if (!item.id || seen.has(item.id)) return false;
       seen.add(item.id);
       return true;
     });
 
-    ctx.data.shopCategories = [...new Set(shopItems.map((item) => item.category))];
+    ctx.data.shopCategories = [...new Set(shopItems.map((item) => item.category))].sort((first, second) => {
+      const filters = ctx.collection.collectionFilterOptions();
+      const firstIndex = filters.findIndex((filter) => filter.label === first);
+      const secondIndex = filters.findIndex((filter) => filter.label === second);
+      const firstRank = firstIndex < 0 ? Number.MAX_SAFE_INTEGER : firstIndex;
+      const secondRank = secondIndex < 0 ? Number.MAX_SAFE_INTEGER : secondIndex;
+      return firstRank - secondRank || first.localeCompare(second);
+    });
     return shopItems;
   }
 
@@ -308,7 +320,7 @@ export function createDataLoader(ctx) {
       const tags = uniqueTags(item.tags ?? []);
       const behaviors = uniqueTags(item.behaviors ?? []);
       if (ctx.data.unlocks.some((unlock) => ctx.collection.unlockMatchesCollectionItem(unlock, item)) && !behaviors.includes("talent")) behaviors.push("talent");
-      if (ctx.data.shopItems.some((shopItem) => ctx.collection.shopMatchesCollectionItem(shopItem, item)) && !behaviors.includes("shop")) behaviors.push("shop");
+      const shopItem = ctx.data.shopItems.some((entry) => ctx.collection.shopMatchesCollectionItem(entry, item));
 
       const displayTags = uniqueTags(tags.map(ctx.collection.collectionDisplayTag));
       return {
@@ -316,7 +328,7 @@ export function createDataLoader(ctx) {
         tags,
         behaviors,
         category: ctx.collection.collectionCategoryFromTags(tags),
-        sourceType: ctx.collection.collectionSourceType({ ...item, behaviors }),
+        sourceType: ctx.collection.collectionSourceType({ ...item, behaviors, shopItem }),
         automatic: false,
         searchText: normalizeCollectionText(`${item.name} ${item.originalName ?? ""} ${tags.join(" ")} ${displayTags.join(" ")}`)
       };
@@ -325,10 +337,11 @@ export function createDataLoader(ctx) {
 
   async function loadAppData() {
     try {
-      const [itemsData, itemSetsData, unlocksData, pvmData, pvpData, challengesData] = await Promise.all([
+      const [itemsData, itemSetsData, unlocksData, shopData, pvmData, pvpData, challengesData] = await Promise.all([
         fetchJson(DATA_URLS.items),
         fetchJson(DATA_URLS.itemSets),
         fetchJson(DATA_URLS.unlocks),
+        fetchJson(DATA_URLS.shop),
         fetchJson(DATA_URLS.pvm),
         fetchJson(DATA_URLS.pvp),
         fetchJson(DATA_URLS.challenges)
@@ -345,7 +358,7 @@ export function createDataLoader(ctx) {
         pvp: normalizePvpChallenges(pvpData)
       };
       ctx.data.unlocks = mergeUnlocks(buildDataUnlocks(itemsData, itemSetsData, unlocksData));
-      ctx.data.shopItems = buildDataShopItems(itemsData, itemSetsData, unlocksData);
+      ctx.data.shopItems = buildDataShopItems(shopData);
 
       const seen = new Set();
       const items = toArray(itemsData.items)
