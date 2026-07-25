@@ -35,7 +35,7 @@
       "alias": "Magic shortbow scroll",
       "category": "Unlock",
       "amount": null,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Magic shortbow scroll.png"
       ]
@@ -55,7 +55,7 @@
       "alias": "Saradomin's tear",
       "category": "Unlock",
       "amount": null,
-      "cost": "1",
+      "cost": "25",
       "images": [
         "Saradomin's tear.png"
       ]
@@ -265,7 +265,7 @@
       "alias": "Trouver parchment",
       "category": "Unlock",
       "amount": null,
-      "cost": "1",
+      "cost": "15",
       "images": [
         "Trouver parchment.png"
       ]
@@ -457,7 +457,7 @@
       "amount": null,
       "cost": "1",
       "images": [
-        "Paddewwa teleport.png"
+        "Paddewwa teleport (tablet).png"
       ]
     },
     {
@@ -467,7 +467,7 @@
       "amount": null,
       "cost": "1",
       "images": [
-        "Senntisten teleport.png"
+        "Senntisten teleport (tablet).png"
       ]
     },
     {
@@ -477,7 +477,7 @@
       "amount": null,
       "cost": "1",
       "images": [
-        "Annakarl teleport.png"
+        "Annakarl teleport (tablet).png"
       ]
     },
     {
@@ -487,7 +487,7 @@
       "amount": null,
       "cost": "1",
       "images": [
-        "Carrallanger teleport.png"
+        "Carrallanger teleport (tablet).png"
       ]
     },
     {
@@ -497,7 +497,7 @@
       "amount": null,
       "cost": "1",
       "images": [
-        "Dareeyak teleport.png"
+        "Dareeyak teleport (tablet).png"
       ]
     },
     {
@@ -507,7 +507,47 @@
       "amount": null,
       "cost": "1",
       "images": [
-        "Ghorrock teleport.png"
+        "Ghorrock teleport (tablet).png"
+      ]
+    },
+    {
+      "uid": "synapse",
+      "alias": "Tormented Synapse",
+      "category": "Unlock",
+      "amount": 1,
+      "cost": "100",
+      "images": [
+        "Tormented synapse"
+      ]
+    },
+    {
+      "uid": "magic-comp",
+      "alias": "Magic Comp Bow",
+      "category": "Unlock",
+      "amount": 1,
+      "cost": "10",
+      "images": [
+        "Magic comp bow"
+      ]
+    },
+    {
+      "uid": "amythest-seeking-arrows",
+      "alias": "Amethyst Seeking Arrows",
+      "category": "Resupply",
+      "amount": 250,
+      "cost": "1",
+      "images": [
+        "Seeking amethyst arrow"
+      ]
+    },
+    {
+      "uid": "darking-seeking-arrows",
+      "alias": "Dragon Seeking Arrows",
+      "category": "Resupply",
+      "amount": 125,
+      "cost": "1",
+      "images": [
+        "Seeking dragon arrow"
       ]
     }
   ]

@@ -53,6 +53,87 @@
             "rewardItems": [
                 "Crimson kisten"
             ]
+        },
+        {
+            "challengeName": "The Burning Man",
+            "completionsRequired": 2,
+            "challengeRules": [
+                "Defeat a real opponent while using any item that causes fire damage.",
+                "The opponent must either be a legitimate pker or have a key worth at least 500k",
+                "The killing blow on your opponent must be fire damage.",
+                "Defeating 2 opponents in this manner completes the challenge."
+            ],
+            "disclaimer": "",
+            "requiredItems": [
+                "Arkan Blade",
+                "Eclipse atlatl",
+                "Scorching bow"
+            ],
+            "rewardItems": [
+                "Burning Claws"
+            ]
+        },
+        {
+            "challengeName": "Dragon Mans",
+            "completionsRequired": 1,
+            "challengeRules": [
+                "Defeat real opponents with each of the weapons listed below.",
+                "The opponents must either be legitimate pkers or have keys worth at least 500k",
+                "The killing blow on your opponent must a spec from one of the dragon weapons listed.",
+                "Defeating at least one opponent with each of the weapons listed completes the channelge."
+            ],
+            "disclaimer": "",
+            "requiredItems": [
+                "Dragon longsword",
+                "Dragon mace",
+                "Dragon dagger",
+                "Dragon sword"
+            ],
+            "rewardItems": [
+                "Dragon warhammer"
+            ]
+        },
+        {
+            "challengeName": "Granite Man",
+            "completionsRequired": 3,
+            "challengeRules": [
+                "Defeat real opponents with full granite and granite maul or granite longsword.",
+                "The opponents must either be legitimate pkers or have keys worth at least 500k.",
+                "The killing blow on your opponent must be a spec from either granite weapon.",
+                "Defeating 3 opponents in this manner completes the challenge."
+            ],
+            "disclaimer": "Using a granite longsword requires the use of the granite shield.",
+            "requiredItems": [
+                "Granite maul",
+                "Granite longsword",
+                "Granite hammer",
+                "Granite helm",
+                "Granite body",
+                "Granite legs"
+            ],
+            "rewardItems": [
+                "Ornate maul handle"
+            ]
+        },
+        {
+            "challengeName": "Dark Magic",
+            "completionsRequired": 3,
+            "challengeRules": [
+                "Defeat real opponents with each of the spec weapons listed.",
+                "The opponents must either be legitimate pkers or have keys worth at least 500k.",
+                "The killing blow on your opponent must a spec from the weapons listed.",
+                "Defeating at least one opponent with each of the weapons listed completes the channelge."
+            ],
+            "disclaimer": "",
+            "requiredItems": [
+                "Magic shortbow",
+                "Magic comp bow",
+                "Seercull"
+            ],
+            "rewardItems": [
+                "Dark bow"
+            ]
         }
+
     ]
 }

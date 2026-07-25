@@ -669,16 +669,14 @@ def run(csv_path: Path, json_path: Path, output_path: Path, make_backup: bool) -
 
     rows = load_csv(csv_path, warnings)
     data = load_json(json_path)
-    wiki_ids = download_item_id_index()
 
     items = data["items"]
     by_uid, by_name, by_id = build_existing_indexes(items)
 
-    added = 0
-    updated = 0
-    unchanged = 0
-    skipped = 0
-    fields_changed = 0
+    # Existing CSV entries are intentionally ignored. Only collect rows that
+    # represent genuinely new items before doing any Wiki/network work.
+    new_rows: list[dict[str, Any]] = []
+    existing_rows_skipped = 0
 
     for row in rows:
         existing = by_uid.get(row["match_uid"])
@@ -689,8 +687,23 @@ def run(csv_path: Path, json_path: Path, output_path: Path, make_backup: bool) -
         if existing is None and row["itemId_specified"] and row["itemId"] is not None:
             existing = by_id.get(row["itemId"])
 
+        if existing is not None:
+            existing_rows_skipped += 1
+            continue
+
+        new_rows.append(row)
+
+    # Avoid downloading/parsing the Wiki item index when the CSV contains no
+    # new entries at all.
+    wiki_ids = download_item_id_index() if new_rows else {}
+
+    added = 0
+    skipped = 0
+
+    for row in new_rows:
         official_name = resolve_wiki_title(row["name"]) or row["name"]
-        resolved_id = resolve_item_id(row, existing, wiki_ids, unresolved)
+        resolved_id = resolve_item_id(row, None, wiki_ids, unresolved)
+        existing = None
 
         if resolved_id is not None:
             owner = by_id.get(resolved_id)
@@ -702,64 +715,22 @@ def run(csv_path: Path, json_path: Path, output_path: Path, make_backup: bool) -
                 skipped += 1
                 continue
 
-        if existing is None:
-            item = create_new_item(row, official_name, resolved_id)
+        item = create_new_item(row, official_name, resolved_id)
 
-            uid = str(item["uid"])
-            if uid in by_uid:
-                warnings.append(
-                    f'Row {row["row"]}: generated uid "{uid}" already exists; row skipped.'
-                )
-                skipped += 1
-                continue
-
-            items.append(item)
-            by_uid[uid] = item
-            by_name[normalize(item["name"])] = item
-            if resolved_id is not None:
-                by_id[resolved_id] = item
-            added += 1
+        uid = str(item["uid"])
+        if uid in by_uid:
+            warnings.append(
+                f'Row {row["row"]}: generated uid "{uid}" already exists; row skipped.'
+            )
+            skipped += 1
             continue
 
-        old_id = existing.get("itemId")
-        old_uid = str(existing.get("uid") or "")
-        old_name_key = normalize(existing.get("name"))
-
-        changes = apply_csv_fields(existing, row, resolved_id, official_name)
-
-        new_uid = str(existing.get("uid") or "")
-        new_name_key = normalize(existing.get("name"))
-
-        if old_uid and old_uid != new_uid and by_uid.get(old_uid) is existing:
-            del by_uid[old_uid]
-        if new_uid:
-            by_uid[new_uid] = existing
-
-        if old_name_key and old_name_key != new_name_key and by_name.get(old_name_key) is existing:
-            del by_name[old_name_key]
-        if new_name_key:
-            by_name[new_name_key] = existing
-
-        try:
-            old_id_int = int(old_id)
-        except (TypeError, ValueError):
-            old_id_int = None
-
-        try:
-            new_id_int = int(existing.get("itemId"))
-        except (TypeError, ValueError):
-            new_id_int = None
-
-        if old_id_int is not None and old_id_int != new_id_int and by_id.get(old_id_int) is existing:
-            del by_id[old_id_int]
-        if new_id_int is not None:
-            by_id[new_id_int] = existing
-
-        if changes:
-            updated += 1
-            fields_changed += len(changes)
-        else:
-            unchanged += 1
+        items.append(item)
+        by_uid[uid] = item
+        by_name[normalize(item["name"])] = item
+        if resolved_id is not None:
+            by_id[resolved_id] = item
+        added += 1
 
     cleaned_items = [
         reorder_item_fields(item)
@@ -772,12 +743,11 @@ def run(csv_path: Path, json_path: Path, output_path: Path, make_backup: bool) -
     output_data = rebuild_root(data, cleaned_items)
     backup_path = write_json(output_path, output_data, make_backup)
 
-    print(f"CSV rows processed: {len(rows)}")
+    print(f"CSV rows read: {len(rows)}")
+    print(f"Existing CSV entries ignored: {existing_rows_skipped}")
+    print(f"New CSV entries processed: {len(new_rows)}")
     print(f"Items added: {added}")
-    print(f"Items updated: {updated}")
-    print(f"Items unchanged: {unchanged}")
-    print(f"Rows skipped: {skipped}")
-    print(f"Fields changed on existing items: {fields_changed}")
+    print(f"New rows skipped due to conflicts: {skipped}")
     print(f"Total items written: {len(cleaned_items)}")
     print(f"Wiki item names indexed: {len(wiki_ids)}")
     print(f"Unresolved item IDs: {len(unresolved)}")
@@ -801,8 +771,8 @@ def run(csv_path: Path, json_path: Path, output_path: Path, make_backup: bool) -
 def main() -> None:
     parser = argparse.ArgumentParser(
         description=(
-            "Add or selectively update Bronzeman items from the CSV while "
-            "preserving existing JSON data and resolving item IDs from the OSRS Wiki."
+            "Add only new Bronzeman items from the CSV while ignoring entries "
+            "already present in the JSON and resolving new item IDs from the OSRS Wiki."
         )
     )
 

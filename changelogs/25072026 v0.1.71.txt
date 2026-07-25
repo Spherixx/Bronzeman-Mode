@@ -1,0 +1,23 @@
+/////ADDITIONS/////
+Added The Burning Man challenge to unlock Burning claws
+Added Dragon Mans challenge to unlock Dragon warhammer
+Added Granite Man challenge to unlock Ornate maul handle
+Added Dark Magic challenge to unlock Dark bow
+
+Added dspear kill pvp task
+Added several LMS related pvp tasks
+Added farseer pk as pvp task
+
+Added Amethyst and Dragon seeking arrows to the shop
+Added Tormented synapse to the shop
+
+
+/////BALANCE/////
+Saradomins tear changed to 25 pkp
+Trouver parchment changed to 15 pkp
+magic shortbow imbue scroll changed to 5 pkp
+
+/////BUG FIXES/////
+
+
+/////SYSTEM/////

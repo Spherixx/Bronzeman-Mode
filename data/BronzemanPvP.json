@@ -371,6 +371,76 @@
       "difficulty": "1",
       "points": "1",
       "repeatable": false
+    },
+    {
+      "uid": "dspear-kill",
+      "alias": "Defeat an opponent currently affected by Dragon Spear special.",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-win",
+      "alias": "Win an LMS match.",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-win-noarm",
+      "alias": "Win an LMS match without armor.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-win-nospec",
+      "alias": "Win an LMS match without using special attacks.",
+      "difficulty": "4",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-dbow-paint",
+      "alias": "Acquire LMS Dark bow paint.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-halo",
+      "alias": "Acquire any LMS halo.",
+      "difficulty": "4",
+      "points": "5",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-victor-cape-10",
+      "alias": "Acquire LMS Victor's cape (10)",
+      "difficulty": "2",
+      "points": "3",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-victor-cape-50",
+      "alias": "Acquire LMS Victor's cape (50)",
+      "difficulty": "3",
+      "points": "4",
+      "repeatable": false
+    },
+    {
+      "uid": "lms-victor-cape-100",
+      "alias": "Acquire LMS Victor's cape (100)",
+      "difficulty": "4",
+      "points": "5",
+      "repeatable": false
+    },
+    {
+      "uid": "farseer-pk",
+      "alias": "Pk a farseer helm.",
+      "difficulty": "3",
+      "points": "2",
+      "repeatable": false
     }
   ]
 }
