@@ -4,7 +4,7 @@
       "uid": "ring-of-dueling-8",
       "alias": "Ring of dueling(8)",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Ring of dueling(8).png"
@@ -14,7 +14,7 @@
       "uid": "dark-infinity-colour-kit",
       "alias": "Dark infinity colour kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Dark infinity colour kit.png"
@@ -24,7 +24,7 @@
       "uid": "light-infinity-colour-kit",
       "alias": "Light infinity colour kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Light infinity colour kit.png"
@@ -44,8 +44,8 @@
       "uid": "ward-upgrade-kit",
       "alias": "Ward upgrade kit",
       "category": "Unlock",
-      "amount": null,
-      "cost": "1",
+      "amount": 1,
+      "cost": "5",
       "images": [
         "Ward upgrade kit.png"
       ]
@@ -54,7 +54,7 @@
       "uid": "saradomins-tear",
       "alias": "Saradomin's tear",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "25",
       "images": [
         "Saradomin's tear.png"
@@ -64,77 +64,17 @@
       "uid": "holy-elixir",
       "alias": "Holy elixir",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Holy elixir.png"
       ]
     },
     {
-      "uid": "zamorak-dragonhide-set",
-      "alias": "Zamorak dragonhide set",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Zamorak dragonhide set.png"
-      ]
-    },
-    {
-      "uid": "saradomin-dragonhide-set",
-      "alias": "Saradomin dragonhide set",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Saradomin dragonhide set.png"
-      ]
-    },
-    {
-      "uid": "guthix-dragonhide-set",
-      "alias": "Guthix dragonhide set",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Guthix dragonhide set.png"
-      ]
-    },
-    {
-      "uid": "bandos-dragonhide-set",
-      "alias": "Bandos dragonhide set",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Bandos dragonhide set.png"
-      ]
-    },
-    {
-      "uid": "armadyl-dragonhide-set",
-      "alias": "Armadyl dragonhide set",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Armadyl dragonhide set.png"
-      ]
-    },
-    {
-      "uid": "ancient-dragonhide-set",
-      "alias": "Ancient dragonhide set",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Ancient dragonhide set.png"
-      ]
-    },
-    {
       "uid": "dragon-scimitar-ornament-kit",
       "alias": "Dragon scimitar ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Dragon scimitar ornament kit.png"
@@ -144,27 +84,17 @@
       "uid": "occult-ornament-kit",
       "alias": "Occult ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Occult ornament kit.png"
       ]
     },
     {
-      "uid": "dragon-thrownaxe",
-      "alias": "Dragon thrownaxe",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Dragon thrownaxe.png"
-      ]
-    },
-    {
       "uid": "burning-amulet-5",
       "alias": "Burning amulet(5)",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Burning amulet(5).png"
@@ -174,7 +104,7 @@
       "uid": "bracelet-of-ethereum",
       "alias": "Bracelet of ethereum",
       "category": "Unlock",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Bracelet of ethereum.png"
@@ -184,7 +114,7 @@
       "uid": "revenant-ether",
       "alias": "Revenant ether",
       "category": "Unlock",
-      "amount": null,
+      "amount": 250,
       "cost": "1",
       "images": [
         "Revenant ether.png"
@@ -194,7 +124,7 @@
       "uid": "dragon-boots-ornament-kit",
       "alias": "Dragon boots ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Dragon boots ornament kit.png"
@@ -204,37 +134,17 @@
       "uid": "amulet-of-avarice",
       "alias": "Amulet of avarice",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Amulet of avarice.png"
       ]
     },
     {
-      "uid": "dragon-knife-p",
-      "alias": "Dragon knife(p)",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Dragon knife(p).png"
-      ]
-    },
-    {
-      "uid": "bonecrusher-necklace",
-      "alias": "Bonecrusher necklace",
-      "category": "Unlock",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Bonecrusher necklace.png"
-      ]
-    },
-    {
       "uid": "rune-defender-ornament-kit",
       "alias": "Rune defender ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Rune defender ornament kit.png"
@@ -244,7 +154,7 @@
       "uid": "tzhaar-ket-om-ornament-kit",
       "alias": "Tzhaar-ket-om ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Tzhaar-ket-om ornament kit.png"
@@ -254,7 +164,7 @@
       "uid": "berserker-necklace-ornament-kit",
       "alias": "Berserker necklace ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Berserker necklace ornament kit.png"
@@ -264,7 +174,7 @@
       "uid": "trouver-parchment",
       "alias": "Trouver parchment",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "15",
       "images": [
         "Trouver parchment.png"
@@ -274,7 +184,7 @@
       "uid": "wilderness-crabs-teleport",
       "alias": "Wilderness crabs teleport",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Wilderness crabs teleport.png"
@@ -284,7 +194,7 @@
       "uid": "target-teleport",
       "alias": "Target teleport",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Target teleport.png"
@@ -294,7 +204,7 @@
       "uid": "blighted-ancient-ice-sack",
       "alias": "Blighted ancient ice sack",
       "category": "Resupply",
-      "amount": null,
+      "amount": 100,
       "cost": "1",
       "images": [
         "Blighted ancient ice sack.png"
@@ -304,7 +214,7 @@
       "uid": "blighted-entangle-sack",
       "alias": "Blighted entangle sack",
       "category": "Resupply",
-      "amount": null,
+      "amount": 100,
       "cost": "1",
       "images": [
         "Blighted entangle sack.png"
@@ -314,7 +224,7 @@
       "uid": "blighted-teleport-spell-sack",
       "alias": "Blighted teleport spell sack",
       "category": "Resupply",
-      "amount": null,
+      "amount": 100,
       "cost": "1",
       "images": [
         "Blighted teleport spell sack.png"
@@ -324,7 +234,7 @@
       "uid": "blighted-vengeance-sack",
       "alias": "Blighted vengeance sack",
       "category": "Resupply",
-      "amount": null,
+      "amount": 100,
       "cost": "1",
       "images": [
         "Blighted vengeance sack.png"
@@ -334,7 +244,7 @@
       "uid": "shattered-relics-variety-ornament-kit",
       "alias": "Shattered relics variety ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Shattered relics variety ornament kit.png"
@@ -344,7 +254,7 @@
       "uid": "shattered-relics-void-ornament-kit",
       "alias": "Shattered relics void ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Shattered relics void ornament kit.png"
@@ -354,7 +264,7 @@
       "uid": "shattered-relics-mystic-ornament-kit",
       "alias": "Shattered relics mystic ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Shattered relics mystic ornament kit.png"
@@ -364,7 +274,7 @@
       "uid": "blighted-surge-sack",
       "alias": "Blighted surge sack",
       "category": "Resupply",
-      "amount": null,
+      "amount": 100,
       "cost": "1",
       "images": [
         "Blighted surge sack.png"
@@ -374,7 +284,7 @@
       "uid": "scroll-of-imbuing",
       "alias": "Scroll of imbuing",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Scroll of imbuing.png"
@@ -384,7 +294,7 @@
       "uid": "heavy-ballista-ornament-kit",
       "alias": "Heavy ballista ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Heavy ballista ornament kit.png"
@@ -394,7 +304,7 @@
       "uid": "elder-maul-ornament-kit",
       "alias": "Elder maul ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Elder maul ornament kit.png"
@@ -404,7 +314,7 @@
       "uid": "elder-chaos-robes-ornament-kit",
       "alias": "Elder chaos robes ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Elder chaos robes ornament kit.png"
@@ -414,7 +324,7 @@
       "uid": "bounty-hunter-ornament-kit",
       "alias": "Bounty hunter ornament kit",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Bounty hunter ornament kit.png"
@@ -424,7 +334,7 @@
       "uid": "dragon-mace-imbue-scroll",
       "alias": "Dragon mace imbue scroll",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Dragon mace imbue scroll.png"
@@ -434,7 +344,7 @@
       "uid": "armageddon-weapon-scroll",
       "alias": "Armageddon weapon scroll",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Armageddon weapon scroll.png"
@@ -444,7 +354,7 @@
       "uid": "armageddon-cape-fabric",
       "alias": "Armageddon cape fabric",
       "category": "Unlock",
-      "amount": null,
+      "amount": 1,
       "cost": "1",
       "images": [
         "Armageddon cape fabric.png"
@@ -454,27 +364,17 @@
       "uid": "paddewwa-teleport",
       "alias": "Paddewwa teleport",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Paddewwa teleport (tablet).png"
       ]
     },
     {
-      "uid": "senntisten-teleport",
-      "alias": "Senntisten teleport",
-      "category": "Resupply",
-      "amount": null,
-      "cost": "1",
-      "images": [
-        "Senntisten teleport (tablet).png"
-      ]
-    },
-    {
       "uid": "annakarl-teleport",
       "alias": "Annakarl teleport",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Annakarl teleport (tablet).png"
@@ -484,7 +384,7 @@
       "uid": "carrallanger-teleport",
       "alias": "Carrallanger teleport",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Carrallanger teleport (tablet).png"
@@ -494,7 +394,7 @@
       "uid": "dareeyak-teleport",
       "alias": "Dareeyak teleport",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Dareeyak teleport (tablet).png"
@@ -504,7 +404,7 @@
       "uid": "ghorrock-teleport",
       "alias": "Ghorrock teleport",
       "category": "Resupply",
-      "amount": null,
+      "amount": 5,
       "cost": "1",
       "images": [
         "Ghorrock teleport (tablet).png"

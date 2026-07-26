@@ -2,10 +2,10 @@
 Adjusted visuals on challenges page so they don't look as janky
 
 /////BALANCE/////
-
+Removed un-necessary items from shop
 
 /////BUG FIXES/////
-
+Fixed some shop items appearing as consumable when they're supposed to be cosmetic
 
 /////SYSTEM/////
 Added cost to pvp tasks in the backend so I can make repeatables
