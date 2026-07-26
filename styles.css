@@ -2236,7 +2236,6 @@ body {
   gap: 14px;
 }
 
-.challenge-eyebrow,
 .challenge-completions,
 .challenge-roll-header span,
 .challenge-reward-item span,
@@ -2245,13 +2244,6 @@ body {
   font: 0.66rem "DM Mono", monospace;
 }
 
-.challenge-eyebrow {
-  display: block;
-  margin-bottom: 6px;
-  color: var(--bronze-bright);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
 
 .challenge-unlock-header h3 {
   font-size: 1.15rem;
@@ -2356,24 +2348,41 @@ body {
 
 .challenge-milestone-track {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 8px;
 }
 
-.challenge-milestone-track span {
+.challenge-milestone-track span,
+.challenge-milestone-track button {
   display: grid;
   min-height: 44px;
   place-items: center;
+  padding: 8px 12px;
   color: var(--muted);
   background: rgba(18, 22, 27, 0.82);
   border: 1px solid var(--line-soft);
   font: 0.72rem "DM Mono", monospace;
+  text-align: center;
 }
 
-.challenge-milestone-track span.is-complete {
+.challenge-milestone-track button {
+  cursor: pointer;
+}
+
+.challenge-milestone-track button:hover {
+  color: var(--text);
+  border-color: var(--bronze-bright);
+}
+
+.challenge-milestone-track span.is-complete,
+.challenge-milestone-track button.is-complete {
   color: #17120d;
   background: var(--bronze-bright);
   border-color: var(--bronze-bright);
+}
+
+.challenge-milestone-track button.is-complete {
+  cursor: not-allowed;
 }
 
 .challenge-roll-panel,

@@ -169,11 +169,12 @@ export function createDataLoader(ctx) {
     return toArray(data?.challenges).map((challenge, index) => {
       const title = String(challenge?.challengeName || ("Challenge " + (index + 1)));
       const requiredItems = toArray(challenge?.requiredItems).map(String).filter(Boolean);
+      const completionItems = toArray(challenge?.completionItems).map(String).filter(Boolean);
       const rewardIds = toArray(challenge?.rewardItems).map((name) => {
         return ctx.indexes.itemRowsByName.get(normalizeDataText(name))?.uid || slugifyItemId(name);
       });
       const completionTarget = toNumber(challenge?.completionsRequired, NaN);
-      const isMilestone = Number.isFinite(completionTarget);
+      const isMilestone = completionItems.length > 0 || Number.isFinite(completionTarget);
 
       return {
         id: slugifyItemId(title),
@@ -186,7 +187,13 @@ export function createDataLoader(ctx) {
         ),
         rewardIds,
         mode: isMilestone ? "milestone" : "roulette",
-        completionTarget: isMilestone ? Math.max(1, completionTarget) : null
+        completionTarget: completionItems.length
+          ? completionItems.length
+          : (isMilestone ? Math.max(1, completionTarget) : null),
+        completionSteps: completionItems.map((name) => ({
+          id: slugifyItemId(name),
+          name
+        }))
       };
     });
   }

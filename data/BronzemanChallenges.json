@@ -75,7 +75,13 @@
         },
         {
             "challengeName": "Dragon Mans",
-            "completionsRequired": 1,
+            "completionsRequired": 4,
+            "completionItems": [
+                "Dragon longsword",
+                "Dragon mace",
+                "Dragon dagger",
+                "Dragon sword"
+            ],
             "challengeRules": [
                 "Defeat real opponents with each of the weapons listed below.",
                 "The opponents must either be legitimate pkers or have keys worth at least 500k",
@@ -118,6 +124,11 @@
         {
             "challengeName": "Dark Magic",
             "completionsRequired": 3,
+            "completionItems": [
+                "Magic shortbow",
+                "Magic comp bow",
+                "Seercull"
+            ],
             "challengeRules": [
                 "Defeat real opponents with each of the spec weapons listed.",
                 "The opponents must either be legitimate pkers or have keys worth at least 500k.",

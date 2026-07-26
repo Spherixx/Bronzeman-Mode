@@ -178,6 +178,7 @@ export function createDomain(ctx) {
     const shopPurchases = {};
     const repeatablePurchases = {};
     const challengeCompletions = {};
+    const challengeCompletionSteps = {};
     const challengeRolls = {};
 
     Object.entries(rawState?.shopPurchases ?? {}).forEach(([id, count]) => {
@@ -230,6 +231,28 @@ export function createDomain(ctx) {
       : [];
 
     ctx.config.challengeCatalog
+      .filter((challenge) => challenge.completionSteps.length)
+      .forEach((challenge) => {
+        const validStepIds = new Set(challenge.completionSteps.map((step) => step.id));
+        const rawSteps = rawState?.challengeCompletionSteps?.[challenge.id];
+        let completedSteps = Array.isArray(rawSteps)
+          ? [...new Set(rawSteps)].filter((id) => validStepIds.has(id))
+          : [];
+
+        if (!Array.isArray(rawSteps) && (challengeCompletions[challenge.id] ?? 0) > 0) {
+          const rewardWasUnlocked = challenge.rewardIds.length > 0
+            && challenge.rewardIds.every((id) => challengeRewardUnlocks.includes(id));
+          const migratedCount = rewardWasUnlocked
+            ? challenge.completionSteps.length
+            : Math.min(challengeCompletions[challenge.id], challenge.completionSteps.length);
+          completedSteps = challenge.completionSteps.slice(0, migratedCount).map((step) => step.id);
+        }
+
+        if (completedSteps.length) challengeCompletionSteps[challenge.id] = completedSteps;
+        challengeCompletions[challenge.id] = completedSteps.length;
+      });
+
+    ctx.config.challengeCatalog
       .filter((challenge) => challenge.mode === "milestone" && (challengeCompletions[challenge.id] ?? 0) >= challenge.completionTarget)
       .flatMap((challenge) => challenge.rewardIds)
       .forEach((id) => {
@@ -248,6 +271,7 @@ export function createDomain(ctx) {
       basicUnlocks,
       lockedItems,
       challengeCompletions,
+      challengeCompletionSteps,
       challengeRewardUnlocks,
       challengeRolls,
       playerKills: Number.isFinite(rawState?.playerKills) ? Math.max(0, Math.floor(rawState.playerKills)) : 0
@@ -259,6 +283,7 @@ export function createDomain(ctx) {
     const remote = sanitizeState(remoteState);
     const shopPurchases = { ...local.shopPurchases };
     const challengeCompletions = { ...local.challengeCompletions };
+    const challengeCompletionSteps = {};
 
     Object.entries(remote.shopPurchases).forEach(([id, count]) => {
       shopPurchases[id] = Math.max(shopPurchases[id] ?? 0, count);
@@ -266,6 +291,14 @@ export function createDomain(ctx) {
 
     Object.entries(remote.challengeCompletions).forEach(([id, count]) => {
       challengeCompletions[id] = Math.max(challengeCompletions[id] ?? 0, count);
+    });
+
+    ctx.config.challengeCatalog.forEach((challenge) => {
+      const completedSteps = [
+        ...(local.challengeCompletionSteps[challenge.id] ?? []),
+        ...(remote.challengeCompletionSteps[challenge.id] ?? [])
+      ];
+      if (completedSteps.length) challengeCompletionSteps[challenge.id] = [...new Set(completedSteps)];
     });
 
     return sanitizeState({
@@ -276,6 +309,7 @@ export function createDomain(ctx) {
       basicUnlocks: [...local.basicUnlocks, ...remote.basicUnlocks],
       lockedItems: [...local.lockedItems, ...remote.lockedItems],
       challengeCompletions,
+      challengeCompletionSteps,
       challengeRewardUnlocks: [...local.challengeRewardUnlocks, ...remote.challengeRewardUnlocks],
       challengeRolls: { ...local.challengeRolls, ...remote.challengeRolls },
       playerKills: Math.max(local.playerKills, remote.playerKills)

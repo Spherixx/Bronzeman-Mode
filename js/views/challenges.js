@@ -256,7 +256,24 @@ export function createChallengeView(ctx) {
     renderChallengeUnlocks();
   }
 
-  function recordMilestoneCompletion(challenge) {
+  function recordMilestoneCompletion(challenge, stepId = null) {
+    if (challenge.completionSteps.length) {
+      const validStep = challenge.completionSteps.some((step) => step.id === stepId);
+      const completedSteps = new Set(ctx.state.challengeCompletionSteps[challenge.id] ?? []);
+      if (!validStep || completedSteps.has(stepId)) return;
+
+      completedSteps.add(stepId);
+      ctx.state.challengeCompletionSteps[challenge.id] = [...completedSteps];
+      ctx.state.challengeCompletions[challenge.id] = completedSteps.size;
+      if (completedSteps.size >= challenge.completionTarget) challenge.rewardIds.forEach((id) => {
+        if (!ctx.domain.challengeRewardIsUnlocked(id)) ctx.state.challengeRewardUnlocks.push(id);
+      });
+      ctx.actions.saveState();
+      renderChallengeUnlocks();
+      ctx.actions.renderUnlocks();
+      return;
+    }
+
     const current = ctx.state.challengeCompletions[challenge.id] ?? 0;
     if (current >= challenge.completionTarget) return;
     const next = current + 1;
@@ -271,11 +288,22 @@ export function createChallengeView(ctx) {
 
   function renderMilestonePanel(challenge, completions) {
     const complete = completions >= challenge.completionTarget;
+    const completedSteps = new Set(ctx.state.challengeCompletionSteps[challenge.id] ?? []);
+    const completionControls = challenge.completionSteps.length
+      ? challenge.completionSteps.map((step) => {
+        const stepComplete = completedSteps.has(step.id);
+        return `<button type="button" class="${stepComplete ? "is-complete" : ""}" data-action="complete-step" data-completion-step="${ctx.actions.escapeHtml(step.id)}" ${stepComplete ? "disabled" : ""}>${ctx.actions.escapeHtml(step.name)}</button>`;
+      }).join("")
+      : Array.from(
+        { length: challenge.completionTarget },
+        (_, i) => `<span class="${i < completions ? "is-complete" : ""}">${i + 1}</span>`
+      ).join("");
+
     return `
       <div class="challenge-milestone-panel"><div class="challenge-roll-header">
         <div><h4>Challenge Progress</h4><span>${complete ? "Reward unlocked" : `${completions} of ${challenge.completionTarget} completions`}</span></div>
-        <button type="button" data-action="complete" ${complete ? "disabled" : ""}>${complete ? "Completed" : "Record Completion"}</button>
-      </div><div class="challenge-milestone-track">${Array.from({ length: challenge.completionTarget }, (_, i) => `<span class="${i < completions ? "is-complete" : ""}">${i + 1}</span>`).join("")}</div></div>`;
+        ${challenge.completionSteps.length ? "" : `<button type="button" data-action="complete" ${complete ? "disabled" : ""}>${complete ? "Completed" : "Record Completion"}</button>`}
+      </div><div class="challenge-milestone-track">${completionControls}</div></div>`;
   }
 
   function renderChallengeUnlockCard(challenge) {
@@ -289,7 +317,7 @@ export function createChallengeView(ctx) {
       <button type="button" data-action="roll" ${challengeRewardItems(challenge).length && !ctx.challengeUi.activeRoll ? "" : "disabled"}>${rollLabel}</button>
       </div>${renderRewardRoulette(challenge)}</div>`;
     card.className = "challenge-unlock-card";
-    card.innerHTML = `<div class="challenge-unlock-header"><div><span class="challenge-eyebrow">PvP unlock challenge</span><h3>${ctx.actions.escapeHtml(challenge.title)}</h3></div>
+    card.innerHTML = `<div class="challenge-unlock-header"><div><h3>${ctx.actions.escapeHtml(challenge.title)}</h3></div>
       <span class="challenge-completions">${completions} completion${completions === 1 ? "" : "s"}</span></div>
       <div class="challenge-shop-card"><div class="challenge-kit">${renderChallengeIconGrid(challenge.requirementGroups)}</div><div class="challenge-copy">
       <ul>${challenge.rules.map((rule) => `<li>${ctx.actions.escapeHtml(rule)}</li>`).join("")}</ul>
@@ -298,6 +326,9 @@ export function createChallengeView(ctx) {
       <div class="challenge-unlocked-panel"><h4>Unlocked From This Challenge</h4>${renderChallengeUnlockedRewards(challenge)}</div>`;
     card.querySelector('[data-action="roll"]')?.addEventListener("click", () => completeChallengeRoll(challenge));
     card.querySelector('[data-action="complete"]')?.addEventListener("click", () => recordMilestoneCompletion(challenge));
+    card.querySelectorAll('[data-action="complete-step"]').forEach((button) => {
+      button.addEventListener("click", () => recordMilestoneCompletion(challenge, button.dataset.completionStep));
+    });
     return card;
   }
   function renderChallengeUnlocks() {

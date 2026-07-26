@@ -1,0 +1,11 @@
+/////ADDITIONS/////
+Adjusted visuals on challenges page so they don't look as janky
+
+/////BALANCE/////
+
+
+/////BUG FIXES/////
+
+
+/////SYSTEM/////
+Added cost to pvp tasks in the backend so I can make repeatables
