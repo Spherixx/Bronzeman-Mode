@@ -504,6 +504,30 @@
       "points": "2",
       "repeatable": false,
       "cost": "1"
+    },
+    {
+      "uid": "rev-caves",
+      "alias": "1 hour in Rev caves.",
+      "difficulty": "1",
+      "points": null,
+      "repeatable": true,
+      "cost": "5"
+    },
+    {
+      "uid": "lms-match-1",
+      "alias": "1 LMS Match.",
+      "difficulty": "1",
+      "points": null,
+      "repeatable": true,
+      "cost": "1"
+    },
+    {
+      "uid": "lms-match-5",
+      "alias": "5 LMS Matches.",
+      "difficulty": "1",
+      "points": null,
+      "repeatable": true,
+      "cost": "5"
     }
   ]
 }

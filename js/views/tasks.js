@@ -74,15 +74,44 @@ export function createTaskView(ctx) {
   function renderPvpChallenges() {
     const target = document.getElementById("pvpList");
     target.innerHTML = "";
-    ctx.domain.flattenPvpChallenges().forEach((challenge) => renderChallengeItem(challenge, target));
+    const rewardGroups = new Map();
+
+    ctx.domain.flattenPvpChallenges().forEach((challenge) => {
+      const reward = challenge.points;
+      if (!rewardGroups.has(reward)) rewardGroups.set(reward, []);
+      rewardGroups.get(reward).push(challenge);
+    });
+
+    [...rewardGroups.entries()]
+      .sort(([rewardA], [rewardB]) => rewardA - rewardB)
+      .forEach(([reward, challenges]) => {
+        const stage = document.createElement("section");
+        stage.className = "challenge-stage unlocked";
+        const completed = challenges.filter((challenge) => ctx.state.completed.includes(challenge.id)).length;
+        stage.innerHTML = `
+          <div class="stage-header">
+            <div>
+              <span>Reward</span>
+              <strong>${reward} Talent</strong>
+            </div>
+            <em>${completed} / ${challenges.length}</em>
+          </div>
+        `;
+
+        const list = document.createElement("div");
+        list.className = "stage-list";
+        challenges.forEach((challenge) => renderChallengeItem(challenge, list));
+        stage.appendChild(list);
+        target.appendChild(stage);
+      });
   }
 
-  function renderRepeatables() {
-    const target = document.getElementById("repeatableList");
+  function renderRepeatableList(targetId, repeatables) {
+    const target = document.getElementById(targetId);
     if (!target) return;
 
     target.innerHTML = "";
-    ctx.domain.flattenRepeatables().forEach((repeatable) => {
+    repeatables.forEach((repeatable) => {
       const owned = ctx.state.repeatablePurchases[repeatable.id] ?? 0;
       const canAfford = ctx.domain.availableKillPoints() >= repeatable.cost;
       const item = document.createElement("div");
@@ -108,6 +137,11 @@ export function createTaskView(ctx) {
 
       target.appendChild(item);
     });
+  }
+
+  function renderRepeatables() {
+    renderRepeatableList("repeatableList", ctx.domain.flattenPvmRepeatables());
+    renderRepeatableList("pvpRepeatableList", ctx.domain.flattenPvpRepeatables());
   }
 
   function updateRepeatableState() {

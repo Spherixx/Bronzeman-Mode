@@ -1,5 +1,7 @@
 /////ADDITIONS/////
 Adjusted visuals on challenges page so they don't look as janky
+Added the first couple repeatable pvp tasks
+Adjusted visual appearance of pvp task page
 
 /////BALANCE/////
 Removed un-necessary items from shop
@@ -8,4 +10,4 @@ Removed un-necessary items from shop
 Fixed some shop items appearing as consumable when they're supposed to be cosmetic
 
 /////SYSTEM/////
-Added cost to pvp tasks in the backend so I can make repeatables
+Added backend support for repeatable pvp tasks

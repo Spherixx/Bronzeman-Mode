@@ -26,7 +26,7 @@ export function createDomain(ctx) {
     );
   }
 
-  function flattenRepeatables() {
+  function flattenPvmRepeatables() {
     return ctx.data.challenges.pvm.flatMap((group, groupIndex) =>
       group.items.flatMap((challenge, index) => challenge.repeatable ? [{
         id: challenge.id || challengeId("repeatable", groupIndex, index),
@@ -38,13 +38,26 @@ export function createDomain(ctx) {
     );
   }
 
+  function flattenPvpRepeatables() {
+    return ctx.data.challenges.pvp.flatMap((challenge, index) => challenge.repeatable ? [{
+      id: challenge.id || challengeId("repeatable-pvp", index),
+      legacyId: challenge.legacyId || challengeId("pvp", index),
+      title: challengeTitle(challenge),
+      cost: challenge.cost ?? 5
+    }] : []);
+  }
+
+  function flattenRepeatables() {
+    return [...flattenPvmRepeatables(), ...flattenPvpRepeatables()];
+  }
+
   function flattenPvpChallenges() {
-    return ctx.data.challenges.pvp.map((challenge, index) => ({
+    return ctx.data.challenges.pvp.flatMap((challenge, index) => challenge.repeatable ? [] : [{
       id: challenge.id || challengeId("pvp", index),
       legacyId: challenge.legacyId || challengeId("pvp", index),
       title: challengeTitle(challenge),
       points: challengePoints(challenge)
-    }));
+    }]);
   }
 
   function totalCompleted() {
@@ -321,6 +334,8 @@ export function createDomain(ctx) {
     challengeTitle,
     challengePoints,
     flattenPvmChallenges,
+    flattenPvmRepeatables,
+    flattenPvpRepeatables,
     flattenRepeatables,
     flattenPvpChallenges,
     totalCompleted,

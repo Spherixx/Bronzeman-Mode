@@ -162,7 +162,16 @@ export function createDataLoader(ctx) {
   }
 
   function normalizePvpChallenges(data) {
-    return toArray(data?.pvpTasks).map((taskEntry, index) => normalizeChallengeTask(taskEntry, "pvp", ctx.domain.challengeId("pvp", index)));
+    return toArray(data?.pvpTasks).map((taskEntry, index) => {
+      const legacyId = ctx.domain.challengeId("pvp", index);
+      const normalized = normalizeChallengeTask(taskEntry, "pvp", legacyId);
+      if (normalized.repeatable) {
+        normalized.id = `repeatable-${dataUid(taskEntry, "task")}`;
+        ctx.indexes.repeatableIdAliases[ctx.domain.challengeId("repeatable-pvp", index)] = normalized.id;
+        ctx.indexes.repeatableIdAliases[legacyId] = normalized.id;
+      }
+      return normalized;
+    });
   }
 
   function normalizeUnlockChallenges(data) {

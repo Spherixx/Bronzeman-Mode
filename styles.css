@@ -455,6 +455,10 @@ h1 span {
   color: var(--pvm);
 }
 
+.pvp-card .challenge-stage.unlocked .stage-header strong {
+  color: var(--pvp);
+}
+
 .challenge-item {
   display: grid;
   grid-template-columns: 24px 1fr auto;
