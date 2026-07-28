@@ -13,8 +13,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Shark",
       "imageName": "Shark.png"
     },
@@ -257,6 +257,21 @@
       "imageName": "Rune dart.png"
     },
     {
+      "name": "Magic shortbow",
+      "alias": "Magic shortbow",
+      "uid": "magic-shortbow",
+      "itemId": 861,
+      "set": null,
+      "tags": [],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Magic_shortbow",
+      "imageName": "Magic shortbow.png"
+    },
+    {
       "name": "Rune arrow",
       "alias": "Rune arrow",
       "uid": "rune-arrow",
@@ -268,8 +283,8 @@
       "behaviors": [],
       "tier": 1,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_arrow",
       "imageName": "Rune arrow.png"
     },
@@ -308,8 +323,8 @@
       "behaviors": [],
       "tier": 1,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_longsword",
       "imageName": "Dragon longsword.png"
     },
@@ -348,8 +363,8 @@
       "behaviors": [],
       "tier": 1,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_mace",
       "imageName": "Dragon mace.png"
     },
@@ -366,8 +381,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Amulet_of_glory(4)",
       "imageName": "Amulet of glory(4).png"
     },
@@ -631,8 +646,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Climbing_boots",
       "imageName": "Climbing boots.png"
     },
@@ -666,8 +681,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Cooked_karambwan",
       "imageName": "Cooked karambwan.png"
     },
@@ -1182,8 +1197,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Dragon_scimitar",
       "imageName": "Dragon scimitar.png"
     },
@@ -1695,9 +1710,7 @@
         "weapon",
         "spec"
       ],
-      "behaviors": [
-        "talent"
-      ],
+      "behaviors": [],
       "tier": 1,
       "cost": 1,
       "alwaysAvailable": false,
@@ -2018,8 +2031,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Snakeskin_boots",
       "imageName": "Snakeskin boots.png"
     },
@@ -2217,6 +2230,21 @@
       "imageName": "Saradomin brew(4).png"
     },
     {
+      "name": "Seercull",
+      "alias": "Seercull",
+      "uid": "seercull",
+      "itemId": 6724,
+      "set": null,
+      "tags": [],
+      "behaviors": [],
+      "tier": null,
+      "cost": null,
+      "alwaysAvailable": false,
+      "unlocked": false,
+      "wikiLink": "https://oldschool.runescape.wiki/w/Seercull",
+      "imageName": "Seercull.png"
+    },
+    {
       "name": "Seers ring",
       "alias": "Seers ring",
       "uid": "seers-ring",
@@ -2410,8 +2438,8 @@
       ],
       "tier": 1,
       "cost": 1,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_gloves",
       "imageName": "Rune gloves.png"
     },
@@ -2696,8 +2724,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Lunar_ring",
       "imageName": "Lunar ring.png"
     },
@@ -2714,8 +2742,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Rune_crossbow",
       "imageName": "Rune crossbow.png"
     },
@@ -2963,8 +2991,8 @@
       "behaviors": [],
       "tier": null,
       "cost": null,
-      "alwaysAvailable": true,
-      "unlocked": true,
+      "alwaysAvailable": false,
+      "unlocked": false,
       "wikiLink": "https://oldschool.runescape.wiki/w/Ava%27s_accumulator",
       "imageName": "Ava's accumulator.png"
     },
@@ -8384,8 +8412,7 @@
     "teleport",
     "ammo",
     "consumable",
-    "other",
-    "cosmetic"
+    "other"
   ],
   "behaviorDefinitions": [
     "hidden",

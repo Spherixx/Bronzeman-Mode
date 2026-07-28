@@ -15,7 +15,7 @@
       "alias": "Dark infinity colour kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Dark infinity colour kit.png"
       ]
@@ -25,7 +25,7 @@
       "alias": "Light infinity colour kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Light infinity colour kit.png"
       ]
@@ -75,7 +75,7 @@
       "alias": "Dragon scimitar ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Dragon scimitar ornament kit.png"
       ]
@@ -85,7 +85,7 @@
       "alias": "Occult ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Occult ornament kit.png"
       ]
@@ -103,7 +103,7 @@
     {
       "uid": "bracelet-of-ethereum",
       "alias": "Bracelet of ethereum",
-      "category": "Unlock",
+      "category": "Resupply",
       "amount": 5,
       "cost": "1",
       "images": [
@@ -113,7 +113,7 @@
     {
       "uid": "revenant-ether",
       "alias": "Revenant ether",
-      "category": "Unlock",
+      "category": "Resupply",
       "amount": 250,
       "cost": "1",
       "images": [
@@ -121,19 +121,9 @@
       ]
     },
     {
-      "uid": "dragon-boots-ornament-kit",
-      "alias": "Dragon boots ornament kit",
-      "category": "Unlock",
-      "amount": 1,
-      "cost": "1",
-      "images": [
-        "Dragon boots ornament kit.png"
-      ]
-    },
-    {
       "uid": "amulet-of-avarice",
       "alias": "Amulet of avarice",
-      "category": "Unlock",
+      "category": "Resupply",
       "amount": 1,
       "cost": "1",
       "images": [
@@ -145,7 +135,7 @@
       "alias": "Rune defender ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Rune defender ornament kit.png"
       ]
@@ -155,7 +145,7 @@
       "alias": "Tzhaar-ket-om ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Tzhaar-ket-om ornament kit.png"
       ]
@@ -165,7 +155,7 @@
       "alias": "Berserker necklace ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Berserker necklace ornament kit.png"
       ]
@@ -245,7 +235,7 @@
       "alias": "Shattered relics variety ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Shattered relics variety ornament kit.png"
       ]
@@ -255,7 +245,7 @@
       "alias": "Shattered relics void ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Shattered relics void ornament kit.png"
       ]
@@ -265,7 +255,7 @@
       "alias": "Shattered relics mystic ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Shattered relics mystic ornament kit.png"
       ]
@@ -295,7 +285,7 @@
       "alias": "Heavy ballista ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Heavy ballista ornament kit.png"
       ]
@@ -305,7 +295,7 @@
       "alias": "Elder maul ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Elder maul ornament kit.png"
       ]
@@ -315,7 +305,7 @@
       "alias": "Elder chaos robes ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Elder chaos robes ornament kit.png"
       ]
@@ -325,7 +315,7 @@
       "alias": "Bounty hunter ornament kit",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Bounty hunter ornament kit.png"
       ]
@@ -345,7 +335,7 @@
       "alias": "Armageddon weapon scroll",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Armageddon weapon scroll.png"
       ]
@@ -355,7 +345,7 @@
       "alias": "Armageddon cape fabric",
       "category": "Unlock",
       "amount": 1,
-      "cost": "1",
+      "cost": "5",
       "images": [
         "Armageddon cape fabric.png"
       ]
@@ -448,6 +438,36 @@
       "cost": "1",
       "images": [
         "Seeking dragon arrow"
+      ]
+    },
+    {
+      "uid": "spined-armor",
+      "alias": "Spined Armor Set",
+      "category": "Resupply",
+      "amount": 1,
+      "cost": "5",
+      "images": [
+        "Spined armour set"
+      ]
+    },
+    {
+      "uid": "rockshell-armor",
+      "alias": "Rockshell Armor Set",
+      "category": "Resupply",
+      "amount": 1,
+      "cost": "5",
+      "images": [
+        "Rock-shell armour set"
+      ]
+    },
+    {
+      "uid": "skeletal-armor",
+      "alias": "Skeletal Armor Set",
+      "category": "Resupply",
+      "amount": 1,
+      "cost": "5",
+      "images": [
+        "Skeletal armour set"
       ]
     }
   ]

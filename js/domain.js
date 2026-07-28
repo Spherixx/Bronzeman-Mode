@@ -90,8 +90,15 @@ export function createDomain(ctx) {
     return flattenRepeatables().reduce((sum, item) => sum + ((ctx.state.repeatablePurchases[item.id] ?? 0) * item.cost), 0);
   }
 
+  function totalChallengeKillPoints() {
+    return ctx.config.challengeCatalog.reduce((sum, challenge) => {
+      if (challenge.mode !== "counter") return sum;
+      return sum + ((ctx.state.challengeCompletions[challenge.id] ?? 0) * challenge.killPointReward);
+    }, 0);
+  }
+
   function availableKillPoints() {
-    return Math.max(0, ctx.state.playerKills - totalShopSpent() - totalRepeatableSpent());
+    return Math.max(0, ctx.state.playerKills + totalChallengeKillPoints() - totalShopSpent() - totalRepeatableSpent());
   }
 
   function purchasedInTier(tier) {
@@ -192,6 +199,7 @@ export function createDomain(ctx) {
     const repeatablePurchases = {};
     const challengeCompletions = {};
     const challengeCompletionSteps = {};
+    const challengeStepProgress = {};
     const challengeRolls = {};
 
     Object.entries(rawState?.shopPurchases ?? {}).forEach(([id, count]) => {
@@ -246,23 +254,43 @@ export function createDomain(ctx) {
     ctx.config.challengeCatalog
       .filter((challenge) => challenge.completionSteps.length)
       .forEach((challenge) => {
-        const validStepIds = new Set(challenge.completionSteps.map((step) => step.id));
+        const validSteps = new Map(challenge.completionSteps.map((step) => [step.id, step]));
         const rawSteps = rawState?.challengeCompletionSteps?.[challenge.id];
-        let completedSteps = Array.isArray(rawSteps)
-          ? [...new Set(rawSteps)].filter((id) => validStepIds.has(id))
-          : [];
+        const rawProgress = rawState?.challengeStepProgress?.[challenge.id];
+        const progress = {};
+        const rewardWasUnlocked = challenge.rewardIds.length > 0
+          && challenge.rewardIds.every((id) => challengeRewardUnlocks.includes(id));
 
-        if (!Array.isArray(rawSteps) && (challengeCompletions[challenge.id] ?? 0) > 0) {
-          const rewardWasUnlocked = challenge.rewardIds.length > 0
-            && challenge.rewardIds.every((id) => challengeRewardUnlocks.includes(id));
-          const migratedCount = rewardWasUnlocked
-            ? challenge.completionSteps.length
-            : Math.min(challengeCompletions[challenge.id], challenge.completionSteps.length);
-          completedSteps = challenge.completionSteps.slice(0, migratedCount).map((step) => step.id);
+        if (rewardWasUnlocked) {
+          challenge.completionSteps.forEach((step) => {
+            progress[step.id] = step.target;
+          });
+        } else if (rawProgress && typeof rawProgress === "object" && !Array.isArray(rawProgress)) {
+          Object.entries(rawProgress).forEach(([stepId, count]) => {
+            const step = validSteps.get(stepId);
+            if (step && Number.isFinite(count)) progress[stepId] = Math.min(step.target, Math.max(0, Math.floor(count)));
+          });
+        } else if (Array.isArray(rawSteps)) {
+          [...new Set(rawSteps)].forEach((stepId) => {
+            const step = validSteps.get(stepId);
+            if (step) progress[stepId] = Math.min(1, step.target);
+          });
+        } else if ((challengeCompletions[challenge.id] ?? 0) > 0) {
+          let remaining = challengeCompletions[challenge.id];
+          challenge.completionSteps.forEach((step) => {
+            if (remaining <= 0) return;
+            progress[step.id] = Math.min(step.target, remaining);
+            remaining -= progress[step.id];
+          });
         }
 
+        const completedSteps = challenge.completionSteps
+          .filter((step) => (progress[step.id] ?? 0) >= step.target)
+          .map((step) => step.id);
+        const totalProgress = challenge.completionSteps.reduce((sum, step) => sum + (progress[step.id] ?? 0), 0);
+        if (Object.keys(progress).length) challengeStepProgress[challenge.id] = progress;
         if (completedSteps.length) challengeCompletionSteps[challenge.id] = completedSteps;
-        challengeCompletions[challenge.id] = completedSteps.length;
+        challengeCompletions[challenge.id] = totalProgress;
       });
 
     ctx.config.challengeCatalog
@@ -285,6 +313,7 @@ export function createDomain(ctx) {
       lockedItems,
       challengeCompletions,
       challengeCompletionSteps,
+      challengeStepProgress,
       challengeRewardUnlocks,
       challengeRolls,
       playerKills: Number.isFinite(rawState?.playerKills) ? Math.max(0, Math.floor(rawState.playerKills)) : 0
@@ -297,6 +326,7 @@ export function createDomain(ctx) {
     const shopPurchases = { ...local.shopPurchases };
     const challengeCompletions = { ...local.challengeCompletions };
     const challengeCompletionSteps = {};
+    const challengeStepProgress = {};
 
     Object.entries(remote.shopPurchases).forEach(([id, count]) => {
       shopPurchases[id] = Math.max(shopPurchases[id] ?? 0, count);
@@ -312,6 +342,15 @@ export function createDomain(ctx) {
         ...(remote.challengeCompletionSteps[challenge.id] ?? [])
       ];
       if (completedSteps.length) challengeCompletionSteps[challenge.id] = [...new Set(completedSteps)];
+
+      const localProgress = local.challengeStepProgress[challenge.id] ?? {};
+      const remoteProgress = remote.challengeStepProgress[challenge.id] ?? {};
+      const mergedProgress = {};
+      challenge.completionSteps.forEach((step) => {
+        const count = Math.max(localProgress[step.id] ?? 0, remoteProgress[step.id] ?? 0);
+        if (count > 0) mergedProgress[step.id] = count;
+      });
+      if (Object.keys(mergedProgress).length) challengeStepProgress[challenge.id] = mergedProgress;
     });
 
     return sanitizeState({
@@ -323,6 +362,7 @@ export function createDomain(ctx) {
       lockedItems: [...local.lockedItems, ...remote.lockedItems],
       challengeCompletions,
       challengeCompletionSteps,
+      challengeStepProgress,
       challengeRewardUnlocks: [...local.challengeRewardUnlocks, ...remote.challengeRewardUnlocks],
       challengeRolls: { ...local.challengeRolls, ...remote.challengeRolls },
       playerKills: Math.max(local.playerKills, remote.playerKills)
@@ -344,6 +384,7 @@ export function createDomain(ctx) {
     availablePoints,
     totalShopSpent,
     totalRepeatableSpent,
+    totalChallengeKillPoints,
     availableKillPoints,
     purchasedInTier,
     tierRequirementProgress,

@@ -21,6 +21,7 @@ export function createStatsView(ctx) {
     document.getElementById("spentPoints").textContent = ctx.domain.totalSpent();
     document.getElementById("killPoints").textContent = ctx.domain.availableKillPoints();
     document.getElementById("killsEarned").textContent = ctx.state.playerKills;
+    document.getElementById("challengePkpEarned").textContent = ctx.domain.totalChallengeKillPoints();
     document.getElementById("playerKills").value = ctx.state.playerKills;
     document.getElementById("shopSpent").textContent = ctx.domain.totalShopSpent() + ctx.domain.totalRepeatableSpent();
     document.getElementById("challengeProgress").textContent = `${complete} / ${total}`;

@@ -10,6 +10,7 @@ export function defaultState() {
     lockedItems: [],
     challengeCompletions: {},
     challengeCompletionSteps: {},
+    challengeStepProgress: {},
     challengeRewardUnlocks: [],
     challengeRolls: {},
     playerKills: 0

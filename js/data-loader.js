@@ -179,11 +179,22 @@ export function createDataLoader(ctx) {
       const title = String(challenge?.challengeName || ("Challenge " + (index + 1)));
       const requiredItems = toArray(challenge?.requiredItems).map(String).filter(Boolean);
       const completionItems = toArray(challenge?.completionItems).map(String).filter(Boolean);
+      const configuredSteps = toArray(challenge?.completionSteps);
+      const completionSteps = (configuredSteps.length ? configuredSteps : completionItems).map((step, stepIndex) => {
+        const entry = typeof step === "string" ? { name: step } : step;
+        const name = String(entry?.name || `Step ${stepIndex + 1}`);
+        return {
+          id: String(entry?.id || slugifyItemId(name)),
+          name,
+          target: Math.max(1, Math.floor(toNumber(entry?.target, 1)))
+        };
+      });
       const rewardIds = toArray(challenge?.rewardItems).map((name) => {
         return ctx.indexes.itemRowsByName.get(normalizeDataText(name))?.uid || slugifyItemId(name);
       });
       const completionTarget = toNumber(challenge?.completionsRequired, NaN);
-      const isMilestone = completionItems.length > 0 || Number.isFinite(completionTarget);
+      const isCounter = challenge?.trackerType === "counter";
+      const isMilestone = completionSteps.length > 0 || Number.isFinite(completionTarget);
 
       return {
         id: slugifyItemId(title),
@@ -195,14 +206,14 @@ export function createDataLoader(ctx) {
           (_, groupIndex) => requiredItems.slice(groupIndex * 3, (groupIndex + 1) * 3)
         ),
         rewardIds,
-        mode: isMilestone ? "milestone" : "roulette",
-        completionTarget: completionItems.length
-          ? completionItems.length
+        mode: isCounter ? "counter" : (isMilestone ? "milestone" : "roulette"),
+        completionTarget: completionSteps.length
+          ? completionSteps.reduce((sum, step) => sum + step.target, 0)
           : (isMilestone ? Math.max(1, completionTarget) : null),
-        completionSteps: completionItems.map((name) => ({
-          id: slugifyItemId(name),
-          name
-        }))
+        completionSteps,
+        killPointReward: Math.max(0, Math.floor(toNumber(challenge?.killPointReward, 0))),
+        counterLabel: String(challenge?.counterLabel || "completions"),
+        counterButtonLabel: String(challenge?.counterButtonLabel || "Record Completion")
       };
     });
   }

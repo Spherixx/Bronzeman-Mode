@@ -10,6 +10,38 @@
       "cost": "1"
     },
     {
+      "uid": "2h-weapon-kill",
+      "alias": "Get a kill using any 2h weapon",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false,
+      "cost": "1"
+    },
+    {
+      "uid": "pker-msb-kill",
+      "alias": "Kill a pker with msb spec",
+      "difficulty": "1",
+      "points": "1",
+      "repeatable": false,
+      "cost": "1"
+    },
+    {
+      "uid": "dds-stab-kill",
+      "alias": "Kill a pker with dds on stab",
+      "difficulty": "2",
+      "points": "2",
+      "repeatable": false,
+      "cost": "1"
+    },
+    {
+      "uid": "venom-or-poison-kill",
+      "alias": "Get a kill with Venom or Poison",
+      "difficulty": "3",
+      "points": "3",
+      "repeatable": false,
+      "cost": "1"
+    },
+    {
       "uid": "first-smite",
       "alias": "Get your first smite.",
       "difficulty": "2",

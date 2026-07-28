@@ -75,29 +75,66 @@
         },
         {
             "challengeName": "Dragon Mans",
-            "completionsRequired": 4,
-            "completionItems": [
-                "Dragon longsword",
-                "Dragon mace",
-                "Dragon dagger",
-                "Dragon sword"
+            "completionSteps": [
+                {
+                    "id": "dragon-longsword",
+                    "name": "Acquire Dragon longsword from zombie pirates",
+                    "target": 1
+                },
+                {
+                    "id": "dragon-longsword-kills",
+                    "name": "Get 5 kills with Dragon longsword",
+                    "target": 5
+                },
+                {
+                    "id": "dragon-sword",
+                    "name": "Get 5 kills with Dragon sword",
+                    "target": 5
+                },
+                {
+                    "id": "dragon-mace",
+                    "name": "Get 5 kills with Dragon mace",
+                    "target": 5
+                },
+                {
+                    "id": "dragon-dagger",
+                    "name": "Get 5 kills with Dragon dagger",
+                    "target": 5
+                }
             ],
             "challengeRules": [
-                "Defeat real opponents with each of the weapons listed below.",
-                "The opponents must either be legitimate pkers or have keys worth at least 500k",
-                "The killing blow on your opponent must a spec from one of the dragon weapons listed.",
-                "Defeating at least one opponent with each of the weapons listed completes the channelge."
+                "Acquire a Dragon longsword from zombie pirates to begin the challenge.",
+                "Then defeat 5 real opponents with the Dragon longsword, Dragon sword, Dragon mace, and Dragon dagger in order.",
+                "Each opponent must either be a legitimate PKer or have a loot key worth at least 500k.",
+                "The killing blow must be dealt with the weapon for the current stage.",
+                "Completing all weapon stages unlocks the Dragon warhammer."
             ],
             "disclaimer": "",
             "requiredItems": [
                 "Dragon longsword",
+                "Dragon sword",
                 "Dragon mace",
-                "Dragon dagger",
-                "Dragon sword"
+                "Dragon dagger"
             ],
             "rewardItems": [
                 "Dragon warhammer"
             ]
+        },
+        {
+            "challengeName": "Skull Trick Challenge",
+            "trackerType": "counter",
+            "killPointReward": 10,
+            "counterLabel": "skull tricks",
+            "counterButtonLabel": "Record Skull Trick",
+            "challengeRules": [
+                "Record one completion for each successful skull trick.",
+                "Each successfully skull-tricked item may be manually unlocked in the Collection tab as long as it was not an obvious donation.",
+                "Each recorded skull trick awards 10 PKP.",
+                "Items from obvious donations and +1 smites are given away on stream instead of being kept or unlocked."
+            ],
+            "disclaimer": "Item unlocks are manual for now. Use the Collection tab to unlock a qualifying skull-tricked item.",
+            "requiredItems": [],
+            "rewardItems": []
         },
         {
             "challengeName": "Granite Man",

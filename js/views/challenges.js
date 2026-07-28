@@ -258,14 +258,24 @@ export function createChallengeView(ctx) {
 
   function recordMilestoneCompletion(challenge, stepId = null) {
     if (challenge.completionSteps.length) {
-      const validStep = challenge.completionSteps.some((step) => step.id === stepId);
-      const completedSteps = new Set(ctx.state.challengeCompletionSteps[challenge.id] ?? []);
-      if (!validStep || completedSteps.has(stepId)) return;
+      const stepIndex = challenge.completionSteps.findIndex((step) => step.id === stepId);
+      if (stepIndex < 0) return;
+      const progress = { ...(ctx.state.challengeStepProgress[challenge.id] ?? {}) };
+      const step = challenge.completionSteps[stepIndex];
+      const previousStepsComplete = challenge.completionSteps
+        .slice(0, stepIndex)
+        .every((previousStep) => (progress[previousStep.id] ?? 0) >= previousStep.target);
+      const current = progress[step.id] ?? 0;
+      if (!previousStepsComplete || current >= step.target) return;
 
-      completedSteps.add(stepId);
-      ctx.state.challengeCompletionSteps[challenge.id] = [...completedSteps];
-      ctx.state.challengeCompletions[challenge.id] = completedSteps.size;
-      if (completedSteps.size >= challenge.completionTarget) challenge.rewardIds.forEach((id) => {
+      progress[step.id] = current + 1;
+      ctx.state.challengeStepProgress[challenge.id] = progress;
+      ctx.state.challengeCompletionSteps[challenge.id] = challenge.completionSteps
+        .filter((entry) => (progress[entry.id] ?? 0) >= entry.target)
+        .map((entry) => entry.id);
+      ctx.state.challengeCompletions[challenge.id] = challenge.completionSteps
+        .reduce((sum, entry) => sum + (progress[entry.id] ?? 0), 0);
+      if (ctx.state.challengeCompletions[challenge.id] >= challenge.completionTarget) challenge.rewardIds.forEach((id) => {
         if (!ctx.domain.challengeRewardIsUnlocked(id)) ctx.state.challengeRewardUnlocks.push(id);
       });
       ctx.actions.saveState();
@@ -286,13 +296,32 @@ export function createChallengeView(ctx) {
     ctx.actions.renderUnlocks();
   }
 
+  function recordCounterCompletion(challenge) {
+    ctx.state.challengeCompletions[challenge.id] = (ctx.state.challengeCompletions[challenge.id] ?? 0) + 1;
+    ctx.actions.saveState();
+    ctx.actions.renderStats();
+    ctx.actions.updateShopState();
+    ctx.actions.updateRepeatableState();
+    renderChallengeUnlocks();
+  }
+
   function renderMilestonePanel(challenge, completions) {
     const complete = completions >= challenge.completionTarget;
-    const completedSteps = new Set(ctx.state.challengeCompletionSteps[challenge.id] ?? []);
+    const progress = ctx.state.challengeStepProgress[challenge.id] ?? {};
+    const completedStageCount = challenge.completionSteps
+      .filter((step) => (progress[step.id] ?? 0) >= step.target).length;
     const completionControls = challenge.completionSteps.length
-      ? challenge.completionSteps.map((step) => {
-        const stepComplete = completedSteps.has(step.id);
-        return `<button type="button" class="${stepComplete ? "is-complete" : ""}" data-action="complete-step" data-completion-step="${ctx.actions.escapeHtml(step.id)}" ${stepComplete ? "disabled" : ""}>${ctx.actions.escapeHtml(step.name)}</button>`;
+      ? challenge.completionSteps.map((step, stepIndex) => {
+        const count = progress[step.id] ?? 0;
+        const stepComplete = count >= step.target;
+        const stepLocked = !challenge.completionSteps
+          .slice(0, stepIndex)
+          .every((previousStep) => (progress[previousStep.id] ?? 0) >= previousStep.target);
+        const progressLabel = step.target === 1
+          ? (stepComplete ? "Done" : "Click to complete")
+          : `${count} / ${step.target}`;
+        const className = stepComplete ? "is-complete" : (stepLocked ? "is-locked" : "");
+        return `<button type="button" class="${className}" data-action="complete-step" data-completion-step="${ctx.actions.escapeHtml(step.id)}" ${stepComplete || stepLocked ? "disabled" : ""}>${ctx.actions.escapeHtml(step.name)} - ${progressLabel}${stepLocked ? " (Locked)" : ""}</button>`;
       }).join("")
       : Array.from(
         { length: challenge.completionTarget },
@@ -301,14 +330,35 @@ export function createChallengeView(ctx) {
 
     return `
       <div class="challenge-milestone-panel"><div class="challenge-roll-header">
-        <div><h4>Challenge Progress</h4><span>${complete ? "Reward unlocked" : `${completions} of ${challenge.completionTarget} completions`}</span></div>
+        <div><h4>Challenge Progress</h4><span>${complete ? "Reward unlocked" : (challenge.completionSteps.length ? `${completedStageCount} of ${challenge.completionSteps.length} stages complete` : `${completions} of ${challenge.completionTarget} completions`)}</span></div>
         ${challenge.completionSteps.length ? "" : `<button type="button" data-action="complete" ${complete ? "disabled" : ""}>${complete ? "Completed" : "Record Completion"}</button>`}
       </div><div class="challenge-milestone-track">${completionControls}</div></div>`;
+  }
+
+  function renderCounterPanel(challenge, completions) {
+    const points = completions * challenge.killPointReward;
+    return `
+      <div class="challenge-milestone-panel challenge-counter-panel"><div class="challenge-roll-header">
+        <div><h4>Skull Trick Tracker</h4><span>${challenge.killPointReward} PKP per successful skull trick</span></div>
+        <button type="button" data-action="record-counter">${ctx.actions.escapeHtml(challenge.counterButtonLabel)}</button>
+      </div><div class="challenge-counter-stats">
+        <span><b>${completions}</b>${ctx.actions.escapeHtml(challenge.counterLabel)}</span>
+        <span><b>${points}</b>PKP gained</span>
+      </div></div>`;
   }
 
   function renderChallengeUnlockCard(challenge) {
     const card = document.createElement("article");
     const completions = ctx.state.challengeCompletions[challenge.id] ?? 0;
+    const progress = ctx.state.challengeStepProgress[challenge.id] ?? {};
+    const completedStages = challenge.completionSteps
+      .filter((step) => (progress[step.id] ?? 0) >= step.target).length;
+    const summaryLabel = challenge.mode === "counter"
+      ? `${completions} ${challenge.counterLabel}`
+      : (challenge.completionSteps.length
+        ? `${completedStages} / ${challenge.completionSteps.length} stages`
+        : `${completions} completion${completions === 1 ? "" : "s"}`);
+    const hasRequirementItems = challenge.requirementGroups.some((group) => group.length);
     const latest = itemByCollectionId(ctx.state.challengeRolls[challenge.id]);
     const rolling = ctx.challengeUi.activeRoll?.challengeId === challenge.id;
     const rollLabel = rolling ? (ctx.challengeUi.activeRoll.phase === "countdown" ? `Rolling in ${ctx.challengeUi.activeRoll.countdown}` : "Rolling...") : "Complete + Roll";
@@ -316,16 +366,23 @@ export function createChallengeView(ctx) {
       <div><h4>Perilous Moons Roulette</h4><span>${latest ? `Latest roll: ${ctx.actions.escapeHtml(latest.name)}` : "No rolls yet"}</span></div>
       <button type="button" data-action="roll" ${challengeRewardItems(challenge).length && !ctx.challengeUi.activeRoll ? "" : "disabled"}>${rollLabel}</button>
       </div>${renderRewardRoulette(challenge)}</div>`;
+    const progressPanel = challenge.mode === "roulette"
+      ? roulette
+      : (challenge.mode === "counter" ? renderCounterPanel(challenge, completions) : renderMilestonePanel(challenge, completions));
+    const rewardPanel = challenge.rewardIds.length
+      ? `<div class="challenge-unlocked-panel"><h4>Unlocked From This Challenge</h4>${renderChallengeUnlockedRewards(challenge)}</div>`
+      : "";
     card.className = "challenge-unlock-card";
     card.innerHTML = `<div class="challenge-unlock-header"><div><h3>${ctx.actions.escapeHtml(challenge.title)}</h3></div>
-      <span class="challenge-completions">${completions} completion${completions === 1 ? "" : "s"}</span></div>
-      <div class="challenge-shop-card"><div class="challenge-kit">${renderChallengeIconGrid(challenge.requirementGroups)}</div><div class="challenge-copy">
+      <span class="challenge-completions">${ctx.actions.escapeHtml(summaryLabel)}</span></div>
+      <div class="challenge-shop-card ${hasRequirementItems ? "" : "no-kit"}">${hasRequirementItems ? `<div class="challenge-kit">${renderChallengeIconGrid(challenge.requirementGroups)}</div>` : ""}<div class="challenge-copy">
       <ul>${challenge.rules.map((rule) => `<li>${ctx.actions.escapeHtml(rule)}</li>`).join("")}</ul>
       ${challenge.disclaimer ? `<p class="challenge-disclaimer">${ctx.actions.escapeHtml(challenge.disclaimer)}</p>` : ""}</div></div>
-      ${challenge.mode === "roulette" ? roulette : renderMilestonePanel(challenge, completions)}
-      <div class="challenge-unlocked-panel"><h4>Unlocked From This Challenge</h4>${renderChallengeUnlockedRewards(challenge)}</div>`;
+      ${progressPanel}
+      ${rewardPanel}`;
     card.querySelector('[data-action="roll"]')?.addEventListener("click", () => completeChallengeRoll(challenge));
     card.querySelector('[data-action="complete"]')?.addEventListener("click", () => recordMilestoneCompletion(challenge));
+    card.querySelector('[data-action="record-counter"]')?.addEventListener("click", () => recordCounterCompletion(challenge));
     card.querySelectorAll('[data-action="complete-step"]').forEach((button) => {
       button.addEventListener("click", () => recordMilestoneCompletion(challenge, button.dataset.completionStep));
     });

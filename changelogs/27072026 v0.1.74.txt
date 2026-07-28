@@ -1,0 +1,17 @@
+/////ADDITIONS/////
+Added Spined,Rockshell, and Skeletal to shop for 5PKP per set
+Cosmetic prices set to 5PKP per
+Added repeatable tasks for LMS and Rev caves
+Added 5 new pvp challenges
+Added skull trick challenge, any skull tricked +1 is unlocked and you're rewarded with 10pkp, donations are to be given away on stream
+
+/////BALANCE/////
+Removed all items marked as "always unlocked"
+Removed dds from talent tier 1
+
+/////BUG FIXES/////
+Fixed the way Dragon Mans challenge unlock works, its now progressively unlocked
+Fixed the display of repeatable pvp challenges
+added normal msb and seercul for the Dark Bow challenge
+
+/////SYSTEM/////
